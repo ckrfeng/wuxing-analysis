@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "exact_checks": 161,
+  "numerical_cases": 108,
+  "distinct_case_settings": 18,
+  "ordering_rows": 7,
+  "scaled_tolerance": 2e-10,
+  "scope": "corroboration only; not proof, audit, or numerical continuation",
+  "checker_sha256": "b710507c2f89f2d6af27b68ced5784c68f840a05613e0a45687be4521500c554",
+  "max_scaled_eigenvalue_error": 1.4572702803255637e-15,
+  "max_scaled_fourier_error": 2.841528781799828e-16,
+  "max_scaled_derivative_error": 4.612526636686444e-16,
+  "max_scaled_equilibrium_residual": 5.1662070877848854e-17,
+  "max_scaled_symbol_error": 3.4150925744953355e-16
+}

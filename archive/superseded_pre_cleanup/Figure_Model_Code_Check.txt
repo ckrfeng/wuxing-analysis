@@ -1,0 +1,126 @@
+FIGURE-TO-MODE CODE CHECK
+Checked October 4, 2026
+
+Conclusion
+The principal old modified-model stability plots use the same equations as
+DM_(5,2) in the new theoretical project. The pathology plots use an extended
+model. The negative-value issue belongs to the extension with rebellion;
+it does not invalidate the canonical DM model or every earlier figure.
+
+This check used the actual function definitions in the supplied Claude record
+and WuXing_Commented.ipynb, not only a fresh reimplementation.
+
+1. MODELS IDENTIFIED IN THE SOURCE
+
+Canonical DM_(5,2), called rhs_sat in the old code:
+  dx_i/dt = a*x_i - k*x_i^2 + c*x_(i-1)/(1+x_i)
+            - g*x_i/(1+x_(i+2)) - h*x_i*x_(i-2).
+All indices are modulo 5.
+
+Main illustrative baseline: (a,k,c,g,h) = (2,0.5,1,0.5,0.3).
+The scans and bifurcation examples use other explicitly specified parameters.
+Matching equations does not mean all plots share this baseline.
+
+Old comparator rhs_lin:
+  dx_i/dt = a*x_i - b*x_i^2 + c*x_i*x_(i-1)
+            - d*x_i*x_(i-2) - g*x_i*x_(i+1) - h*x_i*x_(i+2).
+
+Extended rhs_full in Part 13:
+  Replace a with a_i in DM and add
+    -gd*x_(i+1)*x_i/(1+x_i) - b*x_(i+2)/(1+eps*x_i).
+At x_i=0 the derivative is c*x_(i-1)-b*x_(i+2), which may be negative.
+For canonical DM the boundary derivative is c*x_(i-1), nonnegative for
+nonnegative states and c>=0. Approaching zero is different from crossing it.
+
+2. FIGURE PROVENANCE
+
+A_network.png
+  Draws the common Sheng i->i+1 and Ke i->i+2 network directly.
+  It is a structural diagram, not a simulation. These arrows do not display
+  every term or signed derivative of either complete differential equation.
+
+B_lin_fig2.png, C_lin_fig3.png, D_lin_fig5.png
+  Generated with rhs_lin only; literature-model reproductions.
+
+E_eigenvalues.png, F_perturbation.png, G_stability_maps.png
+  Compare rhs_lin with canonical DM_(5,2).
+  Their model definitions appear in the code block beginning at record
+  line 4725. The preceding master and commented notebooks use the same laws.
+  The map parameters differ from the illustrative baseline and must be
+  given in captions. In G, the symbol h describes different terms across
+  the two models, so this is not a matched single-mechanism comparison.
+
+P1_pathologies.png, P2_network_response.png, P3_consistency_region.png
+  Use the extended rhs_full, not canonical DM alone.
+  Source block begins at record line 5004.
+  Baseline: a_i=2, k=0.5, c=1, g=0.5, h=0.3, gd=0.35, b=0.10, eps=0.5.
+
+P4_critical_mode.png
+  Uses canonical DM's synchronous equilibrium and Fourier real parts.
+  Source block begins at line 5264. Fixed a=1.5, k=0.65, g=0.5;
+  scans c in [0.05,2.5] and h in [0.05,2.0].
+  The right-hand c=1 slice does not reach its stability crossing near
+  h=2.3718. Spectral calculations alone do not establish a nonlinear Hopf
+  bifurcation or the stability of an emerging periodic orbit.
+
+P5_bistability.png
+  Uses canonical DM; source block begins at line 5516.
+  a=2, k=0.5, c=0.1, h=0.3, with g varied.
+  The trajectory panel uses g=2.5 and equal-component initial conditions.
+  Its scalar threshold 0.5 is a synchronous-subspace statement, not a
+  description of the entire five-dimensional basin boundary.
+
+3. XPPAUT EQUATIONS
+
+wuxing_no_wu.ode in the old record is exactly canonical DM_(5,2).
+wuxing_full.ode contains the rebellion term but no child-demand gd term.
+It is therefore also different from the later Part 13 rhs_full.
+The five expanded equations of both files were checked against these laws
+at 100 random inputs per file. They matched exactly in this check.
+This validates the equation transcription, not execution of XPPAUT or
+compatibility of every historical numerical-option directive.
+
+4. DIRECT TEST RESULTS
+
+Reviewed function definitions were extracted without running the historical
+top-level cells or commands that write to Claude's original directories.
+Across 30 source/model groups from the record and supplied notebook:
+  1,900 RHS evaluations: maximum absolute difference 2.85e-14.
+  1,900 Jacobian checks: maximum absolute difference 1.07e-14 against an
+    independently coded vector field differentiated by complex steps.
+  1,479 admissible returned equilibria: maximum scaled residual 6.95e-16.
+  1,722 Fourier-mode comparisons: maximum real-part difference 8.89e-15
+    against direct matrix eigenvalues, including multiplicities.
+  100 extended-model evaluations: maximum difference 1.43e-14.
+These are numerical implementation checks, not proofs or an exhaustive
+validation of classifiers, every parameter regime, or every plot caption.
+
+5. RELATION TO THE NEW P11-DRAFT ZIP
+
+00_canonical_model.tex defines DM_(n,q), specializing to the old rhs_sat
+at n=5, q=2. It does not include the problematic rebellion term.
+
+The ZIP's primary comparator MB has five terms:
+  dy_i/dt = a*y_i - k*y_i^2 + c*y_i*y_(i-1)
+            - g*y_i*y_(i+q) - h*y_i*y_(i-q).
+It is not the six-term rhs_lin used for the old comparison plots.
+New DM-versus-MB figures must be recomputed with MB and a declared parameter
+calibration; changing the old Lin label would be incorrect.
+
+numerics/N03_figure_plan.tex is explicitly a figure plan with no generated
+results. The ZIP contains 17 Python audit/validation files, with no plotting
+calls found and no PNG/JPEG/SVG images. This check does not certify all its
+theorems or every validation script.
+
+6. LIMITS AND REMAINING PRESENTATION CORRECTIONS
+
+The supplied record links old figure images in a figures directory that was
+not supplied. This check traces the available generation code; it does not
+establish that every historical exported image used that exact code version.
+
+The prior review's interpretation issues remain: heuristic regime labels do
+not establish chaos; np.nanmean(M<0) counts invalid equilibria as false;
+parameter-sampling percentages depend on the declared denominator and prior;
+and an unstable equilibrium does not imply every trajectory is unbounded.
+The principal DM equation and Jacobian are correctly implemented. Figures
+must still be presented under the correct model, parameters, and claim scope.

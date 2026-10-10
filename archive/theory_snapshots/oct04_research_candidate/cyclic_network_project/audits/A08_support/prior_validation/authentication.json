@@ -1,0 +1,12 @@
+{
+  "companion_sha256": "81352ce048f5bd569a4d3b803f2cbd246d412aa829de43f6b6d739f2521b3958",
+  "checker_sha256": "2385d2074ead3ca764fb98fd7dff5fb419c68526ed0e57e9c80e364980052939",
+  "project_archive_record": {
+    "name": "cyclic_network_project_P08_draft.zip",
+    "sha256": "3cac0e6676575e1c652454a9e28418c04ac5a553d4550c6f8d27f2d873e71e44",
+    "member_count": 98,
+    "CRC": "PASS",
+    "byte_comparison": "PASS"
+  },
+  "all_98_project_member_hashes_match": true
+}

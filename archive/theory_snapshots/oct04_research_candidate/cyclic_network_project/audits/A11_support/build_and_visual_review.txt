@@ -1,0 +1,3 @@
+PASS. Final standalone A11 source compiled successfully with the native desktop LaTeX compiler. The matching exported PDF was produced with the existing latexmk/pdfLaTeX installation; no TeX installation was added.
+
+Final export: 17 pages. Zero LaTeX/package warnings, undefined references, overfull boxes, underfull boxes or errors. All pages visually inspected after rendering. Pages 1-14 were rerendered at the same resolution and are pixel-identical to the inspected versions. Final revised hash-list pages 15-16 and closure page 17 were separately inspected. No clipping, overlap or missing content; hash records stay together and closure text is complete. Compilation and visual QA do not certify mathematics.

@@ -1,0 +1,312 @@
+\section{Dynamics of Lin's Model}
+\label{sec:lin-results}
+
+The numerical results in this section and Section~\ref{sec:modified-results}
+are preliminary comparisons of two complete five-node models under specified
+parameter choices. They describe the existence and local stability of a
+positive synchronous equilibrium and responses to selected initial
+perturbations. Because the models differ in both interaction laws and the
+presence of a direct child-loss term, these comparisons do not isolate the
+mechanism responsible for a difference in stability. The coefficients used
+below are illustrative and have not been calibrated to physiological data.
+
+\subsection{Model, balanced equilibrium, and numerical protocol}
+Let $x_i\geq0$ denote the activity of node $i$, with the nodes ordered as
+Wood, Fire, Earth, Metal, and Water. All indices are taken modulo five.
+In this ordering, $i-1$ is the generating predecessor (mother), $i+1$ is
+the generating successor (child), $i-2$ is the controller, and $i+2$ is
+the controlled target. The homogeneous six-term model of Lin and Han
+\cite{Lin2020} is
+\begin{equation}
+\dot x_i=a x_i-bx_i^2+c x_i x_{i-1}-d x_i x_{i-2}
+               -g x_i x_{i+1}-h x_i x_{i+2}.
+\label{eq:lin-model}
+\end{equation}
+Both models studied here have five state variables; ``six-term'' refers to
+the contributions to each equation, not to the number of nodes.
+The nonnegative orthant is invariant for~\eqref{eq:lin-model} for as long
+as the solution exists, since every component of its vector field contains
+$x_i$ as a factor. This property does not imply boundedness or convergence.
+
+We call $x=s\mathbf{1}$ a balanced, or synchronous, state. For $a>0$,
+a positive balanced equilibrium exists precisely when
+$M=b+d+g+h-c>0$, in which case
+\begin{equation}
+ s_{\mathrm L}=\frac{a}{b+d+g+h-c}.
+ \label{eq:lin-balance}
+\end{equation}
+At this equilibrium the Jacobian is circulant. With
+$\theta_j=2\pi j/5$, its eigenvalue real parts are
+\begin{equation}
+ \operatorname{Re}\lambda_j
+ =s_{\mathrm L}\bigl[-b+(c-g)\cos\theta_j
+                         -(d+h)\cos(2\theta_j)\bigr],
+ \qquad j=0,\ldots,4.
+ \label{eq:lin-spectrum}
+\end{equation}
+We use the spectral abscissa
+$\alpha=\max_j\operatorname{Re}\lambda_j$ to assess local stability.
+Strict negativity implies local exponential stability, whereas a positive
+value implies instability. A zero real part requires further analysis.
+The maps classify $\alpha<-10^{-9}$ as stable, $\alpha>10^{-9}$ as
+unstable, and values between these thresholds as unresolved. Absence of a
+positive synchronous equilibrium is recorded separately; it is not a
+classification of the system's other equilibria or attractors.
+
+For the trajectory comparisons, we used SciPy's DOP853 integrator with
+relative tolerance $10^{-10}$ and absolute tolerance $10^{-12}$, and
+sampled 3,001 times over $0\leq t\leq120$. A repeat with RK45 at the same
+tolerances changed the sampled activities by at most $1.1\times10^{-8}$
+across the four runs. Analytic Jacobians were checked by complex-step
+differentiation at 1,000 random states per model; the largest absolute
+entrywise discrepancy was below $8\times10^{-15}$. These checks support
+the implementation, but do not establish global dynamical conclusions.
+
+\subsection{Baseline stability and response to initial perturbations}
+At the illustrative Lin baseline
+$(a,b,c,d,g,h)=(1,1,1,1,1,1)$, the positive balanced level is
+$s_{\mathrm L}=1/3$. The leading pair is approximately
+$0.206011\pm0.634038\,\mathrm{i}$, so this equilibrium is unstable
+(Figure~\ref{fig:baseline-spectra}).
+For comparison, the modified-model spectrum shown in the same figure uses
+the separate baseline specified in Section~\ref{sec:modified-stability}.
+
+\begin{figure}[tbp]
+\centering
+\PreliminaryEigenFigure
+\caption{Jacobian eigenvalues at the stated positive balanced equilibria.
+Lin: $(a,b,c,d,g,h)=(1,1,1,1,1,1)$ and $s_{\mathrm L}=1/3$.
+Modified: $(a,k,c,g,h)=(2,0.5,1,0.5,0.3)$ and
+$s_{\mathrm D}=(3+\sqrt{59})/4$.
+The vertical line is $\operatorname{Re}\lambda=0$.
+These are local stability results at different illustrative baselines,
+not a matched-parameter test of a single interaction mechanism.}
+\label{fig:baseline-spectra}
+\end{figure}
+
+We then initialized each model at its own balanced equilibrium and changed
+only Wood: either $x_1(0)=1.05s$ or $x_1(0)=0.30s$, keeping
+$x_i(0)=s$ for $i=2,\ldots,5$.
+In the Lin runs, the solutions moved away from balance and exhibited
+sustained oscillatory behavior over the observation interval
+(Figure~\ref{fig:disturbance}). The distances
+$\lVert x(120)-s_{\mathrm L}\mathbf{1}\rVert_2$ were approximately
+$0.8776$ and $0.9899$, respectively. These trajectories illustrate the
+baseline equilibrium's instability. They do not imply that the model lacks
+stable equilibria at other parameters, or that an unstable equilibrium
+necessarily produces unbounded activity or chaos.
+
+\begin{figure}[tbp]
+\centering
+\PreliminaryTrajectoryFigure
+\caption{Responses to a one-component initial disturbance, using the
+baselines in Figure~\ref{fig:baseline-spectra}. Top: Wood increased by
+$5\%$; bottom: Wood reduced to $30\%$ of its balanced value. Other
+components start at balance. Activities are divided by the relevant
+balanced level $s$. All runs extend to $t=120$; the modified-model panels
+show only $0\leq t\leq12$ to make recovery visible. Each curve represents
+one of the five nodes. These are specified finite perturbations, not a
+basin-wide or globally uniform recovery test.}
+\label{fig:disturbance}
+\end{figure}
+
+\subsection{Stability under a two-parameter sweep}
+To explore parameter dependence, we varied nourishment $c$ and received
+restraint $d$ on a $90\times90$ equally spaced grid,
+\begin{equation}
+ c\in[0.3,1.6],\qquad d\in[0.1,1.0],\qquad
+ a=1.5,\quad b=0.65,\quad g=h=0.3.
+ \label{eq:lin-sweep}
+\end{equation}
+The Lin panel of Figure~\ref{fig:stability-maps} shows the resulting
+classification. Of 8,100 grid points, 7,867 admitted a positive balanced
+equilibrium and 1,497 were locally stable. Thus stable positive balance
+occurred at $18.5\%$ of all sampled points, or $19.0\%$ of those admitting
+positive balance. The remaining 233 points lacked a positive synchronous
+equilibrium. These percentages describe this finite grid, not an intrinsic
+probability of stability for Lin's model.
+
+Stable positive balance is therefore possible in Lin's model. For example,
+$(a,b,c,d,g,h)=(1,2,1,1,1,1)$ gives $s_{\mathrm L}=0.25$ and
+$\alpha\approx-0.095492$. Conclusions drawn from the all-ones baseline
+must not be extended to all parameter choices.
+
+\subsection{Status of motif analysis}
+The present results concern the full five-node system. A completed stability
+comparison of two-node motifs is not included here. Such a comparison must
+first specify whether the remaining nodes are deleted or clamped to fixed
+background activities, since these operations define different reduced
+systems. Motif dynamics are left for subsequent analysis.
+
+\section{A modified version of the model and its dynamics}
+\label{sec:modified-results}
+
+\subsection{Five-term model and nonnegative activities}
+The modified model considered in all results below is
+\begin{equation}
+ \dot x_i=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+                  -\frac{g x_i}{1+x_{i+2}}-h x_i x_{i-2},
+ \qquad i=1,\ldots,5.
+ \label{eq:modified-model}
+\end{equation}
+We assume positive coefficients and nonnegative initial activities.
+The generating input is linear in predecessor activity and decreases with
+recipient activity. The target-dependent loss is moderated by target
+activity, while received restraint remains bilinear.
+At $x_i=0$, the right-hand side is $c x_{i-1}\geq0$, so the nonnegative
+orthant is invariant. Moreover, at a component attaining the maximum
+$X=\max_i x_i$, its derivative is bounded above by
+$aX-kX^2+c$. Consequently, for $k>0$, nonnegative solutions remain bounded
+by $\max\{\max_i x_i(0),B\}$, where
+\begin{equation}
+ B=\frac{a+\sqrt{a^2+4kc}}{2k}.
+\end{equation}
+This establishes a nonnegative, bounded activity domain; it does not imply
+global convergence to a particular equilibrium.
+
+Equation~\eqref{eq:modified-model} makes several simultaneous changes to
+Lin's model. It omits the direct child-loss term and changes both the
+predecessor input and the target-dependent loss. In particular, the
+partial derivative with respect to target activity is positive in the
+modified model, whereas it is negative in Lin's model. Also, the symbols
+$g$ and $h$ do not denote the same terms in the two equations:
+received restraint has coefficient $d$ in Lin and $h$ in the modified
+model. These differences must be considered when interpreting the plots.
+
+\subsection{Balanced equilibrium and baseline stability}
+\label{sec:modified-stability}
+The origin is an equilibrium. For a nonzero synchronous equilibrium
+$x=s\mathbf{1}$, the balanced level satisfies
+\begin{equation}
+ (k+h)s^2+(k+h-a)s-(a+c-g)=0.
+ \label{eq:modified-balance}
+\end{equation}
+The maps use the larger positive root, when it exists. There is a unique
+positive root when $a+c>g$; other parameter choices can admit two positive
+roots, so this condition is sufficient but not necessary for positive
+balance. At a balanced level $s$, set
+\[
+ D_0=a-2ks-\frac{cs}{(1+s)^2}-\frac{g}{1+s}-hs.
+\]
+The eigenvalue real parts are
+\begin{equation}
+ \operatorname{Re}\lambda_j
+ =D_0+\frac{c}{1+s}\cos\theta_j
+       +s\left(\frac{g}{(1+s)^2}-h\right)\cos(2\theta_j).
+ \label{eq:modified-spectrum}
+\end{equation}
+At $(a,k,c,g,h)=(2,0.5,1,0.5,0.3)$,
+$s_{\mathrm D}=(3+\sqrt{59})/4\approx2.670286$ and
+$\alpha\approx-1.153724$. All five eigenvalues have negative real parts
+(Figure~\ref{fig:baseline-spectra}), establishing local exponential
+stability at this baseline.
+
+For the same relative Wood perturbations used in
+Section~\ref{sec:lin-results}, both modified-model trajectories returned
+to this equilibrium. Their final distances at $t=120$ were approximately
+$3.3\times10^{-12}$ and $1.2\times10^{-11}$
+(Figure~\ref{fig:disturbance}). This supports recovery from the two tested
+initial conditions. Since the baselines have different coefficient values
+and equilibrium scales, the displayed decay and oscillation rates do not
+provide a calibrated comparison of physiological recovery times.
+
+\subsection{Stability maps and sensitivity to parameter sampling}
+For the modified-model panel of Figure~\ref{fig:stability-maps}, we used
+\begin{equation}
+ c\in[0.3,1.6],\qquad h\in[0.1,1.0],\qquad
+ a=1.5,\quad k=0.65,\quad g=0.3,
+ \label{eq:modified-sweep}
+\end{equation}
+on the same $90\times90$ grid. Every sampled point admitted a positive
+balanced equilibrium and was locally stable. Thus, in these specified
+slices, the modified model had a larger sampled region of stable positive
+balance than Lin's model. This does not establish stability for all
+parameters. For example, the earlier modified-model sweep with
+$a=2$, $k=0.5$, $g=0.5$, $c\in[0.05,2.5]$, and $h\in[0.05,2.0]$
+had 5,837 stable points out of 8,100 ($72.1\%$); all those points admitted
+positive balance. The different percentages reflect different experiments.
+
+\begin{figure}[tbp]
+\centering
+\PreliminaryMapFigure
+\caption{Local stability classifications from the verified $90\times90$
+parameter scans. Horizontal axis: nourishment $c$. Vertical axis: received
+restraint $r$, meaning $d$ in Lin and $h$ in the modified model.
+Lin uses $(a,b,c,d,g,h)=(1.5,0.65,c,r,0.3,0.3)$; the modified model uses
+$(a,k,c,g,h)=(1.5,0.65,c,0.3,r)$. Blue denotes a locally stable positive
+balanced equilibrium, red an unstable one, and gray no positive balanced
+equilibrium. This categorical rendering summarizes the same sampled
+stability data; boundaries between grid cells are not exact bifurcation
+curves. The panels compare complete models with specified fixed
+coefficients, including Lin's additional child-loss coefficient $g=0.3$.}
+\label{fig:stability-maps}
+\end{figure}
+
+We also summarized sensitivity to three illustrative parameter distributions
+(Table~\ref{tab:sampling}). For a shared conceptual draw
+$(S,A,C,R,T,L)$, representing self-growth, self-limitation, nourishment,
+received restraint, target-related loss, and child loss, the parameter
+assignments were
+\[
+ (a,b,c,d,g,h)_{\mathrm L}=(S,A,C,R,L,T),\qquad
+ (a,k,c,g,h)_{\mathrm D}=(S,A,C,T,R).
+\]
+The uniform scenario draws all six quantities independently from
+$[0.1,2]$. The ordered scenario uses the same draws conditioned on
+$S>C>R>T$, without ordering $A$ or $L$. The tiered scenario draws
+independently from $S\in[1,2]$, $A\in[0.3,1]$, $C\in[0.5,1.5]$,
+$R\in[0.2,0.8]$, and $T,L\in[0.1,0.5]$.
+Each scenario uses 1,200 accepted draws and NumPy's default random-number
+generator with seed 3. The two models share each conceptual draw, but
+there is no child-loss coefficient in the modified model. This pairing
+specifies the experiment; it does not equate the strengths of different
+functional forms or remove the structural difference.
+
+\begin{table}[tbp]
+\centering
+\small
+\begin{tabular}{llrrr}
+\toprule
+Scenario & Model & Stable / eligible & Stable / eligible (\%) & Stable / all (\%)\\
+\midrule
+Uniform & Lin      & 273 / 1195  & 22.8 & 22.8\\
+        & Modified & 968 / 1029  & 94.1 & 80.7\\
+Ordered & Lin      & 562 / 1192  & 47.1 & 46.8\\
+        & Modified & 1103 / 1200 & 91.9 & 91.9\\
+Tiered  & Lin      & 267 / 1145  & 23.3 & 22.3\\
+        & Modified & 1188 / 1200 & 99.0 & 99.0\\
+\bottomrule
+\end{tabular}
+\caption{Stability frequencies under the stated sampling assumptions.
+``Eligible'' means that the selected positive synchronous equilibrium
+exists; ``all'' means all 1,200 draws in that scenario. The counts retain
+both denominators, so failure to admit positive balance is not silently
+excluded. These are parameter-sampling results, not physiological
+probabilities or evidence of universal superiority.}
+\label{tab:sampling}
+\end{table}
+
+\subsection{Interpretation and limitations of the preliminary comparison}
+The results establish a limited numerical observation: for the specified
+baselines, parameter slices, and sampling distributions, the modified
+model more often admits a locally stable positive balanced equilibrium,
+and it recovers from the two tested disturbances at its selected baseline.
+They do not show that demand modulation alone produces these differences.
+The comparison simultaneously changes interaction laws, removes the
+child-loss term, and, in the baseline examples, changes parameter values.
+Equal numerical coefficients multiplying different functions do not by
+themselves constitute a calibration. The size of a stable region also
+depends on the chosen coordinates, parameter window, and sampling measure.
+
+A mechanism-focused comparison would first use a matched bilinear model
+with the same five terms as~\eqref{eq:modified-model}, and then vary the
+interaction laws separately. Removing the child-loss term from Lin's
+model gives this comparator after relabeling coefficients. Such a study
+would distinguish the effect of that removal from the effects of changing
+the input and target-dependent loss laws. It is not the experiment shown
+by the current Lin comparison diagrams. We therefore present these
+figures as preliminary descriptions of two complete models, without
+attributing their differences to a single cause or interpreting local
+stability as clinical validation. As in Section~\ref{sec:lin-results},
+the corresponding motif analysis remains to be completed.
+

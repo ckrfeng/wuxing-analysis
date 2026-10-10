@@ -1,0 +1,36 @@
+{
+  "perturbations": [
+    {
+      "model": "lin",
+      "wood_factor": 1.05,
+      "initial_norm": 0.016666666666666663,
+      "final_norm": 0.8776264504810278,
+      "minimum_over_run": 0.0021488424877050827,
+      "RK45_DOP853_max_abs_difference": 3.1988783844028035e-09
+    },
+    {
+      "model": "lin",
+      "wood_factor": 0.3,
+      "initial_norm": 0.23333333333333334,
+      "final_norm": 0.9899187378011087,
+      "minimum_over_run": 0.0021487069952859034,
+      "RK45_DOP853_max_abs_difference": 2.5604252051891763e-09
+    },
+    {
+      "model": "sat",
+      "wood_factor": 1.05,
+      "initial_norm": 0.13351432184835765,
+      "final_norm": 3.29718226041828e-12,
+      "minimum_over_run": 2.649528854119962,
+      "RK45_DOP853_max_abs_difference": 1.0851858966987038e-08
+    },
+    {
+      "model": "sat",
+      "wood_factor": 0.3,
+      "initial_norm": 1.8692005058770063,
+      "final_norm": 1.226735362951157e-11,
+      "minimum_over_run": 0.8010859310901455,
+      "RK45_DOP853_max_abs_difference": 6.9633552257641895e-09
+    }
+  ]
+}

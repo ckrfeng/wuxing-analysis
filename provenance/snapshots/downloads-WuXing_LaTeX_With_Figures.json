@@ -1,0 +1,66 @@
+{
+  "id": "downloads-WuXing_LaTeX_With_Figures",
+  "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+  "origins": [
+    "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "README.txt",
+      "retained_destination": "archive/loose_research_exports/README.txt",
+      "sha256": "24c98d0a4f0139ee1efbbe8b31a8d97ff4ab8771e7782a54dc04103d9a596703",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/README.txt",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXing_Preliminary_Comparisons.bbl",
+      "retained_destination": "archive/loose_research_exports/WuXing_Preliminary_Comparisons.bbl",
+      "sha256": "dd9ef71ff0c88ff4e5777d5bb5df35c3b89e18a17f3ba9733e719683d382c04d",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/WuXing_Preliminary_Comparisons.bbl",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXing_Preliminary_Comparisons.pdf",
+      "retained_destination": "archive/loose_research_exports/WuXing_Preliminary_Comparisons.pdf",
+      "sha256": "46a644d5abf7e2539384cad0b071ede01245b8e1d2e71b2ec65e1514e0cba187",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/WuXing_Preliminary_Comparisons.pdf",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXing_Preliminary_Comparisons.tex",
+      "retained_destination": "archive/loose_research_exports/WuXing_Preliminary_Comparisons.tex",
+      "sha256": "52113781fdfb84b70c37cba2877168a69683ec2c7290e3d781992bc593fd3a2f",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/WuXing_Preliminary_Comparisons.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "figures/figure1.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure1.png",
+      "sha256": "64d5750ced549dfffc2039c0dc938ad918403d6c9a88545b43372b8df44258c1",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/figures/figure1.png",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "figures/figure2.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure2.png",
+      "sha256": "f6e435e61606fa15fc06a0f2b8a5f9627bfd3dfb037d69ca4337a84ac28f0964",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/figures/figure2.png",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "figures/figure3.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure3.png",
+      "sha256": "70ed74b713279587b7d68bb492c5e5b03bc3f048e7d7f55ef81d5091540db059",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/figures/figure3.png",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "figures/figure4.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure4.png",
+      "sha256": "29e52577e777fe239f1e4e720b4e638008fd13d382e48be44cc7e7a33aa9b2a5",
+      "source": "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures/figures/figure4.png",
+      "status": "historical_unclassified_asset"
+    }
+  ]
+}

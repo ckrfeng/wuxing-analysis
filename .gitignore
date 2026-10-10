@@ -1,0 +1,39 @@
+# Local environments and dependencies
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+._*
+
+# Disposable reruns and render/build products
+/work/
+/build/
+/reproduction/four_diagrams/generated_figures/
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.run.xml
+*.synctex.gz
+*.synctex(busy)
+
+# Compiled AUTO/native programs
+*.o
+*.mod
+*.exe
+/experiments/auto/**/wuxing
+/experiments/auto/**/wuxing2
+
+# Research sources/results are deliberately retained, including fort.7/8/9,
+# c.wuxing*, .ode, PNG/SVG/PDF figures, JSON/CSV/NPZ data and bibliography files.

@@ -1,0 +1,974 @@
+% A11 independent mathematical audit; audit-only; 2026-10-04.
+% Audited P11 v1.0 SHA-256:
+% 4be8e9b1e64c022b635f3cca9f7f49ffbc5358a2250dda1715cb60e82d9b073b
+% All six layer verdicts and OVERALL VERDICT: VERIFIED.
+% This source does not modify P11's DRAFT lifecycle status.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{array,booktabs,longtable,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\lin}[1]{P11 lines #1}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\title{A11: Independent audit of\\Hopf spectral conditions and spectral simplicity}
+\author{Directed Cyclic Networks research project}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\section{Verdicts and exact-version disposition}
+\begin{center}
+\begin{tabular}{p{0.73\linewidth}l}
+\toprule
+GENERAL FREQUENCY / STRICT-CANDIDATE VERDICT & VERIFIED\\
+SIMPLICITY / EIGENVECTOR / RESOLVENT VERDICT & VERIFIED\\
+CANDIDATE-SURFACE VERDICT & VERIFIED\\
+REALIZABILITY-CRITERION VERDICT & VERIFIED\\
+FIVE-NODE CANDIDATE VERDICT & VERIFIED\\
+SCOPE / P12-P13 HANDOFF VERDICT & VERIFIED\\
+\midrule OVERALL VERDICT & VERIFIED\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent\textbf{Required corrections: none.}
+The six verdicts concern the precise spectral claims in P11 v1.0. They do
+not certify a parameter crossing, a Hopf bifurcation, a Lyapunov coefficient,
+a periodic orbit, a rotating wave, or a first loss of stability.
+
+\medskip\noindent{\raggedright\textbf{PROPOSED SCOPE CLARIFICATION RECOMMENDATION:}\par}
+\noindent\textbf{ACCEPT AS PLANNING CLARIFICATION.}\par\smallskip
+This recommendation is separate from the mathematical verdict. No frozen
+file is amended or silently superseded here.
+
+\paragraph{Exact audited source.}
+\path{proofs/P11_hopf_spectral_conditions.tex}, P11 v1.0,
+3 October 2026, 25,914 bytes and 600 lines. Its full-file SHA-256 is
+\begin{center}\ttfamily\small
+4be8e9b1e64c022b635f3cca9f7f49ffbc53\\
+58a2250dda1715cb60e82d9b073b
+\end{center}
+The two displayed segments concatenate to the full hash. The manifest's
+last P11 CURRENT entry designates this exact file and hash. Earlier P11
+placeholders in other snapshots are not audit inputs. All original files
+remain unchanged; the audit verdict does not promote the proof's lifecycle.
+
+\paragraph{Method.}
+This is an adversarial analytical reconstruction from the canonical field,
+current P02/P04/P05, and conditional P07 identities. Every source line is
+covered by the range ledger below. Exact and finite numerical checks are
+separate corroboration. The developer validation package was inventoried
+and hashed but its checker was neither read as a derivation nor executed.
+No literature search or later-module mathematics was undertaken.
+
+\section{Current-file and dependency authentication}
+\label{sec:auth}
+The working root is \path{cyclic_network_project/}. Both copies of
+\path{cyclic_network_project_P11_draft.zip} have SHA-256
+\begin{center}\ttfamily\small
+8513c67effa28b825b52052e2c9333282f66\\
+3b1031610ea150e58aeb16b58ad5.
+\end{center}
+All 200 file members pass CRC and match the working files byte-for-byte.
+The P10 audited baseline has 199 members and SHA-256
+\begin{center}\ttfamily\small
+e0ecae17063fced8ed0a6ebb6fcf44456d5\\
+c22065f51059274a0231659dcaaf5.
+\end{center}
+Exactly five baseline members differ: P11, manifest, registry, compendium
+source and compendium PDF. The proposed clarification is the sole added
+member. All requested controls and prior proof/audit sources are present.
+The 31-item input inventory records names, full hashes, byte and line
+counts; proof mathematical-body hashes are also recorded. The 200-item
+baseline inventory permits a final preservation check independently of
+any lifecycle prose.
+
+The authenticated controls are the manifest, claim registry, frozen theorem
+package, final novelty verdict, novelty decisions, open decisions,
+dependency map, proofs compendium, shared macros, canonical model, and
+notation/assumptions. Current proofs and audits are P01/A01, P02/A02,
+P03/A03, P04/A04, P05/A05, P07/A07, P08/A08, P09/A09 and P10/A10.
+Each current proof's computed full hash appears in its manifest closure.
+P01/P02 and P05/P08 retain their recorded E01 closures; P03/P04/P07/P09/P10
+retain metadata-only closures and their body hashes. Original audits keep
+their historical verdicts. A02's source exists: its old missing-source
+header is superseded by the manifest's restoration record. A04/A05's
+historical validation-provenance qualifications are not erased.
+
+\paragraph{Actual premises, not merely header declarations.}
+The dependency map directly lists P02/P04/P05 $\to$ P11, and separately
+requires P07 for five-node use. The body respects this graph:
+\begin{itemize}[nosep]
+\item P02 supplies the nonzero equilibrium equation, scalar polynomial,
+root classification and scalar bracket (lines 239--248, 475--490,
+536--544).
+\item P04 supplies the oriented Fourier spectrum, conjugacy, normality,
+label-count multiplicity and uniform-mode identity (41--50, 141--166,
+193--207, 245--260, 451--452, 537--539).
+\item P05 supplies complete selection, reachable representatives, strict
+cell endpoints and the concave equilibrium chart (54--76, 141--147,
+291--300, 322--387).
+\item P07 is used only in the five-node subsection (391--398, 453--470).
+Its conditional role is preserved.
+\end{itemize}
+The inherited P03 coefficient formula is restated through P04, not used
+as a new direct DAG edge. P08/P09/P10 are authenticated context only.
+The two-positive-root argument actually factors P02's polynomial, so it
+does not conceal a P10 premise. P12/P13 are future recipients, and
+P14--P18 supply no results. The P13 placeholder is inspected solely as a
+convention requirement, not as a mathematical input. Elementary linear
+algebra and the local implicit/regular-level-set theorems supply the
+standard tools explicitly used below.
+
+\section{Layer A: general frequency and strict selection}
+\label{sec:A}
+The original predecessor convention is $(Pv)_i=v_{i-1}$ and
+$v_i^{(m)}=n^{-1/2}e^{2\pi\ii mi/n}$. Thus the predecessor contributes
+$Ce^{-\ii\theta_m}$, the positive successor-two term contributes
+$Ge^{2\ii\theta_m}$, and the negative predecessor-two term contributes
+$-He^{-2\ii\theta_m}$. The sign of the last imaginary contribution is
+positive. Consequently
+\[
+ r_m=d+C\cos\theta_m+(G-H)\cos2\theta_m,\qquad
+ \omega_m=-C\sin\theta_m+(G+H)\sin2\theta_m.
+\]
+These agree literally with current P04; no $G/H$ phase reversal occurs.
+
+P05 gives $1\le j\le\lfloor(n+1)/4\rfloor<n/2$ for every reachable
+nonuniform representative. The strict inequality follows from $n>1$.
+For completeness, if $n=4r$, the largest representative is $r<2r$;
+if $n=4r+2$, it is $r<2r+1$. These cover every even size. If $n=4r+1$
+it is $r$, and if $n=4r+3$ it is $r+1$, again strictly below $n/2$.
+Hence $0<\theta_j<\pi$, $\sin\theta_j>0$, and the two labels
+$j,n-j$ are distinct. The Nyquist singleton is never reachable.
+
+Using $\sin2\theta=2\sin\theta\cos\theta$ gives independently
+\[
+ \omega_j=\sin\theta_j\{2(G+H)u_j-C\},\qquad u_j=\cos\theta_j.
+\]
+Since $\sin\theta_j>0$, zero frequency is equivalent to
+$2(G+H)u_j=C$. For $u_j\le0$ the bracket is at most $-C<0$,
+so the frequency is strictly negative. For $u_j>0$, the zero locus is
+exactly $G+H=C/(2u_j)$, with the claimed sign on either side.
+There is no decimal or asymptotic premise.
+
+The definition requires $j\ne0$, the complete selected set
+$\mathcal S=\{j\}$, $r_j=0$ and $\omega_j\ne0$. It excludes every
+maximal P05 tie, not every accidental equality among stable real parts.
+For every other representative $t$, completeness gives $r_t<0$.
+Every Fourier label belongs to exactly one representative class, so all
+labels outside $L_j=\{j,n-j\}$ are strictly left. This includes label
+zero, all conjugate partners, and the even-$n$ singleton. Repeated
+numerical eigenvalues among stable labels do not change the conclusion.
+P04 conjugacy then gives precisely $\lambda_j=\ii\omega_j$ and
+$\lambda_{n-j}=-\ii\omega_j$ on the imaginary axis.
+
+\noindent\textbf{GENERAL FREQUENCY / STRICT-CANDIDATE VERDICT: VERIFIED.}
+
+\section{Layer B: simplicity, vectors, real plane and inverse gates}
+\label{sec:B}
+If a label outside $L_j$ produced $\lambda_j$, its real part would be
+zero, contrary to strict selection. The other label in $L_j$ gives the
+opposite value and is distinct because $\omega_j\ne0$. Exactly one
+label produces $\lambda_j$. Interchanging the two labels gives the
+same result for $\lambda_{n-j}$. P04's multiplicity theorem makes each
+value algebraically and geometrically simple over $\C$. There are two
+simple eigenvalues, not one eigenvalue of multiplicity two.
+
+There are $n-2\ge3$ other labels. This finite nonempty set has a
+strictly negative maximum real part, so
+\[
+ \eta=-\max_{\ell\notin L_j}r_\ell>0,
+ \qquad \Re\lambda_\ell\le-\eta\quad(\ell\notin L_j).
+\]
+The critical Fourier span is conjugation-invariant and has a real form of
+dimension two. The complementary Fourier span is likewise
+conjugation-invariant, with real dimension $n-2$, and is stable. It may
+contain repeated stable eigenvalues; diagonalizability remains valid.
+
+Both $0$ and $2\ii\omega_j$ have zero real part, excluding equality
+with every stable eigenvalue. Zero differs from both critical values.
+Equality $2\ii\omega_j=\ii\omega_j$ would require $\omega_j=0$;
+equality $2\ii\omega_j=-\ii\omega_j$ would require $3\omega_j=0$.
+Thus both $J^{-1}$ and $(2\ii\omega_jI-J)^{-1}$ exist, for either
+sign of $\omega_j$. No nonlinear formula enters this argument.
+
+\paragraph{Adjoint and basis audit.}
+Write $J=Q\Lambda Q^*$ with unitary $Q$. Then
+$J^*=Q\overline\Lambda Q^*$; for $v_H=v^{(j)}$ one has
+\[
+ Jv_H=\ii\omega_jv_H,\qquad
+ J^*v_H=-\ii\omega_jv_H,\qquad v_H^*v_H=1.
+\]
+Thus $p_H=v_H$ is correct for the actual pairing $\langle p,v\rangle=p^*v$.
+This also agrees with the current B07 resolution of the opposite-sign
+adjoint equation. The TODO P13 source requires reconciliation of this
+pairing and Taylor factors but states no competing adopted formula.
+There is no convention mismatch; P13 still owns its Taylor, factorial,
+time and coefficient normalizations.
+
+Put $v_H=A+\ii B$. Orthogonality of $v_H$ and $\overline v_H$
+yields $v_H^{\mathsf T}v_H=0$, while $v_H^*v_H=1$. Taking real
+and imaginary parts gives
+\[
+ \|A\|^2-\|B\|^2=0,\quad A^{\mathsf T}B=0,\quad
+ \|A\|^2+\|B\|^2=1.
+\]
+Therefore $e_c=\sqrt2 A,e_s=\sqrt2 B$ are orthonormal. Real and
+imaginary parts of the eigenvector equation give
+\[
+ Je_c=-\omega_j e_s,\quad Je_s=\omega_j e_c,
+ \qquad [J]_{(e_c,e_s)}=
+ \begin{pmatrix}0&\omega_j\\-\omega_j&0\end{pmatrix}.
+\]
+The columns have exactly the stated orientation. For a nonzero coefficient
+vector $(z_c,z_s)$ its angle has derivative
+$(z_c\dot z_s-z_s\dot z_c)/(z_c^2+z_s^2)=-\omega_j$.
+This is a linear coefficient-plane statement, not nonlinear propagation.
+
+\paragraph{Excluded degeneracies.}
+Two different representative classes at real part zero supply additional
+critical labels, whether or not their numerical eigenvalues coincide.
+The single-simple-pair hypothesis fails. P11 gives no named
+multiple-criticality bifurcation classification. If a genuine pair has
+$r_j=\omega_j=0$, both labels produce zero. P04 makes this eigenvalue
+semisimple, with algebraic and geometric multiplicity equal to the total
+number of zero labels. Under strict representative selection that number
+is exactly two and the real kernel dimension is two. Without strictness,
+all other zero labels must be counted. Neither case is admitted as a
+strict spectral Hopf candidate.
+
+\noindent\textbf{SIMPLICITY / EIGENVECTOR / RESOLVENT VERDICT: VERIFIED.}
+
+\section{Layer C: regular candidate surfaces}
+\label{sec:C}
+P02's nonzero equilibrium relation gives precisely P05's open chart
+\[
+ a=(k+h)x-\frac{c-g}{1+x}>0,\qquad x,k,c,g,h>0.
+\]
+Substitution into the unsimplified diagonal coefficient gives
+\begin{align*}
+ d&=a-2kx-\frac{cx}{(1+x)^2}-\frac{g}{1+x}-hx\\
+  &=-kx-\frac{c}{1+x}-\frac{cx}{(1+x)^2}
+   =-kx-\frac{c(1+2x)}{(1+x)^2}.
+\end{align*}
+Let $v_j=2u_j^2-1=\cos2\theta_j$, a scalar distinct from $v^{(j)}$.
+It follows that
+\[
+ R_j=-kx-\frac{c(1+2x)}{(1+x)^2}+\frac{cu_j}{1+x}
+          +x\left(\frac{g}{(1+x)^2}-h\right)v_j=r_j.
+\]
+At fixed $x,c,g,h$, $\partial_kR_j=-x<0$, so $R_j=0$ is the
+regular graph
+\[
+ k=k_H=\frac1x\left[-\frac{c(1+2x)}{(1+x)^2}
+       +\frac{cu_j}{1+x}
+       +x\left(\frac{g}{(1+x)^2}-h\right)v_j\right].
+\]
+Physical admissibility still requires $k_H>0$ and
+$a_H=(k_H+h)x-(c-g)/(1+x)>0$. These restrictions cannot be dropped.
+Inside a strict selected cell, nonzero frequency is an additional open
+restriction on this regular level set. The claim is not that every
+reachable cell contains a nonempty portion; Layer D addresses exactly that.
+
+P05 proves that $G-H\ge0$ permits only the uniform maximizer. Therefore
+any nonuniform selected representative forces $D_c=H-G>0$ and
+$h-g/(1+x)^2=D_c/x>0$. For the map
+$\Phi(x,k,c,g,h)=(a,k,c,g,h)$ the determinant is
+\[
+ \det D\Phi=k+h+\frac{c-g}{(1+x)^2}
+       =k+\frac{D_c}{x}+\frac{c}{(1+x)^2}>0.
+\]
+The local inverse function theorem transfers the regular surface to
+physical parameter space along the specified branch. This does not
+identify different branches globally and does not prove global injectivity.
+The derivative in $k$ above lets $a$ follow the chart; it is not a
+crossing derivative along the later fixed-$a$ path.
+
+For $u_j>0$,
+\[
+ \partial_k\omega_j=0,\qquad
+ \partial_g\omega_j=\frac{2xu_j\sin\theta_j}{(1+x)^2}>0.
+\]
+The determinant of the $(k,g)$ minor of $D(R_j,\omega_j)$ is
+\[
+ -\frac{2x^2u_j\sin\theta_j}{(1+x)^2}\ne0.
+\]
+Any physically admissible nonempty joint level set is locally codimension
+two in branch coordinates and codimension one in $R_j=0$. Physical
+transfer is conditional on the same concave local chart. For $u_j\le0$
+the joint set is empty by the strict sign already proved. A statement of
+rank does not itself assert nonemptiness or a bifurcation unfolding.
+
+\noindent\textbf{CANDIDATE-SURFACE VERDICT: VERIFIED.}
+
+\section{Layer D: independent reconstruction of realizability}
+\label{sec:D}
+Fix a reachable nonuniform representative and write
+\[
+ w_j=1-2u_j^2,\quad
+ L=\max(0,\beta_j),\quad U=\beta_{j-1},\quad
+ B=\frac{w_j}{4(1-u_j)},\quad z=\frac{C}{4D_c}.
+\]
+P05's cosine grid is strictly decreasing. Its positive strict cell is
+$L<z<U$. The endpoint $\beta_j$ exists because
+$j\le j_{\max}<N=\lfloor n/2\rfloor$. Reachability gives $U>0$;
+strict midpoint decrease gives $L<U$. In particular a zero lower midpoint
+is excluded by $z>0$, not included as an attainable tie.
+
+\paragraph{Necessity from positive physical coefficients.}
+Use $c=C(1+x)$ and $G-H=-D_c$ in the independently derived $R_j$.
+Then $R_j=0$ is equivalent to
+\[
+ kx=D_cw_j-C\left(1-u_j+\frac{x}{1+x}\right),\qquad
+ \frac{kx}{C}=\frac{w_j}{4z}-1+u_j-\frac{x}{1+x}.
+\]
+Since $k,x,C>0$ and $u_j<1$, this forces
+\[
+ w_j>0,\qquad \frac{w_j}{4z}>1-u_j+\frac{x}{1+x}.
+\]
+The first condition is exactly $|u_j|<1/\sqrt2$. Equality $w_j=0$
+cannot work with $k>0$. Dropping the positive term $x/(1+x)$ yields
+$z<B$. Combining this with $z>L$ gives $L<B$. Thus every physical
+strict spectral candidate must satisfy both claimed inequalities.
+
+\paragraph{Sufficiency, including all physical restrictions.}
+Assume $w_j>0$ and $L<B$. Both $U$ and $B$ exceed $L$, so choose
+\[
+ L<z<\min(U,B).
+\]
+Then $\delta=w_j/(4z)-(1-u_j)>0$. For example,
+$x=\delta/[2(1+\delta)]>0$ satisfies $x/(1+x)<\delta$;
+this makes the fixed-vertex inequality strict. More generally, for any
+prescribed $x,z$ satisfying it, choose any $C>0$, put $D_c=C/(4z)$,
+and set
+\[
+ k=\frac{D_cw_j-C(1-u_j+x/(1+x))}{x}>0.
+\]
+For a free $G>0$, define
+\begin{align*}
+ c&=C(1+x),&g&=\frac{G(1+x)^2}{x},&h&=\frac{G+D_c}{x},\\
+ a&=kx+D_c-C+G\left(1+\frac{1+x}{x}\right).
+\end{align*}
+The first four coefficients are positive. Their effective coefficients
+are exactly $C,G,H=G+D_c$, hence the selected vertex is still $z$.
+Directly,
+\[
+ (k+h)x-\frac{c-g}{1+x}
+ =kx+G+D_c-C+\frac{G(1+x)}x=a.
+\]
+This proves the equilibrium equation, and the definition of $k$ proves
+$R_j=0$. The coefficient of $G$ in $a$ is positive, so sufficiently
+large $G$ gives $a>0$ without moving $k,z,x$ or $R_j$.
+
+The frequency bracket is
+\[
+ 2(G+H)u_j-C=2(D_c+2G)u_j-C.
+\]
+For $u_j\le0$ it is strictly negative. For $u_j>0$ its only possible
+zero is
+\[
+ G_0=\frac{C}{4u_j}-\frac{D_c}{2}.
+\]
+At most one positive value is forbidden; arbitrarily large positive $G$
+with $a>0$ can avoid it. This proves sufficiency both for the
+fixed-$x,z$ statement and for the full-cell statement. All parameters
+remain finite; no limit point at $x=0$ is used as a physical realization.
+The necessary-and-sufficient criterion is therefore exactly
+\[
+ \boxed{w_j>0\quad\hbox{and}\quad\max(0,\beta_j)<
+                   \frac{w_j}{4(1-u_j)}.}
+\]
+
+\paragraph{Exact obstruction checks.}
+For $n=8,j=1$, $u_1=\cos(\pi/4)=1/\sqrt2$ and $w_1=0$.
+The equality for $kx$ would have a negative right side. The cell can
+realize dominance, but no physical zero spectral abscissa in that cell.
+For $n=12,j=2$, $u_2=1/2$, $u_3=0$, and
+\[
+ w_2=\frac12,\qquad \beta_2=\frac{u_2+u_3}{2}=\frac14,
+ \qquad L=\frac14=B.
+\]
+The upper endpoint is $\beta_1=(\sqrt3+1)/4>1/4$; the cell is
+nonempty. Every strictly interior vertex has $z>1/4$, contrary to the
+necessary $z<B=1/4$. Even the lower boundary would require
+$x/(1+x)<0$ for positive $k$. These are genuine obstructions, not a
+midpoint indexing error. Neither contradicts P05's dominance realization.
+P11 replaces, rather than retains, the false optional universal assertion.
+
+\noindent\textbf{REALIZABILITY-CRITERION VERDICT: VERIFIED.}
+
+\section{Layer E: exact five-node candidate and spectral handoff}
+\label{sec:E}
+Set $\phi=(1+\sqrt5)/2$ and
+$\sigma=\sqrt{10-2\sqrt5}/4=\sin(\pi/5)>0$. Then
+$\phi^2=\phi+1$, $\phi^{-1}=\phi-1$, $1<\phi<2$.
+For
+\[
+ x_H=1,\quad c=2,\quad g_H=16,\quad h=6,\quad
+ k_H=\frac{3\sqrt5-5}{4}=\frac{3\phi-4}{2},\quad
+ a_H=\frac{47+3\sqrt5}{4}=\frac{3\phi+22}{2},
+\]
+positivity of $k_H$ follows from $5/3<\sqrt5$, because
+$25/9<5$. Positivity of the other four coefficients is immediate.
+In the original canonical equation, before polynomial reduction,
+\[
+ F_i(\one)=a_H-k_H+\frac22-\frac{16}{2}-6
+          =a_H-k_H-13=0.
+\]
+This verifies all five components of the actual DM field.
+
+The effective values are $s=2,C=1,G=4,H=6,T=-2,S=10$, with
+\[
+ d=a_H-2k_H-\frac12-8-6
+   =-k_H-\frac32=\frac{1-3\phi}{2}.
+\]
+P07's exact phase data are $u_1=(\phi-1)/2$, $u_2=-\phi/2$,
+$\sin\theta_1=\phi\sigma$, $\sin\theta_2=\sigma$,
+$\sin2\theta_1=\sigma$, $\sin2\theta_2=-\phi\sigma$.
+Substitution, without using only an interval table, gives
+\begin{align*}
+ r_1&=\frac{1-3\phi}{2}+\frac{\phi-1}{2}+\phi=0,\\
+ r_0&=\frac{1-3\phi}{2}+1-2=-\frac{3\phi+1}{2},\\
+ r_2&=\frac{1-3\phi}{2}-\frac\phi2-(\phi-1)
+       =-\frac{3\sqrt5}{2}.
+\end{align*}
+Their difference $r_0-r_2=(3\phi-4)/2=k_H>0$ proves
+$r_1>r_0>r_2$ exactly. The imaginary parts are
+\[
+ \omega_H=-\phi\sigma+10\sigma=\sigma(10-\phi)>0,
+ \qquad\omega_2=-\sigma-10\phi\sigma.
+\]
+The exact inequality $10-\phi>8$ certifies nonzero frequency. Thus
+\begin{align*}
+ \lambda_0&=-\eta_H,&\eta_H&=\frac{3\phi+1}{2},\\
+ \lambda_1&=\ii\omega_H,&\lambda_4&=-\ii\omega_H,\\
+ \lambda_2&=-\frac{3\sqrt5}{2}-\ii\sigma(1+10\phi),
+ &\lambda_3&=\overline{\lambda_2}.
+\end{align*}
+The general strict criterion proves individual simplicity of labels $1,4$
+and excludes all other imaginary-axis labels. The gap is exactly
+$-\max(r_0,r_2)=\eta_H$, not merely a lower estimate.
+
+\paragraph{Upper-root identity from P02 only.}
+Put $A=k_H+h=(3\phi+8)/2$, $b=a_H-A=7$ and
+$\mu=a_H+2-16=(3\phi-6)/2<0$. Since $A-b=\mu$,
+\[
+ Q(X)=AX^2-bX-\mu=A(X-1)(X-x_-),\qquad
+ x_-=-\frac\mu A=\frac{3(2-\phi)}{3\phi+8}.
+\]
+The numerator and denominator are positive, and their difference is
+$6\phi+2>0$, proving $0<x_-<1$. The discriminant equals
+$A^2(1-x_-)^2>0$. Thus there are two distinct positive roots and $1$
+is precisely the upper root. Merely knowing $b>0,\mu<0$ would not
+have established this without checking the discriminant; P11 checks it.
+
+\paragraph{Local branch, without a path derivative.}
+Freeze $\pi(g)=(a_H,k_H,2,g,6)$, with $g_H=16$ and $j=1$.
+The scalar bracket is
+\[
+ B(X,g)=a_H-(k_H+6)X+\frac{2-g}{1+X}.
+\]
+At $(1,16)$, $B=0$ and
+\[
+ B_X=-A-\frac{2-16}{4}=-A+\frac72
+      =-\frac{3\phi+1}{2}=-\eta_H<0.
+\]
+P04's uniform eigenvalue is $f_X=B+XB_X$; the equality
+$B_X=\lambda_0$ here uses both $B=0$ and the particular state $X=1$.
+It is not an incorrectly generalized identity for arbitrary $X$.
+The scalar implicit-function theorem gives a unique smooth local root
+near $1$, with positive state and parameters. Distinctness, positivity and
+ordering of the two roots persist by continuity, so this is $x_+(g)$.
+No $dx_+/dg$ or eigenvalue derivative along this path is computed.
+
+\paragraph{Exact vectors and resolvents.}
+The required vector is the positive-exponent Fourier column
+\[
+ v_H=\frac1{\sqrt5}(1,e^{2\pi\ii/5},e^{4\pi\ii/5},
+ e^{6\pi\ii/5},e^{8\pi\ii/5})^{\mathsf T},\qquad p_H=v_H.
+\]
+With node order $0,\ldots,4$, Layer B verifies
+$J_Hv_H=\ii\omega_Hv_H$, $J_H^*p_H=-\ii\omega_Hp_H$ and
+$p_H^*v_H=1$. Its real basis has precisely the stated block and
+coefficient-plane angular velocity $-\omega_H$.
+The complete orthogonal spectral projectors give
+\begin{align*}
+ J_H^{-1}&=\sum_{m=0}^4\lambda_m^{-1}v^{(m)}v^{(m)*},\\
+ (2\ii\omega_H I-J_H)^{-1}
+ &=\sum_{m=0}^4(2\ii\omega_H-\lambda_m)^{-1}v^{(m)}v^{(m)*}.
+\end{align*}
+All denominators are nonzero by Layer B. In particular,
+\[
+ \lambda_0=-\eta_H\ne0,\qquad
+ 2\ii\omega_H-\lambda_2
+ =\frac{3\sqrt5}{2}+\ii\sigma(21+8\phi)\ne0,
+\]
+because $2(10-\phi)+(1+10\phi)=21+8\phi$. This supplies spectral
+data only; no nonlinear interaction channel is evaluated.
+
+\noindent\textbf{FIVE-NODE CANDIDATE VERDICT: VERIFIED.}
+
+\section{Layer F: literal ledger, scope and planning recommendation}
+\label{sec:F}
+\begin{longtable}{p{0.08\linewidth}p{0.84\linewidth}}
+\toprule Item&Independent disposition\\\midrule\endhead
+H1&Established: all five physical coefficients are strictly positive.\\
+H2&Established: each original-field component vanishes exactly at $\one$.\\
+H3&Established: the fixed $g$-path has a unique local positive upper root near $1$.\\
+H4&Established: labels $1,4$ give the positive-frequency pair $\pm\ii\omega_H$.\\
+H5&Established: both numerical critical eigenvalues are separately simple.\\
+H6&Established: every other eigenvalue has real part at most $-\eta_H<0$.\\
+H7&Established: zero is outside the spectrum.\\
+H8&Established: $2\ii\omega_H$ is outside the spectrum.\\
+H9&Established: exact normalized right/adjoint vectors and real-plane orientation.\\
+H10&Correctly unestablished: transversality; no state or eigenvalue derivative along $g$.\\
+H11&Correctly unestablished: first Lyapunov coefficient and nonlinear nondegeneracy.\\
+H12&Correctly unestablished: periodic orbit, branch stability and rotating wave.\\
+\bottomrule
+\end{longtable}
+The branch-coordinate $k$ derivative and the partial frequency derivative
+in the surface proof do not assert H10. The scalar $B_X$ derivative proves
+regularity of an equilibrium branch; it is not $dx_+/dg$. No second or
+third field derivative, normal-form tensor, Fourier nonlinear interaction,
+Lyapunov value/sign, or periodic-branch stability appears in P11.
+The word Hopf is consistently qualified as spectral candidate or future
+package. No earlier paragraph overrides H10--H12.
+
+\paragraph{Separate clarification review.}
+The proposed note correctly identifies frozen attempt-order row 10,
+``certify first crossing and exclusions,'' and novelty-decisions S11,
+which seeks an open first-loss regime along a specified path. The latter
+also requires a nonempty regime, a regular positive branch, complete
+spectral exclusions, and later transversality/nonlinear nondegeneracy.
+An isolated exact point and a regular spectral surface do not by themselves
+complete that target.
+
+The proposed clarification allocates P11 the spectral candidate, its
+regular branch and exclusion data; P12 the moving-equilibrium crossing
+derivative; and P13 the nonlinear nondegeneracy and assembled Hopf theorem.
+A first-loss assertion still requires an explicit interval/path statement.
+This is consistent with the actual dependency map, which already assigns
+spectral conditions to P11, transversality to P12, and the assembled theorem
+to P13. The exact five-node point and Layer C prove the asserted nonempty
+regular candidate surface locally. The cell criterion refines an optional
+existence question and does not retract any P05 theorem.
+
+Adoption would clarify the allocation and wording of planning obligations;
+it would not change direct or conditional dependency edges, canonical
+conventions, novelty ratings, the assembled first-Hopf target, or currently
+permitted manuscript claims. The stronger first-loss/open-regime target
+remains unproved and is not discharged by this audit. Exact-model priority
+remains unclosed under the existing bounded novelty record. No new novelty
+assessment or literature survey is made. The clarification should remain
+an explicit planning action at closure, rather than being treated as a
+mathematical theorem or an automatic frozen-file edit.
+
+\noindent\textbf{Recommendation: ACCEPT AS PLANNING CLARIFICATION.}
+\par\noindent\textbf{SCOPE / P12-P13 HANDOFF VERDICT: VERIFIED.}
+
+\section{Adversarial checks and validation provenance}
+\label{sec:checks}
+The attempted failure modes were treated analytically, not merely by
+searching for numerical counterexamples:
+\begin{enumerate}[leftmargin=2em]
+\item Pair reachability: all four residue classes of $n$ and the Nyquist
+endpoint were checked in Layer A.
+\item Extra imaginary labels: complete representative selection covers all
+labels, including uniform and even singleton labels.
+\item False simplicity: label equality was separated from numerical-value
+equality; the latter is excluded using strict real parts and nonzero frequency.
+\item A $2\ii\omega$ pole: stable and both critical values were checked separately.
+\item Wrong adjoint sign: the actual unitary diagonalization and Hermitian
+pairing give the opposite-sign adjoint equation.
+\item Failed physical projection: strict nonuniform selection forces
+$D_c>0$, making the chart determinant strictly positive.
+\item Missing realizability restrictions: necessity includes $k>0$, and
+sufficiency separately enforces $a>0$ and avoids the sole possible frequency zero.
+\item The $(8,1)$ obstruction survives the boundary $w=0$ exactly.
+\item The $(12,2)$ obstruction uses $\beta_2$, not $\beta_1$; equality is insufficient.
+\item The five-node tuple is substituted into the original field first.
+\item Every five-node eigenvalue and imaginary sign is reconstructed from
+exact phase data, then independently checked in the direct matrix.
+\item The upper-root identity is established by exact factorization and
+positive discriminant, without P10.
+\item The proposed note is checked against the actual stronger planning
+language; accepting it does not certify first loss or reduce the assembled target.
+\end{enumerate}
+
+\paragraph{An explicit physical frequency-degenerate check.}
+This independent exclusion test uses $n=5,j=1$, $x=1/10$, $C=1$,
+$D_c=1$, $G=(\phi-1)/2$ and $z=1/4$. The strict cell lower endpoint
+is zero and its upper endpoint is $(1+\phi)/4$, so this vertex is strict.
+Here $u=(\phi-1)/2$, $w=\phi/2$ and
+\[
+ kx=\phi-\frac{35}{22}>0,
+\]
+since $\sqrt5>24/11$ follows by squaring ($605>576$).
+Use the physical construction in Layer D. Then $a=kx+12G>0$,
+all other coefficients are positive, $R_1=0$, but
+$2(D_c+2G)u-C=2\phi u-1=0$. There is an exact two-dimensional
+real kernel with stable complement, not a strict spectral Hopf candidate.
+This demonstrates a genuine physical excluded point, not a fabricated
+free-coefficient example. It also witnesses that the conditional rank-two
+statement need not be vacuous.
+
+\paragraph{An explicit critical tie check.}
+For $n=20$, the neighboring representatives $4,5$ have cosines
+$u_4=(\phi-1)/2$ and $u_5=0$. Choose $C=1$, $D_c=\phi$,
+$z=1/(4\phi)=(u_4+u_5)/2$, $x=1/10$ and $G=1$.
+Then $kx=\phi-12/11>0$ and the same physical construction gives
+$a=2\phi+109/11>0$. Both representative real parts equal zero,
+and P05's midpoint rule excludes other representatives. Four Fourier
+labels are critical. This fails strict selection regardless of numerical
+frequency coincidences; no named bifurcation is inferred.
+
+\paragraph{Independent exact arithmetic.}
+The new checker uses rational arithmetic in
+$\mathbb Q(\phi,t)$ with $\phi^2=\phi+1$ and
+$t^2=(\phi-3)/4$, interpreted as $t=\ii\sigma$.
+The fifth root is $z=(\phi-1)/2+\phi t$. Checking unnormalized
+columns $w_i^{(m)}=z^{im}$ gives $w^{(m)*}w^{(m)}=5$;
+division by $\sqrt5$ yields the project normalization exactly.
+The script performs 144 exact assertions, including the original residual,
+direct $5\times5$ matrix eigenvectors, Gram matrix, adjoint residuals,
+real basis identities, both spectral-inverse products, mode denominators,
+branch polynomial and discriminant identities, exact obstruction constants,
+and two exact null columns at the excluded point. Exact inequalities are
+proved above; floating-point readings are not used to certify them.
+
+\paragraph{Finite corroboration and limits.}
+With Python 3.12.14 and NumPy 2.3.5, the separate checker examined all
+646 reachable nonuniform cells for $5\le n\le72$: 179 satisfy the
+criterion and 467 do not. It constructed 358 strict physical candidates,
+ran 9,340 obstruction probes, and constructed 111 physical critical ties.
+A separately seeded raw-parameter search made 1,500 trials and found 147
+admissible strict candidates, all consistent with necessity. There were
+206 direct matrix-spectrum comparisons, including odd and even sizes.
+Maximum scaled direct-spectrum discrepancy was $3.366\times10^{-15}$;
+right and adjoint residuals were below $3.167\times10^{-15}$, original
+field residual below $1.074\times10^{-16}$. The chart/uniform-identity
+check had maximum scaled cancellation error $1.417\times10^{-12}$.
+The five-node reading is approximately
+\[
+ -2.9270509831,\quad \pm4.9267960066\ii,\quad
+ -3.3541019662\pm10.0983504152\ii.
+\]
+These finite checks corroborate, but do not prove, all-$n$ claims or certify
+intervals. Floating-point cell equality uses a tolerance; the two specified
+boundary obstructions are checked exactly. The saved JSON contains the
+actual counts and residuals; no historical developer statistics are claimed
+as independently reproduced.
+
+\paragraph{Developer validation authentication.}
+\path{output/p11/P11_validation_support.zip} has SHA-256
+\begin{center}\ttfamily\small
+3fc91d1788cbbbec0ecdd0f8df972481a71\\
+33e6a87ce0f44bdcacf187d8ad18d.
+\end{center}
+Its CRC and all 36 members were inventoried; the original remains unchanged.
+This establishes package identity only. The checker and historical counts
+were not rerun or adopted as proof. The audit's new script and results are
+independently authored. Compilation and visual inspection likewise do not
+supply mathematical verification.
+
+\section{Complete source-line review}
+\label{sec:lines}
+The following ranges partition all 600 lines without gaps or overlaps.
+Every substantive range receives exactly one permitted disposition. Blank
+lines, labels and environment delimiters are attached to their neighboring
+substantive range. PASS means valid within the stated scope, not a proof of
+an excluded later result. All findings refer only to the authenticated hash.
+\begin{longtable}{p{0.10\linewidth}p{0.10\linewidth}p{0.70\linewidth}}
+\toprule Lines&Verdict&Finding\\\midrule\endhead
+1--18&PASS&Version, inputs and exclusions match the manifest; no numerical premise.\\
+19--31&PASS&Spectral scope is explicit; no crossing, orbit or propagation assertion.\\
+32--40&PASS&Positive equilibrium and effective coefficients use the canonical domain.\\
+41--53&PASS&P04 phases, signed imaginary parts and unitary diagonalization agree exactly.\\
+54--64&PASS&Complete representative maximizers include all ties and singleton classes.\\
+65--79&PASS&Reachable bound proves a genuine pair; all even sizes exclude Nyquist.\\
+80--96&PASS&Frequency factorization and both cosine-sign cases are exact.\\
+97--103&PASS&Double-angle identity and positive sine justify every equivalence.\\
+104--114&PASS&Strict means one complete representative, zero real part, nonzero frequency.\\
+115--125&PASS&Exactly two distinct simple imaginary eigenvalues; every other label is left.\\
+126--139&PASS&Finite positive gap, real dimensions and both inverse gates are correctly stated.\\
+140--148&PASS&Representative-to-label transfer accounts for uniform and Nyquist modes.\\
+149--159&PASS&Numerical simplicity follows from label exclusion and P04 multiplicity.\\
+160--168&PASS&Noncritical set is nonempty; both critical-value comparisons are valid.\\
+169--182&PASS&Same normalized Fourier column is the opposite-sign Hermitian adjoint.\\
+183--191&PASS&Ordered real block and signed coefficient-plane angular velocity are correct.\\
+192--198&PASS&Unitary diagonalization verifies the current pairing convention.\\
+199--205&PASS&DFT orthogonality yields equal real/imaginary norms and a real basis.\\
+206--214&PASS&Column signs are correct; negative signed frequency is handled explicitly.\\
+215--223&PASS&Critical ties fail the single-pair hypothesis; real-part ties need not be eigenvalue ties.\\
+224--234&PASS&Zero multiplicity is exactly the zero-label count; strict zero pair has real kernel dimension two.\\
+235--244&PASS&P02 equilibrium chart is exactly the P05 open physical domain.\\
+245--251&PASS&Diagonal simplification cancels the g terms; scalar cosine notation is distinguished.\\
+252--261&PASS&R\_j equals the selected modal real part with all physical coefficients.\\
+262--272&PASS&Partial k derivative and solved graph have correct signs.\\
+273--280&PASS&Regular surface retains k and a positivity, strict selection and nonzero frequency.\\
+281--286&PASS&Rank-two assertion is conditional on existence and correct physical transfer.\\
+287--301&PASS&P05 forces concavity; determinant is positive; transfer is local only.\\
+302--305&PASS&Branch-coordinate derivative is expressly separated from the frozen physical path.\\
+306--318&PASS&Frequency partials and negative nonzero two-by-two determinant are exact.\\
+319--334&PASS&Cell criterion uses the correct lower midpoint and strict inequality.\\
+335--347&PASS&Fixed vertex/state iff claim is correct; both obstruction examples are valid.\\
+348--361&PASS&Positive k forces w positive and z below B; all endpoints exist with correct indexing.\\
+362--371&PASS&Both upper bounds exceed the lower bound; small positive x gives positive k.\\
+372--380&PASS&Physical realization preserves effective coefficients and the equilibrium equation.\\
+381--388&PASS&Large G enforces a positive and avoids at most one frequency zero; no universal existence claim survives.\\
+389--399&PASS&P07 constants and frequency are conditional five-node inputs only.\\
+400--412&PASS&Exact tuple and critical state are strictly positive and physically valid.\\
+413--426&PASS&All five labeled eigenvalues, individual simplicity, ordering and exact gap are correct.\\
+427--434&PASS&Second root lies strictly between zero and one.\\
+435--442&PASS&Exact positivity and original-model residual are checked before spectral reduction.\\
+443--452&PASS&Effective data and raw diagonal formula agree independently.\\
+453--465&PASS&Radical real parts and strict noncritical difference are correct; table corroboration is redundant.\\
+466--474&PASS&Frequency signs and exact positive bounds yield the complete complex spectrum.\\
+475--484&PASS&P02 polynomial factors exactly; no P10 input is used.\\
+485--492&PASS&Positive lower root and discriminant establish the upper-root identification.\\
+493--504&PASS&Frozen g-path and unique local root near one are accurately scoped.\\
+505--514&PASS&Explicit vector uses positive exponents, normalized pairing and correct adjoint sign.\\
+515--526&PASS&Real block and both spectral-projector inverse sums are correct.\\
+527--534&PASS&Mode-zero and mode-two denominators have exact values and are nonzero.\\
+535--545&PASS&At X=1 the bracket derivative equals lambda\_0; local positivity and root ordering persist.\\
+546--555&PASS&Vector and denominator proofs introduce no tensors or nonlinear conventions.\\
+556--563&PASS&H1-H2 are proved physical and original-field assertions.\\
+564--565&PASS&H3 is local smooth upper-branch existence only.\\
+566--569&PASS&H4-H6 assert the exact pair, individual simplicity and stable gap.\\
+570--571&PASS&H7-H8 are exactly the two proved spectral exclusions.\\
+572--573&PASS&H9 records established vectors, pairing and plane orientation.\\
+574--575&PASS&H10 explicitly leaves transversality and path derivatives unestablished.\\
+576--577&PASS&H11 explicitly leaves Lyapunov and nonlinear nondegeneracy unestablished.\\
+578--580&PASS&H12 withholds periodic orbits, branch stability and rotating waves.\\
+581--587&PASS&Ledger references correctly distinguish results from exclusions.\\
+588--592&PASS&Exact nonemptiness is analytical; computation is corroboration and C073 is unused.\\
+593--596&PASS&B02/B06 spectral choices are scoped; B07 nonlinear normalization stays with P13.\\
+597--600&PASS&First loss/open nonlinear regime remains unproved; proposed note is separate and frozen files untouched.\\
+\bottomrule\end{longtable}
+
+\section{Request coverage and artifact inventory}
+The source-level ledger above is supplemented by this task-check mapping.
+The numbers refer to the supplied audit request, not P11 equation numbers.
+\begin{longtable}{p{0.17\linewidth}p{0.75\linewidth}}
+\toprule Request items&Disposition and location\\\midrule\endhead
+0--1&Current-version authentication and actual dependency use: Section~\ref{sec:auth} and the hash inventory.\\
+2&All six layer verdicts are separately stated, with an overall verdict.\\
+3--7&Orientation, reachability, frequency, strict definition and full label coverage: Section~\ref{sec:A}.\\
+8--14&Simplicity, gap, real dimensions, inverse gates, adjoint, real block, ties and repeated zero: Section~\ref{sec:B}.\\
+15--19&Equilibrium chart, real-part function, k graph, physical transfer and rank-two locus: Section~\ref{sec:C}.\\
+20--29&Independent necessity/sufficiency, physical realization, frequency avoidance and exact obstructions: Section~\ref{sec:D}.\\
+30--46&Original-field residual, exact spectrum, upper root, local branch, vectors, block and denominators: Section~\ref{sec:E}.\\
+47--50&Literal H1--H12 ledger, separate clarification recommendation and P12/P13 boundaries: Section~\ref{sec:F}.\\
+51--52&Analytical counterexample attempts and independent exact/finite checks: Section~\ref{sec:checks}.\\
+53&Complete 1--600 range partition: Section~\ref{sec:lines} and companion CSV.\\
+54--58&Required verdicts, exact slug, audit-only ZIP, source/PDF, preservation and explicit closure handoff.\\
+\bottomrule
+\end{longtable}
+The audit-only archive is named exactly
+\path{cyclic_network_project_A11_audit_only.zip}, with sole project root
+\path{cyclic_network_project/}. It contains this standalone audit source,
+its PDF reading copy and \path{audits/A11_support/} evidence only.
+It contains no replacement P11 source and is not a full-project snapshot.
+The support files record the audited version; all requested input hashes;
+all 200 original project hashes; archive identity and CRC checks; independent
+checker and results; the 646-cell realizability table; complete line review;
+clarification review; validation provenance; and preservation/build records.
+The original draft archives and every pre-existing project file are retained.
+
+\section{Authenticated input hashes}
+The full machine-readable inventory includes byte counts, line counts and
+proof-body hashes. The following human-readable list records all 31 inputs.
+Each displayed SHA-256 is split only for page width; concatenate its halves.
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{project_manifest.md}\par
+\noindent{\small\ttfamily e57b131d77a821547cc30a2b1efb21e1\\4a71548d6d40668a50140d9bc8e17272}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{claim_registry.md}\par
+\noindent{\small\ttfamily 4e1a7fd2a38b4364e98570c55b211c27\\7348082693ab1e56367222e4f4d37b8f}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{frozen_theorem_package.md}\par
+\noindent{\small\ttfamily 724adf3d04a7f9661a2e53fbae359192\\e8a5a5ee56737bdca2379209b556ea63}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{final_novelty_verdict.md}\par
+\noindent{\small\ttfamily 5fa8ddd5ada9628b104dba68dd535356\\442c5e62ec45b72f3c2c354dec6037ea}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{novelty_decisions.md}\par
+\noindent{\small\ttfamily 8fd079fb108b93c4504bc2b527de11c1\\f7e867a967c7cef0d90e1ff7a0a9175e}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{open_decisions.md}\par
+\noindent{\small\ttfamily 506c634c9958d13b4d6ef4080ebe214a\\f5fd0c77d5dc8fe6f1b91d2750ffab59}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{02_theorem_dependency_map.tex}\par
+\noindent{\small\ttfamily a1a4435f36fc1d1b6f0b2c5226a91328\\3c76658d55b96493e6c50a8693831cac}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs_compendium.tex}\par
+\noindent{\small\ttfamily 88afbd023e84e6396f34b785fe54dffe\\4fcc398796e6ff3ec6da45300776b62f}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{shared_macros.tex}\par
+\noindent{\small\ttfamily f4a18a440e1214b619bf18f4a81fee50\\7239460ca796d8ca3916791069d6a7ad}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{00_canonical_model.tex}\par
+\noindent{\small\ttfamily c209981cb2924e8a782f24aa2904e8c8\\5a105ff99319dd6aada12f48a351c2a4}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{01_notation_and_assumptions.tex}\par
+\noindent{\small\ttfamily 97d993c6d3986524dbcc29659ee73d25\\7be1b03a35c44401e8ef4534303eeb91}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P01_wellposedness_and_absorbing_box.tex}\par
+\noindent{\small\ttfamily 0d6950821aa83f3d09e8bfe84dab2b0b\\5020aa6e7881cf6928e984bff1890f1e}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A01_wellposedness_and_absorbing_box.tex}\par
+\noindent{\small\ttfamily 8d5c1b2ec782dbe49b07d2bbe529ee47\\4d4c142695c53b523ccb41d63bb33098}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P02_synchronous_subspace_and_equilibria.tex}\par
+\noindent{\small\ttfamily 8e057c2cd009659eee45906844e25f4f\\38c156e5eb2e4130e824aa5e8299c51a}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A02_synchronous_subspace_and_equilibria.tex}\par
+\noindent{\small\ttfamily ca3d723d9fcfac14f5129583441e611a\\65e41848ec44f3b5e3a0072f795d84ac}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P03_origin_and_linearization.tex}\par
+\noindent{\small\ttfamily 6c3c9bfb2307bdc043eb7f6a874cb222\\e2ac2ce0750b339181f0088dd0bd859e}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A03_origin_and_linearization.tex}\par
+\noindent{\small\ttfamily e1008f98ba9667b92b8d74f1bc7d21e0\\21414b454ac976ae0db1500b4b7ef8d1}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P04_arbitrary_nq_fourier_spectrum.tex}\par
+\noindent{\small\ttfamily 1331c8598acd0481046250d918cac028\\ca6d13d2604612448c3459e864321c58}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A04_arbitrary_nq_fourier_spectrum.tex}\par
+\noindent{\small\ttfamily 8a57079241269c92a3c3e8dc4dccf859\\2da2d1a636fca0c0990a4f318396d869}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P05_q2_mode_selection.tex}\par
+\noindent{\small\ttfamily 054a047a55ef37815485f6c225be2f63\\22ca8cf1c272614dd1dc4bb10ae8e1dd}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A05_q2_mode_selection.tex}\par
+\noindent{\small\ttfamily 0f7e9836b91009a201185a4acbbb9971\\5f3c65df715e405962b7d6852ff27031}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P07_five_node_specialization.tex}\par
+\noindent{\small\ttfamily 1258641da2b1b729523da6262cf75345\\f5ef1eabf7a9f693a8b13dd34deec393}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A07_five_node_specialization.tex}\par
+\noindent{\small\ttfamily b3923d6520cc249c508b80dd06a2b515\\f054e1510e255224a864e986cd38ce4b}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P08_matched_bilinear_analysis.tex}\par
+\noindent{\small\ttfamily 81d273f0bad1714d2470e9fc826f0819\\e9dde367a9c42633705a275b404e5454}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A08_matched_bilinear_analysis.tex}\par
+\noindent{\small\ttfamily 87cd4a03061648eb4cf1c65d1afa47c7\\132c1f7eed10d546784ee166c8e5c935}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P09_transcritical_bifurcation.tex}\par
+\noindent{\small\ttfamily 5d357a5be97dfbad62a0107ca2e010ff\\97e0c11a719ee850df69411275f11ff8}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A09_transcritical_bifurcation.tex}\par
+\noindent{\small\ttfamily 1234e02d7cf620511bfd7b9306dbb72a\\c68929ef01e8c3ba70bd3615bcd2b943}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P10_saddle_node_and_bistability.tex}\par
+\noindent{\small\ttfamily 37542cc5409d7db33ca183869933fbdb\\ad673628f69f6988f2778a84bc84094f}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{audits/A10_saddle_node_and_bistability.tex}\par
+\noindent{\small\ttfamily ff2ebb0f84ae79fc9aad012a3945ef23\\6e8ccdac9f47d64fd708e4dc66963b19}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{proofs/P11_hopf_spectral_conditions.tex}\par
+\noindent{\small\ttfamily 4be8e9b1e64c022b635f3cca9f7f49ff\\bc5358a2250dda1715cb60e82d9b073b}\par
+\end{minipage}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\noindent\path{PROPOSED_P11_scope_clarification.md}\par
+\noindent{\small\ttfamily 027c130a0ed4e472335746689f63a194\\d286fd01648558b04feb18d1f3132b0a}\par
+\end{minipage}\par
+
+\section{Closure handoff}
+\textbf{OVERALL VERDICT: VERIFIED. Required corrections: none.}
+There are no E01, E02 or other required mathematical or wording issues to
+close. This verdict applies only to the exact P11 v1.0 hash identified at
+the start of this audit. The mathematical body requires no change.
+
+The \textbf{ORIGINAL P11 development chat may perform administrative closure
+without changing the mathematical body}. It should preserve this exact
+version identity, record the independent A11 verdicts in the appropriate
+lifecycle records, retain the scope exclusions and validation-provenance
+distinctions, and handle the separately recommended planning clarification
+explicitly. This audit does not itself mark P11 VERIFIED and does not edit
+P11, its manifest, the registry, the compendium, or a frozen file.
+
+After successful correction/closure, the original P11 development chat
+must create \path{cyclic_network_project_P11_audited.zip} as the
+\textbf{COMPLETE full-project snapshot}. That archive is not created in
+this audit chat. The existing \path{cyclic_network_project_P11_draft.zip}
+must remain unchanged. The deliverable here is solely the audit-only archive.
+
+\textbf{P12 is cleared to begin after administrative closure.} This is
+permission to undertake its scoped proof work, not certification of a P12
+result. P12 must analyze the actual frozen physical path and account for
+equilibrium motion; this audit computes no derivative along it. P13 must
+still establish nonlinear nondegeneracy with reconciled conventions before
+any assembled Hopf, periodic-orbit or branch-stability conclusion. First-loss
+and rotating-wave claims remain subject to their separate outstanding gates.
+Neither P12 nor P13 is begun here.
+\end{document}

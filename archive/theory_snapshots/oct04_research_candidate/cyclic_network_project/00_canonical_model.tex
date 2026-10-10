@@ -1,0 +1,74 @@
+% STATUS: CANONICAL SPECIFICATION; no theorem is asserted or proved here.
+\section{Canonical model contract}
+\label{sec:canonical}
+The explicit initialization prompt is authoritative. This fragment specifies
+the main models; formulas in the archived blueprint remain research candidates.
+
+\subsection{Main demand-modulated model}
+For $i\in\Zn$, define the vector field $F^{\DM}$ by
+\begin{equation}
+\label{eq:canonical-dm}
+\dot{x}_i=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+             -\frac{g x_i}{1+x_{i+q}}-h x_i x_{i-q}.
+\tag{$\DM_{n,q}$}
+\end{equation}
+The variables are dimensionless normalized activities. The preferred term is
+\emph{demand-modulated model}. The positive input is called demand-modulated
+predecessor input; no standard Holling type-II classification is adopted.
+The intended initial conditions are $x(0)\in\Orth$. For local statements and
+boundary bifurcations, use the specified open extension domain
+$\Domain=(-1,\infty)^n$. This domain choice asserts no invariance theorem.
+
+\subsection{Primary matched bilinear comparator}
+Define $F^{\MB}$ by
+\begin{equation}
+\label{eq:canonical-mb}
+\dot{y}_i=a y_i-k y_i^2+c y_i y_{i-1}
+                 -g y_i y_{i+q}-h y_i y_{i-q},\qquad i\in\Zn.
+\tag{$\MB_{n,q}$}
+\end{equation}
+This is the topology- and parameter-count-matched comparator in the main
+program. Its intended initial data are nonnegative; the polynomial vector
+field is specified on $\R^n$. No existence, invariance, boundedness or
+stability conclusion is included in this contract. Matching parameter names
+does not settle a quantitative calibration between the two laws.
+
+\subsection{Parameter and indexing contract}
+\[
+n\in\Z,\quad n\geq5,\qquad q\in\{1,\ldots,n-1\},\qquad
+\param=(a,k,c,g,h)\in(0,\infty)^5.
+\]
+All indices are modulo $n$, with representatives $0,\ldots,n-1$.
+Arbitrary $q$ is allowed. The interpretation as one connected step-$q$ cycle
+requires $\gcd(n,q)=1$; this condition is not imposed on the general analytical
+program. In particular, even $n$ is not excluded when $q=2$. Coincident offsets
+do not remove terms from either defining equation.
+The intended exact wave-number-selection program focuses on $q=2$.
+The five-node Wu-Xing-inspired specialization is $n=5,q=2$.
+
+\subsection{Archived secondary six-term comparator}
+The following is a transcription of the blueprint's proposed arbitrary-$n,q$
+extension, not a verified attribution to the original Lin--Han publication:
+\begin{equation}
+\label{eq:archived-lb}
+\dot{y}_i=a y_i-b y_i^2+c y_i y_{i-1}-d y_i y_{i-q}
+                    -g_{\mathrm c}y_i y_{i+1}-h y_i y_{i+q}.
+\tag{$\LB_{n,q}$ archive}
+\end{equation}
+Its archived five-node equation is obtained by specifying $n=5,q=2$ in this
+transcription. The six coefficient names are archival and are not a parameter
+identification with $\DM$ or $\MB$. The original source, coefficient domain,
+index orientation, and attribution remain to be checked before analysis or
+use as a literature application.
+
+\subsection{Scope boundary}
+The main program covers homogeneous $\DM$, primary comparator $\MB$, their
+synchronous equilibria and spectra, the planned bifurcations, and the planned
+small-heterogeneity response theory. All requested P01--P18 tasks remain in
+the project; final main-text versus supplement placement is open.
+The heterogeneous coefficient assignment is not frozen by this contract.
+The six-term model is archived for a possible secondary literature application,
+never a replacement for $\MB$. Source-saturating replacements, local motif
+theory, pathology extensions, adaptive set points, interventions, noise,
+delays, data calibration, and prior Lyapunov-spectrum reanalysis are postponed
+to other work. The master remains unchanged.

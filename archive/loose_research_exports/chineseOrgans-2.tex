@@ -1,0 +1,619 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{ctex} % Need for inserting Chinese characters, also needed to change compiler from pdfLaTex to XuLaTex
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{fancybox}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\pagestyle{plain} 
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%% 
+
+\textheight235truemm\textwidth165truemm
+\voffset-2.2cm\hoffset-1.2cm \vfuzz=10000truept\hfuzz=10000truept
+\usepackage{lipsum}
+\usepackage[usestackEOL]{stackengine}[2013-10-15]
+\def\x{\hspace{1.5ex}}
+\def\y{\hspace{1.225ex}}
+\def\z{\hspace{1.9ex}}
+\newcommand{\RED}[1]{{\color{red}{#1}}}
+\newcommand{\ignore}[1]{}
+\newcommand{\Matrix}[1]{\ensuremath{\left(\begin{array}{rrrrrrrrrrrrrrrrrr} #1 \end{array}\right)}}
+\newcommand{\Matrixc}[1]{\ensuremath{\left(\begin{array}{cccccccccccc} #1 \end{array}\right)}}
+\newcommand{\Matrixs}[1]{\ensuremath{\left[\begin{array}{cccccccccccc} #1 \end{array}\right]}}
+\newcommand{\etal}{{\it et al.}}
+\newcommand{\multiple}{{multiple} }
+
+%\newcommand{\Kcomment}[1]{{\color{blue}{[KJ: #1]}}}
+
+%\newcommand{\RED}[1]{{\color{red}{#1}}}
+
+\newcommand{\GG}{{\mathcal{G}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{claim}[theorem]{Claim}
+
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{Chinese_med.bib}
+
+\title{Dynamics of Five organ diagram in Chinese Medicine}
+\author{Carter Feng and Yunjiao Wang}
+%\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Traditional Chinese medicine (TMC) has been widely recognized  and becomes an invaluable component in alternative medicines in the west \cite{Kaptchuk2000} though it is not always viewed correctly.   Chinese medicine is the result of science over long time as it is the result of continuous critical thinking and extensive clinical observations and testing \cite{Kaptchuk2000}. It is a coherent and independent system of thoughts and practice that have been developed over 2000 years.   As Manfred Porkert \cite{Porkert1990} rightly pointed out, Chinese medicine is not less logical than the Western, just less analytical. In this project, we aim to contribute analytical study of Chinese medicine. 
+
+
+
+
+\subsection{Literature Review}
+The five-element system has been modeled by discrete and countinuous dynamical systems. 
+
+\begin{itemize}
+\item {\bf Discrete models.}
+In \cite{Bellavite1998}, the five-element network is modelled by a synchronous Boolean network and use the following schemes: each node receives
+two inputs, one activating (generating/sheng) and another inhibiting (restrain/ke). It may be
+either active (ON) or inactive (OFF) in the next time unit, according to
+the state of its two inputs. In the case that both
+inputs are in the same state, it is set either ON or OFF in an arbitrary way as an initial option that characterizes the system. The paper also studied the system with delay or perturbations. However, this paper didn't connect the result back to the real system. It is not clear whether the patterns shown in the system make sense and carry any meaning. The system was also modeled by discrete dynamical systems with each node having three states: normal, excess, and deficiency \cite{Lin2020}. 
+
+\item {\bf Continuous models.}
+\begin{enumerate}
+\item A very recent paper by Nian et al.\cite{Nian2025}: 
+\[
+\begin{array}{rl}
+\frac{dM}{dt} &= a_1 M + b_1 S+ c_1 J + d_1 HTSJ \\
+\frac{dH}{dt} &= a_2 H + b_2 M+ c_2S   + d_2 MTSJ \\
+\frac{dT}{dt} &= a_3 T + b_3 H+ c_3 M + d_3 HMSJ \\
+\frac{dJ}{dt} &= a_4 J + b_4 T + c_4 H + d_4 HTSM \\
+\frac{dS}{dt} &= a_5 S + b_5 J+ c_5 T + d_5 HTMJ \\
+\end{array}
+\]
+The paper assumes all $a's, b's$ and $c's$ to be 1, which makes no sense.   So I decide not to read the paper. 
+\item 
+\end{enumerate}
+
+\end{itemize}
+
+\subsection{Our Focus and Contributions}
+
+Outline of the paper: 
+\begin{enumerate}
+\item Modeling Wuxing relation. capture mother-child nourish relation, and abnormal and constrains relations
+\item disease spread 
+\end{enumerate}
+
+
+
+\section{Relations in Wu-Xing and Mathematical Modeling}
+
+\subsection{The Five Organs and Index Assignment}
+
+\noindent
+We index the five organs as follows, following the standard Wu-Xing (Five Element)
+cycle:
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Index & Element & Organ \\
+\midrule
+$x_1$ & Wood\; (木) & Liver\; (肝) \\
+$x_2$ & Fire\; (火)  & Heart\; (心) \\
+$x_3$ & Earth\; (土) & Spleen\; (脾) \\
+$x_4$ & Metal\; (金) & Lung\; (肺) \\
+$x_5$ & Water\; (水) & Kidney\; (肾) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Let $x_i = x_i(t) \geq 0$ denote the functional activity level (qi) of organ $i$
+at time $t$.
+
+\subsection{Fundamental Relationships}
+
+\noindent
+TCM identifies three primary inter-organ relationships, each of which contributes
+a term to the dynamical model.
+
+\medskip
+\noindent\textbf{Sheng (生, Generating) cycle.}
+Each organ nourishes the next in the cycle
+\[
+x_1 \to x_2 \to x_3 \to x_4 \to x_5 \to x_1.
+\]
+We say that   each organ is the {\bf mother} of the next organ in the cycle, and the next is the {\bf child}.  
+We denote the \emph{Sheng mother} of organ $i$ by $\sigma(i)$:
+\[
+\sigma(1)=5,\quad \sigma(2)=1,\quad \sigma(3)=2,\quad \sigma(4)=3,\quad \sigma(5)=4.
+\]
+ 
+
+
+\medskip
+
+\noindent\textbf{Ke (克, Controlling) cycle.}
+Each organ restrains another following the pentagram pattern
+\[
+x_1 \to x_3 \to x_5 \to x_2 \to x_4 \to x_1.
+\]
+We denote the \emph{Ke target} of organ $i$ (the organ that $i$ controls) by
+$\kappa(i)$, and the \emph{Ke controller} of organ $i$ (the organ that controls $i$)
+by $\rho(i)$:
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Organ $i$ & Ke target $\kappa(i)$ & Ke controller $\rho(i)$ \\
+\midrule
+$x_1$ Wood  & $x_3$ Earth  & $x_4$ Metal  \\
+$x_2$ Fire  & $x_4$ Metal  & $x_5$ Water  \\
+$x_3$ Earth & $x_5$ Water  & $x_1$ Wood   \\
+$x_4$ Metal & $x_1$ Wood   & $x_2$ Fire   \\
+$x_5$ Water & $x_2$ Fire   & $x_3$ Earth  \\
+\bottomrule
+\end{tabular}
+\end{center}
+{\RED{To model Ke relation, we could assume that the unit production rate of $x_i$ is negatively modulated by $x_{\kappa(i)}$ with a term $ -\beta_i x_{\kappa(i)} x_i$ 
+as done in the literature.
+However, ke  is also involved in several other relations. Namely, Rebellious Counter-Acting （相侮）, 相乘，
+}}
+
+
+\medskip
+\noindent\textbf{Wu (侮, Rebellious Counter-Acting).}
+Under pathological conditions, when organ $i$ becomes severely deficient \RED{or the organ
+it normally controls $\kappa(i)$ is over active}, %the organ
+%it normally controls,  
+$x_{\kappa(i)}$,
+may rebel against $x_i$. That is, $x_{\kappa(i)}$
+exerts a reverse draining effect on $x_i$ when $x_i$ falls below a threshold
+$\epsilon_i > 0$ \RED{ We use the following term to model this relation:
+\[
+-\frac{b_ix_{\kappa(i)}}{1+\epsilon_i x_i}
+\]
+}.
+
+
+
+\noindent
+Rather than a fixed homeostatic target, we propose that each organ maintains an
+\emph{adaptive set point} $\theta_i > 0$ that is influenced by its Sheng mother
+and its Ke controller:
+\begin{equation}\label{eq:setpoint}
+    \theta_i \;=\; \theta_i^0 \;+\; \alpha_i\, x_{\sigma(i)} \;-\; \beta_i\, x_{\rho(i)},
+\end{equation}
+
+
+where $\theta_i^0 > 0$ is the baseline constitutional set point of organ $i$,
+$\alpha_i \geq 0$ encodes how much the mother's nourishment raises the set point,
+and $\beta_i \geq 0$ encodes how much the controller's restraint lowers it.
+We assume parameters are chosen such that $\theta_i > 0$ for all physiologically
+relevant states.
+{\RED{This means the quation for $x_i$ containing a term as
+\[ k_ix_i(\theta_i^0 + \alpha_i x_{\sigma(i)}- \beta_i x_{\rho(i)} - x_i)
+\]
+}
+}
+
+\begin{itemize}
+\item Mother-child relation: (1) The weakening of mother leads to weakening of child. (2) Weakening of child will eventually lead to weakening of Mother.
+
+INSERT Graph: Node1 (mother) $\to$ Node2 (Child) 
+\item Inhibition.
+
+\begin{enumerate}
+\item Forward inhibition relation:  $x_1 \dashv x_3 \dashv x_5 \dashv x_2 \dashv x_4\dashv x_1$. (Normal inhibition, constants: $h_i$)
+\item Backward inhibition relation: $x_1 \vdash x_3 \vdash x_5 \vdash x_2 \vdash x_4\vdash x_1$. (inhibition consumption, constants $b_i$)
+\end{enumerate}
+
+
+\end{itemize}
+Let $x_i$ be the amount of production produced by Node $i$ for $i = 1, 1$.
+
+
+\begin{equation}
+\begin{array}{ll}
+\dot{x}_1 &=  a_1 x_1 -  k_1 x_1^2 + \frac{c_1}{1+x_1}x_5- \frac{g_1 }{1+x_2}x_1- h_1 x_1 x_4  - b_1 x_1x_3\\
+\dot{x}_2 & = a_2 x_2 -  k_2 x_2^2 + \frac{c_2}{1+x_2}x_1 - \frac{g_2}{1+x_3}x_2 - h_2 x_2 x_5- b_2 x_2x_4\\
+\dot{x}_3 & = a_3 x_3 -  k_3 x_3^2 + \frac{c_3}{1+x_3}x_2 - \frac{g_3}{1+x_4}x_3 - h_3 x_3 x_1- b_3 x_3 x_5\\
+\dot{x}_4 & = a_4 x_4 -  k_4 x_4^2 + \frac{c_4}{1+x_4}x_3 - \frac{g_4}{1+x_5}x_4 - h_4 x_4 x_2 - b_4 x_4x_1\\
+\dot{x}_5 & = a_5 x_5 -  k_5 x_5^2 + \frac{c_5}{1+x_5}x_4 - \frac{g_5}{1+x_1}x_5 - h_5 x_5 x_3- b_5 x_5x_2\\
+\end{array}
+\end{equation}
+
+$a_i$ term means self-production
+
+$k_i$ term means saturation
+
+$c_i$ term means is generating
+
+$g_i$ term means generation
+
+$h_i$ term means
+
+$b_i$ term means
+
+Another possible models. 
+\begin{equation}
+\begin{array}{ll}
+\dot{x}_1 &=  a_1 x_1 -  k_1 x_1^2 +
+\RED{\frac{c_1}{1+x_1}\frac{x_5}{1+x_5}- \frac{g_1 }{1+x_2}x_1}- h_1 x_1 x_4  - b_1 x_1x_3\\ 
+\dot{x}_2 & = a_2 x_2 -  k_2 x_2^2 + \frac{c_2}{1+x_2}\frac{x_1}{1+x_1} - \frac{g_2}{1+x_3}x_2 - h_2 x_2 x_5- b_2 x_2x_4\\
+\dot{x}_3 & = a_3 x_3 -  k_3 x_3^2 + \frac{c_3}{1+x_3}\frac{x_2}{1+x_2} - \frac{g_3}{1+x_4}x_3 - h_3 x_3 x_1- b_3 x_3 x_5\\
+\dot{x}_4 & = a_4 x_4 -  k_4 x_4^2 + \frac{c_4}{1+x_4}\frac{x_3}{1+x_3} - \frac{g_4}{1+x_5}x_4 - h_4 x_4 x_2 - b_4 x_4x_1\\
+\dot{x}_5 & = a_5 x_5 -  k_5 x_5^2 + \frac{c_5}{1+x_5}\frac{x_4}{1+x_4} - \frac{g_5}{1+x_1}x_5 - h_5 x_5 x_3- b_5 x_5x_2\\
+\end{array}
+\end{equation}
+
+$\RED{\frac{b_1 x_3}{1 + \epsilon_0 x_1}}$
+
+\begin{equation}
+\begin{array}{ll}
+\dot{x}_1 &= a_1 x_1 - k_1 x_1^2 + \frac{c_1 x_5}{1+x_1} - \frac{g_1 x_1}{1+x_3} - h_1 x_1 x_4 \\
+\dot{x}_2 &= a_2 x_2 - k_2 x_2^2 + \frac{c_2 x_1}{1+x_2} - \frac{g_2 x_2}{1+x_4} - h_2 x_2 x_5 \\
+\dot{x}_3 &= a_3 x_3 - k_3 x_3^2 + \frac{c_3 x_2}{1+x_3} - \frac{g_3 x_3}{1+x_5} - h_3 x_3 x_1 \\
+\dot{x}_4 &= a_4 x_4 - k_4 x_4^2 + \frac{c_4 x_3}{1+x_4} - \frac{g_4 x_4}{1+x_1} - h_4 x_4 x_2 \\
+\dot{x}_5 &= a_5 x_5 - k_5 x_5^2 + \frac{c_5 x_4}{1+x_5} - \frac{g_5 x_5}{1+x_2} - h_5 x_5 x_3
+\end{array}
+\end{equation}
+
+
+
+\section{Modeling}
+The simple model uses logistic self-regulation with no adaptive
+set point and no Wu (rebellious) terms. It is intended for
+baseline homeostasis analysis.
+
+\begin{equation}\label{eq:simple}
+\dot{x}_i \;=\;
+\underbrace{a\, x_i - k\, x_i^2}_{\text{logistic self-regulation}}
+\;+\;
+\underbrace{\frac{c\, x_{\sigma(i)}}{1 + x_i}}_{\text{Sheng nourishment}}
+\;-\;
+\underbrace{\frac{g\, x_i}{1 + x_{\kappa(i)}}}_{\text{Ke over-acting}}
+\;-\;
+\underbrace{h\, x_i\, x_{\rho(i)}}_{\text{Ke restraint}}
+\end{equation}
+
+Written out explicitly:
+\begin{align*}
+\dot{x}_1 &= ax_1 - kx_1^2 + \frac{cx_5}{1+x_1} - \frac{gx_1}{1+x_3} - hx_1x_4 \\
+\dot{x}_2 &= ax_2 - kx_2^2 + \frac{cx_1}{1+x_2} - \frac{gx_2}{1+x_4} - hx_2x_5 \\
+\dot{x}_3 &= ax_3 - kx_3^2 + \frac{cx_2}{1+x_3} - \frac{gx_3}{1+x_5} - hx_3x_1 \\
+\dot{x}_4 &= ax_4 - kx_4^2 + \frac{cx_3}{1+x_4} - \frac{gx_4}{1+x_1} - hx_4x_2 \\
+\dot{x}_5 &= ax_5 - kx_5^2 + \frac{cx_4}{1+x_5} - \frac{gx_5}{1+x_2} - hx_5x_3
+\end{align*}
+
+Note that this is the symmetric case: all organs share the same
+parameter values $a, k, c, g, h$. This is justified as a first
+analysis by the rotational symmetry of the Wuxing cycle.
+
+\begin{center}
+\begin{tabular}{c p{6cm} l l}
+\toprule
+Parameter & Biological meaning & Value used & AUTO array index \\
+\midrule
+$a$ & Self-production rate. Rate at which
+      each organ generates qi proportional to its
+      current activity. & $2.0$ & \texttt{PAR(1)} \\[4pt]
+$k$ & Self-limitation. Prevents unbounded
+      growth, the natural carrying capacity
+      is $a/k$. & $0.5$ & \texttt{PAR(2)} \\[4pt]
+$c$ & Sheng nourishment. How strongly the
+      Sheng mother nourishes the child organ. & $1.0$ & \texttt{PAR(3)} \\[4pt]
+$g$ & Ke over-acting strength. How strongly
+      organ $i$ drains its Ke target $x_{\kappa(i)}$. & $0.5$ & \texttt{PAR(4)} \\[4pt]
+$h$ & Ke direct restraint strength. Suppression of
+      organ $i$ by its Ke controller
+      $x_{\rho(i)}$. & $0.3$ & \texttt{PAR(5)} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\section{Result}
+\section{Conclusion}
+
+\section{Exploring the modeling -- just for record}
+The simplest model of Wu Xing that reflects the generating and constraining relation
+
+\begin{equation}
+\begin{array}{rl}
+\dot{x_1} &= g_1x_5 - k_1 x_4 \\
+\dot{x_2} &= g_2 x_1 - k_2 x_5 \\
+\dot{x_3} &= g_3 x_2 - k_3 x_1 \\
+\dot{x_4} &= g_4 x_3 - k_4 x_2 \\
+\dot{x_5} &= g_5 x_4  - k_5 x_3  
+\end{array}
+\end{equation}
+
+\paragraph{Mother-Child relation. } Let $\sigma(i) \to i$ be a sheng relation. That is,  element $\sigma(i)$ nourish element $i$ and is  the mother of element $i$. Child element depends on its mother element. One of the  elements out of order will impact the balance of the another.  
+The mother-child pathological relations described in the traditional Chinese medicine are as follows \cite{NeiJing}
+\begin{enumerate}
+\item The deficiency in the mother leads to deficiency in the child. 
+
+This can be explained from the Sheng/generating term $g_ix_j$. 
+\item The excess in mother leads to excess in the child.
+\item The excess activity in the child leads to overdraws from the mother. This can also be interpreted  that the child used up its element quick and need to be replenished more. 
+
+This scenario indicates that the more of child element $i$ were used, the more consumption needed from the mother element $\sigma(i)$. In another words, the less of the child element, the higher consumption rate of the mother element. We thus use     the term $g_i \frac{x_{\sigma(i)}}{1+x_i}$ and 
+$c_i \frac{x_i}{1+x_{\sigma^{-1}(i)}}$  to reflect the relation: the smaller of the $x_i$, the higher of the production rate of the child element $i$ and the higher the consumption rate of the mother element. 
+Thus, we change the model to the following: 
+\begin{equation}
+\begin{array}{rl}
+\dot{x_1} &= \frac{g_1}{1+x_1}x_5  - \frac{c_1}{1+x_2} x_1 - k_1 x_4\\
+\dot{x_2} &= \frac{g_2}{1+x_2} x_1 - \frac{c_2}{1+x_3} x_2 - k_2 x_5\\
+\dot{x_3} &= \frac{g_3}{1+x_3} x_2  - \frac{c_3}{1+x_4} x_3 - k_3 x_1\\
+\dot{x_4} &= \frac{g_4}{1+x_4} x_3  - \frac{c_4}{1+x_5} x_4  - k_4 x_2\\
+\dot{x_5} &= \frac{g_5}{1+x_5} x_4    - \frac{c_1}{1+x_1}x_5  - k_5 x_3
+\end{array}
+\end{equation}
+Where $c_i$ terms are consumption of the mothers.
+\end{enumerate}
+
+\paragraph{Constrain  relation.}
+Suppose the normal constraining relation is $x_{c(i)} \dashv x_i$.
+Under the normal condition, the constrain is needed for keeping the $i$ from generating unbounded. However, when one of elements is excess or deficiency, then the another will be affected. The following pathological relations were described in the literature \cite{NeiJing,}
+\begin{enumerate}
+\item (贼邪，相乘) If there is excess element of $c(i)$ or there is a deficiency in $i$, then $i$ will be greatly weaken. 
+
+%This relation indicates the larger the ratio $\frac{x_{c(i)}}{x_i}$,  the higher of the constrains from  $c(i)$ on $i$. 
+\item (微邪，相侮) On the reverse, if there is excess of $i$ or there is a deficiency in $c(i)$, then element of $c(i)$ will be mildly weaken.  
+\end{enumerate}
+
+These mutual constrain relations is often modeled as competition by $ - h_i x_i x_k(i).$  We thus add the competition terms:
+
+\begin{equation}
+\begin{array}{rl}
+\dot{x_1} &= \frac{g_1}{1+x_1}x_5  - \frac{c_1}{1+x_2} x_1 - k_{41} x_1 x_4\\
+\dot{x_2} &= \frac{g_2}{1+x_2} x_1 - \frac{c_2}{1+x_3} x_2 - k_{52} x_5x_2\\
+\dot{x_3} &= \frac{g_3}{1+x_3} x_2  - \frac{c_3}{1+x_4} x_3 - k_{13} x_1x_3\\
+\dot{x_4} &= \frac{g_4}{1+x_4} x_3  - \frac{c_4}{1+x_5} x_4  - k_{24} x_2x_4\\
+\dot{x_5} &= \frac{g_5}{1+x_5} x_4    - \frac{c_1}{1+x_1}x_5  - k_{35} x_3x_5
+\end{array}
+\end{equation}
+
+Outline of the paper: 
+\begin{enumerate}
+\item Simulation that captures: Mother-child relation, 相乘， 相侮 correctly.
+\item Add disease spreading through constrain ordering 
+\item Bifurcation analysis for some parameters
+\item Expected Contributions: (1) More closely capture the theory,  (2) Capture a principle of 
+\end{enumerate}
+
+\ignore{
+\begin{equation}
+\begin{array}{rl}
+\dot{x_1} &= (b_1 + g_1 x_5 -a_1 x_1)x_1 - k_1 x_4 \\
+\dot{x_2} &= (b_2 + g_2 x_1 -a_2 x_2)x_2 - k_2 x_5 \\
+\dot{x_3} &= g_3 x_2 - k_3 x_1 \\
+\dot{x_4} &= g_4 x_3 - k_4 x_2 \\
+\dot{x_5} &= g_5 x_4  - k_5 x_3  - c_5 (1+\frac{x_1}{h_1}) x_5
+\end{array}
+\end{equation}
+}
+
+
+\section{List of Relations Needed in Model}
+
+\paragraph{Sheng, generating}
+\begin{enumerate}
+    \item Mother nourishes the child, child draws back from the mother
+    \item Deficiency in the mother leads to deficiency in the child
+    \item Exxcess in mother has excess in child
+    \item Excess in child leads to overdraw from mother, child uses up qi mother must replenish more
+    \item Weakness in child leads to the weakening of the mother because the child exhausts the mother over time
+\end{enumerate}
+
+\paragraph{Ke, controlling}
+\begin{enumerate}
+    \item Normal restraint, controller suppresses the target
+    \item Ke over acting, if controller is in excess or the target is deficient, the suppression
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ======================================================================
+%  CORRECTIONS SUBSECTION -- paste into the Literature Review or Results
+%  of chineseOrgans.tex. Requires amsmath, booktabs (both already loaded).
+% ======================================================================
+
+\subsection{Numerical corrections to the bilinear model of Lin \& Han}
+\label{sec:corrections}
+
+In reproducing the analysis of Lin \& Han~\cite{Lin2020} we recovered their
+equilibria and their qualitative classification, but three of their reported
+stability computations do not survive scrutiny. We record the corrections here
+because they bear directly on the central question of whether a balanced state
+can be stable.
+
+\paragraph{A structural constraint on Lyapunov spectra.}
+For a smooth autonomous system $\dot{x}=F(x)$, any bounded trajectory that is not
+an equilibrium possesses at least one Lyapunov exponent exactly equal to zero,
+corresponding to the direction along the flow: a perturbation that merely advances
+a point along its own orbit neither grows nor decays. Consequently every reported
+spectrum for a limit cycle, torus, or chaotic attractor \emph{must} contain a zero.
+The two spectra reported in~\cite{Lin2020},
+\[
+\{0.3885,\,-0.1719,\,-0.3473,\,-0.6833,\,-0.9731\}
+\quad\text{and}\quad
+\{0.6700,\,0.6606,\,-0.0761,\,-0.0794,\,-1.1751\},
+\]
+contain no zero exponent, and therefore cannot be correct as stated.
+
+\paragraph{Correction 1: the periodic case is a stable limit cycle.}
+Recomputing the spectrum at $a=b=c=d=g=h=1$ by the variational (tangent-space)
+method with $QR$ reorthonormalization gives
+\[
+\{0.0011,\,-0.1232,\,-0.2721,\,-0.2728,\,-0.9998\},
+\]
+i.e.\ exactly one zero exponent and four negative ones. This is the textbook
+signature of an \emph{asymptotically stable} limit cycle, not of the unstable
+periodic solution reported. The period $T\approx17.63$ agrees with~\cite{Lin2020}.
+
+\paragraph{Correction 2: the ``unstable'' fixed point is neutrally stable.}
+For the restriction-only case ($d=h=1$, $a=b=c=g=0$) the reported exponents
+$\{0.0015,\,0.0006,\,-1.3159,\,-2.3517,\,-3.7092\}$ were read as containing two
+positive values. Evaluating the Jacobian at the attained final state
+$(0,0,0,2.3426,1.3038)$ gives instead
+\[
+\{0,\;0,\;-1.3038,\;-2.3426,\;-3.6464\},
+\]
+where the two zeros are structurally exact: coordinates resting at $x_i=0$ generate
+genuinely degenerate directions. The three negative eigenvalues agree with the
+reported values to within roughly $1\%$, which identifies the reported ``positive''
+entries as numerical noise at the $10^{-3}$ level. The correct conclusion is
+neutral stability, consistent with the trajectory converging; as stated
+in~\cite{Lin2020} the case is described simultaneously as convergent and unstable,
+which cannot both hold.
+
+\paragraph{Correction 3: the ``chaotic'' case is quasiperiodic.}
+Setting $c=g=1$ with $a=b=d=h=0$ reduces the system to
+\begin{equation}\label{eq:conserv}
+\dot{x}_i \;=\; x_i\bigl(x_{i-1}-x_{i+1}\bigr), \qquad i\in\mathbb{Z}_5 .
+\end{equation}
+This system admits two independent conserved quantities. Summing~\eqref{eq:conserv}
+telescopes the right-hand side, giving $\frac{d}{dt}\sum_i x_i=0$; and since
+$\frac{d}{dt}\log\prod_i x_i=\sum_i(x_{i-1}-x_{i+1})=0$, the product $\prod_i x_i$
+is likewise invariant. We verified both numerically to machine precision (relative
+drift $\sim10^{-15}$). Two conserved quantities confine the motion to a
+three-dimensional invariant surface. Moreover the largest exponent computed over
+increasing horizons decays as $1/T$,
+\[
+\lambda_{\max}(T{=}500)=0.0120,\quad
+\lambda_{\max}(T{=}1000)=0.0070,\quad
+\lambda_{\max}(T{=}2000)=0.0038,
+\]
+halving as $T$ doubles---the signature of an exponent converging to zero rather
+than to the reported value $0.67$. The dynamics are therefore quasiperiodic on a
+torus, not chaotic. We attribute the discrepancy to the singular-value method
+of~\cite{Lin2020} being applied over a window that includes the initial transient
+from $(1,2,3,4,5)$.
+
+\paragraph{Consequence.}
+These corrections strengthen rather than weaken the motivation for the present
+work. Even after correction, the bilinear model has no asymptotically stable
+\emph{balanced} state: at $a=b=c=d=g=h=1$ the symmetric equilibrium $x^\ast=1/3$
+retains eigenvalues $0.206\pm0.634i$ with positive real part. Its attracting sets
+are either limit cycles or boundary states in which several organs vanish. By
+contrast, the saturating model of Section~\ref{sec:stability} possesses a balanced
+equilibrium that is asymptotically stable over a large region of parameter space
+(Figure~\ref{fig:stabmap}), which is the property required to represent health.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\printbibliography
+\end{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+In this Sheng cycle, there is a  relation called {\bf mother-child relation}. It refers to the relation between $x_i$ (child) and $x_{\sigma(i)}$ (mother): (1) The weakening of the mother leads to weakening of child. (2) The weakening of the child will eventually lead to weakening of the mother.
+Note the first half the relation can be explained by the term $\alpha_i x_{\sigma(i)} x_i$ since decreasing of the $x_{\sigma(i)}$ decreases the unit production rate of $x_i$. However, the second half of the relation cannot be captured by this term. It means that the mother needs to work harder to nourish the child. That means the weaker the child, we expect the larger the unit production rate of the child. We thus assume that  the production rate of $x_i$ is proportional to $\frac{x_{\sigma(i)}}{1+ w_i x_i}$ where $w_i$ is some positive  constant. So 
+
+\[
+\dot{x_i} = \cdots + \frac{c_i x_{\sigma(i)}}{1+ w_i x_i} + \cdots
+\]
+and 
+\[
+\dot x_{\sigma(i)} = \cdots -  \frac{g_{\sigma(i)}x_{\sigma(i)}}{1+ w_i x_i} + \cdots
+\]
+where $ -  \frac{g_{\sigma(i)}x_{\sigma(i)}}{1+ w_i x_i}$ represents the consumption of the mother $x_{\sigma(i)}$.
+
+The mother-child relations obey  the following rules:
+ (1) The weakening of the mother leads to weakening of the child. (2) The weakening of the child will lead to weakening  the mother for exau.
+If assume that the unit production rate of $x_i$ is positively modulated by $x_{\sigma(i)}$ with a term $ \alpha_i x_{\sigma(i)} x_i.$ i.e. \[
+\dot{x_i} = \cdots + \alpha_i x_{\sigma(i)} x_i + \cdots
+\]
+and 
+\[
+\dot x_{\sigma(i)} = \cdots - s_{\sigma(i)} x_{\sigma(i)} x_i + \cdots
+\]
+where $ - s_{\sigma(i)} x_{\sigma(i)} x_i$ represents the consumption of the mother $x_{\sigma{i}}$.
+

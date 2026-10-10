@@ -1,0 +1,589 @@
+% EDITION: citation-based shortening, 4 October 2026.
+% Earlier audits refer to the source edition; this revision has not been independently audited.
+\section{P10: Saddle-node bifurcation and true bistable region}
+\label{sec:P10}
+
+Fix $a,k,c,h>0$, $n\ge5$, $1\le q<n$, and vary $g>0$ in the
+canonical DM field \eqref{eq:canonical-dm}. Put
+\begin{equation}
+ A=k+h,\quad b=a-A>0,\quad g_c=a+c,\quad
+ g_f=g_c+\frac{b^2}{4A},\quad r_f=\frac b{2A},\quad s_f=1+r_f.
+ \label{eq:P10-data}
+\end{equation}
+Here $r$ is the synchronous amplitude and $b$ is a local abbreviation.
+\emph{Notation reconciliation:} P02's roots $s_-,s_+$ are the amplitudes
+called $r_-,r_+$ here. P02's repeated-root amplitude $s_f$ in
+\eqref{eq:P02-gf} is our $r_f$; P10's $s_f$ denotes its denominator
+$1+r_f$, following P03/P04's denominator convention. No earlier notation
+or file is changed. All neighborhoods below may depend on the fixed
+parameters and on $(n,q)$; no uniform spectral gap as $n\to\infty$ is claimed.
+
+The direct inputs are P02's invariant restriction and root formulas,
+P03's original-field Jacobian and origin stability, P04's complete
+Fourier spectrum, and P09's origin branch organization. P01 supplies
+smoothness, uniqueness and global nonnegative existence. We also use
+the real implicit-function theorem, the usual smooth local stable/unstable
+manifold theorem, and linearized stability/instability. These standard
+local results introduce no new project-module dependency or literature work.
+
+\subsection{Exact fold geometry}
+\label{slot:P10-1}
+
+P02 gives, for $r>-1$,
+\begin{equation}
+ F(r\one,g)=f(r,g)\one,\qquad
+ f(r,g)=ar-Ar^2+\frac{(c-g)r}{1+r}
+       =\frac r{1+r}(\mu+br-Ar^2),\quad \mu=g_c-g.
+ \label{eq:P10-scalar}
+\end{equation}
+The nonzero equilibrium equation is $Ar^2-br-\mu=0$.
+Completing the square, or using its discriminant, verifies independently
+\begin{equation}
+ g_f=c+\frac{(a+A)^2}{4A},\qquad
+ s_f=1+\frac{a-A}{2A}=\frac{a+A}{2A},\qquad
+ g_f-g_c=\frac{b^2}{4A}>0.
+ \label{eq:P10-fold-identities}
+\end{equation}
+Define the state and parameter coordinates
+\begin{equation}
+ u=r-r_f,\qquad \nu=g_f-g.
+ \label{eq:P10-coordinates}
+\end{equation}
+Then $\mu=\nu-b^2/(4A)$, $br_f-Ar_f^2=b^2/(4A)$, and
+$b-2Ar_f=0$. Expanding in $u$ therefore proves, with no approximation,
+\begin{equation}
+ \boxed{\mu+br-Ar^2=\nu-Au^2,\qquad
+ \dot u=\frac{r_f+u}{s_f+u}(\nu-Au^2).}
+ \label{eq:P10-exact-fold}
+\end{equation}
+Choose $|u|<r_f/2$. Both amplitude and denominator are positive.
+For $\nu<0$ there is no nonzero synchronous equilibrium anywhere on
+$r>-1$; in particular none near $r_f$. For $\nu=0$ there is one
+double positive scalar equilibrium $r_f$. For small $\nu>0$ there
+are two distinct nearby positive roots
+\begin{equation}
+ \boxed{r_\pm=r_f\pm\sqrt{\nu/A}=s_\pm\ \text{of P02}.}
+ \label{eq:P10-local-roots}
+\end{equation}
+Both are positive exactly when $0<\nu<b^2/(4A)$ within this real
+root regime. The origin always exists, but is excluded from the
+chosen fold state neighborhood.
+
+\subsection{Complete fold spectrum and the real transverse reduction}
+
+For a synchronous state let $s=1+r$ and import P03/P04:
+\[
+ d=a-2kr-\frac{cr}{s^2}-\frac gs-hr,\qquad
+ C=\frac cs,\quad G=\frac{gr}{s^2},\quad H=hr.
+\]
+\begin{align}
+ J(r,g)&=dI+CP+GP^{-q}-HP^q,\notag\\
+ \lambda_m&=d+Ce^{-\ii\theta_m}+Ge^{\ii q\theta_m}-He^{-\ii q\theta_m},
+ \label{eq:P10-spectrum}
+\end{align}
+where $\theta_m=2\pi m/n$ and $0\le m<n$.
+Colliding offsets are added, as in P03; none is removed.
+At a positive equilibrium P04 gives
+\begin{equation}
+ \lambda_0=f_r(r,g)=\frac r{1+r}(b-2Ar).
+ \label{eq:P10-uniform}
+\end{equation}
+Thus $\lambda_0^f=0$, also obtained by differentiating
+\eqref{eq:P10-exact-fold} at $(u,\nu)=(0,0)$.
+
+\begin{lemma}[Automatic transverse stability at every positive fold]
+\label{lem:P10-gap}
+At the fold, with subscript $f$ denoting evaluation there,
+\begin{equation}
+ \boxed{G_f-H_f=r_f\left(k+\frac{4A^2c}{(a+A)^2}\right)>0.}
+ \label{eq:P10-Lf}
+\end{equation}
+The exact complex fold spectrum is \eqref{eq:P10-spectrum}, with
+$d_f=-C_f-G_f+H_f$. In particular,
+\begin{align}
+ \Ree\lambda_m^f
+ &=C_f(\cos\theta_m-1)+(G_f-H_f)(\cos(q\theta_m)-1),
+ \label{eq:P10-fold-real}\\
+ \Imm\lambda_m^f&=-C_f\sin\theta_m+(G_f+H_f)\sin(q\theta_m).
+ \label{eq:P10-fold-imag}
+\end{align}
+For every $m\ne0$,
+\begin{equation}
+ \boxed{\Ree\lambda_m^f\le-\delta_f<0,\qquad
+ \delta_f=\frac c{s_f}\left(1-\cos\frac{2\pi}{n}\right)>0.}
+ \label{eq:P10-gap}
+\end{equation}
+The only eigenvalue on the imaginary axis is zero. It has algebraic
+and geometric multiplicity one and real eigenspace
+$\operatorname{span}\{\one\}$.
+\end{lemma}
+\begin{proof}
+Using \eqref{eq:P10-fold-identities}, directly
+\begin{equation}
+ \frac{g_f}{s_f^2}-h
+ =\frac{c+A s_f^2}{s_f^2}-h
+ =k+\frac c{s_f^2}=k+\frac{4A^2c}{(a+A)^2}>0.
+ \label{eq:P10-effective}
+\end{equation}
+Multiplication by $r_f>0$ proves \eqref{eq:P10-Lf}.
+Since $0=\lambda_0^f=d_f+C_f+G_f-H_f$, taking real and imaginary
+parts of the complete P04 formula proves the two identities.
+For $1\le m<n$, set $j=\min(m,n-m)$. The angle
+$2\pi j/n$ belongs to $[2\pi/n,\pi]$, so
+$\cos\theta_m\le\cos(2\pi/n)<1$. The first cosine difference
+is strictly negative, while the second is nonpositive. This proves
+the margin. For even $n$ the real singleton $m=n/2$ is included;
+for odd $n$ the same argument ends before $\pi$. Collisions
+$q=1,n-1,n/2$ and $\gcd(n,q)>1$ change neither argument.
+Even if $q\theta_m$ is a multiple of $2\pi$, the first term is
+strictly negative. P04's unitary diagonalization lists exactly $n$
+eigenvalues with algebraic multiplicity. Only label zero can vanish,
+so its multiplicities are one and its eigenvector is $\one$.
+No simplicity of the other numerical eigenvalues is asserted.
+\end{proof}
+
+\begin{proposition}[Full-system local equilibrium completeness]
+\label{prop:P10-reduction}
+In a state neighborhood of $r_f\one$ and parameter interval about
+$g_f$, every full-system equilibrium is synchronous. The entire local
+equilibrium equation reduces exactly to $\nu-Au^2=0$.
+\end{proposition}
+\begin{proof}
+Use $x=r\one+y$ with $E=\{y:\one^{\mathsf T}y=0\}$ and
+$\Pi_\perp=I-\one\one^{\mathsf T}/n$. By Lemma~\ref{lem:P10-gap},
+the transverse derivative of $\Pi_\perp F(r\one+y,g)$ at the fold
+is the invertible map $J_f|_E$. Apply the implicit-function and
+synchrony-uniqueness argument of Theorem~\ref{thm:P09-reduction}
+\cite[Ch.~1]{GuckenheimerHolmes1983}. It gives $y=0$ for every
+nearby equilibrium. Since $r>0$, the remaining equation is
+$\nu-Au^2=0$ by \eqref{eq:P10-exact-fold}.
+\end{proof}
+
+\subsection{Full-system nondegeneracy and exact center dynamics}
+
+\begin{proposition}[Original-vector-field saddle-node coefficients]
+\label{prop:P10-coefficients}
+With the above $v,w$, one has $J_fv=0$, $w^{\mathsf T}J_f=0$,
+$w^{\mathsf T}v=1$, and
+\begin{align}
+ \alpha_{\rm SN}:=w^{\mathsf T}F_g(r_f\one,g_f)
+ &=-\frac{r_f}{s_f}<0,\label{eq:P10-alpha}\\
+ w^{\mathsf T}F_{xx}(r_f\one,g_f)[v,v]
+ &=-\frac{2Ar_f}{s_f}\ne0,\label{eq:P10-contraction}\\
+ \beta_{\rm SN}:=\tfrac12w^{\mathsf T}F_{xx}[v,v]
+ &=-\frac{Ar_f}{s_f}<0.\label{eq:P10-beta}
+\end{align}
+Derivatives hold all other physical coefficients fixed. With $\nu$
+as parameter the parameter coefficient has the opposite sign,
+$+r_f/s_f$.
+\end{proposition}
+\begin{proof}
+The row and column sums of $J_f$ are both $\lambda_0^f=0$, giving
+the right and left nullvectors and their normalization. In the original
+vector field, $(F_g)_i=-x_i/(1+x_{i+q})$, hence its average at the
+fold is $-r_f/s_f$.
+
+Independently differentiate each original summand twice along
+$x=(r_f+t)\one$ at fixed $g=g_f$. The five componentwise second
+derivatives, retaining all terms even at coincident offsets, are
+\[
+ 0,\qquad -2k,\qquad -\frac{2c}{s_f^3},\qquad
+ \frac{2g_f}{s_f^3},\qquad -2h.
+\]
+Their sum is $-2A+2(g_f-c)/s_f^3$. Since $g_f-c=A s_f^2$,
+this equals $-2A+2A/s_f=-2Ar_f/s_f$ in every component.
+Averaging produces no extra factor of $n$. The Taylor coefficient
+of $u^2$ is half this full contraction; the derivatives themselves
+contain no Taylor factorial.
+\end{proof}
+
+\begin{theorem}[Nondegenerate full-system positive saddle-node]
+\label{thm:P10-saddle-node}
+For every fixed canonical $a>k+h$, $c,k,h>0$ and admissible $(n,q)$,
+the equilibrium $r_f\one$ at
+\[
+ \boxed{g=g_f=a+c+\frac{(a-k-h)^2}{4(k+h)}}
+\]
+is a nondegenerate full-system saddle-node. It has a simple uniform
+zero eigenvalue and strictly stable transverse spectrum. Locally there
+are no equilibria for $g>g_f$, one double equilibrium for $g=g_f$,
+and precisely the two positive equilibria \eqref{eq:P10-local-roots}
+for $g<g_f$ sufficiently close. The exact center restriction is
+orbitally equivalent, by a positive change of time, to
+\begin{equation}
+ \boxed{\frac{du}{d\tau}=\nu-Au^2,\qquad \frac{d\nu}{d\tau}=0.}
+ \label{eq:P10-normal-form}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The field is smooth near the positive fold. Lemma~\ref{lem:P10-gap}
+and Proposition~\ref{prop:P10-coefficients} verify the simple-zero
+and nonzero parameter/quadratic coefficients of the saddle-node theorem
+\cite{KuznetsovFold2006,GuckenheimerHolmes1983};
+Proposition~\ref{prop:P10-reduction} gives local equilibrium completeness.
+For the parameter extension, the linearization in $(u,y,\nu)$ is
+\begin{equation}
+ \dot u=(r_f/s_f)\nu,\qquad \dot y=(J_f|_E)y,\qquad\dot\nu=0.
+ \label{eq:P10-extended-linear}
+\end{equation}
+Thus the invariant surface $y=0$ is tangent to the whole generalized
+center subspace and is an exact center manifold. On it,
+\eqref{eq:P10-exact-fold} and the positive factor
+$(r_f+u)/(s_f+u)$ for $|u|<r_f/2$ give
+\eqref{eq:P10-normal-form} by $d\tau/dt=(r_f+u)/(s_f+u)$.
+The roots and their sides follow immediately. At $\nu=0$, negative
+$u$ escapes, so the fold is not locally asymptotically stable.
+\end{proof}
+
+\subsection{Both branches and all Fourier modes}
+\label{slot:P10-2}
+
+\begin{proposition}[Exact uniform signs throughout the two-root interval]
+\label{prop:P10-branch-signs}
+For every $g_c<g<g_f$, define $D$ as in P02 and $\Delta=\sqrt D$.
+Then
+\begin{align}
+ 0<\Delta&=\sqrt{b^2+4A(a+c-g)}=2\sqrt{A(g_f-g)}<b,\notag\\
+ r_\pm&=\frac{b\pm\Delta}{2A},\qquad
+ b-2Ar_\pm=\mp\Delta,\label{eq:P10-discriminant}\\
+ \boxed{\lambda_0(r_\pm)=\mp\frac{r_\pm}{1+r_\pm}\Delta.}
+ \label{eq:P10-branch-eigenvalues}
+\end{align}
+Thus the lower branch is always unstable in the uniform direction,
+whereas the upper uniform eigenvalue is always strictly negative.
+Any upper-branch loss of stability within this open interval must
+involve a nonuniform mode.
+\end{proposition}
+\begin{proof}
+P02's discriminant factorization is also obtained directly by inserting
+$g_f=g_c+b^2/(4A)$. The strict parameter inequalities give $0<\Delta<b$,
+so both roots are positive. Substitution into $b-2Ar_\pm$ cancels
+$b$ and leaves $\mp\Delta$. Equation~\eqref{eq:P10-uniform}
+gives the exact signs, and the positive lower eigenvalue implies
+nonlinear instability. This last implication needs no hyperbolicity
+of the other lower-branch eigenvalues.
+\end{proof}
+
+\begin{corollary}[Near-fold full branch stability]
+\label{cor:P10-near-stability}
+There exists $\varepsilon_{\rm sp}>0$ such that both branches for
+$0\le\nu<\varepsilon_{\rm sp}$ satisfy
+\[
+ \Ree\lambda_m(r_\pm,g_f-\nu)<-\delta_f/2\quad(m\ne0).
+\]
+For $0<\nu<\min(\varepsilon_{\rm sp},b^2/(4A))$, the upper
+branch is Hurwitz and locally exponentially stable. The lower branch
+is a hyperbolic saddle with exactly one simple positive real eigenvalue
+and $n-1$ stable real dimensions. Its local stable manifold has dimension
+$n-1$ and codimension one, and its unstable manifold has dimension one.
+\end{corollary}
+\begin{proof}
+Every labeled eigenvalue in \eqref{eq:P10-spectrum} is continuous
+in $(r,g)$ near $(r_f,g_f)$. There are finitely many labels.
+A common neighborhood makes each transverse real part differ from
+its fold value by less than $\delta_f/2$. Both continuous roots
+$r_\pm(\nu)$ tend to $r_f$ as $\nu\downarrow0$; smoothness in
+$\nu$ at zero is not needed. Shrink $\varepsilon_{\rm sp}$ so both
+branches lie in that neighborhood and remain positive. Combine the
+margin with \eqref{eq:P10-branch-eigenvalues}. Only label zero has
+positive real part on the lower branch, so its eigenvalue is simple.
+Real conjugate-pair blocks and real singleton modes together give
+$n-1$ stable dimensions, even if stable numerical eigenvalues repeat.
+P04's nonlinear stability implications and the smooth local
+stable/unstable manifold theorem apply.
+\end{proof}
+
+\subsection{The nonempty open bistability set}
+\label{slot:P10-3}
+
+\begin{theorem}[Stable coexistence and openness in physical parameters]
+\label{thm:P10-bistability}
+For each fixed $a,k,c,h>0$ with $a>k+h$ and each admissible $(n,q)$,
+there is $\varepsilon>0$ with
+\begin{equation}
+ (g_f-\varepsilon,g_f)\subset(g_c,g_f)
+ \label{eq:P10-bistable-interval}
+\end{equation}
+such that throughout this interval the full system has the locally
+exponentially stable origin, a positive index-one saddle $r_-\one$,
+and the locally exponentially stable positive equilibrium $r_+\one$.
+At every strict point of a sufficiently small such interval this
+configuration persists on an open neighborhood in $(0,\infty)^5$
+with coordinates $(a,k,c,g,h)$ and fixed $(n,q)$.
+Here ``bistability'' means coexistence of at least two locally stable
+equilibria; it does not mean that these are the only attractors.
+\end{theorem}
+\begin{proof}
+At the origin P03 gives
+\[
+ \Ree\lambda_m(0)=g_c-g-c(1-\cos\theta_m)\le g_c-g<0
+ \quad(g_c<g<g_f).
+\]
+Thus the origin is Hurwitz and locally exponentially stable in
+$\Domain$, and also relative to $\Orth$ using P01 invariance.
+Take $0<\varepsilon<\min(\varepsilon_{\rm sp},b^2/(4A))$ and
+apply Corollary~\ref{cor:P10-near-stability}. The interval is nonempty
+and lies strictly above $g_c$.
+
+At a strict witness all three Jacobians are invertible and hyperbolic.
+The implicit-function theorem continues each equilibrium smoothly
+under changes of all five physical coefficients. The origin stays
+identically zero. Alternatively the positive roots are explicitly
+smooth because $D>0$; uniqueness identifies them with the IFT
+continuations. Their separation and strict positivity persist after
+shrinking the parameter neighborhood. Spectral continuity preserves
+both Hurwitz properties and the lower saddle's unstable dimension.
+The inequalities $a>A$, $g_c<g<g_f$ and positivity of every coefficient
+also persist. Such neighborhoods can depend on $(n,q)$; no common
+all-dimension persistence neighborhood for the index-one configuration
+is asserted.
+\end{proof}
+
+\begin{proposition}[Exact coexistence set and a simple sufficient criterion]
+\label{prop:P10-bistability-set}
+For fixed $(n,q)$ define the open two-positive-root domain
+\[
+ \mathcal D=\{\param\in(0,\infty)^5:a>k+h,\ g_c<g<g_f\}.
+\]
+For $\param\in\mathcal D$, evaluate \eqref{eq:P10-spectrum} at its
+upper root and define
+\begin{equation}
+ \boxed{\mathcal B_{n,q}=
+ \left\{\param\in\mathcal D:
+ \max_{0\le m<n}\Ree\lambda_m(r_+,g)<0\right\}.}
+ \label{eq:P10-B}
+\end{equation}
+This set is open and nonempty. It is exactly the set in $\mathcal D$
+where the origin and upper synchronous equilibrium are both locally
+exponentially stable. Every point has an unstable lower positive
+branch, although its unstable dimension is asserted to be one only
+in the near-fold neighborhood above. A sufficient condition for
+membership in $\mathcal B_{n,q}$ is
+\begin{equation}
+ \boxed{G\ge H\quad\Longleftrightarrow\quad
+ \frac{g}{(1+r_+)^2}\ge h.}
+ \label{eq:P10-sufficient}
+\end{equation}
+This condition allows equality.
+\end{proposition}
+\begin{proof}
+The positive upper root and all its labeled eigenvalues are continuous
+(and smooth before taking the finite maximum) on $\mathcal D$.
+The strict finite set of inequalities defines an open subset of
+$(0,\infty)^5$, hence of $\R^5$. Nonemptiness follows from
+Theorem~\ref{thm:P10-bistability}. The origin is automatically Hurwitz
+on $\mathcal D$. A Hurwitz Jacobian gives nonlinear local exponential
+stability. Conversely, a smooth equilibrium satisfying a local
+exponential estimate has a Jacobian semigroup satisfying that estimate
+by differentiation of the flow at the equilibrium, so all eigenvalues
+have strictly negative real part. Thus the definition is exact for
+exponential stable coexistence, not a classification of possible
+nonhyperbolic asymptotically stable boundary points or other attractors.
+
+Subtracting the uniform row sum in \eqref{eq:P10-spectrum} gives,
+at either branch and in fact at any synchronous state,
+\begin{equation}
+ \Ree\lambda_m=\lambda_0+C(\cos\theta_m-1)
+                         +(G-H)(\cos(q\theta_m)-1).
+ \label{eq:P10-difference}
+\end{equation}
+On the upper branch $\lambda_0<0$ and $C>0$. If $G-H\ge0$,
+every mode has negative real part, including $m=0$; for $m\ne0$
+the $C$ contribution is strictly negative. Since $r_+>0$, dividing
+$G-H$ by it gives the physical-coefficient condition. The lower
+uniform sign follows from Proposition~\ref{prop:P10-branch-signs}.
+\end{proof}
+
+One can give an explicit, dimension-independent sufficient interval
+for the two stable equilibria (not necessarily for the saddle's index).
+Set
+\begin{equation}
+ M=g_f-hs_f^2=c+ks_f^2>0,\qquad
+ t_*:=\min\left\{\frac{r_f}{2},\frac{M}{4hs_f},
+                         \sqrt{\frac{M}{2(A+h)}}\right\}>0.
+ \label{eq:P10-explicit-margin}
+\end{equation}
+For $0<\nu<A t_*^2$, put $t=\sqrt{\nu/A}<t_*$. Then
+$g=g_f-At^2$, $r_+=r_f+t$, and directly
+\begin{equation}
+ g-h(1+r_+)^2=M-2hs_ft-(A+h)t^2>0.
+ \label{eq:P10-explicit-condition}
+\end{equation}
+Indeed each of the last two terms is strictly less than $M/2$.
+Also $At_*^2\le b^2/(16A)<g_f-g_c$, so this whole interval lies
+in $\mathcal D$ and in $\mathcal B_{n,q}$ for every admissible
+$(n,q)$. This supplies a quantitative alternative to the continuity
+argument for stable coexistence. Equation~\eqref{eq:P10-effective}
+also proves directly that $G>H$ persists on the upper branch near
+the fold. Intersecting this interval with that of
+Corollary~\ref{cor:P10-near-stability} retains the index-one conclusion.
+
+\begin{remark}[An exact obstruction to whole-interval stability]
+\label{rem:P10-counterexample}
+Take
+\begin{equation}
+ n=6,\quad q=1,\qquad
+ (a,k,c,g,h)=\left(6,\frac1{10},\frac1{10},\frac{101}{10},\frac9{10}\right).
+ \label{eq:P10-counterexample}
+\end{equation}
+Here $A=1$, $b=5$, $g_c=61/10$, $g_f=247/20$, $\mu=-4$,
+and the equilibrium polynomial is $(r-1)(r-4)$.
+At $r_+=4$ the original-field equilibrium residual is exactly zero,
+and
+\[
+ d=-\frac{109}{250},\quad C=\frac1{50},\quad
+ G=\frac{202}{125},\quad H=\frac{18}{5},\quad
+ G-H=-\frac{248}{125}.
+\]
+Consequently $\lambda_0=-12/5<0$, but the real mode $m=3$ has
+\begin{equation}
+ \lambda_3=d-C-G+H=\frac{191}{125}>0.
+ \label{eq:P10-counterexample-mode}
+\end{equation}
+The origin is stable and the upper equilibrium unstable at this
+strict interior point of the two-root interval. This refutes universal
+upper-branch stability, hence universal origin/upper stable coexistence
+on that interval. At the lower root $r_-=1$, one has
+$\lambda_0=3/2$ and $\Ree\lambda_1=\Ree\lambda_5=53/80>0$;
+the other three real parts are negative. Thus its unstable dimension
+is three here, also precluding a whole-interval index-one claim.
+This makes no assertion about other attractors there.
+It is a static full-spectrum counterexample, not a theorem about a
+crossing, a Hopf bifurcation or a periodic branch.
+\end{remark}
+
+\subsection{Synchronous threshold and the precise local basin statement}
+\label{slot:P10-4}
+
+\begin{proposition}[Exact basin threshold on the nonnegative synchronous ray]
+\label{prop:P10-ray}
+For every $g_c<g<g_f$, the scalar flow on the ray satisfies
+\[
+ \begin{array}{c|ccc}
+ r&(0,r_-)&(r_-,r_+)&(r_+,\infty)\\ \hline
+ f(r,g)&-&+&-
+ \end{array}
+\]
+If $0<r(0)<r_-$, then $r(t)\to0$. If $r(0)>r_-$, then
+$r(t)\to r_+$; this includes the constant solution $r(0)=r_+$.
+The data $r(0)=r_-$ and $r(0)=0$ give their respective constant
+solutions. These are exact full-system solutions by synchrony,
+even when the upper equilibrium is transversely unstable.
+\end{proposition}
+\begin{proof}
+Factor \eqref{eq:P10-scalar} as
+\begin{equation}
+ f(r,g)=-\frac{Ar}{1+r}(r-r_-)(r-r_+).
+ \label{eq:P10-ray-factor}
+\end{equation}
+The prefactor is negative for $r>0$, giving the three signs.
+Uniqueness prevents crossing an equilibrium. P01 and P02 give global
+nonnegative existence and boundedness. More specifically solutions
+below $r_-$ decrease and are bounded below by zero; solutions between
+the roots increase and are bounded above by $r_+$; those above $r_+$
+decrease and are bounded below by it. Each therefore has a limit.
+If that limit were not a zero of $f$, continuity would bound $|f|$
+away from zero near the limit, contradicting convergence. The monotone
+interval and the initial strict inequality select the claimed zero.
+No nonsynchronous basin conclusion follows from this argument alone.
+\end{proof}
+
+\begin{proposition}[Unstable synchrony and a local separating stable disk]
+\label{prop:P10-local-basins}
+At a near-fold parameter tuple covered by
+Corollary~\ref{cor:P10-near-stability} and
+Theorem~\ref{thm:P10-bistability}, let $p=r_-\one$.
+The local stable manifold is a smooth embedded $(n-1)$-disk tangent
+to $E$. Its germ locally separates a sufficiently small neighborhood
+into two sides. The local unstable manifold is exactly a segment of
+the synchronous line through $p$. Its two forward branches tend,
+respectively, to the origin and to $r_+\one$.
+
+In fact one may choose a neighborhood $V\subset\PosOrth$ of $p$
+such that its local stable disk $S$ has
+\begin{equation}
+ V\setminus S=V_-\mathbin{\dot\cup}V_+,\qquad
+ V_-\subset\mathcal A(0),\quad V_+\subset\mathcal A(r_+\one),
+ \label{eq:P10-local-partition}
+\end{equation}
+where the two sets are connected and $\mathcal A(z)$ denotes the
+basin of the equilibrium $z$ relative to $\Orth$. Every point of
+$S$ tends to $p$. Thus $S$ is the common basin boundary \emph{relative
+to this neighborhood}. No assertion identifies the full global basin
+boundary or globally continued stable manifold.
+\end{proposition}
+\begin{proof}
+The stable/unstable manifold theorem \cite[Ch.~1]{GuckenheimerHolmes1983}
+applies to the hyperbolic index-one saddle. On a small synchronous
+interval, every point converges exponentially to $p$ in negative time;
+uniqueness of the local unstable manifold therefore identifies it with
+that interval. Proposition~\ref{prop:P10-ray} supplies its two forward limits.
+
+To identify the basin sides, write the stable disk as $s=\phi(y)$ in
+$x=p+s\one+y$, $y\in E$, and set $\xi=s-\phi(y)$, $z=y$.
+Invariance and smoothness give
+\begin{equation}
+ \dot\xi=\xi(\lambda+\alpha(\xi,z)),\qquad
+ \dot z=Bz+R(\xi,z),\quad \lambda=\lambda_0(p)>0,\quad B=J(p)|_E,
+ \label{eq:P10-saddle-chart}
+\end{equation}
+with $\alpha(0,0)=0$, $R(\xi,0)=0$, and $D_zR(0,0)=0$.
+Normality and the stable gap give $z^{\mathsf T}Bz\le-\gamma\|z\|^2$.
+Shrink the neighborhood until $|\alpha|<\lambda/2$ and
+$\|R\|\le(\gamma/2)\|z\|$. Then $\|z\|$ decreases at least
+exponentially and every nonzero $|\xi|$ grows at rate at least $\lambda/2$.
+
+Choose small exit points $(\pm\rho,0)$ on the two unstable branches.
+Each belongs to its respective sink's open basin. Hence for sufficiently
+small $\sigma>0$ both caps $\{(\pm\rho,z):\|z\|\le\sigma\}$
+remain in those basins. In the box $|\xi|<\rho$, $\|z\|<\sigma$,
+a point with $\xi\ne0$ exits through the cap of its sign and converges
+to that sink; points with $\xi=0$ converge to $p$. The two connected
+half-boxes and the stable disk give exactly \eqref{eq:P10-local-partition}.
+This argument establishes the boundary only relative to that neighborhood.
+\end{proof}
+
+\paragraph{Global scope limit.}
+The ray threshold is global only within the invariant synchronous ray.
+The preceding full-space statement concerns one sufficiently small
+neighborhood of the lower saddle at a fixed near-fold tuple. It neither
+identifies the complete global boundary between the sinks nor gives a
+partition of the whole orthant. Other equilibria, periodic attractors,
+or other invariant attracting sets elsewhere are not excluded. In
+particular ``bistability'' here does not assert exactly two global attractors.
+
+\subsection{Connection to P09, degenerate limit, and the P11 boundary}
+
+For $b>0$, as $g\downarrow g_c$ from above,
+\begin{equation}
+ r_-\longrightarrow0,\qquad r_+\longrightarrow b/A,
+ \qquad \frac{dr_-}{dg}=\frac1\Delta\longrightarrow\frac1b.
+ \label{eq:P10-transcritical-connection}
+\end{equation}
+Thus P09's small positive branch on $g>g_c$ is precisely P02/P10's
+lower branch, unstable in the uniform direction throughout
+$(g_c,g_f)$. It meets the upper branch at $g_f$. No upper stability
+all the way to $g_c$ follows; Remark~\ref{rem:P10-counterexample}
+shows why this would be false in general.
+
+For fixed $k,c,h>0$, as $b=a-A\downarrow0$,
+\begin{equation}
+ r_f=\frac b{2A}\to0,\qquad g_f-g_c=\frac{b^2}{4A}\to0,
+ \qquad \alpha_{\rm SN},\beta_{\rm SN}\to0.
+ \label{eq:P10-degenerate-limit}
+\end{equation}
+The limiting locus is P09's $a=A$, $g=a+c$, where the center field
+is $-Ar^3/(1+r)$, its cubic derivative is $-6A$, and the center
+zero remains simple. P09 supplies the codimension-two algebraic/spectral
+statement. The P10 nondegeneracy theorem excludes this limit.
+There is no two-parameter unfolding or cusp classification here.
+
+The exact facts available for later P11 work are the uniform signs
+on the entire open two-root interval, the complete fold spectrum,
+and automatic all-mode upper stability sufficiently near the fold.
+A subsequent loss of upper stability inside this interval must be
+nonuniform. P10 establishes no Hopf existence or frequency, critical
+pair simplicity, crossing transversality, Lyapunov coefficient, or
+periodic branch. The static counterexample does not begin those tasks.
+The frozen direct edge into P10 remains P02/P03/P04/P09, with P01
+inherited; recording potential later inputs does not alter the frozen DAG.

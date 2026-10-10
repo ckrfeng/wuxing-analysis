@@ -1,0 +1,10 @@
+A10 reading-copy QA: PASS
+
+The final standalone source compiled successfully in the built-in desktop editor.
+The same source was compiled with the already-installed latexmk/pdfLaTeX to export the requested PDF reading copy. No LaTeX package or engine was installed.
+20 pages. All source labels are unique; all local references resolve.
+Zero LaTeX/package warnings, undefined references, duplicate labels, overfull boxes or underfull boxes in the final export log.
+Four ignored infinite-glue-shrinkage notices occur during longtable pagination; the affected pages were visually checked. These notices did not cause clipping, overlap, missing rows or unreadable text.
+All 20 rendered pages were inspected. After the final handoff pagination adjustment, pages 1-18 rendered byte-identically to the inspected version; revised pages 19-20 were inspected again.
+The final handoff occupies its own complete page.
+No mathematical conclusion rests on compilation or rendering.

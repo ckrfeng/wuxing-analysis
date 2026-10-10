@@ -1,0 +1,91 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage{xcolor}
+\definecolor{CitationRed}{RGB}{255,0,0}
+\usepackage[colorlinks=true,citecolor=CitationRed,linkcolor=black,urlcolor=black,hypertexnames=false]{hyperref}
+% Color the whole citation, including brackets and optional theorem/page locators.
+\let\OriginalCite\cite
+\renewcommand{\cite}[2][]{%
+  \textcolor{CitationRed}{%
+    \if\relax\detokenize{#1}\relax
+      \OriginalCite{#2}%
+    \else
+      \OriginalCite[#1]{#2}%
+    \fi}}
+\input{shared_macros.tex}
+\hypersetup{pdftitle={Directed Cyclic Networks: Shortened Proof Compendium},pdfauthor={}}
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+\title{Directed Cyclic Networks\\Shortened Proof Compendium}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\noindent This edition replaces repeated standard arguments with citations
+and retains the model-specific coefficients, parameter constructions,
+spectral gaps and realizability proofs. P01--P05 and P07--P11 contain the
+completed arguments supplied in the source project. Earlier independent
+audits apply to that source edition, not automatically to this edited text.
+The supplied P08 global-interior extension also awaited independent audit.
+
+\medskip\noindent P06 and P12--P18 were outlines in the source.
+They are retained as concise, explicitly conditional frameworks with
+their outstanding calculations identified. In particular P11 establishes
+a spectral Hopf candidate, not a completed nonlinear Hopf theorem.
+
+\medskip\noindent All ten cited works were checked against primary
+publisher or author records. Full-text access and theorem-location limits
+are recorded in \path{CITATION_VERIFICATION.txt}. Research articles,
+reference articles, a preprint and one standard textbook are distinguished
+there. No unverified article-specific theorem number is used.
+\clearpage
+\tableofcontents
+\clearpage
+\input{00_canonical_model.tex}
+\input{01_notation_and_assumptions.tex}
+
+\input{proofs/P01_wellposedness_and_absorbing_box.tex}
+
+\input{proofs/P02_synchronous_subspace_and_equilibria.tex}
+
+\input{proofs/P03_origin_and_linearization.tex}
+
+\input{proofs/P04_arbitrary_nq_fourier_spectrum.tex}
+
+\input{proofs/P05_q2_mode_selection.tex}
+
+\input{proofs/P06_large_n_limit.tex}
+
+\input{proofs/P07_five_node_specialization.tex}
+
+\input{proofs/P08_matched_bilinear_analysis.tex}
+
+\input{proofs/P09_transcritical_bifurcation.tex}
+
+\input{proofs/P10_saddle_node_and_bistability.tex}
+
+\input{proofs/P11_hopf_spectral_conditions.tex}
+
+\input{proofs/P12_hopf_transversality.tex}
+
+\input{proofs/P13_first_lyapunov_coefficient.tex}
+
+\input{proofs/P14_rotating_waves.tex}
+
+\input{proofs/P15_heterogeneous_equilibrium_persistence.tex}
+
+\input{proofs/P16_static_sensitivity_and_green_function.tex}
+
+\input{proofs/P17_transient_and_harmonic_response.tex}
+
+\input{proofs/P18_stability_radius_and_hopf_shift.tex}
+
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

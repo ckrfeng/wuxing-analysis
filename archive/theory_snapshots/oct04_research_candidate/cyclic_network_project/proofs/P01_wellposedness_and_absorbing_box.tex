@@ -1,0 +1,520 @@
+% STATUS: VERIFIED / AUDITED
+% AUDIT FILE: audits/A01_wellposedness_and_absorbing_box.tex
+% CORE VERDICT: VERIFIED
+% EXTENDED VERDICT: VERIFIED AFTER MINOR REVISION
+% DATE: 2026-09-27
+% VERSION/HASH: P01 v1.1; body SHA-256: a640b2bf9a160feed273dc667c6b44a6923a1d68d6dd81acd35640cc0e4d5808
+% HASH SCOPE: UTF-8 bytes from the first \section{P01: line through end of file.
+% DEPENDS ON: canonical model and notation only
+% LITERATURE DEPENDENCIES: standard ODE existence/continuation theory only
+% PURPOSE: Global nonnegative flow; invariant, attracting, and absorbing cubes.
+% ASSUMPTIONS: Canonical A1--A3; explicitly weaker domain (P01-W) below.
+% AUDIT: A01 complete; sole required correction E01 applied.
+% STATUS NOTE: Body wording about DRAFT status is retained from the audited version;
+% this header records the current status. No other body wording is changed.
+% NUMERICS: None. No analysis of later proof modules.
+
+\section{P01: Well-posedness and bounded absorbing sets}
+\label{sec:P01}
+
+\subsection{Domain, hypotheses, and set terminology}
+Use exactly the demand-modulated vector field in
+\eqref{eq:canonical-dm}, denoted here by $F=(F_i)_{i\in\Zn}$.
+The canonical assumptions imply the weaker hypotheses
+\begin{equation}
+\label{eq:P01-weak}
+ n\ge1,\quad q\in\Z\pmod n,\quad
+ a\in\R,\quad k>0,\quad c,g,h\ge0.
+\tag{P01-W}
+\end{equation}
+We prove the main results under \eqref{eq:P01-weak}, without changing the
+canonical contract for later modules. Coincident offsets retain every
+term of the defining equation. Write
+\[
+ \Domain=(-1,\infty)^n,\qquad K_r=[0,r]^n\ (r\ge0),\qquad
+ X(t)=\max_{i\in\Zn}x_i(t),\qquad s_+=\max\{s,0\}.
+\]
+For a continuous real function $v$, define
+\[
+ D^+v(t)=\limsup_{\tau\downarrow0}
+             \frac{v(t+\tau)-v(t)}{\tau}.
+\]
+Distances use the maximum norm; for $x\in\Orth$,
+\begin{equation}
+\label{eq:P01-distance}
+ \operatorname{dist}_\infty(x,K_r)=(\max_i x_i-r)_+.
+\end{equation}
+A set is \emph{positively invariant} if solutions starting there remain
+there for all forward times for which they exist. It \emph{absorbs bounded
+subsets of $\Orth$} if every bounded $E\subset\Orth$ has a finite $T_E$
+such that all solutions starting in $E$ lie in the set for every
+$t\ge T_E$. Attraction means convergence of the distance to zero;
+uniform attraction of bounded sets means convergence uniform over each
+such $E$. We will also establish stronger absorption bounds with a
+single time valid for the entire orthant.
+
+\subsection{Finite maxima, local solutions, and coordinate boundaries}
+\label{slot:P01-1}
+
+\begin{lemma}[Finite maxima, including ties]
+\label{lem:P01-max}
+For finitely many continuously differentiable functions $y_j$, set
+$v(t)=\max_j y_j(t)$ and $I(t)=\{j:y_j(t)=v(t)\}$.
+Then $v$ is locally Lipschitz, its right derivative exists at every
+time with a right neighborhood in the interval, and
+\begin{equation}
+\label{eq:P01-max}
+ D^+v(t)=\max_{j\in I(t)}\dot y_j(t).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Bounded derivatives on compact time intervals make the finite maximum
+Lipschitz. At a fixed $t$, every nonmaximizing index has a positive gap
+from $v(t)$. Finiteness and continuity ensure that none of these indices
+maximizes at $t+\tau$ for sufficiently small $\tau>0$. Uniformly over
+$I(t)$,
+$y_j(t+\tau)=v(t)+\tau\dot y_j(t)+o(\tau)$.
+Taking the maximum and dividing by $\tau$ proves the assertion.
+\end{proof}
+
+\begin{proposition}[Local well-posedness and nonnegative invariance]
+\label{prop:P01-local}
+For any finite real coefficients, $F$ is $C^\infty$ on $\Domain$.
+Every $x^0\in\Domain$ has a unique maximal classical forward solution
+$x:[0,T_{\max})\to\Domain$, with continuous dependence on initial data.
+If $c\ge0$ and $x^0\in\Orth$, then $x(t)\in\Orth$ for $t<T_{\max}$,
+regardless of the signs of the other coefficients.
+\end{proposition}
+\begin{proof}
+The denominators $1+x_i$ and $1+x_{i+q}$ are strictly positive on
+$\Domain$. Each component of $F$ is a sum of polynomials and rational
+functions with nonvanishing denominators, hence is smooth and locally
+Lipschitz. Standard local ODE existence, uniqueness, and maximal
+continuation theory on an open domain applies.
+
+On each coordinate face,
+\begin{equation}
+\label{eq:P01-face}
+ x_i=0,\quad x\in\Orth\quad\Longrightarrow\quad F_i(x)=c x_{i-1}\ge0.
+\end{equation}
+To treat tangent faces rigorously, fix $T<T_{\max}$ and let $x^+(t)$
+be the coordinatewise positive part of $x(t)$. The curves $x,x^+$ and
+their connecting line segments lie in a compact rectangle in $\Domain$.
+Choose a Lipschitz constant $L$ for $F$ on this rectangle, in the
+maximum norm, and put
+\[
+ V(t)=\max\{0,-x_0(t),\ldots,-x_{n-1}(t)\}
+      =\norm{x(t)-x^+(t)}_\infty.
+\]
+If $V>0$ and $-x_i=V$, then $x_i^+=0$, so
+$F_i(x^+)\ge0$ and $-F_i(x)\le |F_i(x)-F_i(x^+)|\le LV$.
+If $V=0$, any active coordinate has $x_i=0$ and $-F_i(x)\le0$;
+the constant zero is also active. Lemma~\ref{lem:P01-max} gives
+$D^+V\le LV$. Since $V$ is Lipschitz, this inequality holds for its
+ordinary derivative almost everywhere. Integration of
+$(e^{-Lt}V)' \le0$, with $V(0)=0$, gives $V=0$ on $[0,T]$.
+The choice of $T$ was arbitrary.
+\end{proof}
+
+\begin{proposition}[Persistence and propagation of positivity]
+\label{prop:P01-positive}
+For $c\ge0$ and nonnegative initial data, every initially positive
+coordinate remains strictly positive on $[0,T_{\max})$. In particular,
+strictly positive initial data stay strictly positive. If $c>0$ and
+$x^0\ne0$, all coordinates are strictly positive at every
+$0<t<T_{\max}$. If $c=0$, initially zero coordinates remain zero.
+The zero initial state remains identically zero.
+\end{proposition}
+\begin{proof}
+Along a nonnegative solution write
+\[
+ \dot x_i=b_i(t)x_i+d_i(t),\qquad
+ b_i=a-kx_i-\frac{g}{1+x_{i+q}}-h x_{i-q},\qquad
+ d_i=\frac{c x_{i-1}}{1+x_i}\ge0.
+\]
+These coefficients are continuous on every compact time interval in
+the maximal interval. The integrating-factor formula gives
+\begin{equation}
+\label{eq:P01-positive}
+ x_i(t)=x_i^0 e^{\int_0^t b_i(s)\,ds}
+       +\int_0^t e^{\int_s^t b_i(r)\,dr}d_i(s)\,ds.
+\end{equation}
+This proves persistence of an initially positive coordinate.
+If $c>0$, a predecessor positive at every $s>0$ supplies a strictly
+positive integrand to its successor at every $s>0$, making that successor
+positive at every $t>0$. At most $n-1$ iterations along the step-one
+cycle reach all nodes, independently of $q$. For $c=0$ the integral
+vanishes, proving preservation of zero coordinates. Finally $F(0)=0$
+and uniqueness proves the zero-data assertion.
+\end{proof}
+
+\subsection{Maximum comparison and the exact comparison radius}
+\label{slot:P01-2}
+Under \eqref{eq:P01-weak}, define
+\[
+ b(s)=a-ks+\frac{c}{1+s},\qquad H(s)=s b(s)\quad(s\ge0),
+\]
+and set
+\begin{equation}
+\label{eq:P01-radius}
+ X_{\max}=R:=\max\left\{0,\frac{a-k+\sqrt{(a+k)^2+4kc}}{2k}\right\}.
+\end{equation}
+This radius is defined by a scalar upper comparison; it is not asserted
+to be the smallest invariant cube of the full vector field.
+
+\begin{lemma}[Dini inequality and scalar root]
+\label{lem:P01-bound}
+Every nonnegative solution under \eqref{eq:P01-weak} satisfies
+\begin{equation}
+\label{eq:P01-dini}
+ D^+X=\max_{i:x_i=X}F_i(x)
+       \le H(X)-\frac{gX}{1+X}\le H(X).
+\end{equation}
+If $a+c>0$, then $R>0$ is the unique positive zero of $b$, and
+\begin{equation}
+\label{eq:P01-polynomial}
+ kR^2+(k-a)R-(a+c)=0.
+\end{equation}
+If $a+c\le0$, then $R=0$ and $H(s)\le-ks^2$ for $s\ge0$.
+For $R>0$ and $s\ge R$,
+\begin{equation}
+\label{eq:P01-factor}
+ H(s)=s\left[-k(s-R)
+    +c\left(\frac1{1+s}-\frac1{1+R}\right)\right]\le-ks(s-R).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Lemma~\ref{lem:P01-max} includes every tied maximizing coordinate.
+At $x_i=X$, nonnegative invariance gives
+$0\le x_{i-1},x_{i+q},x_{i-q}\le X$. Consequently
+\[
+ \frac{c x_{i-1}}{1+X}\le\frac{cX}{1+X},\qquad
+ -\frac{gX}{1+x_{i+q}}\le-\frac{gX}{1+X},\qquad
+ -hXx_{i-q}\le0.
+\]
+The middle inequality uses the negative prefactor and $g\ge0$.
+Adding proves \eqref{eq:P01-dini}; no independence of neighbor
+coordinates is required.
+
+Now $b'(s)=-k-c/(1+s)^2<0$, $b(0)=a+c$, and $b(s)\to-\infty$.
+If $a+c>0$, multiply $b(R)=0$ by $1+R$ to obtain
+\eqref{eq:P01-polynomial}. Its constant term is negative and its
+discriminant is $(a+k)^2+4kc$, so its positive root is
+\eqref{eq:P01-radius}. If $a+c\le0$, then $k-a>0$ and
+\[
+ (a+k)^2+4kc-(k-a)^2=4k(a+c)\le0.
+\]
+Thus the raw root in \eqref{eq:P01-radius} is nonpositive, $R=0$,
+and $b(s)\le a+c-ks\le-ks$. Subtracting $b(R)=0$ when $R>0$
+gives \eqref{eq:P01-factor}; its inequality follows from $c\ge0$
+and $s\ge R$.
+\end{proof}
+
+\begin{theorem}[Global continuation and invariant attracting cubes]
+\label{thm:P01-global}
+Under \eqref{eq:P01-weak}, every $x^0\in\Orth$ has a unique classical
+solution for all $t\ge0$. The scalar solution
+\begin{equation}
+\label{eq:P01-scalar}
+ \dot u=H(u),\qquad u(0)=X(0)
+\end{equation}
+is global and nonnegative, and
+\begin{equation}
+\label{eq:P01-globalbound}
+ 0\le X(t)\le u(t)\le\max\{X(0),R\}.
+\end{equation}
+Every $K_r$ with $r\ge R$ is positively invariant. Furthermore,
+\begin{align}
+ \operatorname{dist}_\infty(x(t),K_R)
+   &\le e^{-kRt}(X(0)-R)_+ &&(R>0), \label{eq:P01-distance-rate}\\
+ X(t)&\le\frac{X(0)}{1+kX(0)t} &&(R=0). \label{eq:P01-zero-rate}
+\end{align}
+There are also initial-state-independent bounds, for $t>0$:
+\begin{align}
+ X(t)&\le\frac{R}{1-e^{-kRt}} &&(R>0), \label{eq:P01-comingdown}\\
+ X(t)&\le\frac1{kt} &&(R=0). \label{eq:P01-comingdown-zero}
+\end{align}
+Thus $K_R$ attracts all nonnegative solutions uniformly on bounded
+initial sets, and indeed uniformly over the entire orthant as
+$t\to\infty$. Every larger cube $K_r$, $r>R$, absorbs the entire
+orthant by the common time
+\begin{equation}
+\label{eq:P01-outer-time}
+ T_r=\begin{cases}
+ \displaystyle\frac1{kR}\log\frac{r}{r-R},&R>0,\\[4pt]
+ \displaystyle\frac1{kr},&R=0.
+ \end{cases}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The scalar field $H$ is smooth on $(-1,\infty)$, $H(0)=0$, and
+$H(s)\le0$ for $s\ge R$. Its solution starting nonnegative stays in
+$[0,M]$, where $M=\max\{u(0),R\}$: uniqueness prevents crossing zero,
+and the upper endpoint has nonpositive field. The latter barrier also
+follows by the positive-part argument below applied to $(u-M)_+$,
+using $H(M)\le0$. Compact containment gives global scalar continuation.
+
+We justify the vector comparison without assuming differentiability of
+$X$ everywhere. On a compact subinterval of the vector maximal interval,
+let $L$ be a Lipschitz constant for $H$ on an interval containing $X$
+and $u$. The Lipschitz function
+\[
+ W=(X-u)_+=\max\{0,x_i-u:i\in\Zn\}
+\]
+satisfies $D^+W\le H(X)-H(u)\le LW$ where $W>0$.
+At $W=0$, any active coordinate has $x_i=u=X$, unless the constant
+zero is the only active function; Lemma~\ref{lem:P01-max} and
+\eqref{eq:P01-dini} give $D^+W\le0$. Integrating the almost-everywhere
+inequality, as in Proposition~\ref{prop:P01-local}, yields $W=0$.
+This proves \eqref{eq:P01-globalbound} on the maximal interval.
+
+If $T_{\max}<\infty$, the vector trajectory stays in $K_M$, a compact
+subset of $\Domain$ at distance at least one from every singular
+hyperplane. The field is bounded on a compact neighborhood in $\Domain$,
+hence $\dot x$ is bounded. Thus $x(t)$ has a limit in $K_M$ as
+$t\uparrow T_{\max}$. Local existence at that limit and uniqueness
+extend the solution past $T_{\max}$, a contradiction. This proves
+global continuation and absence of finite-time blow-up. If
+$X(0)\le r$ and $r\ge R$, \eqref{eq:P01-globalbound} proves invariance.
+
+For $R>0$, \eqref{eq:P01-factor} gives
+$\dot u\le-ku(u-R)\le-kR(u-R)$ where $u\ge R$. It follows that
+$(u(t)-R)_+\le e^{-kRt}(u(0)-R)_+$, including solutions initially at
+or below $R$, and hence \eqref{eq:P01-distance-rate}. If $u(0)>R$,
+set $w=1-R/u$ while $u>R$. Then
+\[
+ \dot w=\frac{R\dot u}{u^2}\le-kR w,\qquad 0<w(0)<1.
+\]
+Solving this inequality gives \eqref{eq:P01-comingdown} for $u$ and
+therefore for $X$. If $u$ reaches $R$, invariance supplies the same
+bound afterwards; if $u(0)\le R$, it is immediate.
+For $R=0$, integrating $(1/u)'\ge k$ where $u>0$, using
+$\dot u\le-ku^2$, proves \eqref{eq:P01-zero-rate} and
+\eqref{eq:P01-comingdown-zero}; zero initial data follow by uniqueness.
+
+Attraction follows from these estimates and \eqref{eq:P01-distance}.
+For $R>0$ the distance is at most $R/(e^{kRt}-1)$ independently of
+initial data; for $R=0$ use $1/(kt)$. Substitution of $T_r$ into
+\eqref{eq:P01-comingdown} or \eqref{eq:P01-comingdown-zero} gives
+$X(T_r)\le r$, and invariance supplies all subsequent times.
+\end{proof}
+
+\subsection{Finite-time absorption at the comparison radius}
+\label{slot:P01-3}
+
+\begin{theorem}[Exact absorption criterion for $K_R$]
+\label{thm:P01-absorption}
+Assume \eqref{eq:P01-weak}. If $R=0$, no initially nonzero nonnegative
+solution enters $K_R=\{0\}$ at finite time. This cube is invariant and
+globally attracting but not absorbing.
+
+If $R>0$, the following are equivalent:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item $K_R$ absorbs every nonnegative solution in finite time.
+\item $K_R$ absorbs bounded subsets of $\Orth$.
+\item One finite absorption time is valid for the entire orthant.
+\item The coefficients and offset satisfy
+\begin{equation}
+\label{eq:P01-absorption-criterion}
+ g>0\quad\hbox{or}\quad
+ [\,h>0\ \hbox{and}\ (c>0\ \hbox{or}\ q\equiv0\pmod n)\,].
+\end{equation}
+\end{enumerate}
+Canonically $R>0$, $g>0$, and the entire orthant enters $K_R$ by
+\begin{equation}
+\label{eq:P01-canonical-time}
+ T_*=\frac{\log2}{kR}+\frac{1+R}{g}.
+\end{equation}
+If $g>0$ and $X(0)\le M$, an alternative entry-time bound is
+\begin{equation}
+\label{eq:P01-bounded-time}
+ T_M=\frac{(M-R)_+(1+R)}{gR}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+When $R=0$, Proposition~\ref{prop:P01-positive} ensures that some
+coordinate of any initially nonzero solution stays positive at each
+finite time.
+
+Now suppose $R>0$ and set $t_0=(\log2)/(kR)$. By
+\eqref{eq:P01-comingdown}, every trajectory is in the invariant cube
+$K_{2R}$ by $t_0$. If $g>0$, then whenever $X\ge R$,
+\begin{equation}
+\label{eq:P01-strict-gap}
+ D^+X\le-\frac{gX}{1+X}\le-\frac{gR}{1+R}=:-\delta<0,
+\end{equation}
+using $H(X)\le0$. Absolute continuity permits integration before
+the first entry into $X\le R$. If $X(0)\le M$, a longer time outside
+than $(M-R)_+/\delta$ would force $X\le R$, a contradiction.
+Invariance gives all later times. Applying this after $t_0$ with
+$M=2R$ proves \eqref{eq:P01-canonical-time}.
+
+If $g=0$, $h>0$, and $q\equiv0\pmod n$, a maximizing coordinate
+has $x_{i-q}=X$. Thus $D^+X\le H(X)-hX^2\le-hR^2$ when $X\ge R$,
+giving common absorption by $t_0+1/(hR)$.
+
+For the remaining sufficient case $g=0$, $h>0$, $c>0$, we give a
+coordinatewise quantitative argument. Put $M=2R$ and fix any
+$\tau>0$. On $K_M$,
+\begin{equation}
+\label{eq:P01-propagation-bound}
+ \dot x_i\ge-\beta x_i+\eta x_{i-1},\qquad
+ \beta=(-a)_++(k+h)M+g,\quad \eta=\frac{c}{1+M}>0.
+\end{equation}
+Indeed $a\ge-(-a)_+$, $kx_i\le kM$,
+$g/(1+x_{i+q})\le g$, $h x_{i-q}\le hM$, and
+$c/(1+x_i)\ge c/(1+M)$. On $[s,s+\tau]$ in this cube, the transformed
+variables $z_i(r)=e^{\beta(r-s)}x_i(r)$ satisfy
+\[
+ z_i(r)\ge x_i(s)+\eta\int_s^r z_{i-1}(v)\,dv.
+\]
+Repeated substitution, keeping the remaining nested integral
+nonnegative, yields
+\begin{equation}
+\label{eq:P01-propagation-series}
+ x_i(s+\tau)\ge e^{-\beta\tau}
+       \sum_{j=0}^{n-1}\frac{(\eta\tau)^j}{j!}x_{i-j}(s).
+\end{equation}
+A $j$-fold integral of a constant over the time simplex equals
+$\tau^j/j!$, which gives the displayed coefficients.
+
+For a trajectory that has not entered $K_R$ by time $t\ge t_0+\tau$,
+we have $X(t-\tau)>R$. The indices $i-j$, $0\le j\le n-1$, cover
+the cycle once. Thus \eqref{eq:P01-propagation-series} gives, for every $i$,
+\begin{equation}
+\label{eq:P01-positive-floor}
+ x_i(t)\ge d:=R e^{-\beta\tau}
+        \min_{0\le j\le n-1}\frac{(\eta\tau)^j}{j!}>0.
+\end{equation}
+At such times, every maximizing coordinate satisfies
+$F_i(x)\le H(X)-hXx_{i-q}\le-hRd$.
+Starting from $X\le2R$ at $t_0+\tau$, integration proves entry by
+$t_0+\tau+1/(hd)$, or earlier. We have proved (iv)$\Rightarrow$(iii).
+
+The implications (iii)$\Rightarrow$(ii)$\Rightarrow$(i) are immediate.
+If (iv) fails and $g=h=0$, choose all initial coordinates equal to
+$s_0>R$. Direct substitution verifies the solution $x_i(t)=s(t)$
+with $\dot s=H(s)$. It stays above $R$ at each finite time:
+a first meeting with the constant scalar solution $R$ would violate
+uniqueness, also backwards near that meeting. Hence it never enters
+$K_R$. The other failure case is $g=0$, $h>0$, $c=0$,
+$q\not\equiv0\pmod n$. Here $R=a/k>0$. Choose one initial coordinate
+$x_j(0)>R$ and all others zero. The zero coordinates stay zero and
+$j-q\ne j$, so $\dot x_j=a x_j-kx_j^2$. It likewise stays strictly
+above $a/k$ at every finite time. These cases exhaust failure of (iv)
+and contradict (i), completing the equivalence.
+\end{proof}
+
+\subsection{Canonical conclusions and weaker-assumption limits}
+\label{slot:P01-4}
+
+\begin{corollary}[Canonical foundation]
+\label{cor:P01-canonical}
+For canonical $n\ge5$, $1\le q\le n-1$ and $a,k,c,g,h>0$, every
+nonnegative initial state has a unique global nonnegative solution.
+Every initially positive coordinate stays positive, and every nonzero
+initial state becomes strictly positive in every coordinate at each
+positive time. The cube $[0,X_{\max}]^n$, with
+\[
+ X_{\max}=\frac{a-k+\sqrt{(a+k)^2+4kc}}{2k}>0,
+\]
+is positively invariant, globally attracting, and finite-time absorbing
+for the entire orthant with the common bound
+\eqref{eq:P01-canonical-time}. All larger cubes are also invariant
+and absorbing. No condition on $\gcd(n,q)$ is required.
+\end{corollary}
+\begin{proof}
+The canonical assumptions imply \eqref{eq:P01-weak}, $a+c>0$,
+$c>0$ and $g>0$. Apply the preceding results.
+\end{proof}
+
+\begin{remark}[Archived radius and the meaning of stability]
+The blueprint's candidate radius
+\[
+ B=\frac{a+\sqrt{a^2+4kc}}{2k}
+\]
+is the larger real root of $as-ks^2+c=0$, and is nonnegative. If $c>0$, then $B>0$ and
+$H(B)=-c/(1+B)<0$, so $B>R$. Its cube is therefore also invariant
+and absorbing by Theorem~\ref{thm:P01-global}, even when $g=h=0$.
+The smaller radius $R$ retains $cX/(1+X)$ instead of replacing it
+by $c$. If $c=0$, then $B=R$ and the exact-radius criterion applies.
+Neither radius is claimed optimal after all $g,h,q$ information is used.
+
+Invariance concerns remaining inside; absorption concerns finite-time
+entry; attraction alone permits approaching from outside forever.
+The distance estimates also show Lyapunov stability of $K_R$ as a set,
+relative to $\Orth$, because distance never exceeds its initial value.
+Under the convention that asymptotic stability of a set means Lyapunov
+stability plus attraction, $K_R$ is globally asymptotically stable as
+a set. This is not convergence to a particular point, nor a claim that
+the cube is a minimal global attractor or is invariant in both time
+directions.
+\end{remark}
+
+\begin{proposition}[Global existence when $k=0$ is allowed]
+\label{prop:P01-kzero}
+Global nonnegative existence and the positivity conclusions still hold
+for $k\ge0$, $a\in\R$, $c,g,h\ge0$, any $n\ge1$, and any residue $q$.
+For $k=0$, no bounded absorbing cube is guaranteed over this parameter
+class.
+\end{proposition}
+\begin{proof}
+Local existence and nonnegative invariance did not require $k>0$.
+Discarding nonpositive losses at a maximizing coordinate gives
+\[
+ D^+X\le aX+\frac{cX}{1+X}\le(a_++c)X.
+\]
+The Lipschitz/Dini argument yields $X(t)\le X(0)e^{(a_++c)t}$.
+If the maximal time were finite, this would confine the trajectory
+to a compact subset of $\Domain$, and the earlier continuation
+argument would extend it. Positivity follows from
+Proposition~\ref{prop:P01-positive}. For the last assertion take
+$a>0$, $k=c=g=h=0$: an initially positive coordinate equals
+$x_i(0)e^{at}$ and is unbounded.
+\end{proof}
+
+\subsection{Checks and possible failure points}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Boundary tangency.} The negative-part maximum proves
+invariance even when the derivative on a face vanishes. A bare
+first-contact derivative assertion is insufficient. If $c<0$ and
+$n\ge2$, a face state with $x_i=0$, $x_{i-1}>0$ has $\dot x_i<0$,
+so invariance can fail. No forward assertion concerns initial data
+outside $\Orth$.
+\item \textbf{Tied maxima and loss signs.} All active indices occur
+in \eqref{eq:P01-max}. The negative prefactor in the $g$ term reverses
+the reciprocal inequality. Coincident offsets are harmless because
+the estimates do not optimize neighbors independently.
+\item \textbf{Root degeneracy.} Equation~\eqref{eq:P01-polynomial}
+characterizes the positive comparison root. If $a+c\le0$, the selected
+radius is zero and need not be a root of that quadratic: the factor
+$s$ in $H(s)$ supplies the zero. No expression containing $1/R$ is
+used when $R=0$.
+\item \textbf{Absorption mechanism.} The equality $H(R)=0$ alone
+does not imply finite-time entry. Canonical absorption uses the
+retained $g$ loss; when it vanishes, the exact criterion supplies
+another strict mechanism or a nonabsorbing trajectory. Positivity
+prevents finite-time entry into $K_0$ from nonzero data.
+\item \textbf{Dimension and connectivity.} Nothing requires
+$n\ge5$, coprimality, or distinct offsets. Positivity propagates
+through the step-one input when $c>0$. The $q\equiv0$ absorption
+case belongs only to the weaker extension of the canonical range.
+Strict positivity at each finite time is not a uniform positive
+lower bound as $t\to\infty$.
+\item \textbf{Coefficient edges.} Strict $a,c,g,h>0$ is unnecessary
+for the bounded-region theorem when $k>0$; even $a\in\R$ is allowed.
+The condition $k\ge0$ suffices for global existence. If $k<0$ and
+$a=c=g=h=0$, then $\dot x_i=|k|x_i^2$ blows up in finite time for
+a positive coordinate. If $h<0$, the dissipative bounds also fail
+in general: take $k>0$, $a=c=g=0$, $h<-k$ and equal positive initial
+coordinates. Direct substitution gives $\dot s=-(k+h)s^2$ and
+finite-time blow-up. These examples are outside the proved domain,
+not necessity claims for every signed parameter choice.
+\item \textbf{Continuation and status.} Boundedness is used together
+with compact containment in the smooth open domain, excluding
+denominator singularities. All maximum, comparison, and coordinate
+integral inequalities are proved here. Only standard local ODE
+existence/uniqueness/continuation theory is invoked. This module
+remains DRAFT pending a separate independent audit; no numerical
+experiment or later proof-module result is used.
+\end{enumerate}

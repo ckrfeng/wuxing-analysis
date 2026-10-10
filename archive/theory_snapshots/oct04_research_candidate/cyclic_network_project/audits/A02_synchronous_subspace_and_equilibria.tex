@@ -1,0 +1,847 @@
+% Standalone audit: compile directly with pdfLaTeX, twice.
+% MAIN VERDICT: MINOR REVISION
+% CORE VERDICT: MINOR REVISION
+% EXTENDED VERDICT: VERIFIED
+% P02 v1.0 and all supplied project files remain unchanged.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{array,booktabs,longtable,enumitem,needspace}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Dom}{(-1,\infty)^n}
+\newcommand{\Orth}{\RR_{\geq0}^{n}}
+\newcommand{\lin}[1]{\textbf{L#1}}
+\newcommand{\pass}{\textbf{PASS}}
+\newcommand{\sha}[2]{\par{\small\ttfamily #1\allowbreak #2}\par}
+\title{A02: Independent mathematical audit of P02\\
+Synchronous subspace and equilibria}
+\author{Independent reconstruction and adversarial review}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+
+\section{Verdict and exact version}
+
+\textbf{Main verdict: MINOR REVISION.}
+The canonical invariance, scalar reduction, complete root classification,
+positive-equilibrium theorem, domain filtering, algebraic loci, and
+multiplicity statements are mathematically correct. One local wording
+correction is required in the boundary-continuity paragraph:
+\lin{545--552} introduces \(s_\pm\), then supplies limits
+\emph{respectively} in the order \((s_-,s_+)\).
+Explicitly naming that ordered pair removes a branch-label ambiguity.
+This is issue E01 below. No displayed root formula, count, assumption,
+theorem conclusion, or intended limit needs alteration.
+
+\textbf{CORE VERDICT: MINOR REVISION.}\quad
+\textbf{EXTENDED VERDICT: VERIFIED.}
+The extended verdict concerns only the limited claims of
+\lin{45--48,440--453}: invariance for homogeneous finite real coefficients
+and the positive-root alternatives for \(A>0\). It does not export the
+canonical negative-root table or global nonnegative-flow conclusions
+to arbitrary signed coefficients.
+
+The exact audited source is
+\path{proofs/P02_synchronous_subspace_and_equilibria.tex},
+\textbf{P02 v1.0, dated 2026-09-27, DRAFT}, 26,167 bytes and 598 lines,
+from the supplied \path{cyclic_network_project_P02_draft.zip}.
+Its full-file SHA-256, including comments and whitespace, is
+\sha{a63f0757eb0de6462b7ce18c179f6f5c21}{079a8c3e8d0f9c3ed53d6ce7b256f3}
+The ZIP's SHA-256 is
+\sha{68e5b8a2277ee89d37816a440e9c487b36}{b2ec873aea336fba02ad83bd6eaa7e}
+All P02 line references in A02 refer to that exact 598-line file,
+including blank and comment lines. This is a new standalone audit;
+P02, the manifest, registry, compendium, and other supplied project
+files have not been revised or promoted.
+
+The supplied ZIP was selected deliberately. Two pre-existing local
+project folders contain a 1,754-byte P02 placeholder with a different
+hash; neither was used as the proof under review. The ZIP's current
+manifest identifies P02 v1.0 with the matching digest above. Its current
+registry and compendium agree that P01 is audited, P02 is DRAFT, and
+P03--P18 remain TODO. Historical all-TODO prose in planning documents
+is explicitly superseded by current dated records.
+
+The audit starts from the canonical equation and standard local ODE
+uniqueness. It does not rely on compilation, internal check totals,
+archived derivations, or later modules. No literature search, numerical
+sampling as proof, simulation, P02 rewrite, or P03 work was performed.
+The exact finite checks below only corroborate the analytic proofs.
+
+\section{Current inputs and exact assumptions}
+
+All nine requested current files were located inside the same archive
+and used. Their full hashes are included in the accompanying inventory.
+\begin{longtable}{@{}P{0.50\textwidth}P{0.44\textwidth}@{}}
+\toprule
+Current file & Use in the audit\\
+\midrule
+\endhead
+\path{project_manifest.md} & Current version/hash, P01 closure, status precedence.\\
+\path{claim_registry.md} & C025, C026, C028--C033, C146 and P02-D1--D4.\\
+\path{frozen_theorem_package.md} & S2 scope, next P03 attempt, separate later modules.\\
+\path{00_canonical_model.tex} & Exact field, domain, parameters, indexing.\\
+\path{01_notation_and_assumptions.tex} & A1--A3, synchrony, state sets, abbreviations.\\
+\path{proofs/P01_wellposedness_and_absorbing_box.tex} & Audited uniqueness and canonical global nonnegative continuation.\\
+\path{audits/A01_wellposedness_and_absorbing_box.tex} & Audit and sole P01 correction E01.\\
+\path{proofs/P02_synchronous_subspace_and_equilibria.tex} & Exact draft under independent review.\\
+\path{proofs_compendium.tex} & Current banner and actual P02 input; no proof premise.\\
+\bottomrule
+\end{longtable}
+
+The core assumptions are exactly
+\begin{equation}\label{A02:assumptions}
+n\in\ZZ,\ n\ge5,\quad 1\le q\le n-1,\qquad
+a,k,c,g,h>0,\qquad U=\Dom.
+\end{equation}
+Indices lie in \(\ZZ/n\ZZ\), and all terms remain when offsets coincide.
+Use only as notation
+\[
+A=k+h,\qquad \mu=a+c-g,\qquad b=a-A.
+\]
+Thus \(A>0\) and \(b>-A\) follow from the assumptions; neither \(\mu\)
+nor \(b\) has an assumed sign. The local \(b\) is not an archived
+comparator coefficient. No coprimality condition is imposed.
+The only vector field audited is
+\begin{equation}\label{A02:field}
+F_i(x)=ax_i-kx_i^2+\frac{cx_{i-1}}{1+x_i}
+-\frac{gx_i}{1+x_{i+q}}-hx_ix_{i-q}.
+\end{equation}
+The nonnegative model state space is \(\Orth\).
+Negative synchronous equilibria in \(U\) belong to the open extension,
+not the nonnegative model.
+
+\section{Independent invariance and scalar reconstruction}
+
+For \(x=s\one\), \(s>-1\), each coordinate appearing in every component
+equals \(s\). Direct substitution gives, for every \(i\),
+\[
+F_i(s\one)=as-ks^2+\frac{cs}{1+s}
+-\frac{gs}{1+s}-hs^2
+=as-As^2+\frac{(c-g)s}{1+s}.
+\]
+Thus \(F(s\one)=f(s)\one\). This uses no \(n,q\), gcd, cycle
+connectedness, or independence of neighboring coordinates. In particular
+\(q=1\), \(q=n-1\), and \(2q=0\pmod n\) cause no change.
+The same substitution works for \(n=1\), any residue \(q\), and finite
+real homogeneous coefficients.
+
+Both fields are smooth on their respective open domains. A scalar
+solution lifts to a vector solution; uniqueness identifies it with the
+vector solution from the same synchronous initial point. If the scalar
+maximal interval ended at a finite time while the vector solution
+continued in \(U\), continuity would give a synchronous limit
+\(s_*\one\in U\). Local scalar existence at \(s_*>-1\) would extend
+the scalar solution, a contradiction. Conversely a longer scalar
+interval would extend the vector solution. The maximal intervals
+therefore coincide. The argument also applies backward locally.
+This proves invariance throughout the maximal interval in \(U\);
+it does not assert global existence for negative initial values.
+
+The inherited scalar domain is exactly \(s>-1\). On it,
+\begin{align}
+f(s)&=s\left[a-As+\frac{c-g}{1+s}\right]\notag\\
+&=\frac{s}{1+s}\left[a+(a-A)s-As^2+c-g\right]\notag\\
+&=\frac{s}{1+s}\left[\mu+bs-As^2\right].
+\label{A02:scalar}
+\end{align}
+At \(g=c\), cancellation along synchrony does not enlarge the declared
+domain: the original rational terms remain undefined at \(s=-1\).
+If one considered the rational expression outside \(U\), the same
+tangency argument would work on each interval avoiding \(-1\);
+P02's equilibrium classification concerns the specified \(U\).
+For \(s(0)\ge0\), P01 supplies a global nonnegative vector solution,
+and invariance gives a global nonnegative scalar solution. No
+absorbing-radius, spectral, stability, or later-module result is needed.
+
+\section{Origin, reversible reduction, explicit roots, and substitution}
+
+All five original terms vanish at \(s=0\), so the origin is retained
+before division. For \(s\ne0\), \(s>-1\),
+\[
+f(s)=0
+\Longleftrightarrow \mu+bs-As^2=0
+\Longleftrightarrow Q(s):=As^2-bs-\mu=0.
+\]
+Division by \(s\) and multiplication by \(1+s>0\) are reversible
+on precisely this set. Hence the synchronous equilibrium set in \(U\) is
+\begin{equation}\label{A02:set}
+\{0\one\}\ \cup\ \{s\one:Q(s)=0,\ s>-1,\ s\ne0\}.
+\end{equation}
+Zero roots of \(Q\) do not add another origin.
+
+Completing the square independently yields
+\begin{align}
+Q(s)&=A\left(s-\frac b{2A}\right)^2-\frac{\Delta}{4A},\notag\\
+\Delta&=b^2+4A\mu=(a-A)^2+4A(a+c-g)
+=(a+A)^2+4A(c-g).
+\label{A02:disc}
+\end{align}
+The draft's \(D\) is this \(\Delta\). Since \(A>0\), there are
+no real roots for \(\Delta<0\), one double root for \(\Delta=0\),
+and two distinct simple roots for \(\Delta>0\).
+For \(\Delta\ge0\), keep the fixed labels
+\begin{equation}\label{A02:roots}
+s_-=\frac{b-\sqrt{\Delta}}{2A}\le
+s_+=\frac{b+\sqrt{\Delta}}{2A}.
+\end{equation}
+Direct calculation, and independently coefficient comparison, give
+\begin{equation}\label{A02:vieta}
+s_-+s_+=\frac bA,\qquad
+s_-s_+=\frac{b^2-\Delta}{4A^2}=-\frac{\mu}{A}.
+\end{equation}
+For \(r=(b+\varepsilon\sqrt{\Delta})/(2A)\), \(\varepsilon=\pm1\),
+\[
+\mu+br-Ar^2=\mu+\frac{b^2-\Delta}{4A}=0.
+\]
+Substitution into the original scalar expression, not just \(Q\), gives
+\begin{equation}\label{A02:residual}
+ar-kr^2+\frac{cr}{1+r}-\frac{gr}{1+r}-hr^2
+=\frac{r}{1+r}(\mu+br-Ar^2)=0\qquad(r\ne-1).
+\end{equation}
+Only \(r>-1\) is retained as an equilibrium in \(U\).
+For \(r<-1\) this is an identity for the rational expression outside
+the declared domain, not a DM-domain equilibrium claim.
+The special formulas at \(\mu=0,\Delta=0,g=c,b=0\), and the exact
+near-zero branch are all covered by this direct substitution.
+A truncated branch expansion is not an exact root.
+
+The singular-root test is
+\begin{equation}\label{A02:minusone}
+Q(-1)=A+b-\mu=a-(a+c-g)=g-c.
+\end{equation}
+Thus \(-1\) is a polynomial root if and only if \(g=c\).
+It is never admissible. Neither multiplication by \(1+s\) nor
+cancellation of equal rational terms admits that point.
+
+\section{Complete canonical classification}
+
+\subsection{Domain filtering}
+Whenever \(\Delta\ge0\),
+\[
+s_+\ge\frac b{2A}=\frac a{2A}-\frac12>-\frac12>-1.
+\]
+For the smaller root, since \(a+A>0\),
+\begin{align}
+s_->-1
+&\Longleftrightarrow \sqrt{\Delta}<b+2A=a+A\notag\\
+&\Longleftrightarrow \Delta<(a+A)^2
+\Longleftrightarrow g>c.
+\label{A02:domain}
+\end{align}
+Squaring is legitimate because both sides are nonnegative and the
+right side is strictly positive. Equality gives \(s_-=-1\) exactly
+when \(g=c\); reversing the inequalities gives \(s_-<-1\) exactly
+when \(g<c\). These statements are conditional on real roots existing.
+At \(g=c\),
+\[
+Q(s)=(s+1)(As-a),
+\]
+so the distinct roots are exactly \(-1,a/A\).
+
+\subsection{Every sign of \texorpdfstring{\(\mu\) and \(b\)}{mu and b}}
+If \(\mu>0\), then \(\Delta>b^2\), so \(s_-<0<s_+\), both simple,
+for each of \(b<0,b=0,b>0\). The negative root is below \(-1\),
+equal to \(-1\), or in \((-1,0)\) according as \(g<c,g=c,g>c\).
+In the last cell one also has \(g<a+c\).
+
+If \(\mu=0\), \(Q=s(As-b)\). For \(b>0\), the roots are
+\(s_-=0,s_+=b/A>0\). For \(b<0\), they are
+\(-1<s_-=b/A<0=s_+\), using \(b>-A\). Both are simple for \(b\ne0\).
+For \(b=0\), zero is the single distinct polynomial root, of
+multiplicity two. In all these subcases \(g=a+c>c\).
+
+If \(\mu<0\), then \(g>a+c>c\), so every real root is admissible.
+If \(b=0\), \(\Delta=4A\mu<0\), and there are no real roots.
+For \(b\ne0,\Delta\ge0\), the positive Vieta product and the sign of
+the sum show that both nonzero roots have the sign of \(b\).
+They are distinct and simple for \(\Delta>0\), coincident and double
+for \(\Delta=0\). For \(b<0\), the double root is in \((-1/2,0)\).
+For either nonzero sign of \(b\), \(\Delta<0\) gives no real roots.
+Thus all three signs of \(b\) are included in the no-real-root cell.
+
+An asterisk in this complete table marks one distinct polynomial root
+of multiplicity two; every other root displayed is simple.
+\begin{longtable}{@{}c P{0.25\textwidth}P{0.36\textwidth}P{0.23\textwidth}@{}}
+\toprule
+Cell & Conditions & Polynomial roots and signs & Roots in \(s>-1\)\\
+\midrule
+\endhead
+I & \(\mu>0,\ g<c\) & \(s_-<-1<0<s_+\) & \(s_+\) only\\
+II & \(\mu>0,\ g=c\) & \(s_-=-1,\ s_+=a/A>0\) & \(s_+\) only\\
+III & \(\mu>0,\ g>c\) & \(-1<s_-<0<s_+\) & Both\\
+IV & \(\mu=0,\ b>0\) & \(s_-=0,\ s_+=b/A>0\) & Both\\
+V & \(\mu=0,\ b=0\) & \(s_-=s_+=0^*\) & The one zero\\
+VI & \(\mu=0,\ b<0\) & \(-1<s_-=b/A<0=s_+\) & Both\\
+VII & \(\mu<0,\ \Delta<0\) & None; any sign of \(b\) & None\\
+VIII & \(\mu<0,\ b>0,\ \Delta>0\) & \(0<s_-<s_+\) & Both\\
+IX & \(\mu<0,\ b>0,\ \Delta=0\) & \(s_-=s_+=(b/(2A))^*>0\) & One distinct root\\
+X & \(\mu<0,\ b<0,\ \Delta>0\) & \(-1<s_-<s_+<0\) & Both\\
+XI & \(\mu<0,\ b<0,\ \Delta=0\) & \(-1/2<s_-=s_+=(b/(2A))^*<0\) & One distinct root\\
+\bottomrule
+\end{longtable}
+
+Let \(R_Q\) count distinct real polynomial roots including zero,
+\(D_Q\) those in the domain, and \(E_U,E_{\ge0},E_+\) all synchronous
+equilibria in \(U\), nonnegative equilibria, and positive equilibria.
+The last column uses P02's definitions: \(r,d\) count only nonzero
+polynomial and nonzero admissible roots.
+\begin{center}
+\begin{tabular}{@{}c c c c c c c@{}}
+\toprule
+Cell & \(R_Q\)&\(D_Q\)&\(E_U\)&\(E_{\ge0}\)&\(E_+\)&P02 \((r,d,N_0,N_+)\)\\
+\midrule
+I&2&1&2&2&1&\((2,1,2,1)\)\\
+II&2&1&2&2&1&\((2,1,2,1)\)\\
+III&2&2&3&2&1&\((2,2,2,1)\)\\
+IV&2&2&2&2&1&\((1,1,2,1)\)\\
+V&1&1&1&1&0&\((0,0,1,0)\)\\
+VI&2&2&2&1&0&\((1,1,1,0)\)\\
+VII&0&0&1&1&0&\((0,0,1,0)\)\\
+VIII&2&2&3&3&2&\((2,2,3,2)\)\\
+IX&1&1&2&2&1&\((1,1,2,1)\)\\
+X&2&2&3&1&0&\((2,2,1,0)\)\\
+XI&1&1&2&1&0&\((1,1,1,0)\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every P02 table entry passes. The zero root of \(Q\) is nonnegative;
+negative roots never are. Every positive polynomial root is admissible.
+The origin is added once, whether or not it is a root of \(Q\).
+
+\section{Positive-equilibrium theorem: both directions and equalities}
+
+Two distinct positive roots imply by Vieta that \(\mu<0\), \(b>0\),
+and \(\Delta>0\). Conversely those three conditions give two distinct
+real roots with positive product and positive sum, hence both positive.
+All positive roots satisfy \(s>-1\). Define
+\begin{equation}\label{A02:gf}
+g_f=a+c+\frac{(a-A)^2}{4A}
+=c+\frac{(a+A)^2}{4A},\qquad
+s_f=\frac{a-A}{2A}.
+\end{equation}
+Since \(\Delta=4A(g_f-g)\), necessity and sufficiency give exactly
+\begin{equation}\label{A02:two}
+E_+=2\quad\Longleftrightarrow\quad
+a>A,\qquad a+c<g<g_f.
+\end{equation}
+None of these strict inequalities can be weakened to include an endpoint.
+
+The full positive classification is
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Relation & Parameter range & Positive roots\\
+\midrule
+\(a>A\)& \(0<g\le a+c\)& One simple root \(s_+\)\\
+\(a>A\)& \(a+c<g<g_f\)& Two simple roots \(s_-,s_+\)\\
+\(a>A\)& \(g=g_f\)& One double root \(s_f>0\)\\
+\(a>A\)& \(g>g_f\)& None\\
+\(a\le A\)& \(0<g<a+c\)& One simple root \(s_+\)\\
+\(a\le A\)& \(g\ge a+c\)& None\\
+\bottomrule
+\end{tabular}
+\end{center}
+At \(a>A,g=a+c\), \(Q\) has roots \(0,b/A\), the latter positive
+and simple. At \(a=A,g=a+c\), \(Q\) has double zero, not a positive
+root. At \(a<A,g=a+c\), the other root is negative.
+At \(a<A,g=g_f\), the double root is negative; at
+\(a=A,g=g_f=a+c\), it is zero. Thus a repeated root is not
+unconditionally positive.
+
+An independent positive-half-line argument uses
+\(H(s)=\mu+bs-As^2\). If \(b\le0\), \(H'(s)=b-2As<0\)
+for \(s>0\), so precisely \(\mu>0\) yields one positive zero.
+If \(b>0\), the maximum at \(b/(2A)>0\) equals \(\Delta/(4A)\).
+For \(\mu<0\), a positive, zero, or negative maximum gives two,
+one double, or no positive zeros. For \(\mu=0\), factor
+\(H=s(b-As)\); for \(\mu>0\), the negative Vieta product leaves
+one positive root. This proves every implication in P02's four
+alternatives, including no-positive and exact-one-distinct-root clauses.
+
+\section{Negative admissible roots and the singular boundary}
+
+The complete negative-root conclusions follow independently from
+Vieta and \eqref{A02:domain}:
+\begin{enumerate}
+\item For \(\mu>0\), exactly one polynomial root is negative.
+It is below \(-1\) for \(g<c\), equals \(-1\) for \(g=c\), and
+lies in \((-1,0)\) for \(c<g<a+c\).
+\item For \(\mu=0\), exactly one negative root exists if and only if
+\(a<A\). It is \(a/A-1\in(-1,0)\). Otherwise there is no negative root.
+\item For \(\mu<0,a<A\), there are two distinct negative roots for
+\(\Delta>0\), one double negative root for \(\Delta=0\), and none
+for \(\Delta<0\). All real ones lie in \((-1,0)\).
+\item For \(\mu<0,a\ge A\), there are no negative roots:
+at \(a=A\) there are no real roots; at \(a>A\) the real roots,
+if any, are positive.
+\end{enumerate}
+For \(a<A,\mu<0\), these conditions can also be written
+\(a+c<g<g_f\) for two negative roots, \(g=g_f\) for one double,
+and \(g>g_f\) for none. Both roots below \(-1\), or a larger root
+at \(-1\), are impossible canonically. Indeed \(s_+>-1/2\);
+also \(g\le c\) forces \(\mu\ge a>0\), so if one root is at or
+below \(-1\), the other is positive.
+
+Thus one or both polynomial roots can be domain-admissible negative
+roots exactly in the cases listed, but neither represents a
+nonnegative state. The smaller root alone crosses the singular boundary
+at \(g=c\), where \(\Delta=(a+A)^2>0\). Excluding negative states
+from the physical model does not justify dropping them from a
+classification on \(U\).
+
+\section{Algebraic loci, expansions, and exact zero multiplicities}
+
+Solving \(Q=0\) for \(g\) is a reversible linear rearrangement:
+\begin{equation}\label{A02:graph}
+g=a+c+bs-As^2=g_f-A(s-s_f)^2.
+\end{equation}
+For nonzero canonical equilibria, retain \(s>-1,s\ne0,g>0\).
+The algebraic continuation includes the origin exactly at \(g=a+c\).
+The nonzero branch itself does not literally contain the origin;
+P02's qualification by algebraic continuation is correct.
+
+A repeated root obeys \(Q=Q'=0\). Since \(Q'=2As-b\), it is
+\(s_f=b/(2A)\), and substitution gives \(\mu=-b^2/(4A)\), or
+\(g=g_f\). Conversely those values make \(Q=A(s-s_f)^2\).
+Canonically \(s_f>-1/2\), and \(s_f>0\) if and only if \(a>A\).
+The two loci meet exactly when
+\(g_f-(a+c)=b^2/(4A)=0\), that is \(a=A,g=a+c\).
+These conclusions are algebraic, not bifurcation theorems.
+
+At a nonzero root in the domain, the factor \(-s/(1+s)\) in
+\(f=-sQ/(1+s)\) is smooth and nonzero, so \(f\) and \(Q\)
+have the same root multiplicity there.
+At zero, the numerator is \(\mu s+bs^2-As^3\) and the denominator
+does not vanish:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Parameters & Multiplicity of zero in \(f\)& Multiplicity of zero in \(Q\)\\
+\midrule
+\(\mu\ne0\)& One & Not a root\\
+\(\mu=0,b\ne0\)& Two & One\\
+\(\mu=b=0\)& Three & Two\\
+\bottomrule
+\end{tabular}
+\end{center}
+Direct substitution at \(a=A,g=a+c\) gives
+\[
+f(s)=As-As^2-\frac{As}{1+s}=-\frac{As^3}{1+s},
+\qquad Q(s)=As^2.
+\]
+Because \(A>0\), these orders are exactly three and two, and zero
+is the only synchronous equilibrium.
+P02 \lin{343--345} explicitly attaches the triple zero to \(f\)
+and the double root to \(Q\). Its degeneracy terminology is
+unambiguous; no correction is required.
+
+For fixed \(b\ne0\), the square-root expansion at \(\mu=0\) is
+\[
+\sqrt{b^2+4A\mu}
+=|b|\left(1+\frac{2A\mu}{b^2}
+-\frac{2A^2\mu^2}{b^4}+O(\mu^3)\right).
+\]
+Therefore the root tending to zero is
+\[
+s_0(\mu)=\frac{b-\operatorname{sgn}(b)\sqrt{b^2+4A\mu}}{2A}
+=-\frac{\mu}{b}+\frac{A\mu^2}{b^3}+O(\mu^3).
+\]
+It is \(s_-\) when \(b>0\), and \(s_+\) when \(b<0\).
+For sufficiently small nonzero \(\mu\), this root is nonzero and
+domain-admissible, and \(g=a+c-\mu>0\). At \(\mu=0\),
+\[
+f(s)=\frac{s^2(b-As)}{1+s}
+=bs^2-(A+b)s^3+O(s^4)=bs^2-as^3+O(s^4).
+\]
+Both draft expansions and the quadratic coefficient \(b\) are correct.
+They assert no full-system normal form.
+
+When \(b=0\), \(Q=As^2-\mu\). For \(\mu>0\),
+\(s_\pm=\pm\sqrt{\mu/A}\), and the negative root is admitted exactly
+when \(0<\mu<A\), equivalently \(c<g<a+c\). It is \(-1\) at
+\(\mu=A\), below \(-1\) at \(\mu>A\). At \(\mu=0\) both labels
+give zero; at \(\mu<0\) there are no real roots. This also passes.
+
+\section{Boundary continuity and issue E01}
+
+The pair in \eqref{A02:roots} is jointly continuous on the relative
+parameter set \(A>0,\Delta\ge0\). Always in the explicit increasing
+order \((s_-,s_+)\), the boundary limits are
+\begin{align*}
+g\to a+c,\ b>0:\quad &(s_-,s_+)\to(0,b/A),\\
+g\to a+c,\ b<0:\quad &(s_-,s_+)\to(b/A,0),\\
+g\to g_f,\ \Delta\downarrow0:\quad &(s_-,s_+)\to(s_f,s_f),\\
+g\to c:\quad &(s_-,s_+)\to(-1,a/A).
+\end{align*}
+The last boundary retains only \(a/A\) as a nonzero domain equilibrium.
+For \(\Delta<0\), there are no real branches to continue.
+
+At a point with \(a=A,\mu>0\), continuity gives
+\((-\sqrt{\mu/A},\sqrt{\mu/A})\). At \(a=A,\mu<0\), the
+discriminant is strictly negative, so a whole neighborhood has no
+real roots. At the simultaneous degeneracy \(b=\mu=0\), every
+approach through \(\Delta\ge0\) to a canonical point with \(A>0\)
+has \(b,\sqrt{\Delta}\to0\), so both labels tend to zero.
+For fixed \(b=0\), this is the one-sided approach \(\mu\downarrow0\).
+Along \(\mu=0\) with \(b\) varying,
+\[
+s_-=\min\{b/A,0\},\qquad s_+=\max\{b/A,0\}.
+\]
+Both are continuous; the identity of the label equal to zero changes
+only where the roots actually coalesce. The exact formulas and table
+never relabel branches.
+
+\textbf{E01 (minor, required wording clarification).}
+P02 \lin{545} introduces the ordered formulas \(s_\pm\).
+At \lin{548--549}, the limits given \emph{respectively} as
+\(0,b/A\) for \(b>0\), and \(b/A,0\) for \(b<0\), use the order
+\((s_-,s_+)\). The antecedent \(s_\pm\) can instead be read in
+its conventional expansion \(s_+,s_-\).
+The word \emph{ordered} suggests the intended increasing order but
+does not explicitly name it. This is a localized ambiguity, not
+a mathematical failure of any formula or intended limit.
+
+For an exact diagnostic, fix \(k=h=1/2,A=1,a=2,c=1\) and
+let \(g\to3\). Then \(b=1,\mu\to0\), and
+\[
+(s_-,s_+)\to(0,1),\qquad (s_+,s_-)\to(1,0).
+\]
+The second pair cannot have the limits assigned by a literal
+plus-then-minus reading of the draft sentence.
+Earlier P02 \lin{187,206--208,372--373} already fixes the correct labels.
+
+\textbf{Minimal proposed correction, not applied to P02:}
+replace the implicit pairing at \lin{548--552} with
+\begin{quote}
+At \(\mu\to0\) with fixed \(b>0\),
+\((s_-,s_+)\to(0,b/A)\); with fixed \(b<0\),
+\((s_-,s_+)\to(b/A,0)\). With \(b=0\) and \(\mu\downarrow0\),
+both labels tend to zero. At \(g\to c\),
+\((s_-,s_+)\to(-1,a/A)\); the first root is excluded from the
+chosen domain at the boundary.
+\end{quote}
+Alternatively, explicitly declaring the increasing pair at the
+paragraph's start resolves the same issue. No root should be renamed.
+Because branch continuity was an explicit audit requirement,
+this clarification is required for an unqualified pass of the exact text.
+
+\section{Domain reversibility of every transformation}
+
+\begin{longtable}{@{}P{0.26\textwidth}P{0.66\textwidth}@{}}
+\toprule
+Operation & Reversibility and limitation\\
+\midrule
+\endhead
+Factoring \(s\) & An identity for every \(s>-1\), including zero.
+The original field is checked at zero first.\\
+Dividing by \(s\) & Only for \(s\ne0\).
+At \(\mu=0\), zero roots of \(Q\) are excluded from nonzero counts.\\
+Multiplying by \(1+s\) & Reversible for \(s>-1\).
+The polynomial root \(-1\) at \(g=c\) is discarded.\\
+Changing to \(Q\) & Multiplication by \(-1\) changes no zeros;
+the nonzero and domain filters remain.\\
+Completing the square & Exact with \(A>0\); the three discriminant
+signs exhaust every possible real-root count.\\
+Taking square roots & Only for \(\Delta\ge0\), retaining both signs
+and counting a repeated value once.\\
+Squaring the domain test & Uses \(\Delta\ge0\) and \(a+A>0\);
+not extended to unrestricted signed parameters.\\
+Solving for \(g\) & Linear rearrangement without division by \(s\).
+The continuation graph must still be filtered by \(s>-1,s\ne0,g>0\).\\
+Taylor expansions & Local formulas with remainders at fixed \(b\ne0\)
+or near \(s=0\); truncations are not claimed to be exact roots.\\
+\bottomrule
+\end{longtable}
+No polynomial-only claim is incorrectly retained as an equilibrium
+of the original rational vector field. The excluded \(-1\), the
+already counted zero, and roots outside \(U\) are consistently separated.
+
+\section{Optional weaker-assumption material}
+
+For finite real homogeneous coefficients, any integer \(n\ge1\),
+and any residue \(q\), substitution and smoothness/local uniqueness
+prove synchronous invariance on the domain. If only \(A=k+h>0\)
+is imposed, with real \(a,c,g\), the polynomial, discriminant, roots,
+and Vieta identities remain valid. On \(s>0\), the factor
+\(-s/(1+s)\) is nonzero. The sign/vertex proof of the four positive
+alternatives uses only \(A>0\); the positive-root extension is valid.
+
+The negative-domain table does not follow under those assumptions.
+The domain comparison needed \(a+A>0\), and the larger-root and
+repeated-root lower bounds used \(a>0\). P02 states these restrictions
+explicitly and makes no classification claim for \(A=0\) or \(A<0\).
+
+The following exact signed tests use \(A=1\):
+\begin{longtable}{@{}P{0.30\textwidth}P{0.62\textwidth}@{}}
+\toprule
+\((a,c,g)\) & Exact consequence\\
+\midrule
+\endhead
+\((-1,-2,-4)\) & \(\mu=1,Q=s^2+2s-1\).
+Roots \(-1\pm\sqrt2\) give one positive root.\\
+\((2,-10,-63/8)\) & \(\mu=-1/8,\Delta=1/2\);
+two distinct positive roots.\\
+\((2,-10,-31/4)\) & \(\mu=-1/4,Q=(s-1/2)^2\);
+one double positive root.\\
+\((2,-10,-15/2)\) & \(\mu=-1/2,\Delta=-1\); no real roots.\\
+\((-1,-2,-3)\) & \(\mu=0,Q=s(s+2)\); no positive root,
+and \(-2\) is outside the domain.\\
+\((1,-2,-1)\) & \(\mu=b=0,Q=s^2\); origin triple for \(f\), double for \(Q\).\\
+\((-3,1,1)\) & \(g=c,Q=(s+3)(s+1)\); both roots excluded.
+Here the larger root is \(-1\).\\
+\((-3,1,2)\) & \(g>c,Q=(s+2)^2\); repeated root outside the domain.\\
+\((-1,1,1)\) & \(a+A=0,Q=(s+1)^2\); repeated root is the excluded \(-1\).\\
+\bottomrule
+\end{longtable}
+Taking \(k=-2,h=3\) in the first example additionally tests that the
+extended scalar conclusions use the sum, not separate signs.
+For each retained root the original five-term residual is exactly
+\eqref{A02:residual}. The last three examples refute only an
+\emph{unclaimed} extension of the canonical negative-root table.
+They do not challenge P02's limited extension.
+\textbf{The separate extended verdict is VERIFIED.}
+
+\section{Adversarial counterexample-search record}
+
+\subsection{Independently chosen canonical representatives}
+In this table \(k=h=1/2,A=1,c=1\); every tuple is strictly canonical.
+Roots are exact, not rounded. A star denotes a double polynomial
+root. The origin is an equilibrium in every row and is counted once.
+\begin{longtable}{@{}P{0.28\textwidth}c c P{0.33\textwidth}@{}}
+\toprule
+Required regime & \(a\)&\(g\)& Roots or obstruction\\
+\midrule
+\endhead
+\(a<A,\mu>0\)&\(1/2\)&\(5/4\)&
+\((-1-\sqrt5)/4,(-1+\sqrt5)/4\), both in domain\\
+\(a=A,\mu>0\)&\(1\)&\(7/4\)& \(-1/2,1/2\)\\
+\(a>A,\mu>0\)&\(2\)&\(9/4\)& \(-1/2,3/2\)\\
+\(a<A,\mu=0\)&\(1/2\)&\(3/2\)& \(-1/2,0\)\\
+\(a=A,\mu=0\)&\(1\)&\(2\)& \(0^*\)\\
+\(a>A,\mu=0\)&\(2\)&\(3\)& \(0,1\)\\
+\(a<A,\mu<0,\Delta>0\)&\(1/2\)&\(99/64\)& \(-3/8,-1/8\)\\
+\(a<A,\mu<0,\Delta=0\)&\(1/2\)&\(25/16\)& \((-1/4)^*\)\\
+\(a<A,\mu<0,\Delta<0\)&\(1/2\)&\(2\)& \(\Delta=-7/4\), no real roots\\
+\(a=A,\mu<0\)&\(1\)&\(9/4\)& \(\Delta=-1\), no real roots\\
+\(a>A,\mu<0,\Delta>0\)&\(2\)&\(51/16\)& \(1/4,3/4\)\\
+\(a>A,\mu<0,\Delta=0\)&\(2\)&\(13/4\)& \((1/2)^*\)\\
+\(a>A,\mu<0,\Delta<0\)&\(2\)&\(7/2\)& \(\Delta=-1\), no real roots\\
+\(g=c\)&\(2\)&\(1\)& \(-1,2\); exclude \(-1\)\\
+\(g<c\)&\(1/2\)&\(1/2\)&
+\((-1-\sqrt{17})/4<-1,\ (-1+\sqrt{17})/4>0\)\\
+\bottomrule
+\end{longtable}
+This includes the entire requested minimum adversarial list, all
+signs of \(b\) for \(\mu>0\) and \(\mu=0\), and all possible
+discriminant subcases for \(\mu<0\).
+Exact comparisons \(2<\sqrt5<3\) and \(4<\sqrt{17}<5\)
+locate the irrational roots without decimal evaluation.
+
+For \(a=2,g=51/16\),
+\[
+Q=(s-1/4)(s-3/4),\qquad a+c=3<51/16.
+\]
+The original scalar residuals, grouping the two quadratic terms and
+the two rational terms only for display, are
+\[
+f(1/4)=\frac12-\frac1{16}-\frac7{16}=0,\qquad
+f(3/4)=\frac32-\frac9{16}-\frac{15}{16}=0.
+\]
+This breaks the archived claim that \(a+c\le g\) precludes positive
+synchrony. The equality witness \(a=2,g=3,s=1\) breaks it at
+equality as well. P02 correctly rejects that archived statement.
+
+For \(a=1/2,g=99/64\),
+\[
+Q=(s+3/8)(s+1/8),
+\]
+and the original residuals are
+\[
+f(-3/8)=-\frac3{16}-\frac9{64}+\frac{21}{64}=0,\qquad
+f(-1/8)=-\frac1{16}-\frac1{64}+\frac5{64}=0.
+\]
+Two admissible nonzero roots therefore need not be positive.
+The negative double-root example refutes an unqualified positive
+interpretation of the repeated-root locus. The \(g=c\) example tests
+the canceled-denominator trap. The case \(a=A,\mu=0\) tests both
+double-counting and the distinction between triple and double zeros.
+No counterexample to a correctly interpreted P02 theorem was found;
+the proofs above, rather than absence of a counterexample, establish
+its mathematical conclusions.
+
+\subsection{Independent reproduction of the finite-check record}
+
+All eleven tuples at P02 \lin{505--515} give the printed
+\(\mu,\Delta,(r,d,N_0,N_+)\). The additional choices at
+\lin{521--524} are valid: for each \(a=1/2,1,2\), choosing
+\(g=1/2,1,1+a/2\) realizes cells I, II, III respectively.
+Choosing \(g=g_f+1\) gives cell VII for all three signs of \(b\).
+
+The set at \lin{529--542} was independently reconstructed with
+\[
+V=\{1/4,1/2,1,2,3,4\},\qquad
+\eta=\min\{a,A,c,1\}/64,
+\]
+using \(V^4\) and the three neighboring values of each
+\(g=c,a+c,g_f\) for every \((a,A,c)\in V^3\).
+Its union has exactly \textbf{2,868} distinct positive tuples.
+Counting each distinct real root once per tuple and evaluating the
+eleven printed examples separately gives exactly \textbf{4,438}
+defined original scalar residuals, all zero, and \textbf{217}
+occurrences of the undefined root \(-1\), all excluded.
+A double root counts as one value. Nine of the eleven examples
+already belong to the grid; these totals count additional evaluations,
+not 2,879 distinct tuples.
+
+The included script evaluates the original five-term rational
+expression using exact arithmetic \(u+v\sqrt{\Delta}\).
+Signs are decided by rational comparisons, with no floating-point
+approximation. It checks discriminant identities, Vieta, domain
+comparisons, and both directions of the positive alternatives.
+Fifteen additional independently chosen representatives above pass.
+These finite checks corroborate the exhaustive analytic audit and
+verify the reproducible check totals. Other historical operation counts
+reported only in the manifest are not treated as proof or claimed to
+have been recovered from unprovided original scripts.
+
+\section{Dependency verification and scope discipline}
+
+P01 v1.1's full-file SHA-256 is
+\sha{0d6950821aa83f3d09e8bfe84dab2b0b5}{020aa6e7881cf6928e984bff1890f1e}
+\Needspace{3\baselineskip}
+Its body hash, from the first P01 section line through EOF, is
+\sha{a640b2bf9a160feed273dc667c6b44a692}{3a1d68d6dd81acd35640cc0e4d5808}
+The full-file hash matches the current manifest; the body hash matches
+both the manifest and P01 header.
+The sole A01 correction is present at current P01 line 436: the
+archived radius is described as the larger real root and as nonnegative.
+A01 correctly retains its historical verdict for its earlier audited
+hash; the current closure record identifies the corrected version.
+
+P02 uses only P01's local smoothness and uniqueness
+(\path{prop:P01-local}, current P01 \lin{80--93}) and canonical
+global nonnegative continuation (\path{thm:P01-global}).
+Its equilibrium algebra does not need the absorbing-box proof.
+P01's local statement already allows finite real coefficients;
+standard uniqueness for the time-reversed local equation also justifies
+the two-sided local invariance assertion.
+
+No premise from P03 or later mathematics enters any proof.
+Including later placeholders in the compendium is not a mathematical
+dependency. The frozen package's S2 role is respected: P02 classifies
+synchronous equilibria only. It asserts no classification of all
+nonsynchronous equilibria, stability, bistability, transcritical
+bifurcation, saddle-node/fold bifurcation, Hopf bifurcation,
+or Fourier spectral conclusion.
+
+The multiplicity adjectives are read in the scalar sense explicitly
+fixed at P02 \lin{202--205,255--264}. A simple scalar zero does
+not establish full-vector Jacobian nonsingularity or a simple
+eigenvalue. The branch loci and scalar quadratic coefficient are
+algebraic inputs for possible later work, not completed bifurcation
+results. This contextual qualification is sufficient; no additional
+P02 correction is required.
+
+\section{Line-by-line findings and issue list}
+
+The ledger covers every substantive P02 paragraph. Blank lines,
+environment delimiters, and labels within each range carry no
+additional claim. E01 is the sole required correction.
+\begin{longtable}{@{}P{0.14\textwidth}P{0.16\textwidth}P{0.62\textwidth}@{}}
+\toprule
+P02 lines & Finding & Independent reason or action\\
+\midrule
+\endhead
+1--25 & \pass & Version, assumptions, P01 status and scope agree with current metadata.\\
+30--48 & \pass & Invariance and inherited domain; no gcd or distinct-offset condition;
+finite-real-coefficient extension valid.\\
+51--75 & \pass & Component substitution, uniqueness and continuation prove
+invariance on the full maximal interval.\\
+79--95 & \pass & \(b>-A\), scalar identities, canonical global nonnegative
+inference, and unchanged domain at \(g=c\).\\
+99--123 & \pass & Origin, exact polynomial, discriminant identities and both root formulas.\\
+125--150 & \pass & Reversible operations, completed square, singular root test,
+and no additional zero equilibrium.\\
+155--174 & \pass & Definitions and distinct-value counting; origin included once.\\
+184--200 & \pass & All eleven cells and counts; no missing \(b=0\) case.\\
+202--209 & \pass & Scalar multiplicities and correct zero-branch labels;
+negative roots excluded only from nonnegative states.\\
+211--234 & \pass & Vieta and domain test with both sign conditions for squaring.\\
+236--253 & \pass & Exhaustive \(\mu\) trichotomy; real roots for \(\mu<0\)
+admitted since \(g>a+c>c\).\\
+255--265 & \pass & Multiplicity transfer and origin orders, algebraic continuation,
+no stability inference.\\
+269--294 & \pass & Four mutually exclusive positive alternatives and every converse;
+maximum two and exact-one distinction.\\
+296--309 & \pass & Independent monotonicity/vertex argument is valid.\\
+313--347 & \pass & \(g_f,s_f\), loci and their intersection;
+repeated-root sign/domain and unambiguous triple/double distinction.\\
+349--366 & \pass & Reversible graph in \(g\), correct filters and degeneracy.\\
+368--385 & \pass & Near-zero root label and both Taylor coefficients correct;
+cubic coefficient is \(-a\).\\
+387--398 & \pass & Square-root branches and singular threshold; bifurcation
+work explicitly reserved.\\
+402--438 & \pass & Original-parameter iff classification and all equalities;
+topology independence.\\
+440--453 & \pass & Positive extension requires only \(A>0\); negative-domain
+classification is correctly not exported.\\
+458--491 & \pass & Original scalar residuals and specializations,
+discriminant expansion and Vieta identities.\\
+493--518 & \pass & All eleven rational examples, discriminants and counts checked.\\
+519--527 & \pass & Equality/sign representative choices valid;
+finite checks do not promote status.\\
+529--542 & \pass & Independently reproduced 2,868 tuples, 4,438 defined
+residuals and 217 excluded singular-root occurrences.\\
+544--547 & \pass & Continuity on \(A>0,\Delta\ge0\) and coalescence correct.\\
+545,548--552 & \textbf{E01: minor} & Explicitly name \((s_-,s_+)\)
+when assigning the listed limits. Intended limits and formulas are correct.\\
+550--555 & \pass & Both-zero and \(b\to0\) limits correct;
+domain counts may change at a boundary.\\
+558--573 & \pass & Completeness and adversarial distinctions correctly retain
+singular, zero, negative and repeated cases.\\
+575--598 & \pass & Checklist is reference material, not task authority;
+all summarized mathematical points checked. Internal checks do not replace audit.\\
+\bottomrule
+\end{longtable}
+
+\clearpage
+\section{Downstream consequences and revision closure}
+
+The underlying canonical results are established by this independent
+reconstruction with fixed labels \eqref{A02:roots}. The exact P02 v1.0
+text nevertheless receives \textbf{MINOR REVISION}, rather than an
+unqualified VERIFIED label, because E01 leaves a branch-order ambiguity
+in one sentence. No project status metadata was changed.
+
+Closure requires the local E01 clarification in a separately authorized
+P02 revision, recording its new hash, and checking that the branch
+labels and other mathematical content are preserved. No change to
+the canonical model, P01, displayed root formulas, classification
+tables, proofs, or optional extension is required. A02 remains
+tied to the exact v1.0 hash recorded above.
+
+\textbf{P03 is cleared to begin after E01 is corrected and closure is
+recorded.} No other P02 mathematical blocker remains.
+P03 has not been begun here. Later full-system linearization must
+still be derived independently with coincident-offset terms retained.
+Two positive roots do not establish bistability; the algebraic loci
+do not establish bifurcation type; scalar simplicity does not certify
+full-system nonsingularity. No P03--P18 claim is promoted by A02.
+
+The audit-only package contains this standalone source, a PDF reading
+copy, exact input hashes, a reproducibility script and its result,
+and a short provenance/closure note. It contains no replacement
+P02, canonical source, registry, or compendium.
+
+\end{document}

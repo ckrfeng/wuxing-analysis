@@ -1,0 +1,177 @@
+{
+  "selection": "Manifest lines 693-732 CURRENT P09 v1.0 DRAFT",
+  "archive": "/Users/carterfeng/.codex/.chatgpt-projects/g-p-6aaf9d5c28908191b530814438a73a72/cyclic_network_project_P09_draft.zip",
+  "archive_sha256": "61df24eb644771cbb84027447c4a21ba1c1d0e1d44dc8c35cf34a0a0c755c8de",
+  "member_count": 143,
+  "all_members_match": true,
+  "baseline_only_changed_members": [
+    "cyclic_network_project/claim_registry.md",
+    "cyclic_network_project/project_manifest.md",
+    "cyclic_network_project/proofs/P09_transcritical_bifurcation.tex",
+    "cyclic_network_project/proofs_compendium.pdf",
+    "cyclic_network_project/proofs_compendium.tex"
+  ],
+  "p09": {
+    "sha256": "b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680",
+    "bytes": 24155,
+    "lines": 539,
+    "body_sha256": "a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393",
+    "body_start_line": 17
+  },
+  "external_proof_references": [
+    "eq:P02-scalar",
+    "eq:P03-origin-jacobian",
+    "eq:P04-synchronous-derivative",
+    "prop:P01-local",
+    "prop:P02-invariance",
+    "prop:P02-loci"
+  ],
+  "inventory": {
+    "project_manifest.md": {
+      "sha256": "0f71a9a23be0447292eacfb0e39d992aa522c1e3f5281971306baf50dee13324",
+      "bytes": 136180,
+      "lines": 732
+    },
+    "claim_registry.md": {
+      "sha256": "c8bd3cb6cfe8f7d3e2b003f2eb4c000b5dcf2550c14a5d89e35b6ddb43137bba",
+      "bytes": 108809,
+      "lines": 542
+    },
+    "frozen_theorem_package.md": {
+      "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63",
+      "bytes": 9729,
+      "lines": 69
+    },
+    "final_novelty_verdict.md": {
+      "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea",
+      "bytes": 6511,
+      "lines": 37
+    },
+    "novelty_decisions.md": {
+      "sha256": "8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e",
+      "bytes": 19241,
+      "lines": 124
+    },
+    "02_theorem_dependency_map.tex": {
+      "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac",
+      "bytes": 9372,
+      "lines": 145
+    },
+    "proofs_compendium.tex": {
+      "sha256": "6231048489668093f98eea5a40699c992cb32f801df2e03856de38678ec12138",
+      "bytes": 9717,
+      "lines": 186
+    },
+    "shared_macros.tex": {
+      "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad",
+      "bytes": 1281,
+      "lines": 35
+    },
+    "00_canonical_model.tex": {
+      "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4",
+      "bytes": 3712,
+      "lines": 74
+    },
+    "01_notation_and_assumptions.tex": {
+      "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+      "bytes": 5152,
+      "lines": 103
+    },
+    "open_decisions.md": {
+      "sha256": "506c634c9958d13b4d6ef4080ebe214af5fd0c77d5dc8fe6f1b91d2750ffab59",
+      "bytes": 17320,
+      "lines": 101
+    },
+    "proofs/P01_wellposedness_and_absorbing_box.tex": {
+      "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+      "bytes": 22570,
+      "lines": 520,
+      "body_sha256": "a640b2bf9a160feed273dc667c6b44a6923a1d68d6dd81acd35640cc0e4d5808",
+      "body_start_line": 17
+    },
+    "proofs/P02_synchronous_subspace_and_equilibria.tex": {
+      "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+      "bytes": 26905,
+      "lines": 610,
+      "body_sha256": "8a061ba81c7ffd2d05b188b9fca4ec1b94bc132147f7f664c8523f0a5f32560c",
+      "body_start_line": 24
+    },
+    "proofs/P03_origin_and_linearization.tex": {
+      "sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e",
+      "bytes": 19857,
+      "lines": 447,
+      "body_sha256": "07d76c8ce0b5232827e9f2c74245188b55b0ce0d1732b3cb2e528d69e8d6b50a",
+      "body_start_line": 26
+    },
+    "proofs/P04_arbitrary_nq_fourier_spectrum.tex": {
+      "sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58",
+      "bytes": 26980,
+      "lines": 590,
+      "body_sha256": "3e3d58230c87af3b5f07069d61065362dc081d172ad3b236057fefda25fa5653",
+      "body_start_line": 31
+    },
+    "proofs/P05_q2_mode_selection.tex": {
+      "sha256": "054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd",
+      "bytes": 28334,
+      "lines": 613,
+      "body_sha256": "7e1fd7765ed81e9c5f24ebe07e450e3fd76caf6b16264aac3c3a21edacd8bb97",
+      "body_start_line": 34
+    },
+    "proofs/P07_five_node_specialization.tex": {
+      "sha256": "1258641da2b1b729523da6262cf75345f5ef1eabf7a9f693a8b13dd34deec393",
+      "bytes": 25691,
+      "lines": 580,
+      "body_sha256": "66a5b8f078cb0fc30f4d7c72c22a26b965fd8ded491f53450d604fe7a21ccdea",
+      "body_start_line": 42
+    },
+    "proofs/P08_matched_bilinear_analysis.tex": {
+      "sha256": "81d273f0bad1714d2470e9fc826f0819e9dde367a9c42633705a275b404e5454",
+      "bytes": 40836,
+      "lines": 871,
+      "body_sha256": "67909444bd10dde10f2784db560e7ffb4165f34b63c0a72a356a35d38ba4cc85",
+      "body_start_line": 38
+    },
+    "audits/A01_wellposedness_and_absorbing_box.tex": {
+      "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098",
+      "bytes": 48622,
+      "lines": 974
+    },
+    "audits/A02_synchronous_subspace_and_equilibria.tex": {
+      "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac",
+      "bytes": 37895,
+      "lines": 847
+    },
+    "audits/A03_origin_and_linearization.tex": {
+      "sha256": "e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1",
+      "bytes": 37700,
+      "lines": 692
+    },
+    "audits/A04_arbitrary_nq_fourier_spectrum.tex": {
+      "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869",
+      "bytes": 47595,
+      "lines": 832
+    },
+    "audits/A05_q2_mode_selection.tex": {
+      "sha256": "0f7e9836b91009a201185a4acbbb99715f3c65df715e405962b7d6852ff27031",
+      "bytes": 49526,
+      "lines": 996
+    },
+    "audits/A07_five_node_specialization.tex": {
+      "sha256": "b3923d6520cc249c508b80dd06a2b515f054e1510e255224a864e986cd38ce4b",
+      "bytes": 38488,
+      "lines": 724
+    },
+    "audits/A08_matched_bilinear_analysis.tex": {
+      "sha256": "87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935",
+      "bytes": 57343,
+      "lines": 1161
+    },
+    "proofs/P09_transcritical_bifurcation.tex": {
+      "sha256": "b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680",
+      "bytes": 24155,
+      "lines": 539,
+      "body_sha256": "a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393",
+      "body_start_line": 17
+    }
+  }
+}

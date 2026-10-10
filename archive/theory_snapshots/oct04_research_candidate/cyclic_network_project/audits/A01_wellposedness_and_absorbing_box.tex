@@ -1,0 +1,974 @@
+% Standalone audit. Compile this file directly with pdflatex (two passes).
+% No existing project file, proof, status, or compendium is changed by A01.
+% CORE VERDICT: VERIFIED
+% EXTENDED VERDICT: MINOR REVISION
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{array,booktabs,longtable,enumitem}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\Orth}{\RR_{\geq0}^{n}}
+\newcommand{\Dom}{(-1,\infty)^n}
+\newcommand{\dist}{\operatorname{dist}_{\infty}}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\lin}[1]{\textbf{L#1}}
+\newcommand{\pass}{\textbf{PASS}}
+\newcommand{\minor}{\textbf{MINOR}}
+\title{A01: Independent audit of P01\\Well-posedness and the absorbing box}
+\author{Independent mathematical reconstruction and adversarial review}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+
+\section{Verdicts, exact version, and scope}
+
+\textbf{CORE VERDICT: VERIFIED.}
+All nine requested canonical claims hold for the demand-modulated equation
+with $n\geq5$, $1\leq q\leq n-1$, and $a,k,c,g,h>0$. In particular,
+the smaller radius in P01 is correct, and the closed cube at that radius
+is entered in finite time with one bound for every finite initial state
+in the entire unbounded nonnegative orthant.
+
+\textbf{EXTENDED VERDICT: MINOR REVISION.}
+The weaker-parameter existence, positivity, comparison, zero-radius,
+$k=0$, and exact absorption-classification results all pass. The sole
+required correction is a root-description error in \lin{428}: for
+$c=0$ and $a>0$, the archived quadratic has two nonnegative roots, so
+$B$ is not unambiguously described as ``the nonnegative root.'' Replace
+that phrase with ``the larger real root, which is nonnegative.'' The
+displayed formula for $B$ and every conclusion using it are correct.
+This is a minor defect of the exact extended text, not a failure of its
+absorption theorem. No mathematical counterexample to a stated theorem
+was found, and the verdicts rest on proofs below, not that observation.
+
+\textbf{Audited source:}
+\path{proofs/P01_wellposedness_and_absorbing_box.tex}, exactly 512 lines
+in the current \path{cyclic_network_project} directory. Every reference
+of the form L$x$--$y$ below refers to this source, including blank and
+comment lines. The source SHA-256 is
+\begin{quote}\small\ttfamily
+ba881a703b7c1dedefce4ccb920f7b8243\allowbreak
+418cccd9219eb8285fbb707911941b
+\end{quote}
+The source is byte-identical to its member in
+\path{cyclic_network_project_P01_draft.zip}. The attached and local
+\path{proofs_compendium.pdf} are byte-identical, with SHA-256
+\begin{quote}\small\ttfamily
+d696801db40fddc12aae7c2b8de43361ee0\allowbreak
+991c6de5d186f6d1eada54e8faf61
+\end{quote}
+P01 occupies PDF pages 11--17. Its exact absorption result is
+\emph{Theorem 5.6}; the later subsection also numbered 5.6 is the
+checks subsection and must not be confused with that theorem.
+
+The mathematical starting point is the canonical differential equation,
+not an archived derivation or an internal validation report. The source
+was checked by independently reconstructing each argument. Only ordinary
+local ODE existence, uniqueness, continuous dependence, and continuation
+for a locally Lipschitz vector field are imported. Finite-maximum,
+comparison, positivity, and absorption arguments are supplied below.
+No literature survey, novelty assessment, proof of P02, or analysis of
+any later module is part of this audit. Dependency comments are conditional
+consequences only. Existing files and their DRAFT/TODO status are unchanged.
+
+\section{Equation and quantified assumptions}
+The only vector field audited is
+\begin{equation}\label{A01:field}
+ F_i(x)=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+       -\frac{g x_i}{1+x_{i+q}}-h x_i x_{i-q},
+ \qquad i\in\ZZ/n\ZZ.
+\end{equation}
+All occurrences remain present when offsets coincide. The open local
+domain is $\Dom$; forward boundedness claims concern $\Orth$ only.
+For the extended results, write
+\begin{equation}\label{A01:weak}
+ n\in\ZZ_{\geq1},\qquad q\in\ZZ/n\ZZ,\qquad
+ a\in\RR,\quad k>0,\quad c,g,h\geq0.
+\end{equation}
+Parameters and dimension are fixed and finite. Uniformity in initial
+states does not mean uniformity in these parameters or in $n$.
+Set $X=\max_i x_i$, $K_r=[0,r]^n$, $b(s)=a-ks+c/(1+s)$ and
+$H(s)=s b(s)$. For nonnegative states,
+\begin{equation}\label{A01:distance}
+ \dist(x,K_r)=\pos{X-r}.
+\end{equation}
+Indeed, clipping each coordinate at $r$ attains this distance, and a
+coordinate attaining $X$ gives the matching lower bound.
+
+\section{Local solutions, faces, and positivity}
+\subsection{Finite maxima and local well-posedness}
+For a finite family of $C^1$ functions $y_j$ and $v=\max_j y_j$, all
+inactive indices at a fixed time have a positive gap. They remain
+inactive for a sufficiently short right interval. For the active set
+$I(t)$, the finitely many expansions
+$y_j(t+\varepsilon)=v(t)+\varepsilon\dot y_j(t)+o(\varepsilon)$
+have a common $o(\varepsilon)$ error bound. Therefore
+\begin{equation}\label{A01:max}
+ \frac{d^+v}{dt}=D^+v(t)=\max_{j\in I(t)}\dot y_j(t).
+\end{equation}
+The right derivative exists; a two-sided derivative need not. Bounded
+derivatives on a compact time interval make $v$ Lipschitz there.
+This proves P01's lemma at unique maxima, ties, and switching times.
+It makes no assertion that a single maximizing index can be continued
+differentiably through a switch.
+
+Every denominator in \eqref{A01:field} is positive on $\Dom$, including
+when several denominators or coordinates coincide. Thus $F$ is smooth
+there for arbitrary finite real coefficients. The standard local ODE
+theorem gives a unique maximal classical solution and continuous
+dependence on initial data on compact common existence intervals.
+Smoothness on this open domain alone is not a global-existence assertion.
+
+\subsection{Nonnegative invariance, including tangent faces}
+If $x\in\Orth$ and $x_i=0$, then $F_i(x)=c x_{i-1}\geq0$ for $c\geq0$.
+This sign alone needs a barrier argument at tangent faces. On a compact
+interval inside the maximal existence interval, let $x^+$ be the
+coordinatewise positive part and $V=\max(0,-x_0,\ldots,-x_{n-1})$.
+The curves and their connecting segments lie in a compact rectangle
+inside $\Dom$, where $F$ has a maximum-norm Lipschitz constant $L$.
+If $V>0$ and $-x_i=V$, then $x_i^+=0$ and
+\[
+ -F_i(x)\leq |F_i(x)-F_i(x^+)|\leq LV.
+\]
+If $V=0$, active negative-coordinate derivatives are nonpositive and
+the constant zero has derivative zero. Equation \eqref{A01:max} gives
+$D^+V\leq LV$ in both cases. Absolute continuity and $V(0)=0$ give
+$V\equiv0$. This does not assume global existence and does not impose
+signs on $a,k,g,h$. The argument is valid on every compact subinterval
+of the maximal interval.
+
+\subsection{Integrating factors and arbitrarily early propagation}
+Along the now nonnegative solution, define
+\[
+ B_i(t)=a-kx_i(t)-\frac{g}{1+x_{i+q}(t)}-h x_{i-q}(t),\qquad
+ D_i(t)=\frac{c x_{i-1}(t)}{1+x_i(t)}.
+\]
+Then $\dot x_i=B_i(t)x_i+D_i(t)$ exactly, $D_i\geq0$, and the coefficients
+are continuous on each compact existence interval. Their dependence on
+the solution does not invalidate variation of constants:
+\begin{equation}\label{A01:positive}
+ x_i(t)=x_i(0)e^{\int_0^t B_i(v)\,dv}
+       +\int_0^t e^{\int_s^t B_i(v)\,dv}D_i(s)\,ds.
+\end{equation}
+An initially positive coordinate stays positive. If $c>0$ and coordinate
+$j$ is positive for every $s>0$, then $D_{j+1}(s)>0$ on every interval
+$(0,t)$, so $x_{j+1}(t)>0$ for every $t>0$. Induct on the number of
+step-one edges, proving a statement for \emph{all} positive times at
+each induction step. This incurs no positive waiting time per edge.
+At most $n-1$ steps reach every node. For $n=1$, no propagation is
+needed; a nonzero nonnegative state is already positive. Neither $q$
+nor $\gcd(n,q)$ appears in the propagation path.
+
+For $c=0$, the integral vanishes and every zero coordinate remains zero.
+Also $F(0)=0$, so zero initial data stay zero. These conclusions preclude
+finite-time arrival at the origin from any nonzero nonnegative state.
+They do not imply a positive lower bound as $t\to\infty$.
+
+\section{Scalar comparison, radius, and quantitative attraction}
+\subsection{The sign of each loss and the root algebra}
+At every active maximum $x_i=X\geq0$,
+\[
+ \frac{c x_{i-1}}{1+X}\leq\frac{cX}{1+X},\qquad
+ -\frac{gX}{1+x_{i+q}}\leq-\frac{gX}{1+X},\qquad
+ -hXx_{i-q}\leq0.
+\]
+In the middle inequality, $1+x_{i+q}\leq1+X$ first makes the reciprocal
+larger; multiplication by $-gX\leq0$ reverses the order. Thus
+\begin{equation}\label{A01:dini}
+ D^+X=\max_{i:x_i=X}F_i(x)
+       \leq H(X)-\frac{gX}{1+X}\leq H(X).
+\end{equation}
+All active indices satisfy the same bound. No independent choice of
+neighbors is used, so all coincident-offset cases are included.
+
+Since $b'(s)=-k-c/(1+s)^2<0$, $b(0)=a+c$, and $b(s)\to-\infty$,
+there is one positive root precisely when $a+c>0$. Multiplying its
+equation by $1+R$ gives
+\[
+ (a-kR)(1+R)+c=0,
+ \qquad kR^2+(k-a)R-(a+c)=0.
+\]
+The discriminant is
+\[
+ (k-a)^2+4k(a+c)=(a+k)^2+4kc.
+\]
+For $a+c>0$, the constant coefficient is negative, so the positive
+root is the plus-sign root. For $a+c\leq0$, $k-a>0$ and
+$(a+k)^2+4kc\leq(k-a)^2$, making that raw root nonpositive. Hence
+\begin{equation}\label{A01:R}
+ R=\max\left\{0,\frac{a-k+\sqrt{(a+k)^2+4kc}}{2k}\right\}.
+\end{equation}
+For $R>0$, $b$ is positive on $[0,R)$ and negative on $(R,\infty)$.
+An exact identity, stronger than the stated inequality, is
+\begin{equation}\label{A01:factor}
+ H(s)=-s(s-R)\left[k+\frac{c}{(1+s)(1+R)}\right]
+       \leq-ks(s-R)\quad(s\geq R).
+\end{equation}
+For $R=0$, $b(s)\leq a+c-ks\leq-ks$, so $H(s)\leq-ks^2$.
+The selected zero radius need not satisfy the quadratic when $a+c<0$;
+it is nevertheless a zero of $H$ because of the factor $s$.
+
+\subsection{Scalar domination without a cooperativity assumption}
+Let $u'=H(u)$, $u(0)=X(0)$. The scalar interval
+$[0,\max\{X(0),R\}]$ is invariant by local uniqueness and the endpoint
+signs. Consequently this scalar solution is global. On any compact
+interval before the vector solution's maximal time, put
+$W=(X-u)_+=\max(0,x_i-u:i\in\ZZ/n\ZZ)$. If $W>0$,
+\[
+ D^+W\leq H(X)-H(u)\leq L(X-u)=LW
+\]
+for a scalar Lipschitz constant $L$. At $W=0$, an active coordinate
+requires $x_i=X=u$ and gives $D^+(x_i-u)\leq0$; if there is none, the
+constant zero is the only active function. Thus $D^+W\leq LW$
+everywhere. Absolute continuity gives $W=0$. In particular,
+\begin{equation}\label{A01:bound}
+ 0\leq X(t)\leq u(t)\leq\max\{X(0),R\}.
+\end{equation}
+No monotonicity of $H$ and no order-preserving property of the full
+network are needed. The inhibitory couplings therefore cause no gap
+in this scalar comparison.
+
+If the vector maximal time were finite, \eqref{A01:bound} would confine
+the solution to a compact cube in $\Dom$, separated from every singular
+hyperplane by at least one. The vector field is bounded on a compact
+neighborhood of that cube, so $x$ has a limit there at the maximal time.
+Local continuation at that limit is a contradiction. This proves global
+existence and also proves positive invariance of every $K_r$, $r\geq R$.
+
+\subsection{Rates, uniformity over unbounded data, and outer cubes}
+For $R>0$, \eqref{A01:factor} yields
+\begin{equation}\label{A01:rate}
+ \dist(x(t),K_R)\leq e^{-kRt}\pos{X(0)-R}.
+\end{equation}
+This estimate alone gives uniform attraction only on bounded initial
+sets. The stronger assertion requires a second calculation. If $u>R$,
+put $w=1-R/u$. Then
+\[
+ w'=\frac{Ru'}{u^2}\leq-kR w,
+ \qquad 0<w(0)<1.
+\]
+Thus, for $u(0)>R$,
+\[
+ u(t)\leq\frac{R}{1-(1-R/u(0))e^{-kRt}}
+          \leq\frac{R}{1-e^{-kRt}}\quad(t>0).
+\]
+The last bound also holds for initial data at or below $R$. Together
+with \eqref{A01:distance}, it proves the exact strong quantifier
+\begin{equation}\label{A01:uniform}
+ \sup_{x^0\in\Orth}\dist(x(t;x^0),K_R)
+ \leq\frac{R}{e^{kRt}-1}\longrightarrow0\quad(t\to\infty).
+\end{equation}
+For $R=0$, integration of $(1/u)'\geq k$ wherever $u>0$ gives
+\begin{equation}\label{A01:zero}
+ X(t)\leq\frac{X(0)}{1+kX(0)t},\qquad
+ \sup_{x^0\in\Orth}X(t;x^0)\leq\frac1{kt}\quad(t>0).
+\end{equation}
+Zero initial data are handled separately by uniqueness. These suprema
+are over finite vectors of arbitrary size, not an initial state at
+infinity. Their bounds need not be finite at $t=0$.
+
+Solving $R/(1-e^{-kRt})\leq r$ for $r>R$ gives
+\[
+ T_r=\frac1{kR}\log\frac{r}{r-R}\quad(R>0),\qquad
+ T_r=\frac1{kr}\quad(R=0).
+\]
+Every solution is in $K_r$ at this common time, and positive invariance
+keeps it there. All constants and inequality directions in the scalar
+comparison portion of P01 pass.
+
+\section{Exact finite-time absorption: both directions}
+Assume \eqref{A01:weak} and first take $R>0$. Set
+\[
+ t_0=\frac{\log2}{kR},\qquad M=2R.
+\]
+The preceding initial-state-independent bound puts every trajectory
+in the invariant cube $K_M$ by $t_0$.
+
+\subsection{The direct strict-loss cases}
+If $g>0$, then at all times when $X\geq R$,
+\[
+ D^+X\leq-\frac{gX}{1+X}
+          \leq-\frac{gR}{1+R}=-\delta,
+ \qquad\delta=\frac{gR}{1+R}>0.
+\]
+Integrate the almost-everywhere derivative inequality until first entry.
+For $X(0)\leq M_0$, entry occurs by
+\[
+ \frac{\pos{M_0-R}}{\delta}
+   =\frac{\pos{M_0-R}(1+R)}{gR}.
+\]
+Applying this after $t_0$ with $M_0=2R$ proves
+\begin{equation}\label{A01:Tstar}
+ T_*=\frac{\log2}{kR}+\frac{1+R}{g}.
+\end{equation}
+If entry had not occurred at the endpoint of either time bound,
+integration and continuity would give $X\leq R$ there, a contradiction.
+Thus ``by'' includes equality of times. This supplies the canonical
+answer, without using $h>0$ or positivity propagation.
+
+If $g=0$, $h>0$, and $q\equiv0\pmod n$, then $x_{i-q}=X$ at a maximum.
+Consequently $D^+X\leq H(X)-hX^2\leq-hR^2$ outside $K_R$.
+After $t_0$, at most another $R/(hR^2)=1/(hR)$ is required.
+
+\subsection{The propagated strict-loss case and every constant}
+Suppose $g=0$, $h>0$, $c>0$; retaining $g$ in the next constant is
+harmless and also makes the lower inequality valid for $g\geq0$.
+Choose any one fixed $\tau>0$ and define
+\begin{equation}\label{A01:constants}
+ \beta=(-a)_++(k+h)M+g,\qquad
+ \eta=\frac{c}{1+M}>0,\qquad M=2R.
+\end{equation}
+On $K_M$, each negative coefficient is bounded in the required lower
+direction: $a\geq-(-a)_+$, $-kx_i\geq-kM$,
+$-g/(1+x_{i+q})\geq-g$, and $-hx_{i-q}\geq-hM$. Also
+$c/(1+x_i)\geq c/(1+M)$. Multiplying these estimates by nonnegative
+coordinates proves
+\begin{equation}\label{A01:lower}
+ \dot x_i\geq-\beta x_i+\eta x_{i-1}.
+\end{equation}
+No omitted dependence on $q$ is needed in $\beta$ or $\eta$.
+
+For $s\geq t_0$, set $z_i(r)=e^{\beta(r-s)}x_i(r)$. Then
+$z_i'\geq\eta z_{i-1}$ and
+$z_i(r)\geq x_i(s)+\eta\int_s^r z_{i-1}(v)\,dv$.
+For any integer $m\geq0$, iterative substitution gives
+\[
+ z_i(s+\tau)\geq
+ \sum_{j=0}^{m}\frac{(\eta\tau)^j}{j!}x_{i-j}(s)
+       +\mathcal E_{m+1},\qquad \mathcal E_{m+1}\geq0.
+\]
+Here $\mathcal E_{m+1}$ is the $(m+1)$-fold time-ordered integral of
+$z_{i-m-1}$ with coefficient $\eta^{m+1}$. Its sign is nonnegative
+even after the indices wrap around the cycle. Taking $m=n-1$ proves
+\begin{equation}\label{A01:series}
+ x_i(s+\tau)\geq e^{-\beta\tau}
+    \sum_{j=0}^{n-1}\frac{(\eta\tau)^j}{j!}x_{i-j}(s).
+\end{equation}
+The highest retained power is $n-1$, not $n$; the unused remainder
+has $n$ integrals. This resolves any ambiguity in ``$n$-fold
+propagation.'' For $n=1$, the retained sum is just $x_i(s)$.
+
+If a trajectory has not entered $K_R$ by $t\geq t_0+\tau$, then
+$X(t-\tau)>R$. For each target $i$, the list $i-j$, $0\leq j<n$,
+contains an index achieving that earlier maximum. One term of
+\eqref{A01:series} therefore gives
+\begin{equation}\label{A01:d}
+ x_i(t)\geq d:=R e^{-\beta\tau}
+       \min_{0\leq j<n}\frac{(\eta\tau)^j}{j!}>0.
+\end{equation}
+This is uniform in the initial state, conditional on nonentry. It is
+\emph{not} an unconditional lower bound on all of $\Orth$: the zero
+solution already disproves such a claim. The proof needs only this
+conditional floor, at each time up to first entry. Since $X\geq R$
+and every $x_{i-q}\geq d$ at those times,
+\[
+ D^+X\leq H(X)-hXx_{i-q}\leq-hRd.
+\]
+At $t_0+\tau$ the maximum is at most $2R$; thus the remaining excess
+is at most $R$ and the additional time is at most
+$R/(hRd)=1/(hd)$. The common bound is exactly
+\begin{equation}\label{A01:Th}
+ T_h=t_0+\tau+\frac1{hd}.
+\end{equation}
+All of $\beta,\eta,d,\tau$ and this final cancellation are correct.
+Every fixed $\tau>0$ works. For example, $\tau=1/\beta$ is permissible
+because $\beta>0$ when $R>0$ and $k>0$, but no optimization is needed.
+
+\subsection{Necessity and logical equivalence}
+Under nonnegative $c,g,h$, failure of
+\begin{equation}\label{A01:criterion}
+ g>0\quad\text{or}\quad
+ [h>0\text{ and }(c>0\text{ or }q\equiv0\pmod n)]
+\end{equation}
+has exactly two cases:
+\begin{enumerate}
+\item $g=h=0$. Direct substitution of $x_i=s$ in the original equation
+gives $s'=H(s)$. For $s(0)>R$, the solution cannot meet the equilibrium
+$R$ in finite time by local uniqueness, also applied backward near a
+putative meeting. It stays above $R$ forever at finite times.
+\item $g=0$, $h>0$, $c=0$, and $q\not\equiv0\pmod n$.
+Then $R=a/k>0$. Give one coordinate $j$ initial value $s_0>R$ and
+all others value zero. Zero coordinates stay zero, including $j-q$.
+The surviving coordinate obeys $s'=as-ks^2$ and
+\[
+ s(t)=\frac{R}{1-(1-R/s_0)e^{-at}}>R\quad(t<\infty).
+\]
+This is a direct counterexample to absorption, for every such $n,q$.
+\end{enumerate}
+Thus failure of \eqref{A01:criterion} prevents even pointwise absorption
+of all trajectories. Sufficiency above gives one time for the entire
+orthant. That implies absorption of bounded subsets, which implies
+pointwise absorption by considering singleton sets. These implications,
+combined with the two counterexamples, prove the equivalence of all four
+items in P01's Theorem 5.6. Pointwise absorption is not being upgraded
+to uniform absorption by a general compactness principle.
+
+When $R=0$, \eqref{A01:positive} prevents any nonzero solution from
+entering $\{0\}$ at a finite time. The attraction estimates still hold.
+Even if \eqref{A01:criterion} is true, it cannot override the explicit
+$R>0$ hypothesis in the classification.
+
+\section{Weaker parameters, degeneracies, and signed counterexamples}
+
+\subsection{Small dimensions and coincident offsets}
+For $n=1$, every residue is zero and the original equation is exactly
+\[
+ \dot x=x\left[a-kx+\frac{c-g}{1+x}-hx\right].
+\]
+The absorption criterion for $R>0$ reduces to $g>0$ or $h>0$.
+If either is positive, the scalar field at $R$ has a strict negative
+gap. If both vanish, it is exactly $H$ and a solution above $R$ never
+meets $R$ in finite time. Thus the classification remains correct;
+the sparse nonzero-offset counterexample is simply inapplicable here.
+
+For $n=2$, $q=1$, predecessor, successor, and both step-$q$ neighbors
+coincide. Every original term is still present and all three inequalities
+leading to \eqref{A01:dini} remain true simultaneously. For even $n$
+and $q=n/2$, the two inhibitory offsets coincide. Again their contributions
+add rather than disappear. When $q=1$ or $q=n-1$, one inhibitory neighbor
+coincides with the predecessor. No estimate assumed distinct coordinates.
+For $n=6$, $q=2$, the step-$q$ graph is disconnected, but the positive
+input still uses the connected step-one cycle. The same applies to
+every noncoprime pair $(n,q)$.
+
+\subsection{Zero and small coefficients}
+If $c=0$, no new positive coordinate can be created. For $R>0$,
+$R=a/k$, and absorption occurs exactly when $g>0$ or when both $h>0$
+and $q\equiv0$. If $g=0$ but $h,c>0$, the propagation proof gives
+absorption for every residue. If $h=0$, it occurs exactly when $g>0$.
+If $g=h=0$, a synchronous scalar trajectory supplies nonabsorption,
+even for $c>0$ and strictly positive data.
+
+At $a+c=0$, direct substitution gives
+\[
+ H(s)=-ks^2-\frac{cs^2}{1+s}\leq-ks^2,
+\]
+so there is no missing equality case. For $a+c<0$ the extra linear
+decay is favorable. In both cases $R=0$ and there is no finite-time
+entry from nonzero data. All expressions containing $1/R$ in P01 are
+explicitly restricted to $R>0$.
+
+For arbitrarily small positive $R$, all fixed-parameter proofs still
+hold. One exact test family is to prescribe $R=\varepsilon>0$ and set
+$a=k\varepsilon-c/(1+\varepsilon)$. Then $a+c>0$ and $b(\varepsilon)=0$
+exactly. To keep the whole tuple canonical, one may choose
+$k=1$, $a=c=\varepsilon>0$, with $g,h>0$; its positive radius tends
+to zero as $\varepsilon\downarrow0$. The displayed entry times need
+not remain bounded in that limit. Likewise the propagated floor may
+tend to zero as $c\downarrow0$, and the resulting bound may diverge
+as $h\downarrow0$ or $n$ increases. These are parameter limits, not
+counterexamples to uniformity in initial data at fixed parameters.
+
+For numerically evaluating a small positive root when $a<k$, a
+cancellation-resistant equivalent formula is
+\[
+ R=\frac{2(a+c)}{\sqrt{(a+k)^2+4kc}+k-a}\qquad(a+c>0).
+\]
+This is an optional numerical presentation improvement, not a correction
+of P01's exact root formula. No numerical root computation is used to
+justify the theorem.
+
+\subsection{The \texorpdfstring{$k=0$}{k=0} extension}
+For $k\geq0$, $a\in\RR$, $c,g,h\geq0$, dropping nonpositive terms at
+a maximum gives
+\[
+ D^+X\leq aX+\frac{cX}{1+X}\leq(a_++c)X.
+\]
+The positive-part comparison argument therefore proves
+$X(t)\leq X(0)e^{(a_++c)t}$. This is enough to exclude escape from
+compact subsets of $\Dom$ before any finite maximal time, proving
+global existence. The previous face and integrating-factor arguments
+remain valid. Strict propagation still requires $c>0$ (unless $n=1$).
+
+No claim about $R$ or an absorbing cube is imported into $k=0$.
+With $a>0$ and $k=c=g=h=0$, $x_i(t)=x_i(0)e^{at}$ is unbounded for
+any positive coordinate. This refutes a bounded-absorption guarantee
+over that class, without asserting that every $k=0$ system is unbounded.
+
+\subsection{All stated signed-parameter failures}
+\begin{enumerate}
+\item \textbf{Negative $c$.} If $n\geq2$, select $x_i=0$ and
+$x_{i-1}=1$, with other coordinates nonnegative. Then $F_i=c<0$ and
+$x_i(t)=ct+o(t)<0$ for small $t>0$. The restriction $n\geq2$ matters:
+for $n=1$, $x_i=0$ also forces its predecessor to be zero, and every
+term in the scalar equation has a factor $x$. The stated example does
+not claim a failure for $n=1$.
+\item \textbf{Negative $k$.} With $a=c=g=h=0$ and one coordinate
+$s_0>0$, its exact solution is
+$s(t)=s_0/(1-|k|s_0t)$, which blows up at $1/(|k|s_0)$.
+This works for every dimension and residue.
+\item \textbf{Negative $h$.} With $k>0$, $a=c=g=0$, $h<-k$,
+and all initial coordinates $s_0>0$, direct substitution gives
+$s'=-(k+h)s^2$. Thus
+$s(t)=s_0/[1-(-(k+h))s_0t]$ blows up in finite time. Coincident
+offsets do not alter this calculation.
+\end{enumerate}
+All three examples are valid existential failures outside the proved
+parameter domain. They do not assert necessity of every sign assumption
+for every individual signed coefficient tuple.
+
+\subsection{Archived radius: the single required correction}
+The archived formula
+\[
+ B=\frac{a+\sqrt{a^2+4kc}}{2k}
+\]
+is always the larger real root of $as-ks^2+c=0$. When $c>0$, $B>0$
+and the root relation yields
+\[
+ H(B)=(aB-kB^2)+\frac{cB}{1+B}
+       =-c+\frac{cB}{1+B}=-\frac{c}{1+B}<0.
+\]
+If $R>0$, this and the strict decrease of $b$ imply $B>R$; if $R=0$,
+it follows directly from $B>0$. Thus its cube is a strictly larger
+absorbing cube, even when the exact-radius cube is nonabsorbing.
+For $c=0$, $B=\max(a,0)/k=R$. All these statements pass.
+
+\textbf{Issue E01 (minor; \lin{428}).} The wording ``the nonnegative
+root'' implicitly identifies a unique such root. For $a=k=1$ and
+$c=0$, the polynomial is $s-s^2$ and its two nonnegative roots are
+$0$ and $1$, whereas the displayed $B$ selects $1$. Suggested replacement:
+\begin{quote}
+``is the larger real root of $as-ks^2+c=0$, and is nonnegative.''
+\end{quote}
+This is the only required correction found. No formula, inequality,
+theorem hypothesis, time constant, or theorem conclusion needs changing.
+The CORE verdict is unaffected because its $c>0$ case has a unique
+nonnegative root. The EXTENDED verdict is conservatively held at
+MINOR REVISION until the exact text is corrected; no P01 edit is made here.
+
+\section{Terminology and quantifiers}
+Let $\Phi_t(x^0)$ denote the established nonnegative forward solution.
+The following distinctions are essential; equivalences here are specific
+to this equation and parameter class, not general facts about flows.
+
+\begin{longtable}{@{}P{0.24\textwidth}P{0.71\textwidth}@{}}
+\toprule
+Property & Exact meaning and audited conclusion \\
+\midrule\endhead
+Positive invariance & $\Phi_t(K_R)\subseteq K_R$ for every $t\geq0$.
+Holds under \eqref{A01:weak}, including $R=0$. This does not assert
+$\Phi_t(K_R)=K_R$ or backward invariance. \\
+Pointwise absorption & For each $x^0$, some finite $T(x^0)$ places the
+solution in $K_R$ for all later times. For $R>0$, holds exactly under
+\eqref{A01:criterion}. For $R=0$, fails for every nonzero initial state. \\
+Absorption of bounded sets & For each bounded $E\subset\Orth$, one
+$T_E$ works for all its states. Equivalent to the preceding property
+in the exact classification, because sufficiency provides a stronger bound. \\
+One time for the orthant & There exists $T<\infty$ such that
+$\Phi_t(\Orth)\subseteq K_R$ for all $t\geq T$. Holds under the criterion
+when $R>0$; $T_*$ works canonically. Parameters are fixed. \\
+Global attraction & For every initial state, the distance to $K_R$
+tends to zero. Holds under \eqref{A01:weak}, irrespective of the exact
+absorption criterion. \\
+Uniform attraction on bounded sets &
+$\sup_{x^0\in E}\dist(\Phi_t(x^0),K_R)\to0$ for each bounded $E$.
+Follows from \eqref{A01:rate} or \eqref{A01:zero}. \\
+Uniform attraction on the orthant &
+$\sup_{x^0\in\Orth}\dist(\Phi_t(x^0),K_R)\to0$.
+Follows from \eqref{A01:uniform} and \eqref{A01:zero}, whose right-hand
+sides contain no $X(0)$. This is valid even if exact-radius absorption fails. \\
+Lyapunov stability as a set & Relative to $\Orth$, for every
+$\varepsilon>0$, taking $\delta=\varepsilon$ suffices: initial distance
+less than $\delta$ remains less than $\varepsilon$. The distance bounds
+never exceed the initial distance. The statement concerns distance to
+the whole cube, not motion within it. \\
+Global asymptotic stability as a set & Under P01's explicit convention
+of Lyapunov stability plus attraction, holds relative to $\Orth$.
+It does not imply convergence to one equilibrium, asymptotic stability
+of each state in the cube, or minimality as a global attractor. \\
+\bottomrule
+\end{longtable}
+
+If a different convention requires strict two-sided invariance for an
+``asymptotically stable set,'' retain the two explicit properties instead
+of changing the mathematics. P01 already states its convention, so this
+is not an additional defect. The direction of the set distance is also
+important: attraction here is the supremum of point-to-cube distances,
+not convergence in symmetric Hausdorff distance of images to the entire cube.
+
+\section{Line-by-line issue and verification register}
+The following consecutive source ranges cover all 512 lines, grouping
+only adjacent lines belonging to one proof step. PASS records a checked
+step; it is not inferred from compilation. E01 is the sole required
+revision. Explanatory cautions already satisfied by the text are not
+reported as missing hypotheses or errors.
+
+\small
+\begin{longtable}{@{}P{0.12\textwidth}P{0.12\textwidth}P{0.71\textwidth}@{}}
+\toprule
+P01 lines & Finding & Independent check / disposition \\
+\midrule\endhead
+1--8 & \pass & Metadata correctly confines P01 to the canonical equation
+and standard ODE inputs. DRAFT status is not evidence of correctness and
+is not changed by this audit. \\
+9--24 & \pass & The weaker scope admits every residue, including zero,
+and nonnegative $c,g,h$. Indices presuppose an integer $n\geq1$.
+All coincident terms must remain. \\
+25--38 & \pass & Maximum, positive part, Dini derivative, and maximum-norm
+distance formula are correct; the last uses $x\in\Orth$. \\
+39--47 & \pass & Bounded-set absorption and uniform attraction have the
+right quantifiers. The stronger whole-orthant assertion is separately proved. \\
+48--61 & \pass & A finite maximum of $C^1$ functions is locally Lipschitz
+and has the stated right derivative, including ties. \\
+62--70 & \pass & Positive gaps exclude inactive indices locally. Finiteness
+makes the Taylor remainder uniform over the active set. Switching causes
+no omitted case. \\
+71--85 & \pass & Smoothness on $\Dom$, local existence, uniqueness and
+continuous dependence require only finite real coefficients. No global
+claim is inferred for all of $\Dom$. \\
+86--96 & \pass & Face value is $c x_{i-1}$. The compact rectangle containing
+$x,x^+$ and their segments lies within the open domain before any maximal time. \\
+97--109 & \pass & Both $V>0$ and $V=0$ cases give $D^+V\leq LV$.
+Lipschitz regularity justifies the almost-everywhere integrating-factor argument. \\
+110--119 & \pass & Positivity claims have the required distinction between
+$c>0$, $c=0$, and the zero initial state. Persistence is limited to the
+maximal interval at this stage. \\
+120--133 & \pass & The $b_i,d_i$ decomposition and both exponent limits in
+variation of constants are exact. Coefficients are continuous on compact
+time intervals, even though solution-dependent. \\
+134--141 & \pass & Induction propagates the property ``positive for every
+$t>0$,'' with no cumulative waiting times. Step-one connectivity suffices;
+$q$ is irrelevant. \\
+142--156 & \pass & $H=s b$ and the clipped plus-root formula are correct.
+The radius is explicitly a comparison radius, not claimed optimal. \\
+157--169 & \pass & The maximum inequality retains the correct $g$ loss;
+the positive-root quadratic has constant term $-(a+c)$. \\
+170--177 & \pass & The zero-radius inequality and the $s\geq R$ factor
+bound both hold with the displayed signs. \\
+178--189 & \pass & All three componentwise inequalities hold at every
+active maximum. The negative $g$ multiplier reverses the reciprocal order. \\
+190--195 & \pass & $b'<0$, the endpoint signs, quadratic multiplication,
+and discriminant $(a+k)^2+4kc$ are correct. \\
+196--203 & \pass & $k-a>0$ and the discriminant comparison correctly
+select $R=0$ when $a+c\leq0$. Subtracting $b(R)=0$ is used only for $R>0$. \\
+204--218 & \pass & Scalar domination yields the claimed global bound and
+invariance of every cube of radius at least $R$. \\
+219--228 & \pass & Exponential distance, rational zero-radius decay, and
+both bounds independent of the initial state are correct. \\
+229--240 & \pass & Whole-orthant attraction uses the second bounds, not
+the initial-state-dependent exponential alone. Both outer entry times solve
+the appropriate inequality exactly. \\
+241--247 & \pass & The scalar interval barrier and compact continuation
+are valid. The proof does not assume monotonicity of $H$. \\
+248--261 & \pass & Positive-part comparison handles $W=0$ with or without
+active coordinates. $H(X)-H(u)\leq LW$ is used only where $X>u$. \\
+262--270 & \pass & Compact containment excludes the singular boundary;
+bounded $F$ gives an endpoint limit and local continuation. No circular
+use of already global vector solutions occurs. \\
+271--282 & \pass & $w'=Ru'/u^2\leq-kRw$ and $0<w(0)<1$ give the
+initial-state-independent bound. Initial values below $R$ are covered by
+invariance. \\
+283--292 & \pass & Reciprocal integration covers positive scalar data;
+zero data use uniqueness. The distance bound and substitution of $T_r$
+justify the stated quantifiers. \\
+293--314 & \pass & The exact absorption equivalence is restricted to
+$R>0$; the preceding nonentry assertion treats $R=0$ separately. \\
+315--325 & \pass & $T_*=(\log2)/(kR)+(1+R)/g$ and the bounded-data time
+have correct factors and stated positive-denominator hypotheses. \\
+326--333 & \pass & Persistence rules out finite-time entry into $K_0$.
+The coming-down estimate supplies $K_{2R}$ at $t_0$ uniformly. \\
+334--343 & \pass & $X/(1+X)$ increases, so the negative strict-gap bound
+is correct. Integrating until first entry and using invariance includes
+the endpoint of the stated time. \\
+344--347 & \pass & For the zero residue the inhibitory coordinate equals
+$X$ at every maximum; the remaining time is $1/(hR)$. \\
+348--355 & \pass & $\beta=(-a)_++(k+h)M+g$ and $\eta=c/(1+M)$ have
+all required terms. The assumption $c>0$ makes $\eta>0$. \\
+356--362 & \pass & Lower bounds on each loss and input yield the displayed
+linear differential inequality. The exponential transformation has the
+correct sign and base time. \\
+363--371 & \pass & Repeated time-ordered integration gives $\tau^j/j!$.
+There are $n$ retained terms, with largest power $n-1$, and a nonnegative
+remainder. Wrapping indices does not invalidate it. \\
+372--380 & \pass & The maximum at $t-\tau$ seeds one term for every target.
+$d$ is positive and independent of initial data conditional on nonentry;
+the text states that condition explicitly. \\
+381--385 & \pass & The gap is $hRd$. The excess is at most $R$, so the
+remaining time is $1/(hd)$, with no missing factor $R$ or $n$. \\
+386--392 & \pass & Whole-orthant absorption implies the other forms.
+For $g=h=0$, equal-coordinate data give exactly $s'=H(s)$ and cannot
+reach $R$ at finite time. \\
+393--398 & \pass & In the other failure case, $c=0$ preserves all zero
+coordinates and $q\not\equiv0$ removes self-inhibition of the sole positive
+one. Its logistic solution stays above $R$. The failure cases are exhaustive. \\
+399--421 & \pass & The canonical corollary follows from the previously
+verified hypotheses, with $R,c,g>0$. Neither coprimality nor an $h$-based
+argument is needed for its absorption time. \\
+422--427 & \pass & The archived expression for $B$ selects the correct
+larger quadratic root. \\
+428 & \minor & E01: ``the nonnegative root'' is ambiguous/incorrect as
+a uniqueness description for $c=0,a>0$. Replace with ``the larger real
+root, which is nonnegative.'' Formula unchanged. \\
+429--434 & \pass & $H(B)=-c/(1+B)$ for $c>0$, so $B>R$; for $c=0$,
+$B=R$. The claimed absorption consequences follow in both cases. \\
+435--445 & \pass & Set invariance, absorption, attraction and stability
+are distinguished correctly. Stability is relative to $\Orth$ and the
+asymptotic-stability convention is expressly stated. \\
+446--452 & \pass & The $k\geq0$ proposition asserts global existence and
+the already qualified positivity conclusions, not the positive-$k$ radius. \\
+453--466 & \pass & The exponential finite-time bound excludes blow-up.
+The $a>0,k=c=g=h=0$ example correctly refutes a general absorbing-cube
+guarantee for $k=0$. \\
+467--475 & \pass & The $c<0$ face counterexample works for $n\geq2$.
+The source explicitly excludes the $n=1$ case from this example. \\
+476--479 & \pass & Ties, the loss sign, and coincident offsets are
+accurately summarized. \\
+480--484 & \pass & The zero radius need not solve the quadratic;
+all divisions by $R$ are confined to positive-radius cases. \\
+485--489 & \pass & The text correctly refuses to infer finite entry
+merely from $H(R)=0$ and distinguishes the zero-radius obstruction. \\
+490--495 & \pass & The dimension and connectivity relaxations are valid.
+Instantaneous strict positivity is explicitly separated from uniform
+long-time persistence. \\
+496--504 & \pass & The strict coefficient assumptions are stronger than
+needed for several conclusions. The negative-$k$ and negative-$h$
+blow-up examples are exact existential counterexamples. \\
+505--512 & \pass & Continuation uses compactness inside the smooth
+domain. No later theorem or numerical experiment is a proof dependency.
+The source remains DRAFT as requested. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Adversarial tests and reproducible arithmetic checks}
+\subsection{Analytical attempts to break the claims}
+\begin{enumerate}
+\item \textbf{Very large data.} In the nonabsorbing scalar subcase
+$c=g=h=0$, $a>0$, a synchronous state with $s_0>R=a/k$ satisfies
+\[
+ s(t)=\frac{R}{1-(1-R/s_0)e^{-kRt}}.
+\]
+Letting $s_0\to\infty$ recovers $R/(1-e^{-kRt})$ exactly as a
+supremum. This verifies that the coming-down bound and whole-orthant
+attraction are compatible with nonentry into $K_R$ at every finite
+time. There is no hidden upper bound on admissible initial states.
+\item \textbf{One supported coordinate.} With $c>0$, the integrating-factor
+induction reaches every coordinate at any prescribed positive time,
+even when the step-$q$ graph is disconnected. With $c=0,g=0,h>0$
+and nonzero residue, exactly the same initial pattern supplies the
+necessity counterexample. This stress test distinguishes the two regimes.
+\item \textbf{Equal-coordinate initial states.} Direct substitution gives
+$s'=H(s)-g s/(1+s)-h s^2$ for every $n,q$. At $s=R>0$, either
+$g>0$ or $h>0$ makes the field strictly negative. At $g=h=0$ the
+field vanishes there and uniqueness prevents finite-time crossing from
+above. This substitution is only a test family, not a P02 equilibrium audit.
+\item \textbf{Ties and switching.} For $n=5,q=2,a=k=c=g=h=1$ and
+$x=(2,2,0,0,0)$, the active derivatives are $F_0=-4$ and
+$F_1=-10/3$. Thus $D^+X=-10/3$, not the derivative of an arbitrarily
+selected active coordinate. The finite-maximum expansion proves the
+same rule at an actual switch, regardless of how often the active set
+changes. The elementary functions $y_1(t)=t,y_2(t)=-t$ also test the
+right-derivative assertion at a switch: it is $1$ at zero although
+the two-sided derivative does not exist.
+\item \textbf{Requested dimensions and offsets.} The scalar reduction
+explicitly tests $n=1$; the coincident-neighbor case tests $n=2,q=1$.
+For $n=5$, every residue $0,1,2,3,4$ satisfies the same maximum and
+propagation estimates. For even $n=6,10$, the cases $q=1,n-1,n/2,0$
+are covered with all coincident terms retained; $n=6,q=2$ additionally
+tests absence of a coprimality requirement. The exact calculation suite
+below checks every residue for all five dimensions.
+\item \textbf{Parameter edges.} $c=0$, $g=0$, $h=0$, $k=0$,
+$a+c=0$, $a+c<0$, and small positive $R$ have been treated explicitly
+above. The strongest alleged loophole, loss of a uniform positive
+coordinate floor near the zero state, is avoided by conditioning that
+floor on continued nonentry. No unconditional persistence claim is proved.
+\end{enumerate}
+
+\subsection{Exact rational checks: evidence and limits}
+A deterministic check using exact rational arithmetic was run independently
+from the defining right-hand side. It performed no time integration,
+used no floating-point tolerances, and is not offered as a proof over
+an infinite state or parameter space. All asserted inequalities passed:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Check & Count \\
+\midrule
+State/parameter/offset cases for the maximum inequality & 7,956 \\
+Active-coordinate inequalities within those cases & 19,682 \\
+Constructed positive-root identities & 48 \\
+Coordinate inequalities for the propagation lower bound & 82,080 \\
+Failed assertions & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The following complete recipe permits reproduction without relying on
+an undistributed numerical data file. Let $\epsilon=10^{-12}$ and
+$L=10^{12}$. Use $n\in\{1,2,5,6,10\}$ and integer representatives
+$q=0,1,\ldots,n$, with $q=n$ deliberately checking the zero-residue alias.
+For each $n$, use these $8+2n$ state entries, retaining repetitions:
+\begin{itemize}
+\item all-equal states at $0,\epsilon,1,2,L$;
+\item for each coordinate, the two states supported there with value $1$ or $L$;
+\item $x_i=2$ for even $i$, zero for odd $i$; $x_i=(i+1)/n$;
+and $x_i=2$ for $i<2$, zero otherwise, using indices $0\leq i<n$.
+\end{itemize}
+Take the Cartesian product with the following 13 coefficient tuples:
+\begin{center}
+\begin{tabular}{ccccc@{\qquad}ccccc}
+\toprule
+$a$&$k$&$c$&$g$&$h$&$a$&$k$&$c$&$g$&$h$\\
+\midrule
+$1$&$1$&$1$&$1$&$1$&$-2$&$1$&$1$&$1$&$1$\\
+$1$&$1$&$0$&$1$&$0$&$-1$&$1$&$1$&$0$&$0$\\
+$1$&$1$&$1$&$0$&$1$&$0$&$1$&$\epsilon$&$\epsilon$&$\epsilon$\\
+$1$&$1$&$0$&$0$&$1$&$\epsilon$&$1$&$0$&$\epsilon$&$0$\\
+$1$&$1$&$1$&$0$&$0$&$1$&$\epsilon$&$1$&$1$&$1$\\
+$1$&$1$&$0$&$0$&$0$&$-1$&$1$&$2$&$0$&$1$\\
+$0$&$0$&$1$&$1$&$1$&&&&&\\
+\bottomrule
+\end{tabular}
+\end{center}
+At every active index, evaluate \eqref{A01:field} directly and assert
+$F_i\leq H(X)-gX/(1+X)\leq H(X)$. The $k=0$ tuple tests this
+inequality only, not a radius formula requiring $k>0$.
+
+For the 48 root cases, take
+\[
+ R\in\{\epsilon,1/10,1,L\},\quad
+ k\in\{\epsilon,1,10\},\quad
+ c\in\{0,\epsilon,1,10\},\quad
+ a=kR-\frac{c}{1+R}.
+\]
+Check $a+c>0$, the quadratic residual is zero, and
+\[
+ (a+k)^2+4kc=(2kR-a+k)^2,\qquad 2kR-a+k>0.
+\]
+This verifies selection of the plus root without approximating a square
+root. Check \eqref{A01:factor} exactly at $s=R,2R,100R$.
+For the lower-bound checks, retain these root cases, the same dimensions
+and representatives $q$, put $M=2R$, use $g,h\in\{0,\epsilon,1\}$,
+and take $x_i=M(i+1)/n$. At every coordinate assert
+$F_i\geq-\beta x_i+\eta x_{i-1}$ with \eqref{A01:constants}.
+The analytical proofs, rather than this finite suite, establish the
+factorial propagation estimate, finite-time classification, and all
+limiting and uniform quantifiers.
+
+\section{Hypotheses, corrections, and downstream consequences}
+\subsection{Unnecessary hypotheses for particular conclusions}
+\begin{longtable}{@{}P{0.30\textwidth}P{0.65\textwidth}@{}}
+\toprule
+Canonical restriction & What the audited proof actually needs \\
+\midrule\endhead
+$n\geq5$ & A fixed positive integer $n$ suffices for every P01 theorem.
+The negative-$c$ boundary counterexample specifically needs $n\geq2$. \\
+$1\leq q\leq n-1$ & Any residue works; zero is handled explicitly in
+the extended absorption criterion. \\
+Coprimality or distinct offsets & Neither is needed for any P01 result.
+Coprimality was not imposed by P01 and must not be silently added. \\
+$a>0$ & $a\in\RR$ suffices for the extended results. $a+c>0$ is exactly
+the condition $R>0$ under the other sign assumptions, not a condition
+for global existence. \\
+$k>0$ & Not needed for local well-posedness, nonnegative invariance,
+or finite-time positivity. $k\geq0$ suffices for global existence in
+the stated nonnegative-loss class. The particular radius and coming-down
+bounds require $k>0$. \\
+$c>0$ & $c\geq0$ suffices for invariance and the given comparison bounds.
+For $n\geq2$, $c>0$ is necessary to guarantee immediate strict positivity
+from every nonzero nonnegative initial state; for $n=1$, it is unnecessary
+for that implication. \\
+$g>0$ & $g\geq0$ suffices for the stated radius and bounded-attraction
+results. Strict positivity is only one sufficient absorption mechanism;
+the criterion identifies the alternatives. \\
+$h>0$ & $h\geq0$ suffices for the radius and bounded-attraction results.
+Strict $h>0$ is unnecessary for canonical finite entry when $g>0$. \\
+Signs of $a,k,g,h$ in the local face and positivity arguments & None
+is needed there: finite real coefficients and $c\geq0$ suffice up to
+the maximal time. Subsequent global bounds use their own hypotheses. \\
+\bottomrule
+\end{longtable}
+This is a statement-by-statement inventory of unused canonical
+restrictions, not an optimal classification for arbitrary signed
+coefficients. In particular, the counterexamples outside the proved
+domain do not turn sufficient sign assumptions into necessary ones
+for every individual equation.
+
+\subsection{Hidden-assumption check and suggested clarifications}
+No missing mathematical assumption was found. The following operational
+qualifications are explicit or inherent in the source and must travel
+with any later quotation of its results:
+\begin{enumerate}
+\item $n$ is a positive integer, coefficients and states are finite,
+the coefficients are homogeneous and time independent, and initial
+states are nonnegative for global forward claims.
+\item The domain $\Dom$ supplies local solutions; the global bounded
+flow is established on $\Orth$. Smoothness is not an assertion that
+arbitrary negative initial data stay in $\Dom$ forever.
+\item Uniform entry times are uniform over initial states for fixed
+parameters, $n$, and $q$. In the propagation proof, choose one fixed
+$\tau>0$ independent of initial data.
+\item The floor $d$ applies only while entry has not occurred. It neither
+covers the zero trajectory nor establishes uniform persistence after entry.
+\item Positive invariance supplies all times after first entry. Scalar
+local Lipschitz regularity and absolute continuity justify integration
+of the Dini inequalities; differentiability of $X$ everywhere is not assumed.
+\item Set stability and attraction are relative to $\Orth$ and use
+distance to the cube, under the expressly stated convention for
+asymptotic stability. None is an equilibrium stability statement.
+\end{enumerate}
+Apart from required correction E01, the following are optional clarity
+improvements, not new gaps: spell out $n\in\ZZ_{\geq1}$ in (P01-W);
+append ``for fixed parameters and dimension'' to the whole-orthant
+uniformity claim; and call \eqref{A01:d} a ``conditional pre-entry
+floor'' when quoting it elsewhere. Do not replace a proved theorem
+with a weaker assertion merely because its strong uniform quantifier
+is unusual. Do not enlarge $R$ back to $B$ as a purported repair: the
+sharper radius is already correct.
+
+\subsection{Downstream consequences without proceeding to P02}
+\begin{enumerate}
+\item \textbf{Available foundation.} Later demand-modulated modules may
+use the canonical smooth vector field, unique global nonnegative
+forward solutions, immediate positivity from nonzero data, and the
+invariant absorbing cube with the stated radius and time bound. E01
+does not invalidate any of these dependencies.
+\item \textbf{What remains unproved downstream.} P01 does not classify
+synchronous equilibria, prove existence of a positive equilibrium,
+establish equilibrium stability, compute a spectrum, or prove a
+bifurcation. Those are separate proof obligations. No such work was
+undertaken in this audit.
+\item \textbf{Using the box correctly.} Every nonnegative equilibrium
+of this field must lie in $K_R$, since a stationary state outside it
+would contradict attraction. This is a permissible necessary bound,
+not an equilibrium existence or uniqueness proof. Set attraction does
+not imply convergence of a trajectory to an individual equilibrium;
+nontrivial dynamics inside the box are not excluded.
+\item \textbf{Parameter boundaries.} If a later argument sets $c=0$,
+it loses general positivity propagation. If it sets $g=0$, it must
+use the remaining absorption criterion, not the formula containing
+$1/g$. If $a+c\leq0$, $K_R=\{0\}$ is attracting but not finitely
+entered from nonzero data. If $k=0$, the radius formula and the present
+bounded-attraction conclusions are unavailable without a new argument.
+\item \textbf{No transfer to the matched bilinear comparator.} The
+positive input $c x_{i-1}/(1+x_i)$ is central to both the bound and
+boundary propagation. P01's radius, positivity propagation, and global
+boundedness cannot be copied to the different bilinear equation merely
+because the coefficient names match. Any such use in P08 needs its
+own hypotheses and proof.
+\item \textbf{No uniform persistence or optimality claim.} The lower
+floor in Theorem 5.6 is temporary and conditional. Neither a permanent
+positive coordinate bound nor a smallest invariant cube has been established.
+Likewise no heterogeneous, delayed, stochastic, or time-varying version
+has been certified by this audit.
+\end{enumerate}
+
+\textbf{Disposition.} The canonical foundation is verified for the exact
+source hash identified above. The extended theorems and their complete
+absorption classification are mathematically verified, but the exact
+extended text receives MINOR REVISION solely for E01. The audit changes
+no P01 source, status marker, registry, compendium, or later module.
+The delivered archive contains exactly one member,
+\path{audits/A01_wellposedness_and_absorbing_box.tex}, a standalone
+LaTeX document. Compilation and archive checks validate the deliverable;
+the mathematical verdicts are justified by the independent arguments
+in this document.
+\end{document}

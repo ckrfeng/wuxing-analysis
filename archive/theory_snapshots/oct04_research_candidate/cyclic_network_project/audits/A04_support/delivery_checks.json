@@ -1,0 +1,78 @@
+{
+  "main_mathematical_verdict": "VERIFIED",
+  "required_corrections": [],
+  "historical_computational_provenance": {
+    "status": "UNRESOLVED",
+    "issue": "U01",
+    "p04_lines": [
+      530,
+      545
+    ],
+    "reason": "Separate original P04 validation companion not supplied; not a theorem premise."
+  },
+  "p05_clearance": "After administrative A04 audit closure; P05 not begun.",
+  "audited_P04_sha256": "ab80f695b3e20c852c572b7b174ecaf9964eac1aba62e3e55b2b4d3e60754e0c",
+  "source": {
+    "path": "audits/A04_arbitrary_nq_fourier_spectrum.tex",
+    "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869",
+    "bytes": 47595,
+    "lines": 832
+  },
+  "pdf": {
+    "path": "audits/A04_arbitrary_nq_fourier_spectrum.pdf",
+    "sha256": "90819c883fc561c2a1c4435186b2b501488e1b13699e2c1073a95bff6e982359",
+    "pages": 14,
+    "bytes": 325459
+  },
+  "build": {
+    "status": "PASS",
+    "compiler": "pdfTeX 1.40.29 / TeX Live 2026; latexmk 4.88",
+    "warnings": [],
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "underfull_boxes": false
+  },
+  "visual_review": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "method": "All pages rendered to PNG at 110 dpi and visually inspected in four QA sheets",
+    "findings": "No clipping, overlap, missing glyphs, broken tables, or numbering defect."
+  },
+  "line_coverage": {
+    "status": "PASS",
+    "ranges": 46,
+    "lines": 573,
+    "gaps": [],
+    "overlaps": []
+  },
+  "exact_checks": {
+    "status": "PASS",
+    "tested_pairs": 39,
+    "tested_matrices": 285,
+    "eigenvalue_occurrences": 2242,
+    "total_assertions": 62094
+  },
+  "preservation": {
+    "status": "PASS",
+    "original_archive_members": 75,
+    "changed_original_members": [],
+    "archive_crc": "PASS",
+    "source_archive_sha256": "11a2383d3f61e001c400f61744d6cacd94b0b02d670bd7240e0dbb948fc0610f"
+  },
+  "package_scope": "New A04 source, reading PDF, provenance, independent checker and exact results only. No input replacements or administrative closure edits."
+}

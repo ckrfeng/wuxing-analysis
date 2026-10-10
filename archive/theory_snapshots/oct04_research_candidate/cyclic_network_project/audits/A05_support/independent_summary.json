@@ -1,0 +1,33 @@
+{
+  "dimensions": 36,
+  "switches": 198,
+  "strict_cells": 234,
+  "cases_by_kind": {
+    "cell": 702,
+    "general_realization": 702,
+    "tie": 198,
+    "immediate_left": 198,
+    "immediate_right": 198,
+    "stable_path": 594,
+    "convex": 36,
+    "T_zero": 36,
+    "vertex_one": 36,
+    "large_chi": 36,
+    "negative_midpoint_lower_tie": 189,
+    "explicit_regime": 3,
+    "explicit_example": 4,
+    "explicit_terminal": 4,
+    "fold_caution": 1,
+    "two_branch_caution": 2
+  },
+  "max_scaled_residual": "3.17796610169491525423728813559322033898305084745762711864406779661016949152542372881355932203389830508474576271186440679E-120",
+  "max_scaled_dispersion_error": "2.44204505169581142333407197099406983326903416792822215283535103686444790913145921471784394604508699849672107080841788120E-89",
+  "stable_path_points": 594,
+  "total_cases": 2939,
+  "python_version": "3.9.6",
+  "precision_digits": 120,
+  "comparison_tolerance": "1E-85",
+  "trigonometry": "Decimal Taylor cosine; pi by Machin formula, both at 120 digits",
+  "scope": "Independent corroboration; neither interval certificate nor reproduction of P05 historical run",
+  "passed": true
+}

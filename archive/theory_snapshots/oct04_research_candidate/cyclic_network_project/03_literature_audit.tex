@@ -1,0 +1,493 @@
+% STATUS: PHASE 1 REVIEW COMPLETED WITH EXPLICIT ACCESS AND NOVELTY GAPS
+% This is an includable fragment; see literature_audit_compendium.tex.
+% No proposed project theorem is proved or promoted by this audit.
+\section{Literature audit: scope and evidence}
+\label{sec:phase1-audit}
+
+\subsection{Contract, corpus and limits}
+This audit addresses the eight novelty questions for the canonical
+demand-modulated model $(\DM)_{n,q}$ and its matched bilinear comparator
+$(\MB)_{n,q}$. Their equations and assumptions remain exactly those in
+\texttt{00\_canonical\_model.tex}. The main scope is arbitrary $n\geq5$ and
+$1\leq q\leq n-1$, with the exact selection program concentrated on $q=2$.
+Five-element literature is integrated wherever it affects the model,
+coupling law, $n=5,q=2$ specialization or comparator; it is not a separate
+archival research track.
+
+The six author-supplied PDFs form the core corpus, S01--S06. They were
+accessible at the local paths supplied on 20 September 2026, although the
+project's synced \texttt{sources/} directory still contained only the master
+blueprint. S07--S14 are targeted primary-source supplements or expressly
+unresolved leads. No master-blueprint statement is evidence of novelty.
+No project theorem has been derived, no experiment run, and no source's
+numerical findings independently reproduced.
+
+\paragraph{Locator convention.}
+For S01--S04, page numbers below are the \emph{printed pages in the supplied
+author PDFs}, which also equal their one-based PDF positions. They are not
+inferred journal pages. S05 has printed pages 777--781 (PDF positions 1--5);
+S06 has publisher pages 1--15. The local filenames, page counts and SHA-256
+digests are in \texttt{audits/phase1\_source\_manifest.md}. Supplemental
+versions and pagination are identified individually. A missing full-text
+locator is recorded as an access gap, never manufactured from an abstract.
+
+\paragraph{Method.}
+The audit compared each displayed source model with the canonical coupling
+locations, signs, state dependence, dimension and parameter restrictions.
+It inspected the relevant statements and calculations for spectra, mode
+selection, Hopf coefficients and perturbations, using text extraction and
+visual checks of critical equations. Exact titles and DOIs, circulant Hopf
+reductions, inverse-matrix decay, and five-element enzymatic antecedents
+were searched in publisher and author repositories. This is a bounded
+literature audit, not an exhaustive priority search. ``Not located'' is
+restricted to the inspected source; it does not establish nonexistence in
+the literature. Source numerical reports remain reports, even when placed
+under a theorem heading.
+
+\subsection{Novelty vocabulary}
+The following categories describe the \emph{scope of a claim}, not its proof
+status in this project.
+\begin{description}[style=nextline]
+\item[Definitely known (K).] The stated general fact, model component or
+specific antecedent is explicitly present in a checked source.
+\item[Directly implied by known theory (D).] Once the project's required
+hypotheses are independently verified, a known result supplies the claimed
+mechanism or representation. This is an audit inference, not a proof here.
+\item[Apparently new specialization (S).] No exact instance was located,
+but the proposed contribution applies established machinery to this
+particular model or parameter family. Priority remains provisional.
+\item[Apparently new theorem (T).] A precisely stated mathematical addition
+beyond a routine specialization appears absent from the reviewed literature.
+This label requires an identifiable additional conclusion and adequate
+literature coverage; it does not mean the theorem is true.
+\item[Unresolved because more literature is needed (U).] Source access,
+the extent of existing theory or the exact proposed statement is insufficient
+for a defensible novelty verdict.
+\end{description}
+No complete project theorem receives an unconditional T label in this
+phase. Quantitative sign regions and parameter-dependent robustness
+certificates remain possible theorem contributions, but their exact scope
+and nearest antecedents are not sufficiently settled to award that label.
+The matrix distinguishes these prospects from established methods.
+
+\section{Six supplied primary sources}
+\label{sec:core-sources}
+
+\subsection{S01: Jaramillo, Mrad and Stepien (2023)}
+\label{src:jms}
+\textbf{Source/version.} \cite{JaramilloMradStepien2023}; supplied
+\texttt{2210.04342v2.pdf}, arXiv v2, 14 pages.
+
+\textbf{Exact model and assumptions.} Section III, p.~3, Eqs.~(5)--(6c)
+adds global linear mutation to a three-species May--Leonard competition
+system. Its first normalized equation is
+\[
+ \dot m_1=m_1(1-m_1-\alpha m_2-\beta m_3)
+            +\mu(-2m_1+m_2+m_3),
+\]
+with the other two equations cyclically permuted and
+$\alpha,\beta,\mu>0$. It has polynomial competition and linear mutation,
+not the DM receiver-denominator coupling.
+
+\textbf{Relevant locations.} Section IV.B, p.~5, Theorem 1 and
+Eqs.~(7)--(8b): circulant $3\times3$ Jacobian and explicit spectrum.
+Section IV.C, pp.~6--7: Theorem 2; general Hopf formula (15), pairing (16),
+quadratic tensor (18), critical parameter (19), Fourier vectors
+(22)--(23), and explicit coefficient (24)--(25). Equation (20) and the
+discussion after (25) exclude the zero-frequency case $\alpha=\beta$.
+Section IV.A, pp.~4--5 and Fig.~4, and Section IV.E, pp.~10--11, concern
+folds and other coexistence equilibria; these are not the DM bistability
+classification.
+
+\textbf{Overlap and verdict.} K: an explicit Fourier-based Hopf calculation
+in cyclic competition. D/S: a precedent for P03, P11--P13, not an
+arbitrary-$(n,q)$ DM result. None of the eight exact DM targets was located.
+The paper itself uses $n$ in a generic normal-form formula on p.~6;
+that notation does not generalize its three-species model. Its continuation
+and region descriptions have not been independently validated here.
+
+\subsection{S02: Pais, Caicedo-N\'{u}\~{n}ez and Leonard (2012)}
+\label{src:pais}
+\textbf{Source/version.} \cite{PaisCaicedoLeonard2012}; supplied
+\texttt{PaisSIADS12.pdf}, author manuscript pp.~1--30. The published article
+is SIADS 11(4), 1754--1784; the pagination is different.
+
+\textbf{Exact model and assumptions.} Section 2, pp.~3--5, Eq.~(2.2):
+$\dot x_i=\sum_j x_j f_j(x)q_{ji}-x_i\phi(x)$, with $f=Bx$,
+$\phi=x^TBx$, on the simplex $x_i\geq0$, $\sum_i x_i=1$.
+Equation (2.1), Condition 1 and mutation rules (Q1), (Q2) specify the
+payoff and mutation restrictions. Section 4, p.~10, Eq.~(4.1) uses
+$B_{C,N}=\operatorname{Circulant}(1,\alpha,0,\ldots,0,\beta)$,
+$\alpha,\beta\in[0,1)$, $\alpha+\beta>0$, $N\geq3$.
+
+\textbf{Relevant locations.} Lemma 4.1, pp.~10--11: mixed equilibrium;
+Section 4.1, pp.~11--13, Eqs.~(4.2)--(4.4), Lemmas 4.2 and 4.4,
+Theorem 4.5: circulant spectrum, complex pairs, thresholds and crossings.
+Section 4.2, p.~13, Lemma 4.6: analytical first Lyapunov coefficient.
+Appendix B, pp.~24--25: general tensor/resolvent formula and normalization.
+Appendix D, pp.~26--28, Eqs.~(D.1)--(D.4): Fourier reduction, including
+the second-harmonic denominator. Section 5, pp.~16--20, treats cycles
+with different step sizes; Section 6, pp.~20--23, studies noncirculant
+examples numerically.
+
+\textbf{Overlap and verdict.} Strong K methodological overlap with
+P04 and P11--P14: directed cyclic networks, arbitrary dimension and
+analytical Hopf coefficients are established research territory. The
+simplex constraint, mutation mechanism and payoff family differ from DM.
+This is not the canonical arbitrary-$(n,q)$ spectrum, DM quadratic
+selection theorem or matched DM--MB comparison. Noncirculant simulations
+do not supply P15--P18's proposed response or robustness theorems.
+
+\subsection{S03: van Kekem and Sterk (2018)}
+\label{src:vks}
+\textbf{Source/version.} \cite{vanKekemSterk2018}; supplied
+\texttt{1704.05442v3.pdf}, accepted manuscript dated 21 December 2017,
+pp.~1--55. Published journal pages are 38--60.
+
+\textbf{Exact model and assumptions.} Section 1.1, p.~1,
+Eqs.~(1a)--(1b):
+\[
+ \dot x_j=x_{j-1}(x_{j+1}-x_{j-2})-x_j+F,
+ \qquad x_{j+n}=x_j.
+\]
+The principal first-instability program assumes $n\geq4$ and increases
+$F>0$ from the stable homogeneous state. This quadratic, additively forced
+system is distinct from both DM and MB.
+
+\textbf{Relevant locations.} Section 2.1, pp.~8--9, Eqs.~(3)--(6):
+Fourier spectrum/vectors; its real symbol uses
+$f(j,n)=\cos(2\pi j/n)-\cos(4\pi j/n)$.
+Section 2.2, pp.~10--12: Theorems 2 and 4 and Proposition 5, including
+simultaneous crossings and the first selected pair. Proposition 5 has
+a stated $n=7$ exception and the following remark discusses an $n=12$
+tie. Section 2.3, pp.~12--13, Eq.~(8) and Proposition 6: travelling-wave
+interpretation and the explicit selected-wave-number limit
+$n/l_1(n)\to2\pi/\arccos(1/4)$.
+Section 4.3, pp.~38--46, especially (23)--(25) on pp.~39--40 and
+(36) on p.~44: general Hopf formula, quadratic reduction and sign analysis.
+Section 4.4, pp.~47--48, supplies the proof of Proposition 5.
+
+\textbf{Overlap and verdict.} This is the closest core antecedent for
+targets 2--4 and 6. Quadratic-cosine selection, a discrete first-mode
+criterion, its large-$n$ limit and a Fourier-reduced Lyapunov coefficient
+are already present in another cyclic model. A DM coefficient family,
+all its ties/endpoints and its admissible parameter regions were not
+located. Their likely category is S rather than a new general Fourier
+or selection method. The source's positive-$F$ path must not be silently
+identified with a path in DM's five positive parameters.
+
+\subsection{S04: Wei and coauthors (journal issue 2021)}
+\label{src:wei}
+\textbf{Source/version.} \cite{WeiEtAl2021}; supplied 18-page author
+manuscript, filename
+\nolinkurl{Wei_et_al_2020_Hopf_bifurcation_and_synchronization.pdf}.
+The filename's year and 2020 DOI date do not change the 2021 journal issue.
+
+\textbf{Exact model and assumptions.} Section 2, p.~3, Eq.~(2.1):
+\[
+\begin{aligned}
+ \dot x&=r(y-x)+w,& \dot y&=-(1+m)y+xz-v,\\
+ \dot z&=g[1+mx^2-(1+m)xy],&
+ \dot w&=2(1+m)w+xz-k_1x,\\
+ \dot v&=-mv+k_2y.
+\end{aligned}
+\]
+Here $r,m,g>0$ and $k_1,k_2$ are control parameters. Five is the
+dimension of a homopolar dynamo, not the number of identical cyclic
+nodes. It is neither a Wu-Xing coupling model nor DM/MB.
+
+\textbf{Relevant locations.} Section 2, pp.~3--5, Eqs.~(2.2)--(2.18),
+Theorems 2.1--2.2: a Hopf calculation with rounded parameter/eigenvector
+data. Section 3, pp.~5--7, Eqs.~(3.19)--(3.37), Theorems 3.1--3.2:
+disturbance observer and controlled convergence. The latter assumes the
+specified control and observer construction; it is not passive network
+robustness under small heterogeneity. Section 4, pp.~8--9 and the appended
+figures supplies control simulations, not a reproduced computation here.
+
+\textbf{Source cautions.} Visually checked p.~3, Eq.~(2.6), describes
+five-component vectors but sums only three components in the pairing;
+Eq.~(2.7) also has inconsistent displayed dimensions. On p.~4,
+Theorem 2.1 both fixes $m=0.04$ and lets $m$ pass a different critical
+value. Theorem 2.2 combines a negative reported coefficient with an
+unstable-cycle conclusion. These are unresolved manuscript inconsistencies,
+not corrected theorems in this audit. Equation (2.10)'s coefficient
+normalization also requires convention matching before comparison.
+
+\textbf{Overlap and verdict.} A generic Hopf/tensor calculation is known;
+none of the eight exact project targets is located. This paper should
+not be cited for a cyclic Fourier reduction, a five-element model or
+DM robustness bounds. Check the final publisher text or an erratum
+before relying on its detailed criticality claims.
+
+\subsection{S05: Lin and Han (2020)}
+\label{src:lin}
+\textbf{Source/version.} \cite{LinHan2020}; supplied five-page proceedings
+PDF, printed pp.~777--781. Equations (1)--(2), p.~778, were visually
+checked because extracted text misreads some subscripts.
+
+\textbf{Exact model and assumptions.} Section 2.1, p.~778, Eq.~(1)
+uses six node-dependent coefficient families and additive interventions
+$e_i$. Its homogeneous, intervention-free Eq.~(2), written in cyclic
+notation for comparison, is
+\[
+ \dot z_i=a_Lz_i-b_Lz_i^2+c_Lz_iz_{i-1}
+       -d_Lz_iz_{i-2}-g_Lz_iz_{i+1}-h_Lz_iz_{i+2},
+       \qquad i\in\mathbb Z_5.
+\]
+The coefficients are explicitly nonnegative. The exact parameter
+identification with the canonical five-node MB comparator is
+\[
+ (a_L,b_L,c_L,d_L,g_L,h_L)=(a,k,c,h,0,g).
+\]
+This is a comparison of the displayed equations, not a dynamical theorem.
+The allowed zero value matters: it makes MB a subfamily, not merely a
+limiting resemblance.
+
+\textbf{Relevant locations.} Section 2.2, p.~778: positivity discussion;
+Section 2.2.1, pp.~778--779, Cases 1--4: equilibrium examples, numerical
+eigenvalues and synchronous scalar reduction. Case 4, p.~779,
+Eqs.~(5)--(7), explicitly treats equal initial activities. Sections
+2.2.2--2.2.3, pp.~779--781, and Figs.~3--5 report periodic/chaotic
+examples and computed Lyapunov exponents. These computations were
+not rerun or endorsed here. Section 1 and references [9], [10], [14],
+p.~781, point to earlier Wu-Xing models and perturbation studies.
+
+\textbf{Overlap and verdict.} K: the five-node topology, the six-term
+polynomial model, its synchronous reduction and MB$_{5,2}$ as a
+coefficient subfamily. S/U: the proposed exact comparison between DM
+and that comparator, not present here. No DM rational law, arbitrary-$n$
+spectrum, q=2 all-$n$ selection theorem or Fourier Green function was
+located. Publication of the five-node topology does not establish the
+novelty or correctness of the proposed DM analysis.
+
+\subsection{S06: Nian and Li (2025)}
+\label{src:nian}
+\textbf{Source/version.} \cite{NianLi2025}; supplied publisher PDF
+\texttt{s13662-025-03909-9.pdf}, 15 pages, article 61.
+
+\textbf{Exact model and assumptions.} Section 2.2, pp.~5--6,
+Eq.~(1), in the source's order $(M,H,T,S,J)$, is
+\[
+\begin{aligned}
+ \dot M&=a_1M+b_1S+c_1J+d_1HTSJ,\\
+ \dot H&=a_2H+b_2M+c_2S+d_2MTSJ,\\
+ \dot T&=a_3T+b_3H+c_3M+d_3MHSJ,\\
+ \dot S&=a_4S+b_4J+c_4T+d_4MHTJ,\\
+ \dot J&=a_5J+b_5T+c_5H+d_5MHTS.
+\end{aligned}
+\]
+It has node-dependent linear and quartic interactions. Table 1, p.~7,
+gives parameter meanings; Table 4, p.~12, contains fitted coefficients
+of mixed signs. The canonical homogeneous positive-parameter domain
+must not be imposed on this source.
+
+\textbf{Relevant locations.} Section 2.3, pp.~7--8, Eqs.~(2)--(5):
+equilibrium and Jacobian discussion, not a circulant all-$n$ result.
+Section 3, pp.~8--10, Eqs.~(6)--(9): parameter fitting.
+Section 4, pp.~10--13, Figs.~6--11 and Table 4: illustrative dynamical
+and Lyapunov-exponent reports. No exact Hopf coefficient or
+heterogeneous Fourier response theorem is given in these sections.
+
+\textbf{Overlap and verdict.} K: an existing nonlinear five-element
+application. None of the eight exact mathematical targets was located.
+It is not DM, not MB and not evidence that five-element dynamics or
+their numerical bifurcation study is new. Its fitted data, chaos
+interpretations and displayed Jacobian are not independently validated
+by this audit and provide no evidence for our model's biological validity.
+
+\section{Targeted methodological and five-element supplements}
+\label{sec:supplemental-sources}
+These entries give the closest located general theory or a precise
+access gap. Bibliographic inclusion does not imply full-text access.
+
+\subsection{S07: Gray (2006): circulants and their inverses}
+\label{src:gray}
+\cite{Gray2006}, Stanford author PDF. Section 3.1, printed pp.~32--34
+(PDF positions 40--42), Eqs.~(3.7)--(3.13), gives unitary Fourier
+diagonalization and explicitly notes normality. Section 3.2,
+Theorem 3.1, printed pp.~34--35 (PDF positions 42--43), includes
+products and the inverse when all eigenvalues are nonzero.
+No specific nonlinear network is assumed. These are K general results;
+the DM spectrum and the finite Fourier inverse kernel are D once its
+Jacobian and invertibility are verified. Matrix exponentials and
+resolvents in the same basis are likewise applications of this
+diagonalization, not a new Fourier method. Gray uses a different
+Fourier sign convention; indices must be translated. The inverse
+formula alone supplies no spatial localization estimate.
+
+\subsection{S08: Kerin and Engler (2020): general quadratic reduction}
+\label{src:kerin}
+\cite{KerinEngler2020}, arXiv v2, 31-page PDF. Section 3.2,
+pp.~11--12, Eqs.~(27)--(29), Lemma 1: an explicit first Lyapunov
+coefficient for a real circulant linear part and a quadratic
+equivariant nonlinearity. Its formula resolves the uniform and
+second-harmonic interactions through the Laurent symbols.
+Appendix A, pp.~26--27, Proposition 4 and Eq.~(48), supplies the
+bilinear Fourier interaction rule. Section 5, pp.~21--24,
+Eq.~(40) and Propositions 1--3 treats site-dependent forcing,
+dissipation and advection, assuming the stated energy-preserving
+quadratic structure (and positivity of specified diagonal matrices).
+K: the quadratic Fourier reduction and heterogeneous-network
+precedents. DM is rational and generally has a nonzero third
+derivative tensor; its coefficient and sign are not furnished by
+Lemma 1. Nor are the source's energy hypotheses established for DM.
+
+\subsection{S09: Stewart (2024): symmetry and mode ordering}
+\label{src:stewart}
+\cite{Stewart2024}, arXiv v1 HTML. Section 3, Theorem 3.7,
+states equivariant Hopf; Section 4.1, Eqs.~(12)--(14), treats a
+nearest-neighbor unidirectional ring; Section 5.2, Eq.~(16),
+treats longer-range circulant linearizations. Section 5.3,
+Theorem 5.5 and Corollary 5.6, permits eigenvalue ordering with
+freely chosen connection strengths. Section 5.4, Theorem 5.7,
+discusses rotation direction. K: symmetry-based rotating waves
+and unrestricted circulant mode control. The sign-constrained
+sparse DM family is not the unrestricted interpolation family.
+Use its representation-theoretic framework, not genericity as
+a replacement for P11--P13. The v1 phase displays in Section 5
+have apparent indexing inconsistencies; reconcile them against
+the group action before using a time-shift formula.
+
+\subsection{S10: Embree and Trefethen (2001): perturbation bounds}
+\label{src:embree}
+\cite{EmbreeTrefethen2001}, publisher-form author PDF, pp.~583--590.
+Section 1, pp.~583--584, defines pseudospectra via norm-bounded
+perturbations and resolvents. Theorem $4_\varepsilon$, p.~585,
+gives the similarity/Bauer--Fike inclusion; Theorem 6 and its
+discussion, p.~586, address normal matrices. K: general matrix
+perturbation machinery. D: a spectral-margin sufficient bound
+for an additive matrix perturbation of a stable normal matrix.
+An explicit bound on changes of DM parameters must additionally
+control the moving equilibrium and the resulting full Jacobian.
+This source does not give that parameter certificate or make
+the heterogeneous Jacobian normal.
+
+\subsection{S11: Greenbaum, Li and Overton (2020): sensitivity}
+\label{src:glo}
+\cite{GreenbaumLiOverton2020}, 30-page arXiv author PDF. Section 2,
+p.~4, Assumption 1, Theorem 1 and Eq.~(1), gives the derivative
+of a simple eigenvalue of an analytic matrix family using
+normalized left and right eigenvectors. Section 3.2, p.~12,
+states the analytic implicit function theorem used in its
+argument. K: simple-eigenvalue sensitivity and the implicit
+function framework. D: first-order threshold sensitivity after
+the project's parameter family, equilibrium derivative and
+nonzero crossing derivative are verified. Multiple eigenvalues
+and mode ties require separate treatment. No DM parameter
+derivative or explicit robustness radius is supplied.
+
+\subsection{S12: Demko, Moss and Smith (1984): localization caution}
+\label{src:demko}
+\cite{DemkoMossSmith1984}; partial access only. The publisher-indexed
+abstract on p.~491 and Section 2, p.~493, Proposition 2.3,
+Eq.~(2.4), and Theorem 2.4 were inspected. They concern decay
+of inverses of bounded, boundedly invertible band matrices,
+with spectral/conditioning assumptions and stronger forms for
+positive definite matrices. K: inverse localization is an
+established subject. U: the exact reduction to cyclic graph
+distance, wraparound, arbitrary $q$ and uniform-in-$n$ DM
+constants. The whole paper and subsequent sparse-matrix
+extensions require review before any new localization theorem
+is claimed. A finite Fourier sum is not itself a localization
+theorem.
+
+\subsection{S13: Lin, Shi and Han (2021): unresolved coupling antecedent}
+\label{src:lin2021}
+\cite{LinShiHan2021}. The CCC 2021 proceedings contents identify
+the title and authors at starting p.~6410; DOI metadata identifies
+the article. Full text was not available in the audited corpus.
+Thus its exact coupling equations, assumptions and theorem
+locations are \emph{unresolved}, not absent. Its enzymatic
+five-element topic is directly relevant to targets 1 and 5
+and the $n=5,q=2$ motivation. Retrieve and compare the
+receiver dependence and any rescaling before claiming the
+demand-modulated coupling law is unprecedented.
+
+\subsection{S14: Lin and Han (2024): integrated five-node overlap risk}
+\label{src:lin2024}
+\cite{LinHan2024}, publisher landing page, abstract
+(opening article page 7477) and reference list. The abstract
+describes enzymatic regulatory networks with $n\leq9$,
+oscillation/adaptation comparisons and a five-node topology
+identified with the yin--yang five-element network.
+The full equations, analyses and supplement were not accessible.
+K: the published topic and claimed topology/application
+overlap; U: exact DM law, analytical spectrum and all eight
+specific theorem targets. The abstract cannot certify either
+equation identity or absence. This is a high-priority main-paper
+literature gap, not postponed archival work.
+
+\section{Audit consequences and unresolved evidence}
+\label{sec:audit-consequences}
+
+\subsection{What the sources do and do not establish}
+No inspected core paper displays $(\DM)_{n,q}$, its
+receiver-denominator creation term, or the complete DM--MB
+comparison. That is a finite-corpus finding, not a priority
+certificate. The five-node bilinear comparator is explicitly
+contained in S05. General circulant diagonalization/normality,
+Fourier Hopf reduction, rotating waves, inverse response and
+matrix/eigenvalue sensitivity all have close antecedents.
+The detailed classifications for the eight requested targets
+are in Section~\ref{sec:novelty-matrix}.
+
+The paper's possible mathematical contribution should therefore be
+judged by the \emph{verified combination of model-specific conclusions}:
+the admissible parameter regions, exact mode ties and exclusions,
+a calibrated bilinear comparison, a nondegenerate Hopf coefficient
+and parameter-dependent response bounds. This audit does not establish
+any of them. A change of coupling law does not by itself make every
+standard calculation a new theorem.
+
+\subsection{Correction of the initialization's adjoint concern}
+S01, p.~6, Eq.~(16), S02, Appendix B, pp.~24--25, and S08,
+p.~12, Eq.~(28), use the Hermitian pairing that is conjugate-linear
+in its first argument, with
+\[
+ Jv=\ii\omega v,\qquad J^*p=-\ii\omega p,
+ \qquad \langle p,v\rangle=1,
+\]
+for a real Jacobian ($J^*=J^T$). The opposite adjoint sign is a
+standard consistent convention. The initialization's suggestion
+that this sign was intrinsically inconsistent is withdrawn in
+B07 and claim C078. Phase, eigenvector scale, time scaling,
+Taylor factors and the final DM coefficient still require P13
+verification. No master text or proof fragment is changed.
+
+\subsection{Priority and access gaps}
+\begin{enumerate}
+\item Obtain S13 and S14 with their supplementary equations. Compare
+the exact nonlinear law, allowable coefficients, variable changes
+and normalization; abstracts cannot resolve model priority.
+\item Follow S05's p.~781 references [9], [10], [14]: T.~Wang's
+2008 Fudan thesis on the dynamic Wu-Xing model; G.~Ding and
+T.~Wang's 2008 mathematical analysis, pp.~269--270; and F.~Li's
+1987 Yin-yang/Wuxing equations, pp.~966--969. These are
+\emph{leads quoted from S05's bibliography}, not independently
+audited sources. Their equations and exact result locations are
+not asserted here. Resolve them within the main novelty audit.
+\item Read the complete S12 paper and follow subsequent inverse-decay
+and graph-distance results. Determine whether the planned
+localization estimate is a known specialization.
+\item Check the broader cyclic-feedback and structured stability-radius
+literature once the precise perturbation family, norm and desired
+bound are fixed. Current matrix theory settles the general
+mechanism, not the novelty of an unspecified final inequality.
+\item Preserve edition-specific citations. The final published Wei
+text and any corrections have not been compared with the supplied
+manuscript; source inconsistencies remain disclosed. The Jaramillo
+article number remains a bibliographic completion item.
+\end{enumerate}
+
+\subsection{Evidence gates for later work}
+P04 must verify the actual DM Jacobian before using circulant
+theory, including coincident offsets. P05 must distinguish a
+snapshot maximizer from the first crossing on a parameter path;
+P06 must specify the sequence of coefficients/branches.
+P08 must fix comparator calibration before any superiority
+claim. P11--P14 require actual simplicity, nonzero frequency,
+transversality, nondegeneracy and the correct group action.
+P15--P18 must distinguish a Fourier inverse at the homogeneous
+base from the generally noncirculant perturbed problem.
+These are audit requirements only. All proof and numerical
+files retain their initial TODO/plan status.

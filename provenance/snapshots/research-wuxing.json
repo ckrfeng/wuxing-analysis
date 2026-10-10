@@ -1,0 +1,339 @@
+{
+  "id": "research-wuxing",
+  "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+  "origins": [
+    "/Users/carterfeng/Documents/Research/WuXing"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/c.wuxing",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/c.wuxing",
+      "sha256": "4cb681301ca6951d65e8b04ad5dc1c4839d1ccad773a28bf0d52d7035119fd7b",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/c.wuxing",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/find_eq.py",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/find_eq.py",
+      "sha256": "c3da0f401177531c45166c1950178f5dbb470b2ee6e5ea19d63a998bb0620d7e",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/find_eq.py",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/fort.7",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/fort.7",
+      "sha256": "ee95935bff7f631da4e81538a3b962d010293af71f9417985500eac6235debea",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/fort.7",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/fort.8",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/fort.8",
+      "sha256": "8d378840588de213389da1fda33a393b40d359ad3e5b1d1789ed7db5b0268cea",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/fort.8",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/fort.9",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/fort.9",
+      "sha256": "578b70ba5b3c4f26d26dfcb2d19db6266fdd223d367ef837e46da90c175fb96f",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/fort.9",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/plot_bifurcation.py",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/plot_bifurcation.py",
+      "sha256": "6dbb45bc0ed279357bc9cedd838a0fd52c14e5cc8c187e6984ba3feaa674a3c8",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/plot_bifurcation.py",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_ADAPT/wuxing.f90",
+      "retained_destination": "experiments/auto/WUXING_ADAPT/wuxing.f90",
+      "sha256": "d4a0feb85fc7ed801cf09d7f81a12e3a54dd2c9b61d9b03afe5698881010393a",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/wuxing.f90",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/c.wuxing2",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/c.wuxing2",
+      "sha256": "3d975c83fcb63596c0983c4e4acd1c6bb9128310669c030d46bc45a15003c547",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/c.wuxing2",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/find_eq2.py",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/find_eq2.py",
+      "sha256": "18c734157cad2a276fc32ad499989975616cee66883b7feb7c3056bbf058233c",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/find_eq2.py",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/fort.7",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/fort.7",
+      "sha256": "9a4a9136a1a7ea146d1572097cadc6566d73d31fc885e594f2b7f7c3f11586c1",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/fort.7",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/fort.8",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/fort.8",
+      "sha256": "c9e70b63d72e2220848d3c497ef2f13aaf2549046c1886945592403dc936c465",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/fort.8",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/fort.9",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/fort.9",
+      "sha256": "967581754c54686686577511a044464f09058cffb1eb4db0ad469fd1bba47401",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/fort.9",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/plot2.py",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/plot2.py",
+      "sha256": "4b91b44d0d25cefdf8161e861ac843c8b68b6d3d6d2da1c480d5272ee33be52f",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/plot2.py",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AUTO/WUXING_SIMPLE/wuxing2.f90",
+      "retained_destination": "experiments/auto/WUXING_SIMPLE/wuxing2.f90",
+      "sha256": "3e8d0bf374961c66b1ec09251bccddd534ebf6cc872a175497bcd24263fc4baf",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/wuxing2.f90",
+      "status": "experiment_bundle"
+    },
+    {
+      "original_relative_path": "AnalysisofDynamicFive-ElementModel.pdf",
+      "retained_destination": "references/Lin_Han_2020_Analysis_of_Dynamic_Five_Element_Model.pdf",
+      "sha256": "4676585f458316b4e2072e120a9b1bfbdbf7c25bfc084a2a807e72af4d7ff993",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/AnalysisofDynamicFive-ElementModel.pdf",
+      "status": "primary_reference"
+    },
+    {
+      "original_relative_path": "Paper/Chinese_med.bib",
+      "retained_destination": "archive/manuscripts/research_paper/Chinese_med.bib",
+      "sha256": "e003a718454304c6166b49cdf883246a05f52c16d477c0ab79d2dd358314f8a2",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/Chinese_med.bib",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/P1_pathologies.png",
+      "retained_destination": "archive/manuscripts/research_paper/P1_pathologies.png",
+      "sha256": "d321f2eac950b11294ab5c18c8fe8addc23d38d2b53151f7e6928b7c9aadfb30",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/P1_pathologies.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/P2_network_response.png",
+      "retained_destination": "archive/manuscripts/research_paper/P2_network_response.png",
+      "sha256": "93cc6b9199d6d5cd81613473c563529b379925ca8cd02f64ca89e95106504e64",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/P2_network_response.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/P3_consistency_region.png",
+      "retained_destination": "archive/manuscripts/research_paper/P3_consistency_region.png",
+      "sha256": "26b0a07e93e13913147927f699578d4808d20554df6303e653cf0eda138a1e5d",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/P3_consistency_region.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/P4_critical_mode.png",
+      "retained_destination": "archive/manuscripts/research_paper/P4_critical_mode.png",
+      "sha256": "dfa44f00da504ffc24ab7e629409508e141ee2802f217fba4a26e507c18ee91d",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/P4_critical_mode.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/P5_bistability.png",
+      "retained_destination": "archive/manuscripts/research_paper/P5_bistability.png",
+      "sha256": "be518e534954342920d8f951b10561d73cd27fe5bd69cb66d4118ae5b44bdf6a",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/P5_bistability.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/WuXing.pdf",
+      "retained_destination": "archive/manuscripts/research_paper/WuXing.pdf",
+      "sha256": "f628ecfc958e96a0e4deea95be5ff5e2e3b5454fa9465f3d841fafdecf953ff0",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/WuXing.pdf",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/WuXing.tex",
+      "retained_destination": "archive/manuscripts/research_paper/WuXing.tex",
+      "sha256": "753fb0f777669e347a620bc856d756640a1ccdf2176b274910cb800e11c1d3d0",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/WuXing.tex",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig1_eigenvalues.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig1_eigenvalues.png",
+      "sha256": "c867fb1b871b253f83a4bbc869e91d6f9bebc5d9ac32d63f8c13caf086444987",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig1_eigenvalues.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig2_perturbation.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig2_perturbation.png",
+      "sha256": "dfaacc4f46441f67c218043da36051fc0f54eff8bce50c6cdc8dd33fde92642b",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig2_perturbation.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig3_perturbation_all_organs.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig3_perturbation_all_organs.png",
+      "sha256": "620f03ce2eb27c05a0cd156e0a4d6d96b61b1f17861ebca1244c14e81134d925",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig3_perturbation_all_organs.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig3_stability_maps.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig3_stability_maps.png",
+      "sha256": "d3674a05c4a86cfe23166a7699fedfddff2dc9c560126e49ed97ca1bb4fa85f1",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig3_stability_maps.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig4_random_sampling.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig4_random_sampling.png",
+      "sha256": "0a9569984b10fed79c3d5c919bd56a8f86aa9ba9c851fdc8454382b9fa318597",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig4_random_sampling.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig4_stability_maps.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig4_stability_maps.png",
+      "sha256": "9cf3525dc488340f4bbc325c269e4c5ab044eac62d8364279ac0a1f3b29fd6f8",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig4_stability_maps.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig5_regime_maps_multiIC.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig5_regime_maps_multiIC.png",
+      "sha256": "a10e41cfe8a3aeaea6ab201b0b176705074a0b2d6cf00907d99d775d64e3660f",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig5_regime_maps_multiIC.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig6_sampling_comparison.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig6_sampling_comparison.png",
+      "sha256": "5c84828b2c8a8734a03a8cb76b9545f63ae148c5821ec5caba6113c7878fcec4",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig6_sampling_comparison.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig7_regime_breakdown.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig7_regime_breakdown.png",
+      "sha256": "ff41c539b4e1dc155dc50567ddee04fb6ed9bde56da689edad991c2662480709",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig7_regime_breakdown.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/fig8_child_term_ablation.png",
+      "retained_destination": "archive/manuscripts/research_paper/fig8_child_term_ablation.png",
+      "sha256": "46db4f0e0e9d3a1e33353180b36e6ba6b4eece9fe06b020aba1668bcc9788272",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/fig8_child_term_ablation.png",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/network.bib",
+      "retained_destination": "archive/manuscripts/research_paper/network.bib",
+      "sha256": "f514a9490dd1496ad8223746d0bb18c5d0727ff2ad5ad194f620b272d737137c",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/network.bib",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/wuxing_paper.bbl",
+      "retained_destination": "archive/manuscripts/research_paper/wuxing_paper.bbl",
+      "sha256": "251002d497f10330a1f980630b6bdbb5737c96929932ff98c3e226c929f74758",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/wuxing_paper.bbl",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/wuxing_paper.pdf",
+      "retained_destination": "archive/manuscripts/research_paper/wuxing_paper.pdf",
+      "sha256": "f25d4d00f2f52e56882d253cbbcd2f928e9554631ec1bf42da60752af69fbff5",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/wuxing_paper.pdf",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "Paper/wuxing_paper.tex",
+      "retained_destination": "archive/manuscripts/research_paper/wuxing_paper.tex",
+      "sha256": "2eff304f3ffe1064accba0ab6557fee99bb5597dc8fcc564602e6cfee63a8c4a",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/Paper/wuxing_paper.tex",
+      "status": "historical_manuscript_asset"
+    },
+    {
+      "original_relative_path": "code/WuXing_Colab.ipynb",
+      "retained_destination": "archive/historical_notebooks/WuXing_Colab.ipynb",
+      "sha256": "f98138c64c95238b1e1e1b44eaa7b6f7b29c1d879d95a642115acb10dcf08248",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/WuXing_Colab.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/WuXing_Commented2.ipynb",
+      "retained_destination": "archive/historical_notebooks/WuXing_Commented2.ipynb",
+      "sha256": "c4310a860fc407f4d966398414a53976bf1476927d71f24cb8af11aca08bc8bc",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/WuXing_Commented2.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/WuXing_Master.ipynb",
+      "retained_destination": "archive/historical_notebooks/WuXing_Master.ipynb",
+      "sha256": "734181c11115af39a3e8c709daf5c119a31e8391cb399e6a562bb02ae8fc1860",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/WuXing_Master.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/WuXing_OrderedSampling.ipynb",
+      "retained_destination": "archive/historical_notebooks/WuXing_OrderedSampling.ipynb",
+      "sha256": "d3d84e3997c2ed4ce268da330dc47745e2c3768a51d6728f2302e9f94b6b1854",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/WuXing_OrderedSampling.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/WuXing_Stability_Comparison.ipynb",
+      "retained_destination": "archive/historical_notebooks/WuXing_Stability_Comparison.ipynb",
+      "sha256": "1340c1a2ab8496f443fe8741c9da9203682410e511a65d512afc01ef544d278a",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/WuXing_Stability_Comparison.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/Yunjiao Wang's Zoom Meeting 2026-08-30 16:21(GMT-5:00).txt",
+      "retained_destination": "archive/historical_notebooks/Yunjiao Wang's Zoom Meeting 2026-08-30 16:21(GMT-5:00).txt",
+      "sha256": "bc672d519486a23be5dc5bd1415da1ad76d4506b01dd65246a4df824054c7004",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/Yunjiao Wang's Zoom Meeting 2026-08-30 16:21(GMT-5:00).txt",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/code_for_stability.ipynb",
+      "retained_destination": "archive/historical_notebooks/code_for_stability.ipynb",
+      "sha256": "8541ac355b02f64dc8c15a941c8d9283edb5b0d4299aa75037b45a91e285fb28",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/code_for_stability.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/commented.ipynb",
+      "retained_destination": "archive/historical_notebooks/commented.ipynb",
+      "sha256": "4e00a236493f966dfff35f951e78d88fc6906a1458e78fdbe8a9ce83b658705f",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/commented.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/comments.ipynb",
+      "retained_destination": "archive/historical_notebooks/comments.ipynb",
+      "sha256": "37409cdd909a2a317ec0fada47f98de0d94c13c24867a474a0276b4e24fbd327",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/comments.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "code/stabilitycode.ipynb",
+      "retained_destination": "archive/historical_notebooks/stabilitycode.ipynb",
+      "sha256": "bbda4ae2288d35012d3d2fcd8873916720645dd049bbad37b2fb6840c854c5de",
+      "source": "/Users/carterfeng/Documents/Research/WuXing/code/stabilitycode.ipynb",
+      "status": "historical_notebook"
+    }
+  ]
+}

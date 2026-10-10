@@ -1,0 +1,17 @@
+{
+  "summary.json": {
+    "byte_identical": true,
+    "json_equal": true,
+    "sha256": "fd4a86eb603ae66e1532d7f2bfe99ae51afed896aa9db0c5cb27c98d1a0417ea"
+  },
+  "exact_results.json": {
+    "byte_identical": true,
+    "json_equal": true,
+    "sha256": "03b86e2e1c5105a38e3237b3dfca10c030a31cc03dab63c167b5380b58c7f819"
+  },
+  "numerical_results.json": {
+    "byte_identical": true,
+    "json_equal": true,
+    "sha256": "6cd8a2aae099594e2fa20c71492bd72eae46520626974960952f331549602f30"
+  }
+}

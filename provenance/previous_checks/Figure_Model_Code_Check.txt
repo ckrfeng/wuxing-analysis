@@ -1,0 +1,51 @@
+FIGURE AND CODE CHECK: NONNEGATIVE MODELS
+Revised October 4, 2026
+
+Canonical model retained for Section 4: DM_(5,2)
+  dx_i/dt = a*x_i - k*x_i^2 + c*x_(i-1)/(1+x_i)
+            - g*x_i/(1+x_(i+2)) - h*x_i*x_(i-2).
+Indices wrap modulo five. Parameter order: (a,k,c,g,h).
+Baseline: (2,0.5,1,0.5,0.3).
+At x_i=0, the derivative is c*x_(i-1)>=0 on the nonnegative domain.
+The exact equation preserves nonnegative states. Solvers have finite error.
+
+canonical_model.py contains only this model, its positive synchronous
+balances, its Jacobian, and a baseline calculation. canonical_model.ode
+contains the same five expanded equations for XPPAUT.
+
+Fresh checks on this version:
+250 random-state Jacobian checks: maximum error 7.11e-15.
+Boundary identity checks: exact agreement in these evaluations.
+Expanded XPPAUT equations: maximum discrepancy 1.43e-14.
+Both baseline disturbance simulations completed, stayed positive, and
+returned to balance. The tested approach-to-zero trajectory remained positive.
+These checks do not constitute a full XPPAUT application run.
+
+Retained historical figure provenance:
+A: Sheng/Ke wiring diagram, not a numerical simulation.
+B-D: six-term Lin literature-model reproductions.
+E-G: the five-term canonical model compared with six-term Lin.
+P4: the canonical model's Fourier stability calculations.
+P5: the canonical model's synchronous bistability example.
+The modified-model equations are unchanged across these retained analyses;
+parameter choices vary and must remain in captions.
+
+Lin is retained as the Section 3 comparator. Its vector field has a factor
+x_i in every component, so it also preserves nonnegative states while a
+solution exists. Boundedness and stability are separate questions.
+The new theoretical ZIP's five-term MB comparator differs from Lin; old
+Lin comparison plots cannot be relabeled as DM-versus-MB results.
+
+Scope of verification:
+The original retained equation, equilibrium and Jacobian functions were
+checked directly against independent calculations. Historical linked image
+files were not supplied; code provenance does not certify every past export.
+The revised package retains the verified regenerated figures and results.
+
+Qualifications retained for the write-up:
+- Report local stability of the specified synchronous equilibrium.
+- Give parameter ranges, sampling assumptions, and percentage denominators.
+- P4's c=1 slice ending at h=2 does not reach its crossing near h=2.3718.
+- A spectral crossing alone does not establish a nondegenerate Hopf bifurcation.
+- P5's scalar threshold is for equal-component starts.
+- Heuristic peak counts or irregular plots do not establish chaos.

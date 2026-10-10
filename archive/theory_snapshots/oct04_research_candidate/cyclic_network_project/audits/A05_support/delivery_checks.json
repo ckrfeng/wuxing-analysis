@@ -1,0 +1,29 @@
+{
+  "source_status": "unchanged P05 v1.0 DRAFT",
+  "original_archive_sha256": "e82f95c958744643ca54ddc06fdd0e3e30c47e8e577ed7b15909a4337c500f5e",
+  "original_archive_members": 87,
+  "all_original_member_bytes_preserved": true,
+  "required_inputs_authenticated": 19,
+  "p05_line_ledger_complete": true,
+  "p05_line_ledger_ranges": 46,
+  "audit_is_standalone": true,
+  "compile": {
+    "tool": "Codex desktop compile_latex_document",
+    "result": "success",
+    "message": "The current source compiled successfully with the desktop editor compiler.",
+    "pdf_exported": false
+  },
+  "verdicts": {
+    "CORE": "MINOR REVISION",
+    "REALIZABILITY": "VERIFIED",
+    "OVERALL": "MINOR REVISION"
+  },
+  "required_corrections": [
+    "E01: clarify that mode zero belongs to the candidate set, not necessarily the selected set"
+  ],
+  "nonblocking_provenance": [
+    "U01: historical P05_validation_support.zip not supplied; new checks are independent"
+  ],
+  "later_proofs_begun": false,
+  "project_status_files_changed": false
+}

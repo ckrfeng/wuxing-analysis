@@ -1,0 +1,1092 @@
+% A10 INDEPENDENT AUDIT ONLY; 2026-10-03.
+% Audited P10 v1.0 full-file SHA-256:
+% a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07
+% All six layer verdicts and OVERALL VERDICT: VERIFIED.
+% Required corrections: none. No P10 lifecycle promotion is performed here.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setcounter{LTchunksize}{200}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\newcommand{\one}{\mathbf1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\Imm}{\operatorname{Im}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\lin}[1]{P10 lines #1}
+\newcommand{\pass}{\textbf{PASS}}
+\newcommand{\verified}{\textbf{VERIFIED}}
+\title{A10: Independent Adversarial Audit\\Positive Saddle-Node and Stable Coexistence}
+\author{Directed Cyclic Networks research project}
+\date{3 October 2026 \quad Exact audited version: P10 v1.0}
+\begin{document}
+\maketitle
+\begin{tabular}{@{}p{0.76\textwidth}l@{}}
+\toprule
+FOLD GEOMETRY / SPECTRUM VERDICT: & \verified\\
+FULL-SYSTEM SADDLE-NODE VERDICT: & \verified\\
+BRANCH STABILITY / BISTABILITY VERDICT: & \verified\\
+COEXISTENCE SET / COUNTEREXAMPLE VERDICT: & \verified\\
+BASIN / MANIFOLD VERDICT: & \verified\\
+SCOPE / DEPENDENCY VERDICT: & \verified\\
+\midrule
+OVERALL VERDICT: & \verified\\
+\bottomrule
+\end{tabular}
+
+\textbf{Required corrections: none.} No mathematical or scope-changing wording
+issue was found in the exact authenticated source. All 707 source lines are
+covered by the range ledger below. This verdict rests on independent
+analytical reconstruction, including the real transverse implicit-function
+argument and the full local two-basin cap-exit proof. Neither the supplied
+validation package nor this audit's finite computations is used as proof.
+
+\textbf{Strongest verified conclusion.} For every canonical $a>k+h$ and every
+admissible $(n,q)$, the positive fold is a nondegenerate full-system
+saddle-node with a simple uniform zero and strictly stable transverse
+spectrum. Sufficiently below the fold, the origin and upper positive
+equilibrium are local exponential sinks, while the lower equilibrium is an
+index-one saddle. This configuration persists openly in all five physical
+parameters. Near that saddle, its stable disk is exactly the common boundary,
+relative to a sufficiently small positive neighborhood, of the two sink
+basins. The global synchronous-ray threshold also holds throughout the
+two-positive-root interval. No full global basin classification follows.
+
+This audit does not edit P10, its draft archive, or any project lifecycle
+record. P10 remains DRAFT pending administrative closure in its original
+development chat. No P11 proof or literature survey is undertaken.
+
+\section{Current-file authentication and dependency contract}
+\label{sec:auth}
+The manifest's final CURRENT P10 entry selects
+\path{proofs/P10_saddle_node_and_bistability.tex}, version P10 v1.0,
+with the full-file hash below. The exact file has 32,560 bytes and 707 lines.
+The audit uses the complete draft archive and matching working project at
+\path{output/p10/cyclic_network_project/}, not an earlier placeholder.
+
+\begin{description}[leftmargin=0pt,labelwidth=0pt,itemindent=0pt]
+\item[Audited full-file SHA-256:]
+\leavevmode\\\nolinkurl{a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07}
+\item[Mathematical body SHA-256, line 19 through EOF:]
+\leavevmode\\\nolinkurl{5cfd8afb91b7f23575e1b4bd9c7c28f3b433affefae9bb0d5f7700d030fcba81}
+\item[Original P10 draft ZIP SHA-256:]
+\leavevmode\\\nolinkurl{a3b8ba33e16095a8880637bdfe74a2fcb2e26bcc1ada8d941efe85cbccf5c42e}
+\item[Authenticated P09-audited baseline ZIP SHA-256:]
+\leavevmode\\\nolinkurl{db6344c5ed7c96f244f99eefa589ae8631c3aaf15278577e607e246026b22bf2}
+\end{description}
+
+Both existing P10 draft ZIP copies are byte-identical. ZIP CRC checks pass;
+all 176 files have the sole root \path{cyclic_network_project/} and match the
+working copy byte-for-byte. Relative to the authenticated P09-audited archive,
+exactly five members differ: P10, manifest, registry, compendium source and
+compendium PDF. No baseline member is removed or added.
+
+All ten requested control files and all P01--P05, P07--P09 and matching
+audit sources A01--A05, A07--A09 are present. They are inventoried with complete
+hashes, sizes and line counts in \path{A10_support/input_inventory.json}.
+The open-decisions record was also authenticated for the B03 scope history.
+All eight prerequisite mathematical-body hashes match their current headers,
+and every prerequisite proof/audit is byte-identical to the P09-audited
+baseline. A01/A02 E01 and A05/A08 E01 are already closed. A03/A04/A07/A09
+require no correction. A02's historical missing-source header is superseded
+by its recorded source-restoration closure; the actual source is present.
+A04/A05 historical numerical-provenance limitations remain unchanged and
+nonblocking. Historical DRAFT/TODO text does not supersede the current
+manifest and closure records.
+
+\subsection{Actual inputs, rather than header declarations alone}
+The dependency map retains exactly
+\[
+ \mathrm{P02},\mathrm{P03},\mathrm{P04},\mathrm{P09}\longrightarrow\mathrm{P10},
+ \qquad\mathrm{P01}\text{ inherited}.
+\]
+P02 supplies invariant synchrony, the scalar equation, root labels and
+algebraic fold locus. P03 supplies the original Jacobian and origin spectrum.
+P04 supplies Fourier phases, complete labeled spectrum, multiplicities,
+normality and linearized stability implications. P09 supplies identification
+of the origin branch and the cubic-degenerate limit. P01 supplies the smooth
+flow, uniqueness, orthant invariance and global nonnegative existence and
+boundedness. The real IFT, hyperbolic persistence, smooth stable/unstable
+manifold theorem and ordinary linearized stability are standard local tools.
+The invariant center manifold is exhibited explicitly; it is not obtained
+from a forbidden project module.
+
+P05/P07/P08 are authenticated context only. Every P10 assertion was checked
+without their selection/comparison results. References to P11 are future
+scope pointers, not mathematical premises or additions to the frozen DAG.
+The frozen S4 supporting role permits stable coexistence and excludes a
+complete global basin claim; P10's explicit local theorem respects that
+boundary. Claim rows C070/C071 and P10-D1--D10 are DRAFT, with C147 refuted
+only in its universal origin/upper-coexistence interpretation. No novelty
+verdict is changed.
+
+\section{Layer A: fold geometry and complete spectrum}
+\label{sec:A}
+\subsection{Original restriction, notation and exact roots (checks 3--5)}
+From the canonical field
+\begin{equation}
+ F_i(x)=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+       -\frac{g x_i}{1+x_{i+q}}-h x_i x_{i-q},
+ \label{eq:original}
+\end{equation}
+substitute $x=r\one$, $r>-1$. All five terms must be retained even when
+neighbor offsets coincide. Each component equals
+\[
+ f(r,g)=ar-(k+h)r^2+\frac{(c-g)r}{1+r}
+       =\frac r{1+r}\{\mu+br-Ar^2\},
+ \quad A=k+h,\quad b=a-A,\quad\mu=a+c-g.
+\]
+Thus synchrony is invariant by uniqueness. With $b>0$,
+\[
+ g_f=a+c+\frac{b^2}{4A}
+     =c+\frac{(a+A)^2}{4A},\qquad
+ r_f=\frac b{2A},\qquad s_f=1+r_f=\frac{a+A}{2A}.
+\]
+The second expression for $g_f$ follows from
+$4Aa+(a-A)^2=(a+A)^2$; also $g_f-g_c=b^2/(4A)>0$.
+P02's amplitudes $s_\pm$ are P10's $r_\pm$. P02's fold amplitude
+$s_f$ is P10's $r_f$, whereas P10's $s_f$ is the denominator.
+The source reconciles these explicitly in lines 31--36; no formula imports
+the wrong meaning.
+
+Let $u=r-r_f$ and $\nu=g_f-g$. Since
+$\mu=\nu-b^2/(4A)$, $br_f-Ar_f^2=b^2/(4A)$ and $b-2Ar_f=0$,
+\begin{align}
+ \mu+b(r_f+u)-A(r_f+u)^2&=\nu-Au^2,\\
+ \dot u&=\frac{r_f+u}{s_f+u}(\nu-Au^2).
+ \label{eq:exact}
+\end{align}
+These are identities, not approximations. On $|u|<r_f/2$, neither prefactor
+vanishes. For $\nu<0$ the polynomial is negative for every real $u$, so there
+is no nonzero synchronous equilibrium, including near the fold. At $\nu=0$
+there is one repeated positive root. For $\nu>0$ the two distinct roots are
+$r_\pm=r_f\pm\sqrt{\nu/A}$; they are both positive exactly when
+$0<\nu<A r_f^2=b^2/(4A)$. A sufficiently small positive $\nu$ places both
+inside the chosen state neighborhood. The ever-present origin is excluded
+by that neighborhood; it is not removed from the full system.
+
+\subsection{Physical fold identity and phase signs (checks 6--7)}
+Differentiating \eqref{eq:original} coordinate by coordinate at synchrony gives
+\[
+ d=a-2kr-\frac{cr}{(1+r)^2}-\frac g{1+r}-hr,\quad
+ C=\frac c{1+r},\quad G=\frac{gr}{(1+r)^2},\quad H=hr.
+\]
+For $(Pz)_j=z_{j-1}$, the $i-1$ input is $CP$, the $i+q$ loss derivative is
+$+GP^{-q}$, and the $i-q$ bilinear derivative is $-HP^q$. Thus
+\[
+ J=dI+CP+GP^{-q}-HP^q,
+ \qquad \lambda_m=d+Ce^{-\ii\theta_m}
+                 +Ge^{\ii q\theta_m}-He^{-\ii q\theta_m},
+ \quad\theta_m=2\pi m/n.
+\]
+The sign on $G$ is positive because differentiating the reciprocal loss
+denominator reverses its sign. The imaginary $H$ contribution is positive
+because $-H$ multiplies a negative sine. Offset collisions add coefficients.
+
+The decisive fold identity follows directly from physical values:
+\[
+ g_f=c+A s_f^2,\qquad
+ \frac{g_f}{s_f^2}-h=A-h+\frac c{s_f^2}=k+\frac c{s_f^2}>0.
+\]
+Multiplying by $r_f>0$ proves
+\[
+ \boxed{G_f-H_f=r_f\left(k+\frac c{s_f^2}\right)
+ =r_f\left(k+\frac{4A^2c}{(a+A)^2}\right)>0.}
+\]
+At a nonzero equilibrium $f_r=r(b-2Ar)/(1+r)$; hence
+$\lambda_0^f=f_r(r_f,g_f)=0$ and $d_f=-C_f-G_f+H_f$. Subtracting this row
+sum gives
+\begin{align*}
+ \Ree\lambda_m^f&=C_f(\cos\theta_m-1)
+             +(G_f-H_f)(\cos(q\theta_m)-1),\\
+ \Imm\lambda_m^f&=-C_f\sin\theta_m+(G_f+H_f)\sin(q\theta_m).
+\end{align*}
+
+\subsection{Automatic gap and simple zero (checks 8--9)}
+For $1\le m<n$, $j=\min(m,n-m)$ satisfies
+$2\pi j/n\in[2\pi/n,\pi]$. Cosine is decreasing there, so
+\[
+ \cos\theta_m\le\cos(2\pi/n)<1,\qquad \cos(q\theta_m)\le1.
+\]
+Consequently
+\[
+ \Ree\lambda_m^f\le-\delta_f<0,\qquad
+ \delta_f=\frac c{s_f}\{1-\cos(2\pi/n)\}.
+\]
+For odd $n$ the last angle is below $\pi$; for even $n$ it may equal $\pi$.
+Both cases obey the same inequality. At $q=1$ or $q=n-1$, combined shifts
+still have the displayed spectrum. At even $n$, $q=n/2$, the two $q$ shifts
+coincide but their difference is retained. If $\gcd(n,q)>1$, some nonuniform
+labels can have $\cos(q\theta_m)=1$; the strictly negative first term still
+provides the entire margin. No coprimality assumption is needed.
+
+The unitary Fourier matrix has $n$ independent columns and diagonalizes $J_f$.
+Exactly one diagonal entry is zero and all others have negative real part.
+Thus zero is the only imaginary-axis eigenvalue, has algebraic and geometric
+multiplicity one, and has real eigenspace $\operatorname{span}\{\one\}$.
+Coincidences among stable numerical eigenvalues do not change this conclusion.
+The gap is positive for each fixed $n$; it need not remain bounded below as
+$n\to\infty$. \textbf{FOLD GEOMETRY / SPECTRUM VERDICT: VERIFIED.}
+
+\section{Layer B: full-system saddle-node}
+\label{sec:B}
+\subsection{Real transverse IFT and equilibrium completeness (checks 10--11)}
+Take $v=\one$, $w^{\mathsf T}=n^{-1}\one^{\mathsf T}$,
+$E=\ker w^{\mathsf T}$ and $\Pi_\perp=I-vw^{\mathsf T}$. Then
+$x=r\one+y$ is a unique decomposition with $y\in E$. Every circulant row
+sum and column sum is $d+C+G-H$, so $J_f E\subset E$. The complexification
+of $E$ is spanned by the nonuniform Fourier vectors. Its spectrum is strictly
+left, so its real restriction $B_f=J_f|_E$ is invertible: any real kernel
+vector would also lie in the zero complex kernel, and injectivity in finite
+dimension implies surjectivity.
+
+For $T(r,y,g)=\Pi_\perp F(r\one+y,g)$,
+$D_yT(r_f,0,g_f)=\Pi_\perp J_f|_E=B_f$. The real IFT gives open
+neighborhoods $I_r,I_g,U_E$ and one smooth $\psi:I_r\times I_g\to U_E$,
+with $T=0$ in their product if and only if $y=\psi(r,g)$. Choose $U_E$
+containing zero and shrink the parameter product if necessary. Synchrony
+supplies $T(r,0,g)=0$ for every pair in that same product. Uniqueness therefore
+forces $\psi(r,g)=0$ for every pair, not just at the fold.
+
+Every nearby full equilibrium solves $T=0$, hence has $y=0$. Its remaining
+mean equation is $f(r,g)=0$; for the selected $r>0$, this is exactly
+$\nu-Au^2=0$. Conversely its roots do solve all components. A state ball
+around $r_f\one$ times a small $g$ interval fits inside the product. This
+proves local completeness and excludes hidden nonsynchronous equilibria.
+
+\subsection{Nullvectors and original-field derivatives (checks 12--14)}
+Each shift has both row and column sum one. Therefore
+\[
+ J_fv=0,\qquad w^{\mathsf T}J_f=0,\qquad w^{\mathsf T}v=1.
+\]
+Holding $a,k,c,h$ fixed in \eqref{eq:original},
+$(F_g)_i=-x_i/(1+x_{i+q})$, hence
+\[
+ \alpha_{\rm SN}=w^{\mathsf T}F_g=-r_f/s_f<0.
+\]
+For $g=g_f-\nu$, $F_\nu=-F_g$ and the coefficient is $+r_f/s_f$.
+
+Along $x=(r_f+t)\one$ the original terms have second derivatives
+\[
+ 0,\quad-2k,\quad-2c/s_f^3,\quad+2g_f/s_f^3,\quad-2h.
+\]
+In particular $d^2(r/(1+r))/dr^2=-2/(1+r)^3$ establishes both rational
+terms independently. Their sum is
+\[
+ -2(k+h)+\frac{2(g_f-c)}{s_f^3}
+ =-2A+\frac{2A}{s_f}=-\frac{2Ar_f}{s_f}.
+\]
+It is the same in each of the $n$ components. The mean $w^{\mathsf T}$
+therefore introduces no additional $n$ factor. The full contraction and
+half-Taylor coefficient are respectively
+\[
+ w^{\mathsf T}F_{xx}[v,v]=-\frac{2Ar_f}{s_f},\qquad
+ \beta_{\rm SN}=\frac12w^{\mathsf T}F_{xx}[v,v]
+              =-\frac{Ar_f}{s_f}<0.
+\]
+These computations retain all original terms at every offset collision.
+
+\subsection{Extended center dynamics and time orientation (checks 15--18)}
+In $(u,y,\nu)$ coordinates for $(\dot x,\dot\nu)=(F(x,g_f-\nu),0)$,
+$F_\nu=(r_f/s_f)\one$ at the fold, its transverse projection vanishes,
+and $w^{\mathsf T}J_f=0$. The linearization is consequently
+\[
+ L=\begin{pmatrix}
+ 0&0&r_f/s_f\\
+ 0&B_f&0\\
+ 0&0&0
+ \end{pmatrix}.
+\]
+On the $(u,\nu)$ plane it is a nonzero nilpotent block with a double
+algebraic zero and one-dimensional kernel. This is the \emph{extended}
+zero multiplicity; the fixed-parameter Jacobian still has a simple zero.
+The generalized center space is exactly $y=0$. Unlike P09 at the origin,
+the parameter derivative here does not vanish.
+
+The set $y=0$ with variable $(u,\nu)$ is smooth and invariant by synchrony
+and $\dot\nu=0$, and is tangent to the whole generalized center space.
+It is thus an exact local two-dimensional center manifold. At fixed $\nu=0$
+its state slice is the exact one-dimensional center manifold. This uses
+invariance and tangency, not equilibrium reduction alone. Its restriction
+is \eqref{eq:exact} together with $\dot\nu=0$.
+
+For $|u|<r_f/2$,
+\[
+ \frac{r_f+u}{s_f+u}\ge\frac{r_f/2}{1+3r_f/2}>0.
+\]
+Thus $d\tau/dt=(r_f+u)/(s_f+u)$ is smooth and orientation preserving,
+and division yields exactly
+\[
+ \frac{du}{d\tau}=\nu-Au^2,\qquad\frac{d\nu}{d\tau}=0.
+\]
+Simple fixed-parameter zero, stable complement, nonzero $\alpha_{\rm SN}$
+and $\beta_{\rm SN}$, local equilibrium completeness, and this exact center
+dynamics jointly justify the nondegenerate full-system saddle-node label.
+The side $g>g_f$ has no equilibria in the fold neighborhood; $g=g_f$ has
+a repeated reduced root; $g<g_f$ sufficiently close has precisely two positive
+equilibria. ``Double equilibrium'' here does not assert a double eigenvalue
+of the fixed-parameter Jacobian. The normal form does not decouple the entire
+nonlinear system globally.
+
+\subsection{The fold itself is not a sink (check 19)}
+At $\nu=0$ write $q(u)=(r_f+u)/(s_f+u)>0$. Then
+$\dot u=-Aq(u)u^2$. Small $u>0$ decreases to zero, by monotonicity and
+uniqueness; small $u<0$ decreases away from zero. On a fixed compact negative
+interval, $q\ge q_*>0$, so $v=-u$ satisfies $\dot v\ge Aq_*v^2$ until
+exit. Arbitrarily small negative initial perturbations exit a prescribed
+small neighborhood in finite time. They lie within the positive orthant for
+a sufficiently small neighborhood. Thus the fold is not Lyapunov stable,
+and in particular is not locally asymptotically stable in the open state
+space. \textbf{FULL-SYSTEM SADDLE-NODE VERDICT: VERIFIED.}
+
+\section{Layer C: branch stability and open coexistence}
+\label{sec:C}
+\subsection{Whole-interval uniform signs (checks 20--21)}
+For $g_c<g<g_f$,
+\[
+ \Delta^2=b^2+4A(a+c-g)=4A(g_f-g),\qquad 0<\Delta<b,
+ \qquad r_\pm=\frac{b\pm\Delta}{2A}>0.
+\]
+Therefore $b-2Ar_\pm=\mp\Delta$. At the roots the polynomial factor
+in $f$ vanishes, so differentiation leaves only
+$f_r=r(b-2Ar)/(1+r)$. Hence
+\[
+ \lambda_0(r_-)=\frac{r_-\Delta}{1+r_-}>0,\qquad
+ \lambda_0(r_+)=-\frac{r_+\Delta}{1+r_+}<0.
+\]
+These signs are valid on the entire open interval, not merely asymptotically
+near the fold. The lower equilibrium is nonlinearly unstable even if another
+mode happens to be nonhyperbolic; a strictly positive eigenvalue suffices.
+A loss of upper stability within this interval cannot be a uniform-mode loss.
+
+\subsection{Finite-label persistence and dimensions (checks 22--24)}
+Every labeled $\lambda_m(r,g)$ is smooth near $(r_f,g_f)$, and there are
+only finitely many labels for fixed $n$. Intersect their neighborhoods so
+$|\Ree\lambda_m(r,g)-\Ree\lambda_m^f|<\delta_f/2$ for $m\ne0$.
+Both $r_\pm(\nu)$ are continuous at $\nu=0$; differentiability in $\nu$
+is not required. Some $\varepsilon_{\rm sp}>0$ therefore puts both branches
+in this common neighborhood for $0\le\nu<\varepsilon_{\rm sp}$, with
+\[
+ \Ree\lambda_m(r_\pm,g_f-\nu)<-\delta_f/2\quad(m\ne0).
+\]
+Shrink the interval to preserve root positivity. For $\nu>0$ there is exactly
+one positive eigenvalue on the lower branch, the uniform one. It is simple
+because every other label is strictly stable. There are $n-1$ stable real
+dimensions and one unstable real dimension. Each nonreal conjugate pair
+contributes two real dimensions, as do two stable labels with coinciding
+real eigenvalue; multiplicity is not discarded. The upper branch is Hurwitz,
+hence locally exponentially stable. No maximizing-mode theorem is involved.
+
+\subsection{Origin, parameter openness and meaning of bistability (checks 25--28)}
+Directly at the origin $J(0)=(a-g)I+cP$, so
+\[
+ \Ree\lambda_m(0)=a+c-g-c(1-\cos\theta_m)
+ \le g_c-g<0.
+\]
+This is independent of $q$ and proves exponential stability throughout the
+whole two-positive-root interval, in the local open extension and relative
+to the invariant nonnegative orthant. Choose any
+$0<\varepsilon<\min\{\varepsilon_{\rm sp},b^2/(4A)\}$.
+The interval $(g_f-\varepsilon,g_f)$ is nonempty, lies above $g_c$, and has
+the origin sink, lower index-one saddle and upper sink simultaneously.
+
+At a strict witness each Jacobian is invertible and hyperbolic, and the three
+equilibria are distinct. The IFT continues them smoothly under changes in
+$(a,k,c,g,h)$. The origin remains exactly zero. The two positive roots are
+also explicit smooth functions because their discriminant is strictly
+positive, so local uniqueness identifies these with the IFT continuations.
+After shrinking a parameter neighborhood, root separation, root positivity,
+coefficient positivity, $a>k+h$, $g_c<g<g_f$ and all strict spectral signs
+persist. This is an open set in the five-dimensional physical parameter
+space for each fixed $(n,q)$, not merely an open segment in $g$.
+Dependence of its size on $(n,q)$ is expressly allowed.
+
+P10 defines bistability as coexistence of at least two locally stable
+equilibria. Its statements are consistent with that definition: they neither
+count all attractors nor exclude periodic or other invariant attracting sets.
+\textbf{BRANCH STABILITY / BISTABILITY VERDICT: VERIFIED.}
+
+\section{Layer D: exact coexistence set and counterexample}
+\label{sec:D}
+\subsection{Openness and the two directions of exactness (checks 29--30)}
+Let
+\[
+ \mathcal D=\{(a,k,c,g,h)\in(0,\infty)^5:
+                  a>k+h,\quad g_c<g<g_f\}.
+\]
+It is open since the functions and inequalities are continuous and strict.
+On it $r_+=(b+\sqrt{b^2+4A(a+c-g)})/(2A)$ is smooth: $A>0$, the
+radicand is positive, and $1+r_+>0$. Thus each labeled eigenvalue is smooth.
+The maximum of finitely many continuous real parts is continuous even at
+mode ties, so
+\[
+ \mathcal B_{n,q}=\{\pi\in\mathcal D:
+                 \max_m\Ree\lambda_m(r_+,g)<0\}
+\]
+is open; the near-fold witnesses make it nonempty.
+
+Every member has two local exponential sinks since the origin is Hurwitz
+throughout $\mathcal D$ and so is the upper root on $\mathcal B_{n,q}$.
+For the converse, use the standard meaning of local exponential stability:
+there exist $K,\eta,\delta>0$ such that
+\[
+ \norm{\Phi_t(p+v)-p}\le K e^{-\eta t}\norm v
+ \quad(t\ge0,\ \norm v<\delta).
+\]
+For each fixed $t$, smooth flow dependence gives
+$D\Phi_t(p)=e^{tJ}$. Substitute $v=\epsilon z$, divide by $|\epsilon|$,
+and let $\epsilon\to0$ to obtain
+$\norm{e^{tJ}z}\le K e^{-\eta t}\norm z$ with the same constants for all
+$t\ge0$. The induced semigroup bound implies
+$\max\Ree\operatorname{spec}(J)\le-\eta<0$, for example by spectral
+mapping and the spectral-radius bound on the matrix norm. The upper root is
+interior to the orthant, so a relative exponential estimate also applies to
+an ordinary full ball there. This proves both directions of ``exactly.''
+Nonhyperbolic asymptotically stable boundary points are not classified.
+
+\subsection{The sufficient inequality and its explicit interval (checks 31--32)}
+At any synchronous state subtract the spectral row sum:
+\[
+ \Ree\lambda_m=\lambda_0+C(\cos\theta_m-1)
+                         +(G-H)(\cos(q\theta_m)-1).
+\]
+Here $\lambda_0$ means the uniform row sum; its simplified polynomial-root
+formula is used only at equilibria. On the upper root $\lambda_0<0$.
+If $G\ge H$, the two remaining contributions are nonpositive. For $m\ne0$
+the $C$ term is strictly negative, and for $m=0$ the already negative uniform
+value suffices. Equality $G=H$ is therefore included. Since $r_+>0$,
+$G\ge H$ is equivalent to $g/(1+r_+)^2\ge h$.
+
+Put
+\[
+ M=g_f-hs_f^2=c+ks_f^2>0,\qquad
+ t_* =\min\left\{\frac{r_f}{2},\frac{M}{4hs_f},
+                  \sqrt{\frac{M}{2(A+h)}}\right\}>0.
+\]
+For $0<\nu<At_*^2$ set $t=\sqrt{\nu/A}$, so $0<t<t_*$,
+$g=g_f-At^2$ and $1+r_+=s_f+t$. Direct expansion gives
+\[
+ g-h(1+r_+)^2=M-2hs_ft-(A+h)t^2.
+\]
+The strict inequality $t<t_*\le M/(4hs_f)$ gives
+$2hs_ft<M/2$; likewise $t<t_*\le\sqrt{M/[2(A+h)]}$ gives
+$(A+h)t^2<M/2$. Their sum is strictly less than $M$, so the displayed
+quantity is positive. Moreover,
+\[
+ At_*^2\le\frac{A r_f^2}{4}=\frac{b^2}{16A}
+             <\frac{b^2}{4A}=g_f-g_c.
+\]
+Thus $(g_f-At_*^2,g_f)$ is a nonempty sufficient stable-coexistence interval
+independent of $(n,q)$. This assertion concerns the two sinks only; to
+retain lower index one, intersect it with the previous transverse-persistence
+interval. The source makes that distinction explicitly.
+
+\subsection{Exact six-node witness and all real parts (checks 33--36)}
+For $(n,q)=(6,1)$ and
+$(a,k,c,g,h)=(6,1/10,1/10,101/10,9/10)$,
+\[
+ A=1,\quad b=5,\quad g_c=61/10,\quad g_f=247/20,
+ \quad g-g_c=4>0,\quad g_f-g=9/4>0.
+\]
+The nonzero polynomial is $r^2-5r+4=(r-1)(r-4)$. Direct substitution in
+all original summands gives $f(1,g)=f(4,g)=0$. At $r_+=4$,
+\[
+ (d,C,G,H)=\left(-\frac{109}{250},\frac1{50},
+                  \frac{202}{125},\frac{18}{5}\right),\qquad
+ G-H=-\frac{248}{125}.
+\]
+Since $q=1$, $\Ree\lambda_m=d+(C+G-H)\cos(2\pi m/6)$, and mode $3$
+is real. In label order $m=0,\ldots,5$ the complete real-part lists are
+\begin{align*}
+ r_+=4:&\quad
+ \left(-\frac{12}{5},-\frac{709}{500},\frac{273}{500},
+           \frac{191}{125},\frac{273}{500},-\frac{709}{500}\right),\\
+ r_-=1:&\quad
+ \left(\frac32,\frac{53}{80},-\frac{81}{80},
+          -\frac{37}{20},-\frac{81}{80},\frac{53}{80}\right).
+\end{align*}
+In particular $\lambda_3(r_+)=d-C-G+H=191/125>0$ whereas
+$\lambda_0(r_+)=-12/5<0$: instability is genuinely nonuniform.
+For the lower root the independent coefficients are
+$(d,C,G,H)=(-7/40,1/20,101/40,9/10)$. Its unstable labels are $0,1,5$;
+labels $1,5$ form a real two-dimensional unstable pair, so total unstable
+real dimension is three. The remaining three labels are stable.
+
+This refutes universal upper stability and universal lower index one on the
+whole open interval. It is fully compatible with the near-fold statements.
+It does not establish a crossing type, nonzero frequency at a crossing,
+Hopf bifurcation, periodic orbit, or any other attractor.
+\textbf{COEXISTENCE SET / COUNTEREXAMPLE VERDICT: VERIFIED.}
+
+\section{Layer E: basin thresholds and the local stable disk}
+\label{sec:E}
+\subsection{Global threshold within the synchronous ray (checks 37--38)}
+For every $g_c<g<g_f$ the exact factorization is
+\[
+ f(r,g)=-\frac{Ar}{1+r}(r-r_-)(r-r_+).
+\]
+For positive $r$ the prefactor is negative. Therefore the signs on
+$(0,r_-)$, $(r_-,r_+)$ and $(r_+,\infty)$ are respectively negative,
+positive and negative. Smooth uniqueness prevents crossing an equilibrium.
+P01 supplies global nonnegative solutions and boundedness; here monotonicity
+also gives direct bounds. A solution in $(0,r_-)$ decreases and is bounded
+below by zero; one between the roots increases and stays below $r_+$; one
+above $r_+$ decreases and stays above it. Each has a limit. If $f$ at that
+limit were nonzero, continuity would bound its magnitude away from zero
+with fixed sign near the limit, contradicting convergence. The initial
+strict inequalities exclude the wrong endpoint. Hence
+\[
+\begin{array}{c|c}
+\text{initial amplitude}&\text{limit}\\\hline
+0&0\text{ (constant)}\\
+0<r(0)<r_-&0\\
+r(0)=r_-&r_-\text{ (constant)}\\
+r_-<r(0)<r_+&r_+\\
+r(0)=r_+&r_+\text{ (constant)}\\
+r(0)>r_+&r_+
+\end{array}
+\]
+These are exact full-system solutions by invariance. The conclusion holds
+even where the upper root is transversely unstable and makes no statement
+about nonsynchronous points there.
+
+\subsection{Manifold existence and exact unstable germ (checks 39--41)}
+Fix a near-fold tuple for which $p=r_-\one$ is a hyperbolic index-one saddle
+and both $0$ and $r_+\one$ are sinks. The smooth stable/unstable manifold
+theorem applies in an open neighborhood of $p$ inside the positive orthant.
+Its stable tangent space is $E$ with dimension $n-1$ and its unstable space
+is $\operatorname{span}\{\one\}$ with dimension one.
+
+To establish equality of the unstable germ with synchrony, write
+$s=r-r_-$ on the synchronous line. There
+$\dot s=s(\lambda+\eta(s))$, with $\lambda=f_r(r_-,g)>0$ and
+$\eta(0)=0$. Choose a small interval $|s|<\rho_0$ contained in
+$0<r<r_+$ and with $|\eta|<\lambda/2$. In reverse time $\tau=-t$,
+$|s|$ decreases at least exponentially at rate $\lambda/2$; it stays in
+the interval for all $\tau\ge0$ and tends to zero. The lifted vector
+trajectory has the same property. Thus every point of this synchronous
+interval belongs to the local unstable set. The uniqueness and backward-orbit
+characterization of the unstable manifold, or the local inclusion of two
+one-dimensional embedded manifolds through $p$, makes their germs equal.
+Tangency alone is not the argument.
+
+The left branch stays in $0<r<r_-$ and has forward limit zero; the right
+branch stays in $r_-<r<r_+$ and has forward limit $r_+$. Their negative-time
+limit is $p$. They are therefore synchronous heteroclinic trajectories of
+the original full system. Their forward continuation need not remain inside
+the chosen local saddle chart.
+
+\subsection{A legitimate chart and exact equations (checks 42--45)}
+By the graph form of the stable manifold, in coordinates
+$x=p+s\one+y$, $y\in E$, its germ is $s=\phi(y)$, where
+$\phi(0)=0$ and $D\phi(0)=0$. Define
+\[
+ \xi=s-\phi(y),\quad z=y,\qquad
+ x=p+(\xi+\phi(z))\one+z.
+\]
+The triangular transformation has an explicit smooth inverse on its chart.
+The stable disk becomes $\xi=0$. Since $z=0$ means $y=0$ and
+$\phi(0)=0$, the synchronous unstable segment remains $z=0$.
+At the origin the linearized coordinate transformation is the identity in
+$(s,y)$, so the linear blocks remain $\lambda>0$ and $B=J(p)|_E$.
+
+Let $X(\xi,z)$ denote the transformed $\dot\xi$. Local invariance of the
+stable graph implies $X(0,z)=0$ throughout a small graph domain, not just at
+$z=0$. The fundamental theorem of calculus gives the exact factorization
+\[
+ X(\xi,z)=\xi\int_0^1\partial_\xi X(t\xi,z)\,dt
+         =\xi(\lambda+\alpha(\xi,z)),\qquad\alpha(0,0)=0.
+\]
+Let $Z(\xi,z)$ denote $\dot z$. Invariance of synchrony yields
+$Z(\xi,0)=0$. Therefore with $R=Z-Bz$,
+\[
+ \dot z=Bz+R(\xi,z),\qquad R(\xi,0)=0,\quad D_zR(0,0)=0.
+\]
+On a small product neighborhood with transverse balls, the segment from
+$0$ to $z$ remains in the domain and
+\[
+ R(\xi,z)=\int_0^1D_zR(\xi,tz)z\,dt.
+\]
+Continuity of $D_zR$ thus makes $\norm R\le(\gamma/2)\norm z$ uniform
+over all sufficiently small $\xi$, once $\gamma>0$ is chosen below.
+These are exact local equations, not an unproved linear decoupling.
+
+\subsection{Why the nonsymmetric transverse matrix contracts (check 46)}
+The key point is the \emph{orthonormal} Fourier diagonalization. Let $Q_E$
+contain the nonuniform Fourier columns. Then on the complexification of $E$,
+\[
+ B=Q_E\operatorname{diag}(\lambda_m(p):m\ne0)Q_E^*,\qquad
+ \frac{B+B^*}{2}
+ =Q_E\operatorname{diag}(\Ree\lambda_m(p):m\ne0)Q_E^*.
+\]
+For real $z\in E$, the antisymmetric part has zero quadratic form. With
+$\gamma=-\max_{m\ne0}\Ree\lambda_m(p)>0$ this proves
+\[
+ \langle z,Bz\rangle
+ =\sum_{m\ne0}\Ree\lambda_m(p)\,|(Q_E^*z)_m|^2
+ \le-\gamma\norm z^2.
+\]
+Although $B$ is generally nonsymmetric, normality and the invariant
+orthogonal decomposition justify this Euclidean estimate. A general Hurwitz
+matrix would not justify it. P10 invokes exactly the structure needed.
+
+\subsection{Decay, sign and finite exit (checks 47--49)}
+Shrink the product neighborhood so $|\alpha|<\lambda/2$ and the remainder
+bound holds. Then along trajectories staying there,
+\[
+ \frac d{dt}\norm z^2
+ =2\langle z,Bz\rangle+2\langle z,R\rangle
+ \le-\gamma\norm z^2,
+ \qquad \norm{z(t)}\le e^{-\gamma t/2}\norm{z(0)}.
+\]
+For $\xi(0)\ne0$,
+\[
+ \xi(t)=\xi(0)\exp\!\left(\int_0^t
+       [\lambda+\alpha(\xi(s),z(s))],ds\right).
+\]
+This preserves its sign and gives $|\xi(t)|\ge|\xi(0)|e^{\lambda t/2}$
+while in the chart. For $\xi(0)=0$, uniqueness preserves $\xi=0$.
+
+Choose $\rho>0$ smaller than both $r_-$ and $r_+-r_-$, and small enough
+for $(\pm\rho,0)$ and a compact surrounding product to lie within the
+coordinate domain and the positive orthant. These two points are on the
+synchronous heteroclinic branches and belong to the basins of $0$ and
+$r_+\one$, respectively. Each sink has a local attracting neighborhood.
+For either exit point, convergence puts its orbit in that neighborhood at
+some finite time. Continuous dependence up to that time puts an open
+neighborhood of the exit point in the same basin. P01 gives subsequent
+global nonnegative existence. This proves relative openness of the basins,
+including for the boundary sink at the origin.
+
+Because the exit points themselves are interior to the orthant and their
+basins are relatively open, select $\sigma>0$ sufficiently small that both
+\emph{closed} caps
+$\{(\pm\rho,z):\norm z\le\sigma\}$ lie in the corresponding basins.
+The closure of the entire coordinate box can simultaneously be kept inside
+the chart and positive orthant. The order is to choose the chart, then $\rho$,
+then shrink $\sigma$ for both caps and compact containment.
+
+For $\xi(0)\ne0$ in
+$(-\rho,\rho)\times\{\norm z<\sigma\}$, transverse decay precludes
+exit through the $z$ boundary. Sign preservation selects a unique $\xi$ cap.
+If it had not exited by
+\[
+ T_* =\frac2\lambda\log\frac{\rho}{|\xi(0)|},
+\]
+the growth estimate would force $|\xi(T_*)|\ge\rho$, a contradiction.
+There is no earlier hidden chart exit or finite-time loss of existence:
+up to a box exit the trajectory remains in a compact subset of the smooth
+open domain, and ordinary continuation applies. It therefore reaches the
+signed cap in finite time and subsequently converges to its sink.
+If $\xi=0$, it remains there, $z$ decays to zero, and the full state tends
+to $p$. The stable disk is forward invariant in this selected box.
+
+\subsection{Connected sides and exact relative boundary (checks 50--51)}
+Let $V$ be the image of the open box and let $S$ be the image of its middle
+disk $\xi=0$. The inverse chart proves $V$ is an open neighborhood of $p$;
+$S$ is an embedded codimension-one open disk, relatively closed in $V$.
+The two half-boxes are nonempty and connected, so their images $V_-,V_+$
+are the two connected components of $V\setminus S$.
+The preceding exit proof gives
+\[
+ V_-\subset\mathcal A(0),\qquad V_+\subset\mathcal A(r_+\one),
+ \qquad S\subset\{x:\Phi_t(x)\to p\}.
+\]
+Limits to distinct equilibria are incompatible. Since these three sets
+exhaust $V$, in fact $\mathcal A(0)\cap V=V_-$ and
+$\mathcal A(r_+\one)\cap V=V_+$. Every point of the middle disk can be
+approached from either half by varying $\xi$, while each half is open in
+$V$. Hence
+\[
+ \partial_V(\mathcal A(0)\cap V)
+ =S=\partial_V(\mathcal A(r_+\one)\cap V).
+\]
+This proves dynamical two-basin separation, not merely codimension-one
+topology. It does not identify the complete global boundary, the entire
+continued stable manifold, or a partition of the whole orthant. Other
+equilibria and periodic or other attractors elsewhere are not excluded.
+P10 makes all these exclusions explicitly in lines 619--626.
+\textbf{BASIN / MANIFOLD VERDICT: VERIFIED.}
+
+\section{Layer F: P09 connection, degenerate limit and P11 boundary}
+\label{sec:F}
+For fixed $b>0$, as $g\downarrow g_c$ from above, $\Delta\to b$, so
+\[
+ r_-\to0,\qquad r_+\to b/A.
+\]
+Since $\Delta'(g)=-2A/\Delta$,
+\[
+ \frac{dr_-}{dg}=-\frac{\Delta'(g)}{2A}
+                 =\frac1\Delta\longrightarrow\frac1b.
+\]
+This is P09's small branch slope in the physical parameter $g$; its slope
+in $\mu=g_c-g$ has the opposite sign. For $b>0$ the small positive branch
+exists for $g>g_c$ and is exactly the lower root. It remains uniformly
+unstable until its collision with the upper root at $g_f$. No claim gives
+upper transverse stability all the way to $g_c$.
+
+Holding $k,c,h$ fixed, let $b=a-A\downarrow0$. Then
+\[
+ r_f\to0,\qquad g_f-g_c\to0,\qquad
+ \alpha_{\rm SN}=-r_f/s_f\to0,\qquad
+ \beta_{\rm SN}=-Ar_f/s_f\to0.
+\]
+At the limiting locus $a=A$, $g=a+c$, the exact center field is
+$-Ar^3/(1+r)$, with third derivative $-6A$ at zero. Its fixed-parameter
+center zero is still simple, by the origin gap. The constraints $a-k-h=0$
+and $g-a-c=0$ have independent gradients in the five physical parameters,
+consistent with P09's algebraic/spectral codimension-two statement. This
+limit is excluded from P10's nondegenerate positive-fold theorem. It does
+not establish a cusp or any two-parameter unfolding.
+
+The P11 input ledger contains only: (i) lower uniform eigenvalue positive
+throughout the two-root interval; (ii) upper uniform eigenvalue negative
+throughout; (iii) full upper stability near the fold; (iv) any later upper
+instability inside the interval must be nonuniform; and the complete fold
+spectrum supporting these facts. It establishes no Hopf existence,
+critical-pair simplicity, nonzero crossing frequency, crossing transversality,
+first Lyapunov coefficient, or periodic branch. P11's own frozen direct inputs
+remain P02/P04/P05; P10's future-input language is not a graph amendment.
+After administrative A10 closure, the frozen attempt order permits P11 to
+begin its own scoped work. This audit neither begins it nor verifies any of
+its proposed theorems. \textbf{SCOPE / DEPENDENCY VERDICT: VERIFIED.}
+
+\section{Active adversarial tests and independent corroboration}
+\label{sec:checks}
+\subsection{Attempts to break the mathematical claims (checks 55--56)}
+The following are analytical attacks on specific vulnerable steps, not
+inferences from a failed numerical search. Their resolutions refer to the
+independent arguments above.
+\small
+\begin{longtable}{@{}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
+\toprule No.&Attack&Resolution within the stated hypotheses\\\midrule\endhead
+1&Try to make $G_f-H_f\le0$ by increasing $h$.&The physical fold relation forces $g_f/s_f^2-h=k+c/s_f^2>0$; $h$ is not freely varied while holding the fold's $g,r$ fixed.\\
+2&Kill the transverse cosine loss with noncoprime $q$.&Even when $\cos(q\theta_m)=1$, $C_f(\cos\theta_m-1)$ is strictly negative. Removing $c>0$ would leave the canonical regime.\\
+3&Create another zero via mode collisions or parity.&Unitary diagonalization plus the strict margin leaves only the uniform label at zero; stable repetitions are harmless.\\
+4&Hide a nonsynchronous nearby equilibrium.&The real transverse IFT has a unique solution in a product containing the known zero transverse solution for every nearby $(r,g)$.\\
+5&Find an $n$ or $1/2$ coefficient error.&All five original second directional derivatives are equal componentwise; averaging cancels $n$, and the Taylor half is applied exactly once.\\
+6&Reverse time through a vanishing prefactor.&The neighborhood $|u|<r_f/2$ gives a strictly positive uniform lower bound. The $b=0$ limit is explicitly excluded.\\
+7&Extend index one too far from the fold.&It is asserted only in the finite-label persistence neighborhood. The exact interior example has lower index three.\\
+8&Destabilize the upper branch arbitrarily near a fixed fold.&Continuity and the finite transverse margin prevent this; the uniform eigenvalue is strictly negative on the upper root. No uniform-in-$n$ gap is claimed.\\
+9&Destroy openness through a branch collision.&The witness is strictly inside the interval, all equilibria are distinct and hyperbolic, and the IFT neighborhood excludes both endpoints.\\
+10&Break sufficiency at $G=H$.&The $q$ term vanishes, leaving negative $\lambda_0$ and nonpositive step-one correction. Equality is allowed without a limit argument.\\
+11&Make the explicit interval empty or lose strictness.&Every defining bound is positive. The open interval gives strict inequalities for both $M/2$ estimates, even if the minimum has ties.\\
+12&Invalidate the exact counterexample arithmetic.&Rational calculation gives $\lambda_3(r_+)=191/125$ and lower real parts $3/2,53/80,-81/80,-37/20,-81/80,53/80$.\\
+13&Cross a scalar threshold or converge to a nonzero velocity.&Uniqueness prevents equilibrium crossing; monotone bounded orbits have a limit that must be a scalar zero.\\
+14&Replace an unstable manifold by a merely tangent curve.&Every nearby synchronous point has a full backward exponentially convergent orbit. This proves membership and equality of germs.\\
+15&Escape sideways, violate Euclidean contraction, or land in a third basin.&The Fourier symmetric-part identity gives contraction, the invariant-coordinate factorization gives signed finite cap exit, and the two closed caps lie in sink basins. The entire local box is thereby classified.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The attacks identify where each strict hypothesis matters. They produce no
+counterexample to the statements actually made. The failure of broader
+whole-interval spectral conclusions is independently exhibited, not hidden.
+The local manifold and basin proofs are analytic; no numerical approximation
+to a stable disk is offered as a certificate.
+
+\subsection{Independent exact and direct-matrix checks}
+The new \path{A10_support/independent_checks.py} was written from the original
+five-term field, without importing, executing or using the developer checker
+to generate it. Its final run uses Python 3.12.14 and NumPy 2.3.5 and passes:
+\begin{itemize}[leftmargin=*]
+\item 794 exact rational assertions covering six positive-$b$ folds, square
+completion, original scalar residuals, both branch signs, time-factor bounds,
+fold coefficients, explicit-interval inequalities, ray signs, and the exact
+six-node counterexample. An additional exact $G=H$ upper-root witness uses
+$(a,k,c,g,h)=(23/5,1/10,3/10,81/10,9/10)$ with
+$r_+=2$, $r_-=8/5$ and $\lambda_0=-4/15$.
+\item 15,651 original-field/direct-matrix cases across all $139$ admissible
+$(n,q)$ pairs for
+\[n\in\{5,6,7,8,9,10,12,15,16,18,21,24\}.\]
+This includes $q=1$, $q=n-1$,
+even $q=n/2$, noncoprime cases, 1,668 near-fold branch cases, five deeper
+branch distances per fixed tuple, explicit sufficient-interval checks and
+$G=H$ cases. The near-fold distance is shrunk when needed for the fixed
+transverse gap; this is finite corroboration of a neighborhood, not a
+computed universal radius.
+\item 1,500 additional static random interior parameter tuples, included
+in the matrix total with both branches. The fixed seed is 100310. There are
+169 sampled unstable-upper points and 536 sampled lower points with more
+than one unstable label. The conditional upper criterion $G\ge H$ fails
+in none of its sampled applicable cases. These counts are search outcomes,
+not classifications of parameter regions.
+\item All direct matrix entries are assembled by separately differentiating
+and adding the original coordinate terms. A perfect bipartite matching
+compares all $n$ direct eigenvalues with all $n$ predicted labels, preserving
+multiplicity. The symmetric-part spectrum is checked separately. For every
+$(n,q)$ pair, the direct Jacobian at a nonsynchronous state is also compared
+with complex-step differentiation of the original field.
+\end{itemize}
+The maximum scaled discrepancies are $4.915\times10^{-14}$ for the full
+spectrum, $2.693\times10^{-16}$ for equilibrium residuals,
+$1.648\times10^{-14}$ for the symmetric-part spectrum, and
+$4.086\times10^{-16}$ for the independent Jacobian differentiation check.
+Exact results and full case records are preserved in JSON/CSV. Floating-point
+comparisons use explicit tolerances; they are not interval arithmetic and do
+not prove equilibrium completeness, manifold existence or any basin theorem.
+
+\subsection{Validation provenance and limitations}
+The original \path{P10_validation_support.zip} was located and its CRC and
+member hashes recorded. Its archive SHA-256 is
+\begin{center}\small
+\nolinkurl{3b545b222be77d2e8714784da34cea6494b4739b5241c3c60cd697ac69f4d760}
+\end{center}
+It remains unchanged. Its checker was not rerun, and this audit does not
+claim to reproduce its historical run totals or outputs. Its contents were
+inventoried only after the independent checker was written and run. The
+manifest's developer-validation statistics remain developer records; none
+enters the mathematical verdict. No original developer source or output is
+copied into this audit-only delivery as independent evidence.
+
+During construction of the new checker, an optional SciPy import was
+unavailable; it was replaced by a local multiplicity-preserving matching
+routine using NumPy. A mistyped \emph{new audit-only} equality witness was
+caught by an exact scalar-residual assertion and corrected to the tuple
+above before the final complete run. These were checker-construction issues,
+not defects in P10. The supplied exact P10 witness passed. The final delivered
+checker and results correspond to the successful complete run; abandoned
+partial runs supply no evidence. Compilation and PDF inspection below are
+presentation checks only.
+
+\section{Complete line-by-line disposition}
+\label{sec:lines}
+The following 62 contiguous ranges cover every line 1--707 exactly once,
+including structural and blank lines. Each substantive range has exactly one
+of the requested dispositions: PASS, MINOR ISSUE, MAJOR ISSUE, FALSE, or
+UNRESOLVED. All ranges are PASS. Detailed arguments appear in
+Sections~\ref{sec:A}--\ref{sec:F}; the CSV copy is
+\path{A10_support/line_by_line_review.csv}. No silent correction to the
+audited text is incorporated into these verdicts.
+\small
+\begin{longtable}{@{}p{0.09\textwidth}p{0.085\textwidth}p{0.775\textwidth}@{}}
+\toprule Lines&Verdict&Finding\\\midrule\endhead
+1--18 & \pass & Header correctly fixes DRAFT v1.0, physical parameter g, direct and inherited inputs, S4 role, and local basin exclusions. NEXT DEPENDENCY is a future-work pointer, not a changed DAG edge.\\
+19--29 & \pass & Canonical positive coefficients, n\ensuremath{>}=5 and all 1\ensuremath{<}=q\ensuremath{<}n; b\ensuremath{>}0 is explicit. Fold data are physically admissible.\\
+30--36 & \pass & P02 amplitudes s\_-/s\_+ become r\_-/r\_+; its fold amplitude s\_f becomes r\_f. P10 s\_f is the denominator. Dimension-dependent neighborhoods are disclosed.\\
+37--44 & \pass & Only P02/P03/P04/P09 plus inherited P01 and standard local ODE tools are used. No P05/P07/P08 or future theorem is imported.\\
+45--55 & \pass & Substitution in all five original summands gives the exact invariant scalar field on r\ensuremath{>}-1.\\
+56--63 & \pass & Nonzero equilibrium polynomial and both fold identities follow by expansion; the gap is strictly positive for b\ensuremath{>}0.\\
+64--75 & \pass & With u=r-r\_f and nu=g\_f-g the mixed linear term cancels exactly, leaving nu-Au\textasciicircum{}2. No Taylor truncation occurs.\\
+76--87 & \pass & Positive local prefactor; zero, repeated, or two real roots on the stated parameter sides. The two distinct roots are positive exactly for 0\ensuremath{<}nu\ensuremath{<}b\textasciicircum{}2/(4A); the origin is outside the fold neighborhood.\\
+88--102 & \pass & Original derivative yields d,C,G,H and the stated predecessor/successor phases. Coincident offsets add, preserving all contributions.\\
+103--110 & \pass & The simplified uniform formula is used at positive equilibria only. Differentiating the exact scalar field gives zero at the fold.\\
+111--125 & \pass & Structural identity and complete complex spectrum are correct. Imaginary H contribution has positive sine sign.\\
+126--136 & \pass & Strict uniform-in-label transverse bound holds for each fixed n. Only mode zero lies on the imaginary axis, with algebraic and geometric multiplicity one.\\
+137--145 & \pass & Physical relation g\_f=c+A*s\_f\textasciicircum{}2 gives G\_f-H\_f=r\_f*(k+c/s\_f\textasciicircum{}2)\ensuremath{>}0 directly.\\
+146--160 & \pass & Subtracting the uniform row sum and using j=min(m,n-m) proves the bound for every parity, collision and noncoprime case. Repeated stable values do not affect the simple zero.\\
+161--174 & \pass & The real mean-zero subspace is invariant and has precisely the nonuniform spectrum on complexification. Invertibility over the reals follows.\\
+175--188 & \pass & The transverse IFT is applied on a product neighborhood containing y=0 for all nearby (r,g). Invariance and uniqueness force psi identically zero. A smaller state ball and parameter interval give full local completeness.\\
+189--207 & \pass & Both normalized nullvectors, nonzero parameter derivative, full second contraction, half-Taylor coefficient and reversed nu sign are correct.\\
+208--213 & \pass & Circulant row and column sums both vanish. Averaging F\_g produces -r\_f/s\_f with no missing column condition.\\
+214--226 & \pass & Five original directional second derivatives sum to -2A*r\_f/s\_f. Averaging removes n and Taylor expansion alone supplies the factor one-half.\\
+227--245 & \pass & Full-system theorem follows with simple zero, stable complement, nonzero coefficients and local equilibrium completeness. Double means a repeated reduced root, not a double zero eigenvalue.\\
+246--252 & \pass & Smoothness, positivity and all nondegeneracy hypotheses hold at the fixed fold; no nonsynchronous local branch is assumed away.\\
+253--268 & \pass & Extended linearization has a nontrivial nilpotent two-dimensional center block and stable E block. Invariant synchrony times the parameter interval is tangent to the generalized center subspace.\\
+269--276 & \pass & Displayed lower bound makes the time change positive. It gives the exact center normal form and asserts no global full-space decoupling.\\
+277--280 & \pass & At nu=0 the center field is negative on both sides: attraction from above, escape from below. This rules out full-space local asymptotic stability.\\
+281--300 & \pass & Discriminant and uniform branch signs hold on the entire open two-positive-root interval. Upper instability there must involve a nonuniform mode.\\
+301--309 & \pass & Exact substitution proves the signs. A positive eigenvalue proves lower instability even if other eigenvalues are nonhyperbolic.\\
+310--323 & \pass & Near-fold transverse persistence gives the upper sink and lower hyperbolic index-one saddle with n-1 real stable dimensions.\\
+324--338 & \pass & Finite-label continuity is sufficient despite square-root parameter dependence. Numerical repetition among stable eigenvalues does not change dimensions or uniform eigenvalue simplicity.\\
+339--359 & \pass & Coexistence theorem quantifies a nonempty near-fold interval and an open five-parameter neighborhood. Bistability explicitly means at least two local sinks.\\
+360--370 & \pass & Origin spectrum is strictly left for every g\_c\ensuremath{<}g\ensuremath{<}g\_f. Choosing positive epsilon smaller than both bounds yields a genuinely nonempty interval.\\
+371--384 & \pass & Distinct hyperbolic roots persist by IFT, with physical positivity and strict parameter inequalities preserved. Dependence on fixed (n,q) is stated.\\
+385--412 & \pass & D and B\_nq have the asserted exact exponential-stability meaning; no whole-interval lower index claim. The G\ensuremath{>}=H criterion includes equality.\\
+413--419 & \pass & Upper root and labeled eigenvalues are smooth on D; strict finite maximum defines an open nonempty set. Origin stability is automatic there.\\
+420--425 & \pass & Differentiating a uniform local exponential flow estimate gives an exponential bound for exp(tJ), proving the converse. Nonhyperbolic asymptotic boundary stability is excluded from the claim.\\
+426--439 & \pass & Subtracting the row sum is valid at any synchronous state; the simplified equilibrium uniform formula is not used off equilibrium. Nonpositive cosine corrections prove sufficiency including G=H.\\
+440--449 & \pass & M=c+k*s\_f\textasciicircum{}2 is positive and every defining t\_* bound is positive. This interval is dimension-independent for the two sinks only.\\
+450--456 & \pass & With t\ensuremath{<}t\_*, each subtracted term is strictly less than M/2, so g-h*(1+r\_+)\textasciicircum{}2\ensuremath{>}0.\\
+457--464 & \pass & A*t\_*\textasciicircum{}2\ensuremath{<}=b\textasciicircum{}2/(16A)\ensuremath{<}g\_f-g\_c. Intersecting with the separate spectral neighborhood, rather than this bound alone, retains index one.\\
+465--474 & \pass & Exact six-node tuple is canonical and strictly within the two-root interval; polynomial is (r-1)(r-4).\\
+475--486 & \pass & Upper residual vanishes; all four rational coefficients are correct, lambda\_0=-12/5 and lambda\_3=191/125\ensuremath{>}0.\\
+487--497 & \pass & At the lower root the real parts are 3/2, 53/80, -81/80, -37/20, -81/80, 53/80. Unstable real dimension is three. Counterexample is static and makes no Hopf or extra-attractor assertion.\\
+498--516 & \pass & Ray threshold handles both equilibria and zero explicitly and remains true even with upper transverse instability.\\
+517--533 & \pass & Exact factorization gives all signs. Uniqueness, monotonicity, bounded global existence and exclusion of a nonzero limiting velocity prove every stated ray limit.\\
+534--545 & \pass & Under the near-fold hypotheses the stable disk has codimension one and the unstable germ is synchronous. Its two continued branches have the stated full-system heteroclinic limits.\\
+546--558 & \pass & The stronger partition is explicitly confined to V inside the positive orthant, with basins relative to the nonnegative orthant and boundary relative to V.\\
+559--574 & \pass & Local backward exponential convergence on the repelling scalar interval, not tangency alone, identifies the unstable-manifold germ. Choose the interval inside (0,r\_+) to obtain both limits.\\
+575--582 & \pass & Stable graph exists over E because its tangent is E. The triangular coordinate change is a smooth local diffeomorphism; z=0 remains the synchronous unstable segment.\\
+583--589 & \pass & Hadamard integral factorization gives exact divisibility of dot-xi by xi. Invariance of z=0 gives R(xi,0)=0; unchanged derivative at the origin gives D\_z R(0,0)=0.\\
+590--593 & \pass & Unitary Fourier diagonalization controls the symmetric part of B on E; Hurwitz alone would not suffice. Continuity of D\_z R gives the uniform remainder estimate after shrinking.\\
+594--596 & \pass & Squared-norm differential inequality gives transverse decay. The scalar multiplicative equation preserves sign and grows absolute xi at least exponentially.\\
+597--604 & \pass & Choose rho within both synchronous branches and a compact chart inside the positive orthant, then sigma using openness of each sink basin. Both closed caps can be included.\\
+605--610 & \pass & Transverse decay prevents a z-face exit; xi growth forces a finite-time signed cap exit. Compact containment excludes any other earlier exit. On xi=0, z tends to zero.\\
+611--618 & \pass & Connected nonempty half-boxes yield the two sides. S contains neither sink basin, every S point borders both halves, and the whole box is accounted for; relative basin boundaries equal S.\\
+619--627 & \pass & Explicit global exclusions prevent interpreting this local partition as the full orthant separatrix or as exclusion of other attractors.\\
+628--640 & \pass & As g decreases to g\_c, lower root tends to zero, upper to b/A, and dr\_-/dg=1/Delta tends to 1/b. Identification with P09 has the correct orientation.\\
+641--652 & \pass & At fixed k,c,h, b tends to zero with both saddle-node coefficients vanishing. The limit matches P09 cubic degeneracy and simple center zero; no cusp/unfolding classification is inferred.\\
+653--662 & \pass & P11 receives branch signs and fold/near-fold spectral facts only. Hopf existence, pair simplicity, transversality, Lyapunov coefficients and periodic branches remain unproved. Frozen dependency DAG is preserved.\\
+663--675 & \pass & S4 and B03 are restricted to coexistence and the proved local basin statement. Checker is expressly corroborative and P10 remains DRAFT.\\
+676--683 & \pass & Audit priorities for notation, fold positivity, gap, parity, collisions and multiplicities are correctly identified and addressed by A10.\\
+684--690 & \pass & Audit priorities for real IFT, normalized original-vector derivatives, nilpotent center block and positive time factor are addressed.\\
+691--698 & \pass & Audit priorities distinguish whole-interval uniform signs from near-fold full stability and include openness, equality sufficiency and exact counterexample arithmetic.\\
+699--707 & \pass & Audit priorities demand backward convergence and cap-exit basin membership, while preserving the local and P11 boundaries. All are addressed.\\
+\bottomrule\end{longtable}\normalsize
+
+\section{Request coverage and authenticated input ledger}
+\label{sec:coverage}
+\begin{longtable}{@{}p{0.15\textwidth}p{0.79\textwidth}@{}}
+\toprule Request checks&Audit disposition and location\\\midrule\endhead
+0--1&Current-file and dependency authentication in Section~\ref{sec:auth}; full inventories accompany this audit.\\
+2&Six separate layer verdicts on the first page and in Sections~\ref{sec:A}--\ref{sec:F}.\\
+3--9&Exact fold geometry, physical identity, phases, gap and multiplicities in Section~\ref{sec:A}.\\
+10--19&Real transverse IFT, original derivatives, nilpotent center block, exact center flow and fold instability in Section~\ref{sec:B}.\\
+20--28&Whole-interval uniform signs, near-fold classification, origin and five-parameter openness in Section~\ref{sec:C}.\\
+29--36&Exact coexistence set, exponential-stability converse, sufficient interval and exact witness in Section~\ref{sec:D}.\\
+37--51&Ray threshold, unstable germ, smooth chart, contraction, cap exit and exact relative boundary in Section~\ref{sec:E}.\\
+52--54&P09 orientation, degenerate limit and strictly limited P11 ledger in Section~\ref{sec:F}.\\
+55--56&Independent finite checks and all 15 explicit adversarial attacks in Section~\ref{sec:checks}.\\
+57&Contiguous 707-line disposition in Section~\ref{sec:lines} and the companion CSV.\\
+58--60&Exact audit slug, seven verdicts, separate source/PDF and audit-only archive; no replacement proof or full audited-project ZIP.\\
+61--62&Explicit final handoff below; deliver source, reading copy and exactly named audit-only ZIP with concise verdict summary.\\
+\bottomrule
+\end{longtable}
+
+The following full-file hashes authenticate the ten control files, sixteen
+prerequisite proof/audit files, P10 and the additional scope-history record.
+Hashes identify bytes, not proof validity. Body-hash checks for all eight
+prerequisite proofs and hashes for every original archive member are also
+preserved in the support directory.
+\begingroup\small
+\par\noindent\path{project_manifest.md}\\
+153,664 bytes; 830 lines. Full SHA-256:\\
+\nolinkurl{b77f9636d7d0ae031b0a4a7127bb804429be21050f44b735d5128730408a57ea}\par\smallskip
+\par\noindent\path{claim_registry.md}\\
+113,578 bytes; 571 lines. Full SHA-256:\\
+\nolinkurl{28f5cd179bbd16889ed9404c8665ed03b6ed2da46d114ef4ad5d2f1d28b10ec5}\par\smallskip
+\par\noindent\path{frozen_theorem_package.md}\\
+9,729 bytes; 69 lines. Full SHA-256:\\
+\nolinkurl{724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63}\par\smallskip
+\par\noindent\path{final_novelty_verdict.md}\\
+6,511 bytes; 37 lines. Full SHA-256:\\
+\nolinkurl{5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea}\par\smallskip
+\par\noindent\path{novelty_decisions.md}\\
+19,241 bytes; 124 lines. Full SHA-256:\\
+\nolinkurl{8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e}\par\smallskip
+\par\noindent\path{02_theorem_dependency_map.tex}\\
+9,372 bytes; 145 lines. Full SHA-256:\\
+\nolinkurl{a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac}\par\smallskip
+\par\noindent\path{proofs_compendium.tex}\\
+11,104 bytes; 208 lines. Full SHA-256:\\
+\nolinkurl{7f06955c706b40d7bee6ca88bd08d8aa99e60c4d5b276536fc33579a9f58a282}\par\smallskip
+\par\noindent\path{shared_macros.tex}\\
+1,281 bytes; 35 lines. Full SHA-256:\\
+\nolinkurl{f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad}\par\smallskip
+\par\noindent\path{00_canonical_model.tex}\\
+3,712 bytes; 74 lines. Full SHA-256:\\
+\nolinkurl{c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4}\par\smallskip
+\par\noindent\path{01_notation_and_assumptions.tex}\\
+5,152 bytes; 103 lines. Full SHA-256:\\
+\nolinkurl{97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91}\par\smallskip
+\par\noindent\path{proofs/P01_wellposedness_and_absorbing_box.tex}\\
+22,570 bytes; 520 lines. Full SHA-256:\\
+\nolinkurl{0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e}\par\smallskip
+\par\noindent\path{audits/A01_wellposedness_and_absorbing_box.tex}\\
+48,622 bytes; 974 lines. Full SHA-256:\\
+\nolinkurl{8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098}\par\smallskip
+\par\noindent\path{proofs/P02_synchronous_subspace_and_equilibria.tex}\\
+26,905 bytes; 610 lines. Full SHA-256:\\
+\nolinkurl{8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a}\par\smallskip
+\par\noindent\path{audits/A02_synchronous_subspace_and_equilibria.tex}\\
+37,895 bytes; 847 lines. Full SHA-256:\\
+\nolinkurl{ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac}\par\smallskip
+\par\noindent\path{proofs/P03_origin_and_linearization.tex}\\
+19,857 bytes; 447 lines. Full SHA-256:\\
+\nolinkurl{6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e}\par\smallskip
+\par\noindent\path{audits/A03_origin_and_linearization.tex}\\
+37,700 bytes; 692 lines. Full SHA-256:\\
+\nolinkurl{e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1}\par\smallskip
+\par\noindent\path{proofs/P04_arbitrary_nq_fourier_spectrum.tex}\\
+26,980 bytes; 590 lines. Full SHA-256:\\
+\nolinkurl{1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58}\par\smallskip
+\par\noindent\path{audits/A04_arbitrary_nq_fourier_spectrum.tex}\\
+47,595 bytes; 832 lines. Full SHA-256:\\
+\nolinkurl{8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869}\par\smallskip
+\par\noindent\path{proofs/P05_q2_mode_selection.tex}\\
+28,334 bytes; 613 lines. Full SHA-256:\\
+\nolinkurl{054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd}\par\smallskip
+\par\noindent\path{audits/A05_q2_mode_selection.tex}\\
+49,526 bytes; 996 lines. Full SHA-256:\\
+\nolinkurl{0f7e9836b91009a201185a4acbbb99715f3c65df715e405962b7d6852ff27031}\par\smallskip
+\par\noindent\path{proofs/P07_five_node_specialization.tex}\\
+25,691 bytes; 580 lines. Full SHA-256:\\
+\nolinkurl{1258641da2b1b729523da6262cf75345f5ef1eabf7a9f693a8b13dd34deec393}\par\smallskip
+\par\noindent\path{audits/A07_five_node_specialization.tex}\\
+38,488 bytes; 724 lines. Full SHA-256:\\
+\nolinkurl{b3923d6520cc249c508b80dd06a2b515f054e1510e255224a864e986cd38ce4b}\par\smallskip
+\par\noindent\path{proofs/P08_matched_bilinear_analysis.tex}\\
+40,836 bytes; 871 lines. Full SHA-256:\\
+\nolinkurl{81d273f0bad1714d2470e9fc826f0819e9dde367a9c42633705a275b404e5454}\par\smallskip
+\par\noindent\path{audits/A08_matched_bilinear_analysis.tex}\\
+57,343 bytes; 1161 lines. Full SHA-256:\\
+\nolinkurl{87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935}\par\smallskip
+\par\noindent\path{proofs/P09_transcritical_bifurcation.tex}\\
+25,693 bytes; 564 lines. Full SHA-256:\\
+\nolinkurl{5d357a5be97dfbad62a0107ca2e010ff97e0c11a719ee850df69411275f11ff8}\par\smallskip
+\par\noindent\path{audits/A09_transcritical_bifurcation.tex}\\
+51,832 bytes; 975 lines. Full SHA-256:\\
+\nolinkurl{1234e02d7cf620511bfd7b9306dbb72ac68929ef01e8c3ba70bd3615bcd2b943}\par\smallskip
+\par\noindent\path{proofs/P10_saddle_node_and_bistability.tex}\\
+32,560 bytes; 707 lines. Full SHA-256:\\
+\nolinkurl{a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07}\par\smallskip
+\par\noindent\path{open_decisions.md}\\
+17,320 bytes; 101 lines. Full SHA-256:\\
+\nolinkurl{506c634c9958d13b4d6ef4080ebe214af5fd0c77d5dc8fe6f1b91d2750ffab59}\par\smallskip
+\endgroup
+
+\clearpage
+\section{Closure handoff to the original P10 development chat}
+\label{sec:handoff}
+\textbf{OVERALL VERDICT: VERIFIED. Required corrections: none.}
+There are no E01, E02 or other required mathematical or wording issues to
+close. This verdict applies only to P10 v1.0 with full-file SHA-256
+\begin{center}\small
+\nolinkurl{a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07}
+\end{center}
+The \textbf{original P10 development chat may perform administrative closure
+without changing the mathematical body}. It should preserve every byte from
+the first line-anchored section command (line 19) through EOF; the corresponding
+body hash is
+\begin{center}\small
+\nolinkurl{5cfd8afb91b7f23575e1b4bd9c7c28f3b433affefae9bb0d5f7700d030fcba81}
+\end{center}
+It may integrate this immutable audit and necessary lifecycle bookkeeping
+under the established project convention, preserving the original draft
+archive and all frozen dependencies. It should retain the local basin scope,
+the whole-interval counterexample and the distinction between audit verdict
+and administrative lifecycle closure. A change to the mathematical body
+would require review of that changed version; it is unnecessary for this audit.
+
+\textbf{After successful correction/closure, the original P10 development
+chat must create the COMPLETE full-project archive}
+\begin{center}
+\path{cyclic_network_project_P10_audited.zip}.
+\end{center}
+For this VERIFIED result, the correction step is empty and only administrative
+closure is needed. \textbf{That complete archive is not created in this audit
+chat.} This chat delivers only
+\path{cyclic_network_project_A10_audit_only.zip}, with sole root
+\path{cyclic_network_project/}, containing the A10 source and PDF plus its
+identity, input inventories, complete line review, independent checker and
+results, provenance and presentation/preservation records. It contains no
+replacement P10 source. The original
+\path{cyclic_network_project_P10_draft.zip} is preserved unchanged.
+
+\textbf{P11 clearance after closure: yes.} Once the original chat records
+successful P10 administrative closure, P11 is cleared to begin under the
+frozen attempt order and its own prerequisites and statement gates. This is
+permission in the research sequence, not a Hopf theorem. No P11 proof,
+continuation study, later module, two-parameter unfolding, literature survey,
+or global basin classification has been begun here. P10's DRAFT lifecycle
+records have not been promoted by this audit.
+\end{document}

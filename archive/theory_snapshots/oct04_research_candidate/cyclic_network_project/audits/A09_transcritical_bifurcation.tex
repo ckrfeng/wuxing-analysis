@@ -1,0 +1,975 @@
+% A09 INDEPENDENT AUDIT ONLY; 2026-10-03.
+% Audited P09 v1.0 SHA-256:
+% b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680
+% All six layer verdicts and OVERALL VERDICT: VERIFIED.
+% Required corrections: none. This file does not promote P09's lifecycle.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\Orth}{\R_{\geq0}^n}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\lin}[1]{P09 lines #1}
+\newcommand{\pass}{\textbf{PASS}}
+\newcommand{\verified}{\textbf{VERIFIED}}
+\newcommand{\ii}{\mathrm i}
+\title{A09: Independent Adversarial Audit\\Transcritical Bifurcation at the Origin}
+\author{Directed Cyclic Networks research project}
+\date{3 October 2026 \quad Audited version: P09 v1.0}
+\begin{document}
+\maketitle
+
+\begin{tabular}{@{}p{0.76\textwidth}l@{}}
+\toprule
+CRITICAL SPECTRUM / REDUCTION VERDICT: & \verified\\
+GENERIC TRANSCRITICAL VERDICT: & \verified\\
+STABILITY / PHYSICAL-BRANCH VERDICT: & \verified\\
+GENERIC CRITICAL-DYNAMICS VERDICT: & \verified\\
+DEGENERATE CRITICAL-STABILITY VERDICT: & \verified\\
+CODIMENSION / SCOPE VERDICT: & \verified\\
+\midrule
+OVERALL VERDICT: & \verified\\
+\bottomrule
+\end{tabular}
+
+\textbf{Required mathematical or wording corrections: none.}
+The exact submitted source proves the generic full-system local transcritical
+bifurcation and the separate cubic-degenerate result within its stated local
+domains. In particular, the full origin at $b=\mu=0$ is locally asymptotically
+stable in $\U$, and is not locally exponentially stable. The highest-priority
+Lyapunov remainder and quadratic-form arguments are valid as written; their
+details are reconstructed below, independently of the developer's checker.
+
+This is an audit verdict, not a lifecycle edit. P09 and every existing project
+file remain unchanged. No P10 proof is begun. The original P09 development
+chat owns administrative closure and the complete audited project archive.
+
+\section{Exact current-file authentication and audit contract}
+\label{sec:auth}
+The authoritative input is \path{cyclic_network_project_P09_draft.zip}.
+The manifest's CURRENT P09 entry is at lines 693--732, with the exact full-file
+hash at line 730. It supersedes historical TODO/not-started records.
+The audited file is precisely
+\path{cyclic_network_project/proofs/P09_transcritical_bifurcation.tex},
+P09 v1.0, dated 3 October 2026: 24,155 bytes and 539 lines.
+
+\begin{description}[leftmargin=0pt,labelwidth=0pt,itemindent=0pt]
+\item[Full P09 SHA-256:]
+\leavevmode\\\nolinkurl{b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680}
+\item[Mathematical body SHA-256, line 17 through EOF:]
+\leavevmode\\\nolinkurl{a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393}
+\item[Original complete draft ZIP SHA-256:]
+\leavevmode\\\nolinkurl{61df24eb644771cbb84027447c4a21ba1c1d0e1d44dc8c35cf34a0a0c755c8de}
+\end{description}
+
+The two existing draft ZIP copies are byte-identical. The archive passes its
+CRC check, contains exactly 143 files under the sole root
+\path{cyclic_network_project/}, and every member matches the located
+\path{output/p09/cyclic_network_project/} working copy. Thus no earlier
+placeholder or reconstructed source is being audited. The current-file check
+was completed before accepting any mathematical conclusion.
+
+All ten requested control files were located and authenticated: manifest,
+claim registry, frozen theorem package, final novelty verdict, novelty
+decisions, dependency map, compendium source, shared macros, canonical model,
+and notation/assumptions. Current P01--P05, P07, P08 and their A01--A05, A07,
+A08 sources were also located. The additional open-decisions file was
+consulted for B03 and NB07. Full hashes, sizes and line counts for these 26
+inputs are in \path{A09_support/input_inventory.json}; all 143 archive-member
+hashes are in \path{A09_support/archive_member_hashes.json}.
+
+Each current prerequisite body hash matches its header's declared current
+body hash. Comparison against the complete P07-audited baseline confirms that
+all prerequisite proofs and prior audits are unchanged; the only five changed
+members in the P09 draft are P09 itself, manifest, registry, compendium source
+and compendium PDF. A01/A02 E01 and A05/A08 E01 are already closed as recorded;
+A03/A04/A07 require no correction. A02's restored audit source is present:
+its historical source-absence header is explicitly superseded by the current
+manifest. A04/A05 historical numerical-provenance qualifications remain
+nonblocking and are not silently declared resolved here.
+
+The frozen documents retain historical status prose. Their current scope is
+consistent with the CURRENT P09 entry: supporting local branch organization;
+no two-parameter unfolding; no new priority claim. Exact-model priority
+remains unclosed. This audit performed no new literature survey.
+
+\section{Dependency authentication}
+\label{sec:deps}
+The frozen mathematical edges remain
+\[
+ \mathrm{P02},\mathrm{P03},\mathrm{P04}\longrightarrow\mathrm{P09},
+ \qquad \mathrm{P01}\text{ inherited}.
+\]
+The following are the actual imported facts, with their original hypotheses.
+\begin{longtable}{@{}p{0.16\textwidth}p{0.77\textwidth}@{}}
+\toprule Input & Use and scope checked\\\midrule\endhead
+P01 & Smooth local field and continuation on $\U=(-1,\infty)^n$;
+nonnegative invariance when restricting full-domain stability to $\Orth$.
+The canonical positive tuple satisfies P01's weaker hypotheses.\\
+P02 & Exact invariant synchrony and scalar restriction (invariance proposition
+and scalar equation); algebraic repeated-root locus (loci proposition).
+No global nonsynchronous classification is imported.\\
+P03 & Original Jacobian and critical-origin structure; direct differentiation
+in this audit verifies the same formula, including additive offset collisions.\\
+P04 & Homogeneous circulant coefficients and Fourier spectrum at every
+synchronous state $r>-1$, even when negative or nonstationary; uniform
+derivative identity; nonlinear implications of a Hurwitz Jacobian or a
+positive-real-part eigenvalue.\\
+Standard theory & Finite-dimensional real IFT; fixed-parameter and extended
+center manifolds; stability reduction with stable complement; strict
+Lyapunov/continuation arguments; regular level-set theorem. These are ordinary
+mathematical tools, not extra project-module edges.\\
+\bottomrule
+\end{longtable}
+The only external proof-label references in P09 are:
+\begin{quote}\raggedright
+\path{prop:P01-local}, \path{prop:P02-invariance}, \path{eq:P02-scalar},
+\path{eq:P03-origin-jacobian}, \path{eq:P04-synchronous-derivative}, and
+\path{prop:P02-loci}.
+\end{quote}
+Every label exists in the authenticated source.
+Inspection of uncited arguments also finds no reliance on P05, P07, P08 or
+P10--P18. References to these modules only describe scheduling or exclusions.
+In particular, transverse stability uses a finite collection of continuous
+eigenvalue formulas, not the P05 selection theorem. \textbf{Dependency verdict:
+PASS.}
+
+\section{Layer A: critical spectrum and real transverse reduction}
+\label{sec:reduction}
+All statements fix $a,k,c,h>0$, $n\ge5$, $1\le q<n$. Set
+\[
+ A=k+h>0,\quad b=a-A,\quad g_c=a+c,\quad\mu=g_c-g,
+ \qquad\frac{d\mu}{dg}=-1.
+\]
+Restrict $|\mu|<g_c/2$ so that $g>0$. The original field is
+\begin{equation}
+ F_i=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+       -\frac{(g_c-\mu)x_i}{1+x_{i+q}}-h x_i x_{i-q}.
+ \label{eq:original}
+\end{equation}
+Its denominators do not vanish on $\U$; it is jointly smooth there.
+
+\subsection{Independent critical differentiation and gap}
+At zero, the input numerator derivative contributes $c$ at predecessor
+column $i-1$, its denominator derivative vanishes, and the rational loss
+contributes $-g$ only at column $i$. Both derivatives of the $h$ product and
+the quadratic self-loss derivative vanish. Therefore
+\[
+ D_xF(0,\mu)=(a-g)I+cP=\mu I+c(P-I),\qquad J_c=c(P-I).
+\]
+All $q$ terms have vanished before any Fourier argument. A disconnected
+step-$q$ graph cannot create extra kernel vectors because the surviving
+predecessor shift $P$ is a single $n$-cycle.
+
+For $v^{(m)}_j=n^{-1/2}e^{\ii\theta_m j}$,
+$Pv^{(m)}=e^{-\ii\theta_m}v^{(m)}$; hence
+\[
+ \lambda_m^c=c(e^{-\ii\theta_m}-1),\qquad\theta_m=2\pi m/n.
+\]
+The $n$ vectors form a unitary basis, so this lists algebraic multiplicities.
+Only $m=0$ gives zero, and the characteristic polynomial
+$(\lambda+c)^n-c^n$ has derivative $nc^{n-1}\ne0$ there. The equation $Pz=z$
+forces every coordinate equal, giving real kernel $\R\one$ and geometric
+multiplicity one.
+
+For $m\ne0$, $j=\min(m,n-m)$ satisfies
+$1\le j\le\lfloor n/2\rfloor$ and
+$2\pi j/n\in[2\pi/n,\pi]$. Monotonicity of cosine yields
+\[
+ \Re\lambda_m^c=-c(1-\cos\theta_m)\le-\delta_n,
+ \qquad\delta_n=c(1-\cos(2\pi/n))>0.
+\]
+For even $n$, the self-conjugate label $m=n/2$ has eigenvalue $-2c$;
+for odd $n$, the upper representative angle is strictly below $\pi$ and
+the same inequality holds. Equality at the closest nonzero labels is
+allowed. Neither the formula nor its proof contains $q$ or $\gcd(n,q)$.
+\lin{54--85}: \pass.
+
+\subsection{A real IFT with explicit local quantifiers}
+Let $w^T=n^{-1}\one^T$, $E=\ker w^T$ and $\Pi=I-\one w^T$.
+Then $w^T\one=1$, $\Pi^2=\Pi$, $\Pi^T=\Pi$ and
+\[
+ x\longleftrightarrow(r,y)=(w^Tx,\Pi x),\quad
+ (r,y)\longmapsto r\one+y
+\]
+are inverse real linear maps between $\R^n$ and $\R\times E$.
+In particular $\norm{x}_2^2=nr^2+\norm y_2^2$.
+Since $w^TP=w^T$, $J_c$ preserves $E$ and $w^TJ_c=0$.
+
+Define $T(r,y,\mu)=\Pi F(r\one+y,\mu)$. It maps to the real space
+$E$ and $D_yT(0,0,0)=J_c|_E$. To justify real invertibility without any
+hidden complex step, if a real $y\in E$ has $J_cy=0$, the kernel calculation
+forces $y=t\one$, and $w^Ty=0$ forces $t=0$. Injectivity on the
+finite-dimensional real space $E$ gives surjectivity and a real inverse.
+Equivalently, its complexification has no zero eigenvalue; a singular real
+restriction would produce a complex kernel vector. Thus P09's
+complexification argument is sufficient and correct.
+
+The real IFT gives open neighborhoods $I_r,I_\mu$ of zero and an open
+$Y\subset E$ containing zero such that, within $I_r\times Y\times I_\mu$,
+\[
+ T(r,y,\mu)=0\quad\Longleftrightarrow\quad y=\psi(r,\mu).
+\]
+These sets can be chosen with $r\one+y\in\U$ throughout. Substitution into
+the original field gives
+\[
+ F(r\one,\mu)=f(r,\mu)\one,\qquad
+ f=ar-Ar^2+\frac{(c-g)r}{1+r}
+   =\frac{r}{1+r}(\mu+br-Ar^2).
+\]
+Consequently $T(r,0,\mu)=0$ for \emph{every} $(r,\mu)\in I_r\times I_\mu$.
+The fixed neighborhood $Y$ contains zero for every such pair; uniqueness
+forces $\psi\equiv0$. No state-dependent choice of $Y$ is involved.
+Taking a smaller open state ball whose $(r,y)$ image lies in $I_r\times Y$
+and a smaller parameter interval produces the claimed common product in
+$(x,\mu)$ coordinates.
+
+Every equilibrium in that product is therefore synchronous, and conversely
+it is an equilibrium exactly when
+\[
+ r(\mu+br-Ar^2)=0.
+\]
+Multiplication by $1+r>0$ neither removes nor creates a root; $r=-1$ is
+excluded by the domain. This proof uses no division by $b$, so covers
+$b=0$. It rules out all nearby nonsynchronous equilibria, not merely
+smooth nonsynchronous branches. \lin{87--130}: \pass.
+
+\textbf{CRITICAL SPECTRUM / REDUCTION VERDICT: VERIFIED.}
+
+\section{Layer B: generic transcritical geometry and dynamics}
+\label{sec:generic}
+\subsection{Full-vector derivatives, normalization and orientation}
+The scalar restriction gives $f(0,\mu)=0$, $f_r(0,\mu)=\mu$ and
+$f_\mu=r/(1+r)$. Thus $f_r(0,0)=0$, $f_{r\mu}(0,0)=1$ and, since
+\[
+ f(r,0)=br^2-(A+b)r^3+O(r^4),
+\]
+$f_{rr}(0,0)=2b$. The quadratic Taylor coefficient is
+$\tfrac12 f_{rr}=b$, not $2b$.
+
+For $v=\one$ and $w^T=n^{-1}\one^T$, $w^Tv=1$, $J_cv=0$ and
+$w^TJ_c=0$. Directly in (\ref{eq:original}),
+\[
+ (F_\mu)_i=\frac{x_i}{1+x_{i+q}},\quad
+ D_xF_\mu(0)=I,\quad F_\mu(0)=0.
+\]
+Replacing $\mu$ by $g$ reverses the sign, so
+$w^TF_{x\mu}v=1$ and $w^TF_{xg}v=-1$.
+
+To check every second directional contribution, substitute $x=tv$ at
+$g=g_c$ and differentiate each original summand twice at $t=0$:
+\[
+\begin{array}{c|ccccc}
+\text{summand}&at&-kt^2&ct/(1+t)&-g_ct/(1+t)&-ht^2\\\hline
+\text{second derivative}&0&-2k&-2c&2g_c&-2h
+\end{array}
+\]
+Their sum in each of the $n$ components is
+$2(g_c-c-k-h)=2b$. Averaging with $w$ cancels the factor $n$ exactly:
+$w^TF_{xx}[v,v]=2b$. These are full-vector coefficients, not coefficients
+inferred from an unverified scalar reduction. For $b\ne0$, mixed and
+quadratic nondegeneracy both hold; at $b=0$ the second one fails.
+\lin{134--169}: \pass.
+
+\subsection{Unique local nonzero branch and both slopes}
+When $b\ne0$, $Q(r,\mu)=Ar^2-br-\mu$ has $Q_r(0,0)=-b\ne0$.
+A second real IFT gives the unique root $r_*(\mu)$ near zero.
+$Q(0,\mu)=-\mu$ implies $r_*(\mu)=0$ only at $\mu=0$.
+The other algebraic root tends to $b/A\ne0$; for example, choose a state
+radius less than $|b|/(3A)$ and shrink the parameter interval so the other
+root stays outside. This is a fixed-$b$ statement. No uniform neighborhood
+as $b\to0$ is claimed or available.
+
+Implicit differentiation gives
+\[
+ (2Ar_*-b)r_*'=1,\qquad
+ 2A(r_*')^2+(2Ar_*-b)r_*''=0.
+\]
+At zero these yield
+\[
+ r_*'(0)=-\frac1b,\qquad r_*''(0)=\frac{2A}{b^3},\qquad
+ r_*(\mu)=-\frac\mu b+\frac{A\mu^2}{b^3}+O(\mu^3).
+\]
+Because $d\mu/dg=-1$, $dr_*/dg(g_c)=1/b$. In the $(r,\mu)$ plane
+the branch tangents $(0,1)$ and $(-1/b,1)$ are independent. P09 explicitly
+restricts its transverse-crossing claim to that plane; it makes no
+ambient $(n+1)$-dimensional transversality claim. \lin{174--225}: \pass.
+
+\subsection{Exact center restriction and positive time change}
+At fixed $\mu=0$, the invariant synchronous line is tangent to the entire
+one-dimensional center space, hence is a smooth local center manifold.
+For the extended system with $\dot\mu=0$, $F_\mu(0,0)=0$ implies the
+linearization $\operatorname{diag}(J_c,0)$. The synchronous line times the
+parameter interval is invariant and tangent to its full two-dimensional
+center space. The remaining $n-1$ eigenvalues are strictly stable.
+
+For $b\ne0$, define $u=Ar^2-br=r(Ar-b)$. Its derivative
+$2Ar-b$ is nonzero near zero, so $(r,\mu)\mapsto(u,\mu)$ is a local
+smooth coordinate change on this center manifold. Since
+$\mu+br-Ar^2=\mu-u$,
+\[
+ \dot u=(2Ar-b)\frac{r}{1+r}(\mu-u)
+        =\alpha(r)u(\mu-u),\quad
+ \alpha(r)=\frac{2Ar-b}{(Ar-b)(1+r)}.
+\]
+The identity extends smoothly to $r=0$ because $Ar-b\ne0$ there and
+$\alpha(0)=1$. On $|r|<1/2$, $2A|r|<|b|/2$, both $Ar-b$ and
+$2Ar-b$ retain the sign of $-b$, while $1+r>0$. Thus $\alpha>0$ and
+$d\tau/dt=\alpha(r)$ gives exactly $du/d\tau=u(\mu-u)$.
+This is an orbital equivalence preserving forward time on the exact center
+restriction. It does not assert a decoupled equation for arbitrary
+transverse perturbations. \lin{227--248}: \pass.
+
+With the equilibrium completeness and full stability proof below, the
+persistent branch, simple center eigenvalue, nonzero coefficients, distinct
+branch tangents, exact center dynamics and stable transverse complement
+justify the full-system nondegenerate transcritical classification. This
+conclusion does not follow from scalar geometry alone, and P09 does not
+use that invalid shortcut.
+
+\textbf{GENERIC TRANSCRITICAL VERDICT: VERIFIED.}
+
+\section{Layer C: full stability exchange and physical branch}
+\label{sec:stability}
+\subsection{Uniform sign and transverse persistence}
+Differentiating the scalar field before imposing equilibrium gives
+\[
+ f_r=\frac{\mu+br-Ar^2}{(1+r)^2}
+       +\frac{r}{1+r}(b-2Ar).
+\]
+At a nonzero equilibrium $\mu=-r_*(b-Ar_*)$, so
+\[
+ \lambda_0^{\rm nz}
+ =\frac{r_*}{1+r_*}(b-2Ar_*)
+ =-\mu\frac{b-2Ar_*}{(1+r_*)(b-Ar_*)}.
+\]
+For $|r_*|<1/2$ and $2A|r_*|<|b|/2$, both factors involving $b$
+have the sign of $b$, and the displayed fraction is positive. Thus
+\[
+ \operatorname{sgn}\lambda_0^{\rm nz}=-\operatorname{sgn}\mu
+\]
+exactly, on either side, for either sign of $b$. Its expansion
+$-\mu+O(\mu^2)$ corroborates this sign and is not used as the main proof.
+\lin{250--270}: \pass.
+
+Independent differentiation of the original field at $r\one$ gives
+\begin{align*}
+ J(r,\mu)&=dI+CP+GP^{-q}-HP^q,\\
+ d&=a-2kr-\frac{cr}{(1+r)^2}-\frac{g_c-\mu}{1+r}-hr,\\
+ C&=\frac c{1+r},\qquad G=\frac{(g_c-\mu)r}{(1+r)^2},\qquad H=hr.
+\end{align*}
+Coincident columns must be added, as in the defining field. Hence
+$\lambda_m=d+Ce^{-\ii\theta_m}+Ge^{\ii q\theta_m}-He^{-\ii q\theta_m}$.
+These coefficients remain real and smooth at negative $r>-1$; positivity
+of $G$ and $H$ is not being assumed. Each nonzero label has limit
+$\lambda_m^c$ at $(0,0)$. Intersecting finitely many continuity
+neighborhoods gives a common neighborhood where
+\[
+ \Re\lambda_m(r,\mu)<-\delta_n/2\quad(m\ne0).
+\]
+This also holds when $b=0$; the proof never divided by $b$.
+\lin{272--292}: \pass.
+
+\subsection{Nonlinear conclusions and number of unstable directions}
+At the origin, $\lambda_0=\mu$ and
+$\Re\lambda_m=\mu-c(1-\cos\theta_m)$; for $|\mu|<\delta_n/2$
+all nonuniform modes remain strictly negative. Intersect this interval
+with the reduction, branch and gap neighborhoods. For $\mu\ne0$ all
+equilibria under discussion are hyperbolic. P04's checked nonlinear
+linearization implications apply to the smooth field on its open domain:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Parameter side & Origin & Local nonzero branch\\\midrule
+$\mu<0$, $g>g_c$ & Locally exponentially stable & Unstable\\
+$\mu>0$, $g<g_c$ & Unstable & Locally exponentially stable\\
+\bottomrule
+\end{tabular}
+\end{center}
+The unstable uniform eigenvalue is real and simple, and all transverse
+eigenvalues have negative real parts. Thus the unstable spectral space,
+and the local unstable manifold, have real dimension one at each unstable
+\emph{off-critical} equilibrium in this table. P09's ``here'' at line 300
+has precisely that local proof context. It does not ascribe a positive
+eigenvalue to the nonhyperbolic unstable origin discussed later at
+$\mu=0$, nor assert that every perturbation of an unstable point escapes.
+No revision of this wording is required. \lin{294--303}: \pass.
+
+\subsection{Positive side and actual nonnegative escape}
+The relation $\mu=-r_*(b-Ar_*)$, with the second factor retaining the sign
+of $b$, proves $r_*>0$ exactly when
+$\operatorname{sgn}\mu=-\operatorname{sgn}b$ for nonzero local $\mu$.
+Therefore:
+\begin{itemize}[leftmargin=*]
+\item $b<0$ ($a<k+h$): the positive branch lies on $\mu>0$, or $g<g_c$,
+and is locally exponentially stable; the origin is unstable.
+\item $b>0$ ($a>k+h$): the positive local branch lies on $\mu<0$, or
+$g>g_c$, and is unstable; the origin is locally exponentially stable.
+\end{itemize}
+This last branch is the small root, not any other positive root separated
+from zero for fixed $b>0$.
+
+At each fixed $\mu>0$, $f(r,\mu)/r\to\mu$ as $r\downarrow0$.
+Choose an $\varepsilon>0$ inside the local domain with
+$f(r,\mu)\ge(\mu/2)r$ on $(0,\varepsilon]$. A solution with arbitrarily
+small $r_0>0$ is increasing and must reach $\varepsilon$ by time at most
+$2\mu^{-1}\log(\varepsilon/r_0)$: otherwise the integrated inequality
+would contradict $r<\varepsilon$. Continuation holds until exit from
+the compact scalar interval. The exact lift $r(t)\one$ is nonnegative
+throughout. This proves origin instability relative to $\Orth$ by an
+admissible trajectory, not merely a positive eigenvector. The fixed escape
+radius may depend on $\mu$, as the local instability definition allows.
+
+For $\mu<0$, full-domain exponential stability and P01's nonnegative
+invariance restrict to the orthant. A positive unstable branch point is
+interior to the orthant; its positive scalar derivative also supplies
+small synchronous departures remaining positive until a fixed local exit.
+\lin{305--330}: \pass.
+
+\textbf{STABILITY / PHYSICAL-BRANCH VERDICT: VERIFIED.}
+
+\section{Layer D: generic critical-point dynamics and state-space scope}
+\label{sec:critical}
+At $\mu=0$, $b\ne0$, the invariant-line equation is exactly
+\[
+ \dot r=\frac{r^2(b-Ar)}{1+r}.
+\]
+Choose $0<\varepsilon<1/2$ and $A\varepsilon<|b|/2$. For
+$0<|r|\le\varepsilon$, $b-Ar$ has the sign of $b$ and magnitude
+at least $|b|/2$, whereas $0<1+r\le3/2$. Thus
+$|\dot r|\ge |b|r^2/3$. If $b>0$, take $r_0>0$; if $b<0$, take
+$r_0<0$. In both cases $s=|r|$ increases and
+\[
+ \dot s\ge\frac{|b|}{3}s^2,\qquad
+ \frac1{s(t)}\le\frac1{s(0)}-\frac{|b|}{3}t
+\]
+until $s=\varepsilon$. The exit time is at most
+$3|b|^{-1}(s(0)^{-1}-\varepsilon^{-1})$. Smooth continuation within
+$[-\varepsilon,\varepsilon]\subset(-1,\infty)$ rules out any earlier
+failure of existence. These arbitrarily small data exit one fixed
+full-state neighborhood because $\norm{r\one}_2=\sqrt n|r|$.
+
+This proves nonlinear instability in the open domain $\U$ in both generic
+cases. For $b>0$ the escaping states are nonnegative. For $b<0$ they are
+negative, and the proof does not imply relative-orthant instability.
+P09 explicitly makes no full relative-orthant critical stability claim in
+that latter case; no subsequent sentence enlarges it. Statements of
+orthant instability elsewhere have $\mu>0$, or $b>0,\mu=0$, as their
+hypotheses. \lin{332--353}: \pass.
+
+\textbf{GENERIC CRITICAL-DYNAMICS VERDICT: VERIFIED.}
+
+\section{Layer E: degenerate geometry, spectra and center stability}
+\label{sec:degenerate}
+Set $b=0$, hence $a=A=k+h$. The transverse IFT already proved local
+completeness without this genericity assumption. The remaining equation is
+\[
+ f(r,\mu)=\frac{r}{1+r}(\mu-Ar^2).
+\]
+For $\mu<0$ there is no nonzero real root; for $\mu=0$ only the origin;
+for $\mu>0$ the two nonzero roots are exactly $r_\pm=\pm\sqrt{\mu/A}$.
+For $0<\mu<A$ both satisfy $r>-1$, and a further parameter shrinkage puts
+both in every required reduction and spectral-gap neighborhood. Only the
+positive one is nonnegative. There are no hidden nonsynchronous equilibria.
+
+At the critical point,
+\[
+ f(r,0)=-\frac{Ar^3}{1+r},\qquad
+ f_r(0,0)=f_{rr}(0,0)=0,\qquad f_{rrr}(0,0)=-6A\ne0.
+\]
+``Triple zero'' is the multiplicity of the scalar field's zero, not a
+triple eigenvalue. The full Jacobian is still $J_c$ with one simple zero.
+At either nonzero root,
+\[
+ \lambda_0=f_r(r_\pm,\mu)=-\frac{2Ar_\pm^2}{1+r_\pm}<0.
+\]
+The negative root is strictly greater than $-1$, so its denominator is
+positive; the numerator is negative on \emph{both} branches. Combining
+with the same transverse gap proves full nonlinear local exponential
+stability of both roots in $\U$. The origin is exponentially stable for
+$\mu<0$ and unstable for $\mu>0$, with the earlier synchronous positive
+escape proving relative-orthant instability. Both nonzero roots occur
+on $g<g_c$, because $\mu=g_c-g$. \lin{358--403}: \pass.
+
+\subsection{The center-manifold theorem is applicable as written}
+The reduction principle being used is the fixed-equilibrium,
+finite-dimensional center-stability principle: for a sufficiently smooth
+local system whose linearization splits into a center spectrum on the
+imaginary axis and a strictly stable spectrum, with no unstable spectrum,
+local asymptotic stability of the equilibrium in the restriction to a
+local center manifold implies local asymptotic stability of the full
+equilibrium. A smooth invariant manifold through the equilibrium tangent
+to the complete center subspace is a valid local center manifold here.
+
+At the fixed tuple $b=\mu=0$, the original field is smooth, the invariant
+synchronous line is tangent to $\R\one$, the remaining eigenvalues have
+real part at most $-\delta_n$, and no unstable spectrum exists. On that
+line,
+\[
+ \frac{d}{dt}\frac{r^2}{2}=-\frac{Ar^4}{1+r}<0
+ \quad(0<|r|<1/2).
+\]
+The scalar origin is locally asymptotically stable from both sides.
+All hypotheses of the stated reduction principle hold. P09 explicitly
+fixes $\mu=0$ and excludes the frozen parameter direction from this
+stability application. The extended two-dimensional center manifold
+used for the generic normal form is not being misused here. The
+application in \lin{405--415} is rigorous as written; the direct proof
+below is independent confirmation, not a repair of a defective theorem
+application.
+
+\section{Highest-priority audit: direct full-system Lyapunov argument}
+\label{sec:lyap}
+Everything in this section is at the fixed degenerate critical tuple,
+with $g=g_c$, $a=A$. Use the real coordinates $x=r\one+y$, $y\in E$.
+
+\subsection{Why the mean remainder is quadratic in the transverse state}
+Let $J(r)=D_xF(r\one,0)$. Independently from the original field,
+$J(r)=d(r)I+C(r)P+G(r)P^{-q}-H(r)P^q$, even at a nonstationary
+synchronous state. Its column sums, as well as row sums, equal
+$d+C+G-H=f_r(r,0)$. Therefore
+\[
+ w^TJ(r)y=f_r(r,0)w^Ty=0\qquad\text{for every }r\text{ and }y\in E.
+\]
+This is an identity at each $r$, not just at $r=0$. In particular it
+eliminates any putative mixed $r\,y$ term in the mean equation.
+
+Choose a compact convex coordinate neighborhood whose image lies in $\U$,
+so the entire segment $r\one+t y$, $0\le t\le1$, lies there. Taylor's
+formula in the transverse variable gives
+\begin{align*}
+ F(r\one+y,0)&=F(r\one,0)+J(r)y\\
+ &\quad+\int_0^1(1-t)D_x^2F(r\one+t y,0)[y,y]\,dt.
+\end{align*}
+After averaging, only the first and last terms remain. The second
+derivatives are bounded uniformly on this compact set; hence
+\[
+ \dot r=-\frac{Ar^3}{1+r}+R(r,y),\qquad
+ |R(r,y)|\le K\norm y_2^2.
+\]
+The constant $K$ is chosen on an initial neighborhood and kept fixed while
+the later radius shrinks. There is no circular choice of $K$ and $\rho$.
+\lin{419--426}: \pass.
+
+For an additional independent algebraic check, put $s=1+r$ and
+$\langle z_i\rangle=n^{-1}\sum_i z_i$. Expanding the original rational
+terms exactly gives
+\begin{align}
+ R={}&-k\langle y_i^2\rangle-h\langle y_i y_{i-q}\rangle\notag\\
+ &+c\left\langle\frac{r y_i^2}{s^2(s+y_i)}
+              -\frac{y_{i-1}y_i}{s(s+y_i)}\right\rangle\notag\\
+ &-g_c\left\langle\frac{r y_{i+q}^2}{s^2(s+y_{i+q})}
+              -\frac{y_i y_{i+q}}{s(s+y_{i+q})}\right\rangle.
+ \label{eq:explicitR}
+\end{align}
+This follows from the exact identity
+\[
+ \frac{r+p}{s+z}=\frac rs+\frac ps-\frac{rz}{s^2}
+      +\frac{rz^2}{s^2(s+z)}-\frac{pz}{s(s+z)}.
+\]
+All linear terms average to zero because each cyclic shift of $y$ has
+zero mean. For $|r|,\norm y_2\le1/4$, $s\ge3/4$ and
+$s+y_i\ge1/2$. The two rational coefficients are bounded by $8/9$ and
+$8/3$ respectively. Cauchy--Schwarz for each shifted product yields the
+explicit sufficient constant
+\[
+ |R|\le K_0\norm y_2^2,\qquad
+ K_0=\frac1n\left[A+\frac{32}{9}(c+g_c)\right].
+\]
+This extra identity is audit evidence only; P09's bounded-Taylor proof
+already suffices. It works when offsets collide or $n,q$ are noncoprime.
+
+\subsection{Exact transverse factorization}
+Since $\Pi F(r\one,0)=0$, the fundamental theorem of calculus gives
+\[
+ \dot y=\Pi\int_0^1D_xF(r\one+t y,0)y\,dt
+       =J_cy+B(r,y)y,
+\]
+where, as an operator from $E$ to $E$,
+\[
+ B(r,y)=\left.\Pi\int_0^1[D_xF(r\one+t y,0)-J_c]\,dt\right|_E.
+\]
+Here $\Pi J_cy=J_cy$. This is exact, including $y=0$, and not an
+approximate factorization requiring division by $\norm y$. Smoothness
+implies $B(0,0)=0$ and continuity in operator norm, so
+$\norm{B(r,y)}_2\le\delta_n/2$ on a sufficiently small neighborhood.
+\lin{427--434}: \pass.
+
+\subsection{The quadratic-form estimate does not rely on nonnormal spectra}
+For a real vector $y$, the skew-symmetric part contributes zero:
+\[
+ y^TJ_cy=y^TSy,\qquad
+ S=\frac{J_c+J_c^T}{2}=c\left(\frac{P+P^{-1}}2-I\right).
+\]
+The real symmetric matrix $S$ is unitarily diagonalized by the same
+Fourier basis, with eigenvalues $c(\cos\theta_m-1)$. On $E$ its
+uniform Fourier coefficient is zero; by Parseval,
+\[
+ y^TSy=\sum_{m=1}^{n-1}c(\cos\theta_m-1)|\widehat y_m|^2
+ \le-\delta_n\sum_{m=1}^{n-1}|\widehat y_m|^2
+ =-\delta_n\norm y_2^2.
+\]
+This includes the real singleton when $n$ is even. The bound is sharp on
+the real sine/cosine space of labels $1,n-1$. P09's short phrase
+``Fourier diagonalization gives'' refers to the valid unitary
+diagonalization already established in P04. It is not an inference
+from the real parts of the spectrum of an arbitrary nonnormal matrix.
+The explicit symmetric-part calculation confirms that no correction is
+needed at \lin{434--436}.
+
+It follows that
+\[
+ y^T\dot y\le-\delta_n\norm y_2^2+\norm B_2\norm y_2^2
+                 \le-\frac{\delta_n}{2}\norm y_2^2.
+\]
+
+\subsection{Strict decrease, invariant sublevels and continuation}
+Choose $0<\rho<1/2$ so that the coordinate box
+$|r|,\norm y_2<\rho$ lies in all preceding neighborhoods and
+$K\rho\le\delta_n/4$. Then for
+$V=(r^2+\norm y_2^2)/2$,
+\begin{align*}
+ \dot V&=-\frac{Ar^4}{1+r}+rR+y^T\dot y\\
+ &\le-\frac{A}{1+\rho}r^4+K\rho\norm y_2^2
+                  -\frac{\delta_n}{2}\norm y_2^2\\
+ &\le-\frac{A}{1+\rho}r^4-\frac{\delta_n}{4}\norm y_2^2<0
+                       \quad\text{if }(r,y)\ne(0,0).
+\end{align*}
+For negative $r$, $0<1+r\le1+\rho$, so the denominator comparison has
+exactly the indicated direction. The term $rR$ was bounded in absolute
+value; no sign assumption on $r$ or $R$ is used.
+
+For example take $0<\ell<\rho^2/4$. On the closed sublevel $V\le\ell$,
+$|r|,\norm y_2\le\sqrt{2\ell}<\rho$, and
+\[
+ |x_i|\le|r|+\norm y_2\le2\sqrt\ell<\rho<1.
+\]
+This is a compact subset of $\U$ and of the strict-estimate neighborhood.
+Since $\dot V<0$ on its nonzero boundary, it is positively invariant.
+The smooth vector field is bounded and locally Lipschitz near this compact
+set, so the local solution continues for all $t\ge0$ while remaining
+there. The coordinate norm is equivalent to the full state norm:
+\[
+ \frac{\norm x_2^2}{2n}\le V\le\frac{\norm x_2^2}{2}.
+\]
+Small invariant sublevels give Lyapunov stability. Within any such compact
+set, the only point where $\dot V=0$ is zero. The strict Lyapunov theorem,
+or LaSalle on that set, gives convergence to zero. This proves local
+asymptotic stability in the \emph{full} open domain, without presuming
+global invariance of $\U$. \lin{437--449}: \pass.
+
+\textbf{Explicit substantive conclusion: the full origin at $b=0$, $\mu=0$
+is locally asymptotically stable in $\U$. VERIFIED.}
+
+\subsection{Algebraic decay rules out exponential stability}
+On synchrony at the same tuple, a small positive solution decreases and
+a small negative solution increases. Uniqueness prevents either from
+crossing or reaching the equilibrium in finite time. Monotonicity and
+the absence of any other scalar equilibrium force convergence to zero.
+For every nonzero such solution,
+\[
+ \frac{d}{dt}(r^{-2})=-2r^{-3}\dot r=\frac{2A}{1+r(t)}\longrightarrow2A.
+\]
+Integrating and taking a Cesaro mean gives
+$r(t)^{-2}/t\to2A$, hence $|r(t)|\sim(2At)^{-1/2}$. Sign preservation
+makes this valid from either side. If the full origin were locally
+exponentially stable, these exact full-system solutions would satisfy
+$\sqrt n|r(t)|\le M e^{-\gamma t}\sqrt n|r_0|$ for some
+$M,\gamma>0$. Their algebraic decay contradicts that estimate.
+No rate for every nonsynchronous trajectory is inferred.
+\lin{451--459}: \pass.
+
+\textbf{DEGENERATE CRITICAL-STABILITY VERDICT: VERIFIED.}
+
+\section{Layer F: codimension, terminology and scope}
+\label{sec:scope}
+In the open positive parameter space with coordinates $(a,k,c,g,h)$,
+set $H_1=a-k-h$ and $H_2=g-a-c$. Their gradients are
+\[
+ \nabla H_1=(1,-1,0,0,-1),\qquad
+ \nabla H_2=(-1,0,-1,1,0).
+\]
+A linear dependence has second coefficient zero by the $g$ coordinate,
+then first coefficient zero by the $k$ coordinate. Equivalently the
+minor in columns $k,g$ is $-1$. Rank two holds everywhere. The common
+zero set is nonempty, since any $k,c,h>0$ give $a=k+h$, $g=a+c$.
+The regular level-set theorem gives a smooth codimension-two
+submanifold for each fixed admissible $(n,q)$.
+
+This is rank in physical parameter space, not algebraic multiplicity of
+an eigenvalue. At every point on the locus, $J_c=c(P-I)$ still has exactly
+one simple zero. P09 expressly excludes a double-zero spectral degeneracy;
+there is no Bogdanov--Takens assertion.
+
+Verified P02 gives
+\[
+ g_f=a+c+\frac{(a-A)^2}{4A},\qquad r_f=\frac{a-A}{2A}.
+\]
+As $A>0$, $g_f=g_c$ iff $a=A$, at which $r_f=0$. The repeated root is
+positive only when $a>A$. Thus the meeting point is the origin and the
+statement is only an algebraic meeting of loci. In fact the two equations
+$g=g_c$ and $g=g_f$ themselves meet tangentially: the rank-two proof uses
+$b=0$ and $g-g_c=0$, not independent gradients of the two locus graphs.
+P09 does not confuse these two rank statements. \lin{462--492}: \pass.
+
+P09's degenerate terminology is consistently ``cubic-degenerate origin'',
+``square-root nonzero branches'', and failure of ordinary transcritical
+quadratic nondegeneracy. Its occurrences of ``pitchfork'' explicitly
+withhold that classification. No $\mathbb Z_2$ symmetry is asserted.
+The rational scalar field is not presumed odd. No named codimension-two
+unfolding is claimed.
+
+The negative degenerate stable branch is a signed equilibrium in $\U$;
+it supplies no second positive stable branch for a physical bistability
+theorem. The generic $b>0$ case only analyzes the branch near zero.
+P09 neither proves nor claims a positive-fold saddle-node, true
+bistability, basin separation, basin geometry, cusp unfolding or
+two-parameter unfolding. P10 retains those subsequent tasks within the
+frozen scope; B03 still requires its precise local coexistence wording.
+Likewise there is no P05 selection theorem, five-node specialization,
+DM--MB comparison, Hopf assertion, imaginary-pair transversality,
+first Lyapunov coefficient, rotating wave or large-$n$ theorem here.
+The real branch-crossing word ``transverse'' is not an imaginary-pair
+transversality claim. Neighborhoods may depend on $n$; the gap shrinks
+with growing $n$ and no uniform-in-$n$ assertion is made.
+\lin{494--539}: \pass.
+
+\textbf{CODIMENSION / SCOPE VERDICT: VERIFIED.}
+
+\section{Independent corroboration, provenance and counterexample search}
+\label{sec:checks}
+\subsection{Independent checks}
+The audit's \path{A09_support/independent_checks.py} was initially authored
+from the canonical field before reading the developer checker. It imports
+no developer code or output. It uses exact rational series division and
+rational identities separately from ordinary NumPy floating-point tests.
+Its final recorded run used Python 3.12.14 and NumPy 2.3.5, with fixed random
+seed 90261003. The source and all raw results are packaged.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Independent check class & Count\\\midrule
+Exact rational identities and derivative checks & 310\\
+Original-field equilibrium / direct-matrix cases & 2,370\\
+Generic local slope checks, both orientations & 316\\
+Original-field transverse Newton searches & 474\\
+Full-field Lyapunov / remainder / transverse-factor samples & 1,580\\
+\bottomrule
+\end{tabular}
+\end{center}
+Dimensions are $5,6,7,8,9,10,12,15,16$, with every admissible $q$:
+79 network pairs, including 33 noncoprime pairs. This includes $q=1$,
+$q=n-1$ and $q=n/2$ whenever allowed. Six positive fixed tuples include
+both generic signs, two exactly degenerate tuples, a small coupling $c$,
+and $b$ close to zero on both sides. Both signs of $\mu$, critical points,
+the generic local branch and both degenerate roots are tested.
+
+The original field is evaluated directly. Jacobian entries are assembled
+by adding each summand's derivative to its actual receiving column,
+including collisions, and checked against complex-step differentiation.
+All direct matrix eigenvalues are paired to the analytic list with
+multiplicity retained. Maximum equilibrium residual is
+$1.214\times10^{-20}$; maximum scaled spectrum discrepancy is
+$4.797\times10^{-15}$; maximum scaled Jacobian discrepancy is
+$6.939\times10^{-16}$; maximum relative slope error is
+$1.251\times10^{-7}$. These maxima are run diagnostics, not rigorous
+enclosures.
+
+The transverse searches fix $(r,\mu)$ and solve the original projected
+field in a real orthonormal basis of $E$ from small nonzero initial
+transverse states. All converge to numerical zero; the largest final
+transverse norm is $1.636\times10^{-19}$. This is only a finite search,
+not a proof of IFT uniqueness. The Lyapunov tests independently evaluate
+$R$, $\dot V$, the symmetric-part eigenvalues, and a quadrature approximation
+of $B$. All satisfy the tested inequalities. Tiny-$b$ eigenvalues may
+approach floating-point resolution; their sign is checked by the exact
+scalar formula, not falsely certified by a rounded matrix eigenvalue.
+
+\subsection{Developer validation is kept separate}
+The developer companion was located and its original checker authenticated:
+\begin{center}\small
+\texttt{b42af82b97c187b3a61238b7cc2aba9d35e44d210a38ec88421b10d5be2fcf93}
+\end{center}
+It was copied into the audit support directory and rerun there, leaving
+the original untouched. All four result files (exact, numerical, slopes,
+summary) reproduced byte-for-byte: 1,260 exact checks, 2,700 matrix cases
+and 12 slope checks. The originals, rerun files and hash comparison are
+under \path{A09_support/prior_validation/}. Their role is validation
+provenance only. This reproduction neither proves P09 nor resolves the
+older A04/A05 provenance qualifications.
+
+\subsection{Twelve targeted attempts to break the proof}
+\begin{longtable}{@{}p{0.06\textwidth}p{0.26\textwidth}p{0.61\textwidth}@{}}
+\toprule No. & Target & Adversarial resolution\\\midrule\endhead
+1 & $\psi\equiv0$ & Tested parameter-dependent neighborhoods and uniqueness.
+A fixed product contains $y=0$ for every nearby $(r,\mu)$; uniqueness forces
+zero. This is analytic, not a numerical observation.\\
+2 & Equilibrium completeness & A merely scalar restriction would be inadequate.
+The invertible real transverse derivative excludes every nearby
+nonsynchronous solution, including nonsmooth hypothetical branches.\\
+3 & Branch slope sign & Differentiate $Q$ twice and then use $d\mu/dg=-1$;
+both signs of $b$ checked. No missing orientation reversal.\\
+4 & Stability exchange & Recomputed all modes, including even singleton and
+offset collisions. Only the uniform eigenvalue can change sign locally.\\
+5 & Positive branch side & The exact relation $\mu=-r_*(b-Ar_*)$ fixes the
+side. An additional root away from zero cannot be substituted for $r_*$.\\
+6 & Time factor & Both potential zeros $r=b/A$ and $r=b/(2A)$ are excluded
+by a fixed-$b$ neighborhood; $r=-1$ is outside the domain. $\alpha(0)=1$.\\
+7 & Generic critical escape & For $b<0$, negative $r$ gives increasing
+$|r|$, rather than positive escape. The source preserves the orthant scope.\\
+8 & Negative degenerate root & $1+r_->0$ locally and the uniform numerator
+is $-2Ar_-^2<0$. No positive-state coefficient signs were imported.\\
+9 & Full degenerate stability & Both the fixed-parameter reduction principle
+and an independent strict Lyapunov function apply; parameter neutrality
+cannot be used to refute the fixed-tuple assertion.\\
+10 & Mean remainder & A potential $|r|\norm y$ term vanishes identically:
+$w^TJ(r)|_E=0$ at every $r$. Exact formula (\ref{eq:explicitR}) checks this.\\
+11 & Quadratic-form bound & Real parts alone would fail for a general
+nonnormal matrix. Here the symmetric part has exactly the Fourier cosine
+eigenvalues, proving the asserted bound.\\
+12 & Codimension & Independent gradients of $b$ and $g-g_c$ have rank two;
+the tangential meeting of the repeated-root and intersection graphs is
+not mistaken for a transverse intersection.\\
+\bottomrule
+\end{longtable}
+No analytic counterexample survives these checks. No finite computation
+is claimed to exclude counterexamples universally; the analytic arguments
+in Sections~\ref{sec:reduction}--\ref{sec:scope} supply that justification
+under P09's stated local hypotheses.
+
+\section{Complete source-line review}
+\label{sec:lines}
+Line numbers refer to the authenticated 539-line P09 v1.0 source, not its
+PDF or an earlier placeholder. The ledger below covers every line once
+in consecutive ranges, including metadata, separators and the closing
+checklist. Every substantive range is assessed. All ranges are PASS;
+there is no MINOR ISSUE, MAJOR ISSUE, FALSE or UNRESOLVED finding.
+The machine-readable companion is \path{A09_support/line_review.json}.
+
+% A09-LINE-LEDGER-START
+\begin{longtable}{@{}p{0.11\textwidth}p{0.10\textwidth}p{0.70\textwidth}@{}}
+\toprule Lines & Verdict & Finding\\\midrule\endhead
+1--15 & \pass & Metadata correctly declares DRAFT, fixed parameter path, direct P02--P04 dependencies, inherited P01 and scope exclusions.\\
+16--20 & \pass & Title and status agree with the exact CURRENT manifest; no verification is self-awarded.\\
+21--27 & \pass & Canonical tuple and abbreviations are consistent; $b$ is unambiguously local and $A>0$.\\
+28--33 & \pass & All five original DM terms are transcribed with correct indices and $g=g_c-\mu$.\\
+34--39 & \pass & Joint smoothness, positive $g$ neighborhood, open domain and parameter-dependent locality are correct; no global invariance or uniform-in-$n$ claim.\\
+40--49 & \pass & P02 import is the exact invariant restriction with denominator $1+r$; no global completeness is inferred here.\\
+50--53 & \pass & Subsection and anchor only; no added claim.\\
+54--70 & \pass & Critical spectrum lemma: algebraically simple zero, real kernel, explicit positive gap and arbitrary admissible $q$ are correct.\\
+71--80 & \pass & Original differentiation, Fourier phases, characteristic-polynomial derivative and real kernel are independently correct.\\
+81--85 & \pass & Cosine comparison covers odd/even dimensions and all paired/singleton nonzero labels.\\
+86--97 & \pass & Local equilibrium completeness is stated in state and parameter neighborhoods, including $b=0$.\\
+98--107 & \pass & Mean coordinates and orthogonal mean-zero projection give a real linear isomorphism; normalization agrees with scalar amplitude.\\
+108--115 & \pass & Projected derivative preserves $E$; complexification has no kernel, which does imply invertibility of the real restriction.\\
+116--124 & \pass & Real IFT product and uniqueness imply $\psi\equiv0$; zero belongs to one common transverse neighborhood.\\
+125--130 & \pass & Both equilibrium implications are proved; multiplication by positive $1+r$ is harmless; shrinking gives a state/parameter product.\\
+131--135 & \pass & Subsection/proposition opening has no unsupported claim.\\
+136--141 & \pass & Scalar derivative values and mixed derivative are correct.\\
+142--154 & \pass & Left/right vectors have pairing one; full contractions, Taylor half-factor and opposite physical-$g$ coefficient are correct.\\
+155--159 & \pass & Scalar expansion has cubic coefficient $-(A+b)$ and quadratic derivative $2b$.\\
+160--169 & \pass & Original-field mixed derivatives and all five second directional contributions are correct; averaging introduces no extra $n$.\\
+170--175 & \pass & Generic theorem title is justified by the ensuing full-system proof.\\
+176--189 & \pass & Branch completeness, smoothness and expansions have fixed-$b$ local scope; both slope orientations are correct.\\
+190--206 & \pass & Tangents are in the synchronous state--parameter plane; full nonlinear stability table and transcritical conclusion have the stated generic hypotheses.\\
+207--215 & \pass & Second IFT constructs the unique small root; nonzero iff $\mu\ne0$; the other root stays excluded for fixed $b\ne0$.\\
+216--225 & \pass & First/second derivatives and tangent vectors are correct; $d\mu/dg=-1$ is explicitly used.\\
+226--235 & \pass & Invariant line is a fixed-parameter center manifold; its product with parameter is the full extended center manifold because $F_\mu(0,0)=0$.\\
+236--244 & \pass & Coordinate $u=Ar^2-br$ is locally invertible; exact transformed vector field and rational time factor are correct.\\
+245--249 & \pass & Denominators stay nonzero, time factor is positive, and orbital equivalence is limited to the center restriction.\\
+250--254 & \pass & Full derivative of the scalar field is taken before imposing equilibrium; product-rule terms are correct.\\
+255--261 & \pass & Uniform eigenvalue and alternative expression use the equilibrium relation with the correct minus sign.\\
+262--270 & \pass & Both $b$ factors retain their sign locally; the exact sign proof is primary and the expansion only corroborates it.\\
+271--282 & \pass & General P04 coefficients and phase signs remain valid at negative synchronous states and colliding offsets.\\
+283--293 & \pass & Finite-label continuity yields one common strict transverse gap, including $b=0$; no selection theorem is used.\\
+294--303 & \pass & Origin sign and nonlinear linearization results prove the exchange. Exactly one unstable real direction refers to the off-critical hyperbolic equilibria just treated.\\
+304--315 & \pass & Physical corollary has correct branch side and stability for each sign of $b$; orthant statements are off-critical.\\
+316--324 & \pass & Positive synchronous escape, with a fixed radius for each fixed $\mu>0$, supplies an admissible trajectory proving relative instability.\\
+325--330 & \pass & Nonnegative invariance restricts stability; interior positive-branch instability and the separate away-from-zero root are correctly scoped.\\
+331--338 & \pass & Generic critical instability is in $\U$; the $b<0$ orthant conclusion is expressly withheld.\\
+339--343 & \pass & Critical synchronous equation is exact.\\
+344--353 & \pass & Magnitude bound $|b|r^2/3$, sign choice for $r$, finite exit, domain preservation until exit and orthant limitation are correct.\\
+354--359 & \pass & Degenerate subsection/proposition opening does not assume genericity.\\
+360--367 & \pass & For $\mu<0$ and $\mu=0$, local root counts and stability types are correct; triple zero describes the scalar field.\\
+368--377 & \pass & Two roots for $\mu>0$ are in $\U$ locally; both are exponentially stable there; origin is unstable and only the positive root is nonnegative.\\
+378--382 & \pass & Translation to $g$ is correct; pitchfork and two-parameter unfolding are explicitly not asserted.\\
+383--388 & \pass & The transverse reduction applies without $b\ne0$; both roots can be placed in a common local neighborhood with $r>-1$.\\
+389--393 & \pass & Critical cubic derivative is $-6A$; scalar zero multiplicity is exactly three.\\
+394--403 & \pass & Uniform eigenvalue is negative on both signed branches; transverse continuity and the earlier positive escape supply full off-critical conclusions.\\
+404--415 & \pass & The fixed-parameter center-stability theorem is stated with and satisfies all hypotheses; the neutral parameter direction is explicitly excluded.\\
+416--418 & \pass & Independent direct Lyapunov proof is at the fixed degenerate tuple in real mean/transverse coordinates.\\
+419--426 & \pass & Circulant column sums kill all linear-in-$y$ mean terms for every $r$; uniform transverse Taylor remainder is $O(\norm y_2^2)$.\\
+427--432 & \pass & Vanishing transverse field on synchrony gives the exact integral factorization and the displayed operator $B:E\to E$.\\
+433--436 & \pass & Operator norm of $B$ shrinks to zero; the quadratic-form estimate follows from unitary Fourier diagonalization, or explicitly its real symmetric part.\\
+437--444 & \pass & Radius choice is feasible with a fixed $K$; the $rR$ bound and denominator comparison give the strict negative derivative for both signs of $r$.\\
+445--450 & \pass & Compact sublevels lie in $\U$ and the estimate neighborhood, are invariant, and ensure continuation and full asymptotic stability.\\
+451--460 & \pass & Sign preservation and convergence justify the reciprocal-square derivative limit, algebraic asymptotic, and impossibility of full exponential stability.\\
+461--471 & \pass & Codimension proposition concerns the positive physical parameter space and an algebraic meeting of loci only.\\
+472--480 & \pass & Gradients have rank two, the regular-level theorem applies, and the locus is nonempty.\\
+481--483 & \pass & The center zero remains spectrally simple; no double-zero claim.\\
+484--492 & \pass & P02 formulas give equality of loci iff $a=A$, at root zero; positive repeated root and saddle-node scope are correctly distinguished.\\
+493--500 & \pass & B02 resolution is limited to P09; NB07, frozen supporting role and exclusion of unfolding are respected.\\
+501--512 & \pass & Analytical checks are actually in the proof; computational provenance is separate and has been reproduced, without treating validation as proof.\\
+513--518 & \pass & Audit-priority preamble and IFT/slope priorities accurately identify the proof obligations.\\
+519--524 & \pass & Coefficient and center-normal-form audit requests preserve normalization and full-system completeness.\\
+525--528 & \pass & Spectral and physical-side priorities explicitly include negative states, collisions and open-domain versus orthant distinctions.\\
+529--534 & \pass & Degenerate Lyapunov and codimension priorities are correctly scoped; no named pitchfork/cusp classification is asserted.\\
+535--539 & \pass & Final exclusions retain the P10 boundary and all other forbidden later-module claims; closing environment is complete.\\
+\bottomrule
+\end{longtable}
+% A09-LINE-LEDGER-END
+
+\section{Requested-check coverage}
+The request's checks 0--1 are addressed in Sections~\ref{sec:auth}--\ref{sec:deps};
+checks 2--9 in Sections~\ref{sec:reduction} and the verdict table;
+checks 10--16 in Section~\ref{sec:generic}; checks 17--25 in
+Section~\ref{sec:stability}; checks 26--27 in Section~\ref{sec:critical};
+checks 28--34 in Section~\ref{sec:degenerate}; checks 35--41 in
+Section~\ref{sec:lyap}; checks 42--47 in Section~\ref{sec:scope}; checks
+48--49 in Section~\ref{sec:checks}; and check 50 in Section~\ref{sec:lines}.
+Checks 51--55 are implemented by the verdicts, exact-slug source, audit-only
+archive and closure handoff. None of these dispositions depends on compiling
+this document or on a developer validation result.
+
+\section{Closure handoff to the original P09 development chat}
+\label{sec:handoff}
+\textbf{OVERALL VERDICT: VERIFIED. Required corrections: none.}
+There are no E01, E02 or other required issue IDs to close. The original
+P09 development chat may perform administrative closure without changing
+the mathematical body of the exact audited P09 v1.0. Preserve the original
+audit source and its evidence, and record the current/audited hashes and
+verdicts in the appropriate lifecycle metadata there.
+
+This audit chat has not edited P09, promoted it to VERIFIED in any project
+file, begun P10, or created a replacement full project. The audit delivery
+is named exactly \path{cyclic_network_project_A09_audit_only.zip}, with
+the root \path{cyclic_network_project/} and only A09 artifacts. The
+original \path{cyclic_network_project_P09_draft.zip} remains unchanged.
+
+\textbf{After successful correction/closure, the original P09 development
+chat must create the COMPLETE full-project archive:}
+\begin{center}
+\path{cyclic_network_project_P09_audited.zip}.
+\end{center}
+That archive must not be created in this audit chat.
+
+\textbf{P10 gate: cleared after administrative A09/P09 audit closure.}
+All mathematical prerequisites P02, P03, P04 and the audited P09 result
+are available; P10 is the next frozen attempt. This is permission to begin
+its scoped proof work after closure, not a P10 theorem verdict. P10 must
+state its own positive-equilibrium, full-spectrum and local stable-coexistence
+hypotheses, retain the B03/local-versus-global boundary, and undergo its own
+audit. No global basin result, unfolding or later proof is authorized or
+supplied by this audit.
+\end{document}

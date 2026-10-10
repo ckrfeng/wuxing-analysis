@@ -1,0 +1,1839 @@
+P01–P14 · Adversarial prior-art audit
+Research audit · 4 October 2026 · Pasted archive only
+What is new in the cyclic-network program?
+A theorem-level audit of P01–P14: exact model priority, finite-ring selection, physical criticality, matched interaction laws and the remaining Hopf work.
+Print report
+Scope, evidence and notation
+PART I · Executive novelty verdict
+PART II · Exact-model priority audit
+PART III · Module-by-module P01–P14 review
+PART IV · Deep audits of P05, P08, P10 and P11
+PART V · Future literature risk: P12–P14
+PART VI · Detailed prior-art matrix
+PART VII · Strongest contribution ranking
+PART VIII · Claims that should be weakened
+PART IX · Claims that could be strengthened
+PART X · Literature gaps worth exploiting
+PART XI · Recommended manuscript positioning
+PART XII · Critical bibliography
+PART XIII · Search log and unresolved priority questions
+Final novelty table · P01–P14
+Scope, evidence and notation
+Adversarial literature review and prior-art audit of P01–P14 · 4 October 2026
+This report uses only the two pasted attachments as evidence of the project’s contents: the
+Claim Blueprint: P01–P14
+and the detailed review request. No project folders or proof files were inspected, and no project source files were changed. “Verified” below means verified
+according to the blueprint
+; this is a priority audit, not a fresh verification of the underlying proofs.
+Current:
+P01–P05 and P07–P11.
+Future / not yet proved:
+P06 and P12–P14. The scope ends at P14. The literature cutoff is this audit date; a search result’s crawl date was not treated as its publication date.
+DM: ẋᵢ = axᵢ − kxᵢ² + cxᵢ₋₁/(1+xᵢ) − gxᵢ/(1+xᵢ₊q) − hxᵢxᵢ₋q.
+MB: ẏᵢ = ayᵢ − kyᵢ² + cyᵢyᵢ₋₁ − gyᵢyᵢ₊q − hyᵢyᵢ₋q.
+Throughout, n≥5, 1≤q<n, all five coefficients are positive, and indices are modular. At positive DM synchrony x, put s=1+x, C=c/s, G=gx/s², H=hx and d=−kx−c(1+2x)/s². Then rₘ=d+C cosθₘ+(G−H)cos(qθₘ), with θₘ=2πm/n. “Selected” always retains the complete set of maximizers of rₘ, including ties.
+Classification discipline.
+Each substantive claim receives one of the seven requested labels. A module can contain claims in different classes; the final table identifies its main content, rather than replacing the claim-level analysis. “APPARENTLY NEW” means no materially equivalent theorem was found in the inspected literature. It is conditional on unresolved exact-model sources. Confidence rates the judgment supported by available evidence; priority risk rates the remaining chance of a relevant antecedent. HIGH confidence that a method is routine does not mean its exact DM formula has already been printed.
+Bibliography entries distinguish full-text inspection, selected equation/theorem inspection, and abstract/metadata access. Numbered citations link directly to primary papers, author copies or publication records. The large comparison table is searchable and horizontally scrollable.
+PART I — Executive novelty verdict
+The project remains a plausible mathematical paper, but its defensible contribution is a constrained classification of modes and interaction-law contrasts—not Fourier analysis, the golden ratio, or the generic existence of rotating waves.
+The strongest current package is P05 + P11 + P08. P05 identifies every finite-ring mode that can maximize the real spectrum. P11 then cuts down that list using positivity and the equilibrium relation: some realizable dominant cells cannot contain a physical spectral boundary at all. P08 asks how these possibilities change for a specified bilinear comparator at the same nominal coefficient tuple. The resulting parity and branch restrictions are substantially more informative than a numerical demonstration that two nonlinearities behave differently.
+The exact P11 iff criterion and the P08 all-size, branch-labelled comparison theorems are the leading apparent novelty candidates. No materially equivalent theorem was found in the primary sources inspected. This is a
+MEDIUM-confidence, UNRESOLVED-priority-risk
+judgment, because the closest five-element proceedings and thesis are not fully accessible. It is not a certificate of first publication. The positive-parameter lift of P05’s cells and switching surfaces is a meaningful supporting result. The bare nearest-cosine calculation is much less distinctive.
+A close precedent is the Lorenz-96 equation ẋᵢ=xᵢ₋₁(xᵢ₊₁−xᵢ₋₂)−xᵢ+F. Its homogeneous-state real spectrum is −1+F(cosθ−cos2θ). For F>0, writing u=cosθ yields a concave quadratic with vertex 1/4. The published analysis includes finite-size first-Hopf selection, simultaneous critical pairs and explicit nonlinear criticality. This directly precludes selling a quadratic cosine dispersion or a finite-ring Hopf calculation as a new general method. The relevant locations are Lemma 1, Theorems 2/4 and Proposition 5 in the inspected preprint.
+[B08: Dirk L. van Kekem, 2018]
+Our additional task is different: the DM vertex moves with positive physical parameters, while its diagonal term and equilibrium are constrained by the same parameters. A freely movable quadratic vertex does not establish that all cells lift to positive coefficients, nor that a selected cell can reach r=0. Those are the mathematical distinctions that should carry the paper. P11 expresses the latter obstruction explicitly through wⱼ>0 and max(0,βⱼ)<wⱼ/[4(1−uⱼ)]. The exclusions (8,1) and (12,2) are useful because they separate two notions of realizability within the same proven selection atlas.
+Even the conceptual distinction between an algebraic Hopf point and a physically feasible one has prior art. Pais, Caicedo-Núñez and Leonard explicitly discuss infeasible Hopf parameter values for circulant replicator-mutator systems after Theorem 4.5; their Lemma 4.6 also evaluates a Fourier-structured Lyapunov coefficient. This prevents a “first distinction between mathematical and admissible Hopf modes” claim. It does not supply the DM cellwise necessity-and-sufficiency theorem.
+[B23: Darren Pais, 2012]
+P08 has the strongest independent narrative. Its universal forward witness has x*=y*=1, so even equilibrium amplitude is matched at that point. More decisively, the reverse contrast on the specified unique-root domain exists exactly when n≡3 mod 4, while allowing the lower DM branch changes the obstruction to divisibility by four. The independent realization of every ordered pair of reachable dominant representatives with both equilibria stable further separates mode ordering from instability. These exact quantifiers and domain distinctions are what make P08 more than an example.
+However, “same topology” must mean the same
+unsigned directed dependency support
+in this comparison. At positive states, the DM derivative with respect to xᵢ₊q is positive, while its MB analogue is negative. At q=2 these are distinct edges; for coincident offsets elsewhere, total derivatives must be combined. The comparison changes effective regulatory signs as well as receiver dependence and boundary behavior. Consequently the conclusions establish a property of these two specified laws, not an isolated biological effect of saturation with an unchanged signed interaction graph. Fixing nominal coefficients also presupposes the declared dimensionless state and time conventions.
+P10 is the strongest supporting steady-state theorem. The useful calculation is Gf−Hf=rf(k+c/sf²)>0 at every positive fold, for every allowed n,q. That identity forces all transverse real parts strictly negative without extra parameter hypotheses. The subsequent simple-zero fold theorem, local sink–saddle pair, persistence of sinks and local separatrix use established machinery. Broader cyclic-feedback literature already studies bistability and basin organization; its single-input monotonicity assumptions do not automatically hold for DM.
+[B25: Jules Guilberteau, 2023]
+[B34: Yuri A. Kuznetsov, 2006]
+The remaining current modules should mostly support those headline results. P01 establishes a sound phase space and bounds. Its exact-radius finite-entry iff statement is a small model-specific refinement; the maximum comparison method is routine, and the blueprint expressly does not claim an optimal radius. P02 is exact root algebra on synchrony. P03–P04 are differentiation and standard circulant spectral theory. P07 is a useful five-node worked example, especially for stable ties, but fifth-root golden-ratio identities are not a new biological principle. An earlier five-agent Wu-Xing paper explicitly emphasizes golden-ratio structure.
+[B06: Ciann-Dong Yang, 2023]
+[B17: Robert M. Gray, 2006]
+P09’s full-system transcritical statement is stronger than a scalar sketch, but its ingredients are an invariant center line, a simple uniform zero and a transverse implicit-function argument. That makes it a correct routine application rather than a new bifurcation mechanism. The degenerate cubic locus should stay separately stated. P10 does not justify stability of the upper branch, index one of the lower branch, or exclusivity of two attractors throughout the entire two-root interval; the blueprint already contains an exact counterexample.
+Future P12–P14 have unequal value. A nonzero total crossing derivative on the frozen g-path is necessary infrastructure. A nonzero first Lyapunov coefficient converts the spectral candidate into a classified nonlinear local bifurcation and can materially improve completeness, even if the calculation itself adds little methodological novelty. The best P13 target is an explicit sign theorem on a substantial admissible part of the Hopf surface, indexed by size or mode and connected to the P11 restrictions. The existence of some small open neighborhood of one nonzero value follows from continuity; that alone is not a strong region theorem. Fourier contraction through modes 0 and 2m already appears in generalized Lorenz-96 work.
+[B11: John Kerin, 2022]
+[B21: Karen M. Page, 2018]
+Once a simple nondegenerate Hopf branch is proved, P14’s exact cyclic phase relation, cluster count and signed propagation are essentially consequences of equivariant Hopf theory. Stewart’s recent ring treatment gives both general phase-pattern statements and a direction criterion. The contribution of this project would be identifying which physically feasible DM modes actually produce those waves and on which parameter side, rather than introducing a new rotating-wave theorem.
+[B12: Ian Stewart, 2024]
+[B16: Martin Golubitsky, 1985]
+The biggest priority issue remains the Lin–Shi–Han line. A 2020 bilinear five-element equation was inspected; it is not DM. The accessible later manuscript excerpt uses enzyme activation/inactivation fractions, again visibly different in those terms. But the 2021–2023 proceedings, the complete 2024 main text and Lin’s 2021 master’s thesis have not all been checked. The retrieved 2024 supplement refers to a Hopf parameter region, so “those papers are only numerical” is not defensible. The proper overall exact-model verdict is
+PRIORITY STATUS UNRESOLVED
+.
+[B01: Haipeng Lin, 2020]
+[B02: Haipeng Lin, 2021]
+[B03: Haipeng Lin, 2022]
+[B04: Haipeng Lin, 2023]
+[B05: Haipeng Lin, 2024]
+My recommended paper story is:
+“Exact finite-ring mode selection and physical criticality constraints under two specified interaction laws.”
+It can connect dominance, admissible criticality, same-tuple contrasts and the steady-state branch structure in a coherent theorem sequence. Publication-worthiness is conditional on the underlying proofs and the remaining priority checks; it should not be inferred from the sheer number of modules. A compact paper led by P08 and P11, with P05 as their common geometric foundation and P10 as branch organization, is more persuasive than fourteen equally weighted novelty claims.
+PART II — Exact-model priority audit
+Verdict: PRIORITY STATUS UNRESOLVED.
+I did not find a verified earlier occurrence of the complete canonical DM equation. I also did not obtain enough of the closest proceedings/thesis chain to certify its absence. Exact-model priority and theorem priority are separate: a new equation does not make Fourier diagonalization new; an old equation could still support new constrained classifications.
+Source
+What is established by inspection
+What remains unresolved
+Lin–Han 2020
+[B01: Haipeng Lin, 2020]
+Eq. (2), printed p. 778, is bilinear: axᵢ−bxᵢ²+cxᵢxᵢ₋₁−dxᵢxᵢ₋₂−g₀xᵢxᵢ₊₁−hxᵢxᵢ₊₂, for five nodes.
+Do not describe its “first Lyapunov method” as a computed Hopf first Lyapunov coefficient. Those are different concepts.
+Lin–Shi–Han 2021
+[B02: Haipeng Lin, 2021]
+Title, authors, DOI, conference and pages confirmed.
+Actual denominator, equation, equilibrium/spectrum and Hopf analysis require the paper.
+Lin–Shi–Han 2022
+[B03: Haipeng Lin, 2022]
+Proceedings metadata confirmed.
+The ResearchGate record exposed a later two-author manuscript. That is not a verified copy of the 2022 three-author paper.
+Lin–Han 2023
+[B04: Haipeng Lin, 2023]
+Multi-node paper and bibliographic record confirmed.
+How much analytical n-dependence, normal-form analysis or model comparison it contains is unknown.
+Lin–Han 2024
+[B05: Haipeng Lin, 2024]
+Publisher record plus partial author manuscript and public supplement inspected. Visible enzymatic law has activation aXₘ(1−Xᵢ)/(1−Xᵢ+K) and inactivation −bXₙXᵢ/(Xᵢ+k).
+The complete main text, including its Hopf section and all equations, is needed. No reliable exclusion of an l₁ calculation can be made.
+Lin 2021 thesis
+Official laboratory list confirms a July 2021 master’s thesis, supervisor Jing Han:
+多子系统生克耦合模型的研究
+.
+No thesis full text obtained. Potentially the most detailed antecedent; degree level is master’s, not PhD.
+Xiong–Zhang 2025
+[B32: 熊枫 (Feng Xiong), 2025]
+Journal abstract describes simulated enzymatic five-element oscillations; references point to the thesis and Lin’s 2021/2024 papers.
+Full equation and possible analytic results not inspected. Website dates conflict internally; cite the journal’s 2025 volume/issue.
+Exact bilinear mapping.
+In the displayed 2020 law, set g₀=0, identify b with current k, old d with current h, and old h with current g. This gives the current n=5,q=2 MB equation at a boundary of the six-term coefficient family. It does not give DM, and it is not the identity mapping of same-named coefficients. This source comparison does not upgrade the blueprint’s deferred six-term spectrum into a verified project theorem.
+[B01: Haipeng Lin, 2020]
+Receiver dependence is not enough for identity.
+The visible 2024 enzymatic factors depend on the receiver’s active/inactive fraction. DM’s c-term has a source numerator and receiver denominator without the inactive-fraction numerator; its g-term has the denominator on a different node. Those are mathematical differences in derivatives and boundary behavior, not interchangeable descriptions of “saturation.” Affine state changes, reversal of ring orientation or parameter renaming must be checked term by term before claiming equivalence.
+[B05: Haipeng Lin, 2024]
+Supplement successfully retrieved.
+The publisher link delivers a 7z archive, despite the page’s PDF-style label. Its
+supplementary.tex
+contains five sections: sampling, five-node topology enumeration, period/amplitude in Hopf parameter space, analytical adaptation, and topology simplification. Section 3 explicitly refers to the main paper’s Figure 12 Hopf region. No first-Lyapunov formula was found in the inspected supplementary source. This says nothing definitive about the inaccessible main Hopf section.
+Publisher supplement
+.
+Historical context.
+Earlier five-element simulations and a linear five-agent golden-ratio analysis establish that the motivating graph and its fifth-root constants are not new. Neither is verified here as an exact antecedent of the DM positivity-constrained theorem package.
+[B07: P. Bellavite, 1998]
+[B06: Ciann-Dong Yang, 2023]
+Required library packet: the four main papers B02–B05, Lin’s thesis, and the complete 2025 article. For each, extract the precise law, state domain, homogeneous coefficient assumptions, n/q range, equilibrium equation, characteristic spectrum, admissible parameter restrictions, crossing derivative, l₁ formula and wave statement. Until this packet is checked, use “to our knowledge, within the sources reviewed” for specific theorems and no unqualified first-model claim.
+Official thesis listing
+.
+PART III — Module-by-module P01–P14 review
+P01 — Positivity, global existence and absorption · CURRENT
+Current result.
+Global nonnegative flow; a Dini-maximum comparison gives an invariant attracting cube Kᵣ and explicit entry estimates. The weaker-sign extension distinguishes attraction from finite entry into the exact radius and gives an iff condition. The step-one input propagates positivity without a coprimality requirement.
+Known result / overlap.
+Quasipositivity, local smoothness, continuation under bounds and scalar maximum comparisons are standard. Repressilator bounding arguments and cyclic-feedback compact-attractor arguments supply nearby applications, not the same DM bound.
+[B22: Olguța Bușe, 2009]
+[B25: Jules Guilberteau, 2023]
+Minimal difference.
+The rational receiver term produces a particular scalar majorant; retaining losses yields a useful exact-radius finite-entry classification. The first difference is routine, the latter technical and model-specific.
+Labels:
+core ROUTINE APPLICATION (HIGH / LOW); exact-radius iff MODEL-SPECIFIC EXTENSION (MEDIUM / MODERATE).
+Treatment:
+short foundational proposition; extended edge cases in an appendix. Do not call R optimal, and do not equate an attracting set with a minimal global attractor.
+P02 — Synchronous equilibria · CURRENT
+Current result.
+Synchrony reduces exactly to f(s)=s(μ+bs−As²)/(1+s), A=k+h, b=a−A, μ=a+c−g. The positive-root classification includes two roots precisely when a>A and a+c<g<a+c+(a−A)²/(4A).
+Known result / overlap.
+Invariant synchrony is covered by symmetry/coupled-cell theory; solving the resulting quadratic and checking its admissible domain is elementary.
+[B14: Ian Stewart, 2003]
+[B15: Martin Golubitsky, 2005]
+Minimal difference.
+The coefficients and parameter interval belong to this law; the reduction and algebra are not a new method. Synchrony invariance: KNOWN MORE GENERALLY (HIGH / LOW). Exact root table: ROUTINE APPLICATION (HIGH / MODERATE for exact publication priority).
+Treatment:
+compact branch diagram and root proposition. Full negative-root/domain bookkeeping belongs in the appendix. This classifies synchronous equilibria only, not all equilibria or their full-system stability.
+P03 — Origin and homogeneous Jacobian · CURRENT
+Current result.
+J₀=(a−g)I+cP, uniform abscissa μ, exact homogeneous coefficients and correct addition of coincident offsets.
+Known result / overlap.
+Evaluating a polynomial in the cyclic shift on roots of unity is standard circulant theory.
+[B17: Robert M. Gray, 2006]
+Minimal difference.
+Differentiating the rational law, including the positive g-denominator derivative, and respecting offset collisions are model-specific calculations. ROUTINE APPLICATION (HIGH / LOW for method; exact-model priority unresolved).
+Treatment:
+one transparent Jacobian lemma. Preserve the sign warning and state that a nonuniform imaginary-axis locus at the origin lies in an already unstable region because the uniform mode has larger real part. Do not promote such a locus to the first loss of stability.
+P04 — Spectrum, normality and semigroup · CURRENT
+Current result.
+Every homogeneous Jacobian is unitarily Fourier diagonalizable, normal and semisimple, with exact real/imaginary parts and ‖exp(tJ)‖₂=exp(t max rₘ).
+Known result / overlap.
+Chapter 3 of Gray supplies the eigenbasis for arbitrary circulants. The semigroup identity follows immediately by applying exp to the unitary diagonalization and taking its largest singular value. This is not a special nonlinear-network theorem.
+[B17: Robert M. Gray, 2006]
+Minimal difference.
+Only substitution of d,C,G,H and the declared Fourier sign convention. Generic diagonalization, normality, multiplicity and norm conclusions: KNOWN MORE GENERALLY (HIGH / LOW). Specific dispersion: ROUTINE APPLICATION (HIGH / LOW).
+Treatment:
+framework lemma. Distinguish a Fourier label, an eigenvalue, a real-part tie and a repeated numerical value. A general nonsynchronous Jacobian need not retain normality.
+P05 — Exact finite-n, q=2 selection · CURRENT
+Current result.
+With T=G−H, the real dispersion is d−T+Cu+2Tu². The complete cell atlas has representatives 0 through J=⌊(n+1)/4⌋, adjacent midpoint ties, parity-sensitive terminal behavior, physical realizability and stable switching paths.
+Closest literature.
+The Lorenz-96 quadratic is the fixed-vertex comparison described in Part I. General unconstrained ring ordering is covered by Stewart’s Theorem 5.5/Corollary 5.6; it allows arbitrary connection coefficients and does not enforce the sparse positive DM law.
+[B08: Dirk L. van Kekem, 2018]
+[B12: Ian Stewart, 2024]
+Minimal difference / labels.
+Quadratic maximization and midpoint rule: ROUTINE APPLICATION (HIGH / LOW). Complete finite-size/parity atlas: MODEL-SPECIFIC EXTENSION (MEDIUM / MODERATE). Positive physical cell and switch realization: APPARENTLY NEW (MEDIUM / UNRESOLVED). Stable-mode switches: MODEL-SPECIFIC EXTENSION (MEDIUM / MODERATE), with little standalone novelty once the constructive chart is given.
+Treatment:
+main theorem, but lead with constrained realization and the P11 comparison rather than the elementary maximizer formula.
+P06 — Large-n limit · FUTURE / NOT YET PROVED
+Planned result.
+m*/n tends to arccos(u*)/(2π), with an anticipated O(n⁻²) eigenvalue discretization error.
+Known result / overlap.
+Lorenz-96 has a selected-wavenumber/limiting-period analysis; approximation of a smooth interior maximum by a refining grid is elementary.
+[B09: Dirk L. van Kekem, 2018]
+Minimal difference.
+A variable but fixed admissible DM vertex and its constants. Projected classification: ROUTINE APPLICATION (HIGH / LOW).
+Treatment:
+optional corollary/appendix. Specify the coefficient/equilibrium sequence, clip a vertex outside [−1,1], and distinguish O(1/n) normalized-wavenumber accuracy from O(n⁻²) objective error. A ring-size limit is not a derived continuum PDE. No result is currently established here.
+P07 — Five-node and golden-ratio structure · CURRENT
+Current result.
+Exact eigenvalues and seven orderings, pair {2,3} excluded from dominance, switch (H−G)/C=φ⁻², zero-frequency locus, semisimple coincidences and a Hurwitz dominant tie.
+Known result / overlap.
+Fifth roots of unity give the golden-ratio trigonometric constants; Yang’s five-agent study already makes golden-ratio claims in a related linear graph. It is not the same nonlinear stability theorem.
+[B06: Ciann-Dong Yang, 2023]
+Minimal difference / labels.
+Eigenvalues, ordering table and coincidence solving: ROUTINE APPLICATION (HIGH / MODERATE). Automatic stability of the physical dominant tie: MODEL-SPECIFIC EXTENSION (MEDIUM / UNRESOLVED), useful as a concrete obstruction to mistaking a switch for a bifurcation. “Golden ratio discovered in five-element network spectra”: FALSE NOVELTY (HIGH / HIGH).
+Treatment:
+worked example and candidate illustration; retain detailed collision cases in an appendix. No physiological golden-ratio inference follows.
+P08 — Matched bilinear comparison · CURRENT
+Current result.
+Exact MB equilibrium/growth and Fourier law; universal same-tuple forward stability contrast; distinct reverse-contrast theorems on unique-root and branch-labelled domains; independent stable realization of all ordered mode pairs.
+Known result / overlap.
+Circulant Lotka–Volterra spectra and Lyapunov regions are directly present in Wildenberg et al. §4, Eqs. (13)–(18). General interaction-law dependence of patterning predates this project.
+[B19: J. C. Wildenberg, 2006]
+[B27: Erik Plahte, 2001]
+Minimal difference / labels.
+Logistic synchrony, spectrum and quadratic MB cells: ROUTINE APPLICATION (HIGH / LOW). Spectral sufficient dissipation via a symmetric part: KNOWN MORE GENERALLY (HIGH / LOW). The all-n witness, exact reverse parity/branch restrictions and independent ordered-pair realization: APPARENTLY NEW (MEDIUM / UNRESOLVED).
+Treatment:
+headline comparison theorem with explicit quantifiers and unsigned-support qualification. MB Hopf criticality is deferred. The nominal parameter matching is not a claim of equal equilibria, Jacobians or physical calibration.
+P09 — Full-system transcritical and cubic degeneracy · CURRENT
+Current result.
+At g=a+c, b≠0 gives a full-system transcritical; the local equilibrium IFT excludes nonsynchronous branches. At b=0 the center field is cubic and small branches scale as ±√(μ/A).
+Known result / overlap.
+A simple zero, invariant one-dimensional center manifold and nonzero parameter/quadratic coefficients are standard transcritical hypotheses. The transverse gap here is explicitly c[1−cos(2π/n)].
+[B35: John Guckenheimer, 1983]
+Minimal difference.
+The exact reduction and coefficients for this equation, rather than a new local bifurcation type. Generic transcritical: ROUTINE APPLICATION (HIGH / MODERATE). Cubic-degenerate calculations: MODEL-SPECIFIC EXTENSION (MEDIUM / MODERATE), with modest novelty.
+Treatment:
+supporting theorem joining the origin to the fold. Do not label the degenerate configuration a proved pitchfork/cusp or a completed two-parameter unfolding. Negative branches in the open mathematical domain must be separated from the nonnegative physical domain.
+P10 — Universal positive fold and coexistence · CURRENT
+Current result.
+Every positive fold with a>k+h is a nondegenerate full-system saddle-node; its transverse spectrum is automatically stable. There is a near-fold two-sink region and an index-one lower saddle, plus a local basin separator.
+Known result / overlap.
+The generic fold theorem is standard; cyclic-feedback bistability is well studied under other hypotheses.
+[B34: Yuri A. Kuznetsov, 2006]
+[B25: Jules Guilberteau, 2023]
+Minimal difference / labels.
+The identity Gf−Hf>0, the all-(n,q) transverse estimate and constructive sufficient coexistence interval form a MODEL-SPECIFIC EXTENSION (MEDIUM / UNRESOLVED). Applying fold, continuation and stable-manifold arguments: ROUTINE APPLICATION (HIGH / LOW).
+Treatment:
+supporting main theorem emphasizing the structural identity. The exact counterexample to whole-interval stability belongs in the main discussion; root count is not full-system bistability. The synchronous-ray basin threshold is global only on that ray; the separating disk is local.
+P11 — Physical spectral criticality · CURRENT
+Current result.
+Strict nonuniform selection with rⱼ=0 and ωⱼ≠0 yields one simple imaginary pair and stable complement. The key additional theorem is the exact positivity-constrained realizability iff, plus the five-node algebraic candidate.
+Closest literature.
+Feasibility filtering of circulant Hopf points appears explicitly in Pais et al.; structural Hopf exclusions also exist beyond rings.
+[B23: Darren Pais, 2012]
+[B24: David Angeli, 2014]
+Minimal difference / labels.
+Single-pair implication, resolvents and normalized adjoints: ROUTINE APPLICATION (HIGH / LOW). DM cellwise iff and its obstruction cells: APPARENTLY NEW (MEDIUM / UNRESOLVED). Exact five-node candidate: MODEL-SPECIFIC EXTENSION (MEDIUM / UNRESOLVED), a valuable reproducible witness rather than an independent headline.
+Treatment:
+headline theorem immediately after P05. “First physical-versus-algebraic Hopf distinction”: FALSE NOVELTY (HIGH / HIGH). Do not call this a completed Hopf bifurcation or a first loss of stability.
+P12 — Transversality · FUTURE / NOT YET PROVED
+Target.
+The nonzero total derivative of Re λ₁ along (aH,kH,2,g,6), including motion of the upper equilibrium.
+Known result / overlap.
+Differentiating the equilibrium equation and eigenvalue along a smooth branch is standard Hopf verification. Generic nondegeneracy in a larger family does not prove it on this particular path.
+[B13: Ian Stewart, 2024]
+[B33: Yuri A. Kuznetsov, 2006]
+Minimal difference.
+Exact value/sign at this algebraic tuple. Projected ROUTINE APPLICATION (HIGH / LOW methodological risk).
+Treatment:
+lemma within a Hopf theorem. An explicit stable interval on one side follows locally after the crossing and gap are certified; “first” from a remote parameter starting point requires a separate global-in-parameter argument.
+P13 — Nonlinear Hopf criticality · FUTURE / NOT YET PROVED
+Target.
+Derive DM second/third derivatives, Fourier contractions, a normalized l₁ and its sign.
+Known result / overlap.
+The generic tensor formula is established. In a closely related cyclic calculation, Kerin–Engler’s Lemma 1/Eq. (29) reduces it through Fourier modes 0 and 2k; Page–Perez-Carrasco and Bușe et al. provide biological-ring criticality benchmarks.
+[B11: John Kerin, 2022]
+[B21: Karen M. Page, 2018]
+[B22: Olguța Bușe, 2009]
+Minimal difference / labels.
+Generic formula and mode-index addition: KNOWN MORE GENERALLY (HIGH / LOW). One exact DM value: projected ROUTINE APPLICATION (MEDIUM / UNRESOLVED exact priority). A substantive admissible-region sign classification: projected MODEL-SPECIFIC EXTENSION (MEDIUM / UNRESOLVED), possibly stronger depending on scope.
+Treatment:
+main theorem only after proof; put long derivatives in an appendix. A vanished l₁ alone is not a Bautin theorem.
+P14 — Exact nonlinear rotating waves · FUTURE / NOT YET PROVED
+Target.
+Cyclic spatiotemporal symmetry, phase clusters and signed propagation on the Hopf branch.
+Known result / overlap.
+Equivariant Hopf supplies the exact phase relation, not merely its leading cosine approximation. Modern ring treatments include direction and long-range coupling.
+[B12: Ian Stewart, 2024]
+[B16: Martin Golubitsky, 1985]
+[B30: Shangjiang Guo, 2003]
+Minimal difference.
+Substitution of the physically realized DM mode and its crossing/criticality data. General wave consequence: KNOWN MORE GENERALLY (HIGH / LOW). DM application: projected ROUTINE APPLICATION (HIGH / LOW methodological risk).
+Treatment:
+short corollary after P13. The nonlinear period is T(ε), with limit 2π/|ωH|; it need not equal that limit along the entire branch. Distinguish gcd(m,n) nodes per phase cluster from n/gcd(m,n) distinct phases.
+PART IV — Deep audits of P05, P08, P10 and P11
+P05: how much of the selection atlas survives an adversarial comparison?
+KNOWN RESULT:
+finite-ring spectra can be optimized on roots of unity, with a particularly close quadratic-cosine example in Lorenz-96.
+OUR RESULT:
+a moving positive vertex and a complete physical parameter atlas.
+MINIMAL DIFFERENCE:
+the variable vertex, sparse law and physical lift. The elementary optimization is a small difference; the parameter realization and its relation to criticality are structurally meaningful.
+The reduction itself explains why the nearest
+cosine
+rule is routine. For D=H−G>0,
+r(u)=d+D+C²/(8D)−2D(u−z)²,   z=C/(4D)>0.
+r(uⱼ)−r(uⱼ₊₁)=C(uⱼ−uⱼ₊₁)(1−χβⱼ),   χ=4D/C.
+This is one-dimensional nearest-point geometry. The midpoint equation establishes adjacency of maximal ties; three distinct cosines cannot all be equidistant from one real vertex. Once z is restricted to the positive half-line, the endpoint count J and its residues modulo four follow from the cosine grid. Calling this a new spectral optimization technique would be too strong. Calling it a complete exact classification for this constrained model is defensible.
+The stronger statement is constructive: prescribed z,x,c,g determine h, while k can be chosen to ensure positive a through the equilibrium relation. The regular physical chart then transfers strict inequalities to open parameter regions and ties to smooth hypersurfaces. This solves a feasibility problem left out of an unconstrained dispersion plot. Stewart’s arbitrary-order theorem does not imply it: allowing every connection coefficient independently is a different parameter class.
+[B12: Ian Stewart, 2024]
+Stable switching deserves a short proposition, not a headline. Adding sufficiently strong negative diagonal contribution can make an entire finite family of modes stable while their ordering changes. In DM that diagonal change must be accompanied by the correct equilibrium-preserving adjustment of a. The construction is useful evidence that the selection atlas is not itself a bifurcation diagram.
+P11: the nontrivial step is the image of the positive parameter domain
+KNOWN RESULT:
+an admissible Hopf point requires spectral conditions and feasible parameters; this distinction is explicit in the circulant evolutionary example cited above.
+OUR RESULT:
+eliminate the DM physical coefficients sufficiently to decide an entire strict selection cell.
+MINIMAL DIFFERENCE:
+a necessary-and-sufficient inequality depending only on the discrete mode geometry, with constructive lifting. That is a meaningful theorem-level difference, although exact-model priority is unresolved.
+At prescribed equilibrium amplitude x and vertex z, the blueprint rewrites the candidate condition as
+kx = D wⱼ − C[1−uⱼ+x/(1+x)],
+D=C/(4z),   wⱼ=1−2uⱼ².
+k>0 ⇔ wⱼ/(4z)>1−uⱼ+x/(1+x).
+This inequality exposes what an arbitrary diagonal shift would hide: the physical k cannot be negative. Letting x range over positive values and intersecting the admissible z-interval with the strict Voronoi cell produces
+wⱼ>0 and Lⱼ<Bⱼ,   Lⱼ=max(0,βⱼ),   Bⱼ=wⱼ/[4(1−uⱼ)].
+Sufficiency also needs positive a and nonzero frequency. The blueprint supplies those by choosing G large enough and excluding at most one zero-frequency value. Thus this is more than a necessary inequality derived from a dispersion relation. The pair is individually simple because all other representatives have strictly smaller real parts and its two values are distinct when ωⱼ≠0. That last implication is routine; the positive lift is the substantive analysis.
+The two explicit failures are different. For (8,1), wⱼ=0 precludes positive k at zero abscissa. For (12,2), wⱼ>0 but the lower strict cell endpoint equals Bⱼ=1/4, so the required open intersection is empty. A table that records only wⱼ>0 would miss the second obstruction. These cells can still dominate, including at stable equilibria. That concrete separation is more persuasive than claiming that positivity restrictions themselves are new.
+Angeli–Banaji–Pantea use additive-compound and signed-graph structure to exclude Hopf in broader interaction classes. Their existence shows that obstruction theory is established; it does not furnish this sharp Fourier-cell criterion. Conversely, merely citing their framework would not prove that DM’s iff is already known more generally.
+[B24: David Angeli, 2014]
+The exact five-node tuple is a clean bridge to the nonlinear work: xH=1, (c,gH,h)=(2,16,6), kH=(3√5−5)/4 and aH=(47+3√5)/4. Its role is to exhibit an admissible simple critical pair with a quantified stable complement. Its algebraic elegance does not by itself confer major novelty, and its existence is still distinct from a proven bifurcation along g.
+P08: an exact comparison, with a narrower interpretation than the slogan
+KNOWN RESULT:
+circulant bilinear systems admit spectral and Lyapunov analysis; lattice behavior can depend on whether coupling is diffusive or signalling-based.
+OUR RESULT:
+same nominal tuple, these two explicitly specified laws, exact all-size witnesses and residue/branch obstructions.
+MINIMAL DIFFERENCE:
+the matching constraint and sharp quantifiers. The general qualitative observation is old; these precise classifications appear new.
+[B19: J. C. Wildenberg, 2006]
+[B27: Erik Plahte, 2001]
+DM: ∂Fᵢ/∂xᵢ₊q = +gxᵢ/(1+xᵢ₊q)².
+MB: ∂Fᵢ/∂yᵢ₊q = −gyᵢ.
+Consequently this is not a comparison at fixed signed Jacobian topology. DM also injects cxᵢ₋₁ at a zero receiver, while MB leaves coordinate faces invariant. The result is still mathematically useful: identical directed dependencies and coefficients do not determine dynamics when the interaction formula is unspecified. What it does not isolate is saturation while keeping every regulatory sign, scale and boundary condition fixed.
+The universal forward example is stronger than a numerical pair of simulations. At (a,k,c,g,h)=(1/4,1/8,1,1,1/8), both positive equilibria equal one, DM has abscissa −1/4 and MB has a positive nonuniform eigenvalue for every n≥5 with q=2. Strictness yields open parameter regions separately for each fixed n. Do not silently replace that quantifier by a single uniform neighborhood valid for infinitely many sizes unless an additional uniform-margin argument is supplied.
+The reverse theorem must be split. On C₊={M>0,μ>0}, with M=k+g+h−c, both positive branches are uniquely named, and reverse stability occurs iff n≡3 mod 4. On the broader branch-labelled domain, a lower DM root can be uniformly unstable for branch reasons; the obstruction changes to 4∣n. Those lower-branch examples are less compelling as evidence for a
+spatial
+selection effect. They belong after the unique-root theorem, with the mechanism made explicit.
+The independent stable-mode realization is particularly valuable. It fixes the same tuple while permitting any ordered pair of reachable strict representatives, even when both equilibria are stable. That says the two selection maps are not locked together by the matching constraint. It is logically different from, and stronger in a different direction than, one stability reversal.
+P10: a special identity followed by standard local theory
+KNOWN RESULT:
+a simple zero and nonzero unfolding/quadratic coefficients yield a full-system fold; a transverse stable spectrum gives the usual local sink–saddle organization.
+OUR RESULT:
+those transverse inequalities are automatic for every canonical positive fold, regardless of n and q.
+MINIMAL DIFFERENCE:
+an equation-specific identity removes extra assumptions. This is a worthwhile supporting theorem, not a new center-manifold theory.
+[B34: Yuri A. Kuznetsov, 2006]
+Gf−Hf=rf(k+c/sf²)>0,
+rₘ(f)=Cf(cosθₘ−1)+(Gf−Hf)(cos(qθₘ)−1)<0 for m≠0.
+The second line is a standard trigonometric sign argument once the first line is available. The step-one term makes it strict even if q and n are not coprime. This is a symmetric-part spectral observation; it does not establish global cooperativity of the nonlinear vector field. The explicit sufficient interval for coexistence can be chosen independently of dimension, but the displayed transverse spectral gap shrinks as n increases. Do not infer a uniform-in-n spectral gap or an n-independent index-one neighborhood from the local proof alone.
+The branch diagram is a familiar persistent-origin/backward-branch/fold arrangement. Its special strength is full-system certification near the fold. The example n=6,q=1 with (a,k,c,g,h)=(6,1/10,1/10,101/10,9/10) is an important limiting fact: the upper root x=4 has a positive Nyquist eigenvalue despite negative uniform eigenvalue; the lower root has more than one unstable direction. This decisively blocks a whole-interval claim. The exact threshold on synchrony and the local stable disk are useful descriptions, but neither classifies the full global basin boundary.
+What the three-stage package does—and does not—establish
+Question
+Current answer
+Remaining boundary
+Which Fourier representatives can dominate?
+P05: exact cells, ties and positive realizations.
+Dominance may describe the slowest decaying mode at a stable equilibrium.
+Which strict dominant cells can be critical?
+P11: exact physical iff, excluding frequency-zero choices.
+No designated-path crossing or periodic orbit yet.
+How does the answer depend on the law?
+P08: exact DM–MB stability and selected-mode comparisons.
+No matched MB nonlinear Hopf criticality theorem yet.
+No inspected source supplied this full three-stage package for the specified matched laws. That absence supports a conditional apparent-novelty judgment for the combination; it does not establish that the conceptual decomposition has never been used elsewhere. More significantly, the
+current package
+is not yet a complete two-law classification of Hopf criticality: P08 compares selection and stability, while P11’s detailed candidate criterion is DM-specific.
+PART V — Future literature risk: P12–P14
+P12: necessary exact verification, limited independent novelty
+The intended path fixes a,k,c,h and varies g. The equilibrium moves. The correct calculation starts from E(x,g)=a−(k+h)x+(c−g)/(1+x)=0 and differentiates E along the chosen smooth branch. Then differentiate rⱼ(x(g),g). An equilibrium-coordinate derivative such as ∂ₖRⱼ=−x is a different direction because maintaining that chart also changes a. A generic perturbation theorem is likewise insufficient for the prescribed physical path.
+[B13: Ian Stewart, 2024]
+[B33: Yuri A. Kuznetsov, 2006]
+Recommended target:
+exact crossing sign at the algebraic candidate; a rigorously specified nearby interval retaining positivity, branch identity, strict mode selection and stable complement; an explicit statement of the unstable side. This is projected ROUTINE APPLICATION, HIGH confidence / LOW methodological priority risk. A theorem for a whole admissible family of crossings would be more useful but should not delay the essential pointwise calculation. Neither target is presently proved.
+P13: pursue interpretation of the sign, not expression length
+The likely computation is efficient because translation symmetry imposes mode addition modulo n. The quadratic terms feeding the Hopf coefficient pass through modes 0 and 2m, and the cubic term returns to m. Existing ring papers already exploit this. DM’s rational terms contribute genuine higher derivatives; they prevent simply copying a quadratic-model coefficient. Normalize the Fourier vectors, Taylor factorials, adjoint inner product and positive-frequency choice before comparing formulas.
+[B11: John Kerin, 2022]
+[B33: Yuri A. Kuznetsov, 2006]
+Comparable work has gone beyond a single sign check: biological repression models obtain criticality conditions involving derivatives of the feedback function, and circulant evolutionary models express criticality across parameter families. These are appropriate standards for an ambitious P13 result.
+[B21: Karen M. Page, 2018]
+[B23: Darren Pais, 2012]
+Minimum useful completion:
+an exact nonzero l₁ at P11’s five-node candidate, plus P12, yields a rigorous local nonlinear existence/classification theorem. This materially improves completeness, but contributes limited standalone novelty.
+Preferred target:
+a tractable formula on the admissible Hopf surface and a proved sign on an explicitly described substantial region, with n/mode restrictions. A modest formula with a strong inequality is better than a very long algebraic expression without interpretation.
+Stronger connection:
+relate criticality to the P11 cell constraints—e.g. determine whether all candidates in a named mode family share one sign, or exhibit rigorously separated sign regimes within the admissible domain.
+Optional law comparison:
+compare DM and MB on explicitly defined Hopf surfaces or crossing paths. Same nominal coefficients need not put both models at Hopf simultaneously; do not compare an l₁ at Hopf with an off-boundary quantity.
+An unspecified open neighborhood with fixed sign follows automatically from a nonzero value and continuity. A meaningful region theorem needs explicit domain, parameter margins or size/mode coverage. An exact closed form is useful for reproducibility but is not a substitute for such a theorem. A zero of l₁ supplies only a possible generalized-Hopf location; proving a Bautin bifurcation requires the additional higher-order and unfolding conditions.
+P14: exact symmetry is standard, its physically realized instance is useful
+After the simple nondegenerate branch exists, cyclic equivariance determines its spatiotemporal symmetry. With the blueprint’s signed eigenvalue convention, the anticipated adjacent-node relation is xᵢ₊₁(t)=xᵢ(t+sgn(ωₘ)mT(ε)/n), modulo the nonlinear period and subject to a consistent choice of Fourier representative. There are n/gcd(m,n) distinct phases, with gcd(m,n) nodes in each phase class. The leading cosine and the exact shift identity are different assertions.
+[B12: Ian Stewart, 2024]
+[B16: Martin Golubitsky, 1985]
+Recommended target:
+a short corollary stating the actual nonlinear period, signed shift, spatial kernel and orbital stability inherited from the Hopf theorem. Do not say that the graph’s arrow orientation alone determines wave direction. Do not claim constant period 2π/ωH away from the bifurcation. Generic rotating waves add little novelty; the novel content can be which positive-parameter mode cells support a proved stable or unstable DM wave.
+PART VI — Detailed prior-art matrix
+46 claim-level comparisons across all 17 requested dimensions. “Our result” on a FUTURE row describes the target, not an established theorem. Research-law novelty rows retain UNRESOLVED risk because of the exact-model access gap. A closest source can be a comparison rather than an antecedent; the overlap and missing-piece columns state which.
+Filter claims
+Project result / module
+Exact claim
+Closest paper
+Year
+Model/equation in that paper
+Network topology
+Coupling law
+n fixed or arbitrary
+q fixed or arbitrary
+Analytical / numerical
+What they prove
+What we prove / target
+Exact overlap
+Missing piece / minimal difference
+Novelty classification
+Confidence
+Priority risk
+P01
+Nonnegative global flow and bounding cube
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+Positive flow and compact-attractor argument for its feedback class
+DM maximum majorant and explicit R
+Comparison/continuation method
+Receiver-rational bound and input propagation
+ROUTINE APPLICATION
+HIGH
+LOW
+P01
+Exact-radius finite absorption iff
+[B22: Olguța Bușe, 2009]
+2009
+Three-variable Hill-repression ring
+Repressilator
+Hill repression + linear degradation
+3
+Nearest predecessor
+Analytical
+Bounding/invariance arguments for a repression ring
+Sharp logical entry criterion at stated R under weaker signs
+Retention of strict loss terms
+DM iff and all exceptional zero-coefficient cases
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+MODERATE
+P02
+Invariant synchrony
+[B14: Ian Stewart, 2003]
+2003
+Admissible coupled-cell vector fields
+General typed networks
+Smooth general
+General
+Not restricted to q
+Analytical
+Robust synchrony framework
+Full synchronous line invariant
+Immediate special case
+No new general theorem
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P02
+Complete positive synchronous roots
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+Equilibrium and bistability classification in another class
+Explicit quadratic interval and domain table
+Scalar reduction and root counting
+Exact DM coefficients; exact priority unresolved
+ROUTINE APPLICATION
+HIGH
+MODERATE
+P03
+Origin spectrum and unique uniform maximum
+[B17: Robert M. Gray, 2006]
+2006
+J=ΣaᵣPʳ
+Arbitrary circulant matrix
+Linear algebra
+Arbitrary
+Arbitrary circulant support
+Analytical
+Fourier spectrum of shift polynomials
+λₘ=a−g+c exp(−iθₘ)
+Direct substitution
+Specific derivative coefficients
+ROUTINE APPLICATION
+HIGH
+LOW
+P03
+Homogeneous Jacobian and offset collisions
+[B15: Martin Golubitsky, 2005]
+2005
+Admissible fields with multiple arrows
+General typed multigraphs
+Smooth general
+General
+Coincident/multiple arrows allowed
+Analytical
+Networks can have multiple input arrows
+Add coincident shift contributions correctly
+Multiple edges contribute additively
+Rational derivative signs and collision enumeration
+ROUTINE APPLICATION
+HIGH
+LOW
+P04
+Unitary Fourier basis and semisimplicity
+[B17: Robert M. Gray, 2006]
+2006
+J=ΣaᵣPʳ
+Arbitrary circulant matrix
+Linear algebra
+Arbitrary
+Arbitrary circulant support
+Analytical
+Circulants share an orthonormal eigenbasis
+All homogeneous DM Jacobians normal
+Exact general linear-algebra coverage
+None at method level
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P04
+Exact Euclidean semigroup norm
+[B17: Robert M. Gray, 2006]
+2006
+J=ΣaᵣPʳ
+Arbitrary circulant matrix
+Linear algebra
+Arbitrary
+Arbitrary circulant support
+Analytical
+Unitary diagonalization
+‖exp(tJ)‖₂=exp(t max rₘ)
+Immediate norm consequence
+No independent nonlinear conclusion
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P05
+Quadratic cosine dispersion
+[B08: Dirk L. van Kekem, 2018]
+2018
+ẋᵢ=xᵢ₋₁(xᵢ₊₁−xᵢ₋₂)−xᵢ+F
+Directed cyclic lattice
+Quadratic advection + linear damping
+Variable n
+Fixed L96 stencil
+Analytical + numerical
+Fixed L96 quadratic cosine example
+Variable DM quadratic coefficient/vertex
+Same maximization structure
+Moving effective coefficients
+ROUTINE APPLICATION
+HIGH
+LOW
+P05
+Midpoint cells and complete ties
+[B08: Dirk L. van Kekem, 2018]
+2018
+ẋᵢ=xᵢ₋₁(xᵢ₊₁−xᵢ₋₂)−xᵢ+F
+Directed cyclic lattice
+Quadratic advection + linear damping
+Variable n
+Fixed L96 stencil
+Analytical + numerical
+Finite-grid selection for its fixed dispersion
+Nearest-cosine cells for all positive vertices
+Discrete maximization
+Whole moving-vertex atlas
+ROUTINE APPLICATION
+HIGH
+MODERATE
+P05
+Reachable 0…⌊(n+1)/4⌋ and terminal parity
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+General ordering can be freely assigned with full coefficients
+Restricted reachable list for sparse positive DM
+Ring Fourier labels
+Sparse coefficient and positivity constraints
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+MODERATE
+P05
+Positive realization of every strict cell
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+Unrestricted connection strengths realize orderings
+Constructive positive equilibrium/parameter lift
+Realizability question
+Same-law equilibrium and coefficient constraints
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P05
+Smooth physical switch hypersurfaces
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+Linear ordering boundaries in effective coefficients
+Physical codimension-one loci via regular chart
+Tie equations
+Constrained physical lifting
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P05
+Stable dominance switches
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+Diagonal shifts alter stability without ordering
+Stable paths realized inside DM
+Order versus absolute spectral level
+Equilibrium-preserving positive construction
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+MODERATE
+P06 FUTURE
+Large-n limit and objective error
+[B09: Dirk L. van Kekem, 2018]
+2018
+Lorenz-96, as B08
+Directed cyclic lattice
+Quadratic advection
+Variable n
+Fixed stencil
+Analytical + numerical
+Large-size wave behavior in L96
+Planned variable-vertex sampling limit
+Grid refinement
+Precise fixed sequence, endpoints and constants
+ROUTINE APPLICATION
+HIGH
+LOW
+P07
+Golden ratio as novelty in five-element spectra
+[B06: Ciann-Dong Yang, 2023]
+2023
+ẋ=A₅x, linear cooperation/antagonism matrix
+Wu-Xing graph; generalizations
+Linear
+5 emphasized
+Five-agent generating/restraining offsets
+Analytical
+Explicit golden-ratio five-agent analysis
+Fifth-root constants in DM
+Golden ratio already present
+No general biological novelty
+FALSE NOVELTY
+HIGH
+HIGH
+P07
+Complete ordering and numerical coincidences
+[B17: Robert M. Gray, 2006]
+2006
+J=ΣaᵣPʳ
+Arbitrary circulant matrix
+Linear algebra
+Arbitrary
+Arbitrary circulant support
+Analytical
+General Fourier spectrum
+Seven orderings and semisimple repeated values
+Substitution and equality solving
+DM-specific coefficient restrictions
+ROUTINE APPLICATION
+HIGH
+MODERATE
+P07
+Entire dominant tie is Hurwitz
+[B06: Ciann-Dong Yang, 2023]
+2023
+ẋ=A₅x, linear cooperation/antagonism matrix
+Wu-Xing graph; generalizations
+Linear
+5 emphasized
+Five-agent generating/restraining offsets
+Analytical
+Different linear threshold/consensus result
+DM physical tie automatically strictly stable
+Related pentagonal spectrum only
+Nonlinear equilibrium relation proving negativity
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+P08
+Bilinear five-element model ancestry
+[B01: Haipeng Lin, 2020]
+2020
+ẋᵢ=axᵢ−bxᵢ²+cxᵢxᵢ₋₁−dxᵢxᵢ₋₂−g₀xᵢxᵢ₊₁−hxᵢxᵢ₊₂
+Five-element directed ring
+Bilinear
+5
+Offsets ±1, ±2
+Analytic cases + numerical
+Six-term five-node law inspected
+MB recovered by setting one coupling zero and relabelling
+Bilinear graph family
+DM is a different law; general-n comparisons absent from inspected equation
+KNOWN
+HIGH
+MODERATE
+P08
+MB equilibrium/growth classification
+[B18: B. S. Goh, 1977]
+1977
+ẏᵢ=yᵢ(aᵢ+Σbᵢⱼyⱼ)
+General many-species interaction matrix
+Generalized Lotka–Volterra
+Arbitrary
+No ring restriction
+Analytical
+General multiplicative population equations
+Scalar logistic law, exponential growth and blow-up
+Elementary synchronized specialization
+Exact coefficient M
+ROUTINE APPLICATION
+HIGH
+LOW
+P08
+MB spectrum and q=2 cells
+[B19: J. C. Wildenberg, 2006]
+2006
+Competitive LV ring with circulant nearest/next-nearest coefficients
+Cyclic ecological lattice
+Multiplicative bilinear competition
+Variable n
+Offsets ±1, ±2
+Analytical + numerical
+Circulant LV spectra, including cosθ/cos2θ
+−k+c cosθ−(g+h)cos2θ
+Fourier and quadratic structure
+Facilitating +c term and constrained comparison
+ROUTINE APPLICATION
+HIGH
+LOW
+P08
+Spectral sufficient dissipativity
+[B18: B. S. Goh, 1977]
+1977
+ẏᵢ=yᵢ(aᵢ+Σbᵢⱼyⱼ)
+General many-species interaction matrix
+Generalized Lotka–Volterra
+Arbitrary
+No ring restriction
+Analytical
+Lyapunov stability through interaction matrix
+k>Kₙ,q ensures dissipativity
+Negative symmetric part
+Specific circulant threshold
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P08
+All-n same-tuple forward contrast
+[B27: Erik Plahte, 2001]
+2001
+Discrete-cell reaction/signalling systems
+Discrete cell lattices
+Diffusion-driven vs signalling-driven
+Variable lattice size
+Not the DM stencil
+Linear + nonlinear analysis; abstract inspected
+Law-dependent finite-lattice behavior, abstract level
+One tuple, x*=y*=1, DM stable / MB unstable for every n≥5
+Broad kinetics-dependence principle
+Exact matched tuple and all-size inequalities
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P08
+Reverse iff n≡3 mod 4 on C₊
+[B19: J. C. Wildenberg, 2006]
+2006
+Competitive LV ring with circulant nearest/next-nearest coefficients
+Cyclic ecological lattice
+Multiplicative bilinear competition
+Variable n
+Offsets ±1, ±2
+Analytical + numerical
+LV ring spectral stability regions
+Exact unique-positive-DM-root residue classification
+Cosine-grid stability
+Matched nonlinear law and iff obstruction
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P08
+Full-branch reverse obstruction 4∣n
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+Other cyclic bistability/branch structures
+Branch-labelled exact size obstruction and lower-root constructions
+Branch stability can differ
+Specific same-tuple DM–MB theorem
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P08
+Every ordered mode pair, both stable
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+Unrestricted ring spectral ordering
+Independent DM/MB strict mode choices at shared tuple
+Realizability of orderings
+Two constrained nonlinear maps with one tuple
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P09
+Full-system transcritical and transverse IFT
+[B35: John Guckenheimer, 1983]
+1983
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General local theory
+Simple-zero center-manifold local theory
+Invariant center line, nonzero coefficients, no nearby nonsynchronous roots
+Standard reduction
+Exact coefficients/gap
+ROUTINE APPLICATION
+HIGH
+MODERATE
+P09
+Cubic-degenerate locus
+[B35: John Guckenheimer, 1983]
+1983
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General local theory
+Degenerate local normal-form machinery
+Exact cubic field and square-root branches
+Cubic local geometry
+No completed unfolding classification
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+MODERATE
+P10
+Nondegenerate positive fold
+[B34: Yuri A. Kuznetsov, 2006]
+2006
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General local theorem
+Simple-zero fold theorem
+Exact parameter/quadratic coefficients
+Theorem hypotheses verified
+Model-specific coefficient values
+ROUTINE APPLICATION
+HIGH
+LOW
+P10
+Automatic transverse fold stability
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+Different single-input feedback stability conditions
+Gf−Hf=rf(k+c/sf²)>0 for all n,q
+Cyclic branch stability question
+Universal DM identity and strict transverse bound
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+P10
+Open coexistence and explicit interval
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+Bistability regions under its assumptions
+Origin + upper sink near every positive DM fold
+Multiple stable equilibria are established phenomena
+DM construction and all-offset quantifier
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+P10
+Synchronous threshold and local separatrix
+[B35: John Guckenheimer, 1983]
+1983
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General local theory
+Scalar phase lines and stable-manifold theory
+Exact ray threshold; local common basin boundary
+Standard local geometry
+Verified connections to the two specific sinks
+ROUTINE APPLICATION
+HIGH
+LOW
+P10
+Failure of whole-interval upper stability
+[B25: Jules Guilberteau, 2023]
+2023
+ẋᵢ=αᵢfᵢ(xᵢ₋₁)−xᵢ
+Single-input cyclic feedback
+Monotone functions with curvature hypotheses
+Variable dimension
+Nearest predecessor
+Analytical
+No transferable theorem for DM multi-input signs
+Exact n=6,q=1 unstable upper-root witness
+Bistability cannot be inferred from root count
+Concrete refutation within DM
+MODEL-SPECIFIC EXTENSION
+HIGH
+MODERATE
+P11
+Strict selected critical pair is simple
+[B23: Darren Pais, 2012]
+2012
+ẋᵢ=Σⱼxⱼfⱼqⱼᵢ−xᵢφ, f=Bx
+Circulant fitness / mutation network
+Replicator-mutator polynomial dynamics
+Arbitrary N≥3 in main family
+Circulant payoff families; not DM q
+Analytical + numerical
+Simple-pair hypotheses checked in circulant model
+Strict selection + rⱼ=0 + ωⱼ≠0 gives stable complement
+Hopf spectral isolation
+Immediate consequence of strict inequalities
+ROUTINE APPLICATION
+HIGH
+LOW
+P11
+Generic physical-feasibility distinction as novelty
+[B23: Darren Pais, 2012]
+2012
+ẋᵢ=Σⱼxⱼfⱼqⱼᵢ−xᵢφ, f=Bx
+Circulant fitness / mutation network
+Replicator-mutator polynomial dynamics
+Arbitrary N≥3 in main family
+Circulant payoff families; not DM q
+Analytical + numerical
+Remark 1 explicitly rejects infeasible algebraic Hopf values
+Physical criticality distinguished from algebraic spectrum
+Conceptual distinction already explicit
+Exact DM iff remains separate
+FALSE NOVELTY
+HIGH
+HIGH
+P11
+Cellwise positive realizability iff
+[B23: Darren Pais, 2012]
+2012
+ẋᵢ=Σⱼxⱼfⱼqⱼᵢ−xᵢφ, f=Bx
+Circulant fitness / mutation network
+Replicator-mutator polynomial dynamics
+Arbitrary N≥3 in main family
+Circulant payoff families; not DM q
+Analytical + numerical
+Mode-dependent spectral boundary with parameter feasibility
+wⱼ>0 and max(0,βⱼ)<Bⱼ iff physical strict candidate
+Constrained circulant critical points
+Exact elimination over each DM selection cell
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P11
+Obstruction cells (8,1) and (12,2)
+[B24: David Angeli, 2014]
+2014
+Jacobian product families; second additive compounds
+General interaction networks
+Signed interaction classes
+General
+Not restricted to ring
+Analytical exclusion criteria
+Graph/matrix criteria exclude Hopf in other classes
+Dominance cells nonempty but criticality subset empty
+Structural impossibility principle
+Sharp Fourier-cell obstructions and converse
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+P11
+Exact five-node spectral tuple
+[B23: Darren Pais, 2012]
+2012
+ẋᵢ=Σⱼxⱼfⱼqⱼᵢ−xᵢφ, f=Bx
+Circulant fitness / mutation network
+Replicator-mutator polynomial dynamics
+Arbitrary N≥3 in main family
+Circulant payoff families; not DM q
+Analytical + numerical
+Analytically specified circulant critical points
+Radical DM tuple with quantified gap
+Exact spectral certification
+Different law and positivity constraints
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+P01–P14
+Exact/near-exact enzymatic-model priority
+[B02: Haipeng Lin, 2021]
+2021
+Equation not inspected
+Five-element regulatory network
+Enzymatic; exact law unresolved
+5 in title
+Unverified
+Unverified
+Main equation and theorems not accessible
+Canonical DM archive
+Cannot establish exact equivalence or absence
+Proceedings, full journal main text and thesis
+PRIORITY UNCERTAIN
+LOW
+UNRESOLVED
+P12 FUTURE
+Total derivative on frozen g-path
+[B35: John Guckenheimer, 1983]
+1983
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General local theory
+Smooth branch and Hopf crossing theory
+Planned exact derivative including x*(g)
+Standard verification
+Exact value/sign on designated path
+ROUTINE APPLICATION
+HIGH
+LOW
+P13 FUTURE
+Generic tensor l₁ formula
+[B33: Yuri A. Kuznetsov, 2006]
+2006
+ẋ=F(x,μ)
+General finite-dimensional ODE
+Smooth general
+General
+Not applicable
+General theorem/formula
+Standard first-Lyapunov expression
+Same convention proposed
+Formula itself is established
+DM derivative evaluation
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P13 FUTURE
+Fourier contractions through 0,m,2m
+[B11: John Kerin, 2022]
+2022
+ẋ=G(x)−x+F1, cyclic quadratic advection families
+Cyclic / longer-range generalizations
+Quadratic; structural conservation restrictions
+Variable n
+Multiple stencils
+Analytical + numerical
+Lemma 1/Eq. (29) and mode-index products
+Planned DM rational derivative contractions
+Translation-equivariant mode addition
+Cubic derivatives, normalization and aliasing
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P13 FUTURE
+One exact nonzero coefficient
+[B21: Karen M. Page, 2018]
+2018
+ẋᵢ=δᵢ(fᵢ(xᵢ₋₁)−xᵢ)
+Single-input repressive feedback ring
+Smooth repression; Hill cases
+Variable ring size
+Nearest predecessor
+Analytical + numerical
+Model-specific l₁ sign analysis in repressive ring
+Planned DM algebraic candidate evaluation
+Routine coefficient verification
+Actual DM sign still unproved
+ROUTINE APPLICATION
+MEDIUM
+UNRESOLVED
+P13 FUTURE
+Substantial admissible-region sign theorem
+[B21: Karen M. Page, 2018]
+2018
+ẋᵢ=δᵢ(fᵢ(xᵢ₋₁)−xᵢ)
+Single-input repressive feedback ring
+Smooth repression; Hill cases
+Variable ring size
+Nearest predecessor
+Analytical + numerical
+Sign criteria across feedback classes
+Proposed n/mode/parameter region tied to P11
+Criticality classification as a goal
+DM multi-input law and constrained domain
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+P14 FUTURE
+Exact nonlinear cyclic wave branch
+[B16: Martin Golubitsky, 1985]
+1985
+ẋ=F(x,μ), Γ-equivariant
+General group representations
+Smooth general
+General dimension
+Not applicable
+Analytical
+Equivariant Hopf with spatiotemporal symmetry
+Planned application after P12/P13
+General theorem applies
+Verified DM Hopf hypotheses
+KNOWN MORE GENERALLY
+HIGH
+LOW
+P14 FUTURE
+Propagation direction and phase clusters
+[B12: Ian Stewart, 2024]
+2024
+ẋᵢ=f(xᵢ,xᵢ₊₁,…); J=ΣaᵣPʳ
+Symmetric scalar rings, including long-range
+Smooth general laws, unrestricted coefficients
+Variable n
+General long-range offsets
+Analytical
+Ring phase pattern and direction results
+Signed DM wave shift and gcd clusters
+Representation-theoretic conclusion
+Physical mode and parameter-side interpretation
+ROUTINE APPLICATION
+HIGH
+LOW
+PART VII — Strongest contribution ranking
+Tier
+Result
+Reason
+A
+P11 exact physical candidate iff + P05 atlas
+A complete admissible-boundary decision separates realizable dominance from realizable criticality, with explicit empty cells.
+A
+P08 unique-root parity theorem and independent same-tuple mode realization
+Sharp all-size and matching constraints, rather than isolated numerical examples.
+A, as a package
+P05/P08/P11 combined
+Selection geometry, physical feasibility and law comparison have a shared exact framework. Priority remains conditional.
+B
+P05 positive lift and switch hypersurfaces
+Connects effective spectral coefficients to an actual positive equilibrium family.
+B
+P10 automatic transverse fold stability and explicit coexistence interval
+Eliminates extra stability assumptions for every admissible size/offset.
+B, conditional future
+P13 substantial sign classification tied to admissible modes
+Would turn a spectral atlas into an informative nonlinear oscillation theorem.
+C
+P07 stable tie; P11 algebraic candidate; P01 exact-radius extension; P09 cubic locus
+Useful model-specific details that support, rather than define, the main contribution.
+D
+P02 algebra, P03–P04 linear algebra, generic P09/P10 reductions
+Established theory or direct substitution.
+D, future
+P06 limit, pointwise P12, generic P13 formula, P14 symmetry consequence
+Useful completion or corollaries with little independent methodological novelty.
+Tier measures contribution value, not proof difficulty. An exact pointwise l₁ can be indispensable to a good paper while remaining Tier C/D as a novelty claim. Conversely, the concise positivity inequality in P11 may carry more conceptual weight than a long tensor calculation.
+PART VIII — Claims that should be weakened
+Results that should NOT be presented as primary novelty
+Generic circulant diagonalization, normality, semisimplicity and the Euclidean semigroup identity: cite the framework and give a lemma.
+[B17: Robert M. Gray, 2006]
+Invariance of full synchrony and routine homogeneous-state modal reduction: standard setup.
+[B14: Ian Stewart, 2003]
+[B31: Vincent A. A. Jansen, 2000]
+The golden ratio arising from a pentagonal Fourier grid: arithmetic of fifth roots, with explicit related five-agent prior.
+[B06: Ciann-Dong Yang, 2023]
+The generic transcritical/fold/Hopf theorem and stable-manifold consequences: cite them and state the verified hypotheses.
+Fourier mode-addition reduction of l₁ as a new method: already exploited in close cyclic systems.
+[B11: John Kerin, 2022]
+General cyclic rotating waves, gcd phase clusters or direction from the signed critical eigenvalue: established theory.
+[B12: Ian Stewart, 2024]
+[B16: Martin Golubitsky, 1985]
+A first-ever separation of physically admissible from algebraic critical points: contradicted by explicit prior feasibility discussion.
+[B23: Darren Pais, 2012]
+The broad claim that interaction law affects spatial dynamics: long established; the exact matched-law classification is the contribution.
+[B26: H. G. Othmer, 1971]
+[B27: Erik Plahte, 2001]
+[B29: Malbor Asllani, 2014]
+Required novelty-document revisions
+The named novelty files were not inspected, per your instruction. The following are
+conditional revision instructions
+for any such wording; they are not claims that those files currently contain it. No files have been edited.
+If a document says…
+Replace it with…
+“Novel Fourier theory for directed rings”
+“Standard Fourier analysis gives an exact sparse dispersion; new claims concern positive-parameter realizability and comparison.”
+“First golden-ratio five-element dynamics”
+“The n=5 specialization uses fifth-root constants; its useful content is the physically constrained ordering and stable-tie statement.”
+“Same topology isolates saturation”
+“Same unsigned directed dependency support and nominal tuple; the specified law replacement also changes derivative signs and face behavior.”
+“Every selectable mode can undergo Hopf”
+“P11 gives an additional physical candidate criterion; P12–P13 remain necessary for the proposed nondegenerate Hopf theorem.”
+“P11 proves Hopf / first instability / rotating waves”
+“P11 verifies spectral candidate conditions. The crossing, nonlinear coefficient and exact wave branch are future work.”
+“Two positive roots imply bistability”
+“Two stable equilibria coexist in the certified region; outside it transverse instability may occur.”
+“Lower root has index one throughout the two-root interval”
+“Index one is proved near the fold; an explicit example has unstable dimension three elsewhere.”
+“Global basin boundary is the lower saddle’s stable manifold”
+“A local stable disk separates the two sink basins near the saddle; the threshold on synchrony is exact.”
+“Sharp/minimal absorbing radius”
+“Explicit invariant attracting radius, with a separate finite-entry characterization; no optimality claim.”
+“O(n⁻²) wave-number error / continuum PDE limit”
+“Planned eigenvalue discretization estimate; wave-number and continuum limits require separate statements.”
+“Lin’s work is numerical only / exact model priority settled”
+“Main-paper and thesis priority remains unresolved; the accessible supplement includes analytical material and a Hopf-region discussion.”
+“P13 proves an open criticality region” based only on continuity
+“A nonzero coefficient persists locally; a substantial region theorem requires explicit coverage.”
+The blueprint is already careful about many of these distinctions. They are safeguards for future manuscript wording, not accusations of mathematical errors in the supplied archive.
+PART IX — Claims that could be strengthened
+Emphasize quantifiers.
+State P08’s forward witness for every n≥5, the exact residue-class iff on C₊, and the separately labelled lower-branch result. State P11’s necessity and constructive sufficiency, not just its excluded examples. State P05’s transfer from effective coefficients to positive physical parameters and open sets. These are stronger than a collection of parameter scans.
+Make P10’s generality visible.
+The fold conclusion is valid for all allowed offsets, including coincident and noncoprime cases. Attribute this to the step-one term and the exact fold identity. Keep the dimension-independent sufficient coexistence interval separate from the dimension-dependent transverse gap.
+A useful additional deduction for P08, not an archived verified claim.
+The MB strict spectral condition can be strengthened to global asymptotic stability of the positive equilibrium
+within the strictly positive orthant
+. This is a standard generalized Lotka–Volterra Lyapunov specialization, not a new general theorem.
+[B18: B. S. Goh, 1977]
+[B19: J. C. Wildenberg, 2006]
+B=−kI+cP−gP⁻q−hPq,   y*=a/(k+g+h−c),
+V(y)=Σᵢ[yᵢ−y*−y*log(yᵢ/y*)],   z=y−y*1.
+V̇ = zᵀBz ≤ −δ‖z‖²,   δ=k−Kₙ,q(c,g+h)>0.
+Indeed ẏ=diag(y)(a1+By), B(y*1)=−a1, and the symmetric part of the real circulant B has largest eigenvalue −δ. V tends to infinity as any coordinate approaches zero or infinity, so a positive trajectory stays in a compact interior sublevel set and converges to y*1. This derivation is supplied by this audit for subsequent project verification. It cannot be extended to every boundary initial condition: MB coordinate faces are invariant and cannot converge to a fully positive equilibrium from a missing species.
+If incorporated and checked, the reverse P08 comparison becomes stronger: an unstable DM homogeneous equilibrium can be paired with an MB equilibrium globally attracting in the positive interior. The strengthening uses established theory; its value is in sharpening the exact law comparison. Likewise the independent stable-mode theorem could contrast local DM stability with global interior MB attraction.
+PART X — Literature gaps worth exploiting
+Resolve source priority before broadening scope.
+Obtain the Lin proceedings, full journal text and thesis. This can change whether the candidate/Hopf calculations are new, even if it leaves the general-n classifications intact.
+Unify the selection and criticality figures.
+For each n, show the positive vertex cells and the intersection with z<Bⱼ, then add the amplitude-dependent boundary from P11. Clearly mark dominance-only regions. This is a theorem visualization, not evidence in place of proof.
+Give a usable nonlinear theorem on an explicit admissible domain.
+Derive P13 on the physical Hopf surface, then prove a sign result with stated size/mode and parameter restrictions. Tie it to a meaningful part of the P11 atlas.
+Separate the two reverse-comparison mechanisms.
+In the unique-root domain the residue obstruction reflects spatial spectral geometry. On the lower branch, uniform branch instability can drive the contrast. This separation improves both novelty and interpretation without adding a new research direction.
+Use the algebraic five-node point as a complete worked theorem.
+Finish P12, one exact l₁ and P14 there even if a larger sign theorem follows later. A spectral candidate is a weaker deliverable than a fully certified nonlinear example.
+Keep asymptotics subordinate.
+P06 can explain the finite-ring results, but a standard sampling limit should not displace exact finite-size obstructions.
+These targets stay within P01–P14. A generic first-Hopf calculation for an unrelated ring, more simulation cases, or a longer list of fifth-root identities would add little to the current contribution.
+PART XI — Recommended manuscript positioning
+Recommended title:
+Finite-ring mode selection and physical criticality constraints in demand-modulated cyclic networks
+.
+Contribution paragraph, using only current results:
+We study homogeneous equilibria of a directed cyclic network with receiver-dependent input and compare them with a specified bilinear network sharing the same directed dependency support and nominal coefficients. For step-two coupling, we classify the complete finite-size dominant-mode cells and prove their realization by positive parameters. We then derive a necessary-and-sufficient criterion for a strict nonuniform cell to contain a physical spectral critical point, identifying selectable modes that cannot become critical. Matched-law comparisons yield exact stability reversals, residue-class and branch restrictions, and independent realization of dominant modes at stable equilibria. Full-system transcritical and saddle-node analysis organizes the synchronous branches, including automatic transverse stability at every positive fold. These results distinguish spectral ordering, admissible criticality and interaction-law dependence; nonlinear Hopf and rotating-wave conclusions require the additional calculations specified separately.
+Six principal contributions:
+The complete finite-n q=2 selection atlas with physical cell and switch realization.
+The exact P11 positivity-constrained candidate criterion and explicit obstruction cells.
+The all-n same-tuple forward contrast and the exact reverse parity/branch distinctions.
+Independent realization of every reachable ordered pair of dominant representatives with both models stable.
+The universal transverse-fold identity and a certified open region of coexistence.
+The exact five-node spectral candidate, to be upgraded to a nonlinear Hopf/wave theorem only after P12–P14.
+Main text:
+model/comparator definition, concise framework, P05–P11 geometric relationship, P08 comparisons, branch-labelled P09/P10 organization, counterexamples and one five-node illustration. Give the closest-prior differences explicitly in the introduction.
+Appendices:
+extended P01 edge cases, complete negative-root tables, Jacobian collision bookkeeping, full P07 ordering/coincidence table, long constructive algebra, future tensor derivatives and normalization checks. P06 belongs here unless it reveals a genuinely additional phenomenon.
+Not novelty:
+a Fourier eigenbasis, invariant synchrony, generic local bifurcation theorems, the textbook l₁ formula or the equivariant Hopf conclusion. Use citations and short supporting statements.
+Strongest defensible claim after P12–P14 are actually proved
+A completed project could claim
+an exact finite-size classification of physically attainable dominant and critical modes for the specified demand-modulated law, sharp same-tuple contrasts with its bilinear comparator, and a rigorously classified nonlinear rotating-wave realization connected to that classification
+. If P13 covers only one point, the last phrase must mean one local realization, not a global wave atlas or all admissible candidates.
+Source of value
+What it contributes
+A — P05/P08/P10/P11, current
+The apparent novelty already lies in constrained mode feasibility, exact matched-law comparisons and the structural fold identity. It remains subject to exact-model priority access.
+B — P12, future
+Certifies that the designated physical path crosses the boundary. Necessary local dynamical meaning; little independent novelty.
+C — P13, future
+Converts a linear candidate into a nonlinear bifurcation with stability/type. A substantial sign theorem adds more than one nonzero value.
+D — P14, future
+Identifies the exact cyclic phase pattern and clusters of the resulting branch using established symmetry theory. Mainly interpretation and completion.
+Direct answer about one-point l₁:
+yes, it materially strengthens the paper’s completeness by proving and classifying an actual local periodic branch; no, it does not by itself materially strengthen the novelty of the general method. The preferred further target is a sign classification on an explicit admissible Hopf region with a size/mode or interaction-law consequence. Exact closed form is a means to that target. An unspecified continuity neighborhood is too weak; a fully matched criticality comparison can be valuable but needs separately certified MB Hopf data.
+PART XII — Critical bibliography
+The core list contains 32 research papers/preprints, followed by two reference articles and one standard book. Not every paper was available in full; the access label is part of each citation. Metadata came from primary publication pages, institutional/author records and, for part of the Lin chain, Crossref. DOI links identify the version of record; arXiv links identify the inspected preprint where applicable.
+B01. Haipeng Lin; Jing Han (2020).
+Analysis of Dynamic Five-Element Model
+.
+39th Chinese Control Conference, 777–781
+. DOI:
+10.23919/CCC50068.2020.9188438
+.
+Closest bilinear five-element predecessor. Its six-term model must be mapped by coefficients and offsets, rather than identified with DM.
+Evidence: Author-uploaded paper, equations inspected; proceedings contents checked.
+B02. Haipeng Lin; Wenxin Shi; Jing Han (2021).
+Analysis of Enzymatic Regulatory Five-Element Model
+.
+40th Chinese Control Conference, 6410–6415
+. DOI:
+10.23919/CCC52363.2021.9550151
+.
+Highest-priority outstanding equation and theorem check. The title does not establish the denominator convention.
+Evidence: Metadata and citation chain; main text unavailable.
+B03. Haipeng Lin; Wenxin Shi; Jing Han (2022).
+Comparison of Enzymatic Regulatory Network Topologies
+.
+41st Chinese Control Conference, 5735–5740
+. DOI:
+10.23919/CCC55666.2022.9901543
+.
+Do not attribute the later journal manuscript attached to a proceedings record to this 2022 paper without inspecting its actual PDF.
+Evidence: Metadata; purported online full text has version mismatch.
+B04. Haipeng Lin; Jing Han (2023).
+Comparison of Multi-Node Networks on Biological Properties
+.
+42nd Chinese Control Conference, 6823–6828
+. DOI:
+10.23919/CCC58697.2023.10239797
+.
+Could contain the intermediate generalization beyond five nodes. Priority remains unresolved at theorem level.
+Evidence: Metadata verified through Crossref; main text unavailable.
+B05. Haipeng Lin; Jing Han (2024).
+What is special of “five” in biological regulatory networks?
+.
+Nonlinear Dynamics 112, 7477–7498
+. DOI:
+10.1007/s11071-024-09374-5
+.
+Essential exact-model comparison. The supplement confirms a Hopf parameter-space study and analytical adaptation arguments; a numerical-only characterization would be inaccurate.
+Evidence: Publisher abstract/references; partial author-manuscript equation; public supplement source inspected.
+B06. Ciann-Dong Yang (2023).
+Discovering golden ratio in the world’s first five-agent network in ancient China
+.
+Scientific Reports 13, 18581
+. DOI:
+10.1038/s41598-023-46071-6
+.
+Directly defeats novelty based merely on golden-ratio constants in a five-element network. The model and stability claim differ from DM.
+Evidence: Full text inspected.
+B07. P. Bellavite; M. Semizzi; S. Lussignoli; G. Andrioli; U. Bartocci (1998).
+A computer model of the ‘five elements’ theory of traditional Chinese medicine
+.
+Complementary Therapies in Medicine 6(3), 133–140
+. DOI:
+10.1016/S0965-2299(98)80005-8
+.
+Older computational five-element network precedent. It establishes historical context, not an exact DM theorem.
+Evidence: Publisher abstract/metadata.
+B08. Dirk L. van Kekem; Alef E. Sterk (2018).
+Travelling waves and their bifurcations in the Lorenz-96 model
+.
+Physica D 367, 38–60
+. DOI:
+10.1016/j.physd.2017.11.008
+. arXiv: 1704.05442; retrieved PDF theorem numbering used.
+Principal comparison for quadratic cosine dispersion, finite-size Hopf selection, and nonlinear criticality.
+Evidence: Full arXiv paper inspected: Lemma 1, Theorems 2/4, Propositions 5/6, §4.3.
+B09. Dirk L. van Kekem; Alef E. Sterk (2018).
+Wave propagation in the Lorenz-96 model
+.
+Nonlinear Processes in Geophysics 25, 301–314
+. DOI:
+10.5194/npg-25-301-2018
+.
+Companion precedent for travelling-wave interpretation and large-size wavelength/period behavior.
+Evidence: Full article available; wave and size discussion inspected.
+B10. Dirk L. van Kekem; Alef E. Sterk (2019).
+Symmetries in the Lorenz-96 Model
+.
+International Journal of Bifurcation and Chaos 29, 1950008
+. DOI:
+10.1142/S0218127419500081
+. arXiv: 1712.05730.
+Symmetry and symmetry-breaking steady-state precedent; do not conflate it with the separate Wave propagation article.
+Evidence: Author/institutional full text inspected selectively.
+B11. John Kerin; Hans Engler (2022).
+On the Lorenz ’96 model and some generalizations
+.
+Discrete and Continuous Dynamical Systems – B 27(2), 769–797; online 2021
+. DOI:
+10.3934/dcdsb.2021064
+. arXiv: 2005.07767v2, 21 October 2020.
+Especially close prior for Fourier-based first-Lyapunov reduction in cyclic quadratic systems.
+Evidence: Full arXiv v2 inspected: Lemma 1, Eq. (29), Appendix A.
+B12. Ian Stewart (2024).
+Hopf Bifurcation and Phase Patterns in Symmetric Ring Networks
+.
+arXiv preprint; no journal version verified
+. arXiv: 2403.15814v1, 23 March 2024.
+Direct modern source for ring phase patterns, unrestricted ordering, and direction. Sparse positive DM coefficients impose additional restrictions.
+Evidence: Full v1 HTML inspected: Theorems 3.7, 5.5, 5.7 and Corollary 5.6.
+B13. Ian Stewart (2024).
+Hopf Bifurcation in Asymmetric Ring Networks: Constraints on Phase Shifts
+.
+arXiv preprint; no journal version verified
+. arXiv: 2404.08428v1, 12 April 2024.
+Generic ring nondegeneracy is background, not a substitute for a derivative on the designated DM parameter path. Included only for this narrow comparison.
+Evidence: Abstract and scope checked.
+B14. Ian Stewart; Martin Golubitsky; Marcus Pivato (2003).
+Symmetry Groupoids and Patterns of Synchrony in Coupled Cell Networks
+.
+SIAM Journal on Applied Dynamical Systems 2(4), 609–646
+. DOI:
+10.1137/S1111111103419896
+.
+General coupled-cell synchrony theory. Full synchrony of this homogeneous ring is a basic special case.
+Evidence: Publisher abstract and framework inspected.
+B15. Martin Golubitsky; Ian Stewart; Andrei Török (2005).
+Patterns of Synchrony in Coupled Cell Networks with Multiple Arrows
+.
+SIAM Journal on Applied Dynamical Systems 4(1), 78–100
+. DOI:
+10.1137/040612634
+.
+Multiarrow framework is pertinent when modular offsets coincide; quotient and synchrony arguments are established machinery.
+Evidence: Author/repository metadata and abstract.
+B16. Martin Golubitsky; Ian Stewart (1985).
+Hopf Bifurcation in the Presence of Symmetry
+.
+Archive for Rational Mechanics and Analysis 87, 107–165
+. DOI:
+10.1007/BF00280698
+.
+Foundational equivariant Hopf reference. A similarly titled 1984 announcement is a separate publication.
+Evidence: Publisher metadata/abstract; theorem also checked through B12.
+B17. Robert M. Gray (2006).
+Toeplitz and Circulant Matrices: A Review
+.
+Foundations and Trends in Communications and Information Theory 2(3), 155–239
+. DOI:
+10.1561/0100000006
+.
+Accessible source for the circulant eigenbasis and unitary diagonalization used throughout P03–P04.
+Evidence: Primary author PDF, Chapter 3.
+B18. B. S. Goh (1977).
+Global Stability in Many-Species Systems
+.
+The American Naturalist 111(977), 135–143
+. DOI:
+10.1086/283144
+.
+The appropriate foundation for the bilinear model’s diagonal-stability/entropy argument, not a new general stability technique.
+Evidence: Publisher metadata/abstract; classical Lyapunov criterion independently specialized here.
+B19. J. C. Wildenberg; J. A. Vano; J. C. Sprott (2006).
+Complex spatiotemporal dynamics in Lotka–Volterra ring systems
+.
+Ecological Complexity 3, 140–147
+. DOI:
+10.1016/j.ecocom.2005.12.001
+.
+Close ecological predecessor for circulant bilinear rings, cosine spectra and Lyapunov stability regions.
+Evidence: Full primary PDF, §4, Eqs. (13)–(18).
+B20. John Mallet-Paret; Hal L. Smith (1990).
+The Poincaré–Bendixson theorem for monotone cyclic feedback systems
+.
+Journal of Dynamics and Differential Equations 2(4), 367–421
+. DOI:
+10.1007/BF01054041
+.
+A crucial scope boundary: the generic multi-input DM ring is not automatically a monotone single-loop feedback system.
+Evidence: Publisher record; relevance cross-checked against B25.
+B21. Karen M. Page; Ruben Perez-Carrasco (2018).
+Degradation rate uniformity determines success of oscillations in repressive feedback regulatory networks
+.
+Journal of the Royal Society Interface 15, 20180157
+. DOI:
+10.1098/rsif.2018.0157
+. arXiv: 1802.05946; retrieved PDF.
+Nonlinear criticality benchmark: sign information over function/parameter classes is stronger than a single nonzero coefficient.
+Evidence: Full preprint, Eq. (15) and supplementary derivation.
+B22. Olguța Bușe; Alexey Kuznetsov; Rodrigo A. Pérez (2009).
+Existence of Limit Cycles in the Repressilator Equations
+.
+International Journal of Bifurcation and Chaos 19(12), 4097–4106
+. DOI:
+10.1142/S0218127409025237
+.
+Repressilator precedent for positivity, bounding arguments and a supercritical Hopf theorem. Alexey Kuznetsov here is not Yuri A. Kuznetsov.
+Evidence: Author-uploaded full text and author PDF excerpts.
+B23. Darren Pais; Carlos H. Caicedo-Núñez; Naomi E. Leonard (2012).
+Hopf Bifurcations and Limit Cycles in Evolutionary Network Dynamics
+.
+SIAM Journal on Applied Dynamical Systems 11(4), 1754–1784
+. DOI:
+10.1137/120878537
+.
+Explicit prior distinction between algebraic Hopf points and feasible parameter values in a circulant model.
+Evidence: Author PDF: Lemmas 4.4/4.6, Theorem 4.5, Remark 1, §4.3.
+B24. David Angeli; Murad Banaji; Casian Pantea (2014).
+Combinatorial approaches to Hopf bifurcations in systems of interacting elements
+.
+Communications in Mathematical Sciences 12(6), 1101–1133
+. DOI:
+10.4310/CMS.2014.v12.n6.a5
+. arXiv: 1301.7076.
+Structural Hopf-exclusion theory predates P11. It does not by itself provide the particular DM mode-cell iff inequality.
+Evidence: Full preprint and institutional publication record.
+B25. Jules Guilberteau (2023).
+Bistability and Oscillatory Behaviours of Cyclic Feedback Loops
+.
+Acta Applicandae Mathematicae 188, article 6
+. DOI:
+10.1007/s10440-023-00618-x
+. arXiv: 2304.12801v1, 25 April 2023.
+A close contemporary bistability comparison with restrictive single-input monotone laws. Its global conclusions cannot simply be transferred to DM.
+Evidence: Full arXiv v1, Theorem 1 and §§2–4; publisher metadata.
+B26. H. G. Othmer; L. E. Scriven (1971).
+Instability and dynamic pattern in cellular networks
+.
+Journal of Theoretical Biology 32(3), 507–537
+. DOI:
+10.1016/0022-5193(71)90154-8
+.
+Foundational separation of local kinetics and network modes in stability analysis.
+Evidence: Publisher abstract and PubMed metadata.
+B27. Erik Plahte (2001).
+Pattern formation in discrete cell lattices
+.
+Journal of Mathematical Biology 43(5), 411–445
+. DOI:
+10.1007/s002850100105
+.
+Compares diffusion-driven and signalling-driven models and finite-lattice behavior. Relevant to broad interaction-law claims, not verified as an exact P08 antecedent.
+Evidence: Primary abstract and metadata; main text not obtained.
+B28. Hiroya Nakao; Alexander S. Mikhailov (2010).
+Turing patterns in network-organized activator-inhibitor systems
+.
+Nature Physics 6, 544–550
+. DOI:
+10.1038/nphys1651
+. arXiv: 1005.1986.
+Network mode selection is established; two-species diffusive coupling differs from the scalar mixed-sign DM network.
+Evidence: Primary preprint available, dispersion framework inspected.
+B29. Malbor Asllani; Joseph D. Challenger; Francesco Saverio Pavone; Leonardo Sacconi; Duccio Fanelli (2014).
+The theory of pattern formation on directed networks
+.
+Nature Communications 5, 4517
+. DOI:
+10.1038/ncomms5517
+. arXiv: 1402.0760; preprint title begins “Topology-driven instabilities”.
+Directed-network instability depends jointly on kinetics and spectral data. This limits the novelty of a general topology-versus-law slogan.
+Evidence: Primary article, instability framework inspected.
+B30. Shangjiang Guo; Lihong Huang (2003).
+Hopf bifurcating periodic orbits in a ring of neurons with delays
+.
+Physica D 183(1–2), 19–44
+. DOI:
+10.1016/S0167-2789(03)00159-3
+.
+Neural-ring precedent for Hopf normal forms and periodic wave patterns; delayed equations and symmetry assumptions differ.
+Evidence: Publisher abstract and available article preview.
+B31. Vincent A. A. Jansen; Alun L. Lloyd (2000).
+Local stability analysis of spatially homogeneous solutions of multi-patch systems
+.
+Journal of Mathematical Biology 41(3), 232–252
+. DOI:
+10.1007/s002850000048
+.
+General modal reduction supplies another background reference for homogeneous-state stability.
+Evidence: Primary author PDF abstract/framework and publication metadata.
+B32. 熊枫 (Feng Xiong); 张维波 (Weibo Zhang) (2025).
+《黄帝内经》五行的“更贵更贱”解析
+.
+中医学报 40(10), 2098–2103
+. DOI:
+10.16368/j.issn.1674-8999.2025.10.329
+.
+A recent forward-citation lead connecting the 2021 and 2024 Lin papers to a 2021 master’s thesis. The equation still requires inspection.
+Evidence: Journal abstract/references only; full article unavailable.
+B33. Yuri A. Kuznetsov (2006).
+Andronov-Hopf bifurcation
+.
+Scholarpedia 1(10), 1858
+. DOI:
+10.4249/scholarpedia.1858
+.
+Authoritative normal-form convention reference; not counted as a model-specific research contribution.
+Evidence: Author reference article indexed; formula cross-checked in B11/B23.
+B34. Yuri A. Kuznetsov (2006).
+Saddle-node bifurcation
+.
+Scholarpedia 1(10), 1859
+. DOI:
+10.4249/scholarpedia.1859
+.
+Reference for the generic fold theorem; P10’s distinctive step precedes its application.
+Evidence: Author reference article indexed.
+B35. John Guckenheimer; Philip Holmes (1983).
+Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields
+.
+Springer, Applied Mathematical Sciences 42, XVI + 462 pp.
+. DOI:
+10.1007/978-1-4612-1140-2
+.
+Chapter 3 is the local-bifurcation framework for the transcritical, fold, center-manifold and Hopf applications. This book supplements the research-paper bibliography.
+Evidence: Publisher contents/metadata verified; standard reference book.
+Additional priority material and thesis context
+Haipeng Lin (林海鹏), 2021.
+多子系统生克耦合模型的研究
+[working translation: Study of generating–restraining coupling models with multiple subsystems]. Master’s thesis, University of Chinese Academy of Sciences; supervisor Jing Han (韩靖), July 2021. The degree/title/supervisor are confirmed by the
+official laboratory graduate list
+; full text is unresolved. No DOI verified.
+Dirk L. van Kekem, 2018.
+Dynamics of the Lorenz-96 model: Bifurcations, symmetries and waves
+. University of Groningen doctoral thesis, 195 pp., ISBN 9789403409795. Useful consolidation of the related articles; not an additional independent novelty antecedent counted on top of its chapters.
+University record
+.
+PART XIII — Search log and unresolved priority questions
+This was a broad, source-driven audit with repeated equation, theorem, author and citation-chain searches. It is not an exhaustive indexed systematic review. Search-engine equation retrieval was noisy, so failed exact-string queries were not treated as proof of nonexistence.
+Search family / representative queries used
+Outcome and depth
+Exact receiver law; “x_{i-1}/(1+x_i)”; “x_i/(1+x_{i+q})”; “receiver-dependent” ring; “demand-modulated coupling”
+No verified exact canonical match. Many unrelated hits; low evidential value of absence.
+“Analysis of Dynamic Five-Element Model”; “Analysis of Enzymatic Regulatory Five-Element Model”; “Comparison of Enzymatic Regulatory Network Topologies”; “Comparison of Multi-Node Networks on Biological Properties”
+Followed 2020–2024 proceedings/journal chain, DOI records, author profile and author-uploaded materials. Identified a version mismatch.
+“What is special of five in biological regulatory networks”; article DOI; supplements; citing papers
+Publisher metadata/reference list, partial manuscript equation and downloadable supplement. Main text still incomplete.
+“林海鹏 五行”; “林海鹏 酶调控”; “多子系统生克耦合模型的研究”
+Found 2025 journal forward citation and official confirmation of the 2021 master’s thesis. Also found a Chinese conference abstract by Lin/Han on enzymatic motif comparison, without a full paper.
+“Travelling waves and their bifurcations in the Lorenz-96 model”; finite-size mode selection; cosine quadratic; Lorenz-96 Lyapunov coefficient
+Inspected core van Kekem–Sterk paper, related wave/symmetry papers, dissertation record and Kerin–Engler generalizations.
+Physically realizable spectral boundary; constrained Hopf mode selection; impossible/admissible Hopf modes; positivity-constrained crossing; dominant modes cannot destabilize
+Found the explicit feasibility warning in Pais et al. and general exclusion theory in Angeli et al. No inspected theorem reproduces the DM iff.
+Circulant Lotka–Volterra ring; cosθ/cos2θ stability; same graph different coupling laws
+Read Wildenberg et al. stability section and followed its references. Zeeman’s 1997
+Circulant Lotka–Volterra Systems
+is cited there as an unpublished manuscript and was not obtained.
+Cyclic-feedback bistability; positive synchronized fold; transcritical center manifold; basin separation
+Compared Guilberteau’s Theorem 1/branch arguments and standard local theory. Did not transfer single-loop monotonicity assumptions to DM.
+Cyclic-ring Hopf first Lyapunov coefficient; repressilator supercritical theorem
+Inspected Page–Perez-Carrasco formula/derivation, Bușe et al. author text, Pais et al. and the generalized L96 reduction.
+Cₙ equivariant Hopf; rotating-wave phase clusters; symmetric ring long-range coupling; propagation direction
+Inspected Stewart 2024 v1’s theorem statements and followed classic equivariant/coupled-cell references.
+Discrete cell lattices; Turing network mode selection; topology versus kinetics; neural ring Hopf
+Primary sources and abstracts across J. Math. Biology, J. Theoretical Biology, Physica D, SIAM and Nature-family journals. These constrain broad claims, not the exact DM iff.
+2024–2026 ring/Hopf and Lorenz-96 queries; Lin citations in 2025–2026
+Stewart 2024 and Xiong–Zhang 2025 were relevant additions. Many 2025–2026 hits concerned forecasting, stochastic systems or control and were excluded from this scope. No exhaustive recent-citation closure is claimed.
+Database and access record
+arXiv:
+used for full primary preprints and version metadata. Journal publication dates were checked separately where available.
+Crossref:
+public metadata retrieval used to verify proceedings/journal records, including B04; occasional throttling limited bulk retrieval.
+Journal and author/institutional websites:
+primary source route for SIAM, Springer, Physica D/Elsevier, AMS-related material, Copernicus, Nature, Stanford, Princeton, Groningen and other author PDFs.
+Google Scholar:
+a direct exact-title query was attempted but returned a fetch error. This report does not claim a successful complete Scholar search or cited-by export.
+MathSciNet:
+redirected to an institutional authentication selector; no authenticated search was available.
+zbMATH:
+direct query failed through the available retrieval tool. No comprehensive zbMATH coverage is claimed.
+IEEE:
+the crucial proceedings full texts were not retrieved. Metadata and author/citation records are not substitutes for those papers.
+CNKI/journal site:
+B32 abstract and references were accessible; full paper and thesis were not.
+ResearchGate:
+used only for author-uploaded primary text or metadata, never as an authority for uncited third-party summaries. Mismatched attachments and partial retrieval are explicitly flagged.
+Unresolved checks ranked by impact
+Lin thesis and B02–B05:
+determine exact law(s), analytical spectrum, Hopf theorem and any l₁ computation. This is the main unresolved priority gate.
+B32 full text:
+inspect the 2025 equation and whether it reproduces or extends the thesis model.
+Version reconciliation:
+match the author manuscript attached to the 2022 record to the 2024 journal text before assigning theorem dates.
+Closest historical gaps:
+obtain Plahte’s complete paper and, if available, Zeeman’s unpublished circulant manuscript. They may strengthen broad background overlap; their titles alone cannot refute P08/P11.
+Complete citation-index pass:
+use institutional MathSciNet/zbMATH/Scholar access to trace citations of B05, B08, B11, B12 and B23 through 4 October 2026. No claim to have inspected every citing paper is justified here.
+What was deliberately not inferred:
+absence of a formula from an abstract is not absence from a paper; a spectral crossing is not a completed nondegenerate Hopf theorem; numerical oscillations do not identify a particular local Hopf branch; similar graph names do not identify equations; and the presence of a Lyapunov-method citation does not prove an l₁ calculation.
+Reproducibility note:
+theorem numbering for B08/B11/B23 refers to the accessible preprints/author PDFs listed in the bibliography and can differ from publisher pagination. Only project information in the supplied blueprint was used; the original novelty documents were not available for direct contradiction checking.
+Final novelty table — P01–P14
+One classification per module’s principal content. Mixed claims are resolved individually in Parts III and VI. Future classifications concern the proposed theorem target, not an established result. LOW risk for standard machinery does not settle the publication priority of a particular DM calculation.
+Module
+Main mathematical content
+Closest prior work
+Classification
+Confidence
+Priority risk
+Paper role
+P01
+Positive flow, explicit absorption; refined finite-entry iff
+[B22: Olguța Bușe, 2009]
+ROUTINE APPLICATION
+HIGH
+MODERATE
+Foundation; exact-entry refinement in appendix
+P02
+Synchrony and exact root classification
+[B14: Ian Stewart, 2003]
+ROUTINE APPLICATION
+HIGH
+MODERATE
+Branch setup
+P03
+Origin/homogeneous Jacobian
+[B17: Robert M. Gray, 2006]
+ROUTINE APPLICATION
+HIGH
+LOW
+Framework lemma
+P04
+Fourier spectrum, normality, semigroup norm
+[B17: Robert M. Gray, 2006]
+KNOWN MORE GENERALLY
+HIGH
+LOW
+Cited framework
+P05
+Finite cells plus positive physical realization
+[B08: Dirk L. van Kekem, 2018]
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+Main geometric theorem; realization is apparent novelty
+P06 — FUTURE / NOT YET PROVED
+Large-n selected mode and objective error
+[B09: Dirk L. van Kekem, 2018]
+ROUTINE APPLICATION
+HIGH
+LOW
+Optional corollary
+P07
+Five-node ordering, coincidences and stable tie
+[B06: Ciann-Dong Yang, 2023]
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+Worked example; not golden-ratio novelty
+P08
+Exact matched-law stability/mode contrasts
+[B19: J. C. Wildenberg, 2006]
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+Headline theorem
+P09
+Full transcritical and cubic locus
+[B35: John Guckenheimer, 1983]
+ROUTINE APPLICATION
+HIGH
+MODERATE
+Supporting branch theorem
+P10
+Automatic transverse fold stability/coexistence
+[B25: Jules Guilberteau, 2023]
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+Supporting main theorem
+P11
+Physical candidate iff and obstruction cells
+[B23: Darren Pais, 2012]
+APPARENTLY NEW
+MEDIUM
+UNRESOLVED
+Headline theorem
+P12 — FUTURE / NOT YET PROVED
+Crossing on frozen physical path
+[B35: John Guckenheimer, 1983]
+ROUTINE APPLICATION
+HIGH
+LOW
+Necessary Hopf lemma
+P13 — FUTURE / NOT YET PROVED
+DM l₁ and substantive sign-region target
+[B11: John Kerin, 2022]
+MODEL-SPECIFIC EXTENSION
+MEDIUM
+UNRESOLVED
+Main nonlinear theorem if substantial; pointwise routine
+P14 — FUTURE / NOT YET PROVED
+Exact cyclic wave symmetry and direction
+[B12: Ian Stewart, 2024]
+KNOWN MORE GENERALLY
+HIGH
+LOW
+Corollary after Hopf proof

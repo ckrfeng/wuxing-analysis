@@ -1,0 +1,88 @@
+{
+  "monte_carlo": {
+    "uniform": {
+      "lin": {
+        "stable": 273,
+        "valid": 1195,
+        "total": 1200,
+        "conditional": 0.22845188284518828,
+        "unconditional": 0.2275,
+        "wilson_conditional": [
+          0.20554022632132765,
+          0.2531038514283933
+        ],
+        "both_exist_n": 1024,
+        "both_exist_stable_fraction": 0.2509765625
+      },
+      "sat": {
+        "stable": 968,
+        "valid": 1029,
+        "total": 1200,
+        "conditional": 0.9407191448007775,
+        "unconditional": 0.8066666666666666,
+        "wilson_conditional": [
+          0.9245848054210305,
+          0.9535750208291903
+        ],
+        "both_exist_n": 1024,
+        "both_exist_stable_fraction": 0.9404296875
+      }
+    },
+    "full_order": {
+      "lin": {
+        "stable": 562,
+        "valid": 1192,
+        "total": 1200,
+        "conditional": 0.4714765100671141,
+        "unconditional": 0.4683333333333333,
+        "wilson_conditional": [
+          0.44327483474537016,
+          0.4998614468491153
+        ],
+        "both_exist_n": 1192,
+        "both_exist_stable_fraction": 0.4714765100671141
+      },
+      "sat": {
+        "stable": 1103,
+        "valid": 1200,
+        "total": 1200,
+        "conditional": 0.9191666666666667,
+        "unconditional": 0.9191666666666667,
+        "wilson_conditional": [
+          0.9023730863704249,
+          0.9332850267899775
+        ],
+        "both_exist_n": 1192,
+        "both_exist_stable_fraction": 0.9203020134228188
+      }
+    },
+    "tiered": {
+      "lin": {
+        "stable": 267,
+        "valid": 1145,
+        "total": 1200,
+        "conditional": 0.2331877729257642,
+        "unconditional": 0.2225,
+        "wilson_conditional": [
+          0.20961118528127426,
+          0.25854874207511674
+        ],
+        "both_exist_n": 1145,
+        "both_exist_stable_fraction": 0.2331877729257642
+      },
+      "sat": {
+        "stable": 1188,
+        "valid": 1200,
+        "total": 1200,
+        "conditional": 0.99,
+        "unconditional": 0.99,
+        "wilson_conditional": [
+          0.9826022237812596,
+          0.9942704810662885
+        ],
+        "both_exist_n": 1145,
+        "both_exist_stable_fraction": 0.9895196506550218
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+Independent A10 validation provenance
+
+Analytical reconstruction and exact source review are the proof evidence.
+The developer P10 validation ZIP is present, CRC-checked and hashed, but was not rerun. Its historical statistics are not represented as independently reproduced. Its contents were inventoried after the A10 checker was authored and run.
+The delivered independent_checks.py starts from the original five-term field, uses exact Fraction arithmetic plus NumPy direct matrices, and never imports or executes the developer checker.
+Final environment: Python 3.12.14, NumPy 2.3.5. Fixed random seed 100310.
+Final results: 794 exact assertions; 15,651 direct matrix cases; 139 admissible n,q pairs; 1,668 near-fold branch cases; 1,500 random interior tuples with both branches.
+Finite computations are corroboration, not interval certificates, manifold proofs, or basin proofs. No Hopf continuation is performed.
+Checker construction history: unavailable optional SciPy import replaced with local perfect-matching code; an audit-only G=H witness typo was caught by its residual assertion and corrected before the final complete run. These were not P10 defects.

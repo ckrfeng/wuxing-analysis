@@ -1,0 +1,404 @@
+{
+  "audited_p09_sha256": "b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680",
+  "line_count": 539,
+  "range_count": 66,
+  "all_lines_covered_once": true,
+  "ranges": [
+    {
+      "start": 1,
+      "end": 15,
+      "verdict": "PASS",
+      "reason_tex": "Metadata correctly declares DRAFT, fixed parameter path, direct P02--P04 dependencies, inherited P01 and scope exclusions."
+    },
+    {
+      "start": 16,
+      "end": 20,
+      "verdict": "PASS",
+      "reason_tex": "Title and status agree with the exact CURRENT manifest; no verification is self-awarded."
+    },
+    {
+      "start": 21,
+      "end": 27,
+      "verdict": "PASS",
+      "reason_tex": "Canonical tuple and abbreviations are consistent; $b$ is unambiguously local and $A>0$."
+    },
+    {
+      "start": 28,
+      "end": 33,
+      "verdict": "PASS",
+      "reason_tex": "All five original DM terms are transcribed with correct indices and $g=g_c-\\mu$."
+    },
+    {
+      "start": 34,
+      "end": 39,
+      "verdict": "PASS",
+      "reason_tex": "Joint smoothness, positive $g$ neighborhood, open domain and parameter-dependent locality are correct; no global invariance or uniform-in-$n$ claim."
+    },
+    {
+      "start": 40,
+      "end": 49,
+      "verdict": "PASS",
+      "reason_tex": "P02 import is the exact invariant restriction with denominator $1+r$; no global completeness is inferred here."
+    },
+    {
+      "start": 50,
+      "end": 53,
+      "verdict": "PASS",
+      "reason_tex": "Subsection and anchor only; no added claim."
+    },
+    {
+      "start": 54,
+      "end": 70,
+      "verdict": "PASS",
+      "reason_tex": "Critical spectrum lemma: algebraically simple zero, real kernel, explicit positive gap and arbitrary admissible $q$ are correct."
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "verdict": "PASS",
+      "reason_tex": "Original differentiation, Fourier phases, characteristic-polynomial derivative and real kernel are independently correct."
+    },
+    {
+      "start": 81,
+      "end": 85,
+      "verdict": "PASS",
+      "reason_tex": "Cosine comparison covers odd/even dimensions and all paired/singleton nonzero labels."
+    },
+    {
+      "start": 86,
+      "end": 97,
+      "verdict": "PASS",
+      "reason_tex": "Local equilibrium completeness is stated in state and parameter neighborhoods, including $b=0$."
+    },
+    {
+      "start": 98,
+      "end": 107,
+      "verdict": "PASS",
+      "reason_tex": "Mean coordinates and orthogonal mean-zero projection give a real linear isomorphism; normalization agrees with scalar amplitude."
+    },
+    {
+      "start": 108,
+      "end": 115,
+      "verdict": "PASS",
+      "reason_tex": "Projected derivative preserves $E$; complexification has no kernel, which does imply invertibility of the real restriction."
+    },
+    {
+      "start": 116,
+      "end": 124,
+      "verdict": "PASS",
+      "reason_tex": "Real IFT product and uniqueness imply $\\psi\\equiv0$; zero belongs to one common transverse neighborhood."
+    },
+    {
+      "start": 125,
+      "end": 130,
+      "verdict": "PASS",
+      "reason_tex": "Both equilibrium implications are proved; multiplication by positive $1+r$ is harmless; shrinking gives a state/parameter product."
+    },
+    {
+      "start": 131,
+      "end": 135,
+      "verdict": "PASS",
+      "reason_tex": "Subsection/proposition opening has no unsupported claim."
+    },
+    {
+      "start": 136,
+      "end": 141,
+      "verdict": "PASS",
+      "reason_tex": "Scalar derivative values and mixed derivative are correct."
+    },
+    {
+      "start": 142,
+      "end": 154,
+      "verdict": "PASS",
+      "reason_tex": "Left/right vectors have pairing one; full contractions, Taylor half-factor and opposite physical-$g$ coefficient are correct."
+    },
+    {
+      "start": 155,
+      "end": 159,
+      "verdict": "PASS",
+      "reason_tex": "Scalar expansion has cubic coefficient $-(A+b)$ and quadratic derivative $2b$."
+    },
+    {
+      "start": 160,
+      "end": 169,
+      "verdict": "PASS",
+      "reason_tex": "Original-field mixed derivatives and all five second directional contributions are correct; averaging introduces no extra $n$."
+    },
+    {
+      "start": 170,
+      "end": 175,
+      "verdict": "PASS",
+      "reason_tex": "Generic theorem title is justified by the ensuing full-system proof."
+    },
+    {
+      "start": 176,
+      "end": 189,
+      "verdict": "PASS",
+      "reason_tex": "Branch completeness, smoothness and expansions have fixed-$b$ local scope; both slope orientations are correct."
+    },
+    {
+      "start": 190,
+      "end": 206,
+      "verdict": "PASS",
+      "reason_tex": "Tangents are in the synchronous state--parameter plane; full nonlinear stability table and transcritical conclusion have the stated generic hypotheses."
+    },
+    {
+      "start": 207,
+      "end": 215,
+      "verdict": "PASS",
+      "reason_tex": "Second IFT constructs the unique small root; nonzero iff $\\mu\\ne0$; the other root stays excluded for fixed $b\\ne0$."
+    },
+    {
+      "start": 216,
+      "end": 225,
+      "verdict": "PASS",
+      "reason_tex": "First/second derivatives and tangent vectors are correct; $d\\mu/dg=-1$ is explicitly used."
+    },
+    {
+      "start": 226,
+      "end": 235,
+      "verdict": "PASS",
+      "reason_tex": "Invariant line is a fixed-parameter center manifold; its product with parameter is the full extended center manifold because $F_\\mu(0,0)=0$."
+    },
+    {
+      "start": 236,
+      "end": 244,
+      "verdict": "PASS",
+      "reason_tex": "Coordinate $u=Ar^2-br$ is locally invertible; exact transformed vector field and rational time factor are correct."
+    },
+    {
+      "start": 245,
+      "end": 249,
+      "verdict": "PASS",
+      "reason_tex": "Denominators stay nonzero, time factor is positive, and orbital equivalence is limited to the center restriction."
+    },
+    {
+      "start": 250,
+      "end": 254,
+      "verdict": "PASS",
+      "reason_tex": "Full derivative of the scalar field is taken before imposing equilibrium; product-rule terms are correct."
+    },
+    {
+      "start": 255,
+      "end": 261,
+      "verdict": "PASS",
+      "reason_tex": "Uniform eigenvalue and alternative expression use the equilibrium relation with the correct minus sign."
+    },
+    {
+      "start": 262,
+      "end": 270,
+      "verdict": "PASS",
+      "reason_tex": "Both $b$ factors retain their sign locally; the exact sign proof is primary and the expansion only corroborates it."
+    },
+    {
+      "start": 271,
+      "end": 282,
+      "verdict": "PASS",
+      "reason_tex": "General P04 coefficients and phase signs remain valid at negative synchronous states and colliding offsets."
+    },
+    {
+      "start": 283,
+      "end": 293,
+      "verdict": "PASS",
+      "reason_tex": "Finite-label continuity yields one common strict transverse gap, including $b=0$; no selection theorem is used."
+    },
+    {
+      "start": 294,
+      "end": 303,
+      "verdict": "PASS",
+      "reason_tex": "Origin sign and nonlinear linearization results prove the exchange. Exactly one unstable real direction refers to the off-critical hyperbolic equilibria just treated."
+    },
+    {
+      "start": 304,
+      "end": 315,
+      "verdict": "PASS",
+      "reason_tex": "Physical corollary has correct branch side and stability for each sign of $b$; orthant statements are off-critical."
+    },
+    {
+      "start": 316,
+      "end": 324,
+      "verdict": "PASS",
+      "reason_tex": "Positive synchronous escape, with a fixed radius for each fixed $\\mu>0$, supplies an admissible trajectory proving relative instability."
+    },
+    {
+      "start": 325,
+      "end": 330,
+      "verdict": "PASS",
+      "reason_tex": "Nonnegative invariance restricts stability; interior positive-branch instability and the separate away-from-zero root are correctly scoped."
+    },
+    {
+      "start": 331,
+      "end": 338,
+      "verdict": "PASS",
+      "reason_tex": "Generic critical instability is in $\\U$; the $b<0$ orthant conclusion is expressly withheld."
+    },
+    {
+      "start": 339,
+      "end": 343,
+      "verdict": "PASS",
+      "reason_tex": "Critical synchronous equation is exact."
+    },
+    {
+      "start": 344,
+      "end": 353,
+      "verdict": "PASS",
+      "reason_tex": "Magnitude bound $|b|r^2/3$, sign choice for $r$, finite exit, domain preservation until exit and orthant limitation are correct."
+    },
+    {
+      "start": 354,
+      "end": 359,
+      "verdict": "PASS",
+      "reason_tex": "Degenerate subsection/proposition opening does not assume genericity."
+    },
+    {
+      "start": 360,
+      "end": 367,
+      "verdict": "PASS",
+      "reason_tex": "For $\\mu<0$ and $\\mu=0$, local root counts and stability types are correct; triple zero describes the scalar field."
+    },
+    {
+      "start": 368,
+      "end": 377,
+      "verdict": "PASS",
+      "reason_tex": "Two roots for $\\mu>0$ are in $\\U$ locally; both are exponentially stable there; origin is unstable and only the positive root is nonnegative."
+    },
+    {
+      "start": 378,
+      "end": 382,
+      "verdict": "PASS",
+      "reason_tex": "Translation to $g$ is correct; pitchfork and two-parameter unfolding are explicitly not asserted."
+    },
+    {
+      "start": 383,
+      "end": 388,
+      "verdict": "PASS",
+      "reason_tex": "The transverse reduction applies without $b\\ne0$; both roots can be placed in a common local neighborhood with $r>-1$."
+    },
+    {
+      "start": 389,
+      "end": 393,
+      "verdict": "PASS",
+      "reason_tex": "Critical cubic derivative is $-6A$; scalar zero multiplicity is exactly three."
+    },
+    {
+      "start": 394,
+      "end": 403,
+      "verdict": "PASS",
+      "reason_tex": "Uniform eigenvalue is negative on both signed branches; transverse continuity and the earlier positive escape supply full off-critical conclusions."
+    },
+    {
+      "start": 404,
+      "end": 415,
+      "verdict": "PASS",
+      "reason_tex": "The fixed-parameter center-stability theorem is stated with and satisfies all hypotheses; the neutral parameter direction is explicitly excluded."
+    },
+    {
+      "start": 416,
+      "end": 418,
+      "verdict": "PASS",
+      "reason_tex": "Independent direct Lyapunov proof is at the fixed degenerate tuple in real mean/transverse coordinates."
+    },
+    {
+      "start": 419,
+      "end": 426,
+      "verdict": "PASS",
+      "reason_tex": "Circulant column sums kill all linear-in-$y$ mean terms for every $r$; uniform transverse Taylor remainder is $O(\\norm y_2^2)$."
+    },
+    {
+      "start": 427,
+      "end": 432,
+      "verdict": "PASS",
+      "reason_tex": "Vanishing transverse field on synchrony gives the exact integral factorization and the displayed operator $B:E\\to E$."
+    },
+    {
+      "start": 433,
+      "end": 436,
+      "verdict": "PASS",
+      "reason_tex": "Operator norm of $B$ shrinks to zero; the quadratic-form estimate follows from unitary Fourier diagonalization, or explicitly its real symmetric part."
+    },
+    {
+      "start": 437,
+      "end": 444,
+      "verdict": "PASS",
+      "reason_tex": "Radius choice is feasible with a fixed $K$; the $rR$ bound and denominator comparison give the strict negative derivative for both signs of $r$."
+    },
+    {
+      "start": 445,
+      "end": 450,
+      "verdict": "PASS",
+      "reason_tex": "Compact sublevels lie in $\\U$ and the estimate neighborhood, are invariant, and ensure continuation and full asymptotic stability."
+    },
+    {
+      "start": 451,
+      "end": 460,
+      "verdict": "PASS",
+      "reason_tex": "Sign preservation and convergence justify the reciprocal-square derivative limit, algebraic asymptotic, and impossibility of full exponential stability."
+    },
+    {
+      "start": 461,
+      "end": 471,
+      "verdict": "PASS",
+      "reason_tex": "Codimension proposition concerns the positive physical parameter space and an algebraic meeting of loci only."
+    },
+    {
+      "start": 472,
+      "end": 480,
+      "verdict": "PASS",
+      "reason_tex": "Gradients have rank two, the regular-level theorem applies, and the locus is nonempty."
+    },
+    {
+      "start": 481,
+      "end": 483,
+      "verdict": "PASS",
+      "reason_tex": "The center zero remains spectrally simple; no double-zero claim."
+    },
+    {
+      "start": 484,
+      "end": 492,
+      "verdict": "PASS",
+      "reason_tex": "P02 formulas give equality of loci iff $a=A$, at root zero; positive repeated root and saddle-node scope are correctly distinguished."
+    },
+    {
+      "start": 493,
+      "end": 500,
+      "verdict": "PASS",
+      "reason_tex": "B02 resolution is limited to P09; NB07, frozen supporting role and exclusion of unfolding are respected."
+    },
+    {
+      "start": 501,
+      "end": 512,
+      "verdict": "PASS",
+      "reason_tex": "Analytical checks are actually in the proof; computational provenance is separate and has been reproduced, without treating validation as proof."
+    },
+    {
+      "start": 513,
+      "end": 518,
+      "verdict": "PASS",
+      "reason_tex": "Audit-priority preamble and IFT/slope priorities accurately identify the proof obligations."
+    },
+    {
+      "start": 519,
+      "end": 524,
+      "verdict": "PASS",
+      "reason_tex": "Coefficient and center-normal-form audit requests preserve normalization and full-system completeness."
+    },
+    {
+      "start": 525,
+      "end": 528,
+      "verdict": "PASS",
+      "reason_tex": "Spectral and physical-side priorities explicitly include negative states, collisions and open-domain versus orthant distinctions."
+    },
+    {
+      "start": 529,
+      "end": 534,
+      "verdict": "PASS",
+      "reason_tex": "Degenerate Lyapunov and codimension priorities are correctly scoped; no named pitchfork/cusp classification is asserted."
+    },
+    {
+      "start": 535,
+      "end": 539,
+      "verdict": "PASS",
+      "reason_tex": "Final exclusions retain the P10 boundary and all other forbidden later-module claims; closing environment is complete."
+    }
+  ]
+}

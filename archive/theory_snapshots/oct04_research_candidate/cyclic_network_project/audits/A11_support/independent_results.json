@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 11042026,
+  "exact_assertions": 144,
+  "counts": {
+    "cells": 646,
+    "realizable_cells": 179,
+    "obstructed_cells": 467,
+    "physical_candidates": 358,
+    "obstruction_probes": 9340,
+    "ties": 111,
+    "random_candidates": 147,
+    "random_trials": 1500,
+    "direct_matrix_spectra": 206
+  },
+  "max_scaled_residuals": {
+    "field_residual": 1.0736025805052897e-16,
+    "eigenvector": 3.1666109666119704e-15,
+    "adjoint": 3.166412221648068e-15,
+    "direct_spectrum": 3.365298295013656e-15,
+    "chart_uniform": 1.416748623920239e-12
+  },
+  "five_node_spectrum": [
+    [
+      -2.9270509831248415,
+      0.0
+    ],
+    [
+      8.881784197001252e-16,
+      4.926796006629578
+    ],
+    [
+      -3.3541019662496834,
+      -10.09835041524401
+    ],
+    [
+      -3.3541019662496847,
+      10.098350415244008
+    ],
+    [
+      1.7763568394002505e-15,
+      -4.926796006629575
+    ]
+  ],
+  "zero_frequency_physical_tuple": [
+    3.7353288303401735,
+    0.27124897840804074,
+    1.1,
+    3.739105631936863,
+    13.090169943749475
+  ],
+  "notes": [
+    "Exact four-dimensional algebraic field checks passed, including direct 5x5 eigenvectors, adjoint, real block, both inverse products, roots, and a physical zero-frequency example.",
+    "Finite tests do not prove universal statements; exact sign inequalities and all-n proofs are in the A11 source.",
+    "No g-path derivative, nonlinear tensor, transversality, or Lyapunov calculation was performed."
+  ]
+}

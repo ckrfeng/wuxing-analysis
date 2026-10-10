@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "exact_counts": {
+    "n_q_pairs": 39,
+    "q_1_pairs": 6,
+    "general_jacobian_entries": 2570,
+    "separate_rational_derivative_entries": 5140,
+    "origin_reduction_entries": 2570,
+    "homogeneous_shift_entries": 2570,
+    "shift_orientation_entries": 5140,
+    "collision_combination_entries": 910,
+    "q_n_minus_1_pairs": 6,
+    "origin_fourier_monomial_relations": 355,
+    "origin_characteristic_polynomials": 6,
+    "boundary_zero_characteristic_derivatives": 6,
+    "boundary_exact_ranks": 6,
+    "even_half_pairs": 3,
+    "nonuniform_zero_off_boundary_examples": 3,
+    "equilibrium_diagonal_simplification_identities": 1,
+    "row_sum_scalar_derivative_identities": 1,
+    "generic_zero_coefficient_cancellation_identities": 2,
+    "named_cancellation_matrix_entries": 61,
+    "named_positive_equilibrium_cancellation_examples": 2
+  },
+  "floating": {
+    "status": "PASS",
+    "secondary_only": true,
+    "rng": "numpy.random.default_rng (PCG64)",
+    "seed": 20260927,
+    "finite_difference_scheme": "centered; step_j=1e-5*max(1,abs(x_j))",
+    "scaled_error_definition": "abs(J_analytic-J_FD)/(1+max(abs(J_analytic),abs(J_FD))) entrywise",
+    "scaled_tolerance": 1e-07,
+    "state_count": 312,
+    "finite_difference_entry_count": 20560,
+    "homogeneous_entry_count": 12850,
+    "origin_eigenrelation_count": 180,
+    "origin_spectral_cases": 24,
+    "worst_fd_absolute_error": 7.230752174791633e-08,
+    "worst_fd_absolute_location": {
+      "n": 9,
+      "q": 8,
+      "state": "random_mixed",
+      "entry": [
+        5,
+        4
+      ]
+    },
+    "worst_fd_scaled_error": 2.6907607135803086e-09,
+    "worst_fd_scaled_location": {
+      "n": 9,
+      "q": 8,
+      "state": "random_mixed",
+      "entry": [
+        5,
+        4
+      ]
+    },
+    "worst_homogeneous_matrix_residual": 0.0,
+    "worst_origin_eigenrelation_residual": 1.1889678785578623e-15
+  },
+  "report": "/Users/carterfeng/.codex/.chatgpt-projects/g-p-6aaf9d5c28908191b530814438a73a72/tmp/p03_checks/report.json"
+}

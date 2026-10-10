@@ -1,0 +1,1242 @@
+[
+  {
+    "check": "termwise directional derivatives (Fraction(17, 5), Fraction(7, 10), Fraction(3, 5), Fraction(9, 10))",
+    "pass": true
+  },
+  {
+    "check": "full jet (Fraction(17, 5), Fraction(7, 10), Fraction(3, 5), Fraction(9, 10))",
+    "pass": true
+  },
+  {
+    "check": "mixed coefficient 17/5",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(17, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(17, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(17, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(17, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(17, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(17, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(17, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(17, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(17, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(17, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(17, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(17, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(17, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(17, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(17, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(17, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(17, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(17, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "branch derivative equations 9/5",
+    "pass": true
+  },
+  {
+    "check": "loci intersection 9/5",
+    "pass": true
+  },
+  {
+    "check": "termwise directional derivatives (Fraction(3, 5), Fraction(4, 5), Fraction(13, 10), Fraction(1, 2))",
+    "pass": true
+  },
+  {
+    "check": "full jet (Fraction(3, 5), Fraction(4, 5), Fraction(13, 10), Fraction(1, 2))",
+    "pass": true
+  },
+  {
+    "check": "mixed coefficient 3/5",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(3, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(3, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(3, 5), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(3, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(3, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(3, 5), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(3, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(3, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(3, 5), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(3, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(3, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(3, 5), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(3, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(3, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "normal coordinate (Fraction(3, 5), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(3, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(3, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform alternate (Fraction(3, 5), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "branch derivative equations -7/10",
+    "pass": true
+  },
+  {
+    "check": "loci intersection -7/10",
+    "pass": true
+  },
+  {
+    "check": "termwise directional derivatives (Fraction(13, 10), Fraction(4, 5), Fraction(2, 5), Fraction(1, 2))",
+    "pass": true
+  },
+  {
+    "check": "full jet (Fraction(13, 10), Fraction(4, 5), Fraction(2, 5), Fraction(1, 2))",
+    "pass": true
+  },
+  {
+    "check": "mixed coefficient 13/10",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(13, 10), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(13, 10), Fraction(-1, 11))",
+    "pass": true
+  },
+  {
+    "check": "degenerate root and eigenvalue -1/11",
+    "pass": true
+  },
+  {
+    "check": "decay derivative -1/11",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(-1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(13, 10), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(13, 10), Fraction(-1, 100))",
+    "pass": true
+  },
+  {
+    "check": "degenerate root and eigenvalue -1/100",
+    "pass": true
+  },
+  {
+    "check": "decay derivative -1/100",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(0, 1), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(0, 1), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(0, 1), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(13, 10), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(13, 10), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "degenerate root and eigenvalue 0",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 100), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 100), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 100), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(13, 10), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(13, 10), Fraction(1, 100))",
+    "pass": true
+  },
+  {
+    "check": "degenerate root and eigenvalue 1/100",
+    "pass": true
+  },
+  {
+    "check": "decay derivative 1/100",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 11), Fraction(-1, 103))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 11), Fraction(0, 1))",
+    "pass": true
+  },
+  {
+    "check": "original scalar identity (Fraction(13, 10), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "scalar derivative (Fraction(13, 10), Fraction(1, 11), Fraction(1, 103))",
+    "pass": true
+  },
+  {
+    "check": "equilibrium original residual (Fraction(13, 10), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "uniform at root (Fraction(13, 10), Fraction(1, 11))",
+    "pass": true
+  },
+  {
+    "check": "degenerate root and eigenvalue 1/11",
+    "pass": true
+  },
+  {
+    "check": "decay derivative 1/11",
+    "pass": true
+  },
+  {
+    "check": "loci intersection 0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n5 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q5 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q5 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n6 q5 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q5 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q5 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q5 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q6 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q6 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n7 q6 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q5 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q5 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q5 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q6 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q6 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q6 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q7 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q7 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n8 q7 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q5 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q5 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q5 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q6 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q6 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q6 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q7 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q7 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q7 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q8 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q8 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q8 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q9 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q9 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n10 q9 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q1 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q1 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q1 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q2 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q2 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q2 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q3 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q3 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q3 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q4 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q4 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q4 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q5 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q5 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q5 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q6 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q6 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q6 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q7 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q7 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q7 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q8 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q8 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q8 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q9 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q9 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q9 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q10 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q10 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q10 r1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q11 r-1/10",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q11 r0",
+    "pass": true
+  },
+  {
+    "check": "exact mean remainder n12 q11 r1/10",
+    "pass": true
+  },
+  {
+    "check": "codimension minor on columns k,g",
+    "pass": true
+  }
+]

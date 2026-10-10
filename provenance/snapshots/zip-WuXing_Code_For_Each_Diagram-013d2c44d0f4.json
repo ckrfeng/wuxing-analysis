@@ -1,0 +1,143 @@
+{
+  "id": "zip-WuXing_Code_For_Each_Diagram-013d2c44d0f4",
+  "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+  "origins": [
+    "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "README.txt",
+      "retained_destination": "reproduction/four_diagrams/README.txt",
+      "sha256": "580a089315f0123141ab6c727dcda1a499e9444a6b3c876a175aca5b3136942b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/README.txt",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "figure_1_eigenvalues.py",
+      "retained_destination": "reproduction/four_diagrams/figure_1_eigenvalues.py",
+      "sha256": "0ce26bc1fefa53152465f5802aae5b1b020e70ac2f99f4e89c0785032281b3c1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/figure_1_eigenvalues.py",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "figure_2_disturbances.py",
+      "retained_destination": "reproduction/four_diagrams/figure_2_disturbances.py",
+      "sha256": "97864b2831a829f51bece1bce3b53704168e12551cdc49a6d481b898fa20373f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/figure_2_disturbances.py",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "figure_3_stability_maps.py",
+      "retained_destination": "reproduction/four_diagrams/figure_3_stability_maps.py",
+      "sha256": "406e7c086577fe1280e0ceaf4b1022eb394380a7cacd0abe62cd93c28b48553e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/figure_3_stability_maps.py",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "figure_4_sampling.py",
+      "retained_destination": "reproduction/four_diagrams/figure_4_sampling.py",
+      "sha256": "9a6e7d357e8ad975c734a9505bec2dce3dfe7be0fc6796187d2cc643d74bab3d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/figure_4_sampling.py",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "four_diagrams.ipynb",
+      "retained_destination": "reproduction/four_diagrams/four_diagrams.ipynb",
+      "sha256": "724a22cd0c8bb5e5a90b85ccd80710354ee81dad4110e8577e128c8b2c86d072",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/four_diagrams.ipynb",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/01_baseline_eigenvalues.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure1.png",
+      "sha256": "64d5750ced549dfffc2039c0dc938ad918403d6c9a88545b43372b8df44258c1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/01_baseline_eigenvalues.png",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/01_baseline_eigenvalues.svg",
+      "retained_destination": "figures/four_diagrams/01_baseline_eigenvalues.svg",
+      "sha256": "421af30467630e9dc79f9644426b399ee7ff1f7423c14664504c970d016603de",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/01_baseline_eigenvalues.svg",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/02_perturbation_recovery.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure2.png",
+      "sha256": "f6e435e61606fa15fc06a0f2b8a5f9627bfd3dfb037d69ca4337a84ac28f0964",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/02_perturbation_recovery.png",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/02_perturbation_recovery.svg",
+      "retained_destination": "figures/four_diagrams/02_perturbation_recovery.svg",
+      "sha256": "3e1420c660e09476b1215a1d3f88fabc3def3750335706cec6da79029e76be78",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/02_perturbation_recovery.svg",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/03_corrected_stability_maps.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure3.png",
+      "sha256": "70ed74b713279587b7d68bb492c5e5b03bc3f048e7d7f55ef81d5091540db059",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/03_corrected_stability_maps.png",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/03_corrected_stability_maps.svg",
+      "retained_destination": "figures/four_diagrams/03_corrected_stability_maps.svg",
+      "sha256": "86a163bf85e04dd514fbe33059a363b5385b97d5d509e909a3cb54087a0ab3c8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/03_corrected_stability_maps.svg",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/04_sampling_denominators.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure4.png",
+      "sha256": "29e52577e777fe239f1e4e720b4e638008fd13d382e48be44cc7e7a33aa9b2a5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/04_sampling_denominators.png",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/04_sampling_denominators.svg",
+      "retained_destination": "figures/four_diagrams/04_sampling_denominators.svg",
+      "sha256": "7ad5f21b5c2b98c88e9204f986ef35a91da7f27057a3599e87a1fcba457c60c8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/04_sampling_denominators.svg",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/figure_1_results.json",
+      "retained_destination": "results/four_diagrams/figure_1_results.json",
+      "sha256": "157511303227c93cf05616cb657d06808ad41fab0d3a69e6d9c89d11fc898447",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/figure_1_results.json",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/figure_2_results.json",
+      "retained_destination": "results/four_diagrams/figure_2_results.json",
+      "sha256": "09dc8c61505bd1e479cf88db26f333c8934313ecfdc6c03cde85ef40288b37f2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/figure_2_results.json",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/figure_3_results.json",
+      "retained_destination": "results/four_diagrams/figure_3_results.json",
+      "sha256": "828153464bf7deb101fc626c3f69c1072b413ea77346dd94533fbf9940c3ca4c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/figure_3_results.json",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "generated_figures/figure_4_results.json",
+      "retained_destination": "results/four_diagrams/figure_4_results.json",
+      "sha256": "e56443237d84120412feeb7768a268540dc7efe48d4aefb6f9970802bf04ee1e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/generated_figures/figure_4_results.json",
+      "status": "previous_workspace_support"
+    },
+    {
+      "original_relative_path": "requirements.txt",
+      "retained_destination": "reproduction/four_diagrams/requirements.txt",
+      "sha256": "59fe68ef7ca2c5c7da507f1f20579bd4855236be91e331d1a3b35f9600473b81",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip!/requirements.txt",
+      "status": "previous_workspace_support"
+    }
+  ]
+}

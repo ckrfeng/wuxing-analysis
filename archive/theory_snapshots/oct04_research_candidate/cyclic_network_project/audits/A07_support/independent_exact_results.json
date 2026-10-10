@@ -1,0 +1,10044 @@
+{
+  "checks": [
+    {
+      "name": "phi quadratic",
+      "pass": true
+    },
+    {
+      "name": "phi inverse",
+      "pass": true
+    },
+    {
+      "name": "phi inverse square",
+      "pass": true
+    },
+    {
+      "name": "sum",
+      "pass": true
+    },
+    {
+      "name": "sigma radical square",
+      "pass": true
+    },
+    {
+      "name": "sin72 radical square",
+      "pass": true
+    },
+    {
+      "name": "cos36 Pythagoras",
+      "pass": true
+    },
+    {
+      "name": "beta0",
+      "pass": true
+    },
+    {
+      "name": "beta1",
+      "pass": true
+    },
+    {
+      "name": "alpha0",
+      "pass": true
+    },
+    {
+      "name": "phi positive",
+      "pass": true
+    },
+    {
+      "name": "sigma squared positive",
+      "pass": true
+    },
+    {
+      "name": "primitive root fifth power",
+      "pass": true
+    },
+    {
+      "name": "root geometric sum",
+      "pass": true
+    },
+    {
+      "name": "phase theta 0",
+      "pass": true
+    },
+    {
+      "name": "phase twice theta 0",
+      "pass": true
+    },
+    {
+      "name": "phase theta 1",
+      "pass": true
+    },
+    {
+      "name": "phase twice theta 1",
+      "pass": true
+    },
+    {
+      "name": "phase theta 2",
+      "pass": true
+    },
+    {
+      "name": "phase twice theta 2",
+      "pass": true
+    },
+    {
+      "name": "phase theta 3",
+      "pass": true
+    },
+    {
+      "name": "phase twice theta 3",
+      "pass": true
+    },
+    {
+      "name": "phase theta 4",
+      "pass": true
+    },
+    {
+      "name": "phase twice theta 4",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 0 label 0",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 0 label 1",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 0 label 2",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 0 label 3",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 0 label 4",
+      "pass": true
+    },
+    {
+      "name": "gap12 basis 0",
+      "pass": true
+    },
+    {
+      "name": "gap01 basis 0",
+      "pass": true
+    },
+    {
+      "name": "gap02 basis 0",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 1 label 0",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 1 label 1",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 1 label 2",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 1 label 3",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 1 label 4",
+      "pass": true
+    },
+    {
+      "name": "gap12 basis 1",
+      "pass": true
+    },
+    {
+      "name": "gap01 basis 1",
+      "pass": true
+    },
+    {
+      "name": "gap02 basis 1",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 2 label 0",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 2 label 1",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 2 label 2",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 2 label 3",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 2 label 4",
+      "pass": true
+    },
+    {
+      "name": "gap12 basis 2",
+      "pass": true
+    },
+    {
+      "name": "gap01 basis 2",
+      "pass": true
+    },
+    {
+      "name": "gap02 basis 2",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 3 label 0",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 3 label 1",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 3 label 2",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 3 label 3",
+      "pass": true
+    },
+    {
+      "name": "raw spectrum basis 3 label 4",
+      "pass": true
+    },
+    {
+      "name": "gap12 basis 3",
+      "pass": true
+    },
+    {
+      "name": "gap01 basis 3",
+      "pass": true
+    },
+    {
+      "name": "gap02 basis 3",
+      "pass": true
+    },
+    {
+      "name": "ordering row1 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row1 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row1 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row2 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row2 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row2 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row3 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row3 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row3 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row4 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row4 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row4 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row5 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row5 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row5 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row6 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row6 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row6 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row7 scale['1/7', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row7 scale['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "ordering row7 scale['11', '0']",
+      "pass": true
+    },
+    {
+      "name": "case 0 C",
+      "pass": true
+    },
+    {
+      "name": "case 0 G",
+      "pass": true
+    },
+    {
+      "name": "case 0 H",
+      "pass": true
+    },
+    {
+      "name": "case 0 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 0 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 0 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 0 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 0 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 0 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 0 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 0 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 0 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 0 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 1 C",
+      "pass": true
+    },
+    {
+      "name": "case 1 G",
+      "pass": true
+    },
+    {
+      "name": "case 1 H",
+      "pass": true
+    },
+    {
+      "name": "case 1 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 1 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 1 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 1 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 1 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 1 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 1 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 1 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 1 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 1 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 2 C",
+      "pass": true
+    },
+    {
+      "name": "case 2 G",
+      "pass": true
+    },
+    {
+      "name": "case 2 H",
+      "pass": true
+    },
+    {
+      "name": "case 2 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 2 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 2 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 2 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 2 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 2 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 2 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 2 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 2 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 2 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 3 C",
+      "pass": true
+    },
+    {
+      "name": "case 3 G",
+      "pass": true
+    },
+    {
+      "name": "case 3 H",
+      "pass": true
+    },
+    {
+      "name": "case 3 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 3 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 3 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 3 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 3 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 3 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 3 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 3 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 3 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 3 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 4 C",
+      "pass": true
+    },
+    {
+      "name": "case 4 G",
+      "pass": true
+    },
+    {
+      "name": "case 4 H",
+      "pass": true
+    },
+    {
+      "name": "case 4 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 4 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 4 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 4 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 4 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 4 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 4 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 4 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 4 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 4 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 5 C",
+      "pass": true
+    },
+    {
+      "name": "case 5 G",
+      "pass": true
+    },
+    {
+      "name": "case 5 H",
+      "pass": true
+    },
+    {
+      "name": "case 5 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 5 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 5 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 5 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 5 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 5 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 5 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 5 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 5 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 5 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 6 C",
+      "pass": true
+    },
+    {
+      "name": "case 6 G",
+      "pass": true
+    },
+    {
+      "name": "case 6 H",
+      "pass": true
+    },
+    {
+      "name": "case 6 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 6 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 6 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 6 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 6 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 6 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 6 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 6 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 6 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 6 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 7 C",
+      "pass": true
+    },
+    {
+      "name": "case 7 G",
+      "pass": true
+    },
+    {
+      "name": "case 7 H",
+      "pass": true
+    },
+    {
+      "name": "case 7 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 7 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 7 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 7 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 7 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 7 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 7 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 7 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 7 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 7 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 8 C",
+      "pass": true
+    },
+    {
+      "name": "case 8 G",
+      "pass": true
+    },
+    {
+      "name": "case 8 H",
+      "pass": true
+    },
+    {
+      "name": "case 8 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 8 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 8 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 8 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 8 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 8 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 8 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 8 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 8 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 8 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 9 C",
+      "pass": true
+    },
+    {
+      "name": "case 9 G",
+      "pass": true
+    },
+    {
+      "name": "case 9 H",
+      "pass": true
+    },
+    {
+      "name": "case 9 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 9 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 9 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 9 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 9 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 9 stable tie value",
+      "pass": true
+    },
+    {
+      "name": "case 9 stable tie strict",
+      "pass": true
+    },
+    {
+      "name": "case 9 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 9 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 9 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 9 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 9 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 10 C",
+      "pass": true
+    },
+    {
+      "name": "case 10 G",
+      "pass": true
+    },
+    {
+      "name": "case 10 H",
+      "pass": true
+    },
+    {
+      "name": "case 10 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 10 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 10 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 10 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 10 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 10 stable tie value",
+      "pass": true
+    },
+    {
+      "name": "case 10 stable tie strict",
+      "pass": true
+    },
+    {
+      "name": "case 10 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 10 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 10 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 10 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 10 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 11 C",
+      "pass": true
+    },
+    {
+      "name": "case 11 G",
+      "pass": true
+    },
+    {
+      "name": "case 11 H",
+      "pass": true
+    },
+    {
+      "name": "case 11 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 11 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 11 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 11 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 11 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 11 stable tie value",
+      "pass": true
+    },
+    {
+      "name": "case 11 stable tie strict",
+      "pass": true
+    },
+    {
+      "name": "case 11 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 11 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 11 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 11 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 11 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 12 C",
+      "pass": true
+    },
+    {
+      "name": "case 12 G",
+      "pass": true
+    },
+    {
+      "name": "case 12 H",
+      "pass": true
+    },
+    {
+      "name": "case 12 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 12 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 12 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 12 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 12 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 12 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 12 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 12 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 12 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 12 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 13 C",
+      "pass": true
+    },
+    {
+      "name": "case 13 G",
+      "pass": true
+    },
+    {
+      "name": "case 13 H",
+      "pass": true
+    },
+    {
+      "name": "case 13 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 13 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 13 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 13 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 13 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 13 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 13 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 13 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 13 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 13 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 14 C",
+      "pass": true
+    },
+    {
+      "name": "case 14 G",
+      "pass": true
+    },
+    {
+      "name": "case 14 H",
+      "pass": true
+    },
+    {
+      "name": "case 14 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 14 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 14 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 14 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 14 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 14 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 14 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 14 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 14 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 14 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 15 C",
+      "pass": true
+    },
+    {
+      "name": "case 15 G",
+      "pass": true
+    },
+    {
+      "name": "case 15 H",
+      "pass": true
+    },
+    {
+      "name": "case 15 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 15 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 15 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 15 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 15 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 15 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 15 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 15 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 15 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 15 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 16 C",
+      "pass": true
+    },
+    {
+      "name": "case 16 G",
+      "pass": true
+    },
+    {
+      "name": "case 16 H",
+      "pass": true
+    },
+    {
+      "name": "case 16 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 16 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 16 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 16 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 16 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 16 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 16 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 16 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 16 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 16 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 17 C",
+      "pass": true
+    },
+    {
+      "name": "case 17 G",
+      "pass": true
+    },
+    {
+      "name": "case 17 H",
+      "pass": true
+    },
+    {
+      "name": "case 17 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 17 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 17 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 17 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 17 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 17 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 17 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 17 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 17 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 17 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 18 C",
+      "pass": true
+    },
+    {
+      "name": "case 18 G",
+      "pass": true
+    },
+    {
+      "name": "case 18 H",
+      "pass": true
+    },
+    {
+      "name": "case 18 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 18 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 18 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 18 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 18 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 18 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 18 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 18 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 18 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 18 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 19 C",
+      "pass": true
+    },
+    {
+      "name": "case 19 G",
+      "pass": true
+    },
+    {
+      "name": "case 19 H",
+      "pass": true
+    },
+    {
+      "name": "case 19 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 19 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 19 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 19 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 19 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 19 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 19 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 19 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 19 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 19 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 20 C",
+      "pass": true
+    },
+    {
+      "name": "case 20 G",
+      "pass": true
+    },
+    {
+      "name": "case 20 H",
+      "pass": true
+    },
+    {
+      "name": "case 20 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 20 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 20 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 20 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 20 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 20 exact matrix mode 0",
+      "pass": true
+    },
+    {
+      "name": "case 20 exact matrix mode 1",
+      "pass": true
+    },
+    {
+      "name": "case 20 exact matrix mode 2",
+      "pass": true
+    },
+    {
+      "name": "case 20 exact matrix mode 3",
+      "pass": true
+    },
+    {
+      "name": "case 20 exact matrix mode 4",
+      "pass": true
+    },
+    {
+      "name": "case 21 C",
+      "pass": true
+    },
+    {
+      "name": "case 21 G",
+      "pass": true
+    },
+    {
+      "name": "case 21 H",
+      "pass": true
+    },
+    {
+      "name": "case 21 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 21 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 21 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 21 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 21 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 22 C",
+      "pass": true
+    },
+    {
+      "name": "case 22 G",
+      "pass": true
+    },
+    {
+      "name": "case 22 H",
+      "pass": true
+    },
+    {
+      "name": "case 22 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 22 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 22 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 22 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 22 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 23 C",
+      "pass": true
+    },
+    {
+      "name": "case 23 G",
+      "pass": true
+    },
+    {
+      "name": "case 23 H",
+      "pass": true
+    },
+    {
+      "name": "case 23 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 23 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 23 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 23 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 23 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 23 stable tie value",
+      "pass": true
+    },
+    {
+      "name": "case 23 stable tie strict",
+      "pass": true
+    },
+    {
+      "name": "case 24 C",
+      "pass": true
+    },
+    {
+      "name": "case 24 G",
+      "pass": true
+    },
+    {
+      "name": "case 24 H",
+      "pass": true
+    },
+    {
+      "name": "case 24 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 24 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 24 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 24 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 24 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 25 C",
+      "pass": true
+    },
+    {
+      "name": "case 25 G",
+      "pass": true
+    },
+    {
+      "name": "case 25 H",
+      "pass": true
+    },
+    {
+      "name": "case 25 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 25 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 25 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 25 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 25 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 26 C",
+      "pass": true
+    },
+    {
+      "name": "case 26 G",
+      "pass": true
+    },
+    {
+      "name": "case 26 H",
+      "pass": true
+    },
+    {
+      "name": "case 26 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 26 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 26 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 26 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 26 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 27 C",
+      "pass": true
+    },
+    {
+      "name": "case 27 G",
+      "pass": true
+    },
+    {
+      "name": "case 27 H",
+      "pass": true
+    },
+    {
+      "name": "case 27 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 27 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 27 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 27 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 27 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 28 C",
+      "pass": true
+    },
+    {
+      "name": "case 28 G",
+      "pass": true
+    },
+    {
+      "name": "case 28 H",
+      "pass": true
+    },
+    {
+      "name": "case 28 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 28 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 28 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 28 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 28 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 29 C",
+      "pass": true
+    },
+    {
+      "name": "case 29 G",
+      "pass": true
+    },
+    {
+      "name": "case 29 H",
+      "pass": true
+    },
+    {
+      "name": "case 29 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 29 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 29 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 29 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 29 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 30 C",
+      "pass": true
+    },
+    {
+      "name": "case 30 G",
+      "pass": true
+    },
+    {
+      "name": "case 30 H",
+      "pass": true
+    },
+    {
+      "name": "case 30 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 30 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 30 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 30 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 30 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 31 C",
+      "pass": true
+    },
+    {
+      "name": "case 31 G",
+      "pass": true
+    },
+    {
+      "name": "case 31 H",
+      "pass": true
+    },
+    {
+      "name": "case 31 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 31 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 31 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 31 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 31 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 32 C",
+      "pass": true
+    },
+    {
+      "name": "case 32 G",
+      "pass": true
+    },
+    {
+      "name": "case 32 H",
+      "pass": true
+    },
+    {
+      "name": "case 32 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 32 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 32 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 32 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 32 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 33 C",
+      "pass": true
+    },
+    {
+      "name": "case 33 G",
+      "pass": true
+    },
+    {
+      "name": "case 33 H",
+      "pass": true
+    },
+    {
+      "name": "case 33 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 33 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 33 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 33 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 33 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 34 C",
+      "pass": true
+    },
+    {
+      "name": "case 34 G",
+      "pass": true
+    },
+    {
+      "name": "case 34 H",
+      "pass": true
+    },
+    {
+      "name": "case 34 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 34 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 34 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 34 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 34 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 35 C",
+      "pass": true
+    },
+    {
+      "name": "case 35 G",
+      "pass": true
+    },
+    {
+      "name": "case 35 H",
+      "pass": true
+    },
+    {
+      "name": "case 35 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 35 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 35 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 35 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 35 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 36 C",
+      "pass": true
+    },
+    {
+      "name": "case 36 G",
+      "pass": true
+    },
+    {
+      "name": "case 36 H",
+      "pass": true
+    },
+    {
+      "name": "case 36 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 36 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 36 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 36 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 36 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 37 C",
+      "pass": true
+    },
+    {
+      "name": "case 37 G",
+      "pass": true
+    },
+    {
+      "name": "case 37 H",
+      "pass": true
+    },
+    {
+      "name": "case 37 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 37 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 37 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 37 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 37 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 38 C",
+      "pass": true
+    },
+    {
+      "name": "case 38 G",
+      "pass": true
+    },
+    {
+      "name": "case 38 H",
+      "pass": true
+    },
+    {
+      "name": "case 38 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 38 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 38 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 38 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 38 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 39 C",
+      "pass": true
+    },
+    {
+      "name": "case 39 G",
+      "pass": true
+    },
+    {
+      "name": "case 39 H",
+      "pass": true
+    },
+    {
+      "name": "case 39 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 39 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 39 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 39 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 39 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 40 C",
+      "pass": true
+    },
+    {
+      "name": "case 40 G",
+      "pass": true
+    },
+    {
+      "name": "case 40 H",
+      "pass": true
+    },
+    {
+      "name": "case 40 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 40 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 40 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 40 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 40 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 41 C",
+      "pass": true
+    },
+    {
+      "name": "case 41 G",
+      "pass": true
+    },
+    {
+      "name": "case 41 H",
+      "pass": true
+    },
+    {
+      "name": "case 41 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 41 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 41 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 41 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 41 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 42 C",
+      "pass": true
+    },
+    {
+      "name": "case 42 G",
+      "pass": true
+    },
+    {
+      "name": "case 42 H",
+      "pass": true
+    },
+    {
+      "name": "case 42 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 42 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 42 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 42 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 42 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 43 C",
+      "pass": true
+    },
+    {
+      "name": "case 43 G",
+      "pass": true
+    },
+    {
+      "name": "case 43 H",
+      "pass": true
+    },
+    {
+      "name": "case 43 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 43 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 43 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 43 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 43 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 44 C",
+      "pass": true
+    },
+    {
+      "name": "case 44 G",
+      "pass": true
+    },
+    {
+      "name": "case 44 H",
+      "pass": true
+    },
+    {
+      "name": "case 44 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 44 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 44 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 44 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 44 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 45 C",
+      "pass": true
+    },
+    {
+      "name": "case 45 G",
+      "pass": true
+    },
+    {
+      "name": "case 45 H",
+      "pass": true
+    },
+    {
+      "name": "case 45 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 45 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 45 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 45 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 45 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 46 C",
+      "pass": true
+    },
+    {
+      "name": "case 46 G",
+      "pass": true
+    },
+    {
+      "name": "case 46 H",
+      "pass": true
+    },
+    {
+      "name": "case 46 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 46 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 46 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 46 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 46 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 47 C",
+      "pass": true
+    },
+    {
+      "name": "case 47 G",
+      "pass": true
+    },
+    {
+      "name": "case 47 H",
+      "pass": true
+    },
+    {
+      "name": "case 47 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 47 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 47 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 47 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 47 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 48 C",
+      "pass": true
+    },
+    {
+      "name": "case 48 G",
+      "pass": true
+    },
+    {
+      "name": "case 48 H",
+      "pass": true
+    },
+    {
+      "name": "case 48 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 48 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 48 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 48 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 48 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 49 C",
+      "pass": true
+    },
+    {
+      "name": "case 49 G",
+      "pass": true
+    },
+    {
+      "name": "case 49 H",
+      "pass": true
+    },
+    {
+      "name": "case 49 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 49 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 49 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 49 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 49 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 50 C",
+      "pass": true
+    },
+    {
+      "name": "case 50 G",
+      "pass": true
+    },
+    {
+      "name": "case 50 H",
+      "pass": true
+    },
+    {
+      "name": "case 50 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 50 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 50 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 50 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 50 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 51 C",
+      "pass": true
+    },
+    {
+      "name": "case 51 G",
+      "pass": true
+    },
+    {
+      "name": "case 51 H",
+      "pass": true
+    },
+    {
+      "name": "case 51 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 51 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 51 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 51 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 51 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 52 C",
+      "pass": true
+    },
+    {
+      "name": "case 52 G",
+      "pass": true
+    },
+    {
+      "name": "case 52 H",
+      "pass": true
+    },
+    {
+      "name": "case 52 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 52 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 52 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 52 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 52 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 53 C",
+      "pass": true
+    },
+    {
+      "name": "case 53 G",
+      "pass": true
+    },
+    {
+      "name": "case 53 H",
+      "pass": true
+    },
+    {
+      "name": "case 53 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 53 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 53 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 53 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 53 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 54 C",
+      "pass": true
+    },
+    {
+      "name": "case 54 G",
+      "pass": true
+    },
+    {
+      "name": "case 54 H",
+      "pass": true
+    },
+    {
+      "name": "case 54 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 54 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 54 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 54 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 54 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 55 C",
+      "pass": true
+    },
+    {
+      "name": "case 55 G",
+      "pass": true
+    },
+    {
+      "name": "case 55 H",
+      "pass": true
+    },
+    {
+      "name": "case 55 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 55 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 55 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 55 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 55 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 56 C",
+      "pass": true
+    },
+    {
+      "name": "case 56 G",
+      "pass": true
+    },
+    {
+      "name": "case 56 H",
+      "pass": true
+    },
+    {
+      "name": "case 56 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 56 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 56 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 56 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 56 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 57 C",
+      "pass": true
+    },
+    {
+      "name": "case 57 G",
+      "pass": true
+    },
+    {
+      "name": "case 57 H",
+      "pass": true
+    },
+    {
+      "name": "case 57 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 57 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 57 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 57 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 57 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 58 C",
+      "pass": true
+    },
+    {
+      "name": "case 58 G",
+      "pass": true
+    },
+    {
+      "name": "case 58 H",
+      "pass": true
+    },
+    {
+      "name": "case 58 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 58 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 58 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 58 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 58 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 59 C",
+      "pass": true
+    },
+    {
+      "name": "case 59 G",
+      "pass": true
+    },
+    {
+      "name": "case 59 H",
+      "pass": true
+    },
+    {
+      "name": "case 59 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 59 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 59 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 59 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 59 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 60 C",
+      "pass": true
+    },
+    {
+      "name": "case 60 G",
+      "pass": true
+    },
+    {
+      "name": "case 60 H",
+      "pass": true
+    },
+    {
+      "name": "case 60 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 60 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 60 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 60 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 60 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 61 C",
+      "pass": true
+    },
+    {
+      "name": "case 61 G",
+      "pass": true
+    },
+    {
+      "name": "case 61 H",
+      "pass": true
+    },
+    {
+      "name": "case 61 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 61 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 61 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 61 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 61 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 62 C",
+      "pass": true
+    },
+    {
+      "name": "case 62 G",
+      "pass": true
+    },
+    {
+      "name": "case 62 H",
+      "pass": true
+    },
+    {
+      "name": "case 62 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 62 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 62 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 62 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 62 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 63 C",
+      "pass": true
+    },
+    {
+      "name": "case 63 G",
+      "pass": true
+    },
+    {
+      "name": "case 63 H",
+      "pass": true
+    },
+    {
+      "name": "case 63 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 63 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 63 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 63 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 63 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 64 C",
+      "pass": true
+    },
+    {
+      "name": "case 64 G",
+      "pass": true
+    },
+    {
+      "name": "case 64 H",
+      "pass": true
+    },
+    {
+      "name": "case 64 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 64 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 64 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 64 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 64 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 65 C",
+      "pass": true
+    },
+    {
+      "name": "case 65 G",
+      "pass": true
+    },
+    {
+      "name": "case 65 H",
+      "pass": true
+    },
+    {
+      "name": "case 65 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 65 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 65 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 65 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 65 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 66 C",
+      "pass": true
+    },
+    {
+      "name": "case 66 G",
+      "pass": true
+    },
+    {
+      "name": "case 66 H",
+      "pass": true
+    },
+    {
+      "name": "case 66 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 66 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 66 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 66 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 66 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 67 C",
+      "pass": true
+    },
+    {
+      "name": "case 67 G",
+      "pass": true
+    },
+    {
+      "name": "case 67 H",
+      "pass": true
+    },
+    {
+      "name": "case 67 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 67 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 67 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 67 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 67 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 68 C",
+      "pass": true
+    },
+    {
+      "name": "case 68 G",
+      "pass": true
+    },
+    {
+      "name": "case 68 H",
+      "pass": true
+    },
+    {
+      "name": "case 68 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 68 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 68 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 68 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 68 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 69 C",
+      "pass": true
+    },
+    {
+      "name": "case 69 G",
+      "pass": true
+    },
+    {
+      "name": "case 69 H",
+      "pass": true
+    },
+    {
+      "name": "case 69 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 69 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 69 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 69 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 69 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 70 C",
+      "pass": true
+    },
+    {
+      "name": "case 70 G",
+      "pass": true
+    },
+    {
+      "name": "case 70 H",
+      "pass": true
+    },
+    {
+      "name": "case 70 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 70 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 70 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 70 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 70 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 71 C",
+      "pass": true
+    },
+    {
+      "name": "case 71 G",
+      "pass": true
+    },
+    {
+      "name": "case 71 H",
+      "pass": true
+    },
+    {
+      "name": "case 71 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 71 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 71 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 71 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 71 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 72 C",
+      "pass": true
+    },
+    {
+      "name": "case 72 G",
+      "pass": true
+    },
+    {
+      "name": "case 72 H",
+      "pass": true
+    },
+    {
+      "name": "case 72 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 72 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 72 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 72 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 72 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 73 C",
+      "pass": true
+    },
+    {
+      "name": "case 73 G",
+      "pass": true
+    },
+    {
+      "name": "case 73 H",
+      "pass": true
+    },
+    {
+      "name": "case 73 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 73 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 73 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 73 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 73 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 74 C",
+      "pass": true
+    },
+    {
+      "name": "case 74 G",
+      "pass": true
+    },
+    {
+      "name": "case 74 H",
+      "pass": true
+    },
+    {
+      "name": "case 74 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 74 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 74 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 74 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 74 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 75 C",
+      "pass": true
+    },
+    {
+      "name": "case 75 G",
+      "pass": true
+    },
+    {
+      "name": "case 75 H",
+      "pass": true
+    },
+    {
+      "name": "case 75 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 75 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 75 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 75 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 75 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 76 C",
+      "pass": true
+    },
+    {
+      "name": "case 76 G",
+      "pass": true
+    },
+    {
+      "name": "case 76 H",
+      "pass": true
+    },
+    {
+      "name": "case 76 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 76 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 76 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 76 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 76 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 77 C",
+      "pass": true
+    },
+    {
+      "name": "case 77 G",
+      "pass": true
+    },
+    {
+      "name": "case 77 H",
+      "pass": true
+    },
+    {
+      "name": "case 77 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 77 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 77 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 77 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 77 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 78 C",
+      "pass": true
+    },
+    {
+      "name": "case 78 G",
+      "pass": true
+    },
+    {
+      "name": "case 78 H",
+      "pass": true
+    },
+    {
+      "name": "case 78 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 78 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 78 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 78 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 78 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 79 C",
+      "pass": true
+    },
+    {
+      "name": "case 79 G",
+      "pass": true
+    },
+    {
+      "name": "case 79 H",
+      "pass": true
+    },
+    {
+      "name": "case 79 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 79 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 79 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 79 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 79 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 80 C",
+      "pass": true
+    },
+    {
+      "name": "case 80 G",
+      "pass": true
+    },
+    {
+      "name": "case 80 H",
+      "pass": true
+    },
+    {
+      "name": "case 80 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 80 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 80 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 80 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 80 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 81 C",
+      "pass": true
+    },
+    {
+      "name": "case 81 G",
+      "pass": true
+    },
+    {
+      "name": "case 81 H",
+      "pass": true
+    },
+    {
+      "name": "case 81 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 81 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 81 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 81 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 81 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 82 C",
+      "pass": true
+    },
+    {
+      "name": "case 82 G",
+      "pass": true
+    },
+    {
+      "name": "case 82 H",
+      "pass": true
+    },
+    {
+      "name": "case 82 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 82 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 82 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 82 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 82 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 83 C",
+      "pass": true
+    },
+    {
+      "name": "case 83 G",
+      "pass": true
+    },
+    {
+      "name": "case 83 H",
+      "pass": true
+    },
+    {
+      "name": "case 83 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 83 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 83 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 83 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 83 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 84 C",
+      "pass": true
+    },
+    {
+      "name": "case 84 G",
+      "pass": true
+    },
+    {
+      "name": "case 84 H",
+      "pass": true
+    },
+    {
+      "name": "case 84 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 84 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 84 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 84 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 84 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 85 C",
+      "pass": true
+    },
+    {
+      "name": "case 85 G",
+      "pass": true
+    },
+    {
+      "name": "case 85 H",
+      "pass": true
+    },
+    {
+      "name": "case 85 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 85 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 85 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 85 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 85 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 86 C",
+      "pass": true
+    },
+    {
+      "name": "case 86 G",
+      "pass": true
+    },
+    {
+      "name": "case 86 H",
+      "pass": true
+    },
+    {
+      "name": "case 86 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 86 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 86 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 86 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 86 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 87 C",
+      "pass": true
+    },
+    {
+      "name": "case 87 G",
+      "pass": true
+    },
+    {
+      "name": "case 87 H",
+      "pass": true
+    },
+    {
+      "name": "case 87 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 87 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 87 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 87 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 87 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 88 C",
+      "pass": true
+    },
+    {
+      "name": "case 88 G",
+      "pass": true
+    },
+    {
+      "name": "case 88 H",
+      "pass": true
+    },
+    {
+      "name": "case 88 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 88 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 88 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 88 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 88 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 89 C",
+      "pass": true
+    },
+    {
+      "name": "case 89 G",
+      "pass": true
+    },
+    {
+      "name": "case 89 H",
+      "pass": true
+    },
+    {
+      "name": "case 89 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 89 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 89 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 89 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 89 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "case 90 C",
+      "pass": true
+    },
+    {
+      "name": "case 90 G",
+      "pass": true
+    },
+    {
+      "name": "case 90 H",
+      "pass": true
+    },
+    {
+      "name": "case 90 original DM",
+      "pass": true
+    },
+    {
+      "name": "case 90 original diagonal",
+      "pass": true
+    },
+    {
+      "name": "case 90 excludes dominant pair2",
+      "pass": true
+    },
+    {
+      "name": "case 90 pair2 nonreal",
+      "pass": true
+    },
+    {
+      "name": "case 90 exhaustive ten pairs",
+      "pass": true
+    },
+    {
+      "name": "intersection G",
+      "pass": true
+    },
+    {
+      "name": "intersection H",
+      "pass": true
+    },
+    {
+      "name": "witness original bracket",
+      "pass": true
+    },
+    {
+      "name": "witness common value",
+      "pass": true
+    },
+    {
+      "name": "effective gradient determinant",
+      "pass": true
+    },
+    {
+      "name": "general tie a ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie DM ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie value ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie negative ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "branch determinant ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "physical constraint determinant ['1/100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie a ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie DM ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie value ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie negative ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "branch determinant ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "physical constraint determinant ['1/4', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie a ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie DM ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie value ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie negative ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "branch determinant ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "physical constraint determinant ['1', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie a ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie DM ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie value ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie negative ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "branch determinant ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "physical constraint determinant ['3', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie a ['100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie DM ['100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie value ['100', '0']",
+      "pass": true
+    },
+    {
+      "name": "general tie negative ['100', '0']",
+      "pass": true
+    },
+    {
+      "name": "branch determinant ['100', '0']",
+      "pass": true
+    },
+    {
+      "name": "physical constraint determinant ['100', '0']",
+      "pass": true
+    }
+  ],
+  "cases": [
+    {
+      "kind": "row1",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "3/7",
+        "0"
+      ],
+      "H": [
+        "1/7",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "1/14",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-13/28",
+            "-1/28"
+          ],
+          "imag_over_sigma": [
+            "1/2",
+            "-1/14"
+          ]
+        },
+        {
+          "real": [
+            "-13/28",
+            "1/28"
+          ],
+          "imag_over_sigma": [
+            "-3/7",
+            "-2/7"
+          ]
+        },
+        {
+          "real": [
+            "-13/28",
+            "1/28"
+          ],
+          "imag_over_sigma": [
+            "3/7",
+            "2/7"
+          ]
+        },
+        {
+          "real": [
+            "-13/28",
+            "-1/28"
+          ],
+          "imag_over_sigma": [
+            "-1/2",
+            "1/14"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row1",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "1/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "7/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-3",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "3",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-7/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row1",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "33",
+        "0"
+      ],
+      "H": [
+        "11",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "11/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "77/2",
+            "-11/2"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "-33",
+            "-22"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "33",
+            "22"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "-77/2",
+            "11/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row2",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "2/7",
+        "0"
+      ],
+      "H": [
+        "1/7",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-1/14",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "5/14",
+            "-1/14"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-5/14",
+            "-3/14"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "5/14",
+            "3/14"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-5/14",
+            "1/14"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row2",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "2",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-1/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "3/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row2",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "22",
+        "0"
+      ],
+      "H": [
+        "11",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-11/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "55/2",
+            "-11/2"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-55/2",
+            "-33/2"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "55/2",
+            "33/2"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-55/2",
+            "11/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row3",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "1/7",
+        "0"
+      ],
+      "H": [
+        "1/7",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/14",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/28",
+            "1/28"
+          ],
+          "imag_over_sigma": [
+            "3/14",
+            "-1/14"
+          ]
+        },
+        {
+          "real": [
+            "-11/28",
+            "-1/28"
+          ],
+          "imag_over_sigma": [
+            "-2/7",
+            "-1/7"
+          ]
+        },
+        {
+          "real": [
+            "-11/28",
+            "-1/28"
+          ],
+          "imag_over_sigma": [
+            "2/7",
+            "1/7"
+          ]
+        },
+        {
+          "real": [
+            "-11/28",
+            "1/28"
+          ],
+          "imag_over_sigma": [
+            "-3/14",
+            "1/14"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row3",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "3/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-2",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "2",
+            "1"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-3/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row3",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "11",
+        "0"
+      ],
+      "H": [
+        "11",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-33/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-121/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "33/2",
+            "-11/2"
+          ]
+        },
+        {
+          "real": [
+            "-121/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "-22",
+            "-11"
+          ]
+        },
+        {
+          "real": [
+            "-121/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "22",
+            "11"
+          ]
+        },
+        {
+          "real": [
+            "-121/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "-33/2",
+            "11/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row4",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "1/7",
+        "0"
+      ],
+      "H": [
+        "5/14",
+        "-1/14"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/7",
+            "1/14"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "1/14"
+          ],
+          "imag_over_sigma": [
+            "3/7",
+            "-1/7"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "-3/28"
+          ],
+          "imag_over_sigma": [
+            "-3/14",
+            "-3/14"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "-3/28"
+          ],
+          "imag_over_sigma": [
+            "3/14",
+            "3/14"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "1/14"
+          ],
+          "imag_over_sigma": [
+            "-3/7",
+            "1/7"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row4",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "5/2",
+        "-1/2"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "3",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-3/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "3/2",
+            "3/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "-3",
+            "1"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row4",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "11",
+        "0"
+      ],
+      "H": [
+        "55/2",
+        "-11/2"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-33",
+            "11/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "11/2"
+          ],
+          "imag_over_sigma": [
+            "33",
+            "-11"
+          ]
+        },
+        {
+          "real": [
+            "-77/4",
+            "-33/4"
+          ],
+          "imag_over_sigma": [
+            "-33/2",
+            "-33/2"
+          ]
+        },
+        {
+          "real": [
+            "-77/4",
+            "-33/4"
+          ],
+          "imag_over_sigma": [
+            "33/2",
+            "33/2"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "11/2"
+          ],
+          "imag_over_sigma": [
+            "-33",
+            "11"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row5",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "1/7",
+        "0"
+      ],
+      "H": [
+        "2/7",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-5/14",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-5/14",
+            "1/14"
+          ],
+          "imag_over_sigma": [
+            "5/14",
+            "-1/14"
+          ]
+        },
+        {
+          "real": [
+            "-5/14",
+            "-1/14"
+          ],
+          "imag_over_sigma": [
+            "-5/14",
+            "-3/14"
+          ]
+        },
+        {
+          "real": [
+            "-5/14",
+            "-1/14"
+          ],
+          "imag_over_sigma": [
+            "5/14",
+            "3/14"
+          ]
+        },
+        {
+          "real": [
+            "-5/14",
+            "1/14"
+          ],
+          "imag_over_sigma": [
+            "-5/14",
+            "1/14"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row5",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "2",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-5/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "3/2"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row5",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "11",
+        "0"
+      ],
+      "H": [
+        "22",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-55/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-55/2",
+            "11/2"
+          ],
+          "imag_over_sigma": [
+            "55/2",
+            "-11/2"
+          ]
+        },
+        {
+          "real": [
+            "-55/2",
+            "-11/2"
+          ],
+          "imag_over_sigma": [
+            "-55/2",
+            "-33/2"
+          ]
+        },
+        {
+          "real": [
+            "-55/2",
+            "-11/2"
+          ],
+          "imag_over_sigma": [
+            "55/2",
+            "33/2"
+          ]
+        },
+        {
+          "real": [
+            "-55/2",
+            "11/2"
+          ],
+          "imag_over_sigma": [
+            "-55/2",
+            "11/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row6",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "1/7",
+        "0"
+      ],
+      "H": [
+        "5/14",
+        "1/14"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/7",
+            "-1/14"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "3/28"
+          ],
+          "imag_over_sigma": [
+            "3/7",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "-1/14"
+          ],
+          "imag_over_sigma": [
+            "-4/7",
+            "-2/7"
+          ]
+        },
+        {
+          "real": [
+            "-3/7",
+            "-1/14"
+          ],
+          "imag_over_sigma": [
+            "4/7",
+            "2/7"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "3/28"
+          ],
+          "imag_over_sigma": [
+            "-3/7",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row6",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "5/2",
+        "1/2"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "3",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "-4",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "4",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-3",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row6",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "11",
+        "0"
+      ],
+      "H": [
+        "55/2",
+        "11/2"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-33",
+            "-11/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-77/4",
+            "33/4"
+          ],
+          "imag_over_sigma": [
+            "33",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "-11/2"
+          ],
+          "imag_over_sigma": [
+            "-44",
+            "-22"
+          ]
+        },
+        {
+          "real": [
+            "-33",
+            "-11/2"
+          ],
+          "imag_over_sigma": [
+            "44",
+            "22"
+          ]
+        },
+        {
+          "real": [
+            "-77/4",
+            "33/4"
+          ],
+          "imag_over_sigma": [
+            "-33",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row7",
+      "C": [
+        "1/7",
+        "0"
+      ],
+      "G": [
+        "1/7",
+        "0"
+      ],
+      "H": [
+        "4/7",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/14",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-2/7",
+            "1/7"
+          ],
+          "imag_over_sigma": [
+            "9/14",
+            "-1/14"
+          ]
+        },
+        {
+          "real": [
+            "-2/7",
+            "-1/7"
+          ],
+          "imag_over_sigma": [
+            "-1/2",
+            "-5/14"
+          ]
+        },
+        {
+          "real": [
+            "-2/7",
+            "-1/7"
+          ],
+          "imag_over_sigma": [
+            "1/2",
+            "5/14"
+          ]
+        },
+        {
+          "real": [
+            "-2/7",
+            "1/7"
+          ],
+          "imag_over_sigma": [
+            "-9/14",
+            "1/14"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row7",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "4",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-2",
+            "1"
+          ],
+          "imag_over_sigma": [
+            "9/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-2",
+            "-1"
+          ],
+          "imag_over_sigma": [
+            "-7/2",
+            "-5/2"
+          ]
+        },
+        {
+          "real": [
+            "-2",
+            "-1"
+          ],
+          "imag_over_sigma": [
+            "7/2",
+            "5/2"
+          ]
+        },
+        {
+          "real": [
+            "-2",
+            "1"
+          ],
+          "imag_over_sigma": [
+            "-9/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "row7",
+      "C": [
+        "11",
+        "0"
+      ],
+      "G": [
+        "11",
+        "0"
+      ],
+      "H": [
+        "44",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-99/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-22",
+            "11"
+          ],
+          "imag_over_sigma": [
+            "99/2",
+            "-11/2"
+          ]
+        },
+        {
+          "real": [
+            "-22",
+            "-11"
+          ],
+          "imag_over_sigma": [
+            "-77/2",
+            "-55/2"
+          ]
+        },
+        {
+          "real": [
+            "-22",
+            "-11"
+          ],
+          "imag_over_sigma": [
+            "77/2",
+            "55/2"
+          ]
+        },
+        {
+          "real": [
+            "-22",
+            "11"
+          ],
+          "imag_over_sigma": [
+            "-99/2",
+            "11/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/20",
+        "0"
+      ],
+      "H": [
+        "9/20",
+        "1/2"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-19/10",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-81/40",
+            "19/40"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-131/40",
+            "-9/40"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-131/40",
+            "-9/40"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-81/40",
+            "19/40"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "-1/4",
+        "1/4"
+      ],
+      "H": [
+        "3/4",
+        "1/4"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-5/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "-1/2"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-5/2",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "-1/2",
+        "1/2"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-7/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/4",
+        "1/4"
+      ],
+      "H": [
+        "1/4",
+        "1/4"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3/4",
+        "1/4"
+      ],
+      "H": [
+        "-1/4",
+        "1/4"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-1/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-3",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "frequency_locus",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "9/20",
+        "1/2"
+      ],
+      "H": [
+        "1/20",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-11/10",
+            "1/2"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-139/40",
+            "1/40"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-89/40",
+            "-11/40"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-89/40",
+            "-11/40"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "1/2"
+          ]
+        },
+        {
+          "real": [
+            "-139/40",
+            "1/40"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "coincident_pairs": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "3/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-2/5",
+            "-1/5"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "2/5",
+            "1/5"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-3/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-11/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-7/20",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "11/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-7/20",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-4/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-7/20",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "4/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-7/20",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-11/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-31/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "3/20",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "31/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "3/20",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-9/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "3/20",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "9/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "3/20",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-31/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-131/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "53/20",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "131/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "53/20",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-34/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "53/20",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "34/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "53/20",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-131/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "1/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-3/4",
+            "-3/20"
+          ],
+          "imag_over_sigma": [
+            "11/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-3/4",
+            "3/20"
+          ],
+          "imag_over_sigma": [
+            "-4/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-3/4",
+            "3/20"
+          ],
+          "imag_over_sigma": [
+            "4/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-3/4",
+            "-3/20"
+          ],
+          "imag_over_sigma": [
+            "-11/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "19/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-6/5",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "6/5",
+            "1"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-19/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-23/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-1/20",
+            "11/20"
+          ],
+          "imag_over_sigma": [
+            "39/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-1/20",
+            "-11/20"
+          ],
+          "imag_over_sigma": [
+            "-11/5",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-1/20",
+            "-11/20"
+          ],
+          "imag_over_sigma": [
+            "11/5",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-1/20",
+            "11/20"
+          ],
+          "imag_over_sigma": [
+            "-39/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-123/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "49/20",
+            "61/20"
+          ],
+          "imag_over_sigma": [
+            "139/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "49/20",
+            "-61/20"
+          ],
+          "imag_over_sigma": [
+            "-36/5",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "49/20",
+            "-61/20"
+          ],
+          "imag_over_sigma": [
+            "36/5",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "49/20",
+            "61/20"
+          ],
+          "imag_over_sigma": [
+            "-139/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "5/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-5/4",
+            "-13/20"
+          ],
+          "imag_over_sigma": [
+            "31/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-5/4",
+            "13/20"
+          ],
+          "imag_over_sigma": [
+            "-9/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-5/4",
+            "13/20"
+          ],
+          "imag_over_sigma": [
+            "9/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-5/4",
+            "-13/20"
+          ],
+          "imag_over_sigma": [
+            "-31/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "17/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-21/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "39/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-21/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "-11/5",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-21/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "11/5",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-21/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "-39/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "59/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-16/5",
+            "-3"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "16/5",
+            "3"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-59/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-103/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "39/20",
+            "51/20"
+          ],
+          "imag_over_sigma": [
+            "159/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "39/20",
+            "-51/20"
+          ],
+          "imag_over_sigma": [
+            "-41/5",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "39/20",
+            "-51/20"
+          ],
+          "imag_over_sigma": [
+            "41/5",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "39/20",
+            "51/20"
+          ],
+          "imag_over_sigma": [
+            "-159/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "25/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-15/4",
+            "-63/20"
+          ],
+          "imag_over_sigma": [
+            "131/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-15/4",
+            "63/20"
+          ],
+          "imag_over_sigma": [
+            "-34/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-15/4",
+            "63/20"
+          ],
+          "imag_over_sigma": [
+            "34/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-15/4",
+            "-63/20"
+          ],
+          "imag_over_sigma": [
+            "-131/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "117/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-71/20",
+            "-59/20"
+          ],
+          "imag_over_sigma": [
+            "139/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-71/20",
+            "59/20"
+          ],
+          "imag_over_sigma": [
+            "-36/5",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-71/20",
+            "59/20"
+          ],
+          "imag_over_sigma": [
+            "36/5",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-71/20",
+            "-59/20"
+          ],
+          "imag_over_sigma": [
+            "-139/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "97/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-61/20",
+            "-49/20"
+          ],
+          "imag_over_sigma": [
+            "159/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-61/20",
+            "49/20"
+          ],
+          "imag_over_sigma": [
+            "-41/5",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-61/20",
+            "49/20"
+          ],
+          "imag_over_sigma": [
+            "41/5",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-61/20",
+            "-49/20"
+          ],
+          "imag_over_sigma": [
+            "-159/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1/5",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "259/10",
+            "-1/10"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-66/5",
+            "-13"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "66/5",
+            "13"
+          ]
+        },
+        {
+          "real": [
+            "-11/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-259/10",
+            "1/10"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-1/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-6/5",
+            "-1/5"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "6/5",
+            "1/5"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "1/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-23/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-51/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "7/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-51/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "-8/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-51/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "8/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-51/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "-7/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-43/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-41/20",
+            "19/20"
+          ],
+          "imag_over_sigma": [
+            "27/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-41/20",
+            "-19/20"
+          ],
+          "imag_over_sigma": [
+            "-13/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-41/20",
+            "-19/20"
+          ],
+          "imag_over_sigma": [
+            "13/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-41/20",
+            "19/20"
+          ],
+          "imag_over_sigma": [
+            "-27/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-143/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "9/20",
+            "69/20"
+          ],
+          "imag_over_sigma": [
+            "127/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "9/20",
+            "-69/20"
+          ],
+          "imag_over_sigma": [
+            "-38/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "9/20",
+            "-69/20"
+          ],
+          "imag_over_sigma": [
+            "38/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "9/20",
+            "69/20"
+          ],
+          "imag_over_sigma": [
+            "-127/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-7/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-59/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "7/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-59/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-8/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-59/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "8/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-59/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-7/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "3/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-2",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "2",
+            "1"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-3/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-7/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-9/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "7/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-9/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-3",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-9/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "3",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-9/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-7/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-27/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "1/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "27/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "1/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-8",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "1/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "8",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "1/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-27/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "13/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-69/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "27/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-69/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "-13/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-69/20",
+            "9/20"
+          ],
+          "imag_over_sigma": [
+            "13/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-69/20",
+            "-9/20"
+          ],
+          "imag_over_sigma": [
+            "-27/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "1/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "7/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-3",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "3",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-13/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-7/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "11/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-4",
+            "-3"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "4",
+            "3"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-11/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-23/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "31/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "-9",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "9",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-1/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "-31/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "113/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-119/20",
+            "-59/20"
+          ],
+          "imag_over_sigma": [
+            "127/10",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-119/20",
+            "59/20"
+          ],
+          "imag_over_sigma": [
+            "-38/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-119/20",
+            "59/20"
+          ],
+          "imag_over_sigma": [
+            "38/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-119/20",
+            "-59/20"
+          ],
+          "imag_over_sigma": [
+            "-127/10",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "21/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "27/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "-8",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "8",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "-27/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "17/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "-9/4"
+          ],
+          "imag_over_sigma": [
+            "31/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "9/4"
+          ],
+          "imag_over_sigma": [
+            "-9",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "9/4"
+          ],
+          "imag_over_sigma": [
+            "9",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "-9/4"
+          ],
+          "imag_over_sigma": [
+            "-31/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "1",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-3/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "51/2",
+            "-1/2"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-14",
+            "-13"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "14",
+            "13"
+          ]
+        },
+        {
+          "real": [
+            "-11/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-51/2",
+            "1/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-11/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-16/5",
+            "-1/5"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "16/5",
+            "1/5"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "11/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-53/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-161/20",
+            "19/20"
+          ],
+          "imag_over_sigma": [
+            "-3/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-161/20",
+            "-19/20"
+          ],
+          "imag_over_sigma": [
+            "-18/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-161/20",
+            "-19/20"
+          ],
+          "imag_over_sigma": [
+            "18/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-161/20",
+            "19/20"
+          ],
+          "imag_over_sigma": [
+            "3/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-73/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-151/20",
+            "29/20"
+          ],
+          "imag_over_sigma": [
+            "17/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-151/20",
+            "-29/20"
+          ],
+          "imag_over_sigma": [
+            "-23/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-151/20",
+            "-29/20"
+          ],
+          "imag_over_sigma": [
+            "23/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-151/20",
+            "29/20"
+          ],
+          "imag_over_sigma": [
+            "-17/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-173/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-101/20",
+            "79/20"
+          ],
+          "imag_over_sigma": [
+            "117/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-101/20",
+            "-79/20"
+          ],
+          "imag_over_sigma": [
+            "-48/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-101/20",
+            "-79/20"
+          ],
+          "imag_over_sigma": [
+            "48/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-101/20",
+            "79/20"
+          ],
+          "imag_over_sigma": [
+            "-117/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-37/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-169/20",
+            "11/20"
+          ],
+          "imag_over_sigma": [
+            "-3/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-169/20",
+            "-11/20"
+          ],
+          "imag_over_sigma": [
+            "-18/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-169/20",
+            "-11/20"
+          ],
+          "imag_over_sigma": [
+            "18/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-169/20",
+            "11/20"
+          ],
+          "imag_over_sigma": [
+            "3/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "1/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-4",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "4",
+            "1"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-1/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-13/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-31/4",
+            "5/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-31/4",
+            "-5/4"
+          ],
+          "imag_over_sigma": [
+            "-5",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-31/4",
+            "-5/4"
+          ],
+          "imag_over_sigma": [
+            "5",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-31/4",
+            "5/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-33/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "15/4"
+          ],
+          "imag_over_sigma": [
+            "25/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "-15/4"
+          ],
+          "imag_over_sigma": [
+            "-10",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "-15/4"
+          ],
+          "imag_over_sigma": [
+            "10",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-21/4",
+            "15/4"
+          ],
+          "imag_over_sigma": [
+            "-25/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-17/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-179/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "17/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-179/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-23/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-179/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "23/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-179/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-17/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-5/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-35/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-35/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-5",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-35/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "5",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-35/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "9/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-6",
+            "-3"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "6",
+            "3"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-9/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-29/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "29/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-11",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "11",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-23/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-29/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "83/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-229/20",
+            "-49/20"
+          ],
+          "imag_over_sigma": [
+            "117/10",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-229/20",
+            "49/20"
+          ],
+          "imag_over_sigma": [
+            "-48/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-229/20",
+            "49/20"
+          ],
+          "imag_over_sigma": [
+            "48/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-229/20",
+            "-49/20"
+          ],
+          "imag_over_sigma": [
+            "-117/10",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "15/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-45/4",
+            "-9/4"
+          ],
+          "imag_over_sigma": [
+            "25/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-45/4",
+            "9/4"
+          ],
+          "imag_over_sigma": [
+            "-10",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-45/4",
+            "9/4"
+          ],
+          "imag_over_sigma": [
+            "10",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-45/4",
+            "-9/4"
+          ],
+          "imag_over_sigma": [
+            "-25/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "11/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-43/4",
+            "-7/4"
+          ],
+          "imag_over_sigma": [
+            "29/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-43/4",
+            "7/4"
+          ],
+          "imag_over_sigma": [
+            "-11",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-43/4",
+            "7/4"
+          ],
+          "imag_over_sigma": [
+            "11",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-43/4",
+            "-7/4"
+          ],
+          "imag_over_sigma": [
+            "-29/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "3",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-9/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "49/2",
+            "-3/2"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-16",
+            "-13"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "16",
+            "13"
+          ]
+        },
+        {
+          "real": [
+            "-33/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-49/2",
+            "3/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-39/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-61/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-66/5",
+            "-1/5"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "66/5",
+            "1/5"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "61/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-203/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-711/20",
+            "69/20"
+          ],
+          "imag_over_sigma": [
+            "-53/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-711/20",
+            "-69/20"
+          ],
+          "imag_over_sigma": [
+            "-68/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-711/20",
+            "-69/20"
+          ],
+          "imag_over_sigma": [
+            "68/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-711/20",
+            "69/20"
+          ],
+          "imag_over_sigma": [
+            "53/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-223/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-701/20",
+            "79/20"
+          ],
+          "imag_over_sigma": [
+            "-33/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-701/20",
+            "-79/20"
+          ],
+          "imag_over_sigma": [
+            "-73/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-701/20",
+            "-79/20"
+          ],
+          "imag_over_sigma": [
+            "73/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-701/20",
+            "79/20"
+          ],
+          "imag_over_sigma": [
+            "33/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1/5",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-323/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-651/20",
+            "129/20"
+          ],
+          "imag_over_sigma": [
+            "67/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-651/20",
+            "-129/20"
+          ],
+          "imag_over_sigma": [
+            "-98/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-651/20",
+            "-129/20"
+          ],
+          "imag_over_sigma": [
+            "98/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-651/20",
+            "129/20"
+          ],
+          "imag_over_sigma": [
+            "-67/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-187/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-719/20",
+            "61/20"
+          ],
+          "imag_over_sigma": [
+            "-53/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-719/20",
+            "-61/20"
+          ],
+          "imag_over_sigma": [
+            "-68/5",
+            "-3/5"
+          ]
+        },
+        {
+          "real": [
+            "-719/20",
+            "-61/20"
+          ],
+          "imag_over_sigma": [
+            "68/5",
+            "3/5"
+          ]
+        },
+        {
+          "real": [
+            "-719/20",
+            "61/20"
+          ],
+          "imag_over_sigma": [
+            "53/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-39/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-9/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-14",
+            "-1"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "14",
+            "1"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "9/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-43/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-141/4",
+            "15/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-141/4",
+            "-15/4"
+          ],
+          "imag_over_sigma": [
+            "-15",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-141/4",
+            "-15/4"
+          ],
+          "imag_over_sigma": [
+            "15",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-141/4",
+            "15/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "1",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-63/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-131/4",
+            "25/4"
+          ],
+          "imag_over_sigma": [
+            "15/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-131/4",
+            "-25/4"
+          ],
+          "imag_over_sigma": [
+            "-20",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-131/4",
+            "-25/4"
+          ],
+          "imag_over_sigma": [
+            "20",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-131/4",
+            "25/4"
+          ],
+          "imag_over_sigma": [
+            "-15/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-167/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-729/20",
+            "51/20"
+          ],
+          "imag_over_sigma": [
+            "-33/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-729/20",
+            "-51/20"
+          ],
+          "imag_over_sigma": [
+            "-73/5",
+            "-8/5"
+          ]
+        },
+        {
+          "real": [
+            "-729/20",
+            "-51/20"
+          ],
+          "imag_over_sigma": [
+            "73/5",
+            "8/5"
+          ]
+        },
+        {
+          "real": [
+            "-729/20",
+            "51/20"
+          ],
+          "imag_over_sigma": [
+            "33/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-35/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-145/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "-5/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-145/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "-15",
+            "-2"
+          ]
+        },
+        {
+          "real": [
+            "-145/4",
+            "-11/4"
+          ],
+          "imag_over_sigma": [
+            "15",
+            "2"
+          ]
+        },
+        {
+          "real": [
+            "-145/4",
+            "11/4"
+          ],
+          "imag_over_sigma": [
+            "5/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-39/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-1/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-16",
+            "-3"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "16",
+            "3"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "1/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "3",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-59/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-133/4",
+            "23/4"
+          ],
+          "imag_over_sigma": [
+            "19/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-133/4",
+            "-23/4"
+          ],
+          "imag_over_sigma": [
+            "-21",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-133/4",
+            "-23/4"
+          ],
+          "imag_over_sigma": [
+            "21",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-133/4",
+            "23/4"
+          ],
+          "imag_over_sigma": [
+            "-19/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1/5",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-67/10",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-779/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "67/10",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-779/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "-98/5",
+            "-33/5"
+          ]
+        },
+        {
+          "real": [
+            "-779/20",
+            "-1/20"
+          ],
+          "imag_over_sigma": [
+            "98/5",
+            "33/5"
+          ]
+        },
+        {
+          "real": [
+            "-779/20",
+            "1/20"
+          ],
+          "imag_over_sigma": [
+            "-67/10",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "1",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-15/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-155/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "15/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-155/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "-20",
+            "-7"
+          ]
+        },
+        {
+          "real": [
+            "-155/4",
+            "-1/4"
+          ],
+          "imag_over_sigma": [
+            "20",
+            "7"
+          ]
+        },
+        {
+          "real": [
+            "-155/4",
+            "1/4"
+          ],
+          "imag_over_sigma": [
+            "-15/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "3",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-19/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-153/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "19/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-153/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "-21",
+            "-8"
+          ]
+        },
+        {
+          "real": [
+            "-153/4",
+            "-3/4"
+          ],
+          "imag_over_sigma": [
+            "21",
+            "8"
+          ]
+        },
+        {
+          "real": [
+            "-153/4",
+            "3/4"
+          ],
+          "imag_over_sigma": [
+            "-19/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    },
+    {
+      "kind": "positive_grid",
+      "C": [
+        "13",
+        "0"
+      ],
+      "G": [
+        "13",
+        "0"
+      ],
+      "H": [
+        "13",
+        "0"
+      ],
+      "eigenvalues": [
+        {
+          "real": [
+            "-39/2",
+            "0"
+          ],
+          "imag_over_sigma": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "39/2",
+            "-13/2"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "-26",
+            "-13"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "-13/4"
+          ],
+          "imag_over_sigma": [
+            "26",
+            "13"
+          ]
+        },
+        {
+          "real": [
+            "-143/4",
+            "13/4"
+          ],
+          "imag_over_sigma": [
+            "-39/2",
+            "13/2"
+          ]
+        }
+      ],
+      "coincident_pairs": []
+    }
+  ]
+}

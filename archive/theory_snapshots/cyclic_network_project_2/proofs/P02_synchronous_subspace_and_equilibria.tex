@@ -1,0 +1,598 @@
+% STATUS: DRAFT
+% VERSION: P02 v1.0; 2026-09-27; independent audit pending
+% DEPENDS ON: P01 CORE VERIFIED / AUDITED; canonical model and notation
+% MODEL: canonical demand-modulated model
+% LITERATURE DEPENDENCIES: none
+% NUMERICAL DEPENDENCIES: none
+% NEXT DEPENDENCIES: P03, P04, P09, P10, P11
+% SCOPE: synchronous invariance, scalar restriction, complete canonical root
+% classification, domain filtering, and algebraic branch loci only.
+% CLAIMS: C025, C026, C028--C033, C146; no later-module claim is promoted.
+% CHECKS: exact algebra and representative/equality cases; no simulations.
+
+\section{P02: Synchrony and synchronous equilibria}
+\label{sec:P02}
+
+\noindent\textbf{Status: DRAFT; independent audit pending.}
+The standing assumptions are the canonical A1--A3. In particular,
+$n\ge5$, $1\le q\le n-1$, $a,k,c,g,h>0$, and the open extension
+domain is $\Domain=(-1,\infty)^n$. The nonnegative model state space
+is $\Orth$. P01 v1.1 is VERIFIED / AUDITED: its required wording
+correction E01 is already incorporated. Only its local uniqueness
+and, for nonnegative initial data, global continuation are needed here.
+The calculations below start from \eqref{eq:canonical-dm}.
+No assertion about nonsynchronous equilibria, equilibrium stability,
+or bifurcation type is made.
+
+\subsection{Invariant synchronous subspace}
+\label{slot:P02-1}
+
+\begin{proposition}[Invariance of the synchronous subspace]
+\label{prop:P02-invariance}
+The set
+\[
+ \Sync\cap\Domain=\{s\one:s\in(-1,\infty)\}
+\]
+is invariant for the canonical vector field for the entire maximal
+solution interval in $\Domain$. Its scalar restriction is
+\begin{equation}
+\label{eq:P02-scalar-original}
+ \dot s=f(s):=as-ks^2+\frac{cs}{1+s}
+                     -\frac{gs}{1+s}-hs^2,
+ \qquad s\in(-1,\infty).
+\end{equation}
+This conclusion needs no coprimality or distinct-offset assumption.
+Indeed, the substitution and local invariance remain valid for any
+integer $n\ge1$, any residue $q$ modulo $n$, and any finite real
+coefficients. The canonical restrictions are retained for the
+equilibrium classification below.
+\end{proposition}
+
+\begin{proof}
+Put $x=s\one$ with $s>-1$. For every $i\in\Zn$, each of
+$x_i,x_{i-1},x_{i+q},x_{i-q}$ equals $s$. Direct substitution gives
+\[
+ F_i(s\one)=as-ks^2+\frac{cs}{1+s}
+                        -\frac{gs}{1+s}-hs^2=f(s).
+\]
+Every component is identical, so $F(s\one)=f(s)\one$.
+Coincident offsets retain all the displayed terms; no distinctness
+of neighbors is used. Nor is the size or connectedness of a
+step-$q$ cycle used.
+
+The scalar field is smooth on $(-1,\infty)$. A scalar solution
+$s(t)$ lifts to the vector solution $s(t)\one$. Uniqueness from
+Proposition~\ref{prop:P01-local} makes this lift agree with the
+vector solution having initial value $s(0)\one$ wherever both exist.
+If the scalar maximal interval ended earlier while the vector
+solution continued in $\Domain$, the latter would supply a limit
+$s_*\one\in\Domain$ at that time. Local scalar continuation at
+$s_*>-1$ would extend the lift, a contradiction. Conversely, a longer
+scalar interval would extend the vector solution. Thus the maximal
+intervals coincide and synchrony persists throughout. The same local
+uniqueness argument applies on either side of an initial time.
+The scalar domain inherited from $\Domain$ is exactly $(-1,\infty)$.
+\end{proof}
+
+\subsection{Scalar synchronous dynamics}
+\label{slot:P02-2}
+Use the reserved abbreviations and one local auxiliary abbreviation
+\begin{equation}
+\label{eq:P02-abbreviations}
+ A=k+h>0,\qquad \mu=a+c-g,\qquad b=a-A.
+\end{equation}
+Here $b$ is used only within P02; it is not the archived comparator's
+coefficient. In particular $b>-A$ because $a>0$. The exact restriction is
+\begin{equation}
+\label{eq:P02-scalar}
+ f(s)=s\left(a-As+\frac{c-g}{1+s}\right)
+     =\frac{s}{1+s}\bigl(\mu+bs-As^2\bigr),\qquad s>-1.
+\end{equation}
+For $s(0)\ge0$, P01 and Proposition~\ref{prop:P02-invariance}
+give a global nonnegative scalar solution. For $-1<s(0)<0$, only
+the maximal interval within this open domain is asserted. Even when
+$c=g$ cancels the two rational terms along synchrony, this does not
+enlarge the canonical domain or admit $s=-1$.
+
+\subsection{The origin and the nonzero equilibrium equation}
+
+\begin{proposition}[Equilibrium equation with domain restrictions]
+\label{prop:P02-equation}
+The origin $0\one$ is an equilibrium for every canonical parameter
+tuple. Every other synchronous equilibrium in $\Domain$ is exactly
+$s\one$, where $s\ne0$, $s>-1$, and
+\begin{align}
+ 0=Q(s)&:=As^2-bs-\mu \label{eq:P02-polynomial}\\
+       &=(k+h)s^2+(k+h-a)s-(a+c-g).\nonumber
+\end{align}
+Define the discriminant
+\begin{align}
+ D&:=b^2+4A\mu \label{eq:P02-discriminant}\\
+  &=(a-A)^2+4A(a+c-g)
+   =(a+A)^2+4A(c-g).\nonumber
+\end{align}
+The complete list of real polynomial roots, when $D\ge0$, is
+\begin{equation}
+\label{eq:P02-roots}
+ s_\pm=\frac{b\pm\sqrt D}{2A}
+ =\frac{a-(k+h)\pm
+ \sqrt{(a+k+h)^2+4(k+h)(c-g)}}{2(k+h)}.
+\end{equation}
+They are distinct for $D>0$ and coincide for $D=0$. When $D<0$
+there are no real roots of $Q$.
+\end{proposition}
+
+\begin{proof}
+Directly in \eqref{eq:P02-scalar-original}, all five terms vanish
+at $s=0$. Thus the origin is always an equilibrium, before any
+division is performed. Now take $s\ne0$ with $s>-1$.
+Dividing \eqref{eq:P02-scalar} by $s$ and multiplying by
+the strictly positive number $1+s$ gives
+\[
+ (a-As)(1+s)+c-g=\mu+(a-A)s-As^2=0.
+\]
+Both operations are reversible on this stated set, giving
+\eqref{eq:P02-polynomial}. Completing the square yields
+\begin{equation}
+\label{eq:P02-square}
+ Q(s)=A\left(s-\frac b{2A}\right)^2-\frac D{4A}.
+\end{equation}
+Expansion of $b^2+4A\mu$ proves both discriminant forms and the
+quadratic formula gives \eqref{eq:P02-roots}. Finally,
+\begin{equation}
+\label{eq:P02-minusone}
+ Q(-1)=A+b-\mu=g-c.
+\end{equation}
+Thus $s=-1$ is a polynomial root precisely when $g=c$, but it is
+never a point of the canonical domain. Multiplication by $1+s$
+does not authorize retaining that root. A root $s=0$ of $Q$, when
+present, is the already counted origin rather than another equilibrium.
+\end{proof}
+
+\subsection{Complete classification in the canonical parameter regime}
+\label{slot:P02-3}
+
+In this subsection, a \emph{mathematical root} means a real root of
+$Q$, including a zero or an inadmissible root. A \emph{DM-domain root}
+additionally satisfies $s>-1$. A \emph{nonnegative model equilibrium}
+has $s\ge0$, and a \emph{positive model equilibrium} has $s>0$.
+The ever-present origin is added once to the admissible nonzero roots.
+All counts below count distinct values, not algebraic multiplicity.
+
+\begin{theorem}[Complete synchronous-equilibrium classification]
+\label{thm:P02-complete}
+Under the canonical assumptions, the synchronous equilibrium set is
+\begin{equation}
+\label{eq:P02-equilibrium-set}
+ \{0\one\}\ \cup\
+ \{s\one:Q(s)=0,\ s>-1,\ s\ne0\}.
+\end{equation}
+The following eleven cases are exhaustive. In the table, $r$ counts
+real nonzero polynomial roots, $d$ counts those with $s>-1$, $N_0$
+counts all nonnegative synchronous equilibria (including the origin),
+and $N_+$ counts the strictly positive ones. The total number of
+synchronous equilibria in $\Domain$ is $1+d$.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}c p{0.28\textwidth} p{0.35\textwidth} c c c c@{}}
+\toprule
+Case & Parameter conditions & Real roots of $Q$ and location
+ & $r$ & $d$ & $N_0$ & $N_+$\\
+\midrule
+I & $\mu>0,\ g<c$ & $s_-<-1<0<s_+$ & 2&1&2&1\\
+II & $\mu>0,\ g=c$ & $s_-=-1,\ s_+=a/A>0$ & 2&1&2&1\\
+III & $\mu>0,\ g>c$ & $-1<s_-<0<s_+$ & 2&2&2&1\\
+IV & $\mu=0,\ b>0$ & $s_-=0,\ s_+=b/A>0$ & 1&1&2&1\\
+V & $\mu=0,\ b=0$ & $s_-=s_+=0$ (double) & 0&0&1&0\\
+VI & $\mu=0,\ b<0$ & $-1<s_-=b/A<0=s_+$ & 1&1&1&0\\
+VII & $\mu<0,\ D<0$ & No real roots; any sign of $b$ & 0&0&1&0\\
+VIII & $\mu<0,\ D>0,\ b>0$ & $0<s_-<s_+$ & 2&2&3&2\\
+IX & $\mu<0,\ D=0,\ b>0$ & $s_-=s_+=b/(2A)>0$ & 1&1&2&1\\
+X & $\mu<0,\ D>0,\ b<0$ & $-1<s_-<s_+<0$ & 2&2&1&0\\
+XI & $\mu<0,\ D=0,\ b<0$ & $-\tfrac12<s_-=s_+=b/(2A)<0$ & 1&1&1&0\\
+\bottomrule
+\end{tabular}
+\end{center}
+When $\mu<0$ and $b=0$, necessarily $D=4A\mu<0$, so case VII
+applies. Each appearance of $s_\pm$ refers to \eqref{eq:P02-roots}.
+The only repeated polynomial roots are in cases V, IX and XI.
+
+As zeros of the original smooth scalar field $f$ on $(-1,\infty)$,
+all nonzero equilibria are simple except the double roots in IX and XI.
+The origin is simple if $\mu\ne0$, double if $\mu=0$, $b\ne0$,
+and triple if $\mu=b=0$. The algebraic continuation of the nonzero
+equilibrium curve meets the origin exactly at $\mu=0$: through $s_-$
+in case IV, through $s_+$ in case VI, and through both coincident
+root labels in case V. No negative root represents a state in $\Orth$.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:P02-equation} proves completeness of
+\eqref{eq:P02-equilibrium-set}. The Vieta relations are
+\begin{equation}
+\label{eq:P02-vieta}
+ s_-+s_+=\frac bA,\qquad s_-s_+=-\frac\mu A.
+\end{equation}
+We first establish the domain test for every real pair of roots.
+Because $a>0$ and $A>0$,
+\[
+ s_+\ge\frac b{2A}=\frac a{2A}-\frac12>-\frac12>-1.
+\]
+For the smaller root,
+\begin{equation}
+\label{eq:P02-domain-test}
+ s_->-1
+ \ \Longleftrightarrow\ \sqrt D<a+A
+ \ \Longleftrightarrow\ D<(a+A)^2
+ \ \Longleftrightarrow\ g>c.
+\end{equation}
+The middle equivalence uses $a+A>0$ and $D\ge0$. Equality gives
+$s_-=-1$ exactly when $g=c$; the reverse inequality gives $s_-<-1$
+exactly when $g<c$. These are polynomial-root statements on the
+real-discriminant set, not assertions that such roots are admissible.
+
+If $\mu>0$, then $D>b^2$, so $s_-<0<s_+$ and both roots are
+nonzero and simple. The domain test gives I--III. When $g=c$,
+$D=(a+A)^2$ and the stated roots $-1,a/A$ follow directly.
+
+If $\mu=0$, then $Q(s)=s(As-b)$. If $b\ne0$, its distinct roots
+are $0$ and $b/A$. Since $b/A=a/A-1>-1$, the latter is always
+domain-admissible and has the sign of $b$. Their ordering gives
+IV and VI. If $b=0$, $Q(s)=As^2$ gives V. The origin is counted
+only once in the equilibrium set in all three cases.
+
+If $\mu<0$, real roots exist precisely when $D\ge0$. For $D<0$
+we obtain VII. For $D\ge0$, the product in \eqref{eq:P02-vieta}
+is strictly positive and $b\ne0$ (otherwise $D<0$). Thus both
+roots are nonzero with the sign of their sum, namely the sign of $b$.
+They are distinct for $D>0$ and double for $D=0$. Also
+$g>a+c>c$, so both are admissible by \eqref{eq:P02-domain-test}.
+This gives VIII--XI, including the sharper negative repeated-root
+bound from $b>-A$. These arguments yield every count in the table.
+
+On $s>-1$, the identity $f(s)=-sQ(s)/(1+s)$ shows that the
+nonzero zeros have the same multiplicity as their polynomial roots.
+At the origin, use \eqref{eq:P02-scalar} without dividing:
+the numerator is $\mu s+bs^2-As^3$ and $1+s$ does not vanish.
+This gives the stated orders one, two and three. Finally $Q(0)=-\mu$,
+so the nonzero equation's algebraic continuation contains $s=0$
+exactly when $\mu=0$. The formulas at that locus give its root
+labels, and the local branch description below confirms the approach
+by nonzero roots. The counting and multiplicity assertions are purely
+algebraic and carry no stability conclusion.
+\end{proof}
+
+\subsection{Positive synchronous equilibria: necessary and sufficient conditions}
+
+\begin{theorem}[Exact positive-equilibrium alternatives]
+\label{thm:P02-positive}
+In the canonical parameter regime the following four alternatives
+partition parameter space:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item There is no positive synchronous equilibrium if and only if
+\begin{equation}
+\label{eq:P02-none}
+ [\,\mu=0,\ b\le0\,]
+ \quad\hbox{or}\quad
+ [\,\mu<0,\ (b\le0\ \hbox{or}\ D<0)\,].
+\end{equation}
+\item There is exactly one positive synchronous equilibrium and it is
+simple if and only if $\mu>0$, or $\mu=0$ and $b>0$.
+It is $s_+\one$; in the second case $s_+=b/A$.
+\item There are exactly two distinct positive synchronous equilibria
+if and only if $\mu<0$, $b>0$, and $D>0$. They are
+$s_-\one,s_+\one$, both simple.
+\item There is exactly one positive synchronous equilibrium and it
+is repeated if and only if $\mu<0$, $b>0$, and $D=0$.
+It is a double root, $s_-\one=s_+\one=(b/(2A))\one$.
+\end{enumerate}
+Consequently, exactly one distinct positive equilibrium (without a
+simplicity qualification) occurs if and only if (ii) or (iv) holds.
+There are never more than two positive synchronous equilibria.
+\end{theorem}
+
+\begin{proof}
+The cases of Theorem~\ref{thm:P02-complete} prove every implication,
+including the necessity and all equalities. One can also reconstruct
+the positive-root count directly from
+$H(s)=\mu+bs-As^2$ for $s>0$. If $b\le0$, then
+$H'(s)=b-2As<0$ on this interval: it has one positive zero exactly
+when $\mu>0$. If $b>0$, its maximum on $s\ge0$ is at
+$s=b/(2A)>0$ and has value $D/(4A)$. For $\mu<0$, that maximum
+is positive, zero, or negative precisely in alternatives (iii),
+(iv), or (i). For $\mu=0$, the zero at the endpoint is excluded
+from the positive count and the other root is $b/A>0$. For
+$\mu>0$, the opposite-sign Vieta product leaves one positive root.
+This gives an independent sign-and-vertex justification of the list.
+\end{proof}
+
+\subsection{Algebraic branch loci and degeneracies}
+
+\begin{proposition}[Branch-intersection and repeated-root loci]
+\label{prop:P02-loci}
+For fixed positive $a,k,c,h$, define
+\begin{equation}
+\label{eq:P02-gf}
+ g_f:=a+c+\frac{(a-A)^2}{4A}
+      =c+\frac{(a+A)^2}{4A},\qquad
+ s_f:=\frac{a-A}{2A}.
+\end{equation}
+The following statements concern only the scalar equilibrium equation.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item The \emph{branch-intersection locus} is $\mu=0$, or $g=a+c$.
+It is the set where the algebraic continuation of the nonzero
+equilibrium equation meets the origin branch.
+\item The \emph{repeated-root locus} of $Q$ is $D=0$, or $g=g_f$,
+and its root is $s_f$. Indeed,
+\begin{equation}
+\label{eq:P02-discriminant-factor}
+ D=4A(g_f-g),\qquad
+ g_f-(a+c)=\frac{(a-A)^2}{4A}\ge0.
+\end{equation}
+The root is positive for $a>A$, negative for $0<a<A$, and zero
+for $a=A$. It always lies in $(-1/2,\infty)$ and hence in the
+DM domain. It is a nonzero double equilibrium only when $a\ne A$.
+\item The two parameter loci meet exactly at the \emph{algebraic
+degeneracy} $a=A$, $g=a+c$. There $Q(s)=As^2$ and
+\begin{equation}
+\label{eq:P02-degenerate-field}
+ f(s)=-\frac{As^3}{1+s}.
+\end{equation}
+The origin is the sole synchronous equilibrium in the domain at
+that parameter tuple; it is a triple zero of $f$ and a double root
+of $Q$, not an additional nonzero equilibrium.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The nonzero equation can be written, without approximation, as
+\begin{equation}
+\label{eq:P02-branch-graph}
+ \mu=As^2-bs,\qquad
+ g=a+c+bs-As^2
+   =g_f-A(s-s_f)^2.
+\end{equation}
+This is its algebraic continuation, to be filtered by $s>-1$,
+$g>0$, and $s\ne0$ when counting nonzero model equilibria.
+At $s=0$ it gives exactly $g=a+c$. Completing the square or using
+\eqref{eq:P02-square} gives $D=0$, $g=g_f$, and $s=s_f$ as the
+unique repeated-root condition. The difference of the two parameter
+values in \eqref{eq:P02-discriminant-factor} vanishes exactly at
+$a=A$. Since $a>0$, $s_f=a/(2A)-1/2>-1/2$. At the common
+locus, substitution into \eqref{eq:P02-scalar} proves
+\eqref{eq:P02-degenerate-field} and all the remaining assertions.
+\end{proof}
+
+For additional local algebra at the origin, fix $a,A,c$ and vary $g$
+(equivalently $\mu$). If $b\ne0$, the root that tends to zero is
+\begin{equation}
+\label{eq:P02-local-branch}
+ s_0(\mu)=\frac{b-\operatorname{sgn}(b)\sqrt{b^2+4A\mu}}{2A}
+        =-\frac{\mu}{b}+\frac{A\mu^2}{b^3}+O(\mu^3).
+\end{equation}
+This follows by expansion of the explicit square root near $\mu=0$;
+$g=a+c-\mu$ remains positive in a sufficiently small neighborhood.
+Thus nonzero domain-admissible roots approach the origin from the
+neighboring parameter regions. At the intersection itself,
+\begin{equation}
+\label{eq:P02-quadratic-coefficient}
+ f(s)\big|_{\mu=0}=\frac{s^2(b-As)}{1+s}
+                     =bs^2-as^3+O(s^4).
+\end{equation}
+The coefficient of the usual quadratic scalar term is $b=a-A$.
+It vanishes when $a=A$; this is precisely the degeneracy above.
+
+More explicitly, for $a=A$ the nonzero polynomial equation is
+$As^2=\mu$. For $\mu>0$ its roots are
+\begin{equation}
+\label{eq:P02-square-root-branches}
+ s_\pm=\pm\sqrt{\mu/A}.
+\end{equation}
+The negative one is admissible exactly when $0<\mu<A$ (equivalently
+$c<g<a+c$); it is $-1$ when $\mu=A$, and below $-1$ when $\mu>A$.
+At $\mu=0$ both labels give the origin; for $\mu<0$ no real
+nonzero roots exist. These are algebraic branch descriptions only.
+Any bifurcation theorem requires the separate work assigned to P09
+and P10; none is asserted here.
+
+\subsection{Canonical parameter corollary}
+
+\begin{corollary}[Positive branches in the original canonical parameters]
+\label{cor:P02-canonical}
+Let $a,k,c,g,h>0$, $A=k+h$, and let $g_f$ be as in
+\eqref{eq:P02-gf}. If $a\le k+h$, there is one simple positive
+synchronous equilibrium exactly for $0<g<a+c$, and none for
+$g\ge a+c$. If $a>k+h$, the exact alternatives are
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Parameter range & Positive synchronous equilibria\\
+\midrule
+$0<g\le a+c$ & One simple equilibrium, $s_+\one$\\
+$a+c<g<g_f$ & Two distinct simple equilibria, $s_-\one,s_+\one$\\
+$g=g_f$ & One double equilibrium, $s_f\one$\\
+$g>g_f$ & None\\
+\bottomrule
+\end{tabular}
+\end{center}
+In particular, $a+c<g$ does not by itself preclude positive
+synchrony: two distinct positive equilibria exist if and only if
+\begin{equation}
+\label{eq:P02-two-positive-original}
+ a>k+h,\qquad
+ a+c<g<a+c+\frac{(a-k-h)^2}{4(k+h)}.
+\end{equation}
+The upper equality gives one repeated positive equilibrium when
+$a>k+h$; the lower equality gives one simple positive equilibrium
+and the origin. The origin exists in every row, independently of
+the displayed positive count. There is no dependence on $n$, $q$,
+$\gcd(n,q)$, or distinctness of the offsets.
+\end{corollary}
+
+\begin{proof}
+The sign of $b$ is the sign of $a-(k+h)$; the sign of $\mu$ is
+the sign of $a+c-g$; and $D=4A(g_f-g)$ with $A>0$.
+Substitute these identities into Theorem~\ref{thm:P02-positive}.
+\end{proof}
+
+\subsection{Weaker assumptions and limits of the classification}
+The synchronous substitution and the scalar identity require only
+homogeneity, finite real coefficients, and nonvanishing denominators.
+They therefore apply under P01's weaker assumptions as well.
+For $A>0$, the polynomial formula, discriminant, Vieta relations,
+and the positive-root alternatives of Theorem~\ref{thm:P02-positive}
+remain valid for real $a,c,g$: their positive-root proofs use only
+$A>0$. This observation is not a generalization of the canonical
+negative-root table. In particular, the domain test
+\eqref{eq:P02-domain-test} uses $a+A>0$, and the bound $s_f>-1/2$
+uses $a>0$. P01 allows real $a$ and does not supply these inequalities.
+The complete domain-filtered classification in this module is
+intentionally restricted to the canonical positive parameter regime.
+No classification for $A=0$ or $A<0$ is claimed.
+
+\subsection{Checks and possible failure points}
+\label{subsec:P02-checks}
+
+\paragraph{Root substitution and discriminant reconstruction.}
+For $D\ge0$, put $d=\sqrt D$ and
+$r=(b+\varepsilon d)/(2A)$, $\varepsilon\in\{-1,1\}$.
+Direct expansion gives
+\[
+ \mu+br-Ar^2
+ =\mu+\frac{2b(b+\varepsilon d)-(b+\varepsilon d)^2}{4A}
+ =\mu+\frac{b^2-d^2}{4A}=0.
+\]
+For $r\ne-1$, substitution in the original scalar expression gives
+\[
+ ar-kr^2+\frac{cr}{1+r}-\frac{gr}{1+r}-hr^2
+   =\frac{r}{1+r}(\mu+br-Ar^2)=0.
+\]
+Only $r>-1$ is retained as a DM equilibrium. If $r=-1$, the two
+original rational terms are undefined even when $c=g$, so no
+substitution or canceled extension admits that point.
+At $\mu=0$, the specialized root $r=b/A$ also gives
+$br-Ar^2=0$. At $D=0$, $r=s_f=b/(2A)$ gives
+$\mu+br-Ar^2=\mu+b^2/(4A)=0$. At $g=c$, the retained root
+$a/A$ gives $ar-Ar^2=0$. At $b=0$, the square-root branches give
+$\mu-Ar^2=0$. Finally, direct substitution at $r=0$ gives zero
+for every parameter tuple. These checks include every exact root
+formula displayed above, with $s_0$ in \eqref{eq:P02-local-branch}
+being one of $s_\pm$; its truncated expansion is not used as a root.
+
+Independently expanding the polynomial discriminant gives
+\[
+ (A-a)^2-4A[-(a+c-g)]
+ =a^2+2aA+A^2+4A(c-g)
+ =(a+A)^2+4A(c-g).
+\]
+Also the sum of the two explicit roots is $b/A$, and their product
+is $(b^2-D)/(4A^2)=-\mu/A$, confirming both Vieta relations.
+
+\paragraph{Exact representative cells and equality boundaries.}
+The following rational tuples realize every row of the classification.
+Set $k=h=1/2$, hence $A=1$, and $c=1$ throughout.
+All original coefficients are strictly positive. Roots are obtained
+by the formulas already proved; the counts refer to the preceding table.
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}c c c c c c@{}}
+\toprule
+Case & $a$ & $g$ & $\mu$ & $D$ & $(r,d,N_0,N_+)$\\
+\midrule
+I & $2$ & $1/2$ & $5/2$ & $11$ & $(2,1,2,1)$\\
+II & $2$ & $1$ & $2$ & $9$ & $(2,1,2,1)$\\
+III & $2$ & $2$ & $1$ & $5$ & $(2,2,2,1)$\\
+IV & $2$ & $3$ & $0$ & $1$ & $(1,1,2,1)$\\
+V & $1$ & $2$ & $0$ & $0$ & $(0,0,1,0)$\\
+VI & $1/2$ & $3/2$ & $0$ & $1/4$ & $(1,1,1,0)$\\
+VII & $1$ & $3$ & $-1$ & $-4$ & $(0,0,1,0)$\\
+VIII & $2$ & $25/8$ & $-1/8$ & $1/2$ & $(2,2,3,2)$\\
+IX & $2$ & $13/4$ & $-1/4$ & $0$ & $(1,1,2,1)$\\
+X & $1/2$ & $49/32$ & $-1/32$ & $1/8$ & $(2,2,1,0)$\\
+XI & $1/2$ & $25/16$ & $-1/16$ & $0$ & $(1,1,1,0)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Cases II, IV--VI, IX and XI test all relevant equality surfaces,
+including the simultaneous equality $a=A$, $g=a+c$.
+For $b<0,0,>0$ inside the $\mu>0$ cases, one may respectively
+take $a=1/2,1,2$, and $g=1/2,1,1+a/2$ for I, II, III.
+For all three signs of $b$ in VII, take the same three $a$ values
+and $g=g_f+1$. These choices also check that omitted sign subcases
+do not alter the counts. Internal exact-arithmetic checks supplement
+these displayed examples; they are not numerical dependencies or
+independent verification of the module.
+
+For reproducibility of that finite check, take
+$V=\{1/4,1/2,1,2,3,4\}$ and all $(a,A,c,g)\in V^4$.
+For each $(a,A,c)\in V^3$, also take
+$g\in\{c,a+c,g_f\}+\{-\eta,0,\eta\}$, where
+$\eta=\min\{a,A,c,1\}/64$. The union contains 2,868 distinct
+positive tuples. Set $k=A/3$, $h=2A/3$ for this grid; use the
+displayed $k=h=1/2$ for the eleven table examples. Exact arithmetic
+in $u+v\sqrt D$, with rational $u,v,D$, checks root residuals,
+Vieta relations, domain comparisons, and every positive-count
+equivalence and its converse. Including the eleven table examples,
+4,438 original scalar residuals vanish exactly and 217 occurrences
+of $s=-1$ are explicitly excluded. All eleven cells and all equality
+surfaces are represented. These finite checks found no counterexample;
+they supplement rather than establish the exhaustive proof.
+
+\paragraph{Boundary continuity.}
+The ordered formulas $s_\pm$ are continuous on the parameter set
+$D\ge0$, since $A>0$. At $D\downarrow0$ they both tend to $s_f$;
+for $D<0$ their absence as real roots is recorded, not bridged by
+a real continuation. At $\mu\to0$ with fixed $b>0$, they tend
+respectively to $0,b/A$; with fixed $b<0$, to $b/A,0$. With $b=0$
+and $\mu\downarrow0$, both tend to zero as in
+\eqref{eq:P02-square-root-branches}. At $g\to c$, the limits are
+$-1,a/A$; the first is excluded from the chosen domain at the boundary.
+At $b\to0$ all limits within $D\ge0$ are again given by the same
+continuous formulas. The sign-specific table is therefore compatible
+with every boundary, although admissible root counts can change there.
+
+\clearpage
+\paragraph{Logical completeness and attempted counterexamples.}
+The origin was retained before division, and every other equilibrium
+is equivalent to a nonzero root of $Q$ in $s>-1$. This proves that
+none was lost or introduced. In particular, the excluded root $-1$
+at $g=c$ and the zero root at $\mu=0$ cannot be counted as additional
+nonzero equilibria. Positivity, discriminant sign, and root order
+partition all parameter tuples as in the theorem; each implication
+in the necessary-and-sufficient statements is checked in every cell.
+The independent positive-half-line argument supplies a second check.
+Case VIII is an explicit canonical counterexample to the rejected
+claim that $a+c\le g$ rules out positive synchrony. Case IV is a
+counterexample even at equality. Case X shows that two admissible
+nonzero roots need not be positive; case XI shows that a repeated
+domain root need not be positive. Case V prevents counting a repeated
+zero as a positive equilibrium, and case II prevents admitting a
+canceled denominator root. All these distinctions are essential.
+
+\paragraph{Priority checks for the independent P02 auditor.}
+Independently reconstruct the following steps.
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+\item Componentwise substitution with coincident offsets and uniqueness
+on the maximal interval in $\Domain$.
+\item The origin before division and equivalence to $Q=0$ only for
+$s\ne0$, $s>-1$.
+\item All discriminant identities, root formulas, and Vieta relations.
+\item The smaller-root domain test at $g=c$, including exclusion of
+$s=-1$ even when the synchronous rational terms cancel.
+\item Every cell, count, and multiplicity in
+Theorem~\ref{thm:P02-complete}, including $\mu<0$ and negative roots.
+\item Both directions of every alternative in
+Theorem~\ref{thm:P02-positive} and its original-parameter corollary.
+\item The branch graph, $g_f$, $s_f$, and the simultaneous degeneracy,
+distinguishing multiplicity of $Q$ from that of $f$.
+\item All boundary limits and the quadratic coefficient in
+\eqref{eq:P02-quadratic-coefficient}.
+\item The exact representative tuples and original-equation residuals,
+including the excluded-root and double-counting tests.
+\item The scope of weaker assumptions and the absence of any stability
+or bifurcation conclusion.
+\end{enumerate}
+Internal checking and compilation do not change the DRAFT status.

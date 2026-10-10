@@ -1,0 +1,65 @@
+first_line,last_line,disposition,finding
+1,18,PASS,"Version, inputs and exclusions match the manifest; no numerical premise."
+19,31,PASS,"Spectral scope is explicit; no crossing, orbit or propagation assertion."
+32,40,PASS,Positive equilibrium and effective coefficients use the canonical domain.
+41,53,PASS,"P04 phases, signed imaginary parts and unitary diagonalization agree exactly."
+54,64,PASS,Complete representative maximizers include all ties and singleton classes.
+65,79,PASS,Reachable bound proves a genuine pair; all even sizes exclude Nyquist.
+80,96,PASS,Frequency factorization and both cosine-sign cases are exact.
+97,103,PASS,Double-angle identity and positive sine justify every equivalence.
+104,114,PASS,"Strict means one complete representative, zero real part, nonzero frequency."
+115,125,PASS,Exactly two distinct simple imaginary eigenvalues; every other label is left.
+126,139,PASS,"Finite positive gap, real dimensions and both inverse gates are correctly stated."
+140,148,PASS,Representative-to-label transfer accounts for uniform and Nyquist modes.
+149,159,PASS,Numerical simplicity follows from label exclusion and P04 multiplicity.
+160,168,PASS,Noncritical set is nonempty; both critical-value comparisons are valid.
+169,182,PASS,Same normalized Fourier column is the opposite-sign Hermitian adjoint.
+183,191,PASS,Ordered real block and signed coefficient-plane angular velocity are correct.
+192,198,PASS,Unitary diagonalization verifies the current pairing convention.
+199,205,PASS,DFT orthogonality yields equal real/imaginary norms and a real basis.
+206,214,PASS,Column signs are correct; negative signed frequency is handled explicitly.
+215,223,PASS,Critical ties fail the single-pair hypothesis; real-part ties need not be eigenvalue ties.
+224,234,PASS,Zero multiplicity is exactly the zero-label count; strict zero pair has real kernel dimension two.
+235,244,PASS,P02 equilibrium chart is exactly the P05 open physical domain.
+245,251,PASS,Diagonal simplification cancels the g terms; scalar cosine notation is distinguished.
+252,261,PASS,R_j equals the selected modal real part with all physical coefficients.
+262,272,PASS,Partial k derivative and solved graph have correct signs.
+273,280,PASS,"Regular surface retains k and a positivity, strict selection and nonzero frequency."
+281,286,PASS,Rank-two assertion is conditional on existence and correct physical transfer.
+287,301,PASS,P05 forces concavity; determinant is positive; transfer is local only.
+302,305,PASS,Branch-coordinate derivative is expressly separated from the frozen physical path.
+306,318,PASS,Frequency partials and negative nonzero two-by-two determinant are exact.
+319,334,PASS,Cell criterion uses the correct lower midpoint and strict inequality.
+335,347,PASS,Fixed vertex/state iff claim is correct; both obstruction examples are valid.
+348,361,PASS,Positive k forces w positive and z below B; all endpoints exist with correct indexing.
+362,371,PASS,Both upper bounds exceed the lower bound; small positive x gives positive k.
+372,380,PASS,Physical realization preserves effective coefficients and the equilibrium equation.
+381,388,PASS,Large G enforces a positive and avoids at most one frequency zero; no universal existence claim survives.
+389,399,PASS,P07 constants and frequency are conditional five-node inputs only.
+400,412,PASS,Exact tuple and critical state are strictly positive and physically valid.
+413,426,PASS,"All five labeled eigenvalues, individual simplicity, ordering and exact gap are correct."
+427,434,PASS,Second root lies strictly between zero and one.
+435,442,PASS,Exact positivity and original-model residual are checked before spectral reduction.
+443,452,PASS,Effective data and raw diagonal formula agree independently.
+453,465,PASS,Radical real parts and strict noncritical difference are correct; table corroboration is redundant.
+466,474,PASS,Frequency signs and exact positive bounds yield the complete complex spectrum.
+475,484,PASS,P02 polynomial factors exactly; no P10 input is used.
+485,492,PASS,Positive lower root and discriminant establish the upper-root identification.
+493,504,PASS,Frozen g-path and unique local root near one are accurately scoped.
+505,514,PASS,"Explicit vector uses positive exponents, normalized pairing and correct adjoint sign."
+515,526,PASS,Real block and both spectral-projector inverse sums are correct.
+527,534,PASS,Mode-zero and mode-two denominators have exact values and are nonzero.
+535,545,PASS,At X=1 the bracket derivative equals lambda_0; local positivity and root ordering persist.
+546,555,PASS,Vector and denominator proofs introduce no tensors or nonlinear conventions.
+556,563,PASS,H1-H2 are proved physical and original-field assertions.
+564,565,PASS,H3 is local smooth upper-branch existence only.
+566,569,PASS,"H4-H6 assert the exact pair, individual simplicity and stable gap."
+570,571,PASS,H7-H8 are exactly the two proved spectral exclusions.
+572,573,PASS,"H9 records established vectors, pairing and plane orientation."
+574,575,PASS,H10 explicitly leaves transversality and path derivatives unestablished.
+576,577,PASS,H11 explicitly leaves Lyapunov and nonlinear nondegeneracy unestablished.
+578,580,PASS,"H12 withholds periodic orbits, branch stability and rotating waves."
+581,587,PASS,Ledger references correctly distinguish results from exclusions.
+588,592,PASS,Exact nonemptiness is analytical; computation is corroboration and C073 is unused.
+593,596,PASS,B02/B06 spectral choices are scoped; B07 nonlinear normalization stays with P13.
+597,600,PASS,First loss/open nonlinear regime remains unproved; proposed note is separate and frozen files untouched.

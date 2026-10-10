@@ -1,0 +1,426 @@
+% EDITION: citation-based shortening, 4 October 2026.
+% Earlier audits refer to the source edition; this revision has not been independently audited.
+\section{P07: Five-node golden-ratio specialization}
+\label{sec:P07}
+This is a corollary package for the P03--P05 demand-modulated
+results. The direct dependency remains $\mathrm{P05}\to\mathrm{P07}$;
+P03--P04 and the P01--P02 equilibrium foundation are inherited.
+P08 is present in the current project but supplies no theorem used here.
+
+Fix $a,k,c,g,h>0$ in the canonical model
+\begin{equation}
+ \dot x_i=ax_i-kx_i^2+\frac{cx_{i-1}}{1+x_i}
+       -\frac{gx_i}{1+x_{i+2}}-hx_ix_{i-2},\qquad i\in\Z_5.
+ \label{eq:P07-model}
+\end{equation}
+Let $x^*\one$, $x^*>0$, be a specified synchronous equilibrium. Write
+\begin{equation}
+ s=1+x^*>1,\quad C=\frac cs>0,\quad G=\frac{gx^*}{s^2}>0,
+ \quad H=hx^*>0,\quad T=G-H,\quad S=G+H.
+ \label{eq:P07-coefficients}
+\end{equation}
+Here $s$ denotes the denominator, not P02's scalar state variable;
+$S$ is local to P07 and denotes effective DM coefficients, not the
+physical sum $g+h$ used locally in P08. We use $D_5:=H-G=-T$,
+leaving P02's discriminant $D$ unchanged. The symbols $\omega_1,\omega_2$
+below are signed imaginary parts, not a reserved positive Hopf frequency.
+By P02 and P03,
+\begin{align}
+ a-(k+h)x^*+\frac{c-g}{s}&=0,\label{eq:P07-equilibrium}\\
+ d&=a-2kx^*-\frac{cx^*}{s^2}-\frac gs-hx^*
+   =-kx^*-C-\frac{Cx^*}{s}.\label{eq:P07-d}
+\end{align}
+The last equality uses equilibrium and will only be used when stated.
+
+\subsection{Exact fifth-root constants and Fourier spectrum}
+\label{slot:P07-1}
+\begin{lemma}[Golden-ratio trigonometry]
+\label{lem:P07-trig}
+Set
+\begin{equation}
+ \phi=\frac{1+\sqrt5}{2},\qquad
+ u_1=\cos\frac{2\pi}{5},\qquad u_2=\cos\frac{4\pi}{5},\qquad
+ \sigma=\sin\frac\pi5.
+ \label{eq:P07-constants}
+\end{equation}
+Then
+\begin{gather}
+ \phi^2=\phi+1,\quad \phi^{-1}=\phi-1,\quad
+ \phi^{-2}=2-\phi=\frac{3-\sqrt5}{2},\quad
+ \phi+\phi^{-1}=\sqrt5,\label{eq:P07-phi}\\
+ u_1=\frac{\sqrt5-1}{4}=\frac1{2\phi},\qquad
+ u_2=-\frac{\sqrt5+1}{4}=-\frac\phi2,\qquad
+ u_1-u_2=\frac{\sqrt5}{2},\label{eq:P07-cosines}\\
+ \sigma=\frac{\sqrt{10-2\sqrt5}}4>0,\qquad
+ \sin\frac{2\pi}{5}=\phi\sigma
+       =\frac{\sqrt{10+2\sqrt5}}4.\label{eq:P07-sines}
+\end{gather}
+\end{lemma}
+\begin{proof}
+These are the exact fifth-root trigonometric values; substituting
+$\phi=(1+\sqrt5)/2$ verifies the displayed identities.
+\end{proof}
+
+
+There are three representative classes, $\{0\}$, $\{1,4\}$ and
+$\{2,3\}$. Substitute the constants above into P04 with
+$\theta_m=2\pi m/5$.
+
+\begin{theorem}[Exact five-node Fourier spectrum]
+\label{thm:P07-spectrum}
+The five eigenvalues, with their Fourier labels and algebraic
+multiplicities retained, are
+\begin{align}
+ \lambda_0&=d+C+T,\label{eq:P07-spectrum}\\
+ \lambda_1&=d+\frac{C}{2\phi}-\frac{\phi T}{2}
+                +\ii\sigma(S-\phi C),\nonumber\\
+ \lambda_2&=d-\frac{\phi C}{2}+\frac{T}{2\phi}
+                -\ii\sigma(C+\phi S),\nonumber\\
+ \lambda_4&=\overline{\lambda_1},\qquad
+ \lambda_3=\overline{\lambda_2}.\nonumber
+\end{align}
+In particular the three real-part classes are
+\begin{equation}
+ r_0=d+C+T,\qquad
+ r_1=d+\frac{C}{2\phi}-\frac{\phi T}{2},\qquad
+ r_2=d-\frac{\phi C}{2}+\frac{T}{2\phi}.
+ \label{eq:P07-real}
+\end{equation}
+Here $r_1=\Ree\lambda_1=\Ree\lambda_4$ and
+$r_2=\Ree\lambda_2=\Ree\lambda_3$.
+\end{theorem}
+\begin{proof}
+Specialize \eqref{eq:P04-real}--\eqref{eq:P04-imag} to $n=5,q=2$
+using Lemma~\ref{lem:P07-trig}; the remaining labels follow by conjugacy.
+\end{proof}
+
+\subsection{Complete ordering and the dominant-mode switch}
+\label{slot:P07-2}
+\begin{theorem}[Complete ordering of the three real-part classes]
+\label{thm:P07-ordering}
+Set $t=T/C$, which is well defined since $C>0$. The exact differences are
+\begin{align}
+ r_1-r_2&=\frac{\sqrt5}{2}(C-T)
+              =\frac{\sqrt5 C}{2}(1-t),\label{eq:P07-gaps}\\
+ r_0-r_1&=\frac{\sqrt5\phi}{2}
+                    \left(T+\frac{C}{\phi^2}\right)
+              =\frac{\sqrt5\phi C}{2}(t+\phi^{-2}),\nonumber\\
+ r_0-r_2&=\frac{\sqrt5}{2\phi}(T+\phi^2 C)
+              =\frac{\sqrt5 C}{2\phi}(t+\phi^2).\nonumber
+\end{align}
+Consequently the following table is exhaustive, including all equalities:
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l l l@{}}
+\toprule
+Condition&Ordering&Tie type\\
+\midrule
+$t>1$&$r_0>r_2>r_1$&none\\
+$t=1$&$r_0>r_1=r_2$&subdominant\\
+$-\phi^{-2}<t<1$&$r_0>r_1>r_2$&none\\
+$t=-\phi^{-2}$&$r_0=r_1>r_2$&dominant\\
+$-\phi^2<t<-\phi^{-2}$&$r_1>r_0>r_2$&none\\
+$t=-\phi^2$&$r_1>r_0=r_2$&subdominant\\
+$t<-\phi^2$&$r_1>r_2>r_0$&none\\
+\bottomrule
+\end{tabular}
+\end{center}
+Ordering is independent of $d$. No triple tie of real-part classes occurs.
+\end{theorem}
+\begin{proof}
+Subtract the three expressions in \eqref{eq:P07-real} and use
+$\phi^2=\phi+1$. The positive prefactors in \eqref{eq:P07-gaps}
+and the strict ordering $-\phi^2<-\phi^{-2}<1$ give every row.
+Their three distinct zeros exclude a triple tie.
+\end{proof}
+
+\begin{corollary}[Exact golden-ratio selection threshold]
+\label{cor:P07-selection}
+The dominant representative set and the full selected Fourier-label set are
+\begin{equation}
+\begin{array}{c|c|c}
+\text{Condition}&\text{Representatives}&\text{Labels}\\\hline
+D_5/C<\phi^{-2}&\{0\}&\{0\}\\
+D_5/C=\phi^{-2}&\{0,1\}&\{0,1,4\}\\
+D_5/C>\phi^{-2}&\{1\}&\{1,4\}.
+\end{array}
+\label{eq:P07-selection}
+\end{equation}
+Pair $\{2,3\}$ is never dominant at a canonical positive synchronous
+ equilibrium. The unique dominant-class switch is
+\begin{equation}
+ \boxed{H-G=\frac{C}{\phi^2},\qquad
+         \frac{H-G}{C}=\frac{3-\sqrt5}{2}.}
+ \label{eq:P07-switch}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:P05-selection} with
+$\beta_0=\phi^2/4$ and $\beta_1=-1/4$, or read the maxima
+in Theorem~\ref{thm:P07-ordering}.
+\end{proof}
+
+
+The five-node midpoint and control values are
+\begin{equation}
+ \beta_0=\frac{\phi^2}{4},\quad\beta_1=-\frac14,
+ \quad\alpha_0=\frac4{\phi^2}=6-2\sqrt5.
+ \label{eq:P07-midpoints}
+\end{equation}
+\begin{equation}
+ \chi=\frac{4(H-G)}C,\qquad
+ \chi\lessgtr\frac4{\phi^2}\ \Longleftrightarrow\
+ \text{strict selection of representative }0\text{ or }1,
+ \label{eq:P07-chi}
+\end{equation}
+respectively; equality selects both, as in \eqref{eq:P07-selection}.
+
+\paragraph{Canonical switch surface and the equilibrium constraint.}
+Since $D_5=x^*(h-g/s^2)$, solving \eqref{eq:P07-switch} gives
+\begin{equation}
+ \boxed{h=\frac{g}{(1+x^*)^2}
+            +\frac{c}{\phi^2(1+x^*)x^*}.}
+ \label{eq:P07-canonical-switch}
+\end{equation}
+The divisions are valid because $x^*,s,\phi,C$ are positive.
+The equilibrium relation \eqref{eq:P07-equilibrium} must hold
+simultaneously. Thus this equation describes a switch on the positive
+branch-state manifold; $x^*$ cannot be prescribed independently of
+a fixed physical tuple. The corresponding strict inequalities in $h$
+at that equilibrium give uniform or pair-1 selection, respectively.
+P05 already supplies regularity and local realizability of this switch.
+
+\paragraph{The other golden-ratio equality surfaces.}
+At $t=1$, equivalently $G-H=C$, one has $r_1=r_2$ but
+$r_0-r_1=r_0-r_2=5C/2>0$. At $t=-\phi^2$, equivalently
+$H-G=\phi^2C$, one has $r_0=r_2$ but
+$r_1-r_0=r_1-r_2=5\phi C/2>0$.
+These values follow from \eqref{eq:P07-gaps} and $\phi^2=\phi+1$.
+Both are subdominant real-part ties, not dominant-mode switches.
+No equality of complex numerical eigenvalues is implied by either tie.
+
+\subsection{Frequencies, intersection, and numerical eigenvalue equality}
+\begin{proposition}[Signed imaginary parts and frequency degeneracy]
+\label{prop:P07-frequency}
+At positive synchrony,
+\begin{equation}
+ \omega_1:=\Imm\lambda_1=\sigma(S-\phi C),\qquad
+ \omega_2:=\Imm\lambda_2=-\sigma(C+\phi S)<0.
+ \label{eq:P07-frequency}
+\end{equation}
+Pair $\{2,3\}$ is always nonreal. Pair $\{1,4\}$ is nonreal
+if and only if $S\ne\phi C$. At the spectral locus
+\begin{equation}
+ \boxed{G+H=\phi C,}\label{eq:P07-frequency-locus}
+\end{equation}
+one has $\lambda_1=\lambda_4=r_1$, a repeated real numerical
+ eigenvalue represented by two Fourier labels. All numerical eigenvalues
+are semisimple; any further coincident label is counted separately below.
+\end{proposition}
+\begin{proof}
+The imaginary terms were derived directly in Theorem~\ref{thm:P07-spectrum}.
+Since $\sigma,C,S,\phi>0$, $\omega_2$ is strictly negative, while
+$\omega_1=0$ is equivalent to $S=\phi C$. Conjugacy then proves
+all reality assertions. Semisimplicity is
+Proposition~\ref{prop:P04-multiplicity}, which does not assume distinct
+ numerical eigenvalues. These assertions classify spectra only.
+\end{proof}
+
+\begin{proposition}[Intersection with the dominant-mode switch]
+\label{prop:P07-intersection}
+The switch and the frequency-degeneracy locus intersect in the strictly
+positive coefficient domain exactly at
+\begin{equation}
+ \boxed{\frac GC=\frac1\phi,\qquad \frac HC=1.}
+ \label{eq:P07-intersection}
+\end{equation}
+They define a nonempty codimension-two spectral locus in $(C,G,H)>0$,
+and locally on the canonical positive equilibrium branch. At that locus
+\begin{equation}
+ \lambda_0=\lambda_1=\lambda_4=d+\frac C\phi
+   =-kx^*-\frac{Cx^*}{s}-\frac{C}{\phi^2}<0.
+ \label{eq:P07-triple}
+\end{equation}
+This numerical eigenvalue is semisimple of multiplicity three, and
+$r_2<r_0$. In particular the full linearization is Hurwitz there.
+This is a spectral codimension statement, not a bifurcation classification.
+\end{proposition}
+\begin{proof}
+Adding and subtracting $H-G=C\phi^{-2}$ and $G+H=\phi C$ gives
+\[
+ \frac GC=\frac{\phi-\phi^{-2}}2=\phi-1=\phi^{-1},\qquad
+ \frac HC=\frac{\phi+\phi^{-2}}2=1.
+\]
+Both are positive. The gradients in $(G,H)$ of
+$H-G-C/\phi^2$ and $G+H-\phi C$ have determinant $-2$, so the
+two linear conditions are independent. For a canonical witness take
+\begin{equation}
+ x^*=1,\qquad (a,k,c,g,h)=(\sqrt5,1,2,4/\phi,1).
+ \label{eq:P07-intersection-witness}
+\end{equation}
+The equilibrium bracket equals $\sqrt5-2+(2-4/\phi)/2=0$,
+using $1+2/\phi=\sqrt5$. The effective coefficients are
+$C=1,G=\phi^{-1},H=1$.
+
+For the local branch assertion use P05's verified equilibrium chart
+$(x,k,c,g,h)\mapsto((k+h)x-(c-g)/(1+x),k,c,g,h)$.
+Its determinant is positive wherever $H-G>0$; the intersection lies
+in that regime. At fixed $x,k,c$, the two constraint gradients in
+$(g,h)$ have determinant $-2x^2/(1+x)^2\ne0$.
+The chart therefore transfers their independent codimension-two
+conditions locally to physical parameters on the specified branch.
+There is no claim about a parameter-path crossing or an unfolding.
+
+At the intersection, conjugacy, $\omega_1=0$, and $r_0=r_1$
+give the triple value. Substitute \eqref{eq:P07-d} and
+$1-\phi^{-1}=\phi^{-2}$ for its strict negativity.
+The ordering table gives $r_2<r_0$; $\omega_2<0$ keeps labels 2 and 3
+distinct from the real value and from each other. P04 counts precisely
+three independent Fourier eigenvectors for the triple value.
+\end{proof}
+
+\begin{proposition}[Complete numerical coincidence classification]
+\label{prop:P07-coincidences}
+Under the stated positive-equilibrium assumptions, the only numerical
+ eigenvalue coincidences are as follows:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item If $S\ne\phi C$, all five numerical eigenvalues are distinct.
+\item If $S=\phi C$ and $T\ne-C/\phi^2$, only
+$\lambda_1=\lambda_4$ coincide; their real value has multiplicity two.
+\item If $S=\phi C$ and $T=-C/\phi^2$, exactly
+$\lambda_0=\lambda_1=\lambda_4$ coincide as in
+\eqref{eq:P07-triple}; their value has multiplicity three.
+\end{enumerate}
+All multiplicities are algebraic and geometric. Labels 2 and 3 always
+give distinct, simple numerical eigenvalues, sharing no value with any
+other label. Every nonreal pair-1 eigenvalue is simple.
+\end{proposition}
+\begin{proof}
+Within pairs, \eqref{eq:P07-frequency} proves that labels 1 and 4
+coincide exactly when $S=\phi C$, while labels 2 and 3 never coincide.
+The real $\lambda_0$ cannot equal either nonreal pair-2 eigenvalue.
+Equality between $\lambda_0$ and a pair-1 label requires both
+$r_0=r_1$ and $\omega_1=0$, exactly the intersection just analyzed.
+
+A cross-pair numerical equality requires $r_1=r_2$, hence $T=C$.
+Then $G=H+C$ and $S=C+2H>C$. At this real-part tie,
+\begin{align*}
+ \omega_1-\omega_2
+    &=\sigma[(1+\phi)S-(\phi-1)C]>0,\\
+ -\omega_2-\omega_1
+    &=\sigma[(1+\phi)C+(\phi-1)S]>0.
+\end{align*}
+For the first inequality use $S>C$ and
+$(1+\phi)-(\phi-1)=2$; the second has strictly positive summands.
+Thus $\omega_2<\omega_1<-\omega_2$, so
+$\omega_1$ is neither $\omega_2$ nor $-\omega_2$; conjugating
+excludes all four possible cross-pair equalities. This exhausts all
+unordered label pairs. P04 then gives the asserted multiplicities.
+\end{proof}
+The frequency-degeneracy locus itself has $-\phi<t<\phi$, since
+$G,H>0$ imply $|T|<S$. It can intersect the subdominant tie $t=1$
+without a cross-pair coincidence, but cannot intersect $t=-\phi^2$.
+Equal real parts, repeated real values, and distinct nonreal conjugates
+are consequently kept separate throughout.
+
+\subsection{Exact stability test and critical-mode ledger}
+\begin{corollary}[Piecewise five-node linear stability]
+\label{cor:P07-stability}
+The linearization is exponentially asymptotically stable exactly when
+\begin{equation}
+ \max\{r_0,r_1,r_2\}<0
+ \quad\Longleftrightarrow\quad
+ \begin{cases}
+ r_0<0,&t>-\phi^{-2},\\
+ r_0=r_1<0,&t=-\phi^{-2},\\
+ r_1<0,&t<-\phi^{-2}.
+ \end{cases}
+ \label{eq:P07-stability}
+\end{equation}
+The middle row means that the common value must be negative. At canonical
+positive equilibria on that tie it is automatically negative:
+\begin{equation}
+ r_0=r_1=-kx^*-\frac{Cx^*}{s}-\frac{C}{\phi^2}<0.
+ \label{eq:P07-stable-tie}
+\end{equation}
+\end{corollary}
+\begin{proof}
+P04 Corollary~\ref{cor:P04-stability} gives the strict all-mode test;
+Theorem~\ref{thm:P07-ordering} gives its piecewise maximum.
+At the dominant tie, substitute $T=-C/\phi^2$ and
+\eqref{eq:P07-d} into $r_0=d+C+T$.
+\end{proof}
+If the maximum is zero, P04 implies that the normal linear system is
+Lyapunov stable but not asymptotically stable. This does not settle
+nonlinear stability or establish a bifurcation. A strictly positive
+maximum means linear instability. The dominant tie cannot itself be a
+zero-abscissa boundary in the canonical domain, by
+\eqref{eq:P07-stable-tie}.
+
+\begin{proposition}[Fixed-state critical-mode ledger]
+\label{prop:P07-ledger}
+Only the following classes can attain the spectral abscissa; this is a
+fixed-state eligibility ledger, not a first-instability theorem.
+\begin{center}
+\begin{tabular}{@{}l l l@{}}
+\toprule
+Class&Eligibility for the maximum&Signed imaginary part\\
+\midrule
+$0$&$t\ge-\phi^{-2}$&$0$\\
+$\{1,4\}$&$t\le-\phi^{-2}$&$\pm\sigma(S-\phi C)$\\
+$\{2,3\}$&never&$\mp\sigma(C+\phi S)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+At a zero-abscissa state, the inequalities in the first two rows must
+be strict, because the shared boundary is strictly stable.
+If $r_2=0$, some other class has strictly positive real part, so pair 2
+cannot be the sole or tied controlling class of a stability boundary.
+No oriented parameter path, prior stability, or crossing is asserted.
+\end{proposition}
+\begin{proof}
+The eligibility and exclusions are precisely
+Corollary~\ref{cor:P07-selection}. At every point at least one of
+$r_0,r_1$ exceeds $r_2$ strictly. The zero-abscissa statements follow
+from that strict comparison and \eqref{eq:P07-stable-tie}.
+\end{proof}
+
+\subsection{Realizability checks, downstream inputs, and scope}
+\paragraph{All ordering regions have canonical representatives.}
+For any $C,G,H>0$, the following single construction gives a canonical
+positive equilibrium with those exact effective coefficients:
+\begin{equation}
+ x^*=1,\quad k=C,\quad c=2C,\quad g=4G,\quad h=H,
+ \quad a=H+2G>0,\quad d=-\frac{5C}{2}.
+ \label{eq:P07-realization}
+\end{equation}
+Indeed \eqref{eq:P07-equilibrium} becomes
+$H+2G-(C+H)+(2C-4G)/2=0$. Every original component equals
+$x^*$ times that zero bracket. For any real $t$, take $C=1$,
+$G=1+\max(t,0)$ and $H=1+\max(-t,0)$. Then $G-H=t$ and both
+coefficients are positive. Thus no row of the ordering table is merely
+an unattached-coefficient possibility. This elementary five-node check
+uses no MB comparison or new general selection theorem.
+
+\paragraph{Exact inputs available to P11.}
+The unique nonuniform dominant class, when present, is $\{1,4\}$.
+Its signed imaginary part is $\sigma(S-\phi C)$, and its exact
+nonzero-frequency condition is $S\ne\phi C$. Whenever pair 1 is
+maximal, $r_2<r_1$ strictly, including the uniform/pair-1 dominant tie.
+When pair 1 is uniquely dominant, $r_0<r_1$ as well.
+Every nonreal pair-1 eigenvalue is simple; pair 2 never coincides
+numerically with another label. The only uniform/pair-1 numerical
+coincidence is the strictly stable triple value
+\eqref{eq:P07-triple}; more generally the entire dominant tie is
+strictly stable. These are exact spectral inputs, without a Hopf
+existence or first-crossing conclusion. No transversality, crossing
+derivative, Lyapunov coefficient, normal form, periodic orbit, or rotating
+wave is analyzed here; Later sections address their own hypotheses.
+
+\begin{remark}[Golden ratio is network geometry]
+\label{rem:P07-geometry}
+The constants $\phi$ and $\sigma$ arise solely from the fifth roots of
+unity and the five-node Fourier grid. They establish no physiological
+golden-ratio law, biological optimum, medical significance, or empirical
+TCM validation. P07 is a supporting specialization of the general program, not standalone golden-ratio novelty. 
+\end{remark}

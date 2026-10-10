@@ -1,0 +1,112 @@
+{
+  "project_manifest.md": {
+    "sha256": "a4658ef7b17b64fbb43825bfa1cd035df07efa1fb72141f9c9fea02dd1c28830",
+    "bytes": 86494,
+    "lines": 451
+  },
+  "claim_registry.md": {
+    "sha256": "12c106cf55d789d840329a2f5f4e80e1a54163707d4d4286fd387bbefeb149ee",
+    "bytes": 92791,
+    "lines": 465
+  },
+  "frozen_theorem_package.md": {
+    "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63",
+    "bytes": 9729,
+    "lines": 69
+  },
+  "final_novelty_verdict.md": {
+    "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea",
+    "bytes": 6511,
+    "lines": 37
+  },
+  "novelty_decisions.md": {
+    "sha256": "8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e",
+    "bytes": 19241,
+    "lines": 124
+  },
+  "02_theorem_dependency_map.tex": {
+    "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac",
+    "bytes": 9372,
+    "lines": 145
+  },
+  "00_canonical_model.tex": {
+    "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4",
+    "bytes": 3712,
+    "lines": 74
+  },
+  "01_notation_and_assumptions.tex": {
+    "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+    "bytes": 5152,
+    "lines": 103
+  },
+  "proofs_compendium.tex": {
+    "sha256": "d1b9c83900c027edffa9c1fde6088546c43cd37750e602636668b0abd53eb09a",
+    "bytes": 5807,
+    "lines": 124
+  },
+  "shared_macros.tex": {
+    "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad",
+    "bytes": 1281,
+    "lines": 35
+  },
+  "proofs/P01_wellposedness_and_absorbing_box.tex": {
+    "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+    "bytes": 22570,
+    "lines": 520,
+    "body_sha256": "a640b2bf9a160feed273dc667c6b44a6923a1d68d6dd81acd35640cc0e4d5808",
+    "body_hash_in_header": true,
+    "full_hash_in_manifest": true
+  },
+  "audits/A01_wellposedness_and_absorbing_box.tex": {
+    "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098",
+    "bytes": 48622,
+    "lines": 974
+  },
+  "proofs/P02_synchronous_subspace_and_equilibria.tex": {
+    "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+    "bytes": 26905,
+    "lines": 610,
+    "body_sha256": "8a061ba81c7ffd2d05b188b9fca4ec1b94bc132147f7f664c8523f0a5f32560c",
+    "body_hash_in_header": true,
+    "full_hash_in_manifest": true
+  },
+  "audits/A02_synchronous_subspace_and_equilibria.tex": {
+    "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac",
+    "bytes": 37895,
+    "lines": 847
+  },
+  "proofs/P03_origin_and_linearization.tex": {
+    "sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e",
+    "bytes": 19857,
+    "lines": 447,
+    "body_sha256": "07d76c8ce0b5232827e9f2c74245188b55b0ce0d1732b3cb2e528d69e8d6b50a",
+    "body_hash_in_header": true,
+    "full_hash_in_manifest": true
+  },
+  "audits/A03_origin_and_linearization.tex": {
+    "sha256": "e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1",
+    "bytes": 37700,
+    "lines": 692
+  },
+  "proofs/P04_arbitrary_nq_fourier_spectrum.tex": {
+    "sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58",
+    "bytes": 26980,
+    "lines": 590,
+    "body_sha256": "3e3d58230c87af3b5f07069d61065362dc081d172ad3b236057fefda25fa5653",
+    "body_hash_in_header": true,
+    "full_hash_in_manifest": true
+  },
+  "audits/A04_arbitrary_nq_fourier_spectrum.tex": {
+    "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869",
+    "bytes": 47595,
+    "lines": 832
+  },
+  "proofs/P05_q2_mode_selection.tex": {
+    "sha256": "b7123736242554bd7fc1f6a56d8788b6c5413a25930e5360d7ea5babe44184d4",
+    "bytes": 26848,
+    "lines": 591,
+    "body_sha256": "25ab3e4ed5d871ab2884210e6d8e7f3631acee3f7a1c662d3c33de441048810d",
+    "body_hash_in_header": false,
+    "full_hash_in_manifest": false
+  }
+}

@@ -1,0 +1,29 @@
+% STATUS: conditional framework; outstanding model-specific work is explicit.
+\section{P18: Stability radius and Hopf shift (unfinished application)}
+\label{sec:P18}
+\subsection{Moving Jacobian}\label{slot:P18-1}
+For P15's specified family set
+$E(\eps)=D_xF(x^*(\eps),\eps)-J_0$. Bounds must include both direct
+coefficient variation and equilibrium motion; these estimates are absent
+from the supplied outline.
+\subsection{Sufficient stability radius}\label{slot:P18-2}
+If $J_0$ is normal and Hurwitz, put $\gamma=-\sa(J_0)>0$.
+The normal-matrix perturbation inclusion
+\cite[\S1 and Theorem~$4_\eps$]{EmbreeTrefethen2001} guarantees
+stability for $\|E(\eps)\|_2<\gamma$, even when the perturbed matrix
+is nonnormal. Turning this into a physical parameter radius requires
+an explicit bound on $E$; it is not a sharp structured-radius assertion.
+\subsection{Simple eigenvalue and threshold shift}\label{slot:P18-3}
+Separately, at a simple transverse Hopf point of an analytic family,
+\cite[Theorem~1]{GreenbaumLiOverton2020} and the implicit-function
+theorem give
+\[
+ g_H'(0)=-\frac{\Ree[p^*J_\eps v]}{\Ree[p^*J_gv]},\qquad
+ p^*v=1,\quad\Ree[p^*J_gv]\ne0.
+\]
+Here $J_\eps,J_g$ differentiate the Jacobian evaluated at the moving
+equilibrium. These are not derivatives with the equilibrium frozen.
+\subsection{Remaining Hopf conditions}\label{slot:P18-4}
+Verify the family's regularity, remaining spectral gap, crossing and
+first-Lyapunov-coefficient nondegeneracy. A spectral threshold shift alone
+does not establish a nonlinear Hopf bifurcation.

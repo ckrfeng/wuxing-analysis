@@ -1,0 +1,15 @@
+{
+  "equilibrium_matrix_cases": 271,
+  "exact_equilibrium_families": 11,
+  "selection_cell_tie_cases": 280,
+  "collision_complexstep_cases": 28,
+  "maximum_inequality_cases": 198,
+  "derivation": {
+    "base_dimensions": 28,
+    "reverse_sizes": 7,
+    "lower_sizes": 21,
+    "additional_rational_cases": 15,
+    "all_pairs_5_through_16": 158,
+    "distinct_collision_dimension_offsets": 14
+  }
+}

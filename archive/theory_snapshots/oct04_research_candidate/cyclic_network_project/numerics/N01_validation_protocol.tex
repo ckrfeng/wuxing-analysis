@@ -1,0 +1,50 @@
+% STATUS: TODO; protocol only; no numerical experiment has been run.
+\section{N01: Independent validation protocol}
+Every check below is a future task. Before execution, record the model version,
+claim IDs, formula version, verified proof dependencies and acceptance criteria.
+Choose scale-aware error measures and tolerances in advance; do not invent a
+pass threshold after seeing a result. Numerical agreement does not prove a theorem.
+\begin{enumerate}[label=V\arabic*.]
+\item \textbf{Analytic Jacobian versus finite differences.} Implement the
+vector field independently of the analytic Jacobian. Use several perturbation
+steps and scales, interiors and allowed boundaries, and test coincident offsets
+at $q=1$, $q=n-1$ and even $n$ with $q=n/2$. Gate: P03; P08 for MB.
+\item \textbf{Equilibrium residuals.} Record both absolute and scaled residuals,
+branch labels and admissibility. Test origin, all synchronous branches and
+near-fold cases; later test heterogeneous equilibria. Gates: P02, P08, P15.
+\item \textbf{Direct eigendecomposition versus Fourier eigenvalues.} Match
+unordered spectra with multiplicity; check real and imaginary parts,
+conjugacy, even-$n$ singleton modes, ties, and $\gcd(n,q)>1$. Gate: P04;
+P05--P08 for selection and comparison.
+\item \textbf{Symmetry/equivariance tests.} Test the homogeneous vector field
+and Jacobian against the fixed group action and the synchronous restriction;
+later test exact wave phase relations. Gates: P02--P04 and P14.
+\item \textbf{Continuation versus direct simulation.} Compare stable equilibrium
+and periodic branches, periods and amplitudes. For unstable branches use
+residuals and variational/Floquet checks; lack of convergence in forward
+simulation is not a branch validation. Gates: P09--P14 as applicable.
+\item \textbf{First Lyapunov coefficient from two independent implementations.}
+Use independently assembled tensors or derivative methods and a separate
+normal-form implementation. Record all inner-product, scaling, frequency,
+factorial and software conventions. Shared code paths do not count as
+independence. Reconcile magnitudes as well as signs. Gate: P13.
+\item \textbf{Convergence under tighter tolerances.} Refine integration steps,
+relative/absolute tolerances, continuation mesh, arithmetic precision, finite
+difference increments and sampling horizons as appropriate. Record convergence
+of each reported observable; a default tolerance is not evidence.
+\item \textbf{Reproducibility and software-version recording.} Archive exact
+versions, dependency lockfiles, operating system, precision, solver choices,
+seeds, parameters, initial data, time horizons, continuation controls, raw
+outputs, figure scripts and code/version hashes. A fresh environment must
+reproduce outputs within the predeclared tolerance.
+\item \textbf{Additional theorem-specific checks.} Boundary-face and box tests
+after P01; tensor derivatives and transversality after P12--P13; Floquet
+multipliers and phase shifts after P14; first-order remainder rates and Green
+kernels after P15--P16; transient and harmonic responses after P17; stability
+bounds and threshold shifts after P18. Record tests near failure modes.
+\end{enumerate}
+\subsection{Per-check result form to fill later}
+Claim and theorem version; independent implementation identifiers; inputs;
+observable and norm; predicted result; predeclared tolerance; measured error;
+refinement table; pass/fail/unresolved; failure diagnosis; reviewer and date.
+No field contains a computed result at initialization.

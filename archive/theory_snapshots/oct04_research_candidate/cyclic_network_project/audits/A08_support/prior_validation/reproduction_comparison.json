@@ -1,0 +1,7 @@
+{
+  "counts_match_independent_expectations": true,
+  "summary_exact_equality": true,
+  "differing_summary_fields": {},
+  "all_results_exact_json_equality": true,
+  "source_error_E01_not_checked_by_prior_code": true
+}

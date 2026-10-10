@@ -1,0 +1,94 @@
+{
+  "id": "zip-WuXing_Verified_Figures_and_Reproduction-ae9ad423e689",
+  "status": "Superseded pre-cleanup snapshot",
+  "origins": [
+    "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "README.txt",
+      "retained_destination": "archive/superseded_pre_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/README.txt",
+      "sha256": "6543d448077c5956c3bf155269c8d3ee4d6a9cbc00dabf3d866fc18ed1ba3e66",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/README.txt",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "audit.py",
+      "retained_destination": "archive/superseded_pre_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/audit.py",
+      "sha256": "d985c62d8e704ea1b03064009160c131e373e0fba8cabecd08be03565a561b7c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/audit.py",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/audit_results.json",
+      "retained_destination": "archive/superseded_pre_cleanup/audit_results.json",
+      "sha256": "3b0c7dc7ed07199be23337cbfb6e97a48ccd064ea4bcb277af21a1ad0d1eb8f5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/audit_results.json",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/01_baseline_eigenvalues.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure1.png",
+      "sha256": "64d5750ced549dfffc2039c0dc938ad918403d6c9a88545b43372b8df44258c1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/01_baseline_eigenvalues.png",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/01_baseline_eigenvalues.svg",
+      "retained_destination": "reproduction/audit/outputs/verified_figures/01_baseline_eigenvalues.svg",
+      "sha256": "ecca7d957174d17bc68dc702b0b64822f9c326e9621d0c0ae63c3ec9aa90b1f1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/01_baseline_eigenvalues.svg",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/02_perturbation_recovery.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure2.png",
+      "sha256": "f6e435e61606fa15fc06a0f2b8a5f9627bfd3dfb037d69ca4337a84ac28f0964",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/02_perturbation_recovery.png",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/02_perturbation_recovery.svg",
+      "retained_destination": "reproduction/audit/outputs/verified_figures/02_perturbation_recovery.svg",
+      "sha256": "11d15eb0f983aa15fbb8e8578f49d8882228633ffdba17579364147be7944946",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/02_perturbation_recovery.svg",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/03_corrected_stability_maps.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure3.png",
+      "sha256": "70ed74b713279587b7d68bb492c5e5b03bc3f048e7d7f55ef81d5091540db059",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/03_corrected_stability_maps.png",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/03_corrected_stability_maps.svg",
+      "retained_destination": "reproduction/audit/outputs/verified_figures/03_corrected_stability_maps.svg",
+      "sha256": "6dab6da9214720e502697af258fc23e14e71031a7a73a0f5091fcd4b66a406ec",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/03_corrected_stability_maps.svg",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/04_sampling_denominators.png",
+      "retained_destination": "manuscripts/preliminary/figures/figure4.png",
+      "sha256": "29e52577e777fe239f1e4e720b4e638008fd13d382e48be44cc7e7a33aa9b2a5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/04_sampling_denominators.png",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "outputs/verified_figures/04_sampling_denominators.svg",
+      "retained_destination": "reproduction/audit/outputs/verified_figures/04_sampling_denominators.svg",
+      "sha256": "9962289302ab52a9c40b26953e1ffb7d59465e4a550a1ae403d71b7748bb1a00",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/outputs/verified_figures/04_sampling_denominators.svg",
+      "status": "superseded"
+    },
+    {
+      "original_relative_path": "requirements.txt",
+      "retained_destination": "reproduction/audit/requirements.txt",
+      "sha256": "dc102d86827055d009286fc16876246f8d9f22278973f975fa3b9d2a37857758",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip!/requirements.txt",
+      "status": "superseded"
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+% STATUS: LITERATURE AUDIT COMPLETE WITH DISCLOSED ACCESS GAPS
+% Phase 1B, 24 September 2026. Includable fragment; no project proofs.
+\section{Phase 1B: adversarial novelty audit}
+\label{sec:adversarial-audit}
+
+\subsection{Verdict and limits of closure}
+The original eight targets do not presently support eight novelty claims.
+Four basic claims are unsafe as principal contributions: Fourier diagonalization,
+the fixed-symbol large-network limit, Fourier inversion for static response,
+and generic perturbation bounds. Mode selection and the first Lyapunov
+coefficient require substantial sharpening. The matched comparison is a
+potentially useful specialization. Priority for the demand-modulated coupling
+law remains unresolved. No target receives GREEN in this audit.
+
+This is a source-based assessment, not verification of the blueprint's mathematics.
+The canonical demand-modulated model (DM), matched bilinear comparator (MB),
+positive parameter domain, indexing, and terminology remain unchanged.
+All P01--P18 files remain TODO. Neither an unsuccessful search nor a different
+displayed equation establishes novelty. No proof or numerical experiment was
+performed. Recommendations below are proposals for subsequent author decisions.
+
+The six supplied PDFs and the original Phase 1 audit remain the baseline.
+This revision adds English and Chinese searches, backward citation tracing,
+and stronger generic counterexamples to the novelty narrative.
+The search cutoff is 24 September 2026. Access restrictions prevent full
+closure of several five-element sources. Their missing equations are recorded
+as missing, not reconstructed from abstracts. A separate archival research
+track is neither created nor recommended.
+
+\subsection{Evidence convention and source locations}
+S01--S14 retain their Phase 1 identifiers. Page numbers for S01--S04 and
+S08 are those of the inspected author manuscripts, not silently converted
+journal pages. New records specify their version. ``Proves'' below means
+that an argument is present in the source, not that this audit independently
+certifies every line. ``Stronger'' refers only to the stated overlapping
+component and its assumptions; it does not mean that a different vector field
+contains DM. Search-index excerpts of primary PDFs are explicitly distinguished
+from full-text inspection. The files \texttt{additional\_sources\_needed.md}
+and \texttt{audits/phase1b\_search\_log.md} document the unresolved frontier.
+
+\subsubsection{Reassessment of the original six papers}
+\begin{description}[style=nextline,leftmargin=0pt,labelwidth=0pt,labelsep=0pt]
+\item[S01: Jaramillo, Mrad and Stepien (2023).]
+\cite{JaramilloMradStepien2023}; DOI \href{https://doi.org/10.1063/5.0138150}{10.1063/5.0138150}.
+In arXiv:2210.04342v2, \S III, p.~3, (5)--(6) define the
+three-species May--Leonard system with linear mutation. \S IV.B, p.~5,
+Theorem~1 and (7)--(8) treat its circulant spectrum; \S IV.C, pp.~6--7,
+Theorem~2 and (15)--(25) give a Hopf/Lyapunov calculation, including Fourier
+vectors in (22)--(23). The competition coefficients satisfy $\alpha,\beta>0$;
+the stability discussion separates $\mu\geq1/6$ from $0\leq\mu<1/6$.
+The Hopf calculation uses the critical line (11) and a nonzero frequency;
+one must exclude its zero-frequency coincidence. The proofs concern that
+three-species polynomial system. Relation: orthogonal model, overlapping
+Hopf calculation method; not an arbitrary-$(n,q)$ DM theorem.
+
+\item[S02: Pais, Caicedo-N\'u\~nez and Leonard (2012).]
+\cite{PaisCaicedoLeonard2012}; DOI \href{https://doi.org/10.1137/120878537}{10.1137/120878537}.
+The supplied 30-page manuscript uses a replicator--mutator model on a simplex,
+\S2, (2.2), pp.~3--5. The circulant family in \S4, (4.1), p.~10,
+has $N\geq3$, the specified matrix entries and mutation structure; its
+parameters satisfy $\alpha,\beta\in[0,1)$ and $\alpha+\beta>0$.
+\S4.1, pp.~11--13, (4.2)--(4.4), Lemmas~4.2/4.4 and Theorem~4.5
+give mode/Hopf results. Lemma~4.6, p.~13, and Appendix~D,
+pp.~26--28, (D.1)--(D.4), reduce the Lyapunov coefficient by Fourier
+structure, including cubic terms. Appendix~B, pp.~24--25, records
+the general formula. Relation: different state space and kinetics;
+strong direct precedent for the proposed method, including the cubic part.
+
+\item[S03: van Kekem and Sterk (2018): the closest theorem-program precedent.]
+\cite{vanKekemSterk2018}; DOI
+\href{https://doi.org/10.1016/j.physd.2017.11.008}{10.1016/j.physd.2017.11.008}.
+In the 55-page accepted manuscript, (1), p.~1, is Lorenz--96, with
+scalar forcing $F$ and a homogeneous equilibrium. \S2.1, pp.~8--9,
+(3)--(6) gives a circulant spectrum with real dispersion involving
+$\cos\theta-\cos2\theta$. Proposition~5, pp.~11--12, selects the first
+unstable mode for $F>0$, $n\geq4$, maximizing over $0<l<n/3$;
+its bounds have an $n=7$ exception and $n=12$ has a two-pair tie.
+Theorem~2, p.~10, treats simultaneous crossings. Theorem~4, p.~11,
+gives an explicit first Lyapunov coefficient and criticality information
+for $n\geq4$, $0<l<n/2$, $l\neq n/3$, when that pair is the only
+one crossing at $F_H(l,n)$.
+Proposition~6, \S2.3, p.~13, gives the selected-wave limit
+$n/l_1(n)\to 2\pi/\arccos(1/4)$, with its argument on p.~13.
+The Lyapunov/selection proofs appear in \S\S4.3--4.4, pp.~38--48.
+These are proved results for Lorenz--96, not DM.
+Relation: orthogonal equation, but substantially the same proposed
+sequence of spectral selection, large-$n$ asymptotics and Hopf calculation.
+Changing coefficients in a comparable dispersion relation is insufficient
+by itself to establish a substantive new theorem program.
+
+\item[S04: Wei et al. (2021).]
+\cite{WeiEtAl2021}; DOI \href{https://doi.org/10.1016/j.jfranklin.2020.11.011}{10.1016/j.jfranklin.2020.11.011}.
+The supplied 18-page manuscript defines the five-dimensional dynamo at
+(2.1), p.~3; Theorems~2.1--2.2, pp.~4--5, discuss Hopf points using
+reported numerical quantities. Theorems~3.1--3.2, \S3, pp.~5--7,
+concern the specified controlled/observer error system. Five coordinates
+do not make this a scalar circulant ring. Relation: orthogonal to the
+DM coupling law and passive parameter-robustness bounds. Neither its
+control conclusions nor its reported decimals establish our claims.
+
+\item[S05: Lin and Han (2020): exact comparator overlap at five nodes.]
+\cite{LinHan2020}; DOI \href{https://doi.org/10.23919/CCC50068.2020.9188438}{10.23919/CCC50068.2020.9188438}.
+\S2.1, p.~778, (2) is the six-term homogeneous five-element polynomial
+model with nonnegative coefficients. Our $\MB_{5,2}$ is its exact
+subfamily under the coefficient assignment
+$(a_L,b_L,c_L,d_L,g_L,h_L)=(a,k,c,h,0,g)$.
+\S2.2, p.~778, discusses positivity; \S2.2.1, Case~4, p.~779,
+(5)--(7), addresses homogeneous equilibria. Numerical examples are in
+\S\S2.2.2--2.2.3, pp.~779--781. Relation: the source model is
+stronger in parameter count at $n=5$; MB is identical on that subfamily.
+This is a source-equation identification, not a new analysis of MB.
+The comparison with DM still requires a distinct result. References on
+p.~781 lead to earlier Chinese and English five-element models.
+
+\item[S06: Nian and Li (2025).]
+\cite{NianLi2025}; DOI \href{https://doi.org/10.1186/s13662-025-03909-9}{10.1186/s13662-025-03909-9}.
+In the publisher PDF, \S2.2, pp.~5--6, (1) defines a heterogeneous
+five-variable linear/quartic model; (3), p.~7, is its Jacobian.
+\S\S3--4, pp.~8--13, report fitted parameters and dynamical computations.
+Relation: orthogonal coupling law, overlapping five-element motivation.
+Reported simulations do not prove arbitrary-ring statements or validate
+the biological interpretation of DM.
+\end{description}
+
+\subsubsection{Generic theory that defeats broad novelty claims}
+\begin{description}[style=nextline,leftmargin=0pt,labelwidth=0pt,labelsep=0pt]
+\item[S07: Gray (2006).]
+\cite{Gray2006}; \href{https://ee.stanford.edu/~gray/toeplitz.pdf}{author PDF},
+\S3.1, printed pp.~32--34, (3.7)--(3.13); \S3.2,
+Theorem~3.1, printed pp.~34--35. Finite circulant matrices have a unitary
+Fourier decomposition; inverse formulas require nonzero eigenvalues.
+These results are established in the source. Relation: strictly more
+general linear algebra than our homogeneous Jacobian, once that Jacobian
+has been correctly derived. Spectrum, normality and inverse Fourier sums
+are supporting applications, not new general theorems.
+
+\item[S08: Kerin and Engler, now identified in its published form (2022).]
+\cite{KerinEngler2022}; DOI \href{https://doi.org/10.3934/dcdsb.2021064}{10.3934/dcdsb.2021064}.
+The inspected version remains arXiv:2005.07767v2: \S3.2,
+pp.~11--12, (27)--(29), Lemma~1; Appendix~A, p.~27,
+Proposition~4, (48)--(49). Assumptions include a circulant linear part,
+an equivariant quadratic nonlinearity and a simple nonresonant Hopf
+setting with the displayed inverses defined. The scalar Fourier
+reduction is proved for this class. Relation: broader quadratic class,
+but not the full rational DM nonlinearity. \S5, pp.~21--24,
+(40), Propositions~1--3, allows inhomogeneous coefficients under
+energy-preserving quadratic and positive damping hypotheses; those
+hypotheses must not be imported into DM. The new bibliography entry
+adds the journal record while preserving the original preprint entry.
+
+\item[S09 and S22: equivariant Hopf and phase patterns.]
+Stewart \cite{Stewart2024}, arXiv:2403.15814v1,
+\S3, Theorem~3.7, and \S\S5.2--5.4, (16)--(17),
+Theorems~5.5/5.7 and Corollary~5.6, supplies a ring-specific synthesis.
+The original research source Filipski--Golubitsky
+\cite{FilipskiGolubitsky2010}, DOI
+\href{https://doi.org/10.1137/090756582}{10.1137/090756582},
+\S3, p.~285, Theorem~3.1, and \S5, p.~288, Theorem~5.1,
+proves abelian equivariant Hopf symmetry restrictions/realization.
+The hypotheses concern smooth generic equivariant bifurcation, a critical
+representation and isotropy/kernel conditions; the realization theorem
+is not existence in every particular vector field. Relation: general
+symmetry theory subsumes our conditional rotating-wave conclusion.
+DM must still supply the simple imaginary pair, crossing, nondegeneracy
+and all-mode stability conditions. Do not copy the phase expression in
+Stewart v1 (15) without reconciling it with the surrounding convention.
+
+\item[S10--S11: matrix perturbation and threshold sensitivity.]
+Embree--Trefethen \cite{EmbreeTrefethen2001}, DOI
+\href{https://doi.org/10.1137/S1064827500373012}{10.1137/S1064827500373012},
+\S1, pp.~583--584, Theorem~4$\varepsilon$, p.~585, and the normal-matrix
+discussion on p.~586, relates Euclidean perturbations, resolvents and
+pseudospectra. Its normal-matrix case is broader than our stable
+homogeneous linearization. Greenbaum--Li--Overton
+\cite{GreenbaumLiOverton2020}, DOI
+\href{https://doi.org/10.1137/19M124784X}{10.1137/19M124784X},
+author PDF \S2, p.~4, Assumption~1, Theorem~1 and (1), proves
+the derivative of a simple eigenvalue for an analytic matrix family
+with normalized left/right eigenvectors. Relation: the general derivative
+is stronger than its DM application. Differentiating a simple transverse
+threshold is routine after the moving equilibrium has been included.
+
+\item[S19: Benzi and Razouk (2007), a stronger localization baseline.]
+\cite{BenziRazouk2007};
+\href{https://www.cs.emory.edu/~benzi/Web_papers/benzi_razouk.pdf}{published ETNA PDF}.
+\S3.5, p.~24, Theorem~3.4 and (3.7), proves decay in directed graph
+distance for diagonalizable $A=XDX^{-1}$ whose spectrum lies in a
+continuum $F$, with $f$ analytic on the larger domain $I(C_{R_0})$.
+The bound contains $\kappa(X)$. \S3.7, p.~27, Theorem~3.7 and
+(3.10), supplies explicit constants under additional geometric hypotheses.
+Relation: stronger generic matrix-function theory; using $f(z)=1/z$
+requires the analytic region to avoid zero. Uniform-in-$n$ claims need
+uniform hypotheses, not just invertibility at each size. A cyclic graph
+distance must respect wraparound; ordinary band distance need not.
+This closes the generic decay-method gap even though the full S12
+Demko--Moss--Smith text \cite{DemkoMossSmith1984} remains only partly accessible.
+
+\item[S20: Sun, Bollt and Nishikawa (2009).]
+\cite{SunBolltNishikawa2009}; DOI
+\href{https://doi.org/10.1209/0295-5075/85/60011}{10.1209/0295-5075/85/60011}.
+In arXiv:0811.0649v1, p.~2, (1) is a uniformly coupled
+near-identical network; pp.~4--5, (6)--(9) diagonalize its
+inhomogeneous variational equation when the modified Laplacian is
+diagonalizable. Pp.~6--7, (12)--(15), derive a forced-response bound
+under an exponential transition bound and bounded mismatch forcing.
+These are linearized conclusions; replacement of the mean trajectory by
+an isolated unit is explicitly conjectural on p.~6. Relation: overlapping
+method, different coupling class. It does not prove nonlinear DM
+persistence or a global robustness radius.
+
+\item[S21: Qiu et al. (1995).]
+\cite{QiuEtAl1995}; DOI
+\href{https://doi.org/10.1016/0005-1098(95)00024-Q}{10.1016/0005-1098(95)00024-Q}.
+\S1, pp.~879--880, (1)--(3), treats stable $A+BDC$ with fixed
+real $A,B,C$ and a full real or complex perturbation block $D$ measured
+in the spectral norm. The unnumbered Theorem, p.~886, (20), is the
+real structured-singular-value formula, with proof in \S2.
+Relation: stronger exact linear robustness theory, but its full-block
+uncertainty is not arbitrary repeated/diagonal parameter uncertainty.
+It does not include a nonlinear equilibrium's displacement automatically.
+Backward reference: Hinrichsen--Pritchard (1986), DOI
+\href{https://doi.org/10.1016/0167-6911(86)90094-0}{10.1016/0167-6911(86)90094-0};
+its full text was not inspected here.
+
+\item[S23: Asllani et al. (2014).]
+\cite{AsllaniEtAl2014}; DOI
+\href{https://doi.org/10.1038/ncomms5517}{10.1038/ncomms5517}.
+In the 28-page arXiv:1402.0760 manuscript, \S II,
+pp.~8--10, (6)--(11), develops directed-network dispersion and an
+instability condition. Assumptions include a stable two-species reactive
+equilibrium and a complete Laplacian eigenbasis; p.~8, footnote~2,
+requires balance for the Fickian transport convention to preserve
+homogeneity. The linear instability analysis is analytic; subsequent
+travelling patterns are illustrated numerically. Relation: broader graph
+setting but different multi-species diffusion kinetics, not exact
+subsumption of DM selection. Directed dispersion and pattern formation
+are already established subjects.
+
+\item[S24: Montanari, Zanin and Motter (2026): recent priority warning.]
+\cite{MontanariZaninMotter2026};
+\href{https://arxiv.org/html/2609.25226v1}{arXiv:2609.25226v1},
+submitted 21 September 2026. Supplement \S S3, Assumptions~1--2,
+requires diagonalizable $L$, $N\geq3$, nonnegative real parts of its
+eigenvalues, and nonnegative damping. \S S3.2, Theorem~4,
+for (3)--(4), assumes non-Hermitian circulant $L$ and differentiability
+at the homogeneous optimum; it proves this optimum is not locally
+optimal among heterogeneous damping choices. Equations (S49)--(S54)
+use second derivatives and Fourier mode sums. \S S4 separates proved
+results from a mode-mixing conjecture. Relation: different second-order
+network model, substantial overlap with broad heterogeneity-improves-stability
+or mode-mixing narratives. This preprint has not been independently
+validated and is not evidence that every perturbation stabilizes DM.
+\end{description}
+
+\subsubsection{Five-element and biochemical priority search}
+\begin{description}[style=nextline,leftmargin=0pt,labelwidth=0pt,labelsep=0pt]
+\item[S13--S16: the Lin--Shi--Han enzymatic sequence is the main access gap.]
+S13 \cite{LinShiHan2021}, DOI
+\href{https://doi.org/10.23919/CCC52363.2021.9550151}{10.23919/CCC52363.2021.9550151},
+has pages 6410--6415, now confirmed by S14 reference~37.
+S15 \cite{LinShiHan2022}, DOI
+\href{https://doi.org/10.23919/CCC55666.2022.9901543}{10.23919/CCC55666.2022.9901543},
+pp.~5735--5740, and S16 \cite{LinHan2023}, DOI
+\href{https://doi.org/10.23919/CCC58697.2023.10239797}{10.23919/CCC58697.2023.10239797},
+pp.~6823--6828, are identified in S14 references~38--39.
+S14 \cite{LinHan2024}, DOI
+\href{https://doi.org/10.1007/s11071-024-09374-5}{10.1007/s11071-024-09374-5},
+publisher abstract and references, studies enzymatic regulatory network
+topologies and the role of five nodes. Complete equations/supplement
+were not retrieved. Exact assumptions, equation identity, and theorem
+overlap therefore remain GRAY for this sequence. An indexed author
+upload under the 2022 title contains a later uncorrected proof: versions
+must not be conflated. No theorem-level adverse or favorable priority
+conclusion is based on that upload.
+
+\item[S17: Zhang, Xia and Wang (2020).]
+\cite{ZhangXiaWang2020}; DOI
+\href{https://doi.org/10.1088/1674-1056/abc2bf}{10.1088/1674-1056/abc2bf}.
+Publisher-PDF indexed text at \S5.1, p.~120504-5, (1), specifies
+five nodes with production formed from Hill activation and Hill
+repression factors, and linear degradation. The Hill exponents are
+not network size. This is a definite prior rational/saturating Wu-Xing
+coupling construction; it differs from the displayed DM law.
+The publisher abstract reports a landscape/flux investigation.
+Access is partial: the equation passage and metadata were inspected,
+not the full numerical argument. Relation: orthogonal exact law,
+direct overlap with any broad claim to introduce saturation into
+five-element networks. Reference~11, p.~120504-11, leads to
+Yang et al. (1995), requiring retrieval.
+
+\item[S18: Ma et al. (2009), a backward biochemical source.]
+\cite{MaEtAl2009}; DOI
+\href{https://doi.org/10.1016/j.cell.2009.06.013}{10.1016/j.cell.2009.06.013}.
+Experimental Procedures, ``Equations of the Circuit'', p.~772, (7),
+uses enzyme activities normalized to fixed total concentration one,
+positive kinetic constants, and source activity multiplied by saturating
+recipient activation/deactivation factors. Its three-node topology
+search and associated adaptation analysis concern that biochemical
+class. Relation: recipient-state modulation is already a modeling
+ingredient; the factors are not the DM fractions. This prevents
+equating a new name with a new coupling principle. A coordinate or
+parameter equivalence to DM would need actual verification.
+
+\item[S25: Ganikhodjaev, Pah and Rozikov (2019).]
+\cite{GanikhodjaevPahRozikov2019};
+\href{https://arxiv.org/pdf/1908.07740}{arXiv:1908.07740}.
+The model is a discrete quadratic stochastic operator on a simplex,
+not an ODE. \S4.3, p.~11, Theorem~1, and \S4.5,
+pp.~13--14, Proposition~7/Theorem~4, contain dynamical results for
+the specified parameter/operator class. Relation: orthogonal to DM
+and continuous-time MB; relevant to prior mathematical use of the
+five-element graph, not evidence for an identical differential law.
+
+\item[S26--S29 and older Chinese sources: explicitly unresolved.]
+Ding--Wang (2008) \cite{DingWang2008}, DOI
+\href{https://doi.org/10.1007/s11726-008-0269-8}{10.1007/s11726-008-0269-8},
+pp.~269--270: publisher abstract/reference list inspected, equations
+unavailable. Its references lead to Li (1987)
+\cite{Li1987}, DOI
+\href{https://doi.org/10.1088/0031-8949/36/6/015}{10.1088/0031-8949/36/6/015},
+pp.~966--969, and Zhang--Han (1998), pp.~130--135.
+Lin--Han (2020), p.~781, also points to Feng--Niu--Wang (2003),
+pp.~71--74, Wang's 2008 thesis, Bellavite et al. (1998)
+\cite{BellaviteEtAl1998}, and Kim et al. (2014)
+\cite{KimEtAl2014}. Abstracts/metadata are insufficient to exclude
+transformed rational or bilinear models. No missing theorem number
+or equation locator is invented. The retrieval list states exactly
+what must be inspected before T1 can be cleared.
+\end{description}
+
+\subsection{What a conditional Hopf theorem would and would not add}
+Known theory supplies the local bifurcation mechanism and permissible
+spatiotemporal symmetry. Fourier mode arithmetic and use of the zero
+and second harmonics in a Lyapunov calculation also have explicit
+precedents (S02, S08). These are not separate discoveries.
+The still-unproved DM content is an admissible positive equilibrium
+branch, the first crossing on a specified path, exclusion of simultaneous
+critical modes and zero frequency, transversality including equilibrium
+motion, and a rigorously certified nonzero Lyapunov coefficient.
+An open parameter region with a qualitative MB contrast would make these
+checks serve one mathematical question. A list of conditional formulas
+with no certified realizability would not.
+
+Neither a maximum real part at one parameter value nor a tied pair of
+conjugate modes proves a first Hopf bifurcation. Distinct critical pairs,
+the real Nyquist mode when $n$ is even, and modular harmonic coincidences
+must be separated. Equivariant theory does not supply orbital stability
+without the relevant remaining spectrum and criticality conditions.
+Exact nonlinear phase symmetry must be distinguished from a leading
+sinusoidal approximation; its sign depends on the frozen shift convention.
+
+\subsection{Assessment of the four proposed packages}
+\begin{description}[style=nextline,leftmargin=0pt,labelwidth=0pt,labelsep=0pt]
+\item[A: spectrum + step-two selection + large-network limit.]
+Likely significance in its basic form: modest. Diagonalization and
+continuous/discrete maximization are largely generic; S03 is a particularly
+close precedent. The coefficient-to-parameter map and realizable mode
+regions would be model-specific. Referee objection: a quadratic optimization
+exercise appended to a new equation. Needed addition: a complete admissible
+parameter classification tied to a qualitative dynamical/comparator contrast,
+with exceptional sizes and ties treated. A limit alone does not cure this.
+
+\item[B: selection + rigorous Hopf + rotating-wave branch.]
+Potentially coherent, but generic Hopf and equivariance constitute much
+of the machinery. The useful specific content would be a certified first
+instability and criticality phase diagram on positive branches.
+Referee objection: S02/S03 already perform an analogous program.
+Needed addition: analytic realizability on nonempty open parameter regions,
+a meaningful MB contrast, and rigorous criticality. Merely finding an
+imaginary pair and invoking symmetry is insufficient.
+
+\item[C: selection + explicit Lyapunov coefficient + structured heterogeneity.]
+Potentially stronger if the last component explains a new mechanism.
+The tensor reduction, inverse Fourier sum, and first-order sensitivity
+are mostly known. DM derivatives and sharp parameter-dependent response
+could be specific. Referee objection: three routine calculations with
+little interaction. Needed addition: a sharp structured result tied to
+the selected mode or its nonlinear branch, with a controlled nonlinear
+remainder and a quantified gain over the generic baselines S19/S21.
+An assertion that disorder can help is insufficient in light of S24.
+
+\item[D: all of B and C.]
+Largest scope, not automatically greatest significance. The model-specific
+part would have to link wave selection, branch criticality and a meaningful
+heterogeneity mechanism. Referee objection: overextended catalogue with
+the difficult assertions left conditional. Needed addition: one unifying
+theorem and a clear reason the heterogeneity result belongs to the main
+argument. More standard lemmas do not replace such a result.
+\end{description}
+
+\paragraph{Recommended smallest package.}
+Pursue a strengthened B with P13 criticality and P08 comparison as
+essential parts: an exact, realizable $q=2$ selection/first-Hopf
+classification that explains a qualitative difference between DM and MB.
+Keep P04 as a supporting general lemma, P06 as a useful quantitative
+corollary only if it clarifies the mechanism, and P14 as the symmetry
+conclusion. Do not make the full P15--P18 extension a prerequisite for
+this core. If no such model-specific contrast or sign classification
+survives subsequent work, reconsider the contribution before expanding
+the theorem count. This recommendation is conditional, not a prediction
+of journal acceptance or a claim that the proposed strengthened results
+are true.
+
+\subsection{Recommended scope of the generalization}
+Retain arbitrary $(n,q)$ for the model definition and general spectral
+background. Make $q=2$ the substantive setting. At the level of a
+candidate symbol using the first and second spatial harmonics, the
+standard identity for $\cos2\theta$ explains the quadratic structure;
+this observation is not a derivation of the DM coefficients.
+For other $q$, the algebra and competing modes need separate treatment.
+No complete arbitrary-$q$ selection theorem is recommended now.
+
+Varying $n$ permits more mode classes, parity effects and possible
+mode competition unavailable at five nodes. These are motivations for
+the generalization, not verified DM phenomena. Show that the admissible
+parameters actually realize relevant changes; relabeling a sampled
+maximizer is not enough. Large-$n$ work is useful when it predicts wavelength
+and finite-size threshold error under a fixed, explicit family. It is
+weak if it only replaces a grid by a continuum or changes parameters
+with $n$ without uniform control.
+
+Present $n=5,q=2$ as the motivating example and a checkable specialization,
+with prior Wu-Xing models credited in the main audit. Golden-ratio
+trigonometric constants are not intrinsic novelty. The condition
+$\gcd(n,q)=1$ concerns the step-$q$ subcycle; it is not necessary for
+the full network's connectivity when the step-one edge is present.
+No restriction of the canonical parameter domain or alteration of the
+coupling law is justified solely by this novelty audit.
+
+\subsection{Closure gates before claiming a substantive contribution}
+The eight target decisions are in the accompanying revised matrix.
+Module dispositions and precise proposed strengthenings are in
+\texttt{novelty\_decisions.md}. Priority for T1 remains blocked by the
+enzymatic sequence and older source equations. This does not prevent
+later independent mathematics if explicitly authorized; it prevents a
+responsible priority claim. Branch/path, comparison calibration,
+heterogeneity assignment and uncertainty norm also remain open choices.
+No result has been promoted to VERIFIED or AUDITED by this literature work.

@@ -1,0 +1,276 @@
+% STATUS: PHASE 1C AUDIT WITH SPECIFIC ACCESS GAPS; NO PROOFS.
+\section{Targeted priority closure}
+\label{sec:priority-closure}
+\textbf{Decision, 24 September 2026: exact-model priority is not closed.}
+The 2021--2024 publication chain is identified, but its complete main texts
+have not all been inspected. The publisher's 2024 supplement was obtained and
+read in full. This report separates inspected primary content from metadata
+and inaccessible content. No canonical equation or proof fragment is changed.
+No project theorem is proved and no model computation is performed.
+
+\subsection{Bounded source chain and bibliographic records}
+The following records retain the Phase 1B source identifiers. Publication
+page ranges are bibliographic locators, not evidence of body inspection.
+The publisher's 2024 reference list identifies 2021, 2022 and 2023 as
+references 37, 38 and 39, respectively. This is the verified backward link;
+the 2024 paper is a verified forward citation of each earlier paper. No
+complete forward-citation census is claimed.
+\begin{enumerate}[leftmargin=*]
+\item \textbf{S13.} Haipeng Lin, Wenxin Shi and Jing Han,
+\emph{Analysis of Enzymatic Regulatory Five-Element Model},
+2021 40th Chinese Control Conference (CCC), IEEE, pp.~6410--6415.
+\href{https://doi.org/10.23919/CCC52363.2021.9550151}{DOI: \nolinkurl{10.23919/CCC52363.2021.9550151}}.
+The proceedings contents and 2024 reference 37 confirm the record.
+Full main text unavailable in this pass; exact equation and theorem locations
+are unresolved, not absent.
+\item \textbf{S15.} Haipeng Lin, Wenxin Shi and Jing Han,
+\emph{Comparison of Enzymatic Regulatory Network Topologies},
+2022 41st Chinese Control Conference (CCC), IEEE, pp.~5735--5740.
+\href{https://doi.org/10.23919/CCC55666.2022.9901543}{DOI: \nolinkurl{10.23919/CCC55666.2022.9901543}}.
+Proceedings contents and 2024 reference 38 identify it. Main text unavailable.
+An author-upload search result under this title contains a 2024 uncorrected
+proof headed with the 2024 DOI. It cannot be treated as the 2022 paper.
+\item \textbf{S16.} Haipeng Lin and Jing Han,
+\emph{Comparison of Multi-Node Networks on Biological Properties},
+2023 42nd Chinese Control Conference (CCC), IEEE, pp.~6823--6828.
+\href{https://doi.org/10.23919/CCC58697.2023.10239797}{DOI: \nolinkurl{10.23919/CCC58697.2023.10239797}}.
+Proceedings contents and 2024 reference 39 identify it. Main text unavailable.
+\item \textbf{S14.} Haipeng Lin and Jing Han,
+\emph{What is special of ``five'' in biological regulatory networks?},
+Nonlinear Dynamics 112(9) (2024), pp.~7477--7498.
+\href{https://doi.org/10.1007/s11071-024-09374-5}{DOI: \nolinkurl{10.1007/s11071-024-09374-5}}.
+The publisher supplies abstract/references and a subscription preview;
+main text unavailable. Its eight-page supplementary PDF is fully inspected.
+The download anchor labelled supplementary information points to a 7z archive,
+despite the page describing a small PDF. Actual archive and PDF hashes are
+recorded in the access log. Author-upload indexed fragments are partial only.
+\end{enumerate}
+
+Two narrowly connected leads were identified, without opening another topic.
+\textbf{C1-L1:} Haipeng Lin, \emph{Research on Multi-subsystem
+Generation/Restriction Coupled Models} (translated title), master's thesis,
+University of Chinese Academy of Sciences, Beijing, 2021. The
+\href{https://lsc.amss.cas.cn/rcpy/bfbys/202601/t20260122_821421.html}{official laboratory's 2021 graduate list},
+entry 18, records the author, title, adviser Jing Han and July 2021 degree;
+the thesis body was not obtained. \textbf{C1-L2:} Feng Xiong and Weibo Zhang,
+\emph{Analysis of ``Geng Gui Geng Jian'' of the Five Elements in Huangdi
+Neijing} (translated title), Acta Chinese Medicine 40(10) (2025),
+pp.~2098--2103,
+\href{https://doi.org/10.16368/j.issn.1674-8999.2025.10.329}{DOI: \nolinkurl{10.16368/j.issn.1674-8999.2025.10.329}}.
+The journal's abstract and references 4, 5 and 7 link S13, C1-L1 and S14.
+Its embedded full-text viewer could not be read. These are equation-retrieval
+leads, not evidence that their models equal DM.
+
+\subsection{Coverage: what has and has not been inspected}
+\textbf{U} means not established from the available body; it never means no.
+\textbf{Y} is affirmative inspected evidence; \textbf{N(sup)} means absent
+from the inspected supplement only. \textbf{T} means a title-level indication,
+not verification of an equation or theorem. Each entry's locator follows in
+the notes. ``Cyclic'' describes a graph; ``circulant'' properly describes a
+matrix and is not asserted merely from the word symmetric.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.37\textwidth}>{\raggedright\arraybackslash}p{0.105\textwidth}>{\raggedright\arraybackslash}p{0.105\textwidth}>{\raggedright\arraybackslash}p{0.105\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}}
+\toprule Required field & 2021 & 2022 & 2023 & 2024 main/supplement \\
+\midrule\endhead
+Exact main equations & U & U & U & U / limits below \\
+State count & Five (T) & U & Multi-node (T) & $n\le9$ abstract; S1/S4 \\
+Graph topology & Five-element (T) & U & U & Step-one/step-two, S5 \\
+Nonlinear interaction law & Enzymatic (T) & Enzymatic (T) & U & Enzymatic abstract; limits S4 \\
+Cyclic graph / circulant Jacobian & U/U & U/U & U/U & Cyclic examples S5 / U \\
+Five elements, phases or organs & Five-element (T) & U & U & Y, abstract \\
+Equilibrium derivations & U & U & U & U / Y, S4 \\
+Arbitrary-$n$ theorem & U & U & U & U / N(sup) \\
+Fourier eigenvalues & U & U & U & U / N(sup) \\
+Exact wave-number selection & U & U & U & U / N(sup) \\
+Hopf analysis & U & U & U & S3 cites main Fig.~12; full test U \\
+First Lyapunov coefficient & U & U & U & U / N(sup) \\
+Nonlinear-law comparison & U & U & U & Limiting-law analysis S4; full inventory U \\
+Canonical MB versus DM comparison & U & U & U & U / N(sup) \\
+Exact canonical DM present & U & U & U & U / N(sup) \\
+\bottomrule
+\end{longtable}
+
+\paragraph{Exact inspected supplemental equations and locations.}
+S14 supplement S4, p.~4, Eq.~(D2) gives, in compact indexing of its displayed
+six equations,
+\[
+ \dot x_2=ax_7-(b/k)x_1x_2,\qquad
+ \dot x_i=ax_{i-2}-(b/k)x_{i-1}x_i,\quad i=3,\ldots,7.
+\]
+For its nine-node topology, p.~5, Eq.~(D7) gives
+\[
+ \dot x_2=ax_9-(b/k)x_1x_2,\qquad
+ \dot x_i=ax_{i-2}-(b/k)x_{i-1}x_i,\quad i=3,\ldots,9.
+\]
+These are the source's saturated/linear limiting equations, with the driven
+node's equation omitted there; do not reconstruct it. Equation (D5), p.~5,
+is an equilibrium system, not an ODE:
+\[
+ ax_1=(b/k)x_9x_2,\qquad
+ ax_{i-1}=(b/k)x_{i-2}x_i,\quad i=3,\ldots,9.
+\]
+The source sets $A=b/(ak)$ and derives equilibrium relations in (D3)--(D6)
+and (D8)--(D9), pp.~4--5. These displayed laws are not either canonical law.
+Their existence does not clear the inaccessible main equations.
+
+\paragraph{Overlap locations and limits.}
+Supplement S2, pp.~2--3, Definition 1, describes signed connections;
+S5, pp.~5--6, Fig.~S5, treats step-one activation/step-two restriction and
+the reversed assignment. S3, pp.~3--4, discusses parameter variation near
+the main paper's Fig.~12 Hopf region. S4 contains equilibrium/adaptation
+calculations and limiting laws. Thus topology, enzymatic motivation and
+limiting-law analysis are prior content; the supplement supplies no arbitrary-$n$
+selection or Lyapunov theorem. Main-text absence remains untested.
+
+\subsection{Lorenz--96: version-specific mathematical comparison}
+All page numbers in this subsection refer to the supplied accepted
+manuscript (arXiv version 1704.05442v3; 55 pages), dated 21 December 2017, not to journal pages
+38--60. The source is van Kekem and Sterk (2018)\cite{vanKekemSterk2018}.
+This is an audit of published results, not a derivation of our proposed results.
+
+\paragraph{Source objects used in the comparison.}
+Equation (1), p.~1, is
+\[
+ \dot x_j=x_{j-1}(x_{j+1}-x_{j-2})-x_j+F.
+\]
+At $x_F=(F,\ldots,F)$, Eqs.~(3)--(6), pp.~8--9, give
+$\lambda_j=-1+Ff(j,n)+iFg(j,n)$, where
+\[
+ f(j,n)=\cos(2\pi j/n)-\cos(4\pi j/n),\qquad
+ g(j,n)=-\sin(2\pi j/n)-\sin(4\pi j/n).
+\]
+The paper explicitly writes $f=-2z^2+z+1$, $z=\cos(2\pi j/n)$,
+in the proof of Theorem 2, p.~37. This is the closest elementary selection
+mechanism, not just a thematic resemblance. Proposition 5, pp.~11--12,
+selects $\arg\max_{0<l<n/3}f(l,n)$ for the first positive-$F$ instability;
+its proof is in \S4.4, pp.~46--47. Lemma 1, p.~10, supplies
+$F_H=1/f(l,n)$ and transversality for $n\ge4$, $0<l<n/2$, $l\ne n/3$.
+Theorem 2, p.~10, Eq.~(7), characterizes distinct-pair coincident crossings by
+\[
+ \cos(2\pi l_1/n)+\cos(2\pi l_2/n)=\tfrac12.
+\]
+This is a spectral coincidence criterion; a nondegenerate nonlinear
+codimension-two unfolding requires additional conditions.
+
+Proposition 6, p.~13, states
+\[
+ \lim_{n\to\infty}\frac{n}{l_1(n)}=
+ \frac{2\pi}{\arccos(1/4)},\qquad
+ T_\infty=2\pi\tan\!\left(\tfrac12\arccos(1/4)\right).
+\]
+Theorem 4, p.~11, and Eq.~(36), p.~44, give an explicit $\ell_1(l,n)$
+and classify its sign. The numerator controlling that sign is
+\[
+ L(y)=5\cos y+8\cos(2y)-2\cos(3y)-8,
+ \quad y=2\pi l/n
+\]
+(Eq.~(37), p.~45). The unique zero $y_0\in(0,\pi)$ separates positive
+and negative sign on the stated mode range; \S4.3.2, pp.~44--46,
+establishes the sign, and Proposition 5 gives supercriticality of a simple
+first positive-$F$ Hopf. Our DM sign is not inherited from this result.
+
+\paragraph{Two-parameter overlap must not be omitted.}
+Equation (9), p.~14, adds $G(x_{j-1}-2x_j+x_{j+1})$ to the source model.
+Equation (10) and Lemma 8/Eq.~(11), p.~15, give its circulant spectrum
+and linear crossing curves in $(F,G)$. Section 2.4.2, pp.~16--18, treats
+the $n=12$ unfolding. Thus the source also treats competing crossing curves;
+it is inaccurate to dismiss its switching relevance because $F$ alone
+rescales the one-parameter growth function. It does not compare our
+rational DM law with our bilinear comparator.
+
+\clearpage
+\begin{landscape}
+\subsubsection*{Theorem-by-theorem comparison (eight required objects)}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.105\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.115\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.155\linewidth}>{\raggedright\arraybackslash}p{0.10\linewidth}>{\raggedright\arraybackslash}p{0.155\linewidth}}
+\toprule Mathematical object & Van Kekem--Sterk result & Assumptions & Proof method & Our proposed result & Relation & Extra content needed \\
+\midrule\endhead
+Finite-$n$ selection & Prop.~5, pp.~11--12; quadratic explicitly in \S4.2 p.~37; proof \S4.4 pp.~46--47. & $n\ge4$, first crossing for $F>0$; eligible $0<l<n/3$; pair ties possible. & Circulant spectrum, discrete maximization of $\cos\theta-\cos2\theta$, interval comparison. & P05: exact $q=2$ selection throughout a stated positive-parameter/branch domain. & Analogous; bare rule routine. & Realizable cells, ties, endpoints and first-instability meaning; use in P08 contrast. \\
+\addlinespace
+Large-$n$ wave number & Prop.~6, p.~13: $n/l_1\to2\pi/\arccos(1/4)$; period limit. & Same first positive-$F$ selection; fixed symbol as $n$ increases. & Dense angular sampling of the continuous maximum. & P06: limit for a fixed DM family, if informative. & Analogous; generic argument routine. & A meaningful comparison or controlled finite-size effect; define the branch/family and degeneracies. \\
+\addlinespace
+Critical-mode switching & Thm.~2/Eq.~(7), p.~10; proof pp.~37--38. Extended system Eq.~(9), p.~14; crossing lines (11), p.~15; $n=12$ case pp.~16--18. & Distinct eligible pairs; $n\ge4$; extra nonlinear conditions for a Hopf--Hopf unfolding. & Equal values of a quadratic; equality/intersections of crossing curves in $(F,G)$. & P05/P08: parameter boundaries between first modes in DM and MB. & Analogous. & Show boundaries are admissible and reached on the stated path; certify first crossing and all other modes; classify actual law contrast. \\
+\addlinespace
+Hopf conditions & Lemma~1 p.~10, Thm.~4 p.~11; proofs \S4.1 and \S4.3, pp.~33--46. & $n\ge4$, $0<l<n/2$, $l\ne n/3$, unique imaginary pair, transversality and nonzero $\ell_1$. & Explicit spectrum, crossing derivative, standard Hopf theorem and coefficient calculation. & P11--P13: first symmetry-breaking Hopf on a regular positive DM branch. & Analogous; theorem application known. & Nonempty certified parameter regime, moving-equilibrium derivative, nonzero frequency, all other modes stable and $\ell_1\ne0$. \\
+\addlinespace
+First Lyapunov coefficient & Thm.~4 p.~11; Eqs.~(23)--(36), pp.~39--44; zero- and doubled-mode contractions in pp.~42--43. & Simple Hopf; specified unitary normalization; quadratic vector field, cubic tensor zero. & Normality gives paired eigenvectors; Fourier products remove matrix inverses; scalar resolvents. & P13: exact coefficient for rational DM, including cubic derivatives. & Analogous; exact expression model-specific. & Correct derivatives, tensor factors, harmonic coincidences and resolvent domains. Nonzero cubic tensor alone is not methodological novelty. \\
+\addlinespace
+Sign/criticality & Thm.~4 p.~11; \S4.3.2 pp.~44--46; Prop.~5 pp.~11--12 and proof p.~47. & Eligible simple Hopf; sign intervals relative to $y_0$; simple first positive-$F$ crossing is supercritical. & Positive-factor separation; trigonometric-polynomial derivative and unique zero. & P13: nontrivial analytic DM sign region with a selection or DM--MB consequence. & Analogous goal; proposed sign law unresolved. & Certify a nonempty region and full claimed size/mode range; exclude zeros or analyze only to justified order. \\
+\addlinespace
+Rotating or traveling wave & \S2.3 pp.~12--13, Eq.~(8): leading periodic wave, wavelength, period and direction. & Local Hopf branch; Fourier mode; leading-order amplitude approximation. & Interpret the critical Fourier eigenvector and oscillatory phase. & P14: exact spatiotemporal symmetry and isotropy of the nonlinear branch. & Analogous; exact symmetry also uses known equivariant theory. & Distinguish exact branch symmetry from linear approximation; record phase sign, stabilizer and branch stability conditions. \\
+\addlinespace
+Two coupling laws & Eq.~(1) p.~1 versus diffusive extension Eq.~(9) p.~14; no DM--MB comparison in this inspected source. & Original quadratic advection retained; new linear diffusion coefficient $G$. & Compare spectra/crossing curves of original and extended systems. & P08: same-coefficient DM versus MB with independently specified positive branches. & Genuinely different comparison object; novelty conditional. & A rigorous qualitative contrast on a nonempty common admissible set. Source-chain clearance and mathematical verification remain separate. \\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\subsection{Decision on the q=2 theorem}
+For the \emph{bare quadratic maximizer}, the correct choice is
+\textbf{routine adaptation}. It is not yet a genuinely stronger theorem.
+For the strengthened all-admissible-parameter selection, switching and
+matched-comparison target, the correct planning description is
+\textbf{structurally analogous but model-specific}. Changing coefficients
+and substituting an equilibrium is not enough: realizability and qualitative
+consequences are the intended added content. None is proved here.
+
+\subsection{Final claim verdicts and frozen paper roles}
+The following labels concern novelty only. Each rating remains subject to the
+stated source-access limitation; no rating establishes correctness or priority.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}}
+\toprule Claim & Verdict & Proof owner \\ \midrule\endhead
+Arbitrary-(n,q) spectrum & KNOWN / ROUTINE & P04 \\
+$q=2$ exact finite-n selection & SUPPORTING SPECIALIZATION & P05 \\
+Mode-switch boundaries & POSSIBLE NOVEL CONTRIBUTION & P05, P08 \\
+Large-n selected-wave-number limit & KNOWN / ROUTINE & P06 \\
+Matched DM--MB comparison & STRONG NOVELTY CANDIDATE & P08; P11--P13 if criticality is compared \\
+Rigorous Hopf theorem & SUPPORTING SPECIALIZATION & P11--P13 \\
+First Lyapunov coefficient reduction & SUPPORTING SPECIALIZATION & P13 \\
+Sign/criticality result for $\ell_1$ & UNRESOLVED & P13 \\
+Rotating-wave conclusion & SUPPORTING SPECIALIZATION & P14 \\
+\bottomrule\end{longtable}
+The comparison rating concerns a substantive contrast, not two formulas.
+The sign verdict remains unresolved because no valid region has been stated
+and established. The bare large-$n$ limit and general spectrum remain routine.
+For detailed conditions attached to each verdict see
+\texttt{final\_novelty\_verdict.md}.
+
+The supporting-theory locators retained from Phase 1B are Gray
+\cite{Gray2006}, \S3.1, printed pp.~32--34, Eqs.~(3.7)--(3.13),
+and \S3.2, Theorem 3.1, printed pp.~34--35 (circulant structure);
+Pais et al.\cite{PaisCaicedoLeonard2012}, supplied 30-page version,
+Lemma 4.6, p.~13, Appendix D, pp.~26--28, Eqs.~(D.1)--(D.4)
+(Fourier Lyapunov reduction including cubic terms); and
+Filipski--Golubitsky\cite{FilipskiGolubitsky2010}, \S3, Theorem 3.1,
+p.~285, and \S5, Theorem 5.1, p.~288 (abelian Hopf symmetry).
+These are precise locations of known machinery, not an assertion that a
+realization theorem proves existence in this particular DM vector field.
+
+The frozen package has four intended main results: selection with realizable
+switch cells (P05), a matched-law contrast (P08), an assembled first Hopf
+classification (P11--P13), and a substantive criticality result (P13).
+The coefficient reduction is a proposition/lemma; rotating waves and the
+five-node specialization are corollaries. General spectrum, equilibria,
+transcritical and fold results support them. Retain P06 only as an informative
+large-$n$ corollary. P15--P18 are postponed, including their optional figures.
+Detailed standard estimates and long coefficient algebra belong in a supplement.
+
+The primary comparison uses the same positive $(a,k,c,g,h)$, $n,q$ and time
+variable, each model evaluated at its own explicitly chosen positive synchronous
+branch on the common existence domain. The branch/path and a valid sign region
+are future statement gates; this audit does not invent them.
+
+\subsection{Stop decision and release gate}
+The requested priority-closure condition is unmet: identification and partial
+inspection of the source chain are not full primary-source inspection.
+Exact equations unavailable for S13, S15, S16 and the S14 main article must
+remain explicitly unresolved. The inspected supplement rules out neither an
+exact antecedent elsewhere in its parent article nor a theorem in an earlier
+conference version. No universal absence claim follows from this audit.
+
+Stop literature work after this targeted pass. Do not commission a new general
+survey. If these named bodies become available, the remaining operation is
+their exact equation/theorem comparison against this inventory. Their absence
+blocks priority assertions, not later independent mathematical work. All proof
+files retain TODO status and the immutable master remains unchanged.

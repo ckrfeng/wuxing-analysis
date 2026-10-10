@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "protected_file_count": 189,
+  "modified_or_missing": [],
+  "all_current_proofs_audits_controls_sources_unchanged": true,
+  "both_P10_draft_archives_unchanged": true,
+  "developer_validation_archive_unchanged": true,
+  "P10_still_DRAFT": true,
+  "full_P10_audited_archive_created": false
+}

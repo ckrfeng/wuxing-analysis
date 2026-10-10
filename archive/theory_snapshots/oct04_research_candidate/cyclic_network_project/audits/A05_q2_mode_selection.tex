@@ -1,0 +1,996 @@
+% Standalone independent audit of exact P05 v1.0, 2026-10-02.
+% CORE VERDICT: MINOR REVISION
+% REALIZABILITY VERDICT: VERIFIED
+% OVERALL VERDICT: MINOR REVISION
+% No input project file or proof lifecycle status is changed.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{array,booktabs,longtable,enumitem}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\setlist{nosep,leftmargin=*}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\lin}[1]{\textbf{L#1}}
+\newcommand{\sha}[2]{\par{\small\ttfamily #1\allowbreak #2}\par}
+\newcommand{\Pass}{\textbf{PASS}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\title{A05: Independent mathematical audit of P05\\Exact finite-size step-two mode selection}
+\author{Independent reconstruction and adversarial review}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+
+\section{Verdicts and required disposition}
+\textbf{CORE VERDICT: MINOR REVISION.}
+The exact finite-$n$ cells, ties, endpoints, reachability theorem and
+modulo-four classification are mathematically correct. One introductory
+sentence has a meaning-changing ambiguity: P05 \lin{30--31} says
+``Selection always includes mode zero''. Read as a statement about the
+selected set, it is false, including in P05's own $n=8$ example. It must
+explicitly say that mode zero is included in the \emph{candidate set}
+over which the maximum is taken. This is required correction E01. None of
+the displayed selection rules or proofs needs alteration.
+
+\textbf{REALIZABILITY VERDICT: VERIFIED.}
+Canonical positive-parameter realization, nonempty open physical-parameter
+cells on a specified branch, regular local switch hypersurfaces, and the
+strictly stable switch paths all pass. The scalar equilibrium is simple
+at \emph{every} concave-regime positive-equilibrium point, not merely at
+the constructed examples. This proves the projection regularity used by
+the draft and rules out its most serious potential geometric failure.
+
+\textbf{OVERALL VERDICT: MINOR REVISION.}
+E01 is the only required correction. Historical computational provenance
+has a separate nonblocking limitation U01; no mathematical conclusion
+depends on those historical statistics. There is no major issue, false
+theorem, or unresolved mathematical step. These verdicts apply to the
+exact text below, so the wording defect is not silently repaired in the
+rating. They do not change P05's DRAFT metadata or promote any registry row.
+
+\paragraph{E01: exact correction to request at closure.}
+In P05 \lin{30--31}, replace the sentence beginning ``Selection always
+includes mode zero'' with:
+\begin{quote}
+The maximization is over all Fourier labels, including mode zero, and
+selection means the complete set maximizing the real part at this
+equilibrium, retaining all ties.
+\end{quote}
+Keep the following sentence about coprimality. The counterexample to the
+literal existing reading is $n=8$, $x^*=1$ and
+$(a,k,c,g,h)=(3,1,4,4,2)$: the selected labels are $\{1,7\}$ and do not
+include zero. Its exact maximum is $-4+\sqrt2$, whereas $r_0=-3$.
+This is a wording correction, not a counterexample to Theorems A--C.
+
+\section{Exact current source, authentication and inputs}
+The source audited is
+\path{proofs/P05_q2_mode_selection.tex}, \textbf{P05 v1.0, 2026-10-02},
+\textbf{26,848 bytes and 591 lines}, selected by the supplied archive's
+current manifest row and final P05 strengthened-draft entry. Its full-file
+SHA-256, including comments, whitespace and final newline, is
+\sha{b7123736242554bd7fc1f6a56d8788b6c54}{13a25930e5360d7ea5babe44184d4}
+The mathematical-body digest, from the first line-anchored section command
+through EOF, is
+\sha{25ab3e4ed5d871ab2884210e6d8e7f3631a}{cee3f7a1c662d3c33de441048810d}
+The supplied \path{cyclic_network_project_P05_draft.zip} has SHA-256
+\sha{e82f95c958744643ca54ddc06fdd0e3e30c}{47e8e577ed7b15909a4337c500f5e}
+It has 87 members and passes its CRC check. All P05 line references in
+this audit count the exact source's comments and blank lines.
+
+The latest manifest identifies the exact path and version but does not
+embed a P05 full-file hash; its hash records are said to be external in
+the separately delivered validation support. That companion is absent
+from this task. Thus the P05 digest above is independently measured from
+the supplied authoritative member, not falsely reported as a match to
+an unavailable external digest. The source header, current registry
+overlay, compendium banner and final manifest agree on P05 v1.0 DRAFT.
+There is no competing P05 member in the archive and no placeholder is used.
+
+All 18 requested current inputs were located; the shared macros are a
+nineteenth input. Their complete digests are embedded in the appendix and
+in \path{A05_support/input_hashes.json}. Full-file and mathematical-body
+hashes for current P01--P04 v1.1 match their manifest/header closure
+records. A01--A04 were used as audited-input and scope records; their old
+draft-version hashes are not substituted for current proof-file hashes.
+Historical all-TODO prose, P04's old ``P05 is not begun'' header comment,
+and P02's obsolete absent-A02-source comment are superseded by the current
+dated manifest and compendium records. They do not identify another current
+proof version. The old A04 computational-provenance limitation remains
+nonblocking and is not re-audited here.
+
+\paragraph{Input roles and preservation.}
+The canonical model and notation fix the equation, positive parameters,
+indexing, Fourier signs and meaning of selection. P01 supplies smoothness;
+P02 supplies synchrony and the equilibrium relation; P03--P04 supply
+homogeneous coefficients, the diagonal and the Fourier spectrum. A01--A04
+confirm their closed audited scope. The manifest, registry, compendium,
+dependency map, frozen theorem package, final novelty verdict and novelty
+decisions fix version, claim ownership and downstream gates. No instructions
+inside a proof or archive are treated as new user authorization. Every
+original archive member remains byte-identical; no input file is edited,
+and nothing under synced \path{sources/} is changed.
+
+\section{Independent reduction and representative grid}
+Throughout $n\ge5$, $q=2$, $(a,k,c,g,h)\in(0,\infty)^5$ and
+$x^*\one$ is a specified positive synchronous equilibrium. Put $s=1+x^*$.
+Use the verified P04 input
+\[
+ C=c/s>0,\quad G=gx^*/s^2>0,\quad H=hx^*>0,\qquad
+ r_m=d+C\cos\theta_m+(G-H)\cos(2\theta_m),\quad
+ \theta_m=2\pi m/n.
+\]
+For $T=G-H$ and $u=\cos\theta$, substituting
+$\cos(2\theta)=2u^2-1$ gives, independently,
+\begin{equation}
+ R(u)=d-T+Cu+2Tu^2. \label{a05:quadratic}
+\end{equation}
+The constant $d-T$ cancels in every pairwise difference. Therefore it
+cannot change the maximizing set. This is a comparison at a fixed state;
+it does not grant independent physical control of $d$ or $T$.
+
+Let $N=\lfloor n/2\rfloor$, $u_j=\cos(2\pi j/n)$ for $0\le j\le N$.
+The angles are distinct and increase from zero to at most $\pi$.
+For $0\le a<b\le\pi$,
+$\cos a-\cos b=2\sin((a+b)/2)\sin((b-a)/2)>0$.
+Hence $1=u_0>\cdots>u_N$ without any coprimality hypothesis. For even
+$n$, the last angle is $\pi$, giving $u_N=-1$; for odd $n$, it is
+$\pi-\pi/n$, giving $u_N=-\cos(\pi/n)$.
+
+The labels $m,n-m$ have the same cosine and the same double-angle cosine.
+They have the same real part. Their disjoint representative label sets are
+\[
+ L_0=\{0\},\qquad L_{n/2}=\{n/2\}\quad(n\text{ even}),\qquad
+ L_j=\{j,n-j\}\text{ otherwise}.
+\]
+This exhausts all $n$ labels, with no double counting. A selected
+representative set $S$ means the full selected label set is
+$\bigcup_{j\in S}L_j$. E01 concerns this definition's introductory prose;
+the draft's displayed label construction is correct.
+
+\section{Both curvature regimes, including every endpoint}
+If $T>0$, $R''=4T>0$, but convexity alone does not decide which endpoint
+wins. Direct calculation gives
+\[
+ R(1)-R(-1)=2C>0,\qquad
+ R(1)-R(u)=(1-u)[C+2T(1+u)]>0\quad(-1\le u<1).
+\]
+Thus representative zero uniquely dominates on the full grid, including
+an odd grid that omits $-1$. If $T=0$, $R(u)=d+Cu$ is strictly increasing
+and gives the same unique representative. In particular $H=G$ has no tie.
+
+For the following reconstruction only, write $D=H-G>0$; this local
+abbreviation is not a reassignment of P02's discriminant in P05. Then
+\[
+ R(u)=d+D+Cu-2Du^2,
+ \quad R'(u)=C-4Du,
+ \quad v:=u_*={C\over4D}>0,
+\]
+and completing the square gives
+\begin{equation}
+ R(u)=d+D+{C^2\over8D}-2D(u-v)^2. \label{a05:square}
+\end{equation}
+The signs of the constant and square terms are correct. Maximization is
+equivalent to minimizing $|u_j-v|$. If $v\ge1$, the unique nearest point
+is $u_0=1$; equivalently $R'(u)>0$ for $u<1$ when $v\ge1$.
+In particular
+\[
+ v=1\ \Longleftrightarrow\ 4(H-G)=C
+\]
+does not cause a grid tie: every $u_j<1$ has positive distance from $v$.
+For $0<v<1$, the nearest-cosine rule remains exact; angular rounding would
+be incorrect because the cosine grid is not equally spaced.
+
+\section{Midpoints, closed cells, and complete tie proof}
+The sum-to-product identity yields, for exactly $0\le j<N$,
+\begin{equation}
+ \beta_j={u_j+u_{j+1}\over2}
+ =\cos(\pi/n)\cos((2j+1)\pi/n). \label{a05:beta}
+\end{equation}
+For $0\le j<N-1$,
+$\beta_j-\beta_{j+1}=(u_j-u_{j+2})/2>0$. All midpoint angles lie
+strictly between $0$ and $\pi$, and $\cos(\pi/n)>0$. Thus
+\[
+ \beta_j>0\iff 4j+2<n,\qquad
+ \beta_j=0\iff4j+2=n,\qquad
+ \beta_j<0\iff4j+2>n.
+\]
+A zero midpoint occurs precisely for $n\equiv2\pmod4$, at $j=(n-2)/4$.
+
+Independently compare squared distances:
+\[
+ (u_j-v)^2-(u_{j+1}-v)^2
+ =2(u_j-u_{j+1})(\beta_j-v).
+\]
+The larger cosine wins the neighboring comparison exactly when
+$v>\beta_j$. Consequently the closed nearest-point cells are
+\[
+ V_0=[\beta_0,\infty),\quad
+ V_j=[\beta_j,\beta_{j-1}]\ (1\le j<N),\quad
+ V_N=(-\infty,\beta_{N-1}].
+\]
+For an interior cell the two inequalities put $v$ strictly between
+$u_{j+1}$ and $u_{j-1}$. Points beyond either neighbor in cosine order
+are even farther in that direction. This proves sufficiency against
+\emph{all} grid points, not merely against the two neighbors. At an endpoint
+the same argument uses its single neighbor. The topological interior
+of each displayed interval gives uniqueness; equality at a finite
+endpoint selects the two adjacent representatives exactly.
+
+Here is a separate proof excluding nonadjacent maximal ties. Suppose
+$p<q$ and $|u_p-v|=|u_q-v|$. Because $u_p\ne u_q$, this forces
+$v=(u_p+u_q)/2$. Write their common distance as $L>0$. Any grid value
+$u_t$ strictly between them lies in $(v-L,v+L)$, and therefore
+$|u_t-v|<L$. By \eqref{a05:square}, $R(u_t)>R(u_p)=R(u_q)$.
+For $q\ge p+2$ such a $t$ exists. This excludes nonadjacent maximal
+ties, and three maximizers would necessarily contain a nonadjacent pair.
+For adjacent points at $v=\beta_j$, every other point is strictly
+farther than their common half-gap, so exactly those two tie. Finally,
+$v>0$ excludes every zero or negative midpoint. Strict concavity is
+consistent with, but not a substitute for, this distance argument.
+
+\section{Reachability and reciprocal inequalities}
+For $j\ge1$, the closed cell intersects $(0,1)$ if and only if
+$\beta_{j-1}>0$. If this holds, its upper endpoint is less than $1$,
+and the interval between $\max(0,\beta_j)$ and $\beta_{j-1}$ is
+nonempty (with the evident one-sided convention for $j=N$). It contains
+strictly selected positive vertices. Necessity follows from the upper
+bound $v\le\beta_{j-1}$. Also $0<\beta_0<1$, so $V_0$ has a
+nonempty intersection with $(0,1)$.
+The integer condition is
+\[
+ \beta_{j-1}>0\iff4j<n+2
+ \iff j\le J:=\left\lfloor{n+1\over4}\right\rfloor.
+\]
+The last equivalence follows by writing $n=4r+s$, $0\le s\le3$, or
+by noting that the greatest integer strictly less than $(n+2)/4$ is
+$\lfloor(n+1)/4\rfloor$. For $n\ge5$, $J<N$; specifically
+$J\le(n+1)/4<(n-1)/2\le N$. Thus $\beta_J$ exists,
+$\beta_{J-1}>0$ and $\beta_J\le0$. The positive midpoints are exactly
+$\beta_0,\ldots,\beta_{J-1}$.
+
+This first proves the grid statement: precisely $0,\ldots,J$ are
+reachable by a positive vertex, and each has a strict cell. A point
+$j>J$ cannot even join an isolated maximal tie at a positive vertex.
+The convex and $v\ge1$ regimes add only zero. The separate physical
+realization below is needed to turn this geometric result into a claim
+about canonical DM parameters.
+
+P05 defines
+\[
+ \chi={4(H-G)\over C}=-{4T\over C}
+\]
+globally. This ratio is well defined for every canonical point because
+$C>0$, even when $H\le G$. That harmless extension differs from
+restricting the name to the concave regime. The statement
+$v=1/\chi>0$ and the nearest-vertex rule are used only for $\chi>0$;
+neither inversion at zero nor a negative vertex in the concave proof
+occurs in P05. For $\chi\le0$ the convex/linear proof supplies $S=\{0\}$.
+Thus the global $\chi$ table is valid, not an invalid use of a concave
+vertex outside its domain.
+
+For $0\le j<J$, set $\alpha_j=1/\beta_j$. Since
+$1>\beta_0>\cdots>\beta_{J-1}>0$,
+$1<\alpha_0<\cdots<\alpha_{J-1}$. For $\chi>0$,
+\[
+ \beta_j<{1\over\chi}<\beta_{j-1}
+ \iff {1\over\beta_{j-1}}<\chi<{1\over\beta_j}.
+\]
+Both reversals are essential. The full finite-parameter rule is
+\begin{equation}
+\begin{array}{c|c}
+\text{condition}&S\\\hline
+\chi<\alpha_0&\{0\}\\
+\alpha_{j-1}<\chi<\alpha_j\ (1\le j<J)&\{j\}\\
+\chi>\alpha_{J-1}&\{J\}\\
+\chi=\alpha_j\ (0\le j<J)&\{j,j+1\}.
+\end{array} \label{a05:cells}
+\end{equation}
+For the terminal row, the other vertex bound is $v>\beta_J$, automatic
+from $v>0\ge\beta_J$. The middle row is empty when $J=1$.
+The first row includes all $\chi\le0$, all $0<\chi\le1$ and the
+remaining uniform interval $1<\chi<\alpha_0$. In particular
+$H=G$, $v=1$, and every discrete equality are covered without omission.
+
+Direct subtraction additionally gives
+\[
+ R(u_j)-R(u_{j+1})=C(u_j-u_{j+1})(1-\chi\beta_j).
+\]
+At a retained threshold, $\chi=\alpha_j\iff v=\beta_j$, with exactly
+the tie already proved. As $\chi$ increases, dominance passes from
+$j$ to $j+1$. A negative-midpoint equality at negative $\chi$, when
+realizable, occurs below the maximum since zero is then uniquely dominant.
+For a zero midpoint the displayed gap is always $C(u_j-u_{j+1})>0$.
+
+The first tie $0/1$ contains three labels. Every later reachable tie
+contains four, since all its representatives are nonzero and less than
+$N$. For even $n\ge6$, $J\le(n+1)/4<n/2$. Independently, the actual
+Nyquist cosine satisfies $R(1)-R(-1)=2C>0$ for \emph{either sign} of
+$T$, so it can never be selected or join a maximal tie. This covers the
+smallest even dimension $n=6$ and all larger even dimensions directly.
+
+\section{Modulo-four classification and the fixed-size limit}
+Write $n=4r+s$, $s\in\{0,1,2,3\}$. Simple angle subtraction from
+$\pi/2$ gives the exact table:
+\begin{center}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+$s$&$J$&$u_J$&nearest to the formal vertex zero\\\midrule
+0&$r$&$0$&$r$\\
+1&$r$&$\sin(\pi/(2n))>0$&$r$\\
+2&$r$&$\sin(\pi/n)>0$&$r,r+1$\\
+3&$r+1$&$-\sin(\pi/(2n))<0$&$r+1$\\\bottomrule
+\end{tabular}
+\end{center}
+For $s=0$, $\beta_{r-1}=\sin(2\pi/n)/2>0$, so the zero-cosine
+representative is strictly selected for $0<v<\beta_{r-1}$, a finite
+$\chi$ interval. For $s=1$, the zero-straddling cosines are
+$\sin(\pi/(2n))$ and $-\sin(3\pi/(2n))$; their midpoint is negative
+and the positive one is uniquely closest to zero. For $s=3$, they are
+$\sin(3\pi/(2n))$ and $-\sin(\pi/(2n))$. Since sine is strictly
+increasing on the angles in question, their midpoint is positive. The
+negative cosine's cell therefore contains
+$(0,\beta_{J-1})$. This proves its reachability exactly; the sign of
+the vertex does not constrain the sign of the nearest sampled cosine.
+
+For $s=2$, the two straddling cosines are $p$ and $-p$ with
+$p=\sin(\pi/n)>0$, and $\beta_r=0$. For every $v>0$,
+\[
+ |-p-v|^2-|p-v|^2=4pv>0.
+\]
+The positive representative beats the negative one for every finite
+positive vertex. It need not be the \emph{global} winner for large
+vertices; globally it is selected only in its terminal cell. At the
+formal vertex zero the two distances tie, but $v=C/[4(H-G)]$ cannot be
+zero at finite positive canonical coefficients. In fact, at fixed $C$,
+\[
+ R(p)-R(-p)=2Cp=2C\sin(\pi/n)>0
+\]
+at every finite $H-G$. Thus even the unnormalized spectral gap does not
+vanish as $H-G\to\infty$; only its value relative to the diverging
+quadratic scale tends to zero.
+
+At fixed $n$ and $C>0$, $H-G\to+\infty$ implies $v\downarrow0$.
+Since $\beta_{J-1}>0$, every sufficiently large finite $H-G$ lies in
+the terminal strict cell, for every residue class. No finite switch is
+added at $\chi=\infty$, and no $n\to\infty$ assertion or P06 input
+is made. The only reachable negative cosine is the terminal one for
+$n\equiv3\pmod4$.
+
+\section{Translation to the original DM parameters}
+For $x=x^*>0$ and $s=1+x$,
+\[
+ H-G=x(h-g/s^2),\qquad C=c/s>0.
+\]
+Because $x>0$, $H>G\iff h>g/s^2$. In that regime
+\[
+ v={c/s\over4x(h-g/s^2)}={cs\over4x(hs^2-g)},\qquad
+ \chi={4x(hs^2-g)\over cs}.
+\]
+All factors in the vertex denominator are positive, and no zero
+denominator is hidden. For a positive midpoint, solving $v=\beta_j$
+gives exactly
+\begin{equation}
+ h={g\over(1+x)^2}+{c\over4(1+x)x\beta_j}. \label{a05:switch}
+\end{equation}
+Both terms are positive, so $h>0$ and $H>G$. A nonpositive midpoint
+cannot satisfy this concave-regime equation. All activities and cosines
+are dimensionless under the contract. The rate coefficients have the
+same time scaling; $C,G,H,d$ are rates, $\chi,v,\beta_j,\alpha_j$
+are dimensionless, and both terms in \eqref{a05:switch} have the same
+units as $h$. No time normalization or hidden calibration is introduced.
+
+\section{Canonical realization and original-equation substitution}
+The original synchronous component of the DM vector field is
+\[
+ f(x)=ax-kx^2+{cx\over1+x}-{gx\over1+x}-hx^2
+ =xB(x),\qquad B(x)=a-(k+h)x+{c-g\over1+x}.
+\]
+For any prescribed $x,c,g,h>0$, the parameter
+$a=(k+h)x-(c-g)/(1+x)$ is positive exactly when
+$k>(c-g)/[(1+x)x]-h$. In conjunction with $k>0$, this is precisely
+\[
+ k>\max\{0,(c-g)/[(1+x)x]-h\}.
+\]
+The right side is finite, so such a $k$ always exists. This equivalence
+also covers $c\le g$ and negative lower bounds; no upper bound on $k$
+is imposed.
+
+Prescribe any $v>0$ and any $x,c,g>0$, choose $h$ by
+\[
+ h=g/(1+x)^2+c/[4(1+x)xv],
+\]
+then choose $k$ as above and define $a$. Every physical coefficient is
+strictly positive. Substitution into the \emph{five original terms}
+gives
+\[
+ ax-kx^2+cx/(1+x)-gx/(1+x)-hx^2
+ =x[(k+h)x-(c-g)/(1+x)-(k+h)x+(c-g)/(1+x)]=0.
+\]
+Every component vanishes because the state is synchronous. Moreover
+$H-G=c/[4(1+x)v]$ and $C/[4(H-G)]=v$. The construction therefore
+realizes the vertex, not merely an unattached spectral polynomial.
+
+To select zero strictly one may take $v=(1+\beta_0)/2$; to select
+$1\le j<J$ take $v=(\beta_{j-1}+\beta_j)/2$; to select $J$ take
+$v=\beta_{J-1}/2$; to realize switch $j$ take $v=\beta_j$.
+All these choices are positive and strict where required. This is a
+single universal constructive family, valid for all sizes and parity
+classes, not several incompatible existence arguments.
+
+The simpler family in P05 is
+\begin{equation}
+ x=1,\quad c=g=4,\quad h=1+\chi/2,\quad k>0,\quad
+ a=k+h,\quad\chi>-2. \label{a05:family}
+\end{equation}
+It gives $C=2,G=1,H=1+\chi/2$ and exactly the prescribed $\chi$.
+Every positive $\chi$, hence every retained strict cell and switch, is
+realized in this family. At $k=1$, $\chi=-1,0,1$ gives respectively
+$T>0$, $T=0$, and $T<0$ with $v=1$; all select zero. The domain
+$\chi>-2$ ensures $h>0$; the draft never claims this particular
+family realizes every negative real value of $\chi$.
+
+\section{Openness, branch coordinates and switch codimension}
+Let the equilibrium graph be the subset of positive
+$(x,a,k,c,g,h)$ with $B(x)=0$. Since $B_a=1$, it is a smooth
+five-dimensional manifold parameterized globally by
+\[
+ \mathcal U_{\rm eq}=\{(x,k,c,g,h)\in(0,\infty)^5:
+ (k+h)x-(c-g)/(1+x)>0\}.
+\]
+This is open in $\RR^5$. Its projection to physical parameter space is
+\[
+ \Phi(x,k,c,g,h)=((k+h)x-(c-g)/(1+x),k,c,g,h).
+\]
+The bottom four rows of its Jacobian are the corresponding identity rows,
+so expansion in the first column gives
+\[
+ \det D\Phi=k+h+{c-g\over(1+x)^2}=-B_x.
+\]
+At \emph{every} point with $H>G$ this is
+\[
+ k+(h-g/(1+x)^2)+c/(1+x)^2>0. \label{a05:regularity}
+\]
+Consequently the scalar root is simple. The original scalar field also
+has nonzero derivative $f'(x)=xB_x<0$ at this positive root. There is
+no repeated-root/fold point on a retained switch or a concave-regime
+cell. This statement requires no full-system Jacobian invertibility.
+
+The inverse function theorem makes $\Phi$ a local diffeomorphism at
+these points; equivalently the implicit function theorem solves for a
+specified smooth positive $x=x^*(a,k,c,g,h)$. Since $\chi$ is smooth
+on the positive equilibrium chart, each strict inequality in
+\eqref{a05:cells} gives an open subset of that chart. Each strict cell,
+including zero's, has a concave-regime example. Choose a small open
+neighborhood within that cell on which $\Phi$ is a diffeomorphism.
+Its image is a nonempty open subset of the \emph{full five-dimensional}
+positive physical parameter space. Positivity of $x$ and all five
+parameters and all strict selection inequalities persists after shrinking
+this neighborhood. This proves the claimed physical openness, not
+merely openness in a constrained family such as $c=g=4,x=1$.
+
+The quantifier is branch-specific and existential for each cell, not
+``every branch at every parameter tuple has the same selected mode''.
+For a concrete check of that distinction, $(a,k,c,g,h)=(17/2,1,1,11,1)$
+has positive roots $x=1/4$ and $x=3$, by direct substitution. At the
+former $\chi=-151/20<0$; at the latter $\chi=15$. For $n=8$ they
+select zero and two, respectively. Thus the branch qualification is
+necessary and correctly retained. Also $(6,1,1,9,1)$ at $x=1$ gives
+$B_x=0$, $\chi=-10$, and a uniform selected representative; there
+are canonical folds in the uniform region. P05 explicitly does not
+infer its local-diffeomorphism argument at arbitrary such points.
+These are scope checks, not proofs of later bifurcation claims.
+
+For $\beta_j>0$ the audit's coefficient-scale switch function is
+\[
+ \widetilde\Psi_j=x(h-g/(1+x)^2)-{c\over4(1+x)\beta_j}.
+\]
+Holding branch coordinates $x,k,c,g$ fixed gives
+$\partial_h\widetilde\Psi_j=x>0$. P05 uses instead
+\[
+ \Psi_j=\widetilde\Psi_j/x
+ =h-{g\over(1+x)^2}-{c\over4(1+x)x\beta_j},
+ \qquad\partial_h\Psi_j=1.
+\]
+They have the same zero set; division by $x>0$ causes no defect. The
+regular-level-set theorem makes it a nonempty four-dimensional smooth
+submanifold of the five-dimensional equilibrium chart. Every such point
+has $H>G$ by \eqref{a05:switch}, so $\Phi$ is locally regular there.
+It transfers the switch to a local codimension-one hypersurface in
+$(0,\infty)^5$ physical parameter space on the chosen branch.
+
+For clarity, no fixed-physical-$a$ derivative in $h$ is needed. Holding
+$x,k,c,g$ fixed and varying $h$ requires $a'=x$ and gives a legitimate
+physical tangent vector $(x,0,0,0,1)$. Along it,
+\[
+ {\partial\chi\over\partial h}={4(1+x)x\over c}>0,
+ \qquad {\partial(R(u_j)-R(u_{j+1}))\over\partial h}
+ =-4x(u_j-u_{j+1})\beta_j<0.
+\]
+Equivalently, for a local inverse chart the physical switch function is
+$\Psi_j\circ\Phi^{-1}$, with nonzero differential because $D\Phi^{-1}$
+is invertible. The two neighbors exchange order across the surface,
+and the finite strict gap to every other representative persists locally.
+Thus this is a genuine local change of dominance, not just an equation
+with a nonzero derivative on an unrelated space. The draft makes no
+unqualified global manifold claim after forgetting branch labels.
+
+\section{Stable paths and what they prove}
+For any retained switch choose $\epsilon>0$ smaller than its distance
+to zero and to every other threshold, and put
+$b_\pm=\alpha_j\pm\epsilon$. When there is no neighboring threshold
+on one side, only the remaining positive distances constrain $\epsilon$.
+Use \eqref{a05:family} for $\chi\in[b_-,b_+]$, holding
+$k>b_+/2$ fixed. All five coefficients are positive, $x=1$ stays an
+exact equilibrium, and its scalar derivative is $-(k+h)\ne0$.
+The path meets exactly the intended switch and its two neighboring
+strict cells, transversely in the selection-surface sense.
+
+Derive the diagonal independently from P04's verified formula
+\[
+ d=a-2kx-cx/(1+x)^2-g/(1+x)-hx.
+\]
+With $a=k+h,x=1,c=g=4$, this is
+$d=k+h-2k-1-2-h=-k-3$. Equivalently the positive-equilibrium
+simplification is $d=-kx-c(1+2x)/(1+x)^2$, used only after imposing
+the equilibrium identity. Thus for \emph{every} label and every point
+in the entire interval,
+\[
+ r_m=-k-3+2\cos\theta_m-\frac\chi2\cos(2\theta_m)
+ \le-k-1+\frac{b_+}{2}<-1.
+\]
+The bound uses $\cos\theta\le1$ and $-\cos(2\theta)\le1$ with
+$0<\chi\le b_+$. It is uniform in all modes and the full path.
+P04 therefore gives strict linear stability throughout. Increasing $k$
+while increasing $a$ equally leaves $x,C,G,H,\chi$ fixed in this family
+and subtracts the increase of $k$ from every real part. This also
+constructs a stable realization of every strict cell. No P11 simplicity,
+Hopf theorem, nonzero frequency or instability transversality is used.
+
+What is proved is that dominant-mode switching need not coincide with
+loss of stability. It does not identify the first destabilizing mode on
+another path, a Hopf event, or any nonlinear bifurcation. The word
+``transversely'' in the selection-surface explanation above refers only
+to a nonzero switch-function derivative, not to P12's imaginary-axis
+crossing condition.
+
+The verified P04 eigenvalue expression is
+$\lambda_m=d+Ce^{-i\theta_m}+Ge^{2i\theta_m}-He^{-2i\theta_m}$.
+Taking imaginary parts gives independently
+\[
+ \omega_m=-C\sin\theta_m+(G+H)\sin(2\theta_m).
+\]
+Hence $r_j=r_{j+1}$ alone is not $\lambda_j=\lambda_{j+1}$;
+equality of signed imaginary parts is additionally required. Under
+conjugacy these signs reverse. Counts of selected labels are not
+counts of distinct eigenvalues or certifications of a simple Hopf pair.
+P05 explicitly preserves these distinctions.
+
+\section{Independent small-dimension reconstruction}
+Within each row put $\gamma_t=\cos(t\pi/n)$. These are exact symbols,
+not rounded constants. The complete representative grids independently
+obtained by reflecting angles about $\pi/2$ are
+\begin{center}\small
+\begin{tabular}{@{}c c l@{}}
+\toprule $n$&$N$&$(u_0,\ldots,u_N)$\\\midrule
+5&2&$(1,\gamma_2,-\gamma_1)$\\
+6&3&$(1,1/2,-1/2,-1)$\\
+7&3&$(1,\gamma_2,-\gamma_3,-\gamma_1)$\\
+8&4&$(1,\sqrt2/2,0,-\sqrt2/2,-1)$\\
+9&4&$(1,\gamma_2,\gamma_4,-1/2,-\gamma_1)$\\
+10&5&$(1,\gamma_2,\gamma_4,-\gamma_4,-\gamma_2,-1)$\\
+11&5&$(1,\gamma_2,\gamma_4,-\gamma_5,-\gamma_3,-\gamma_1)$\\
+12&6&$(1,\sqrt3/2,1/2,0,-1/2,-\sqrt3/2,-1)$\\\bottomrule
+\end{tabular}\end{center}
+The cells, finite switch boundaries and terminal signs are as follows.
+An ordered list in the switch column gives $\alpha_0,\ldots,\alpha_{J-1}$.
+\begin{center}\small
+\begin{tabular}{@{}c c c c l@{}}
+\toprule
+$n$&$J$&reachable&$u_J$&finite switch boundaries\\\midrule
+5&1&$0,1$&$\sin(\pi/10)>0$&$\gamma_1^{-2}$\\
+6&1&$0,1$&$1/2>0$&$4/3$\\
+7&2&$0,1,2$&$-\sin(\pi/14)<0$&$\gamma_1^{-2},(\gamma_1\gamma_3)^{-1}$\\
+8&2&$0,1,2$&$0$&$4/(2+\sqrt2),2\sqrt2$\\
+9&2&$0,1,2$&$\sin(\pi/18)>0$&$\gamma_1^{-2},2/\gamma_1$\\
+10&2&$0,1,2$&$\sin(\pi/10)>0$&$\gamma_1^{-2},(\gamma_1\gamma_3)^{-1}$\\
+11&3&$0,1,2,3$&$-\sin(\pi/22)<0$&$\gamma_1^{-2},(\gamma_1\gamma_3)^{-1},(\gamma_1\gamma_5)^{-1}$\\
+12&3&$0,1,2,3$&$0$&$4/(2+\sqrt3),4/(\sqrt3+1),4$\\\bottomrule
+\end{tabular}\end{center}
+The positive midpoints, obtained before taking reciprocals, are
+\[
+\begin{array}{c|l}
+5&\gamma_1^2\\
+6&3/4\\
+7&\gamma_1^2,\ \gamma_1\gamma_3\\
+8&(2+\sqrt2)/4,\ \sqrt2/4\\
+9&\gamma_1^2,\ \gamma_1/2\\
+10&\gamma_1^2,\ \gamma_1\gamma_3\\
+11&\gamma_1^2,\ \gamma_1\gamma_3,\ \gamma_1\gamma_5\\
+12&(2+\sqrt3)/4,\ (\sqrt3+1)/4,\ 1/4.
+\end{array}
+\]
+For $n=6$ the additional midpoint $\beta_1=0$; for $n=10$ it is
+$\beta_2=0$. These are the only zero midpoints in this table and give
+no finite switch. In every other row $\beta_J<0$. Monotonicity gives
+all remaining signs. Every entry agrees with P05 \lin{487--494};
+the four terminal examples in \lin{462--465} also agree exactly.
+This small-$n$ verification does not begin P07's separate specialization.
+
+\section{All explicit canonical examples}
+Every example in P05 uses \eqref{a05:family} with $k=1$, so its tuple
+is $(2+\chi/2,1,4,4,1+\chi/2)$, $x^*=1$, and
+\[
+ (C,G,H)=(2,1,1+\chi/2),\qquad d=-4,
+ \qquad a-k-h+(c-g)/2=0.
+\]
+All coefficients are positive for the stated $\chi$. Substitution into
+the original DM field has already been displayed; here the original
+five terms are exactly $a,-1,2,-2,-h$ and sum to zero. For each row
+below, substituting every grid value in
+\[
+ R(u)=-4+\chi/2+2u-\chi u^2
+\]
+or applying the proved all-grid distance comparison gives precisely
+the selected representatives shown.
+\begin{center}\small
+\begin{tabular}{@{}c l c l@{}}
+\toprule
+$n$&$\chi$&$S$&maximum real part\\\midrule
+any&$-1$&$\{0\}$&$-3/2$\\
+any&$0$&$\{0\}$&$-2$\\
+any&$1$&$\{0\}$&$-5/2$\\
+8&$2$&$\{1\}$&$-4+\sqrt2<0$\\
+6&$4/3$&$\{0,1\}$&$-8/3$\\
+8&$2\sqrt2$&$\{1,2\}$&$-4+\sqrt2<0$\\
+8&$4\sqrt2$&$\{2\}$&$-4+2\sqrt2<0$\\
+9&$4/\cos(\pi/9)$&$\{2\}$&$-2+2\sin(\pi/18)<0$\\
+10&$2/[\cos(\pi/10)\cos(3\pi/10)]$&$\{2\}$&$7(\sqrt5-5)/10<0$\\
+11&$2/[\cos(\pi/11)\cos(5\pi/11)]$&$\{3\}$&$-4-2t+1/t>0$, $t=\sin(\pi/22)$\\\bottomrule
+\end{tabular}\end{center}
+The $\chi=0$ row is also the tuple $(2,1,4,4,1)$ in \lin{443};
+the other three explicitly printed tuples give exactly the stated
+$\chi$ values. For $n=8,\chi=2$, the vertex $1/2$ lies between
+$\sqrt2/4$ and $(2+\sqrt2)/4$. For the $n=6$ and second $n=8$
+examples it equals $\beta_0$ and $\beta_1$, respectively. Their
+Fourier labels are $\{0,1,5\}$ and $\{1,2,6,7\}$.
+
+In the last four rows $\chi=2/\beta_{J-1}$, so
+$v=\beta_{J-1}/2$ is strictly in the terminal cell for each residue
+class. This establishes the maximum against all other labels without
+rounding trigonometric constants. The $n=11$ last row is \emph{unstable}
+at $k=1$: $0<t<2/11$ from $\sin y<y$ and $\pi<4$, so
+$4t+2t^2<96/121<1$, proving the displayed positivity.
+P05 asserts this example only as a selection realization, not as a
+stable one. Its separate stable-realization assertion explicitly enlarges
+$k$. Thus the positive maximum here is not an error or an exception
+to the stable-path construction.
+
+\section{Independent computational corroboration and its limits}
+The new standard-library checker
+\path{A05_support/independent_check.py} does not import P05's validation
+code. It computes $\pi$ by Machin's arctangent formula and cosines by
+Taylor series at 120 decimal digits, then directly maximizes the
+\emph{original P04 trigonometric real part over all $n$ labels}.
+It compares that result with the independently stated cell predictions
+and also checks the quadratic expression. The tie tolerance is
+$10^{-85}\max(1,|r|,|\widetilde r|)$; this is finite-precision
+corroboration, not interval arithmetic or a proof of transcendental
+equalities. Exact equalities and inequalities are proved above.
+
+The number of finite switches is determined before trusting any draft
+statistic:
+\[
+ \sum_{n=5}^{40}\left\lfloor{n+1\over4}\right\rfloor
+ =2\cdot1+4\sum_{r=2}^{9}r+2\cdot10=198.
+\]
+Indeed $n=5,6$ contribute two ones, $n=7$ through $38$ give four
+copies each of $2,\ldots,9$, and $n=39,40$ give two tens.
+There are $198+36=234$ strict cells. These are independent analytic
+counts, though the switch count agrees with the draft's report.
+
+All \textbf{2,939 independently constructed cases pass}. Coverage is:
+\begin{center}
+\begin{tabular}{@{}l r@{}}
+\toprule Case class&count\\\midrule
+Three interior vertices in every strict cell&702\\
+Same vertices realized with a second choice of $x,c,g,k$&702\\
+Every positive-midpoint tie&198\\
+Immediately below / immediately above each switch&198 / 198\\
+Stable paths: left, tie, right for every switch&594\\
+$T>0$, $T=0$, $v=1$, $\chi=10^{30}$&36 each\\
+All negative-midpoint equalities, below the maximum&189\\
+Explicit regime / printed examples / terminal examples&3 / 4 / 4\\
+Uniform fold / two positive branch cautions&1 / 2\\\bottomrule
+\end{tabular}
+\end{center}
+The adjacent probes are at threshold $\pm10^{-12}$ times a quarter
+of the smaller local threshold gap. No nearby second threshold is crossed.
+All $5\le n\le40$ and all four residue classes are covered. Every case
+uses positive canonical coefficients and verifies the original five-term
+DM equilibrium residual. The second construction uses
+$x=2/3,c=7/5,g=11/7,k=3$; here $c-g<0$, so $a>0$ is automatic.
+The $594$ path sample points satisfy the uniform analytic stability bound;
+the proof of the entire intervening intervals is the inequality above.
+
+On Python 3.9.6, the largest scaled original-DM residual was below
+$3.18\times10^{-120}$, and the largest scaled direct-versus-quadratic
+discrepancy was below $2.45\times10^{-89}$. Full case inputs, selected
+labels, maxima and residuals are retained in
+\path{independent_results.json}; counts and environment are in
+\path{independent_summary.json}. These numerical figures certify only
+this newly run checker, not P05's historical run.
+
+\paragraph{U01: historical validation provenance, nonblocking.}
+The task does not include \path{P05_validation_support.zip}, which the
+manifest says was delivered separately. Its exact symbolic-check count,
+1,872 main cases, 2,466 canonical cases, 5,616 dispersion comparisons,
+reported error maxima, historical build records and original checker are
+not independently reproduced. P05 \lin{558--567} is therefore
+\textbf{UNRESOLVED} as a historical provenance assertion. The independent
+count $198$ and new checks are not evidence that the absent run itself
+occurred as reported. The analytic proof needs none of it. No mathematical
+verdict or downstream mathematical gate is blocked by U01; closure should
+retain this qualification unless the original companion is supplied and
+checked later.
+
+\section{Adversarial counterexample search}
+The strongest claims were attacked both analytically and through the
+independent all-label comparisons. Failure to find a numerical example
+is not used as an impossibility proof. The decisive conclusions are:
+\begin{longtable}{@{}L{0.34\textwidth}L{0.61\textwidth}@{}}
+\toprule Attempted failure&Outcome and analytic reason\\\midrule\endhead
+A finite selected $j>J$&Impossible: its cell has upper endpoint
+$\beta_{j-1}\le0<v$; convex cases select only zero.\\
+Loss of the negative terminal mode for $n\equiv3\pmod4$&Impossible:
+its exact positive upper midpoint leaves a nonempty interval of positive
+vertices inside its strict cell.\\
+Nonadjacent or triple maximal ties&Impossible: a point strictly between
+equidistant endpoints is strictly closer to the vertex.\\
+A realizable nonpositive-midpoint maximal switch&Impossible: positive
+vertices exclude it; convex/linear regimes have unique representative zero.
+All 189 negative-midpoint equalities sampled are lower-value ties.\\
+Nonpositive $a$ in the construction&Impossible under the stated strict
+$k$ bound, which is algebraically equivalent to $a>0,k>0$.\\
+A constructed cell or switch at a scalar fold&Impossible in $H>G$ by
+$-B_x=k+(h-g/s^2)+c/s^2>0$. A fold does exist in the uniform convex
+region, but P05 excludes the unwarranted universal projection assertion.\\
+Vanishing switch gradient after projection&Impossible locally:
+$\partial_h\Psi_j=1$ on the chart and $D\Phi$ is invertible.\\
+Another mode becoming nonnegative on the stable path&Impossible:
+every real part is less than $-1$ on the full interval.\\
+A selected Nyquist singleton&Impossible even without $J$:
+$R(1)-R(-1)=2C>0$.\\
+``Mode zero is always selected''&Counterexample found and exact:
+$n=8,(3,1,4,4,2),x=1$ selects $\{1,7\}$. This identifies E01's
+wording defect, not a defect in a displayed theorem.\\
+All branches at a tuple share selection&Counterexample given above:
+$(17/2,1,1,11,1)$ at $n=8$ has different selected representatives on
+its two positive roots. P05 does not claim otherwise.\\
+All printed realizations are stable at $k=1$&False for the $n=11$
+terminal example, but no such universal claim is made. The stable family
+chooses $k$ larger explicitly.\\\bottomrule
+\end{longtable}
+
+\section{Line-by-line issue ledger for the exact P05 source}
+The ranges below partition all 591 lines, including headings, comments
+and intervening blank lines. Each substantive range is rated using the
+requested vocabulary. PASS means its mathematical or scope assertion
+passes; MINOR ISSUE is a required textual correction; UNRESOLVED below
+concerns historical provenance only. No MAJOR ISSUE or FALSE theorem
+range is present. The literal selected-set reading of E01 is false, but
+the correct intended candidate-set meaning is fixed by one local sentence.
+\begin{longtable}{@{}L{0.11\textwidth}L{0.18\textwidth}L{0.65\textwidth}@{}}
+\toprule Lines&Rating&Independent finding\\\midrule\endhead
+1--14&PASS&Current version and DRAFT status; dependency and strengthened scope
+metadata agree with the final manifest.\\
+15--29&PASS&Positive synchronous hypotheses and verified P04 input, including
+the sign $G-H$, are correct.\\
+30--31&MINOR ISSUE&E01: candidate set versus selected set is ambiguous.
+Require the explicit replacement in section 1. Coprimality sentence passes.\\
+32--34&PASS&Only verified earlier modules are imported.\\
+35--48&PASS&Global ratio $\chi=-4T/C$ is well defined since $C>0$;
+novelty and indexing scope are accurate.\\
+49--62&PASS&Quadratic reduction and constant cancellation; no independent
+physical freedom of $d$ is inferred.\\
+63--83&PASS&Strictly descending grid, both endpoints and disjoint label
+classes match the independent derivation.\\
+84--94&PASS&Explicit endpoint gap and positivity for every $u<1$ prove
+uniqueness, including odd $n$ and $T=0$.\\
+95--107&PASS&Concave derivative, positive vertex, $v=1$ uniqueness and
+distinction from the first discrete switch.\\
+108--120&PASS&Square completion and cosine-space distance are exact.\\
+121--129&PASS&Midpoint product; valid range $0\le j<N$; difference formula
+for consecutive midpoints applies where $j<N-1$.\\
+130--145&PASS&Theorem A's closed endpoint/interior cells and unique open
+cells, ties and positive-midpoint restriction are correct.\\
+146--163&PASS&Distance-difference sign and neighbor sufficiency against
+all other representatives are correct.\\
+164--171&PASS&Nonadjacent/triple maximal tie exclusion; independent explicit
+distance proof supplied in this audit.\\
+172--184&PASS&Adjacent gap $C(u_j-u_{j+1})(1-\chi\beta_j)$; nonmaximal
+convex equalities are correctly distinguished.\\
+185--193&PASS&Three/four selected-label counts; no distinct-eigenvalue or
+Nyquist-selection inference.\\
+194--210&PASS&Theorem B's exact list, strict attainability and finite
+positive switches are all justified.\\
+211--231&PASS&Cell-intersection criterion, integer floor formula,
+$J<N$, and no isolated additional reachable representative.\\
+232--245&PASS&All four rows of the parity table, including formal zero
+ties, are correct.\\
+246--262&PASS&Odd straddling cosines, sine ordering, zero-cosine pair and
+zero-midpoint exception.\\
+263--280&PASS&Fixed-$n$ terminal limit and persistent $2C\sin(\pi/n)$
+gap; no finite infinite-$\chi$ switch or large-$n$ claim.\\
+281--300&PASS&Reciprocal directions, ranges of $\alpha_j$, combined
+global $\chi$ rule and strict uniform status at $\chi=1$.\\
+301--318&PASS&Canonical inequalities, positive denominators and exact
+switch equation.\\
+319--328&PASS&Original equilibrium constraint and exclusion of
+nonpositive-midpoint dominant switches.\\
+329--341&PASS&Theorem C quantifiers are existential for open cells and
+local on specified branches for hypersurfaces; all switch points are regular.\\
+342--362&PASS&Universal construction, exact strict $k$ bound and original
+five-term residual; spectral coefficients are not treated as free.\\
+363--376&PASS&Simple family has $\chi>-2$ and covers all positive
+$\chi$; $-1,0,1$ examples are valid.\\
+377--395&PASS&Open five-dimensional equilibrium chart and correctly signed
+projection determinant.\\
+396--403&PASS&Strict positivity of the determinant throughout $H>G$;
+IFT hypotheses and scalar versus full-system regularity are distinguished.\\
+404--413&PASS&Open strict cells project locally to open physical sets;
+concave uniform example included; arbitrary uniform folds are not claimed regular.\\
+414--425&PASS&Scaled switch function has derivative 1, nonempty regular
+level set and valid local transfer to physical parameters.\\
+426--439&PASS&Both crossing derivatives correct; $a$ varies to hold $x$
+fixed; other representatives remain strictly below; no global branch quotient claim.\\
+440--453&PASS&Four printed tuples have positive coefficients, $x=1$, exact
+residuals and stated label maxima.\\
+454--471&PASS&All four terminal examples use $v=\beta_{J-1}/2$;
+the unstable $n=11,k=1$ example makes no stability claim.\\
+472--479&PASS&Exact row-local notation, terminal midpoint signs and P07
+scope restriction.\\
+480--498&PASS&Every grid and midpoint entry for $n=5,\ldots,12$ agrees
+with independent reconstruction.\\
+499--507&PASS&Dominance and oriented first loss of stability are separated;
+no first-instability result is inferred.\\
+508--520&PASS&Stable path remains canonical, $d=-k-3$ and uniform
+all-label bound $r_m<-1$ hold throughout the interval.\\
+521--527&PASS&Adjacent change of dominance and stable realization of every
+cell; later first-crossing tasks are explicitly deferred.\\
+528--541&PASS&Imaginary-part sign correct; real-part ties do not establish
+complex equality, simple pairs or Hopf conditions.\\
+542--556&PASS&Internal analytic checks describe true identities; the
+audit independently proves them rather than trusting their description.\\
+557--563&UNRESOLVED&U01: contents and coverage of the separately named
+original validation companion cannot be authenticated from this delivery.\\
+564--565&PASS&Finite-precision corroboration is explicitly distinguished
+from exact trigonometric input definitions and proof.\\
+566--567&UNRESOLVED&U01: historical support run totals, environment and
+error records are absent; the new checker is not that run.\\
+568--569&PASS&Compilation and internal checking do not confer verification.\\
+570--591&PASS&Auditor checklist is consistent with the verified findings and
+scope; it is source material, not a new instruction to alter any proof.\\
+\bottomrule
+\end{longtable}
+
+\section{Dependencies, strengthened target and downstream consequences}
+The audit uses only the supplied verified P01--P04 input, elementary
+trigonometry, finite-set comparisons, differentiation, and the local
+implicit/inverse function and regular-level-set theorems with their
+nonzero derivatives explicitly checked. No result from P06, P07, P08,
+P11, P12 or P13 is a premise. Later module names in P05 are scope
+deferrals, not circular dependencies. No new literature search is conducted.
+
+The mathematical content reaches the frozen strengthened P05 target:
+an exact finite-$n$ classification of all reachable cells and ties, the
+modulo-four terminal phenomenon and excluded Nyquist mode, exact original
+parameter realization, open physical cells and realizable local switch
+geometry, plus stable crossing paths. The bare quadratic maximizer is
+only its elementary tool. E01 does not reduce this mathematical content;
+it requires that the introductory definition say what the later theorems
+actually prove. This audit does not certify new-model priority, an exact
+DM--MB contrast, or the later first-Hopf package. The frozen literature
+priority limitation remains separate.
+
+\textbf{P08 clearance:} after E01 is applied in a separately authorized
+closure and that closure records the exact corrected version, the P05
+mathematical prerequisite for P08 is cleared. A closure that merely
+changes status without correcting E01 is insufficient. Retain U01 as
+a nonblocking provenance note unless independently resolved. P08 must
+still respect the frozen same-coefficient tuple, original time variable,
+and separately specified positive branches on their common existence
+domain; P05 does not prove a comparator contrast. No P08 proof is begun.
+
+\textbf{P07 consequence:} after the same closure, the general selection
+theorem may be specialized. The small-$n$ checks here neither begin nor
+promote the separate five-node theorem. \textbf{P11 consequence:} exact
+dominance cells and real-part ties may be used after closure, but branch,
+physical path, frequency, simple critical pair, all-other-mode exclusion
+and first-crossing conditions remain to be proved there and in its
+successors. The stable paths explicitly show why a selection switch
+alone cannot supply them. No P11 proof is begun.
+
+\paragraph{Final disposition.}
+Keep the supplied P05 file, project manifest, claim registry and compendium
+unchanged. Deliver this standalone audit, its independently written
+corroboration and hash records as an audit-only package. The current
+source still says DRAFT. Required correction: E01 only. The analytic
+verdicts are independent of both the historical and new numerical checks.
+
+\appendix
+\section{Exact dependency and context hashes}
+All hashes in this appendix are full SHA-256 digests of supplied bytes. Body hashes use the first line-anchored section command through EOF. The accompanying JSON preserves byte and line counts as well.
+\medskip\noindent\textbf{\path{project_manifest.md}}
+86494 bytes; 451 lines. Full file:
+\sha{a4658ef7b17b64fbb43825bfa1cd035d}{f07efa1fb72141f9c9fea02dd1c28830}
+\medskip\noindent\textbf{\path{claim_registry.md}}
+92791 bytes; 465 lines. Full file:
+\sha{12c106cf55d789d840329a2f5f4e80e1}{a54163707d4d4286fd387bbefeb149ee}
+\medskip\noindent\textbf{\path{frozen_theorem_package.md}}
+9729 bytes; 69 lines. Full file:
+\sha{724adf3d04a7f9661a2e53fbae359192}{e8a5a5ee56737bdca2379209b556ea63}
+\medskip\noindent\textbf{\path{final_novelty_verdict.md}}
+6511 bytes; 37 lines. Full file:
+\sha{5fa8ddd5ada9628b104dba68dd535356}{442c5e62ec45b72f3c2c354dec6037ea}
+\medskip\noindent\textbf{\path{novelty_decisions.md}}
+19241 bytes; 124 lines. Full file:
+\sha{8fd079fb108b93c4504bc2b527de11c1}{f7e867a967c7cef0d90e1ff7a0a9175e}
+\medskip\noindent\textbf{\path{02_theorem_dependency_map.tex}}
+9372 bytes; 145 lines. Full file:
+\sha{a1a4435f36fc1d1b6f0b2c5226a91328}{3c76658d55b96493e6c50a8693831cac}
+\medskip\noindent\textbf{\path{00_canonical_model.tex}}
+3712 bytes; 74 lines. Full file:
+\sha{c209981cb2924e8a782f24aa2904e8c8}{5a105ff99319dd6aada12f48a351c2a4}
+\medskip\noindent\textbf{\path{01_notation_and_assumptions.tex}}
+5152 bytes; 103 lines. Full file:
+\sha{97d993c6d3986524dbcc29659ee73d25}{7be1b03a35c44401e8ef4534303eeb91}
+\medskip\noindent\textbf{\path{proofs_compendium.tex}}
+5807 bytes; 124 lines. Full file:
+\sha{d1b9c83900c027edffa9c1fde6088546}{c43cd37750e602636668b0abd53eb09a}
+\medskip\noindent\textbf{\path{shared_macros.tex}}
+1281 bytes; 35 lines. Full file:
+\sha{f4a18a440e1214b619bf18f4a81fee50}{7239460ca796d8ca3916791069d6a7ad}
+\medskip\noindent\textbf{\path{proofs/P01_wellposedness_and_absorbing_box.tex}}
+22570 bytes; 520 lines. Full file:
+\sha{0d6950821aa83f3d09e8bfe84dab2b0b}{5020aa6e7881cf6928e984bff1890f1e}
+Mathematical body:
+\sha{a640b2bf9a160feed273dc667c6b44a6}{923a1d68d6dd81acd35640cc0e4d5808}
+\medskip\noindent\textbf{\path{audits/A01_wellposedness_and_absorbing_box.tex}}
+48622 bytes; 974 lines. Full file:
+\sha{8d5c1b2ec782dbe49b07d2bbe529ee47}{4d4c142695c53b523ccb41d63bb33098}
+\medskip\noindent\textbf{\path{proofs/P02_synchronous_subspace_and_equilibria.tex}}
+26905 bytes; 610 lines. Full file:
+\sha{8e057c2cd009659eee45906844e25f4f}{38c156e5eb2e4130e824aa5e8299c51a}
+Mathematical body:
+\sha{8a061ba81c7ffd2d05b188b9fca4ec1b}{94bc132147f7f664c8523f0a5f32560c}
+\medskip\noindent\textbf{\path{audits/A02_synchronous_subspace_and_equilibria.tex}}
+37895 bytes; 847 lines. Full file:
+\sha{ca3d723d9fcfac14f5129583441e611a}{65e41848ec44f3b5e3a0072f795d84ac}
+\medskip\noindent\textbf{\path{proofs/P03_origin_and_linearization.tex}}
+19857 bytes; 447 lines. Full file:
+\sha{6c3c9bfb2307bdc043eb7f6a874cb222}{e2ac2ce0750b339181f0088dd0bd859e}
+Mathematical body:
+\sha{07d76c8ce0b5232827e9f2c74245188b}{55b0ce0d1732b3cb2e528d69e8d6b50a}
+\medskip\noindent\textbf{\path{audits/A03_origin_and_linearization.tex}}
+37700 bytes; 692 lines. Full file:
+\sha{e1008f98ba9667b92b8d74f1bc7d21e0}{21414b454ac976ae0db1500b4b7ef8d1}
+\medskip\noindent\textbf{\path{proofs/P04_arbitrary_nq_fourier_spectrum.tex}}
+26980 bytes; 590 lines. Full file:
+\sha{1331c8598acd0481046250d918cac028}{ca6d13d2604612448c3459e864321c58}
+Mathematical body:
+\sha{3e3d58230c87af3b5f07069d61065362}{dc081d172ad3b236057fefda25fa5653}
+\medskip\noindent\textbf{\path{audits/A04_arbitrary_nq_fourier_spectrum.tex}}
+47595 bytes; 832 lines. Full file:
+\sha{8a57079241269c92a3c3e8dc4dccf859}{2da2d1a636fca0c0990a4f318396d869}
+\medskip\noindent\textbf{\path{proofs/P05_q2_mode_selection.tex}}
+26848 bytes; 591 lines. Full file:
+\sha{b7123736242554bd7fc1f6a56d8788b6}{c5413a25930e5360d7ea5babe44184d4}
+Mathematical body:
+\sha{25ab3e4ed5d871ab2884210e6d8e7f36}{31acee3f7a1c662d3c33de441048810d}
+\end{document}

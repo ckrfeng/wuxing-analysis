@@ -1,0 +1,15 @@
+# Five-term demand-modulated model DM_(5,2)
+# Order: Wood, Fire, Earth, Metal, Water
+par a=2, k=0.5, c=1, g=0.5, h=0.3
+x1'=a*x1-k*x1^2+c*x5/(1+x1)-g*x1/(1+x3)-h*x1*x4
+x2'=a*x2-k*x2^2+c*x1/(1+x2)-g*x2/(1+x4)-h*x2*x5
+x3'=a*x3-k*x3^2+c*x2/(1+x3)-g*x3/(1+x5)-h*x3*x1
+x4'=a*x4-k*x4^2+c*x3/(1+x4)-g*x4/(1+x1)-h*x4*x2
+x5'=a*x5-k*x5^2+c*x4/(1+x5)-g*x5/(1+x2)-h*x5*x3
+# Wood +5% from the balanced level 2.670286436967...
+init x1=2.803800758816, x2=2.670286436967, x3=2.670286436967
+init x4=2.670286436967, x5=2.670286436967
+@ meth=rungekutta, dt=0.01, total=30
+@ xlo=0, xhi=30, ylo=2.5, yhi=2.9, xp=t, yp=x1
+@ maxstor=100000, bound=1000000
+done

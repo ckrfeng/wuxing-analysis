@@ -1,0 +1,2135 @@
+[
+  {
+    "name": "phi quadratic",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "phi inverse",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "phi inverse square",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "phi plus inverse",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "u1 radical",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "u2 radical",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "cosine difference",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "fifth root cosine quadratic",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "double cosine 1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "double cosine 2",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "sigma squared radical",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "sin72 squared radical",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "cos36 sigma identity",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "sin72 normalization squared",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "sigma positive square",
+    "passed": true,
+    "value": [
+      "5/8",
+      "-1/8"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "fifth root power",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "geometric sum",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "unit modulus",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "phase row 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "double phase row 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "phase row 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "double phase row 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "phase row 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "double phase row 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "phase row 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "double phase row 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "phase row 4",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "double phase row 4",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=0 coefficient d",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=0 coefficient C",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=0 coefficient G",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=0 coefficient H",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=0 coefficient 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=0 coefficient 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=0 coefficient 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=0 coefficient 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=1 coefficient d",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=1 coefficient C",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=1 coefficient G",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=1 coefficient H",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=1 coefficient 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=1 coefficient 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=1 coefficient 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=1 coefficient 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=2 coefficient d",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=2 coefficient C",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=2 coefficient G",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=2 coefficient H",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=2 coefficient 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=2 coefficient 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=2 coefficient 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=2 coefficient 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=3 coefficient d",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=3 coefficient C",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=3 coefficient G",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=3 coefficient H",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=3 coefficient 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=3 coefficient 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=3 coefficient 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=3 coefficient 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=4 coefficient d",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=4 coefficient C",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=4 coefficient G",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "spectrum m=4 coefficient H",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=4 coefficient 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=4 coefficient 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=4 coefficient 2",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "conjugacy m=4 coefficient 3",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "gap 1-2 coefficient 0",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 1-2 coefficient 1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 1-2 coefficient 2",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-1 coefficient 0",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-1 coefficient 1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-1 coefficient 2",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-2 coefficient 0",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-2 coefficient 1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "gap 0-2 coefficient 2",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "ordering above_1 1-2",
+    "passed": true,
+    "value": [
+      "0",
+      "-1/2"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "ordering above_1 0-1",
+    "passed": true,
+    "value": [
+      "15/4",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering above_1 0-2",
+    "passed": true,
+    "value": [
+      "15/4",
+      "-1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering at_1 1-2",
+    "passed": true,
+    "value": [
+      "0",
+      "0"
+    ],
+    "sign": 0
+  },
+  {
+    "name": "ordering at_1 0-1",
+    "passed": true,
+    "value": [
+      "5/2",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering at_1 0-2",
+    "passed": true,
+    "value": [
+      "5/2",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering middle_uniform 1-2",
+    "passed": true,
+    "value": [
+      "0",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering middle_uniform 0-1",
+    "passed": true,
+    "value": [
+      "5/4",
+      "-1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering middle_uniform 0-2",
+    "passed": true,
+    "value": [
+      "5/4",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering dominant_tie 1-2",
+    "passed": true,
+    "value": [
+      "-5/4",
+      "5/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering dominant_tie 0-1",
+    "passed": true,
+    "value": [
+      "0",
+      "0"
+    ],
+    "sign": 0
+  },
+  {
+    "name": "ordering dominant_tie 0-2",
+    "passed": true,
+    "value": [
+      "-5/4",
+      "5/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering middle_pair1 1-2",
+    "passed": true,
+    "value": [
+      "0",
+      "1"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering middle_pair1 0-1",
+    "passed": true,
+    "value": [
+      "0",
+      "-1/2"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "ordering middle_pair1 0-2",
+    "passed": true,
+    "value": [
+      "0",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering lower_tie 1-2",
+    "passed": true,
+    "value": [
+      "5/4",
+      "5/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering lower_tie 0-1",
+    "passed": true,
+    "value": [
+      "-5/4",
+      "-5/4"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "ordering lower_tie 0-2",
+    "passed": true,
+    "value": [
+      "0",
+      "0"
+    ],
+    "sign": 0
+  },
+  {
+    "name": "ordering below_lower_tie 1-2",
+    "passed": true,
+    "value": [
+      "0",
+      "5/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "ordering below_lower_tie 0-1",
+    "passed": true,
+    "value": [
+      "-15/4",
+      "-5/4"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "ordering below_lower_tie 0-2",
+    "passed": true,
+    "value": [
+      "-15/4",
+      "5/4"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "beta0",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "beta1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "alpha0",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "switch phi negative square",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "other threshold",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch g coefficient x=1/4",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch c coefficient x=1/4",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch g coefficient x=1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch c coefficient x=1",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch g coefficient x=3",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "canonical switch c coefficient x=3",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "intersection G",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "intersection H",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "triple value shift",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "stable tie identity",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "intersection witness equilibrium",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "subdominant pair tie gap",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "subdominant uniform tie gap",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "coefficient codimension determinant",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "impossible cross equality same sign S/C",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "impossible cross equality opposite sign S/C",
+    "passed": true,
+    "difference": [
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "same-sign equality below positive T=C range",
+    "passed": true,
+    "value": [
+      "3",
+      "-1"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "opposite-sign equality is negative",
+    "passed": true,
+    "value": [
+      "-2",
+      "-1"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "triple witness label 0",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "triple witness label 1",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "triple witness label 4",
+    "passed": true,
+    "difference": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "name": "triple witness negative",
+    "passed": true,
+    "value": [
+      "-3",
+      "1/2"
+    ],
+    "sign": -1
+  },
+  {
+    "name": "case positivity above_1 G",
+    "passed": true,
+    "value": [
+      "3",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity above_1 H",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity at_1 G",
+    "passed": true,
+    "value": [
+      "2",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity at_1 H",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity middle_uniform G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity middle_uniform H",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity dominant_tie G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity dominant_tie H",
+    "passed": true,
+    "value": [
+      "5/2",
+      "-1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity middle_pair1 G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity middle_pair1 H",
+    "passed": true,
+    "value": [
+      "2",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity lower_tie G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity lower_tie H",
+    "passed": true,
+    "value": [
+      "5/2",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity below_lower_tie G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity below_lower_tie H",
+    "passed": true,
+    "value": [
+      "5",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity below_switch G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity below_switch H",
+    "passed": true,
+    "value": [
+      "251/100",
+      "-1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity above_switch G",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity above_switch H",
+    "passed": true,
+    "value": [
+      "249/100",
+      "-1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_-1/100 G",
+    "passed": true,
+    "value": [
+      "-1/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_-1/100 H",
+    "passed": true,
+    "value": [
+      "99/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_0 G",
+    "passed": true,
+    "value": [
+      "0",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_0 H",
+    "passed": true,
+    "value": [
+      "1/2",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_1/100 G",
+    "passed": true,
+    "value": [
+      "1/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_pair1_1/100 H",
+    "passed": true,
+    "value": [
+      "101/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_-1/100 G",
+    "passed": true,
+    "value": [
+      "-101/200",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_-1/100 H",
+    "passed": true,
+    "value": [
+      "199/200",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_0 G",
+    "passed": true,
+    "value": [
+      "-1/2",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_0 H",
+    "passed": true,
+    "value": [
+      "1",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_1/100 G",
+    "passed": true,
+    "value": [
+      "-99/200",
+      "1/2"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_switch_1/100 H",
+    "passed": true,
+    "value": [
+      "201/200",
+      "0"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_-1/100 G",
+    "passed": true,
+    "value": [
+      "149/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_-1/100 H",
+    "passed": true,
+    "value": [
+      "-51/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_0 G",
+    "passed": true,
+    "value": [
+      "3/4",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_0 H",
+    "passed": true,
+    "value": [
+      "-1/4",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_1/100 G",
+    "passed": true,
+    "value": [
+      "151/200",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  {
+    "name": "case positivity frequency_subdominant_pair_tie_1/100 H",
+    "passed": true,
+    "value": [
+      "-49/200",
+      "1/4"
+    ],
+    "sign": 1
+  }
+]

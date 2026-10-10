@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-10",
+  "unique_source_contents": 431,
+  "all_selected_content_hashes_matched": true,
+  "source_files_preserved": true,
+  "auto_bundles": {
+    "WUXING_SIMPLE": "Seven meaningful original files plus import status notice",
+    "WUXING_ADAPT": "Seven meaningful original files plus historical-extension status notice"
+  },
+  "snapshot_manifests_verified": 20,
+  "snapshot_file_mappings_verified": 923,
+  "restoration_checks": [
+    "Complete retained th workspace: 144 files, all hashes match",
+    "LaTeX ZIP snapshot: 6 files, all hashes match",
+    "Unsafe output outside repository work/ is rejected"
+  ],
+  "canonical_smoke": {
+    "balanced_level": 2.670286436967,
+    "largest_eigenvalue_real_part": -1.153723520689
+  },
+  "figure_runs": {
+    "scripts_completed": 4,
+    "all_saved_json_fields_match": true,
+    "float_comparison_max_abs_error": 0.0,
+    "numerical_tolerance": {
+      "relative": 2e-10,
+      "absolute": 1e-10
+    },
+    "manuscript_pngs_byte_identical_to_rerun": 4
+  },
+  "runtime": {
+    "python": "3.9 system interpreter",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1 (existing external previous-workspace dependency, not imported)",
+    "matplotlib": "3.9.4"
+  },
+  "preserved_science_unchanged": true,
+  "full_audit_lyapunov_rerun": false,
+  "auto_run": false,
+  "xppaut_application_run": false,
+  "clean_environment_install_test": false,
+  "tracked_content_ignored_by_gitignore": 0,
+  "commit_created": false,
+  "github_push": false
+}

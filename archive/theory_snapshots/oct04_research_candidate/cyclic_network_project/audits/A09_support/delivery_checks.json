@@ -1,0 +1,28 @@
+{
+  "audited_p09": {
+    "sha256": "b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680",
+    "bytes": 24155,
+    "lines": 539,
+    "body_sha256": "a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393",
+    "body_start_line": 17
+  },
+  "input_archive_sha256": "61df24eb644771cbb84027447c4a21ba1c1d0e1d44dc8c35cf34a0a0c755c8de",
+  "all_143_original_members_unchanged": true,
+  "both_draft_zip_copies_unchanged": true,
+  "original_validation_companion_unchanged": true,
+  "all_26_requested_and_additional_inputs_authenticated": true,
+  "complete_line_coverage": true,
+  "line_review_ranges": 66,
+  "all_six_layers": "VERIFIED",
+  "overall": "VERIFIED",
+  "required_corrections": [],
+  "p09_lifecycle_in_input": "DRAFT, unchanged",
+  "p10_started": false,
+  "p10_gate": "Cleared after original development chat administrative audit closure",
+  "no_replacement_proof_source": true,
+  "pdf_pages": 17,
+  "pdf_visual_review": "PASS",
+  "native_editor_compile": "success",
+  "required_archive": "cyclic_network_project_A09_audit_only.zip",
+  "complete_p09_archive_created_here": false
+}

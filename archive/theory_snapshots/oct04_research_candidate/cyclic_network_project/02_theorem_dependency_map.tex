@@ -1,0 +1,145 @@
+% STATUS: PLANNING MAP ONLY; all theorem nodes are TODO.
+\section{Theorem dependency map and completion gates}
+\label{sec:dependency-map}
+Arrows mean a prerequisite proof module, not a theorem already proved.
+Every module also depends on the canonical contract and notation. The
+following displayed adjacency graph is the full direct-dependency graph;
+transitive prerequisites are inherited. Conditional edges are listed separately.
+\[
+\begin{array}{rcl}
+\text{Contract}&\longrightarrow&\mathrm{P01}\\
+\mathrm{P01}&\longrightarrow&\mathrm{P02}\\
+\mathrm{P01},\mathrm{P02}&\longrightarrow&\mathrm{P03}\\
+\mathrm{P03}&\longrightarrow&\mathrm{P04}\\
+\mathrm{P04}&\longrightarrow&\mathrm{P05}\\
+\mathrm{P05}&\longrightarrow&\mathrm{P06}\\
+\mathrm{P05}&\longrightarrow&\mathrm{P07}\\
+\mathrm{P01},\mathrm{P02},\mathrm{P04},\mathrm{P05}&\longrightarrow&\mathrm{P08}\\
+\mathrm{P02},\mathrm{P03},\mathrm{P04}&\longrightarrow&\mathrm{P09}\\
+\mathrm{P02},\mathrm{P03},\mathrm{P04},\mathrm{P09}&\longrightarrow&\mathrm{P10}\\
+\mathrm{P02},\mathrm{P04},\mathrm{P05}&\longrightarrow&\mathrm{P11}\\
+\mathrm{P11}&\longrightarrow&\mathrm{P12}\\
+\mathrm{P11},\mathrm{P12}&\longrightarrow&\mathrm{P13}\\
+\mathrm{P11},\mathrm{P12},\mathrm{P13}&\longrightarrow&\mathrm{P14}\\
+\mathrm{P02},\mathrm{P04}&\longrightarrow&\mathrm{P15}\\
+\mathrm{P04},\mathrm{P15}&\longrightarrow&\mathrm{P16}\\
+\mathrm{P04},\mathrm{P16}&\longrightarrow&\mathrm{P17}\\
+\mathrm{P04},\mathrm{P12},\mathrm{P13},\mathrm{P15},\mathrm{P16}&\longrightarrow&\mathrm{P18}\\
+\end{array}
+\]
+The graph is acyclic. P07 is an additional prerequisite when a five-node
+specialization is used in P11--P14. An optional periodic-orbit persistence
+extension in P15 would additionally require P14; it is not part of the core
+equilibrium-persistence gate. Source verification is a conditional input to
+any six-term extension in P08. An unresolved optional extension does not block
+the core module if its statement is explicitly excluded from the completed scope.
+
+\subsection{One dependency-respecting completion order}
+\begin{enumerate}
+\item P01: Well-posedness and attracting bounded region.
+\item P02: Synchrony and complete synchronous-equilibrium classification.
+\item P03: Origin and homogeneous linearization.
+\item P04: Arbitrary-(n,q) Fourier spectrum and normality.
+\item P05: Exact step-two mode selection.
+\item P06: Large-n selected-wave-number limit.
+\item P07: Five-node golden-ratio specialization.
+\item P08: Matched bilinear analysis and exact comparison.
+\item P09: Transcritical bifurcation at the origin.
+\item P10: Saddle-node bifurcation and true bistable region.
+\item P11: Hopf spectral conditions and spectral simplicity.
+\item P12: Hopf transversality.
+\item P13: First Lyapunov coefficient and nondegenerate Hopf theorem.
+\item P14: Equivariant rotating waves.
+\item P15: Persistence under parameter heterogeneity.
+\item P16: Static sensitivity and localized Green function.
+\item P17: Transient and harmonic response.
+\item P18: Stability radius and Hopf-threshold sensitivity.
+\end{enumerate}
+After P05, P06, P07 and the later independent branches need not be worked in
+strict numerical order. This list is one valid order for the compendium and
+for eventual completion. P11 collects spectral conditions, P12 establishes
+transversality, and P13 is the home of the assembled nondegenerate Hopf theorem.
+P14 owns the additional equivariant rotating-wave conclusion.
+
+\subsection{Numerical dependency gates}
+\begin{longtable}{>{\raggedright\arraybackslash}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.59\textwidth}}
+\toprule Task & Required analytical inputs before the claim is validated \\
+\midrule\endhead
+N01 Jacobian and boundary checks & P01--P03; P08 for MB. \\
+N01 equilibrium and spectrum checks & P02--P04; P05--P07 for selection, limits and specialization. \\
+N01/N02 bifurcation validation & P09--P13; complete-spectrum, transversality and independent l1 checks. \\
+N02 periodic branch and wave validation & P13--P14; use Floquet and phase checks, not a time-series image alone. \\
+N01/N02 heterogeneity validation & P15--P16 for equilibrium/remainder; P18 for threshold shifts. \\
+N01/N03 response and robustness & P16--P18; specify norms, forcing and direct versus equilibrium-induced perturbations. \\
+N03 final figures & Each figure's listed proof owners, passed N01 checks and reproducible N02 output where relevant. \\
+\bottomrule
+\end{longtable}
+Exploratory future checks may help find errors in DRAFT derivations, but cannot
+promote a theorem or a numerical claim to verified evidence on their own.
+No computational checks are performed in this initialization.
+
+\subsection{Manuscript claims withheld until verification}
+\begin{longtable}{>{\raggedright\arraybackslash}>{\raggedright\arraybackslash}p{0.41\textwidth}>{\raggedright\arraybackslash}p{0.49\textwidth}}
+\toprule Withheld claim & Minimum proof gate \\
+\midrule\endhead
+Local well-posedness, positivity, global existence and bounded attraction & P01 with precise attraction/absorption language. \\
+Complete synchronous-equilibrium classification and origin stability & P02--P03; nonlinear boundary cases handled separately. \\
+Arbitrary-(n,q) spectrum and normality & P04. \\
+Exact q=2 selection, large-n limit and five-node constants & P05, P06 and P07, respectively. \\
+Exact matched-bilinear comparison & P08 plus its prerequisites and an explicit calibration for quantitative comparisons. \\
+Transcritical, fold and true bistability claims & P09--P10 with all-mode stability and explicit basin scope. \\
+Nondegenerate symmetry-breaking Hopf & P11--P13, including rigorous nonzero frequency, simplicity, transversality and l1 nonvanishing. \\
+Stable rotating-wave branch & P14 and applicable transverse stability from P11--P13. \\
+Persistence, sensitivity and localized response & P15--P16; positivity, invertibility and stability assumptions distinguished. \\
+Transient/harmonic response and robustness & P17--P18, with explicit norms and remainder bounds. \\
+Numerical values, periods, figures or observed regimes & Applicable verified proofs plus N01/N02 evidence and recorded reproduction. \\
+Novelty, priority or literature comparisons & Completed source-specific literature audits; none confirmed here. \\
+\bottomrule
+\end{longtable}
+Before submission, mathematical claims must also have a completed independent
+audit for the exact version cited. Unsupported candidate claims remain in the
+archive and registry. No final-paper narrative is supplied by this map.
+
+% Phase 1C planning overlay; no theorem or proof status is promoted.
+\subsection{Phase 1C frozen scope and current attempt order}
+The adjacency graph above remains in force. The numerical ordering above and
+in the compendium is a valid reading order. The current research attempt order,
+superseding earlier scheduling recommendations, is
+\[
+\begin{gathered}
+\mathrm{P01}\to\mathrm{P02}\to\mathrm{P03}\to\mathrm{P04}\to\mathrm{P05}
+\to\mathrm{P08}\to\mathrm{P07}\to\mathrm{P09}\to\mathrm{P10},\\
+\mathrm{P11}\to\mathrm{P12}\to\mathrm{P13}\to\mathrm{P14}\to\mathrm{P06},\\
+\mathrm{P15}\to\mathrm{P16}\to\mathrm{P17}\to\mathrm{P18}
+\quad\text{(postponed extension queue).}
+\end{gathered}
+\]
+Arrows in this schedule indicate order of attempts, not additional mathematical
+dependencies. P06 is attempted only if it adds a useful large-$n$ consequence.
+P07 precedes any five-node use in P11--P14. P15--P18 are outside the frozen paper.
+
+\begin{longtable}{p{0.32\textwidth}p{0.24\textwidth}p{0.34\textwidth}}
+\toprule Intended claim & Assembly gate & Frozen role \\
+\midrule\endhead
+Realizable $q=2$ selection and switching & P05 & Main theorem target; quadratic maximization alone is insufficient. \\
+Matched DM--MB contrast & P08; P13 if comparing criticality & Main theorem target on a common admissible branch domain. \\
+First symmetry-breaking Hopf & P11, P12, P13 & Assembled main theorem; P11 alone is spectral support. \\
+Nontrivial $l_1$ sign region & P13 & Main theorem target; currently unresolved. \\
+Coefficient reduction & P13 & Proposition/lemma; detailed algebra may be supplementary. \\
+Exact rotating-wave branch & P14 & Corollary of verified Hopf and symmetry hypotheses. \\
+Five-node motivating application & P07 plus applicable P11--P14 & Corollary within the main paper. \\
+General spectrum; branch classification and local branch bifurcations & P01--P04, P09--P10 & Supporting propositions/lemmas. \\
+Useful large-$n$ consequence & P06 & Conditional corollary. \\
+Heterogeneity, response and robustness & P15--P18 & Postpone. \\
+\bottomrule\end{longtable}
+The primary comparison uses identical positive coefficient tuples with each
+model's own named positive synchronous branch; branch/path choices must be
+stated before their use. A criticality comparison is assembled after P13 and
+does not introduce a circular prerequisite for P08's spectral analysis.
+
+The numerical gates above remain valid. Checks and figures for P15--P18 are
+dormant in this paper. No numerical task is executed in Phase 1C. All proof
+statuses remain TODO. Exact-model priority is not closed because the named
+2021--2024 main-text equation/theorem inventories remain incomplete; this is
+a separate publication-claim gate, not a theorem dependency. See
+\texttt{frozen\_theorem\_package.md} and \texttt{final\_novelty\_verdict.md}.

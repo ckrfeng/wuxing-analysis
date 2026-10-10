@@ -1,0 +1,98 @@
+SHORTENING REPORT
+
+The completed modules P01–P05 and P07–P11 contain 31,189 whitespace-delimited
+TeX source tokens before editing and 24,742 afterward, excluding full-line
+comments: approximately 20.7% shorter. This is a reproducible source-size
+measure, not a claim about natural-language word counts or PDF page ratios.
+All 76 theorem/proposition/lemma/corollary environments are retained.
+75 result statements are byte-identical; the only changed statement is
+P11's hypothesis ledger, where obsolete DRAFT/audit wording was removed.
+
+P01–P02
+Kept the substantive foundation, absorption criterion, full root
+classification, domain restrictions and boundary-continuity discussion.
+Removed obsolete audit-priority/checking prose where it did not establish
+a distinct mathematical claim. P02's exact checking tables remain.
+
+P03–P04
+Cited Gray, Theorem 3.1, with an explicit reconciliation of the Fourier
+exponent convention. Retained all general and homogeneous Jacobian
+coefficients, offset collisions, origin spectrum, row-sum identity,
+equilibrium specialization, multiplicities and scope distinctions.
+Removed repeated orthogonality/diagonalization and normality derivations;
+condensed the semigroup argument and cited standard nonlinear linearization.
+
+P05
+Credited van Kekem–Sterk for the finite-dispersion selection method, with no
+claim that its Lorenz-96 thresholds prove DM results. Reduced continuous
+maximization and the nearest-grid proof to their essential comparisons.
+Kept the exact cells, parity restrictions, all ties, every positive-parameter
+realizability construction, physical-chart regularity, examples and stable
+switch construction.
+
+P06
+Still unfinished. Added the relevant methodological citation and retained
+the need for a DM-specific limit and discretization/uniformity estimates.
+
+P07
+Presented the spectrum as a specialization of P04 and selection as a
+specialization of P05. Removed the phase table and repeated Fourier and
+trigonometric derivations. Kept all exact constants, the ordering table,
+positive physical realizations, frequency and numerical-coincidence
+classification, codimension checks and the strictly stable tie identity.
+
+P08
+Reused the single circulant framework and the P05 grid/parity argument.
+Credited Goh's Lotka–Volterra method and shortened its verification while
+keeping the cancellation, symmetric-part bound, compact interior sublevels,
+continuation and convergence argument. Kept the DM–MB comparison
+constructions, same-tuple residuals, parity obstructions, explicit witnesses,
+strict estimates, branch labels, openness and global comparison corollary.
+Removed historical simulation narration from the manuscript; these records
+are still available in the unmodified original workspace.
+
+P09
+Cited standard local bifurcation, implicit-function and center-manifold
+theory. Kept the explicit transverse gap, full local equilibrium completeness,
+mixed/quadratic/cubic coefficients, exact transcritical restriction, branch
+slopes, persistent gap, critical escape and algebraic convergence rate.
+Removed the duplicate full-system Lyapunov proof of cubic critical stability;
+the verified center-manifold hypotheses and stability argument remain.
+
+P10
+Cited standard saddle-node and invariant-manifold theory; reused P09's
+transverse implicit-function argument. Kept the automatic fold spectral
+gap, both nondegeneracy contractions, exact center normal form, coexistence
+criteria and model-specific estimates. Condensed the local basin proof
+while retaining its stable graph, growth/decay bounds, exit-cap argument
+and restriction to a small neighborhood. No global basin claim was added.
+
+P11
+Reduced the generic simplicity, stable-complement, inverse-gate and adjoint
+arguments to consequences of P04. Kept the physical-realizability iff proof
+intact, including the fixed-vertex inequality, positive construction,
+frequency exclusion and obstructed examples. Kept the exact five-node
+tuple, branch identification, full spectrum, gap and chosen parameter path.
+
+P12–P18
+The supplied files were outlines, so there were no model-specific derivatives
+or estimates to preserve. Replaced long workflow comments and empty headings
+with concise cited frameworks. Added general conditional formulas for the
+equilibrium derivative, total crossing, Lyapunov coefficient, symmetry,
+implicit-function persistence, Fourier inverse, linear forced response,
+normal-matrix perturbation margin and threshold shift. Clearly listed the
+missing DM evaluations, sign certificates and quantitative estimates.
+
+Presentation and bibliography
+Replaced the long historical audit preamble with a short edition/status note.
+Omitted unneeded planning and audit-template appendices from this focused
+proof manuscript. Retained the canonical equations and notation. Added a
+working bibliography containing only the ten cited works, with usable URLs.
+Removed forced page breaks between modules to avoid nearly empty pages.
+The final PDF has 77 pages with the same 11-point font and one-inch margins.
+
+Citation limitations are explicit in CITATION_VERIFICATION.txt. In particular,
+Goh is credited for the method while P08 supplies a direct verification;
+the standard textbook and Scholarpedia records are not presented as fully
+retrieved theorem texts. No unverified source is used to remove a
+model-specific argument.

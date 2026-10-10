@@ -1,0 +1,103 @@
+% STATUS: CANONICAL NOTATION AND ASSUMPTIONS; no derived spectral conclusions.
+\section{Notation and assumptions}
+\label{sec:notation}
+\subsection{Standing assumptions}
+\begin{description}
+\item[A1.] $n\in\Z$, $n\geq5$, and $q\in\{1,\ldots,n-1\}$.
+\item[A2.] Homogeneous parameters $\param=(a,k,c,g,h)\in(0,\infty)^5$.
+\item[A3.] Dimensionless real activities; initial states in the nonnegative
+orthant when forward biological-admissibility statements are sought.
+For $\DM$ the local extension domain is $\Domain=(-1,\infty)^n$.
+\item[A4, conditional.] Impose $\gcd(n,q)=1$ only for the connected step-$q$
+cycle interpretation; specify $q=2$ or $(n,q)=(5,2)$ when required by a module.
+\item[A5, conditional.] Positivity of an equilibrium, invertibility,
+hyperbolicity, stability, Hopf nondegeneracy, and perturbation regularity are
+additional hypotheses to be stated and checked in the appropriate future proof.
+None is a standing established result.
+\end{description}
+
+\subsection{Indices and cyclic shifts}
+Define $\Zn=\Z/n\Z$, using representatives $0,\ldots,n-1$.
+For $z\in\C^n$, define the predecessor and successor shift matrices by
+\[
+(Pz)_j=z_{j-1},\qquad(P^{-1}z)_j=z_{j+1},\qquad
+P_{j\ell}=\begin{cases}1,&\ell\equiv j-1\pmod n,\\0,&\text{otherwise.}\end{cases}
+\]
+Thus the symbols $P^q$ and $P^{-q}$ denote repeated predecessor and successor
+shifts, respectively. The group-action convention is $\rho(r)z=P^r z$.
+For transcription of the original five-node labels, the original $x_1,\ldots,x_5$
+are relabeled as $x_0,\ldots,x_4$ in the same cyclic order. This is a label
+translation only; no historical or physiological statement is certified.
+
+\subsection{Fourier vectors, transform and pairing}
+Use $\ii$ for the imaginary unit and $j$ for a node index. Define
+\[
+\theta_m=\frac{2\pi m}{n},\qquad
+v^{(m)}_j=\frac{1}{\sqrt n}\exp(\ii\theta_m j),\qquad
+\Fourier_{jm}=v^{(m)}_j,\quad 0\leq j,m<n.
+\]
+The canonical transform convention is
+\[
+\widehat z_m=\frac{1}{\sqrt n}\sum_{j=0}^{n-1}
+    z_j\exp(-\ii\theta_m j),\qquad
+z_j=\frac{1}{\sqrt n}\sum_{m=0}^{n-1}
+    \widehat z_m\exp(\ii\theta_m j).
+\]
+The normalization is the unitary DFT convention. The blueprint's displayed
+unscaled Fourier vectors are not copied as normalized eigenvectors.
+Use $A^*$ for conjugate transpose, $A^{\mathsf T}$ for transpose, and
+\[
+\inner{u}{v}=u^*v=\sum_j\overline{u_j}v_j,
+\qquad \norm{z}_2=(z^*z)^{1/2}.
+\]
+The pairing is conjugate-linear in its first argument. Matrix $2$-norms are
+induced Euclidean norms. The adjoint eigenvector equation, its phase/scale,
+Taylor tensors and first-Lyapunov-coefficient convention must be reconciled
+in P13 before any blueprint normal-form formula is imported.
+
+\subsection{State sets and equilibrium notation}
+\[
+\Orth=\{x\in\R^n:x_j\geq0\ \text{for all }j\},\qquad
+\PosOrth=\{x\in\R^n:x_j>0\ \text{for all }j\},
+\]
+\[
+\one=(1,\ldots,1)^{\mathsf T},\qquad
+\Sync=\{s\one:s\in\R\}.
+\]
+The phrase positive orthant means the strict set $\PosOrth$; nonnegative
+orthant means $\Orth$. A synchronous state is a member of $\Sync$; a positive
+synchronous equilibrium, if established, is denoted $x^*\one$ with $x^*>0$.
+The admissible synchronous domain for $\DM$ is $\Sync\cap\Domain$.
+No invariance or equilibrium classification is asserted by these definitions.
+
+\subsection{Spectrum, hyperbolicity and mode terminology}
+For a square matrix $J$, define
+\[
+\sa(J)=\max\{\Ree\lambda:\lambda\in\spec(J)\}.
+\]
+An equilibrium of a differentiable vector field is hyperbolic when its
+Jacobian has no eigenvalue with zero real part. A matrix is Hurwitz if all
+its eigenvalues have negative real part, and normal if $JJ^*=J^*J$.
+These definitions assert neither stability nor normality for a model.
+Mode $m=0$ is called the uniform or synchronous mode; modes $m\neq0$ are
+called nonuniform or symmetry-breaking modes. The mode-pair notation is
+$\{m,(-m)\bmod n\}$, usually written $\{m,n-m\}$. A pair representative is
+chosen in $0\leq m\leq\lfloor n/2\rfloor$. Keep the uniform mode and, for
+even $n$, $m=n/2$ as singleton labels. Any eigenvalue-conjugacy or simplicity
+claim belongs to P04 or P11.
+When a spectrum has been derived, the selected-mode set will mean
+$\argmax_m\Ree\lambda_m$, including every tie. A first unstable mode additionally
+requires a specified equilibrium branch and oriented parameter path.
+
+\subsection{Reserved scalar notation}
+For continuity with the archive, reserve $A=k+h$ and $\mu=a+c-g$ as
+abbreviations, without asserting an equilibrium equation or bifurcation.
+Use $\nu$ for a future scalar continuation parameter and $\eps$ for a
+heterogeneity amplitude. Reserve $\omega>0$ for a chosen positive Hopf
+frequency. Use $\sa(J)$ for spectral abscissa and $\delta=-\sa(J)>0$ only
+under an explicitly stated Hurwitz hypothesis. This avoids reusing
+$\alpha$ as both a stability margin and a parameter perturbation.
+The spectral coefficient called $T_0$ in the blueprint will be named
+$\tau$ if needed, keeping $T_{\mathrm{scale}}$ available for a physical
+time scale. Heterogeneity profiles will be denoted collectively by
+$\boldsymbol\zeta$ if adopted; no coefficient-assignment convention is implied.

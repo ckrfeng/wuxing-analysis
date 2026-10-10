@@ -1,0 +1,184 @@
+[
+  {
+    "id": "codex-te-2026-10-04",
+    "manifest": "codex-te-2026-10-04.json",
+    "file_count": 235,
+    "status": "Theory research snapshot: recorded P01\u2013P05/P07\u2013P11 audits; P06/P12\u2013P18 unfinished",
+    "origins": [
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te"
+    ]
+  },
+  {
+    "id": "codex-th-2026-10-03",
+    "manifest": "codex-th-2026-10-03.json",
+    "file_count": 144,
+    "status": "Prior Codex research outputs and work; canonical, reproduction and archival material mixed",
+    "origins": [
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th"
+    ]
+  },
+  {
+    "id": "downloads-SAE_Research_Migration_Files",
+    "manifest": "downloads-SAE_Research_Migration_Files.json",
+    "file_count": 2,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/SAE Research Migration Files"
+    ]
+  },
+  {
+    "id": "downloads-WuXing_LaTeX_With_Figures",
+    "manifest": "downloads-WuXing_LaTeX_With_Figures.json",
+    "file_count": 8,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures"
+    ]
+  },
+  {
+    "id": "downloads-WuXing_LaTeX_With_Figures_2",
+    "manifest": "downloads-WuXing_LaTeX_With_Figures_2.json",
+    "file_count": 8,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures 2"
+    ]
+  },
+  {
+    "id": "downloads-cyclic_network_project",
+    "manifest": "downloads-cyclic_network_project.json",
+    "file_count": 36,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project"
+    ]
+  },
+  {
+    "id": "downloads-cyclic_network_project_2",
+    "manifest": "downloads-cyclic_network_project_2.json",
+    "file_count": 58,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project 2"
+    ]
+  },
+  {
+    "id": "downloads-cyclic_network_project_3",
+    "manifest": "downloads-cyclic_network_project_3.json",
+    "file_count": 59,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project 3"
+    ]
+  },
+  {
+    "id": "downloads-cyclic_network_shortened",
+    "manifest": "downloads-cyclic_network_shortened.json",
+    "file_count": 32,
+    "status": "Shortened proof/manuscript revision; distinct source version",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_shortened"
+    ]
+  },
+  {
+    "id": "downloads-cyclic_network_shortened_2",
+    "manifest": "downloads-cyclic_network_shortened_2.json",
+    "file_count": 32,
+    "status": "Shortened proof/manuscript revision; distinct source version",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_shortened 2"
+    ]
+  },
+  {
+    "id": "downloads-loose-research",
+    "manifest": "downloads-loose-research.json",
+    "file_count": 26,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads"
+    ]
+  },
+  {
+    "id": "research-wuxing",
+    "manifest": "research-wuxing.json",
+    "file_count": 47,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Documents/Research/WuXing"
+    ]
+  },
+  {
+    "id": "zip-WuXing_Code_For_Each_Diagram-013d2c44d0f4",
+    "manifest": "zip-WuXing_Code_For_Each_Diagram-013d2c44d0f4.json",
+    "file_count": 19,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Code_For_Each_Diagram.zip"
+    ]
+  },
+  {
+    "id": "zip-WuXing_LaTeX_With_Figures-8843979ce647",
+    "manifest": "zip-WuXing_LaTeX_With_Figures-8843979ce647.json",
+    "file_count": 6,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Desktop/Screenshots v2/WuXing_LaTeX_With_Figures.zip",
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_LaTeX_With_Figures.zip",
+      "/Users/carterfeng/Downloads/WuXing_LaTeX_With_Figures.zip"
+    ]
+  },
+  {
+    "id": "zip-WuXing_Verified_Figures_and_Reproduction-6c8bbe43fc53",
+    "manifest": "zip-WuXing_Verified_Figures_and_Reproduction-6c8bbe43fc53.json",
+    "file_count": 16,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/WuXing_Verified_Figures_and_Reproduction.zip"
+    ]
+  },
+  {
+    "id": "zip-WuXing_Verified_Figures_and_Reproduction-ae9ad423e689",
+    "manifest": "zip-WuXing_Verified_Figures_and_Reproduction-ae9ad423e689.json",
+    "file_count": 12,
+    "status": "Superseded pre-cleanup snapshot",
+    "origins": [
+      "/Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/WuXing_Verified_Figures_and_Reproduction.zip"
+    ]
+  },
+  {
+    "id": "zip-cyclic_network_project-6453e4742c21",
+    "manifest": "zip-cyclic_network_project-6453e4742c21.json",
+    "file_count": 34,
+    "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project.zip"
+    ]
+  },
+  {
+    "id": "zip-cyclic_network_project_P02_audited-1159236d96b5",
+    "manifest": "zip-cyclic_network_project_P02_audited-1159236d96b5.json",
+    "file_count": 59,
+    "status": "P02 snapshot labeled audited by its source; retained version-specific evidence",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project_P02_audited.zip"
+    ]
+  },
+  {
+    "id": "zip-cyclic_network_project_P02_draft-68e5b8a2277e",
+    "manifest": "zip-cyclic_network_project_P02_draft-68e5b8a2277e.json",
+    "file_count": 58,
+    "status": "P02 draft snapshot; superseded by later recorded revisions",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_project_P02_draft.zip"
+    ]
+  },
+  {
+    "id": "zip-cyclic_network_shortened-aa71570d748c",
+    "manifest": "zip-cyclic_network_shortened-aa71570d748c.json",
+    "file_count": 32,
+    "status": "Shortened proof/manuscript revision; distinct source version",
+    "origins": [
+      "/Users/carterfeng/Downloads/cyclic_network_shortened.zip"
+    ]
+  }
+]

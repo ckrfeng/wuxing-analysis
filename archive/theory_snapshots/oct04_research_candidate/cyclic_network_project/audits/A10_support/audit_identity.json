@@ -1,0 +1,18 @@
+{
+  "audited_proof": "proofs/P10_saddle_node_and_bistability.tex",
+  "version": "P10 v1.0",
+  "date": "2026-10-03",
+  "sha256": "a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07",
+  "body_sha256": "5cfd8afb91b7f23575e1b4bd9c7c28f3b433affefae9bb0d5f7700d030fcba81",
+  "body_scope": "First line-anchored section command, line 19, through EOF",
+  "all_six_layer_verdicts": "VERIFIED",
+  "overall_verdict": "VERIFIED",
+  "required_corrections": [],
+  "source_sha256": "ff2ebb0f84ae79fc9aad012a3945ef236e8ccdac9f47d64fd708e4dc66963b19",
+  "reading_copy_sha256": "44f1a8e98cec56f2c6da671c0acd94a48180ec7dcf9ea8fe9ef17a524161e472",
+  "source_is_standalone": true,
+  "pdf_pages": 20,
+  "P10_lifecycle_changed": false,
+  "P11_begun": false,
+  "P11_cleared_after_original_chat_closure": true
+}

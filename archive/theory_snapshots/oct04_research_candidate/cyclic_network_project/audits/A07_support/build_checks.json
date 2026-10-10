@@ -1,0 +1,11 @@
+{
+  "native_latex_compiler": "success on final source",
+  "reading_copy_compiler": "pdfLaTeX / TeX Live 2026",
+  "pages": 13,
+  "diagnostics": [],
+  "undefined_references": false,
+  "all_pages_rendered_and_visually_reviewed": true,
+  "visual_review": "PASS: equations, tables, full line ledger, margins and page numbering; no clipping or overlap",
+  "source_sha256": "b3923d6520cc249c508b80dd06a2b515f054e1510e255224a864e986cd38ce4b",
+  "pdf_sha256": "34d4168b1e391158055e1361c520282d84b6a37603637740b1ebfb0de220ab3d"
+}

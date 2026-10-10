@@ -1,0 +1,25 @@
+% STATUS: conditional framework; outstanding model-specific work is explicit.
+\section{P16: Static sensitivity (unfinished application)}
+\label{sec:P16}
+\subsection{Physical forcing}\label{slot:P16-1}
+Under P15's hypotheses, differentiation gives
+$\xi=x^{*\prime}(0)=-J^{-1}b$, where $b=F_\eps(x_0,0)$.
+The vector $b$ must be computed from the chosen heterogeneous assignment.
+\subsection{Fourier inverse}\label{slot:P16-2}
+P04 and circulant inversion \cite[Theorem~3.1]{Gray2006} give
+\[
+ \widehat\xi_m=-\widehat b_m/\lambda_m,\qquad
+ \|\xi\|_2\le\frac{\|b\|_2}{\min_m|\lambda_m|},\qquad
+ (J^{-1})_{j\ell}=\frac1n\sum_m\frac{e^{\ii\theta_m(j-\ell)}}{\lambda_m}.
+\]
+\subsection{Localization}\label{slot:P16-3}
+Graph-distance decay may be obtained from
+\cite[Theorem~3.4]{BenziRazouk2007} only after verifying its spectral
+continuum and analytic-neighborhood hypotheses for $f(z)=1/z$,
+including exclusion of zero. Pointwise invertibility does not supply
+uniform decay constants. Use the graph-distance convention of that theorem;
+any directed or wraparound refinement needs its own argument.
+\subsection{Remainder}\label{slot:P16-4}
+The physical forcing, neighborhood, remainder constants and any uniformity
+in $n$ remain uncomputed. A nonzero imaginary Hopf pair need not make
+the static inverse singular.

@@ -1,0 +1,32 @@
+{
+  "pages": 17,
+  "native_editor_compile": "success, final source",
+  "pdf_export": "Existing local latexmk/pdfLaTeX; no software installed",
+  "final_log_diagnostics": [],
+  "visual_review": "All 17 pages reviewed in contact sheets; final pages 9 and 10 inspected separately at full render size. All other final page images byte-identical to inspected renders. No clipping, overlap, missing formulas or unreadable tables found.",
+  "final_render_sha256": {
+    "page-01.png": "8fbaf098c529f23dc5ecf63cbf8fcc47f45cd1d04d722bdab6b86d5ef8f53f4e",
+    "page-02.png": "a3a16c05eb08981a3eb978269b4e63596c78ae328d1a7dd402a10998bb7de9f3",
+    "page-03.png": "08b929136696aca584782d7435b0ef04bd75f13122d2e25c986537072b58ebae",
+    "page-04.png": "d224c36c83efe40b44db8c9567a640eb90fde45ee29e3c948ecca030ed298a23",
+    "page-05.png": "7e6ae214a9ac0a17c16219d47fc9be2e1a8a3ac3db558b5e56acaab969ddc55f",
+    "page-06.png": "86d440e3bbed342e77938dcbc99d520994361d1fb3c4741aba3869682b408db9",
+    "page-07.png": "957e9de527fb43875d90a3e56c20338b3409d3c6182ec3937dd5f77d7b6ac0ef",
+    "page-08.png": "97eaf878531d30a964b99c43f29ddcba0a981c3a17f171f07881ea3b74d46eb5",
+    "page-09.png": "fc78ecffffd9e464a9a584fb1635f9655c048d5c16061f7ada829db923e89dfc",
+    "page-10.png": "af066625bbc44f51ec72c4e639bd039552ebd5c199406cd0d9c2822dcd2ef21d",
+    "page-11.png": "0443eea6b5a9db8cd3981553a9f455b6b9e7c9cdee2f213feef93ab64b5d8616",
+    "page-12.png": "2a089f0c25b16ac0da4d65f51a9f50b888555d6dd89ffb02ac68e3280aec5a20",
+    "page-13.png": "c11ea0915e4daf11b4059b46716b417bb547a95d3e3a821d1fef56326ea02cde",
+    "page-14.png": "b3a5f9477e83fcbb5ae41dcf9716bf2b5d03139614b25c29687af07c247326b7",
+    "page-15.png": "2820fcc1ee5c575089155ef594feb8011eb054094769b3001a2ec69151f54fcc",
+    "page-16.png": "28b1e0ae1604a65633a9bed1889f7769c606f411718de22ad4f1a1ee1b1d3ab3",
+    "page-17.png": "e953dc4429efc4de2fd0295f629f811694bd026f9c39add8a53f315304afefd0"
+  },
+  "final_changed_pages_reinspected": [
+    "page-09.png",
+    "page-10.png"
+  ],
+  "source_sha256": "1234e02d7cf620511bfd7b9306dbb72ac68929ef01e8c3ba70bd3615bcd2b943",
+  "pdf_sha256": "581ff5f1e07989c6331575613acc6b1e21c8f08f715a87a20623ab8e9c5fd0c4"
+}

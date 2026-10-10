@@ -1,0 +1,392 @@
+[
+  {
+    "start": 1,
+    "end": 13,
+    "status": "PASS",
+    "reason": "Current DRAFT metadata, canonical models, verified prerequisites and explicit exclusions."
+  },
+  {
+    "start": 14,
+    "end": 33,
+    "status": "PASS",
+    "reason": "Same positive tuple and own equilibria; strict spectral vocabulary, full candidate labels and deferred scope."
+  },
+  {
+    "start": 34,
+    "end": 45,
+    "status": "PASS",
+    "reason": "Polynomial local flow, coordinate faces and positivity only on the maximal interval."
+  },
+  {
+    "start": 46,
+    "end": 62,
+    "status": "PASS",
+    "reason": "Scalar equilibria, forward growth and blow-up with correct signs and initial-data scope."
+  },
+  {
+    "start": 63,
+    "end": 78,
+    "status": "PASS",
+    "reason": "Locally Lipschitz field and integrating-factor identity prove sign preservation."
+  },
+  {
+    "start": 79,
+    "end": 93,
+    "status": "PASS",
+    "reason": "Synchronous lift and reciprocal solution; zero data retained and maximal intervals agree."
+  },
+  {
+    "start": 94,
+    "end": 110,
+    "status": "PASS",
+    "reason": "Maximum comparison and precise global, attraction and absorption claims."
+  },
+  {
+    "start": 111,
+    "end": 122,
+    "status": "PASS",
+    "reason": "Finite maximum handles ties; nonnegative inhibitory terms may be discarded; logistic comparison."
+  },
+  {
+    "start": 123,
+    "end": 129,
+    "status": "PASS",
+    "reason": "Necessary conditions deduced only from synchronous examples; converses not asserted."
+  },
+  {
+    "start": 130,
+    "end": 150,
+    "status": "PASS",
+    "reason": "General derivative and pre-equilibrium diagonal; coincident entries add; equilibrium used only afterward."
+  },
+  {
+    "start": 151,
+    "end": 171,
+    "status": "PASS",
+    "reason": "All phases, real and imaginary signs, full spectrum, normality and negative uniform eigenvalue."
+  },
+  {
+    "start": 172,
+    "end": 184,
+    "status": "PASS",
+    "reason": "Shift convention, unitary DFT and commuting-adjoint proofs are valid."
+  },
+  {
+    "start": 185,
+    "end": 191,
+    "status": "PASS",
+    "reason": "Independent matrix and scalar derivations of the uniform eigenvalue."
+  },
+  {
+    "start": 192,
+    "end": 211,
+    "status": "PASS",
+    "reason": "All collision formulas, Nyquist value, conjugacy and multiplicity qualifications."
+  },
+  {
+    "start": 212,
+    "end": 228,
+    "status": "PASS",
+    "reason": "Strict and equality stability cases; hyperbolicity distinguished; additional sufficient global bound."
+  },
+  {
+    "start": 229,
+    "end": 246,
+    "status": "PASS",
+    "reason": "Symmetric-part quadratic estimate, sum logistic bound and automatic positive MB root."
+  },
+  {
+    "start": 247,
+    "end": 255,
+    "status": "PASS",
+    "reason": "Exact dissipative example with k<c; own roots and residuals; non-equivalence of sufficient bounds."
+  },
+  {
+    "start": 256,
+    "end": 269,
+    "status": "PASS",
+    "reason": "Step-two quadratic, completion of square, strict concavity and constrained versus unconstrained vertex."
+  },
+  {
+    "start": 270,
+    "end": 280,
+    "status": "PASS",
+    "reason": "Correct generic grid definitions; MB hypotheses are established before using P05."
+  },
+  {
+    "start": 281,
+    "end": 297,
+    "status": "PASS",
+    "reason": "All strict cells, closed endpoints, positive-midpoint ties and reachable representatives."
+  },
+  {
+    "start": 298,
+    "end": 311,
+    "status": "PASS",
+    "reason": "Label counts and exact selected-mode stability including uniform maximal ties."
+  },
+  {
+    "start": 312,
+    "end": 326,
+    "status": "PASS",
+    "reason": "Independent gap sign and MB-specific positive-parameter realizability."
+  },
+  {
+    "start": 327,
+    "end": 343,
+    "status": "PASS",
+    "reason": "Four parity classes, unattainable zero-vertex tie and amplitude-dependent gap qualification."
+  },
+  {
+    "start": 344,
+    "end": 366,
+    "status": "PASS",
+    "reason": "Complete common domain, unique upper root on C-plus, and explicit branch-labelled use elsewhere."
+  },
+  {
+    "start": 367,
+    "end": 382,
+    "status": "PASS",
+    "reason": "Correct imported DM coefficients and same-tuple selection controls in the q=2 comparison."
+  },
+  {
+    "start": 383,
+    "end": 404,
+    "status": "PASS",
+    "reason": "Curvature, coordinate faces, uniform derivatives and whole-class dissipativity contrast with domains qualified."
+  },
+  {
+    "start": 405,
+    "end": 414,
+    "status": "PASS",
+    "reason": "Three positive curvature witnesses and original residuals; no inference of MB boundedness from existence."
+  },
+  {
+    "start": 415,
+    "end": 427,
+    "status": "PASS",
+    "reason": "Matching limits and fixed-source limit; derivative-sign statement read in the established q=2 scope."
+  },
+  {
+    "start": 428,
+    "end": 437,
+    "status": "PASS",
+    "reason": "Every ordered pair quantified at each fixed size, with strict stable physical open sets."
+  },
+  {
+    "start": 438,
+    "end": 455,
+    "status": "PASS",
+    "reason": "Strict control choices, positive-state construction and the large-k bound."
+  },
+  {
+    "start": 456,
+    "end": 466,
+    "status": "PASS",
+    "reason": "Positivity, common unique-branch domain, exact original residuals and independent selection ratios."
+  },
+  {
+    "start": 467,
+    "end": 478,
+    "status": "PASS",
+    "reason": "Both all-mode stability bounds; adjusting a with k preserves the chosen equilibrium and controls."
+  },
+  {
+    "start": 479,
+    "end": 489,
+    "status": "PASS",
+    "reason": "Rational reverse-selection example, distinct amplitudes, modes 2/0 and both exact negative maxima."
+  },
+  {
+    "start": 490,
+    "end": 503,
+    "status": "PASS",
+    "reason": "Universal same-tuple theorem; fixed-size open regions and accidental amplitude equality stated correctly."
+  },
+  {
+    "start": 504,
+    "end": 515,
+    "status": "PASS",
+    "reason": "Exact original residuals, coefficients and both dispersions at the universal witness."
+  },
+  {
+    "start": 516,
+    "end": 524,
+    "status": "PASS",
+    "reason": "Actual finite label J and all-size positive lower bound 3/16; nonuniformity follows from -a."
+  },
+  {
+    "start": 525,
+    "end": 533,
+    "status": "PASS",
+    "reason": "Algebraic-integer exclusion of all representative ties and valid fixed-size openness."
+  },
+  {
+    "start": 534,
+    "end": 535,
+    "status": "MINOR ISSUE",
+    "reason": "E01: n=8 selects MB representative 2 (labels 2 and 6), not 1; n=5,6,7 select 1."
+  },
+  {
+    "start": 536,
+    "end": 538,
+    "status": "PASS",
+    "reason": "Finite Fourier label, not a continuous maximum alone, establishes instability."
+  },
+  {
+    "start": 539,
+    "end": 549,
+    "status": "PASS",
+    "reason": "Normalized modal comparison and strictly positive last numerator."
+  },
+  {
+    "start": 550,
+    "end": 557,
+    "status": "PASS",
+    "reason": "Exact unique-domain reverse-stability iff theorem and strict implication in other parity classes."
+  },
+  {
+    "start": 558,
+    "end": 572,
+    "status": "PASS",
+    "reason": "Uniform branch stability, forced positive w and strict modal gap exclude even zero DM maxima."
+  },
+  {
+    "start": 573,
+    "end": 589,
+    "status": "PASS",
+    "reason": "All-size reverse-family positivity, common-domain inequalities and original residuals."
+  },
+  {
+    "start": 590,
+    "end": 594,
+    "status": "PASS",
+    "reason": "MB terminal cell and exact negative normalized maximum."
+  },
+  {
+    "start": 595,
+    "end": 606,
+    "status": "PASS",
+    "reason": "DM positive terminal mode with correct 37/256 subtraction bound and 91/256 margin."
+  },
+  {
+    "start": 607,
+    "end": 616,
+    "status": "PASS",
+    "reason": "DM concavity, strict terminal selection and continuation on the positive simple branch."
+  },
+  {
+    "start": 617,
+    "end": 627,
+    "status": "PASS",
+    "reason": "Rational seven-node tuple, own roots, strict positivity and original residuals."
+  },
+  {
+    "start": 628,
+    "end": 638,
+    "status": "PASS",
+    "reason": "Seventh-root cubic and all rational isolating signs independently verified."
+  },
+  {
+    "start": 639,
+    "end": 654,
+    "status": "PASS",
+    "reason": "Every MB representative negative; exact DM positive margin; strict selection of representative 2."
+  },
+  {
+    "start": 655,
+    "end": 665,
+    "status": "PASS",
+    "reason": "Separate full branch-labelled theorem with explicit lower branch and divisibility scope."
+  },
+  {
+    "start": 666,
+    "end": 674,
+    "status": "PASS",
+    "reason": "Full-domain 4-divides-n obstruction and strict cosine-grid rho bound in other sizes."
+  },
+  {
+    "start": 675,
+    "end": 693,
+    "status": "PASS",
+    "reason": "Lower-family coefficients, both exact positive roots, common domain and distinct branches."
+  },
+  {
+    "start": 694,
+    "end": 710,
+    "status": "PASS",
+    "reason": "Positive lower uniform value, convex selection, strict all-mode MB bound and rational six-node case."
+  },
+  {
+    "start": 711,
+    "end": 718,
+    "status": "PASS",
+    "reason": "Five existence categories reported without claiming each in every dimension."
+  },
+  {
+    "start": 719,
+    "end": 738,
+    "status": "PASS",
+    "reason": "n=8 two-unstable example: exact residuals, distinct modes 2/1, strict vertices and positive maxima."
+  },
+  {
+    "start": 739,
+    "end": 745,
+    "status": "PASS",
+    "reason": "Physical five-parameter openness at fixed size and named branch is stated precisely."
+  },
+  {
+    "start": 746,
+    "end": 758,
+    "status": "PASS",
+    "reason": "Correct upper-branch scalar IFT derivative, smooth MB root and finitely many strict gaps."
+  },
+  {
+    "start": 759,
+    "end": 765,
+    "status": "PASS",
+    "reason": "Correct lower-branch derivative and strict branch conditions; no uniform-in-n radius claimed."
+  },
+  {
+    "start": 766,
+    "end": 779,
+    "status": "PASS",
+    "reason": "Summary preserves all theorem quantifiers and permits open MB-stable regions."
+  },
+  {
+    "start": 780,
+    "end": 788,
+    "status": "PASS",
+    "reason": "Exact M=0 exponential and M=-1 blow-up witnesses; own DM roots; no MB positive root claimed."
+  },
+  {
+    "start": 789,
+    "end": 799,
+    "status": "PASS",
+    "reason": "Six-term, Hopf, transversality, criticality and later proof gates explicitly deferred."
+  },
+  {
+    "start": 800,
+    "end": 806,
+    "status": "PASS",
+    "reason": "Analytic checks and original-field residual identities are independently corroborated."
+  },
+  {
+    "start": 807,
+    "end": 811,
+    "status": "PASS",
+    "reason": "Located companion authenticated; loop counts independently derived and the original checker/results reproduced exactly."
+  },
+  {
+    "start": 812,
+    "end": 814,
+    "status": "PASS",
+    "reason": "Floating-point checks, interval certification, proof and independent audit are correctly distinguished."
+  },
+  {
+    "start": 815,
+    "end": 846,
+    "status": "PASS",
+    "reason": "Checklist and scope reminders; no new theorem or later-module premise is imported."
+  }
+]

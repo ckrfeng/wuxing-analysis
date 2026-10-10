@@ -1,0 +1,278 @@
+[
+  {
+    "start": 1,
+    "end": 13,
+    "status": "PASS",
+    "assessment": "Metadata, verified prerequisites, known supporting role, and scope are accurate. The declared standard ODE input is explicit."
+  },
+  {
+    "start": 14,
+    "end": 24,
+    "status": "PASS",
+    "assessment": "Canonical $n,q$, positive parameters, domain, shift convention, and absence of a coprimality hypothesis agree with current inputs."
+  },
+  {
+    "start": 25,
+    "end": 40,
+    "status": "PASS",
+    "assessment": "P03 Jacobian and all four coefficients are copied correctly. State-versus-equilibrium scope and signs of $C,G,H$ are correct."
+  },
+  {
+    "start": 41,
+    "end": 66,
+    "status": "PASS",
+    "assessment": "Complete spectrum theorem, normalized column order, both diagonalizations, and degeneracy quantifiers are correct. Local $Q$ alias is explicit (optional note T01)."
+  },
+  {
+    "start": 67,
+    "end": 85,
+    "status": "PASS",
+    "assessment": "Every integer-shift phase, modular wraparound, and the separate $G$ and $-H$ orientations are correct."
+  },
+  {
+    "start": 86,
+    "end": 104,
+    "status": "PASS",
+    "assessment": "Geometric-sum normalization, square-matrix inverse argument, characteristic product, and completeness are valid."
+  },
+  {
+    "start": 105,
+    "end": 123,
+    "status": "PASS",
+    "assessment": "Both dispersion formulas pass; the imaginary $+H$ sign and signed-frequency distinction are explicit."
+  },
+  {
+    "start": 124,
+    "end": 137,
+    "status": "PASS",
+    "assessment": "Modular conjugate label and whole-vector/eigenvalue overlines are unambiguous and mathematically correct."
+  },
+  {
+    "start": 138,
+    "end": 145,
+    "status": "PASS",
+    "assessment": "Singleton counts, parity, real singleton values, and the failure of the converse are correct."
+  },
+  {
+    "start": 146,
+    "end": 159,
+    "status": "PASS",
+    "assessment": "Multiplicity statement correctly concerns numerical eigenvalues over $\\CC$, with no simplicity assumption."
+  },
+  {
+    "start": 160,
+    "end": 167,
+    "status": "PASS",
+    "assessment": "Characteristic product and free-coordinate argument prove equal algebraic/geometric multiplicities and semisimplicity."
+  },
+  {
+    "start": 168,
+    "end": 176,
+    "status": "PASS",
+    "assessment": "Conjugate labels, numerical equality, real-part ties, and singleton simplicity are properly distinguished."
+  },
+  {
+    "start": 177,
+    "end": 181,
+    "status": "PASS",
+    "assessment": "Exact positive equilibrium gives $d=-4,C=2,G=H=1$ and repeated real conjugate-label values."
+  },
+  {
+    "start": 182,
+    "end": 187,
+    "status": "PASS",
+    "assessment": "Origin reduction matches verified P03; $c>0$ and distinct roots of unity imply simple values."
+  },
+  {
+    "start": 188,
+    "end": 194,
+    "status": "PASS",
+    "assessment": "Collision discussion uses the exhaustive P03 list without requiring a replacement theorem."
+  },
+  {
+    "start": 195,
+    "end": 203,
+    "status": "PASS",
+    "assessment": "$q=1$ combined matrix, spectrum, real part, and imaginary part all pass."
+  },
+  {
+    "start": 204,
+    "end": 213,
+    "status": "PASS",
+    "assessment": "$q=n-1$ phases, combined matrix, spectrum, and both dispersion reductions all pass."
+  },
+  {
+    "start": 214,
+    "end": 223,
+    "status": "PASS",
+    "assessment": "Half-offset phase $(-1)^m$, combined matrix, and zero offset imaginary contribution all pass."
+  },
+  {
+    "start": 224,
+    "end": 228,
+    "status": "PASS",
+    "assessment": "Cancellation is handled by addition, never overwriting; the general theorem remains valid."
+  },
+  {
+    "start": 229,
+    "end": 241,
+    "status": "PASS",
+    "assessment": "Zero and even singleton formulas, both $q$ parities, and the half-offset intersection agree."
+  },
+  {
+    "start": 242,
+    "end": 259,
+    "status": "PASS",
+    "assessment": "Unitary proof establishes normality without distinctness."
+  },
+  {
+    "start": 260,
+    "end": 268,
+    "status": "PASS",
+    "assessment": "Adjoint signs and powers are correct; commuting powers give a second proof. Negative states and nonsynchronous exclusions are explicit."
+  },
+  {
+    "start": 269,
+    "end": 288,
+    "status": "PASS",
+    "assessment": "Direct scalar derivative equals the unsimplified row sum at every synchronous state."
+  },
+  {
+    "start": 289,
+    "end": 297,
+    "status": "PASS",
+    "assessment": "Tangent-space differentiation and nonstationary scalar variational coefficient are correct."
+  },
+  {
+    "start": 298,
+    "end": 309,
+    "status": "PASS",
+    "assessment": "Equilibrium and positivity premises precede the optional diagonal simplification."
+  },
+  {
+    "start": 310,
+    "end": 324,
+    "status": "PASS",
+    "assessment": "Both zero-mode equilibrium expressions are equivalent; negative nonzero equilibria and origin are distinguished."
+  },
+  {
+    "start": 325,
+    "end": 337,
+    "status": "PASS",
+    "assessment": "Equilibrium scope, complete-spectrum abscissa, and exponential-stability definition are sound."
+  },
+  {
+    "start": 338,
+    "end": 355,
+    "status": "PASS",
+    "assessment": "All-label criterion, exact norm, and three linear stability cases are correctly stated."
+  },
+  {
+    "start": 356,
+    "end": 372,
+    "status": "PASS",
+    "assessment": "Exponential series, diagonal norm attainment, $t\\ge0$ maximum, and converse logarithmic limit are valid."
+  },
+  {
+    "start": 373,
+    "end": 384,
+    "status": "PASS",
+    "assessment": "Real/complex norm equality and orthonormal real-pair block have the correct signs."
+  },
+  {
+    "start": 385,
+    "end": 392,
+    "status": "PASS",
+    "assessment": "Critical blocks are bounded but nondecaying; positive blocks yield instability. No Jordan growth is possible."
+  },
+  {
+    "start": 393,
+    "end": 400,
+    "status": "PASS",
+    "assessment": "Hyperbolicity and invertibility use distinct, correct all-label tests."
+  },
+  {
+    "start": 401,
+    "end": 410,
+    "status": "PASS",
+    "assessment": "Canonical origin example has a nonzero imaginary pair and no zero eigenvalue, proving strict weakness of invertibility."
+  },
+  {
+    "start": 411,
+    "end": 414,
+    "status": "PASS",
+    "assessment": "Hyperbolicity does not imply stability; nonhyperbolicity can coexist with instability."
+  },
+  {
+    "start": 415,
+    "end": 426,
+    "status": "PASS",
+    "assessment": "Nonlinear implications distinguish negative, positive, and zero abscissa and state the open-domain scope."
+  },
+  {
+    "start": 427,
+    "end": 443,
+    "status": "PASS",
+    "assessment": "Differentiable remainder, radius selection, Gronwall estimate, first-exit argument, and compact continuation all pass."
+  },
+  {
+    "start": 444,
+    "end": 452,
+    "status": "PASS",
+    "assessment": "The standard instability theorem is correctly stated and applied, including center spectrum; A04 proves this instance independently."
+  },
+  {
+    "start": 453,
+    "end": 460,
+    "status": "PASS",
+    "assessment": "Opposite cubic scalar examples establish the general limitation; they are not claimed as DM boundary examples."
+  },
+  {
+    "start": 461,
+    "end": 472,
+    "status": "PASS",
+    "assessment": "Local/global and open-domain/orthant distinctions are preserved; rejected blanket nonlinear/global claims remain rejected."
+  },
+  {
+    "start": 473,
+    "end": 488,
+    "status": "PASS",
+    "assessment": "Dominant-label ties, branch/path prerequisites, actual sign crossing, and no selection claim are properly separated."
+  },
+  {
+    "start": 489,
+    "end": 503,
+    "status": "PASS",
+    "assessment": "Least-return proof gives gcd cycles and residue classes. The full step-one coupling prevents the asserted subgraph partition from becoming a claimed full-network decomposition."
+  },
+  {
+    "start": 504,
+    "end": 514,
+    "status": "PASS",
+    "assessment": "Grid/parity/phase dependence is distinguished from coprimality independence of the proofs; the origin threshold is correctly identified as special."
+  },
+  {
+    "start": 515,
+    "end": 529,
+    "status": "PASS",
+    "assessment": "Summary describes the analytic checks actually present and does not appeal to finite computation as proof."
+  },
+  {
+    "start": 530,
+    "end": 545,
+    "status": "UNRESOLVED",
+    "assessment": "U01: historical checker execution, counts, and floating-point maxima cannot be reproduced from the supplied archive because its separate companion is absent. No theorem premise is affected."
+  },
+  {
+    "start": 546,
+    "end": 548,
+    "status": "PASS",
+    "assessment": "Explicitly limits computations to corroboration and denies that they supply an audit verdict."
+  },
+  {
+    "start": 549,
+    "end": 573,
+    "status": "PASS",
+    "assessment": "Priority checklist identifies valid audit gates and scope limits. It is reviewed as source content, not an instruction overriding the user request."
+  }
+]

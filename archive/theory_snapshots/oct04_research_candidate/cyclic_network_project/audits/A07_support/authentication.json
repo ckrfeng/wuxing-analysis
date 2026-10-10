@@ -1,0 +1,21 @@
+{
+  "archive": "cyclic_network_project_P07_draft.zip",
+  "archive_sha256": "2a49a916659df343995adf5b6e75975f1d05b97f2d0bf24f43db631d0472106c",
+  "archive_members": 118,
+  "required_current_inputs": 23,
+  "current_p07": {
+    "path": "proofs/P07_five_node_specialization.tex",
+    "bytes": 24180,
+    "lines": 555,
+    "sha256": "fc10d257e8126b79a56cc7dd4c55b14b0266e250cbe40dbecb6c6a18658d09de",
+    "role": "audit input",
+    "body_sha256": "66a5b8f078cb0fc30f4d7c72c22a26b965fd8ded491f53450d604fe7a21ccdea",
+    "full_hash_in_manifest": true,
+    "body_hash_in_manifest": true
+  },
+  "manifest_match": true,
+  "stale_placeholder_excluded": true,
+  "current_delivery_copy_matches": true,
+  "lifecycle_status_unchanged": "P07 DRAFT",
+  "date": "2026-10-03"
+}

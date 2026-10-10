@@ -1,0 +1,5 @@
+Recommendation: ACCEPT AS PLANNING CLARIFICATION.
+
+The note accurately identifies frozen_theorem_package.md attempt-order row 10 (first crossing) and novelty_decisions.md S11 (an open first-loss regime). P11 proves spectral candidates and local regularity only. P12 owns equilibrium motion and transversality; P13 owns nonlinear nondegeneracy and the assembled theorem. A first-loss claim still needs an explicit interval/path statement.
+
+Adoption clarifies planning allocation, without changing DAG edges, canonical conventions, novelty ratings, the assembled target, or currently permitted manuscript claims. It neither certifies nor drops the stronger first-loss/open-regime obligations. P05 realizes dominance and is not contradicted by the two spectral obstructions. No frozen file is edited. This recommendation is separate from the mathematical verdict.

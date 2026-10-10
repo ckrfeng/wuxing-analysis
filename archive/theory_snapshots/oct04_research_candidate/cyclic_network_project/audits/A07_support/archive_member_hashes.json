@@ -1,0 +1,474 @@
+{
+  "cyclic_network_project/00_canonical_model.tex": {
+    "bytes": 3712,
+    "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4"
+  },
+  "cyclic_network_project/01_notation_and_assumptions.tex": {
+    "bytes": 5152,
+    "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91"
+  },
+  "cyclic_network_project/02_theorem_dependency_map.tex": {
+    "bytes": 9372,
+    "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac"
+  },
+  "cyclic_network_project/03_literature_audit.tex": {
+    "bytes": 25660,
+    "sha256": "df5b8993938255f706c38071e4e65cb665bc3452fa3a35e23cbb551df216a15b"
+  },
+  "cyclic_network_project/03_literature_audit_template.tex": {
+    "bytes": 2209,
+    "sha256": "1b6804ac6991a5cc178516ec50946073316b873bfee0a3094b4cba75252a61ad"
+  },
+  "cyclic_network_project/04_adversarial_novelty_audit.tex": {
+    "bytes": 26167,
+    "sha256": "de6e48ccfa9065e5647ff995fd16f2a32129ee022cf53b8dfd3448de6e8bdf07"
+  },
+  "cyclic_network_project/05_priority_closure.tex": {
+    "bytes": 19235,
+    "sha256": "482d235be2456b7a565a062d8eb8557d9c53faaf7b7bfe08204afc3963ef9a8f"
+  },
+  "cyclic_network_project/README.md": {
+    "bytes": 8020,
+    "sha256": "32fc681c1ba16b93d247cc6da217ecaaa4843b5d9b058db11a79334821cd9f98"
+  },
+  "cyclic_network_project/additional_sources_needed.md": {
+    "bytes": 12071,
+    "sha256": "ccf5db07a1a06252c4c49a7bef9c60f1590da7d11cce994424d766c83a4714f2"
+  },
+  "cyclic_network_project/adversarial_audit_compendium.pdf": {
+    "bytes": 341365,
+    "sha256": "23112107e471a00ac49f62e1875c48a448d778781462b81348f5c76214165b3a"
+  },
+  "cyclic_network_project/adversarial_audit_compendium.tex": {
+    "bytes": 903,
+    "sha256": "42c0c874356710a5c583793a9f76b5a0b321790483dff95f9a3a8a740301dd44"
+  },
+  "cyclic_network_project/archive/directed_cyclic_networks_master.tex": {
+    "bytes": 94231,
+    "sha256": "0a7850078ed62434b8c37c727637049c583972cd11159ac91345e6a8691e436d"
+  },
+  "cyclic_network_project/audits/A01_wellposedness_and_absorbing_box.tex": {
+    "bytes": 48622,
+    "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098"
+  },
+  "cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.pdf": {
+    "bytes": 300918,
+    "sha256": "089f40bfd3d8c0b62fb6eda7eac391c093bb023b150a88771a5cd00b5e23eff6"
+  },
+  "cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.tex": {
+    "bytes": 37895,
+    "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac"
+  },
+  "cyclic_network_project/audits/A03_origin_and_linearization.pdf": {
+    "bytes": 310688,
+    "sha256": "c817b753f257d27471c416925fb97ddaef6ae539ee980d80705aaa8fa9b7f0b2"
+  },
+  "cyclic_network_project/audits/A03_origin_and_linearization.tex": {
+    "bytes": 37700,
+    "sha256": "e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1"
+  },
+  "cyclic_network_project/audits/A03_support/README.md": {
+    "bytes": 3626,
+    "sha256": "838b71659696314aee47e8128689b3c387f2bc58695cbf4ff67850c0fcbc0390"
+  },
+  "cyclic_network_project/audits/A03_support/checks/exact_jacobian_check.py": {
+    "bytes": 11525,
+    "sha256": "a0b3e861df41ad8c5cb2d95da90e41bf8ca0fc1533e86e6b2413914d6caab35f"
+  },
+  "cyclic_network_project/audits/A03_support/checks/exact_jacobian_results.json": {
+    "bytes": 4366,
+    "sha256": "793f2ff29ac256e079b5b832e3a7b1e8d6a7004a0da3031eed538f127f81555a"
+  },
+  "cyclic_network_project/audits/A03_support/checks/exact_origin_check.py": {
+    "bytes": 4075,
+    "sha256": "649bfbaf4f3c45a1cb503c5700e6379aef2fa36663525257c75106301019ef1d"
+  },
+  "cyclic_network_project/audits/A03_support/checks/exact_origin_results.json": {
+    "bytes": 1214,
+    "sha256": "fcbd331c1f7fbdb679cc215236861547ee72f6466b8134e512ee4b002e2d60d5"
+  },
+  "cyclic_network_project/audits/A03_support/delivery_checks.json": {
+    "bytes": 2932,
+    "sha256": "a2e03afc286e300c4227d358f3bb4781a11da4582d71f0312dcdd6b3c5ce3af1"
+  },
+  "cyclic_network_project/audits/A03_support/input_hashes.json": {
+    "bytes": 2363,
+    "sha256": "97a87f30adde625901768eaf958f3d64bb5f681ff9f9069095ae756072b89138"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/check_p03.py": {
+    "bytes": 23445,
+    "sha256": "73784fd269f445a80639175b8901610e89a517469d69ddc5d397200dc5412bbb"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/original_report.json": {
+    "bytes": 437258,
+    "sha256": "28359ee200e6dff321b3fd19f8f29bd19a344342212f02256cc80cc65d6502d2"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/original_summary.json": {
+    "bytes": 2032,
+    "sha256": "aaa043f0d648a2be2ba3d6eb497acbbed63c50eb83fd61a127bc301e702cb987"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/report.json": {
+    "bytes": 437281,
+    "sha256": "3555faa59588225adb8d021ef2a27bb4ed03ba70d629daf1c1dfd288de7f526a"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/reproduction_comparison.json": {
+    "bytes": 1085,
+    "sha256": "ab3b5ffff399f3b7382d0384b560957605b95fd2cd04461515879c6b4eb03cad"
+  },
+  "cyclic_network_project/audits/A03_support/prior_validation/summary.json": {
+    "bytes": 2068,
+    "sha256": "911df562254b8e050bb86ded6848af56c46ece43fe403a6aca3031708d905b68"
+  },
+  "cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.pdf": {
+    "bytes": 325459,
+    "sha256": "90819c883fc561c2a1c4435186b2b501488e1b13699e2c1073a95bff6e982359"
+  },
+  "cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.tex": {
+    "bytes": 47595,
+    "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869"
+  },
+  "cyclic_network_project/audits/A04_support/README.md": {
+    "bytes": 2791,
+    "sha256": "1810c8470406231f76bcb9578050cb09854084c90efa33dc702fa5aeb1604a94"
+  },
+  "cyclic_network_project/audits/A04_support/archive_member_hashes.json": {
+    "bytes": 12825,
+    "sha256": "939aa2391bb7e8c8eacaae5862a035b538c123f3bc25a1827e69404b289aae0b"
+  },
+  "cyclic_network_project/audits/A04_support/checks/README.md": {
+    "bytes": 7295,
+    "sha256": "ce9691df2c0e391478584a0f203393abf18cd757198088ce0b6bfa1b34b68f36"
+  },
+  "cyclic_network_project/audits/A04_support/checks/independent_exact_p04.py": {
+    "bytes": 21513,
+    "sha256": "aec35a1456843a56d2bfb229159ebbefaff575bc84d3cf239931bc4611242b43"
+  },
+  "cyclic_network_project/audits/A04_support/checks/independent_exact_p04_authentication.json": {
+    "bytes": 380,
+    "sha256": "4f79c118f0db22d962a457d00b083301e9ab0dc2ac471440df8f360672755c70"
+  },
+  "cyclic_network_project/audits/A04_support/checks/independent_exact_p04_results.json": {
+    "bytes": 685978,
+    "sha256": "0702195bc9831e9cbd777cd9e768a21b635c1474f6886a8dc61563e0fa0494e7"
+  },
+  "cyclic_network_project/audits/A04_support/checks/independent_exact_p04_run.log": {
+    "bytes": 519,
+    "sha256": "cfa573ee54a38f7283f47ecbf1040e49a388589e55078662920fa5af97f7f2cf"
+  },
+  "cyclic_network_project/audits/A04_support/delivery_checks.json": {
+    "bytes": 2179,
+    "sha256": "e4a23c8a2b5b32e659e736dfd01ed35a83ebd71855d6e2fddb8c4c626a95f18f"
+  },
+  "cyclic_network_project/audits/A04_support/input_hashes.json": {
+    "bytes": 2623,
+    "sha256": "9795e7b8d6fa55efb48eef3edc8354690112f9c7b48da1fa7aec425d90aade9d"
+  },
+  "cyclic_network_project/audits/A04_support/line_review.json": {
+    "bytes": 8917,
+    "sha256": "7c899551fdb5d5bf26288adae0d233c14d73c569efc269e07bae5b463e9ccec2"
+  },
+  "cyclic_network_project/audits/A05_q2_mode_selection.tex": {
+    "bytes": 49526,
+    "sha256": "0f7e9836b91009a201185a4acbbb99715f3c65df715e405962b7d6852ff27031"
+  },
+  "cyclic_network_project/audits/A05_support/README.txt": {
+    "bytes": 1766,
+    "sha256": "beb8250c5401b80344eb1e4ba53eb8510abe34b77748439cc951e2b03d5065bd"
+  },
+  "cyclic_network_project/audits/A05_support/archive_member_hashes.json": {
+    "bytes": 15001,
+    "sha256": "23dfc2fff2b1a1beed88209e1dc8941a4a76cf01065b6306fc2a70d25c7c2244"
+  },
+  "cyclic_network_project/audits/A05_support/authentication.json": {
+    "bytes": 538,
+    "sha256": "a839229b1c275e908a537fee2c04dce8849b39e631ff8a142bd0659a1c9587b0"
+  },
+  "cyclic_network_project/audits/A05_support/delivery_checks.json": {
+    "bytes": 1025,
+    "sha256": "90223b739100371c523bfac495cc0422a452cff3073f2664a97b70288951df95"
+  },
+  "cyclic_network_project/audits/A05_support/independent_check.py": {
+    "bytes": 7257,
+    "sha256": "c17992c467ae9bb2d55ab62d42e114d2e0a771396428da8c0ab8856d176cac6a"
+  },
+  "cyclic_network_project/audits/A05_support/independent_results.json": {
+    "bytes": 2775008,
+    "sha256": "bc9848155e713b880440eba622b73abd059daf4decfcbebb779809a5577dbb66"
+  },
+  "cyclic_network_project/audits/A05_support/independent_summary.json": {
+    "bytes": 1158,
+    "sha256": "26e1ff89d8830e8a2c8581b1a86d19fcea50aa465052b0bd77121ffe3ef9297b"
+  },
+  "cyclic_network_project/audits/A05_support/input_hashes.json": {
+    "bytes": 3892,
+    "sha256": "4812380a57cfcdbb25d8f1d50ec32d03b9780bb06f2b554012f233c567dbcc2b"
+  },
+  "cyclic_network_project/audits/A05_support/line_review.json": {
+    "bytes": 8772,
+    "sha256": "1e4d995d54960c25d69d441a4ffdfd4d89b3aa057597f2bcb5fc36336cfa9f0a"
+  },
+  "cyclic_network_project/audits/A05_support/package_manifest.json": {
+    "bytes": 1516,
+    "sha256": "cdb2cdc9b32d03898eb32f02b5cdef928f2f428ffbf03bd04e8de32dc71272cf"
+  },
+  "cyclic_network_project/audits/A08_matched_bilinear_analysis.pdf": {
+    "bytes": 352852,
+    "sha256": "9be30d2f422c37a6d91557100a8d657727df603849cc877873c9f02a5437dff3"
+  },
+  "cyclic_network_project/audits/A08_matched_bilinear_analysis.tex": {
+    "bytes": 57343,
+    "sha256": "87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935"
+  },
+  "cyclic_network_project/audits/A08_support/README.txt": {
+    "bytes": 3645,
+    "sha256": "c9ee582ffba35491eaa5ce672c9c094edb783d9f89f452e8e0b2108527d90910"
+  },
+  "cyclic_network_project/audits/A08_support/archive_member_hashes.json": {
+    "bytes": 16922,
+    "sha256": "6d74bc375b24262342e442e772604f6eefa31b7cae7424a1966a8e51db09fcfa"
+  },
+  "cyclic_network_project/audits/A08_support/delivery_checks.json": {
+    "bytes": 988,
+    "sha256": "aea9e022f46fb7c6e947cb05c8eba4e565695ded7e57b9fb898c1d3b5b33e517"
+  },
+  "cyclic_network_project/audits/A08_support/expected_counts.json": {
+    "bytes": 560,
+    "sha256": "58225cd6c45ef70794317de65cdb5516c63e96ba19aed2238b655e0854d48488"
+  },
+  "cyclic_network_project/audits/A08_support/independent_check.py": {
+    "bytes": 14528,
+    "sha256": "3e173b1ae1905147369739f8640fe1febc623a6508afe2b7a5f28b508608b21f"
+  },
+  "cyclic_network_project/audits/A08_support/independent_results.json": {
+    "bytes": 4081823,
+    "sha256": "89d4f5b5407bb2f6a739d7d258a50221c5182de5ed00a9510b49834d8a77fe84"
+  },
+  "cyclic_network_project/audits/A08_support/independent_summary.json": {
+    "bytes": 966,
+    "sha256": "06ad4763d747abced5f6a4e1f66e4c22da6785776ae6c69318d4b48f80e9c0d7"
+  },
+  "cyclic_network_project/audits/A08_support/input_hashes.json": {
+    "bytes": 4992,
+    "sha256": "01b9114b5cb321df295006015de6924de7ed7fb38c84950fae2a6c81bed3fb24"
+  },
+  "cyclic_network_project/audits/A08_support/line_review.json": {
+    "bytes": 11077,
+    "sha256": "fdd6bc6e365de27b12c3e87c2d32c30039e00cf3e7ab928f33dcadc0ec45c72f"
+  },
+  "cyclic_network_project/audits/A08_support/package_manifest.json": {
+    "bytes": 3729,
+    "sha256": "19df6211a7cc915ef234d22e17fc38a89e38f36e0a7a3f1158dd65d6318a905b"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/authentication.json": {
+    "bytes": 469,
+    "sha256": "cc1053e44b53cbe66de3af0a7d8eb59f95a25cbff9cef1b937acb1741659772f"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/check_p08.py": {
+    "bytes": 12828,
+    "sha256": "2385d2074ead3ca764fb98fd7dff5fb419c68526ed0e57e9c80e364980052939"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/independently_expected_counts.json": {
+    "bytes": 397,
+    "sha256": "80c2cb0c5e5d7d73297a8c7a4d54d1bb0c2453efe2517c5ba448132a95a8e59c"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/original_summary.json": {
+    "bytes": 868,
+    "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/reproduced_results.json": {
+    "bytes": 1784074,
+    "sha256": "7c79a28f0c20e9e9a715b6f783fc6ef86890ea21cfbe406f9dfe6d11d871bd61"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/reproduced_summary.json": {
+    "bytes": 868,
+    "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638"
+  },
+  "cyclic_network_project/audits/A08_support/prior_validation/reproduction_comparison.json": {
+    "bytes": 217,
+    "sha256": "83d47b6e5e89e267a8d2b2fe37fadb7e169a5f3b51fe2aa25f6eb22e11aa2195"
+  },
+  "cyclic_network_project/audits/A08_support/source_claim_checks.json": {
+    "bytes": 538,
+    "sha256": "e090064641a0155f5ae63eb30f990bf4ef5695cf8ddb6c9752984ca229f31327"
+  },
+  "cyclic_network_project/audits/audit_template.tex": {
+    "bytes": 2220,
+    "sha256": "b0ddf12b7f944d01ffa8bce6d281b8dda5591b97b1a8ee316e2524e4ba5c6b4b"
+  },
+  "cyclic_network_project/audits/initialization_checks.md": {
+    "bytes": 2312,
+    "sha256": "3a7ce3d9126d32725aadd33c873f72e41a0779ecd64576022ce699b8f5e1c2bc"
+  },
+  "cyclic_network_project/audits/phase1_checks.md": {
+    "bytes": 2479,
+    "sha256": "9dc478fb622ee67cdf8854d3b86f913b99de2567f97949167fd27557ddace445"
+  },
+  "cyclic_network_project/audits/phase1_source_manifest.md": {
+    "bytes": 2529,
+    "sha256": "5e7bf9018322bc913e5e46f42f6d10391a743b9a7ec60f8c6fd2ddb239668011"
+  },
+  "cyclic_network_project/audits/phase1b_checks.md": {
+    "bytes": 2322,
+    "sha256": "86445d0f61b01ccbe85c0740882e5b61b4964e2003c7f9329c84117a297af929"
+  },
+  "cyclic_network_project/audits/phase1b_search_log.md": {
+    "bytes": 7387,
+    "sha256": "fe70470f1f51ad458014b6c5c45546ea2cac1de75645fe5720a124d76555268e"
+  },
+  "cyclic_network_project/audits/phase1c_access_log.md": {
+    "bytes": 7271,
+    "sha256": "292d59ff23673c54466f6cca44f85329b601ef3c6f6e1e352509bf30fd9c0236"
+  },
+  "cyclic_network_project/audits/phase1c_checks.md": {
+    "bytes": 2735,
+    "sha256": "cf73d73c015e70364702e21ad564a348597d0eab084e5bbcd78a740baa7520e9"
+  },
+  "cyclic_network_project/claim_registry.md": {
+    "bytes": 103815,
+    "sha256": "c8872e968ce49ba971f6b95848d1fb7fd18f33ab2e6e25a9b1cbb1d28c2af608"
+  },
+  "cyclic_network_project/final_novelty_verdict.md": {
+    "bytes": 6511,
+    "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea"
+  },
+  "cyclic_network_project/frozen_theorem_package.md": {
+    "bytes": 9729,
+    "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63"
+  },
+  "cyclic_network_project/literature_audit_compendium.tex": {
+    "bytes": 975,
+    "sha256": "6edbeb22111434e6acc5799ef0f396957138adee407a99aa9dfb04b3cc73a597"
+  },
+  "cyclic_network_project/novelty_decisions.md": {
+    "bytes": 19241,
+    "sha256": "8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e"
+  },
+  "cyclic_network_project/novelty_matrix.tex": {
+    "bytes": 10520,
+    "sha256": "8ee96f8a02329282289e90a529902b111f2fb88a067f68144cbbc99dbc68e257"
+  },
+  "cyclic_network_project/numerics/N01_validation_protocol.tex": {
+    "bytes": 3527,
+    "sha256": "a9325a19bcf8d6fc469084b04ad491ada6368fd2889c1607d7ff39c7a90e31c8"
+  },
+  "cyclic_network_project/numerics/N02_continuation_plan.tex": {
+    "bytes": 2163,
+    "sha256": "7d7faeeb7d314f347db78eef10c83db1c1f4e8d9dee2e7dae2b8ddd84171eebe"
+  },
+  "cyclic_network_project/numerics/N03_figure_plan.tex": {
+    "bytes": 2321,
+    "sha256": "0b7dedad4ad2b03ac1ab24baed9fbb1b4aa20dcda8811af8fc9b6a7733a489ab"
+  },
+  "cyclic_network_project/open_decisions.md": {
+    "bytes": 17320,
+    "sha256": "506c634c9958d13b4d6ef4080ebe214af5fd0c77d5dc8fe6f1b91d2750ffab59"
+  },
+  "cyclic_network_project/overlap_risk_report.md": {
+    "bytes": 10994,
+    "sha256": "4e064223430e93253cfe7303cdde6e0b2238266df24af15c7255ad9700cf2645"
+  },
+  "cyclic_network_project/priority_closure_compendium.pdf": {
+    "bytes": 320203,
+    "sha256": "c242dee8c57c2bdc02395d38b0a38e4a65a9a78af6dcc47f41e3f7f2ecd32f44"
+  },
+  "cyclic_network_project/priority_closure_compendium.tex": {
+    "bytes": 859,
+    "sha256": "a89f4579ed0097c62cc934a7b9cd54a61006d7f69a805ae7c47c7e2f83de05d7"
+  },
+  "cyclic_network_project/project_manifest.md": {
+    "bytes": 118634,
+    "sha256": "cd93ebdeb815f6efcff0c46685cdacfd9cbe31e71a595f42d3ce87fbb3901bfb"
+  },
+  "cyclic_network_project/proofs/P01_wellposedness_and_absorbing_box.tex": {
+    "bytes": 22570,
+    "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e"
+  },
+  "cyclic_network_project/proofs/P02_synchronous_subspace_and_equilibria.tex": {
+    "bytes": 26905,
+    "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a"
+  },
+  "cyclic_network_project/proofs/P03_origin_and_linearization.tex": {
+    "bytes": 19857,
+    "sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e"
+  },
+  "cyclic_network_project/proofs/P04_arbitrary_nq_fourier_spectrum.tex": {
+    "bytes": 26980,
+    "sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58"
+  },
+  "cyclic_network_project/proofs/P05_q2_mode_selection.tex": {
+    "bytes": 28334,
+    "sha256": "054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd"
+  },
+  "cyclic_network_project/proofs/P06_large_n_limit.tex": {
+    "bytes": 1474,
+    "sha256": "4a8b78fde665a7ecd0756dc1c069b2d771c855c795394724f13bd9ef47d3c2c8"
+  },
+  "cyclic_network_project/proofs/P07_five_node_specialization.tex": {
+    "bytes": 24180,
+    "sha256": "fc10d257e8126b79a56cc7dd4c55b14b0266e250cbe40dbecb6c6a18658d09de"
+  },
+  "cyclic_network_project/proofs/P08_matched_bilinear_analysis.tex": {
+    "bytes": 40836,
+    "sha256": "81d273f0bad1714d2470e9fc826f0819e9dde367a9c42633705a275b404e5454"
+  },
+  "cyclic_network_project/proofs/P09_transcritical_bifurcation.tex": {
+    "bytes": 1766,
+    "sha256": "88206eb14c1774c115266971356a67f7f605860a0b5331fc093a98a413dad83e"
+  },
+  "cyclic_network_project/proofs/P10_saddle_node_and_bistability.tex": {
+    "bytes": 1848,
+    "sha256": "8b1f22e468497860e789fe8e63a184d430860e1db373be788080b2f344e4041a"
+  },
+  "cyclic_network_project/proofs/P11_hopf_spectral_conditions.tex": {
+    "bytes": 1899,
+    "sha256": "52318b7b346218a13d8145a3626a62540e5cfcccd195c49c619b1862a3f0ea3c"
+  },
+  "cyclic_network_project/proofs/P12_hopf_transversality.tex": {
+    "bytes": 1613,
+    "sha256": "cdda4e10f227b5377357bf2bc90418e1782466b50d44f2a272d9846dbc37fe71"
+  },
+  "cyclic_network_project/proofs/P13_first_lyapunov_coefficient.tex": {
+    "bytes": 2125,
+    "sha256": "7afce8dd8da7c7987422f4e66a968a27d18d139da6902dba7fdde3a6942e4f9b"
+  },
+  "cyclic_network_project/proofs/P14_rotating_waves.tex": {
+    "bytes": 1758,
+    "sha256": "654eb8c9e1940e4275a05e4293f58914046e250bd1964f57389c5152540c27ac"
+  },
+  "cyclic_network_project/proofs/P15_heterogeneous_equilibrium_persistence.tex": {
+    "bytes": 1947,
+    "sha256": "4aeac754428335b4400ec92f6b6e2426ea148c0666250301c3018c4960f0afde"
+  },
+  "cyclic_network_project/proofs/P16_static_sensitivity_and_green_function.tex": {
+    "bytes": 1893,
+    "sha256": "83d7921957c41c369a41646cbb647922218f0a5e7e41d46a2f02e9f1ab5d52aa"
+  },
+  "cyclic_network_project/proofs/P17_transient_and_harmonic_response.tex": {
+    "bytes": 1973,
+    "sha256": "effd42c3ec9d86b1679a04339c244710d99eca6303900f64768f1cd4a1e477e6"
+  },
+  "cyclic_network_project/proofs/P18_stability_radius_and_hopf_shift.tex": {
+    "bytes": 2158,
+    "sha256": "9a3c945becf5e05a00be015363e7da53660d0ed76a1115d41ea69bf8441a4d7e"
+  },
+  "cyclic_network_project/proofs_compendium.pdf": {
+    "bytes": 746731,
+    "sha256": "afa03f5bec8492ea830f70db73c0c0b886065b399aacc6c213cd049932b00f0e"
+  },
+  "cyclic_network_project/proofs_compendium.tex": {
+    "bytes": 8203,
+    "sha256": "5e22c6009213591d69e5fac2ae44e967819ac6c2670521e942edbcfd94113573"
+  },
+  "cyclic_network_project/references.bib": {
+    "bytes": 14354,
+    "sha256": "2004d266d475e78d58b4932631165f8ef0ef9af5efcbddde69447bd62e1c271a"
+  },
+  "cyclic_network_project/revised_novelty_matrix.tex": {
+    "bytes": 12488,
+    "sha256": "5b18afcc60111f910c7f36ad2db7605e74ad4e1bd64fbc955b7c8332048e8f1c"
+  },
+  "cyclic_network_project/shared_macros.tex": {
+    "bytes": 1281,
+    "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad"
+  }
+}

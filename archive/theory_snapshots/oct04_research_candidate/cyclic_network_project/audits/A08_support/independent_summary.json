@@ -1,0 +1,30 @@
+{
+  "method": "Independent reconstruction; Fraction exact arithmetic, Decimal 80-digit trigonometry, NumPy direct original-field checks. Not interval certificates.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "precision": 80,
+  "counts": {
+    "universal_witness": 42,
+    "ordered_pairs": 2665,
+    "reverse_family": 12,
+    "lower_family": 32,
+    "MB_strict_cells": 307,
+    "MB_ties": 265,
+    "collision_nq": 104
+  },
+  "stats": {
+    "checks": 25999,
+    "largest_scaled_residual": "6.7113289731764591441606322102400647289727188905155477059294319601463769885238422E-80"
+  },
+  "total_equilibrium_cases": 2760,
+  "exact_rational_witnesses": 9,
+  "direct_matrix_cases": 208,
+  "maximum_cases": 312,
+  "random_tuples": 84000,
+  "random_branch_cases": 40436,
+  "random_MB_stable_unique_cases": 15741,
+  "random_MB_stable_lower_cases": 0,
+  "counterexamples": 0,
+  "max_Fourier_error": 4.715345038891386e-15,
+  "max_eigenvalue_set_error": 7.424990231746395e-15
+}

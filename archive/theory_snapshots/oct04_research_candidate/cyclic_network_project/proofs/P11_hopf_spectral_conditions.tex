@@ -1,0 +1,627 @@
+% STATUS: VERIFIED / AUDITED
+% AUDIT FILE: audits/A11_hopf_spectral_conditions.tex
+% AUDIT VERDICT: VERIFIED
+% LAYER VERDICTS: general frequency/strict candidate VERIFIED;
+%   simplicity/eigenvector/resolvent VERIFIED; candidate surface VERIFIED;
+%   realizability criterion VERIFIED; five-node candidate VERIFIED;
+%   scope/P12-P13 handoff VERIFIED; OVERALL VERIFIED.
+% REQUIRED CORRECTIONS: NONE; no mathematical or wording correction.
+% AUDITED VERSION: P11 v1.0; 2026-10-03; 25914 bytes; 600 lines.
+% AUDITED FULL-FILE SHA-256:
+%   4be8e9b1e64c022b635f3cca9f7f49ffbc5358a2250dda1715cb60e82d9b073b
+% AUDITED MATHEMATICAL-BODY SHA-256:
+%   faa2341cc2dce31b00f093aca4c33566d02b261dbd8211ed602c0ce29f837fce
+% CLOSURE DATE: 2026-10-04
+% CURRENT VERSION: P11 v1.1; metadata-only closure; no mathematical revision.
+% CURRENT FULL-FILE HASH: recorded separately in project_manifest.md and
+%   audit_closure_report.txt to avoid a self-referential full-file hash.
+% CURRENT MATHEMATICAL-BODY SHA-256:
+%   faa2341cc2dce31b00f093aca4c33566d02b261dbd8211ed602c0ce29f837fce
+% BODY HASH SCOPE: bytes from first line-anchored section command through EOF.
+% PRESERVATION: mathematical body byte-identical to exact audited v1.0.
+% STATUS NOTE: historical DRAFT/audit-pending body prose is preserved;
+%   this header and the current manifest govern lifecycle status.
+% VALIDATION PROVENANCE: A11 reconstructed the mathematics analytically
+%   and supplied independent exact/finite corroboration. Developer validation
+%   was authenticated/inventoried, not rerun or used as proof.
+% PLANNING: clarification accepted in open_decisions.md; original proposal
+%   and all frozen documents unchanged; recommendation separate from verdict.
+% DOWNSTREAM: P12 CLEARED TO BEGIN, but not begun by this closure.
+% DEPENDS ON: P02, P04, P05 VERIFIED / AUDITED
+% CONDITIONAL SPECIALIZATION INPUT: P07 VERIFIED / AUDITED
+% MODEL: canonical DM, q=2
+% ROLE: Hopf spectral conditions and spectral simplicity
+% FIVE-NODE CANDIDATE: n=5, q=2
+% NUMERICAL DEPENDENCIES: none
+% NEXT DEPENDENCY: P12
+% LATER DEPENDENCIES: P13, P14
+% EXCLUSIONS: no transversality, no Lyapunov coefficient, no Hopf theorem,
+%             no periodic branch, no rotating-wave theorem
+% CONTRACT: 00_canonical_model.tex; 01_notation_and_assumptions.tex;
+%           shared_macros.tex. P03 inherited through P04; no new DAG edge.
+% CLAIMS: C072 and spectral part of C074; P11-D1--P11-D8.
+% C073: archived numerical candidate remains unreproduced and unpromoted.
+% BASELINE: complete authenticated cyclic_network_project_P10_audited.zip.
+
+\section{P11: Hopf spectral conditions and spectral simplicity}
+\label{sec:P11}
+\noindent\textbf{Status: DRAFT; independent A11 audit pending.}
+We prove spectral assertions for the canonical demand-modulated model at
+positive synchrony. Direct inputs are P02, P04 and P05; P07 is used only
+for the five-node specialization. P03's coefficients are inherited through
+P04. P08--P10 and P12 or later results supply no mathematical premise.
+In particular, an imaginary pair here is only a \emph{spectral Hopf
+candidate}. No parameter crossing, nonlinear nondegeneracy, periodic
+orbit or propagation theorem is asserted. The physical path is frozen for
+P12 without differentiating along it. The optional realizability result
+below concerns spectral boundaries, not first instability.
+
+\subsection{Setting, representative classes and frequency}
+\label{slot:P11-1}
+Fix $q=2$, $n\ge5$, $a,k,c,g,h>0$, and a specified positive synchronous
+equilibrium $x^*\one$. Set
+\begin{equation}
+ s=1+x^*,\qquad C=\frac cs>0,\qquad
+ G=\frac{gx^*}{s^2}>0,\qquad H=hx^*>0.
+ \label{eq:P11-effective}
+\end{equation}
+Use P04's verified spectrum and unitary diagonalization:
+\begin{align}
+ \lambda_m&=d+Ce^{-\ii\theta_m}+Ge^{2\ii\theta_m}
+                       -He^{-2\ii\theta_m},\quad \theta_m=2\pi m/n,
+                       \label{eq:P11-input}\\
+ r_m&=d+C\cos\theta_m+(G-H)\cos2\theta_m,\nonumber\\
+ \omega_m&=-C\sin\theta_m+(G+H)\sin2\theta_m,\nonumber\\
+ J&=\Fourier\diag(\lambda_m)\Fourier^*,\qquad
+ \lambda_{n-m}=\overline{\lambda_m}\quad(1\le m<n).\nonumber
+\end{align}
+Here $J=DF^{\DM}(x^*\one)$; $\omega_m$ is a signed imaginary part.
+The reserved positive frequency is chosen separately when needed.
+
+Let $N=\lfloor n/2\rfloor$, $u_j=\cos(2\pi j/n)$ and
+$L_j$ be P05's representative label classes: $L_0=\{0\}$,
+$L_N=\{n/2\}$ if $n$ is even, and otherwise
+$L_j=\{j,n-j\}$. Write
+\[
+ \mathcal S=\argmax_{0\le j\le N}r_j
+\]
+for the \emph{complete} selected representative set, including every tie.
+The selected Fourier labels are $\bigcup_{j\in\mathcal S}L_j$.
+This notation distinguishes $\mathcal S$ from the scalar $G+H$.
+
+\begin{lemma}[Reachable nonuniform representatives are genuine pairs]
+\label{lem:P11-pairs}
+Every reachable nonuniform representative satisfies
+$1\le j\le j_{\max}:=\lfloor(n+1)/4\rfloor<n/2$.
+Consequently $0<\theta_j<\pi$, $\sin\theta_j>0$, and
+$L_j=\{j,n-j\}$ has two different labels. No even-$n$ Nyquist
+singleton is included.
+\end{lemma}
+\begin{proof}
+P05 Theorem~\ref{thm:P05-reachable} supplies the reachable list.
+Since $(n+1)/4<n/2$ for $n>1$, its nonzero members satisfy the
+claimed strict bounds. The angle and sine statements follow.
+This counts Fourier labels only, not numerical eigenvalue multiplicities.
+\end{proof}
+
+\begin{proposition}[Exact signed frequency and its zero locus]
+\label{prop:P11-frequency}
+For any genuine nonuniform pair representative $0<j<n/2$,
+\begin{equation}
+ \boxed{\omega_j=\sin\theta_j\,[2(G+H)u_j-C].}
+ \label{eq:P11-frequency}
+\end{equation}
+Thus $\omega_j=0$ if and only if $2(G+H)u_j=C$.
+If $u_j\le0$, then $\omega_j<0$ automatically. If $u_j>0$,
+the zero-frequency locus is exactly
+\begin{equation}
+ G+H=\frac{C}{2u_j}.
+ \label{eq:P11-zero-frequency}
+\end{equation}
+For positive $u_j$ the sign of $\omega_j$ is the sign of
+$G+H-C/(2u_j)$. These are spectral statements, not bifurcation classifications.
+\end{proposition}
+\begin{proof}
+Insert $\sin2\theta_j=2\sin\theta_j\cos\theta_j$ in
+\eqref{eq:P11-input}. The factor $\sin\theta_j$ is strictly positive.
+If $u_j\le0$, the bracket is at most $-C<0$; otherwise divide by
+$2u_j>0$. The Nyquist singleton is outside the proposition's scope.
+\end{proof}
+
+\subsection{Strict candidates, simplicity and the stable complement}
+\label{slot:P11-2}
+\begin{definition}[Strict nonuniform spectral Hopf candidate]
+\label{def:P11-candidate}
+A positive synchronous equilibrium of the canonical $q=2$ model is a
+\emph{strict nonuniform spectral Hopf candidate in representative $j$}
+if $j\ne0$, $\mathcal S=\{j\}$, $r_j=0$, and $\omega_j\ne0$.
+Uniqueness refers to representatives and includes the exclusion of all
+maximal ties. This definition does not assert a Hopf bifurcation.
+\end{definition}
+
+\begin{theorem}[General strict spectral criterion]
+\label{thm:P11-strict}
+At a strict candidate, the entire imaginary-axis spectrum is exactly
+\begin{equation}
+ \lambda_j=\ii\omega_j,\qquad
+ \lambda_{n-j}=-\ii\omega_j,\qquad \omega_j\ne0.
+ \label{eq:P11-critical-pair}
+\end{equation}
+Each value is algebraically and geometrically simple over $\C$ and the
+two values are distinct. Every other Fourier label has $r_\ell<0$.
+The number
+\begin{equation}
+ \eta=-\max_{\ell\notin L_j}r_\ell
+ \label{eq:P11-gap}
+\end{equation}
+is strictly positive, and all noncritical eigenvalues satisfy
+$\Ree\lambda_\ell\le-\eta$. The real critical space has dimension
+two and its real invariant complement has dimension $n-2$.
+Moreover
+\begin{equation}
+ 0,\ 2\ii\omega_j\notin\spec(J),\qquad
+ J^{-1}\ \hbox{and}\ (2\ii\omega_j I-J)^{-1}\ \hbox{exist}.
+ \label{eq:P11-resolvent-gates}
+\end{equation}
+\end{theorem}
+\begin{proof}
+P05 reachability and Lemma~\ref{lem:P11-pairs} give two distinct
+labels. P04 conjugacy proves \eqref{eq:P11-critical-pair}.
+For each other representative $t$, complete strict selection gives
+$r_t<r_j=0$: equality would place $t$ in $\mathcal S$.
+Every remaining Fourier label belongs to one of those other classes,
+so every remaining real part is negative, including the uniform label
+and any Nyquist label.
+
+If another label outside $L_j$ produced $\lambda_j$, it would have
+real part zero, contradicting that strict inequality. The other label
+$n-j$ cannot produce $\lambda_j$ either, since $\omega_j\ne0$.
+Thus precisely one label produces $\lambda_j$, and the same argument
+applies to $\lambda_{n-j}$. P04
+Proposition~\ref{prop:P04-multiplicity} equates both complex
+multiplicities with the number of coincident labels. This proves
+simplicity, rather than inferring it merely from the Fourier basis.
+The real plane and complement follow from the conjugate Fourier
+spaces; an explicit orthonormal real basis is given below.
+
+There are $n-2\ge3$ noncritical labels, a nonempty finite set with
+strictly negative real parts. Its maximum is negative, proving
+$\eta>0$ and the claimed bound. Neither zero nor $2\ii\omega_j$
+can equal a noncritical eigenvalue because their real parts are zero.
+Neither equals $\pm\ii\omega_j$: the first exclusion uses
+$\omega_j\ne0$, and the second would require $2=1$ or $2=-1$
+after division by $\ii\omega_j$. This proves both inverse gates.
+\end{proof}
+
+\begin{proposition}[Exact real and adjoint normalization]
+\label{prop:P11-vectors}
+At the strict candidate, choose
+\begin{equation}
+ v_H=v^{(j)},\qquad p_H=v_H,\qquad
+ e_c=\sqrt2\,\Ree v_H,\quad e_s=\sqrt2\,\Imm v_H.
+ \label{eq:P11-vectors}
+\end{equation}
+Under the project's Hermitian pairing $\inner{p}{v}=p^*v$,
+\begin{equation}
+ Jv_H=\ii\omega_jv_H,\qquad
+ J^*p_H=-\ii\omega_jp_H,\qquad \inner{p_H}{v_H}=1.
+ \label{eq:P11-adjoint}
+\end{equation}
+The real vectors $e_c,e_s$ are orthonormal and span the real critical
+plane. In the ordered basis $(e_c,e_s)$ the matrix is
+\begin{equation}
+ \left.J\right|_{\rm crit}=
+ \begin{pmatrix}0&\omega_j\\-\omega_j&0\end{pmatrix}.
+ \label{eq:P11-real-block}
+\end{equation}
+In its coefficient plane the signed angular velocity is $-\omega_j$.
+\end{proposition}
+\begin{proof}
+P04 gives $J=\Fourier\Lambda\Fourier^*$, hence
+$J^*=\Fourier\overline\Lambda\Fourier^*$. The same normalized
+Fourier column therefore solves the opposite-sign adjoint equation.
+This agrees with Section~\ref{sec:notation}, including conjugate
+linearity in the first argument.
+
+Write $v_H=A+\ii B$ with real vectors $A,B$.
+The columns $v_H$ and $\overline{v_H}=v^{(n-j)}$ are orthogonal
+and each has norm one. Thus $v_H^{\mathsf T}v_H=0$ and
+$v_H^*v_H=1$, giving
+$\|A\|^2=\|B\|^2=1/2$ and $A^{\mathsf T}B=0$.
+Every real vector in the complex critical span is a real linear
+combination of $A,B$, proving the plane assertion. Taking real and
+imaginary parts of $J(A+\ii B)=\ii\omega_j(A+\ii B)$ gives
+$Je_c=-\omega_j e_s$ and $Je_s=\omega_j e_c$, which are the
+columns of \eqref{eq:P11-real-block}. For coefficients $(z_c,z_s)$,
+$\dot z_c=\omega_jz_s$ and $\dot z_s=-\omega_jz_c$.
+This is a linear orientation statement only. If $\omega_j<0$, one
+may instead choose label $n-j$ to obtain the positive frequency
+$|\omega_j|$; here the signed representative convention is retained.
+\end{proof}
+
+\begin{remark}[Ties and zero frequency are excluded separately]
+\label{rem:P11-degeneracies}
+If two different representative classes have $r_j=r_t=0$, their
+labels give additional imaginary-axis values or larger multiplicities.
+Either possibility fails the single-simple-pair-with-stable-complement
+hypothesis. A tie of real parts alone is not equality of numerical
+eigenvalues. In particular choosing one member of a maximal tie does
+not satisfy Definition~\ref{def:P11-candidate}.
+
+If a genuine pair has $r_j=\omega_j=0$, both labels produce the
+same real zero eigenvalue. P04 makes it semisimple, with complex
+algebraic and geometric multiplicity exactly
+$|\{m:\lambda_m=0\}|\ge2$. Under strict selection of that
+representative its multiplicity is exactly two and its real kernel
+has dimension two. Without strict selection other zero labels must
+also be counted. This is ineligible for the simple Hopf package.
+No named multiple-criticality or steady-state bifurcation is classified.
+The two-dimensional real plane in Theorem~\ref{thm:P11-strict}, by
+contrast, corresponds to two distinct simple complex eigenvalues.
+\end{remark}
+
+\subsection{Regular spectral surfaces and physical admissibility}
+Fix a reachable nonuniform representative $1\le j\le j_{\max}$
+throughout this subsection, so $0<\theta_j<\pi$.
+Use P02's nonzero equilibrium equation in branch coordinates:
+\begin{equation}
+ a=(k+h)x-\frac{c-g}{1+x}>0,\qquad x,k,c,g,h>0.
+ \label{eq:P11-chart}
+\end{equation}
+This is exactly P05's open chart domain $\mathcal U_{\rm eq}$.
+Combining P04's diagonal coefficient with the equilibrium equation gives
+\[
+ d=a-2kx-\frac{cx}{(1+x)^2}-\frac g{1+x}-hx
+   =-kx-\frac{c(1+2x)}{(1+x)^2}.
+\]
+For fixed representative $j$, put $v_j=\cos2\theta_j=2u_j^2-1$;
+this scalar $v_j$ is not a Fourier vector $v^{(j)}$. Define
+\begin{equation}
+ \begin{split}
+ R_j(x,k,c,g,h)={}&-kx-\frac{c(1+2x)}{(1+x)^2}
+                 +\frac{c}{1+x}u_j\\
+                &+x\left(\frac{g}{(1+x)^2}-h\right)v_j.
+ \end{split}
+ \label{eq:P11-R}
+\end{equation}
+Substitution in P04's real dispersion shows exactly $R_j=r_j$.
+
+\begin{proposition}[Regular spectral boundary and excluded frequency locus]
+\label{prop:P11-surface}
+At fixed $x,c,g,h$,
+\begin{equation}
+ \frac{\partial R_j}{\partial k}=-x<0,
+ \qquad
+ k_H=\frac1x\left[-\frac{c(1+2x)}{(1+x)^2}
+       +\frac{c}{1+x}u_j
+       +x\left(\frac{g}{(1+x)^2}-h\right)v_j\right].
+ \label{eq:P11-kH}
+\end{equation}
+Thus $R_j=0$ is a regular codimension-one level set wherever it
+meets $\mathcal U_{\rm eq}$, explicitly the graph $k=k_H$.
+A physical point requires $k_H>0$ and
+$a_H=(k_H+h)x-(c-g)/(1+x)>0$. Within a strict nonuniform
+P05 cell, the portions with $\omega_j\ne0$ are strict candidates,
+and this regular surface transfers locally to physical parameter space
+along the specified positive branch.
+
+For $u_j>0$, any nonempty intersection $R_j=\omega_j=0$ is
+locally a regular codimension-two level set in branch coordinates.
+It is codimension one inside $R_j=0$. The same statement transfers
+to physical parameters wherever P05's concave-chart hypotheses hold.
+For $u_j\le0$ this intersection is empty.
+\end{proposition}
+\begin{proof}
+In \eqref{eq:P11-R} only $-kx$ depends on $k$, proving the
+partial derivative and every sign in the solved formula. Strict
+selection and $\omega_j\ne0$ are open conditions.
+P05 Theorem~\ref{thm:P05-selection} implies $H-G>0$ at any
+nonuniform selected representative. On precisely this concave part
+of the positive chart, P05 supplies
+\[
+ \Phi(x,k,c,g,h)=(a,k,c,g,h),\qquad
+ \det D\Phi=k+h+\frac{c-g}{(1+x)^2}
+     =k+\left(h-\frac{g}{(1+x)^2}\right)
+         +\frac{c}{(1+x)^2}>0.
+\]
+Its local diffeomorphism therefore transfers the regular level set.
+No global injectivity or topology after forgetting the branch is claimed.
+The derivative $\partial_k R_j$ holds $x,c,g,h$ fixed and lets $a$
+follow \eqref{eq:P11-chart}; it is not a derivative along the later
+fixed-$a$ continuation path.
+
+For the additional frequency equation, at fixed branch coordinates
+\[
+ \partial_k\omega_j=0,\qquad
+ \partial_g\omega_j=\frac{2xu_j\sin\theta_j}{(1+x)^2}>0
+ \quad(u_j>0).
+\]
+The Jacobian of $(R_j,\omega_j)$ in columns $(k,g)$ has determinant
+$-2x^2u_j\sin\theta_j/(1+x)^2\ne0$. The regular level set theorem
+proves the local codimension assertion, conditional on existence and
+physical positivity; the local diffeomorphism applies under the same
+concavity hypotheses just stated. Proposition~\ref{prop:P11-frequency}
+excludes all $u_j\le0$ intersections. No unfolding is inferred.
+\end{proof}
+
+\begin{proposition}[Exact obstruction and cell realizability criterion]
+\label{prop:P11-realizability}
+Fix a reachable nonuniform representative $1\le j\le j_{\max}$.
+Let $\beta_j=(u_j+u_{j+1})/2$ be P05's midpoint, and put
+\begin{equation}
+ w_j=1-2u_j^2,\quad L_j^{\rm vert}=\max(0,\beta_j),\qquad
+ B_j=\frac{w_j}{4(1-u_j)}.
+ \label{eq:P11-realizability-data}
+\end{equation}
+Its strict P05 cell contains a physical strict spectral Hopf candidate
+if and only if
+\begin{equation}
+ \boxed{w_j>0\quad\hbox{and}\quad L_j^{\rm vert}<B_j.}
+ \label{eq:P11-realizability-test}
+\end{equation}
+More precisely, for a prescribed positive vertex
+$z=C/[4(H-G)]$ in that strict cell and prescribed $x>0$, such a
+candidate can be realized by some positive physical coefficients if
+and only if
+\begin{equation}
+ \frac{w_j}{4z}>1-u_j+\frac{x}{1+x}.
+ \label{eq:P11-fixed-vertex}
+\end{equation}
+Consequently not every reachable nonuniform cell supports a candidate.
+For example $n=8,j=1$ has $w_j=0$ and never reaches $r_j=0$.
+For $n=12,j=2$, $u_j=1/2$, $L_j^{\rm vert}=B_j=1/4$;
+this cell also has no physical candidate despite $w_j>0$.
+\end{proposition}
+\begin{proof}
+Write $D_c=H-G>0$ and $C=c/(1+x)$ within the selected cell.
+At a candidate, \eqref{eq:P11-R} reads
+\begin{equation}
+ kx=D_cw_j-C\left(1-u_j+\frac{x}{1+x}\right),\qquad
+ \frac{kx}{C}=\frac{w_j}{4z}-\left(1-u_j+\frac{x}{1+x}\right).
+ \label{eq:P11-k-obstruction}
+\end{equation}
+Because $k,x,C>0$ and $u_j<1$, this forces $w_j>0$ and
+\eqref{eq:P11-fixed-vertex}. It further forces $z<B_j$.
+P05's strict cell is
+$L_j^{\rm vert}<z<\beta_{j-1}$, where $\beta_{j-1}>0$;
+$\beta_j$ exists since $j_{\max}<N$. Thus necessity of
+\eqref{eq:P11-realizability-test} follows.
+
+Conversely, if \eqref{eq:P11-realizability-test} holds, choose
+\[
+ L_j^{\rm vert}<z<\min(\beta_{j-1},B_j).
+\]
+Both upper bounds exceed the lower bound. Choose $x>0$ sufficiently
+small that \eqref{eq:P11-fixed-vertex} holds. For fixed $x,z$
+satisfying that inequality, the following construction proves the more
+precise sufficiency as well. Choose any $C>0$, set $D_c=C/(4z)$,
+and define $k>0$ by \eqref{eq:P11-k-obstruction}. For a free $G>0$,
+set
+\begin{equation}
+ c=C(1+x),\qquad g=\frac{G(1+x)^2}{x},\qquad
+ h=\frac{G+D_c}{x},\qquad
+ a=kx+D_c-C+G\left(1+\frac{1+x}{x}\right).
+ \label{eq:P11-realization}
+\end{equation}
+These equations give $H-G=D_c$ and exactly
+$a=(k+h)x-(c-g)/(1+x)$. Increasing $G$ makes $a>0$
+without changing $z$, $k$ or $r_j=0$. The signed frequency bracket
+is $2(D_c+2G)u_j-C$. For $u_j\le0$ it is automatically negative;
+for $u_j>0$ it vanishes for at most one $G$, which can be avoided
+while retaining positivity. Hence a strict candidate is obtained.
+The two examples follow by exact substitution of their cosines and
+midpoints. They also show why P05's realization of dominance alone
+cannot imply realization of a spectral boundary.
+\end{proof}
+
+\subsection{An exact five-node physical candidate}
+Use the verified P07 constants and spectra, without a new P07 derivation:
+\[
+ \phi=\frac{1+\sqrt5}{2},\quad
+ \sigma=\frac{\sqrt{10-2\sqrt5}}4>0,\quad
+ u_1=\frac1{2\phi},\quad u_2=-\frac\phi2.
+\]
+P07 shows that $\{1,4\}$ is the only potentially dominant nonuniform
+pair and that $\omega_1=\sigma[(G+H)-\phi C]$.
+
+\begin{theorem}[Exact five-node spectral Hopf candidate]
+\label{thm:P11-five}
+For $n=5,q=2$ set
+\begin{equation}
+ \begin{gathered}
+ x_H=1,\quad c=2,\quad g_H=16,\quad h=6,\\
+ k_H=\frac{3\phi-4}{2}=\frac{3\sqrt5-5}{4},\qquad
+ a_H=\frac{3\phi+22}{2}=\frac{47+3\sqrt5}{4}.
+ \end{gathered}
+ \label{eq:P11-tuple}
+\end{equation}
+This is a positive physical tuple with a positive synchronous equilibrium
+$x_H\one$. It is a strict spectral candidate in representative $1$.
+Its full labeled spectrum is
+\begin{align}
+ \lambda_0&=-\frac{3\phi+1}{2},\label{eq:P11-five-spectrum}\\
+ \lambda_1&=\ii\omega_H,\qquad \lambda_4=-\ii\omega_H,
+       &\omega_H&=\sigma(10-\phi)>0,\nonumber\\
+ \lambda_2&=-\frac{3\sqrt5}{2}-\ii\sigma(1+10\phi),
+       &\lambda_3&=\overline{\lambda_2}.\nonumber
+\end{align}
+The critical values are each algebraically and geometrically simple.
+The ordering is $r_1=0>r_0>r_2$, with exact noncritical gap
+\begin{equation}
+ \eta_H=\frac{3\phi+1}{2}>0.
+ \label{eq:P11-five-gap}
+\end{equation}
+The equilibrium is the upper of two distinct positive synchronous roots.
+The other root is
+\begin{equation}
+ x_- =\frac{3(2-\phi)}{3\phi+8}\in(0,1).
+ \label{eq:P11-lower-root}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Since $5/3<\sqrt5<3$, $k_H>0$ and $a_H>0$;
+the remaining three coefficients are positive. In the original
+canonical field, each component at $\one$ is exactly
+\[
+ F_i^{\DM}(\one)=a_H-k_H+\frac22-\frac{16}2-6
+     =a_H-k_H-13=0.
+\]
+This verifies the original model residual before using any spectral data.
+Direct substitution gives
+\begin{equation}
+ \begin{gathered}
+ s=2,\quad C=1,\quad G=4,\quad H=6,\quad T=G-H=-2,\quad S=G+H=10,\\
+ d=-k_H-\frac32=\frac{1-3\phi}{2}.
+ \end{gathered}
+ \label{eq:P11-five-effective}
+\end{equation}
+The raw P04 expression independently gives
+$d=a_H-2k_H-1/2-8-6=-k_H-3/2$.
+P07's exact real-part formulas now yield
+\begin{align*}
+ r_1&=\frac{1-3\phi}{2}+\frac{1}{2\phi}+\phi=0,\\
+ r_0&=\frac{1-3\phi}{2}+1-2=-\frac{3\phi+1}{2},\\
+ r_2&=\frac{1-3\phi}{2}-\frac\phi2-\frac1\phi
+       =\frac{3-6\phi}{2}=-\frac{3\sqrt5}{2}.
+\end{align*}
+Here $\phi^{-1}=\phi-1$ and $2\phi-1=\sqrt5$.
+Their noncritical difference is
+$r_0-r_2=(3\phi-4)/2=k_H>0$. Equivalently,
+$-\phi^2<-2<-\phi^{-2}$, so P07's full ordering table gives
+the same strict ordering. In particular pair $\{2,3\}$ is excluded.
+
+For the imaginary parts, P07 gives
+$\omega_1=\sigma(10-\phi)$ and
+$\omega_2=-\sigma(1+10\phi)$. The exact bounds $1<\phi<2$
+imply $10-\phi>8>0$, so the critical frequency is nonzero without
+decimal evidence. P04 conjugacy fixes the signs at labels $4,3$.
+This proves every entry of \eqref{eq:P11-five-spectrum}.
+The general theorem proves simplicity and the inverse gates, and the
+strict noncritical ordering gives \eqref{eq:P11-five-gap}.
+
+For the branch identification, use only P02's abbreviations and polynomial:
+\begin{equation}
+ A=k_H+h=\frac{3\phi+8}{2},\quad b=a_H-A=7,\quad
+ \mu=a_H+2-16=\frac{3\phi-6}{2}<0.
+ \label{eq:P11-branch-data}
+\end{equation}
+Because $1$ is a root and $A-b=\mu$, that polynomial factors as
+\[
+ Q(X)=AX^2-bX-\mu=A(X-1)(X-x_-),\qquad x_-=-\mu/A.
+\]
+The displayed $x_-$ is positive because $\phi<2$, and is less than
+one since $3(2-\phi)<3\phi+8$. Thus the discriminant is
+$A^2(1-x_-)^2>0$. Together with $b>0$ and $\mu<0$ this checks
+P02's two-positive-root regime fully; those two signs alone would
+not suffice without the positive discriminant. The larger root is
+exactly $x_H=1$. No P10 theorem is used.
+\end{proof}
+
+\subsection{Frozen continuation path and exact spectral data}
+\label{slot:P11-3}
+\begin{proposition}[Local branch, path, vectors and resolvents for P12/P13]
+\label{prop:P11-data}
+Hold $a=a_H,k=k_H,c=2,h=6$ fixed and freeze the physical path
+\begin{equation}
+ \boxed{\pi(g)=(a_H,k_H,2,g,6),\qquad g_H=16.}
+ \label{eq:P11-path}
+\end{equation}
+There is a neighborhood of $16$ with a unique smooth positive
+synchronous root near $1$, denoted $x_+(g)$, with $x_+(16)=1$.
+It continues the upper root. With the project's node ordering $0,\ldots,4$,
+\begin{equation}
+ \begin{gathered}
+ v_H=\frac1{\sqrt5}(1,e^{2\pi\ii/5},e^{4\pi\ii/5},
+                         e^{6\pi\ii/5},e^{8\pi\ii/5})^{\mathsf T},\\
+ p_H=v_H,\qquad \overline{v_H}=v^{(4)},\qquad
+ J_Hv_H=\ii\omega_Hv_H,\quad J_H^*p_H=-\ii\omega_Hp_H,
+ \quad p_H^*v_H=1.
+ \end{gathered}
+ \label{eq:P11-five-vectors}
+\end{equation}
+The real orthonormal basis $e_c=\sqrt2\Ree v_H$,
+$e_s=\sqrt2\Imm v_H$ has block
+$\left(\begin{smallmatrix}0&\omega_H\\-\omega_H&0\end{smallmatrix}\right)$.
+Both required inverse operators exist and are exactly
+\begin{equation}
+ \begin{split}
+ J_H^{-1}&=\sum_{m=0}^4\lambda_m^{-1}v^{(m)}v^{(m)*},\\
+ (2\ii\omega_H I-J_H)^{-1}
+   &=\sum_{m=0}^4(2\ii\omega_H-\lambda_m)^{-1}v^{(m)}v^{(m)*}.
+ \end{split}
+ \label{eq:P11-five-resolvents}
+\end{equation}
+In particular the mode-0 and mode-2 denominators useful for later work are
+\begin{equation}
+ \lambda_0=-\eta_H\ne0,\qquad
+ 2\ii\omega_H-\lambda_2
+       =\frac{3\sqrt5}{2}+\ii\sigma(21+8\phi)\ne0.
+ \label{eq:P11-denominators}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Let $B(X,g)=a_H-(k_H+6)X+(2-g)/(1+X)$.
+P02's scalar field is $f(X,g)=XB(X,g)$. P04's uniform identity
+$\lambda_0=\partial_X f$ at synchrony, together with $B(1,16)=0$,
+gives $B_X(1,16)=\lambda_0=-\eta_H<0$.
+The scalar implicit-function theorem supplies the unique smooth root
+near $1$. Positivity persists in a sufficiently small neighborhood,
+and P02's distinct roots and their strict ordering persist there, so
+this is the locally continued upper root, not uniqueness of all positive
+roots. The parameter tuple stays positive for $g$ near $16$.
+No derivative of $x_+(g)$ is calculated.
+
+Proposition~\ref{prop:P11-vectors} gives all vector identities and
+the real block with its stated sign. The spectral theorem and
+Theorem~\ref{thm:P11-strict} give the two sums, all of whose denominators
+are nonzero. Finally,
+$2(10-\phi)+(1+10\phi)=21+8\phi$ verifies the second denominator
+in \eqref{eq:P11-denominators}; its real part is positive.
+No tensor, nonlinear Fourier selection rule or Taylor-factor convention
+is required for these spectral identities.
+\end{proof}
+
+\begin{proposition}[Spectral hypothesis ledger at the five-node point]
+\label{prop:P11-ledger}
+The following is the precise P12/P13 handoff, subject to independent
+A11 audit of this DRAFT.
+\begin{enumerate}[label=H\arabic*.,leftmargin=3em]
+ \item All five physical coefficients in \eqref{eq:P11-tuple} are positive.
+ \item $x_H=1$ is an exact positive synchronous equilibrium of the original DM field.
+ \item The path varying $g$ in \eqref{eq:P11-path} has the smooth local
+       upper branch $x_+(g)$ through $x_+(16)=1$.
+ \item Labels $1,4$ give $\pm\ii\omega_H$ with $\omega_H=\sigma(10-\phi)>0$.
+ \item Each critical complex eigenvalue is algebraically and geometrically simple.
+ \item Every other eigenvalue has real part at most $-\eta_H<0$,
+       where $\eta_H=(3\phi+1)/2$.
+ \item $0\notin\spec(J_H)$.
+ \item $2\ii\omega_H\notin\spec(J_H)$.
+ \item Exact normalized right and adjoint vectors are \eqref{eq:P11-five-vectors};
+       the pairing and real-plane orientation are fixed.
+ \item Spectral transversality is \textbf{not established}; no state or
+       eigenvalue derivative along \eqref{eq:P11-path} has been computed.
+ \item The first Lyapunov coefficient and nonlinear nondegeneracy are
+       \textbf{not established}; no tensor or normal-form coefficient is computed.
+ \item No periodic orbit, periodic-branch stability or rotating wave is established.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Items H1--H2 and H4--H6 are Theorem~\ref{thm:P11-five}; H3 and
+H9 are Proposition~\ref{prop:P11-data}; H7--H8 follow from
+Theorem~\ref{thm:P11-strict}. H10--H12 explicitly delimit unproved
+later conclusions, rather than adding assumptions already certified here.
+\end{proof}
+
+\paragraph{Scope, evidence and frozen planning language.}
+The exact five-node candidate and the optional cell criterion supply
+analytic nonemptiness results, with no numerical premise. Separate
+computational checks are corroboration only. The archived decimal
+candidate C073 is not used or reproduced. B02 is fixed for this DRAFT
+to the upper branch and path \eqref{eq:P11-path}; B06 is met for these
+spectral data by exact algebra. B07's pairing and adjoint sign agree
+with the current convention, but its remaining Taylor and nonlinear
+normalization issues remain for P13. Neither a first loss along the
+path nor an open transversality/nonlinear-nondegeneracy regime has been
+proved. The accompanying \path{PROPOSED_P11_scope_clarification.md}
+records the proposed refinement of older first-crossing wording; all
+frozen planning and novelty documents remain unchanged. P12 is not begun.

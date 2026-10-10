@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{FilipskiGolubitsky2010}
+Natasha Filipski and Martin Golubitsky.
+\newblock The abelian {Hopf} {$H$ mod $K$} theorem.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 9(2):283--291, 2010.
+\newblock S22. Published PDF, Theorems 3.1 and 5.1.
+\newblock URL:
+  \url{https://www.asc.ohio-state.edu/golubitsky.4/reprintweb-0.5/output/papers/HmodK_10.pdf},
+  \href {https://doi.org/10.1137/090756582} {\path{doi:10.1137/090756582}}.
+
+\bibitem{Gray2006}
+Robert~M. Gray.
+\newblock Toeplitz and circulant matrices: A review.
+\newblock {\em Foundations and Trends in Communications and Information
+  Theory}, 2(3):155--239, 2006.
+\newblock Audit locators use author PDF printed pages; PDF position is printed
+  page plus 8.
+\newblock URL: \url{https://ee.stanford.edu/~gray/toeplitz.pdf}, \href
+  {https://doi.org/10.1561/0100000006} {\path{doi:10.1561/0100000006}}.
+
+\bibitem{PaisCaicedoLeonard2012}
+Darren Pais, Carlos~H. Caicedo-N{\'u}{\~n}ez, and Naomi~E. Leonard.
+\newblock {Hopf} bifurcations and limit cycles in evolutionary network
+  dynamics.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 11(4):1754--1784,
+  2012.
+\newblock Audit locators use the supplied 30-page author manuscript, not
+  journal pagination.
+\newblock URL:
+  \url{https://naomi.princeton.edu/wp-content/uploads/sites/744/2021/03/PaisSIADS12.pdf},
+  \href {https://doi.org/10.1137/120878537} {\path{doi:10.1137/120878537}}.
+
+\bibitem{vanKekemSterk2018}
+Dirk~L. van Kekem and Alef~E. Sterk.
+\newblock Travelling waves and their bifurcations in the {Lorenz-96} model.
+\newblock {\em Physica D: Nonlinear Phenomena}, 367:38--60, 2018.
+\newblock Audit locators use the supplied 55-page accepted manuscript dated 21
+  December 2017.
+\newblock URL: \url{https://arxiv.org/abs/1704.05442v3}, \href
+  {https://doi.org/10.1016/j.physd.2017.11.008}
+  {\path{doi:10.1016/j.physd.2017.11.008}}.
+
+\end{thebibliography}

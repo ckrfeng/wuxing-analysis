@@ -1,0 +1,20 @@
+VALIDATION — 4 October 2026
+
+PASS: Modular LaTeX/BibTeX build; final PDF has 77 pages.
+PASS: Self-contained source compiled successfully with the desktop editor.
+PASS: No unresolved references/citations, duplicate labels, LaTeX warnings
+      or overfull boxes in the final modular build.
+PASS: 409 distinct labels; every internal reference resolves.
+PASS: All 10 cited keys exist in the focused bibliography; no unused entries.
+PASS: All 76 named mathematical results retained; 75 statements identical.
+      P11 ledger change removes obsolete audit-status wording only.
+PASS: P05 realizability proof and P11 physical-realizability iff proof
+      are byte-identical to their supplied source bodies.
+PASS: Original P01–P18 hashes still match the read-only input snapshot.
+PASS: All 77 final pages rendered and reviewed in contact sheets; detailed
+      inspection of the realizability and normal-form pages. No clipping
+      or overlapping equations detected.
+
+These are editorial, source-conservation and compilation checks. They do
+not constitute an independent mathematical audit or completion of P06
+and P12–P18. Source-access limits are recorded in CITATION_VERIFICATION.txt.

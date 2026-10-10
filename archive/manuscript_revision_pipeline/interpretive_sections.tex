@@ -1,0 +1,345 @@
+\FloatBarrier
+\section{Dynamics of Lin's Model}
+\label{sec:lin-results}
+
+Our starting question was whether the five-element network could maintain
+an active balanced state after one component was disturbed. A trajectory
+that happens to remain at equilibrium does not answer this question: the
+important test is whether nearby states return to that equilibrium. We
+therefore examined both local stability and the response to initial
+perturbations. This section introduces the Lin reference model and the
+baseline tests; Section~\ref{sec:modified-results} discusses the modified
+model and the broader parameter comparisons.
+
+Throughout, ``balance'' means an equilibrium with equal positive activities
+at the five nodes. This is a convenient reference state for a model whose
+coefficients are identical across nodes. It is not an assertion that real
+organs have equal activities, or that mathematical stability alone defines
+health. The experiments below are preliminary comparisons at specified
+parameters, rather than calibrated physiological predictions.
+
+\subsection{The reference model and the meaning of balance}
+We order the nodes as Wood, Fire, Earth, Metal, and Water, and take indices
+modulo five. The predecessor $i-1$ is the mother, $i+1$ is the child,
+$i-2$ is the controller, and $i+2$ is the controlled target. In this
+ordering, the homogeneous model of Lin and Han~\cite{Lin2020} is
+\begin{equation}
+ \dot x_i=a x_i-bx_i^2+c x_i x_{i-1}-d x_i x_{i-2}
+                 -g x_i x_{i+1}-h x_i x_{i+2}.
+ \label{eq:lin-model}
+\end{equation}
+The terms describe self-growth, self-limitation, nourishment received,
+restraint received, a cost associated with the child, and a cost associated
+with the controlled target. All five activities are state variables;
+``six-term'' describes the equation, not the number of nodes.
+For positive coefficients, the positive balanced level is
+\begin{equation}
+ s_{\mathrm L}=\frac{a}{b+d+g+h-c},
+ \qquad b+d+g+h-c>0.
+ \label{eq:lin-balance}
+\end{equation}
+Existence and stability are separate questions. Equation~\eqref{eq:lin-balance}
+identifies a possible balance; it does not tell us whether the network
+returns there after a disturbance.
+
+\subsection{Can the baseline balance resist a small disturbance?}
+We first used the reference choice $(a,b,c,d,g,h)=(1,1,1,1,1,1)$,
+which gives $s_{\mathrm L}=1/3$. To test local stability, we evaluated
+the Jacobian at $s_{\mathrm L}\mathbf{1}$ and plotted its five eigenvalues.
+An eigenvalue with positive real part indicates a direction in which a
+small disturbance grows; all negative real parts imply that sufficiently
+small disturbances decay. Figure~\ref{fig:baseline-spectra} also includes
+the modified-model baseline discussed in Section~\ref{sec:modified-results}
+so that the two behaviors can be compared directly.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\linewidth]{figures/figure1.png}
+\caption{Local stability at two illustrative baselines. Lin uses
+$(a,b,c,d,g,h)=(1,1,1,1,1,1)$, with balanced level $1/3$.
+The modified model uses $(a,k,c,g,h)=(2,0.5,1,0.5,0.3)$, with balanced
+level approximately $2.670286$. The vertical line separates negative and
+positive eigenvalue real parts. The baselines are specified examples,
+not a matched test of one changed mechanism.}
+\label{fig:baseline-spectra}
+\end{figure}
+
+Two Lin eigenvalues lie to the right of the imaginary axis, at approximately
+$0.206011\pm0.634038\,\mathrm{i}$. Thus the balanced state exists but is
+unstable. The nonzero imaginary parts indicate an oscillatory component in
+the growing linearized disturbance, rather than a purely monotone departure.
+This gives a concrete expectation for the time-domain experiment:
+a generic small displacement from balance should initially produce growing
+oscillations. The eigenvalue plot alone does not determine what happens
+once the solution has moved far from equilibrium.
+
+\subsection{What happens after one node is disturbed?}
+To connect the local calculation with observable trajectories, we started
+all five nodes at balance and changed only Wood. The first experiment
+increased Wood by $5\%$, testing the response near equilibrium. The second
+reduced Wood to $30\%$ of its balanced value, testing a much larger initial
+displacement. The other four components started at balance in both cases.
+This distinction matters: local stability addresses sufficiently small
+perturbations, while the larger disturbance requires a direct trajectory
+calculation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/figure2.png}
+\caption{Responses to the same relative initial disturbance at the two
+baselines in Figure~\ref{fig:baseline-spectra}. Top: Wood increased by
+$5\%$. Bottom: Wood reduced to $30\%$ of balance. Each activity is divided
+by its model's balanced level, so the horizontal reference value is one.
+All runs extend to $t=120$; the modified-model panels display only
+$t\leq12$ to show the transient. Axis ranges differ between panels.}
+\label{fig:disturbance}
+\end{figure}
+
+In the upper-left panel, the initially small displacement spreads through
+the network and grows into a sustained oscillatory pattern over the
+observation interval. This agrees with the local instability identified
+in Figure~\ref{fig:baseline-spectra}. The components rise and fall at
+different times, so the network does not simply move to a new common
+activity level. The lower-left panel shows that the larger Wood reduction
+also produces persistent departures from the original balance. At $t=120$,
+the Euclidean distances to the balanced vector are approximately $0.8776$
+and $0.9899$ for the small and large disturbances, respectively.
+
+The conclusion is specific: the all-ones Lin baseline does not restore
+these disturbances to its positive balanced state. Oscillations remain
+bounded over the displayed interval; their appearance is not evidence of
+chaos, permanent extinction, or failure of every Lin parameter choice.
+Indeed, keeping the other coefficients at one but increasing self-limitation
+to $b=2$ gives a stable positive balance at $s_{\mathrm L}=0.25$.
+This observation motivates the parameter sweeps below: a single baseline
+cannot represent the behavior of the whole model family.
+
+The trajectory graphs were obtained by integrating the full five-node
+equations with DOP853, relative tolerance $10^{-10}$ and absolute tolerance
+$10^{-12}$, and sampling 3,001 times over $[0,120]$. Repeating the four
+runs with RK45 at the same tolerances changed the sampled activities by
+at most $1.1\times10^{-8}$. These checks support the displayed numerical
+behavior. The present experiments concern the full network; a comparison
+of isolated or externally constrained two-node motifs remains unfinished.
+
+\FloatBarrier
+\section{A modified version of the model and its dynamics}
+\label{sec:modified-results}
+
+\subsection{Why examine a different interaction law?}
+The baseline results raise a modeling question: does changing how a node
+receives input and experiences losses alter its ability to return to a
+positive balance? In Lin's model, the nourishment term is proportional to
+both the mother and the receiving node. Holding the mother fixed, this
+input becomes smaller as the receiving node becomes weaker, and vanishes
+when that node is empty. One alternative is to make input available even
+to a depleted receiver, while reducing it as the receiver's own activity
+increases. The modified model used in the following experiments is
+\begin{equation}
+ \dot x_i=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+                  -\frac{g x_i}{1+x_{i+2}}-h x_i x_{i-2}.
+ \label{eq:modified-model}
+\end{equation}
+The input $c x_{i-1}/(1+x_i)$ implements this dependence on receiver
+activity. The target-dependent loss also changes: holding $x_i$ fixed,
+a larger target reduces the magnitude of $g x_i/(1+x_{i+2})$.
+Received restraint remains bilinear. These are mathematical modeling
+choices whose effects can be explored; the experiments do not establish
+them as physiological laws.
+
+There are two important qualifications before comparing the plots.
+First, the direct child-loss term has also been omitted, so the modification
+changes several mechanisms simultaneously. Second, coefficient names are
+not fully shared between the models: received restraint is $d$ in Lin and
+$h$ here. Accordingly, the comparison concerns two complete models rather
+than one isolated change in functional form. For nonnegative initial
+activities and positive coefficients, equation~\eqref{eq:modified-model}
+preserves nonnegativity: at $x_i=0$ its derivative is
+$c x_{i-1}\geq0$. Thus replenishing a depleted node is compatible with the
+chosen nonnegative activity domain.
+
+\subsection{Does the modified baseline return to balance?}
+We used $(a,k,c,g,h)=(2,0.5,1,0.5,0.3)$ as an illustrative baseline.
+Its positive balanced level is
+$s_{\mathrm D}=(3+\sqrt{59})/4\approx2.670286$.
+The blue markers in Figure~\ref{fig:baseline-spectra} all lie in the left
+half-plane; the largest real part is approximately $-1.153724$.
+This predicts decay of sufficiently small disturbances near this balance.
+
+The right-hand panels of Figure~\ref{fig:disturbance} show the corresponding
+network response. After Wood is increased, its excess decays while the
+other nodes undergo smaller temporary displacements. After Wood is reduced,
+it rises toward its original level, while some other nodes temporarily
+overshoot or undershoot theirs. Recovery therefore does not mean that
+every component moves monotonically or remains unaffected: activity is
+redistributed transiently before the network returns to the common balance.
+
+Both tested trajectories return close to the starting equilibrium, with
+final distances of approximately $3.3\times10^{-12}$ and
+$1.2\times10^{-11}$ at $t=120$. The small-disturbance experiment is
+consistent with the eigenvalue prediction. The larger-disturbance experiment
+adds evidence that recovery is not restricted to the particular $5\%$
+test, but it does not determine the full basin of attraction or establish
+global convergence. The different time and vertical scales in the panels
+must also be kept in view: the figure demonstrates different outcomes at
+the chosen baselines, not a calibrated physiological recovery-speed ratio.
+
+\subsection{Does the contrast persist when parameters change?}
+The baseline comparison could depend on the particular coefficients chosen.
+To move beyond single examples, we varied nourishment and received restraint
+while holding the remaining coefficients fixed. These axes explore the
+balance between one positive and one negative contribution to a node's
+activity. They do not exhaust the models' parameter spaces.
+
+For each of the $90\times90$ equally spaced grid points, we first found
+the positive balanced equilibrium, if one existed. For the modified model,
+this is the larger positive root of
+$(k+h)s^2+(k+h-a)s-(a+c-g)=0$; Lin uses
+Eq.~\eqref{eq:lin-balance}. We then evaluated the Jacobian at that state,
+computed all five eigenvalues, and colored the point by the largest real
+part, $\alpha$. This produces a local stability map, rather than a map
+obtained by guessing the eventual behavior of a simulated trajectory.
+Values below $-10^{-9}$ were counted as stable, values above $10^{-9}$ as
+unstable, and values within that tolerance as unresolved. The analytic
+Jacobians were independently checked by numerical differentiation before
+constructing the plots.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/figure3.png}
+\caption{Local stability over $c\in[0.3,1.6]$ and received restraint
+$r\in[0.1,1.0]$. Lin uses $(a,b,c,d,g,h)=(1.5,0.65,c,r,0.3,0.3)$;
+the modified model uses $(a,k,c,g,h)=(1.5,0.65,c,0.3,r)$.
+Blue and red indicate negative and positive $\alpha$, respectively;
+color limits are clipped. Gray marks absence of a positive balanced
+equilibrium. The black line is an interpolated zero contour. Titles use
+all grid points as the denominator; inset percentages use only points
+admitting positive balance.}
+\label{fig:stability-maps}
+\end{figure}
+
+The Lin panel contains distinct regimes. The lower-left region admits a
+stable positive balance. Moving toward larger nourishment or larger received
+restraint within this particular slice crosses into a region where the
+balance exists but is unstable. The effect of increasing restraint is
+therefore not automatically stabilizing: stronger negative coupling can
+coexist with instability of the coupled network. This is an observation
+about the specified slice, not a claim that restraint always destabilizes
+the model.
+
+The gray corner has a different interpretation. Here
+$b+d+g+h-c=1.25+d-c\leq0$, so there is no finite positive balanced level
+of the form considered. It must not be counted as another unstable positive
+equilibrium. Of the 8,100 Lin grid points, 7,867 admit positive balance
+and 1,497 are stable. Hence the two reported percentages are $18.5\%$ of
+all grid points and $19.0\%$ of eligible points. Near the gray region,
+color clipping also means that the darkest red does not show the exact
+magnitude of every positive growth rate.
+
+The modified panel is entirely blue: every grid point in this window admits
+a locally stable positive balanced equilibrium. This extends the observed
+contrast beyond the single baseline, but only within this parameter slice.
+It does not mean that the modified model is stable at every parameter
+choice. An earlier, different sweep with $a=2$, $k=0.5$, $g=0.5$,
+$c\in[0.05,2.5]$, and $h\in[0.05,2.0]$ had 5,837 stable points out of
+8,100 ($72.1\%$). Thus the size of the reported stable region depends on
+both the window and the fixed coefficients. The appropriate interpretation
+of Figure~\ref{fig:stability-maps} is a broader stable region for the
+modified model in this specified experiment, not a universal advantage.
+
+\subsection{How sensitive is the comparison to parameter selection?}
+A two-dimensional map still fixes several coefficients. We therefore also
+examined randomly selected parameter sets, asking whether the qualitative
+contrast persisted under more than one selection rule. The uniform,
+ordered, and tiered scenarios sample different parts of parameter space;
+they are sensitivity experiments, not estimates of how frequently the
+corresponding conditions occur in people.
+
+Each scenario uses 1,200 accepted draws and NumPy's default random-number
+generator with seed 3. We paired the models through a shared draw
+$(S,A,C,R,T,L)$ for self-growth, self-limitation, nourishment, received
+restraint, target-related loss, and child loss. The assignments were
+$(a,b,c,d,g,h)_{\mathrm L}=(S,A,C,R,L,T)$ and
+$(a,k,c,g,h)_{\mathrm D}=(S,A,C,T,R)$.
+Uniform draws are independent on $[0.1,2]$. Ordered draws use the same
+ranges conditioned on $S>C>R>T$, leaving $A$ and $L$ unordered.
+Tiered draws are independent on $S\in[1,2]$, $A\in[0.3,1]$,
+$C\in[0.5,1.5]$, $R\in[0.2,0.8]$, and $T,L\in[0.1,0.5]$.
+Using a shared draw makes the assignment explicit, but does not match the
+strengths of different interaction laws or supply the child-loss term
+missing from the modified model.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/figure4.png}
+\caption{Stability frequencies for the three specified parameter-selection
+schemes. Left: stable positive balance among draws admitting the selected
+positive equilibrium. Right: stable positive balance among all 1,200 draws.
+The paired panels distinguish stability conditional on existence from the
+combined requirement of existence and stability. Exact counts are listed
+in Table~\ref{tab:sampling}.}
+\label{fig:sampling}
+\end{figure}
+
+The modified model has a higher stability frequency in all three scenarios,
+but the size of the difference depends on the sampling rule. For example,
+Lin's conditional frequency rises from $22.8\%$ under uniform sampling to
+$47.1\%$ under the ordered scenario. Restricting the parameters therefore
+changes the apparent comparison substantially; the percentages are not
+fixed characteristics of either model.
+
+The two panels also answer different questions. Under uniform sampling,
+$94.1\%$ of the modified model's eligible equilibria are stable, but only
+$80.7\%$ of all draws admit such a stable positive balance. The difference
+arises because 171 of the 1,200 draws have no positive balanced equilibrium.
+The left panel asks whether a positive balance is stable once it exists;
+the right asks how often the chosen sampling procedure yields a stable
+positive balance at all. Reporting only the left panel would conceal this
+loss of eligibility. Similarly, the tiered result of $99.0\%$ describes
+the selected coefficient ranges, not near-certainty of stability under
+arbitrary parameters.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{llrrr}
+\toprule
+Scenario & Model & Stable & Positive balance & Total draws\\
+\midrule
+Uniform & Lin      & 273  & 1195 & 1200\\
+        & Modified & 968  & 1029 & 1200\\
+Ordered & Lin      & 562  & 1192 & 1200\\
+        & Modified & 1103 & 1200 & 1200\\
+Tiered  & Lin      & 267  & 1145 & 1200\\
+        & Modified & 1188 & 1200 & 1200\\
+\bottomrule
+\end{tabular}
+\caption{Counts underlying Figure~\ref{fig:sampling}. For the modified
+model, eligibility and stability refer to the selected upper positive
+balanced branch. The two denominators are retained explicitly.}
+\label{tab:sampling}
+\end{table}
+
+\subsection{What these comparisons establish}
+Together, the four graphs address progressively broader questions: whether
+balance resists small disturbances, how the full network responds to a
+finite displacement, whether the outcome persists across a parameter slice,
+and how it changes under different parameter-selection rules. Within the
+reported experiments, the modified model admits stable positive balance
+more frequently and recovers from both disturbances at its selected
+baseline. Lin also admits stable balance, and the modified model is not
+stable for every parameter choice.
+
+The observations motivate further comparison; they do not identify one
+cause for the difference. The models change several interaction terms,
+and the illustrative baselines also use different coefficients. Removing
+Lin's child-loss term and then comparing the remaining bilinear model
+with the modified model would separate that removal from the changes in
+interaction laws. Further comparisons would be needed to distinguish those
+laws from one another. Those controlled experiments are separate from the
+original Lin comparison reported here. The present figures should therefore
+be read as preliminary evidence about the behavior of two complete models
+under stated assumptions. Analysis of the associated two-node motifs
+remains to be completed.
+\FloatBarrier
+

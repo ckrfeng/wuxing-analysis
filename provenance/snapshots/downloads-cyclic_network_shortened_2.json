@@ -1,0 +1,234 @@
+{
+  "id": "downloads-cyclic_network_shortened_2",
+  "status": "Shortened proof/manuscript revision; distinct source version",
+  "origins": [
+    "/Users/carterfeng/Downloads/cyclic_network_shortened 2"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "00_canonical_model.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/00_canonical_model.tex",
+      "sha256": "cb840d902c8191ed9121a9801e17f6289cfe27de910660df55cde1000cd0bcd2",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/00_canonical_model.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "01_notation_and_assumptions.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/01_notation_and_assumptions.tex",
+      "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/01_notation_and_assumptions.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "CHANGE_REPORT.txt",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/CHANGE_REPORT.txt",
+      "sha256": "4acadf6c2b804da125caefd434934541edd0c134b796bbeff876a414f9142b25",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/CHANGE_REPORT.txt",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "CITATION_VERIFICATION.txt",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/CITATION_VERIFICATION.txt",
+      "sha256": "d086d157c3bb52be867053e35acd812ea7fb9e0c7a090684281c32ed791d175a",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/CITATION_VERIFICATION.txt",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "README.txt",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened_2/README.txt",
+      "sha256": "cc5df183d7985b3fef97a1859703299d00a0689d07e4992403a763bb18efe583",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/README.txt",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "VALIDATION.txt",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened_2/VALIDATION.txt",
+      "sha256": "024aa72feee1faad9b59eda493f21da7c9affb8713312f4e35af55ff04f95284",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/VALIDATION.txt",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P01_wellposedness_and_absorbing_box.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P01_wellposedness_and_absorbing_box.tex",
+      "sha256": "0a4b8fbd2d31d6d88d920f9678dc709cd6eb23649215ca1bc60c3a60c1cab427",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P01_wellposedness_and_absorbing_box.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "sha256": "2c641618b1e460b0c7fbd7536ca5148843e88b6efabfe6a87b08a2b4ed5d6aa1",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P03_origin_and_linearization.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P03_origin_and_linearization.tex",
+      "sha256": "618202cb52befac6d99b12728af42b2459fd89e2a1bffc6fcaae0bf5e7589b4b",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P03_origin_and_linearization.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "sha256": "f83a6f69db1491c082091818f5c82854cb78c2f3580335930edd0c8893112e2c",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P05_q2_mode_selection.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P05_q2_mode_selection.tex",
+      "sha256": "7fb3a063d2be8fa4e602f8f75ea585ae3f631638509a713e5e2852715b6c4a40",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P05_q2_mode_selection.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P06_large_n_limit.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P06_large_n_limit.tex",
+      "sha256": "84ec707ca0d4e41201716c505ef9d5d1ca3e8b86d2700f587d32cb52102c319b",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P06_large_n_limit.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P07_five_node_specialization.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P07_five_node_specialization.tex",
+      "sha256": "02a4287ce595b2a82cceb6268aec235dbcfca359c51e606a3b619f6525091720",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P07_five_node_specialization.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P08_matched_bilinear_analysis.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P08_matched_bilinear_analysis.tex",
+      "sha256": "488b60285d586179ccf3e36c522353b7a8b0e250e05ac0016f747f5ad84377d1",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P08_matched_bilinear_analysis.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P09_transcritical_bifurcation.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P09_transcritical_bifurcation.tex",
+      "sha256": "2c1c918734d99aa0bfeeab7b292f631dacd8fafeb26e4dff6c485b58e6904434",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P09_transcritical_bifurcation.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P10_saddle_node_and_bistability.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P10_saddle_node_and_bistability.tex",
+      "sha256": "2a7972ac2812d5e9ce55d271c1e789d2c85f73c4c811e7fd8473cf5229c0c271",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P10_saddle_node_and_bistability.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P11_hopf_spectral_conditions.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P11_hopf_spectral_conditions.tex",
+      "sha256": "70ceaf8fecfee2ede13d5c5a5298cf5291016e3edf0204b723eab26b41aa7765",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P11_hopf_spectral_conditions.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P12_hopf_transversality.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P12_hopf_transversality.tex",
+      "sha256": "b315b3d7a7715172e8306f9efd491411f34ebe4e4d77d11968ee2ee8469c792d",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P12_hopf_transversality.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P13_first_lyapunov_coefficient.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P13_first_lyapunov_coefficient.tex",
+      "sha256": "bdb6e49dc4ba0e823bc297d6d4c129165cc568dfb7d4d3a3f204319ccddfb453",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P13_first_lyapunov_coefficient.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P14_rotating_waves.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P14_rotating_waves.tex",
+      "sha256": "9f2d33c5be4a55a94d7bdcc51291766d0a5b142eccf9b77b69b3779debde6c7e",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P14_rotating_waves.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "sha256": "6106e69341d9b066373c700cf867a3180c6a22fd6e2118f99e5a0a58ea7beffe",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P16_static_sensitivity_and_green_function.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P16_static_sensitivity_and_green_function.tex",
+      "sha256": "5169218fdf496d9d22e09932ac76c154873399d10bcb5d8c0e341b4f99b41760",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P16_static_sensitivity_and_green_function.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P17_transient_and_harmonic_response.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P17_transient_and_harmonic_response.tex",
+      "sha256": "229e35dc1f428bbb269051d6af197a3a80a9428fe50b3fea41a5bae340c9c36e",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P17_transient_and_harmonic_response.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs/P18_stability_radius_and_hopf_shift.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs/P18_stability_radius_and_hopf_shift.tex",
+      "sha256": "869c2cfe3ee58d8c4544e3cd51cca71672d468d9771c50af3489ef3dd47ff563",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs/P18_stability_radius_and_hopf_shift.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium.bbl",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/proofs_compendium.bbl",
+      "sha256": "3833d428076e9345e947bbc5ffbce6cf16f1ec8735d24594501096bb48a1dad2",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs_compendium.bbl",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium_11.pdf",
+      "sha256": "312665095cf29198feb1cc27b53b37913a8cc867abb71af724917d6f137305ab",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs_compendium.pdf",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened_2/proofs_compendium.tex",
+      "sha256": "080867ac482073bff2d7806deab61d42ae3cb1616ae2545bbc60174750b150f9",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs_compendium.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_standalone.tex",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened_2/proofs_standalone.tex",
+      "sha256": "57fe4ac393b5e7ef04a4f493619c7a38a994ab3573cc425db24d4bfd6c3ff054",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/proofs_standalone.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "references.bib",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/references.bib",
+      "sha256": "f88789c6d47839d3e9a79fdfe259b589a9887a7f2d72fb0f4f7f38efac29fdeb",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/references.bib",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "review/proof_changes.patch",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/review/proof_changes.patch",
+      "sha256": "f4e951ac2b22ed621f70836a56113bcc181893dee0176e7066c98815b43045d9",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/review/proof_changes.patch",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "review/source_counts_and_hashes.json",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_shortened/review/source_counts_and_hashes.json",
+      "sha256": "769d77c95bb4d0b6f6060537763afbd52ad7cec61de2ce26a273c463ce35ae2e",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/review/source_counts_and_hashes.json",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "shared_macros.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/shared_macros.tex",
+      "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad",
+      "source": "/Users/carterfeng/Downloads/cyclic_network_shortened 2/shared_macros.tex",
+      "status": "theory_version_snapshot"
+    }
+  ]
+}

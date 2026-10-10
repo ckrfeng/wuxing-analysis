@@ -1,0 +1,402 @@
+% EDITION: citation-based shortening, 4 October 2026.
+% Earlier audits refer to the source edition; this revision has not been independently audited.
+\section{P04: Arbitrary-\texorpdfstring{$(n,q)$}{(n,q)} Fourier spectrum and normality}
+\label{sec:P04}
+The standing assumptions are $n\ge5$, $1\le q<n$ and
+$a,k,c,g,h>0$. Use the canonical domain $\Domain=(-1,\infty)^n$,
+indices in $\Zn$, predecessor shift $(Pz)_j=z_{j-1}$ and the
+unitarily normalized, positive-exponent Fourier vectors from
+Section~\ref{sec:notation}. No coprimality condition is imposed.
+This is supporting, known Fourier machinery specialized to the
+verified homogeneous Jacobian, not a novelty claim.
+
+For any synchronous state $x^*\one\in\Domain$, set $s=1+x^*>0$.
+Here $s$ is the denominator, whereas the scalar state variable below
+is $r$. Import Proposition~\ref{prop:P03-homogeneous}, without
+re-deriving its Jacobian:
+\begin{align}
+ J&:=DF(x^*\one)=dI+CP+GP^{-q}-HP^q,\label{eq:P04-input}\\
+ d&=a-2kx^*-\frac{cx^*}{s^2}-\frac{g}{s}-hx^*,
+ &C&=\frac{c}{s},\quad G=\frac{gx^*}{s^2},\quad H=hx^*.
+ \label{eq:P04-coefficients}
+\end{align}
+All coefficients are real; $C>0$, while $G,H$ have the sign of
+$x^*$ (and vanish at zero). The spectral statements through the
+synchronous-mode identity apply even when the state is not an
+equilibrium. At a nonstationary state they describe its Jacobian,
+not an autonomous linearization about an equilibrium.
+
+\subsection{Fourier diagonalization}
+\label{slot:P04-1}
+
+\begin{theorem}[Complete homogeneous Fourier spectrum]
+\label{thm:P04-spectrum}
+Let $\theta_m=2\pi m/n$, $v^{(m)}_j=n^{-1/2}e^{\ii\theta_m j}$,
+and $Q:=\Fourier=[v^{(0)}\ \cdots\ v^{(n-1)}]$.
+Then $Q^*Q=QQ^*=I$, and the full spectrum, listed with algebraic
+multiplicity, is
+\begin{equation}
+ \boxed{\lambda_m=d+Ce^{-\ii\theta_m}
+                      +Ge^{\ii q\theta_m}-He^{-\ii q\theta_m},
+           \qquad m=0,\ldots,n-1.}
+ \label{eq:P04-spectrum}
+\end{equation}
+In particular,
+\begin{equation}
+ Jv^{(m)}=\lambda_m v^{(m)},\qquad
+ Q^*JQ=\Lambda:=\diag(\lambda_0,\ldots,\lambda_{n-1}),\qquad
+ J=Q\Lambda Q^*.
+ \label{eq:P04-diagonalization}
+\end{equation}
+These statements do not require distinct shift offsets, distinct
+numerical eigenvalues, nonzero combined coefficients, or
+$\gcd(n,q)=1$.
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:P04-input} is a polynomial in the cyclic shift,
+so Gray's theorem \cite[Theorem~3.1]{Gray2006} gives a unitary Fourier
+diagonalization, also when offsets or numerical eigenvalues coincide.
+The project's convention fixes the phases as
+\begin{equation}
+ Pv^{(m)}=e^{-\ii\theta_m}v^{(m)},\quad
+ P^{-q}v^{(m)}=e^{\ii q\theta_m}v^{(m)},\quad
+ P^qv^{(m)}=e^{-\ii q\theta_m}v^{(m)}.
+ \label{eq:P04-shifts}
+\end{equation}
+Substitution gives \eqref{eq:P04-spectrum} and
+\eqref{eq:P04-diagonalization}, hence
+\begin{equation}
+ \det(\zeta I-J)=\prod_{m=0}^{n-1}(\zeta-\lambda_m).
+ \label{eq:P04-characteristic}
+\end{equation}
+We reuse this diagonalization throughout.
+\end{proof}
+
+\subsection{Real and imaginary dispersion relations}
+
+Writing $\lambda_m=r_m+\ii\omega_m$, Euler's identities give
+\begin{align}
+ \boxed{r_m=d+C\cos\theta_m+(G-H)\cos(q\theta_m),}
+   \label{eq:P04-real}\\
+ \boxed{\omega_m=-C\sin\theta_m+(G+H)\sin(q\theta_m).}
+   \label{eq:P04-imag}
+\end{align}
+Indeed, the imaginary contributions of the three shift terms are
+$-C\sin\theta_m$, $+G\sin(q\theta_m)$ and
+$+H\sin(q\theta_m)$: the last plus sign is the product of
+$-H$ and the negative imaginary part of $e^{-\ii q\theta_m}$.
+Their real contributions are $C\cos\theta_m$,
+$G\cos(q\theta_m)$ and $-H\cos(q\theta_m)$.
+Here $\omega_m$ is a signed imaginary part, possibly zero; it is not
+the reserved positive frequency $\omega$ of a future Hopf theorem.
+
+\subsection{Conjugacy and multiplicities}
+
+For a label $m$, write $\bar m=(-m)\bmod n$ in $\{0,\ldots,n-1\}$;
+in particular $\bar0=0$, not an additional label $n$.
+The phases at $\bar m$ are conjugates of those at $m$, so
+\begin{equation}
+ v^{(\bar m)}=\overline{v^{(m)}},\qquad
+ \lambda_{\bar m}=\overline{\lambda_m},\qquad
+ r_{\bar m}=r_m,\quad \omega_{\bar m}=-\omega_m.
+ \label{eq:P04-conjugacy}
+\end{equation}
+This verifies conjugacy explicitly from the formula and real
+coefficients, consistently with $J$ being real.
+
+A label is self-conjugate precisely when $2m=0\pmod n$.
+For odd $n$ there is the singleton $0$ and the $(n-1)/2$ pairs
+$\{m,n-m\}$ with $1\le m\le(n-1)/2$.
+For even $n$ the singletons are $0,n/2$, with $n/2-1$ pairs
+$1\le m<n/2$. Each singleton necessarily has a real eigenvalue.
+The converse is false: a non-singleton pair can have $\omega_m=0$,
+and then its two labels give the same real eigenvalue.
+
+\begin{proposition}[Numerical eigenvalue multiplicities]
+\label{prop:P04-multiplicity}
+For a numerical eigenvalue $\eta$, define its label set
+$M_\eta=\{m:0\le m<n,\ \lambda_m=\eta\}$.
+Its algebraic and geometric multiplicities over $\C$ both equal
+$|M_\eta|$, and
+\[
+ \ker(J-\eta I)=\operatorname{span}_{\C}
+                  \{v^{(m)}:m\in M_\eta\}.
+\]
+Every eigenvalue is semisimple. Each Fourier label contributes one
+one-dimensional Fourier coordinate, but this does not imply that
+its numerical eigenvalue is simple.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:P04-characteristic} counts the algebraic
+multiplicity. Write $z=Qw$; then $(J-\eta I)z=0$ if and only if
+$(\lambda_m-\eta)w_m=0$ for every $m$. Exactly the coordinates in
+$M_\eta$ are free, proving the eigenspace formula and dimension.
+Diagonalization also excludes nontrivial Jordan blocks.
+\end{proof}
+
+Thus ``Fourier-mode multiplicity'' means the number of labels
+producing a given value, if that term is used at all; it is not a
+second source of multiplicity. A nonreal conjugate pair consists
+of two different numerical eigenvalues, each of which can also
+coincide with eigenvalues at other labels. A tie $r_m=r_\ell$
+alone says nothing about equality of $\lambda_m,\lambda_\ell$.
+Singleton labels can likewise share their numerical value with
+other labels; singleton refers to label conjugacy, not simplicity.
+
+For a concrete canonical example, take $q=1$, $x^*=1$ and
+$(a,k,c,g,h)=(2,1,4,4,1)$. P02's scalar equation vanishes,
+and P03 gives $d=-4,C=2,G=H=1$. Hence
+$J=-4I+P+P^{-1}$ and $\lambda_m=-4+2\cos\theta_m$;
+each non-singleton pair has a repeated real eigenvalue.
+At the origin, by contrast, $G=H=0$, $C=c>0$ and $d=a-g$,
+so \eqref{eq:P04-spectrum} reduces to P03's
+$a-g+ce^{-\ii\theta_m}$. The distinct roots of unity and $c>0$
+make all those origin eigenvalues simple, as established in
+Proposition~\ref{prop:P03-origin-spectrum}.
+
+\subsection{Offset collisions and self-conjugate modes}
+\label{slot:P04-extra-1}
+
+P03's exhaustive collision list requires no replacement spectrum.
+Direct substitution in the master formula gives the following
+checks, with phases understood modulo $2\pi$.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item If $q=1$, then
+\[
+ J=dI+(C-H)P+GP^{-1},\qquad
+ \lambda_m=d+(C-H)e^{-\ii\theta_m}+Ge^{\ii\theta_m}.
+\]
+The same expression follows by combining the $C$ and $-H$ terms
+in \eqref{eq:P04-spectrum}. Here
+$r_m=d+(C+G-H)\cos\theta_m$ and
+$\omega_m=(-C+G+H)\sin\theta_m$.
+\item If $q=n-1$, then $P^{-q}=P$ and $P^q=P^{-1}$.
+Since $e^{\ii(n-1)\theta_m}=e^{-\ii\theta_m}$ and
+$e^{-\ii(n-1)\theta_m}=e^{\ii\theta_m}$,
+\[
+ J=dI+(C+G)P-HP^{-1},\qquad
+ \lambda_m=d+(C+G)e^{-\ii\theta_m}-He^{\ii\theta_m}.
+\]
+Thus $r_m=d+(C+G-H)\cos\theta_m$ and
+$\omega_m=-(C+G+H)\sin\theta_m$, also obtained from
+\eqref{eq:P04-real}--\eqref{eq:P04-imag}.
+\item If $n$ is even and $q=n/2$, then
+$e^{\pm\ii q\theta_m}=e^{\pm\ii\pi m}=(-1)^m$ and
+$P^{-q}=P^q=P^{n/2}$. Therefore
+\[
+ J=dI+CP+(G-H)P^{n/2},\qquad
+ \lambda_m=d+Ce^{-\ii\theta_m}+(G-H)(-1)^m.
+\]
+Here $r_m=d+C\cos\theta_m+(G-H)(-1)^m$ and
+$\omega_m=-C\sin\theta_m$.
+\end{enumerate}
+These equalities include cancellations such as $C=H$ in the first
+case or $G=H$ in the third. Adding contributions before or after
+Fourier transformation gives identical results; coincident entries
+must never be overwritten.
+
+The singleton formulas, for every admissible $q$, are
+\begin{align}
+ \lambda_0&=d+C+G-H\in\R,\label{eq:P04-zero-mode}\\
+ \lambda_{n/2}&=d-C+(G-H)(-1)^q\in\R
+       \quad(n\text{ even}).\label{eq:P04-half-mode}
+\end{align}
+For the second formula use $e^{-\ii\pi}=-1$ and
+$e^{\pm\ii q\pi}=(-1)^q$; all sine terms vanish.
+It equals $d-C+G-H$ for even $q$ and $d-C-G+H$ for odd $q$.
+When also $q=n/2$, the factor is $(-1)^{n/2}$, agreeing with the
+half-offset formula at $m=n/2$. Thus no real singleton critical
+mode is omitted from subsequent all-mode tests.
+
+\subsection{Normality}
+\label{slot:P04-2}
+
+\begin{proposition}[Normality]
+\label{prop:P04-normality}
+Every homogeneous Jacobian \eqref{eq:P04-input} is normal over
+$\C^n$: $JJ^*=J^*J$.
+\end{proposition}
+\begin{proof}
+The unitary diagonalization in Theorem~\ref{thm:P04-spectrum}
+makes $J$ normal, as in \cite[\S3.1]{Gray2006}.
+\end{proof}
+
+Normality here concerns homogeneous states, including negative ones in the domain; it is not asserted for heterogeneous or nonsynchronous Jacobians.
+
+\subsection{Synchronous mode}
+
+P02's scalar field, using a fresh state variable $r$, is
+\[
+ f(r)=ar-(k+h)r^2+\frac{(c-g)r}{1+r},\qquad r>-1.
+\]
+
+Differentiate $F(r\one)=f(r)\one$ and use $v^{(0)}=\one/\sqrt n$:
+\begin{equation}
+ \boxed{\lambda_0=d+C+G-H=f'(x^*).}
+ \label{eq:P04-synchronous-derivative}
+\end{equation}
+This holds at any synchronous state, without the equilibrium hypothesis.
+
+\paragraph{Positive synchronous equilibrium specialization.}
+Now assume additionally $x^*>0$ and $F(x^*\one)=0$.
+Then $C,G,H>0$. Put $A=k+h$ as in the canonical notation.
+P02 and P03 give
+\[
+ a-Ax^*+\frac{c-g}{s}=0,\qquad
+ d=-kx^*-\frac{c}{s}-\frac{cx^*}{s^2}
+   =-kx^*-\frac{c(1+2x^*)}{s^2}.
+\]
+This is an optional equilibrium-only replacement for $d$ in
+\eqref{eq:P04-spectrum}; the unsimplified expression
+\eqref{eq:P04-coefficients} remains valid at all synchronous states.
+Writing $f(r)=rB(r)$ with
+$B(r)=a-Ar+(c-g)/(1+r)$ and $B(x^*)=0$ yields
+\begin{equation}
+ \boxed{\lambda_0=-x^*\left(A+\frac{c-g}{s^2}\right)
+          =\frac{x^*}{s}\bigl(a-A-2Ax^*\bigr).}
+ \label{eq:P04-equilibrium-zero-mode}
+\end{equation}
+The first equality uses $f'(x^*)=x^*B'(x^*)$; for the second,
+substitute $c-g=(Ax^*-a)s$.
+The equilibrium identities require a nonzero equilibrium; they also
+hold at a negative nonzero equilibrium in $\Domain$, but $G,H>0$
+is then false. At the origin use \eqref{eq:P04-coefficients}, which
+gives $\lambda_0=a+c-g$. No comparison with other $r_m$ or selection
+of a dominant mode is made here.
+
+\subsection{Linear stability and hyperbolicity}
+\label{slot:P04-3}
+
+In this subsection $x^*\one$ is a synchronous \emph{equilibrium}
+in $\Domain$. Adopt the project's spectral-abscissa notation
+\begin{equation}
+ \sa(J)=\max_{0\le m<n}r_m.
+ \label{eq:P04-abscissa}
+\end{equation}
+For $\dot z=Jz$, exponential asymptotic stability means there exist
+$M\ge1$ and $\beta>0$ such that
+$\norm{z(t)}_2\le Me^{-\beta t}\norm{z(0)}_2$ for all $t\ge0$.
+
+\begin{corollary}[Exact linear stability criterion]
+\label{cor:P04-stability}
+The linearized system is exponentially asymptotically stable if and
+only if
+\begin{equation}
+ \boxed{\sa(J)<0\quad\Longleftrightarrow\quad
+   d+C\cos\theta_m+(G-H)\cos(q\theta_m)<0
+      \quad\text{for every }m.}
+ \label{eq:P04-stability}
+\end{equation}
+For all $t\ge0$, its exact induced Euclidean propagator norm is
+\begin{equation}
+ \boxed{\norm{e^{tJ}}_2=e^{t\sa(J)}.}
+ \label{eq:P04-semigroup}
+\end{equation}
+If $\sa(J)=0$, the linear system is Lyapunov stable but not
+asymptotically stable. If $\sa(J)>0$, it is unstable.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:P04-spectrum} gives
+$e^{tJ}=Q\diag(e^{t\lambda_m})Q^*$, whose induced Euclidean norm
+is $\max_m|e^{t\lambda_m}|=e^{t\sa(J)}$ for $t\ge0$.
+This proves the strict criterion. At zero abscissa a maximizing real
+Fourier block preserves nonzero norm; at positive abscissa it grows
+exponentially. Real and complex induced norms agree for a real matrix,
+so these conclusions apply to the real system as well.
+\end{proof}
+
+\begin{proposition}[Hyperbolicity]
+\label{prop:P04-hyperbolicity}
+The equilibrium is hyperbolic if and only if $r_m\ne0$ for every
+Fourier label. It is nonhyperbolic whenever any $r_m=0$, including
+when $\omega_m\ne0$. Invertibility requires instead
+$\lambda_m\ne0$ for every label, and is strictly weaker than
+hyperbolicity.
+\end{proposition}
+\begin{proof}
+The complete spectrum is \eqref{eq:P04-spectrum}; substitute it in
+the definitions of hyperbolicity and invertibility. A nonzero purely
+imaginary eigenvalue meets the invertibility test but fails the
+hyperbolicity test. For an instance within the canonical family,
+P03's origin example $n=6$, $a=2,c=1,g=5/2$ (any positive $k,h$,
+any canonical $q$) has $r_1=r_5=0$ and nonzero imaginary parts,
+whereas no eigenvalue is zero: $ce^{-\ii\theta_m}=1/2$ is impossible
+by modulus. Thus the weaker criterion is strictly weaker here as well.
+\end{proof}
+Hyperbolicity alone is not stability: hyperbolic equilibria may have
+positive real parts. Nonhyperbolicity and instability may coexist
+when one mode has zero real part and another has positive real part.
+
+\paragraph{Nonlinear implications and their limits.}
+The following conclusions concern the nonlinear equilibrium in the
+open domain $\Domain$, using P01's $C^\infty$ smoothness there:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item If $\sa(J)<0$, the equilibrium is locally asymptotically stable;
+in fact it is locally exponentially stable.
+\item If $\sa(J)>0$, it is unstable, even if some other eigenvalues
+have zero real part.
+\item If $\sa(J)=0$, linearization alone is generally inconclusive
+about nonlinear stability or attraction. Normality only settles the
+linear system's boundedness in this case.
+\end{enumerate}
+
+These are the standard linearized stability and instability results
+\cite[Ch.~1]{GuckenheimerHolmes1983}: P01 supplies smoothness on the
+open domain, and the complete spectrum verifies the respective sign
+condition. The instability theorem allows other eigenvalues on the
+imaginary axis. At zero abscissa, a normal linearization alone does not
+decide nonlinear stability (compare $\dot y=-y^3$ and $\dot y=y^3$).
+
+All stability implications above are local. They establish neither
+global attraction nor a global basin, even given P01's separate
+boundedness result. At a positive equilibrium one may choose the
+local ball inside $\PosOrth$, so the local assertions apply there
+as well. At the origin the conclusions above are stated in
+$\Domain$; instability relative to a restricted state set is a
+separate question unless its admissible perturbations are checked.
+A Hurwitz Jacobian is sufficient for nonlinear local asymptotic
+stability, not a necessary condition in general. Thus the rejected
+blanket nonlinear equivalence C040 and global assertion C153 are
+not reinstated.
+
+\paragraph{Dominant modes and first loss of stability.}
+At a fixed parameter point and specified synchronous equilibrium,
+the dominant-label set is $\argmax_{0\le m<n}r_m$, retaining all
+ties. This is the fixed-point ``selected-mode set'' reserved in
+Section~\ref{sec:notation}; it need not contain an unstable mode.
+A \emph{first unstable mode along a path} additionally needs a
+specified equilibrium branch $x^*(\nu)\one$, a specified oriented
+parameter path $\param(\nu)$, a prior interval of stability, and a
+loss-of-stability crossing event. For a continuous branch/path a
+finite boundary event from $\sa(J)<0$ must have $\sa(J)=0$;
+calling it an instability crossing also requires positive real part
+on the unstable side, not merely tangency at zero. Several labels
+or pairs can participate, so uniqueness and transverse crossing
+cannot be presumed. No such path, crossing, or $q=2$ selection
+analysis is supplied by this module.
+
+\subsection{Arbitrary offset and the step-\texorpdfstring{$q$}{q} subgraph}
+\label{prop:P04-step-cycles}
+Let $\kappa=\gcd(n,q)$, $n=\kappa n'$ and $q=\kappa q'$,
+where $\gcd(n',q')=1$. Repeated addition of $q$ returns an index
+to itself after the least positive $L$ for which $n\mid Lq$.
+This is equivalent to $n'\mid Lq'$, hence to $n'\mid L$,
+so $L=n/\kappa$. The step-$q$ permutation therefore has exactly
+$\kappa$ disjoint cycles, each of length $n/\kappa$; they are the
+residue classes modulo $\kappa$. Reversing the step gives the same
+partition. Thus coprimality is required only to call this step-$q$
+subgraph a single cycle. The full canonical coupling also includes
+the step-one predecessor cycle, and the step-$q$ partition is not
+an assertion of full-network disconnection or of a block decomposition
+of $J$ by those residue classes.
+
+The Fourier sampling grid and label count depend on $n$; parity of
+$n$ determines whether the $n/2$ singleton exists. The general phases
+and possible eigenvalue coincidences depend on $q$ modulo $n$ as
+well as $n$ and the coefficients. The value of $\lambda_0$ is
+independent of $n,q$ at fixed coefficients and state; the half-mode
+value depends on the parity of $q$. No proof of diagonalization,
+conjugacy, multiplicity, normality, or the all-mode stability and
+hyperbolicity criteria requires coprimality. The actual spectral
+abscissa generally depends on the grid and phases; P03's
+$n,q$-independent origin threshold is a special case.

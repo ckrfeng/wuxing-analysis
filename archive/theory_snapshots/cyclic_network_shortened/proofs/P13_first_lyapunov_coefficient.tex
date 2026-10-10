@@ -1,0 +1,28 @@
+% STATUS: conditional framework; outstanding model-specific work is explicit.
+\section{P13: First Lyapunov coefficient (unfinished application)}
+\label{sec:P13}
+No model-specific derivative tensors or sign calculation were supplied.
+\subsection{Derivative tensors}\label{slot:P13-1}
+At the candidate, use the Taylor convention
+$F(x_H+z)=Jz+\frac12\mathcal B(z,z)+\frac16\mathcal C(z,z,z)+O(\|z\|^4)$,
+where $\mathcal B=D^2F$ and $\mathcal C=D^3F$.
+Both tensors must be differentiated from the DM field, including its
+rational terms and coincident offsets; DM is not a quadratic model.
+\subsection{Fourier and resolvent inputs}\label{slot:P13-2}
+Use P11's $Jv=\ii\omega v$, $J^*p=-\ii\omega p$, $p^*v=1$,
+$\omega>0$, and its verified inverse gates. Cyclic equivariance restricts
+products of modes to their sum modulo $n$; retain normalization factors
+and possible aliasing when evaluating the actual tensors.
+\subsection{Standard coefficient}\label{slot:P13-3}
+In this convention the standard formula is \cite{KuznetsovHopf2006}
+\begin{align*}
+ l_1=\frac1{2\omega}\Ree\bigl\{p^*\bigl[
+ &\mathcal C(v,v,\bar v)-2\mathcal B(v,J^{-1}\mathcal B(v,\bar v))\\
+ &+\mathcal B(\bar v,(2\ii\omega I-J)^{-1}\mathcal B(v,v))\bigr]\bigr\}.
+\end{align*}
+The formula replaces a derivation of general normal-form theory; the DM
+evaluation and rigorous sign or nonvanishing certificate remain required.
+\subsection{Hopf conclusion}\label{slot:P13-4}
+Only after P12's nonzero crossing and $l_1\ne0$ have been verified can
+the nondegenerate Hopf theorem be applied. Branch stability additionally
+uses P11's stable complement. No periodic branch is established here.

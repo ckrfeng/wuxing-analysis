@@ -1,0 +1,65 @@
+{
+  "method": "Independent sparse Leibniz determinant and Fraction Gaussian elimination",
+  "results": [
+    {
+      "n": 5,
+      "leibniz_terms": [
+        {
+          "u_degree": 0,
+          "c_degree": 5,
+          "coefficient": -1
+        },
+        {
+          "u_degree": 5,
+          "c_degree": 0,
+          "coefficient": 1
+        }
+      ],
+      "surviving_permutation_count": 2,
+      "rank_J_at_a2_c1_by_g": {
+        "1": 5,
+        "3": 4
+      }
+    },
+    {
+      "n": 6,
+      "leibniz_terms": [
+        {
+          "u_degree": 0,
+          "c_degree": 6,
+          "coefficient": -1
+        },
+        {
+          "u_degree": 6,
+          "c_degree": 0,
+          "coefficient": 1
+        }
+      ],
+      "surviving_permutation_count": 2,
+      "rank_J_at_a2_c1_by_g": {
+        "1": 5,
+        "3": 5
+      }
+    },
+    {
+      "n": 8,
+      "leibniz_terms": [
+        {
+          "u_degree": 0,
+          "c_degree": 8,
+          "coefficient": -1
+        },
+        {
+          "u_degree": 8,
+          "c_degree": 0,
+          "coefficient": 1
+        }
+      ],
+      "surviving_permutation_count": 2,
+      "rank_J_at_a2_c1_by_g": {
+        "1": 7,
+        "3": 7
+      }
+    }
+  ]
+}

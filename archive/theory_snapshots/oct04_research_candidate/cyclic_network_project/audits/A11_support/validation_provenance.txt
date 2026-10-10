@@ -1,0 +1,7 @@
+A11 independent audit, 2026-10-04.
+
+Analytical reconstruction in A11 source is the proof basis. Developer P11_validation_support.zip (SHA-256 3fc91d1788cbbbec0ecdd0f8df972481a7133e6a87ce0f44bdcacf187d8ad18d) was hashed, CRC checked and inventoried (36 members). Its checker was not executed or used as a derivation; its historical numerical statistics were not independently reproduced. No developer validation source is included in this audit archive.
+
+independent_checks.py was newly authored for A11, using fractions-based exact arithmetic in Q(phi,i*sigma) and NumPy finite corroboration. No external symbolic package was needed. Reproduce with Python 3 and NumPy by running this file; it writes independent_results.json and realizability_cells.json beside itself. The recorded environment and seed are in results. Finite checks and successful compilation are not universal proof or interval certification.
+
+No g-path derivative, field tensor of order two or three, Lyapunov coefficient, nonlinear interaction, transversality or periodic branch computation was performed. Previous A04/A05 historical provenance qualifications remain intact.

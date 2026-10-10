@@ -1,0 +1,72 @@
+% !TeX program = pdflatex
+% Initialization compendium only; not a submission manuscript.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\input{shared_macros.tex}
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+\title{Directed Cyclic Networks\\Research Contract and Proof Placeholders}
+\author{}
+\date{Initialization: 20 September 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status: initialization only.}
+All proof modules are TODO. Empty headings below are reserved statement slots,
+not theorems asserted without proof. No proof, numerical experiment, literature
+review or manuscript drafting has been performed. The immutable blueprint is
+archived separately and is not included in this document.
+\tableofcontents
+\clearpage
+\input{00_canonical_model.tex}
+\input{01_notation_and_assumptions.tex}
+\input{02_theorem_dependency_map.tex}
+\input{03_literature_audit_template.tex}
+\clearpage
+\clearpage
+\input{proofs/P01_wellposedness_and_absorbing_box.tex}
+\clearpage
+\input{proofs/P02_synchronous_subspace_and_equilibria.tex}
+\clearpage
+\input{proofs/P03_origin_and_linearization.tex}
+\clearpage
+\input{proofs/P04_arbitrary_nq_fourier_spectrum.tex}
+\clearpage
+\input{proofs/P05_q2_mode_selection.tex}
+\clearpage
+\input{proofs/P06_large_n_limit.tex}
+\clearpage
+\input{proofs/P07_five_node_specialization.tex}
+\clearpage
+\input{proofs/P08_matched_bilinear_analysis.tex}
+\clearpage
+\input{proofs/P09_transcritical_bifurcation.tex}
+\clearpage
+\input{proofs/P10_saddle_node_and_bistability.tex}
+\clearpage
+\input{proofs/P11_hopf_spectral_conditions.tex}
+\clearpage
+\input{proofs/P12_hopf_transversality.tex}
+\clearpage
+\input{proofs/P13_first_lyapunov_coefficient.tex}
+\clearpage
+\input{proofs/P14_rotating_waves.tex}
+\clearpage
+\input{proofs/P15_heterogeneous_equilibrium_persistence.tex}
+\clearpage
+\input{proofs/P16_static_sensitivity_and_green_function.tex}
+\clearpage
+\input{proofs/P17_transient_and_harmonic_response.tex}
+\clearpage
+\input{proofs/P18_stability_radius_and_hopf_shift.tex}
+\clearpage
+\appendix
+\input{numerics/N01_validation_protocol.tex}
+\input{numerics/N02_continuation_plan.tex}
+\input{numerics/N03_figure_plan.tex}
+\input{audits/audit_template.tex}
+\end{document}

@@ -1,0 +1,613 @@
+% STATUS: VERIFIED / AUDITED
+% AUDIT FILE: audits/A05_q2_mode_selection.tex
+% ORIGINAL AUDIT VERDICT: CORE MINOR REVISION; REALIZABILITY VERIFIED;
+%   OVERALL MINOR REVISION
+% AUDIT CLOSURE: A05 sole required issue E01 applied verbatim
+% FINAL DISPOSITION: VERIFIED / AUDITED AFTER MINOR REVISION
+% ORIGINAL AUDITED VERSION: P05 v1.0; 2026-10-02; 26848 bytes; 591 lines
+% ORIGINAL AUDITED FULL-FILE SHA-256: b7123736242554bd7fc1f6a56d8788b6c5413a25930e5360d7ea5babe44184d4
+% ORIGINAL AUDITED BODY SHA-256: 25ab3e4ed5d871ab2884210e6d8e7f3631acee3f7a1c662d3c33de441048810d
+% CURRENT VERSION: P05 v1.1; 2026-10-02
+% CURRENT BODY SHA-256: 7e1fd7765ed81e9c5f24ebe07e450e3fd76caf6b16264aac3c3a21edacd8bb97
+% CURRENT HASH: full-file SHA-256 recorded in project_manifest.md and
+%   the closure report to avoid a self-referential full-file hash.
+% BODY HASH SCOPE: bytes from the first line-anchored section command to EOF.
+% CLOSURE DATE: 2026-10-02
+% PRESERVATION: the sole body change is E01 (candidate versus selected labels).
+% STATUS NOTE: historical DRAFT/audit-pending body prose is preserved;
+%   this metadata and the current manifest govern status.
+% PROVENANCE NOTE: A05 U01 is nonblocking. Original validation companion
+%   unavailable to the auditor; historical run claims not independently reproduced.
+%   Closure neither reruns historical validation nor claims to resolve U01.
+% DOWNSTREAM: P08 prerequisite cleared; no later proof module begun.
+% DEPENDS ON: P01-P04 VERIFIED / AUDITED
+% MODEL: canonical demand-modulated model, q=2
+% LITERATURE DEPENDENCIES: frozen Phase 1B/1C novelty audit only
+% NOVELTY ROLE: MAIN THEOREM TARGET only in strengthened realizability form
+% NUMERICAL DEPENDENCIES: none
+% NEXT DEPENDENCIES: P08, P07, P11
+% VERSION: P05 v1.1; 2026-10-02; A05 E01 corrected
+% CLAIMS: C045-C048; P05-D1-P05-D5 in claim_registry.md
+% SCOPE: fixed positive synchronous equilibrium, exact finite n, all ties,
+% canonical realizability and local switch geometry; no first-Hopf theorem.
+
+\section{P05: Exact step-two mode selection}
+\label{sec:P05}
+\noindent\textbf{Status: DRAFT; independent audit pending.}
+Fix the canonical demand-modulated model with $q=2$, $n\ge5$ and
+$a,k,c,g,h>0$. Let $x^*\one$ be a specified positive synchronous
+equilibrium and put $s=1+x^*>1$. Import only the audited P04 coefficients
+and real dispersion relation:
+\begin{equation}
+\begin{gathered}
+ C=\frac cs>0,\qquad G=\frac{gx^*}{s^2}>0,\qquad H=hx^*>0,\\
+ r_m=d+C\cos\theta_m+(G-H)\cos(2\theta_m),\qquad
+ \theta_m=\frac{2\pi m}{n}.
+\end{gathered}
+ \label{eq:P05-input}
+\end{equation}
+Here $r_m=\Ree\lambda_m$ and $d$ is P04's diagonal coefficient.
+All selection conclusions below are derived from \eqref{eq:P05-input}.
+The maximization is over all Fourier labels, including mode zero, and
+selection means the complete set maximizing the real part at this
+equilibrium, retaining all ties. No coprimality condition is used.
+P01 supplies smoothness, P02 supplies the equilibrium relation, and P03--P04
+supply the homogeneous coefficients. No later proof module is used.
+
+\paragraph{Notation and novelty scope.}
+Use $T=G-H$ and the dimensionless scalar
+\begin{equation}
+ \chi=\frac{4(H-G)}{C}=-\frac{4T}{C}.
+ \label{eq:P05-control}
+\end{equation}
+The letter $D$ remains available for P02's discriminant, and $\rho$
+retains the group-action meaning in Section~\ref{sec:notation}.
+Here $j$ denotes a Fourier representative, rather than a node index.
+The frozen Phase 1B/1C verdict treats quadratic maximization as routine.
+The intended main-theorem content is the complete finite-grid classification,
+its realization by positive canonical parameters, and local switch geometry.
+No priority claim or new literature assessment is made.
+
+\subsection{Quadratic dispersion relation}
+\label{slot:P05-1}
+Set $u_m=\cos\theta_m$. The identity $\cos(2\theta)=2\cos^2\theta-1$
+gives
+\begin{equation}
+ r_m=R(u_m),\qquad
+ \boxed{R(u)=d-T+Cu+2Tu^2.}
+ \label{eq:P05-quadratic}
+\end{equation}
+The additive constant is $d-T$; the part controlling selection is
+$Cu+2Tu^2$. In particular, differences of growth rates and the complete
+maximizer set depend only on $C,T$, not on $d$. This is an algebraic
+selection statement, not permission to vary $d$ independently in the model.
+
+Put $N=\lfloor n/2\rfloor$ and $u_j=\cos(2\pi j/n)$ for $0\le j\le N$.
+Since cosine is strictly decreasing on $[0,\pi]$,
+\begin{equation}
+ 1=u_0>u_1>\cdots>u_N,\qquad
+ u_N=\begin{cases}-1,&n\text{ even},\\-\cos(\pi/n),&n\text{ odd}.
+ \end{cases}
+ \label{eq:P05-grid}
+\end{equation}
+Equation~\eqref{eq:P05-input} gives $r_{n-m}=r_m$ for $1\le m<n$.
+Define the distinct label sets
+\begin{equation}
+ L_j=\begin{cases}
+ \{0\},&j=0,\\
+ \{n/2\},&n\text{ even and }j=N,\\
+ \{j,n-j\},&\text{otherwise}.
+ \end{cases}
+ \label{eq:P05-labels}
+\end{equation}
+For a maximizing representative set $S$, the full dominant-label set is
+$\bigcup_{j\in S}L_j$, a disjoint union.
+
+\subsection{Continuous maximizer}
+
+If $T\ge0$, the polynomial is convex (linear when $T=0$). Explicitly,
+\[
+ R(1)-R(-1)=2C>0,
+ \qquad R(1)-R(u)=(1-u)\bigl[C+2T(1+u)\bigr]>0
+ \quad(-1\le u<1).
+\]
+Thus $j=0$ is the unique dominant representative, including $T=0$ and
+odd $n$, when $-1$ itself is absent from the grid.
+
+If $T<0$, then $H-G>0$, $R''=-4(H-G)<0$, and
+\begin{equation}
+ R'(u)=C-4(H-G)u,\qquad
+ u_*:=\frac{C}{4(H-G)}=\frac1\chi>0.
+ \label{eq:P05-vertex}
+\end{equation}
+If $u_*\ge1$, the derivative is positive on $[-1,1)$, hence $j=0$
+is still uniquely selected. The boundary $u_*=1$ is exactly
+$H-G=C/4$, or $\chi=1$; the zero derivative at $u=1$ does not give
+a second grid maximizer. If $0<u_*<1$, the continuous maximizer on
+$[-1,1]$ is the interior vertex. A discrete change need not occur
+when this vertex first leaves the endpoint.
+
+\subsection{Exact discrete selection rule}
+\label{slot:P05-2}
+For $T<0$, direct completion of the square gives
+\begin{equation}
+ R(u)=d+(H-G)+\frac{C^2}{8(H-G)}
+           -2(H-G)(u-u_*)^2.
+ \label{eq:P05-square}
+\end{equation}
+Consequently maximizing the growth rate is exactly minimizing
+$|u_j-u_*|$. This holds for every $u_*>0$, including $u_*\ge1$.
+Distances are in cosine space; the grid in that space is nonuniform.
+No angular rounding rule is invoked.
+
+Define the strictly decreasing midpoint sequence
+\begin{equation}
+ \beta_j=\frac{u_j+u_{j+1}}2
+ =\cos\frac\pi n\cos\frac{(2j+1)\pi}{n},\qquad 0\le j<N.
+ \label{eq:P05-midpoints}
+\end{equation}
+Strict decrease follows from
+$\beta_j-\beta_{j+1}=(u_j-u_{j+2})/2>0$.
+
+\begin{theorem}[A: Exact selection, including endpoints and all ties]
+\label{thm:P05-selection}
+Under the stated canonical equilibrium assumptions, if $T\ge0$ then
+$S=\{0\}$. If $T<0$, the selected representatives are exactly those
+whose closed cells below contain $u_*$:
+\begin{align}
+ V_0&=[\beta_0,\infty),\label{eq:P05-cells}\\
+ V_j&=[\beta_j,\beta_{j-1}]\quad(1\le j<N),\nonumber\\
+ V_N&=(-\infty,\beta_{N-1}].\nonumber
+\end{align}
+A representative is the unique maximizer precisely when $u_*$ lies in
+the corresponding open cell. At $u_*=\beta_j$ the selected set is
+exactly $\{j,j+1\}$. No nonadjacent or triple representative tie can
+be maximal. Only positive midpoints can be attained when $T<0$.
+The full Fourier-label set is given by \eqref{eq:P05-labels}.
+\end{theorem}
+\begin{proof}
+The preceding endpoint comparison proves the $T\ge0$ assertion.
+For $T<0$ use \eqref{eq:P05-square}. For any adjacent grid points,
+\[
+ (u_j-u_*)^2-(u_{j+1}-u_*)^2
+       =2(u_j-u_{j+1})(\beta_j-u_*).
+\]
+Since $u_j>u_{j+1}$, representative $j$ is closer exactly when
+$u_*>\beta_j$, with equality exactly at the midpoint.
+For $1\le j<N$ the two neighboring comparisons require
+$\beta_j\le u_*\le\beta_{j-1}$. These inequalities imply
+$u_{j+1}<u_*<u_{j-1}$; every grid point beyond either neighbor is
+even farther in that direction. Thus the neighboring comparisons are
+also sufficient. For $j=0$, the single inequality $u_*\ge\beta_0$
+makes every $u_\ell$, $\ell>1$, farther than $u_1$; the analogous
+argument at $N$ uses $u_*\le\beta_{N-1}$. Strict inequalities give
+uniqueness, and equality gives exactly the stated adjacent pair.
+
+For completeness, if two nonadjacent representatives had equal maximal
+value, a grid point strictly between their cosines would have strictly
+larger value by strict concavity. This is impossible. Three maximizers
+would include a nonadjacent pair. Equality of two nonadjacent values
+can occur away from the maximum; the theorem excludes only maximal ties.
+Finally $u_*>0$ excludes all nonpositive midpoint equalities.
+\end{proof}
+
+\subsection{Mode ties and selection cells}
+\label{slot:P05-3}
+The real-part comparison also has the useful exact form
+\begin{equation}
+ R(u_j)-R(u_{j+1})
+       =C(u_j-u_{j+1})(1-\chi\beta_j).
+ \label{eq:P05-adjacent-gap}
+\end{equation}
+For $T<0$ an adjacent \emph{maximal} tie therefore occurs if and only
+if $u_*=\beta_j>0$, equivalently $\chi=1/\beta_j$.
+The word maximal is essential: adjacent equalities outside the concave
+regime need not be ties at the spectral abscissa.
+
+Let $w_j=|L_j|$. A strict cell has $w_j$ selected Fourier labels; a
+representative tie has $w_j+w_{j+1}$. Thus two nonsingleton
+representatives give four labels, a tie involving $0$ gives three,
+and an even-$n$ endpoint would contribute only one label. Below we prove
+that the $N=n/2$ endpoint is never selected here. In the canonical
+reachable cells every nonzero selected representative gives exactly two
+labels, and every reachable nonzero/nonzero switch gives four.
+These counts are counts of labels, not of distinct numerical eigenvalues.
+
+\subsection{Reachable Fourier representatives}
+
+\begin{theorem}[B: Reachable cells and parity]
+\label{thm:P05-reachable}
+The full list of representatives whose nearest-cosine cell intersects
+$(0,1)$, and also the full list attainable at some canonical positive
+synchronous equilibrium, is
+\begin{equation}
+ \boxed{0,1,\ldots,J,\qquad J=j_{\max}(n)=\left\lfloor\frac{n+1}{4}\right\rfloor.}
+ \label{eq:P05-jmax}
+\end{equation}
+Each is attainable as the unique representative. Precisely the midpoints
+$\beta_0,\ldots,\beta_{J-1}$ are positive and give attainable switches.
+Every $j>J$, in particular the even-$n$ singleton $n/2$, is excluded.
+Canonical attainability and robustness are proved in Theorem~\ref{thm:P05-realization}.
+\end{theorem}
+\begin{proof}
+For $1\le j\le N$, the cell intersects $(0,1)$ if and only if
+$\beta_{j-1}>0$. Necessity follows from its upper endpoint. Sufficiency
+follows by taking a point strictly between
+$\max(0,\beta_j)$ and $\beta_{j-1}$ when $j<N$, with the endpoint
+case interpreted using $V_N$. The upper endpoint is less than $1$.
+The cell for $0$ intersects $(0,1)$ since $0<\beta_0<1$.
+By \eqref{eq:P05-midpoints} and $\cos(\pi/n)>0$,
+\[
+ \beta_j>0\ \Longleftrightarrow\ 2j+1<n/2
+ \ \Longleftrightarrow\ j<(n-2)/4.
+\]
+Indeed the relevant midpoint angles lie in $(0,\pi)$, where cosine
+changes sign only at $\pi/2$. Hence
+$\beta_{j-1}>0$ is equivalent to $j<(n+2)/4$, giving exactly
+\eqref{eq:P05-jmax}. In particular $J<N$ for every $n\ge5$,
+$\beta_{J-1}>0$, and $\beta_J\le0$. All retained cell intersections
+have nonempty interiors; there is no additional representative reachable
+only through an isolated tie. When $T\ge0$ or $u_*\ge1$ only $0$
+is selected, so neither regime enlarges the list.
+\end{proof}
+
+The parity information, with $n=4\ell+r$ in each row, is exact:
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+$r$ & $J$ & $u_J$ & Nearest representatives at the formal point $u_*=0$\\
+\midrule
+$0$ & $\ell$ & $0$ & $\ell$\\
+$1$ & $\ell$ & $\sin(\pi/(2n))>0$ & $\ell$\\
+$2$ & $\ell$ & $\sin(\pi/n)>0$ & $\ell,\ell+1$\\
+$3$ & $\ell+1$ & $-\sin(\pi/(2n))<0$ & $\ell+1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+To verify the last column independently, the two cosines straddling zero
+in the odd cases are
+\[
+ \begin{array}{ll}
+ n=4\ell+1:&u_\ell=\sin(\pi/(2n)),\quad
+             u_{\ell+1}=-\sin(3\pi/(2n)),\\
+ n=4\ell+3:&u_\ell=\sin(3\pi/(2n)),\quad
+             u_{\ell+1}=-\sin(\pi/(2n)).
+ \end{array}
+\]
+All their arguments are in $(0,\pi/2)$, where sine increases strictly.
+All remaining cosines are farther from zero by monotonicity of the grid.
+For $4\mid n$ there is an exact zero cosine at $j=n/4$, and its cell
+contains a positive interval. This representative is a conjugate pair,
+not the real singleton $n/2$. For $n=4\ell+2$, the straddling values
+are $\pm\sin(\pi/n)$, and $\beta_\ell=0$.
+
+\paragraph{Large restraint at fixed finite dimension.}
+For fixed $C>0$, as $H-G\to+\infty$, the vertex decreases to zero
+and $J$ is the unique dominant representative for all sufficiently large
+finite $H-G$, in every parity class. The formal zero-vertex tie for
+$n=4\ell+2$ is never attained with finite positive $C,H-G$.
+In fact the two competing real parts have the strictly positive,
+$H-G$-independent difference
+\[
+ r_\ell-r_{\ell+1}=2C\sin(\pi/n)>0.
+\]
+Their squared cosines are equal, so this follows directly from
+\eqref{eq:P05-quadratic}. Only a leading-order normalization by $H-G$
+loses that difference. Thus a formal limiting nearest-grid tie must not
+be added to the finite-parameter dominant set. No $n\to\infty$ limit is taken.
+For $n\equiv3\pmod4$, $J$ is the sole reachable representative with a
+negative cosine; for the other residue classes no negative-cosine
+representative is reachable.
+
+\paragraph{Complete regions in one dimensionless parameter.}
+Put $\alpha_j=1/\beta_j$ for $0\le j<J$. Then
+$1<\alpha_0<\cdots<\alpha_{J-1}$, and for \emph{all} real $\chi$
+allowed by the canonical coefficients the entire selection rule is
+\begin{equation}
+ \begin{array}{c|c}
+ \text{Condition}&S\\\hline
+ \chi<\alpha_0&\{0\}\\
+ \alpha_{j-1}<\chi<\alpha_j\quad(1\le j<J)&\{j\}\\
+ \chi>\alpha_{J-1}&\{J\}\\
+ \chi=\alpha_j\quad(0\le j<J)&\{j,j+1\}.
+ \end{array}
+ \label{eq:P05-regions}
+\end{equation}
+The middle row is empty when $J=1$. Negative and zero $\chi$ are covered
+by the first row. For positive $\chi$, the inequalities follow by inverting
+positive midpoint bounds, reversing their order. Thus the continuous
+vertex boundary $\chi=1$ is strictly inside the uniform selection region;
+the first discrete switch is at $\alpha_0>1$.
+
+\subsection{Canonical parameter realization}
+
+The concave condition and vertex in original variables are
+\begin{equation}
+ T<0\ \Longleftrightarrow\ h>\frac{g}{s^2},\qquad
+ u_*=\frac{c/s}{4x^*(h-g/s^2)}
+     =\frac{cs}{4x^*(hs^2-g)},\qquad
+ \chi=\frac{4x^*(hs^2-g)}{cs}.
+ \label{eq:P05-canonical-control}
+\end{equation}
+All denominators in the vertex formula are strictly positive in this
+regime. For $0\le j<J$, the switch equations are exactly
+\begin{equation}
+ H-G=\frac{C}{4\beta_j},\qquad
+ \boxed{h=\frac{g}{(1+x^*)^2}
+       +\frac{c}{4(1+x^*)x^*\beta_j}.}
+ \label{eq:P05-switch}
+\end{equation}
+They are subject to P02's equilibrium condition
+\begin{equation}
+ a-(k+h)x^*+\frac{c-g}{1+x^*}=0.
+ \label{eq:P05-equilibrium}
+\end{equation}
+For $\beta_j\le0$ there is no switch in the $T<0$ regime: division
+by zero is not meaningful and negative $\beta_j$ would require
+$H-G<0$. Such negative-midpoint equalities in the convex regime, if
+realizable as equal lower values, are not dominant-mode switches.
+
+\begin{theorem}[C: Canonical realizability, open cells and switch geometry]
+\label{thm:P05-realization}
+Every strict cell and every switch in \eqref{eq:P05-regions} is nonempty
+in the canonical positive-equilibrium parameter space. Each strict cell
+has a realization persisting on a nonempty open set of positive physical
+parameters $(a,k,c,g,h)$ with a specified smooth positive synchronous
+branch. Both $T>0$ and $T<0$, and the boundary $T=0$, are realizable.
+Every positive-midpoint switch is locally a smooth codimension-one
+hypersurface in physical parameter space along its specified branch;
+all its positive-equilibrium points are regular branch points. No
+nonpositive-midpoint dominant switch is realizable. These are local
+branch statements and assert no global identification of distinct branches.
+\end{theorem}
+\begin{proof}[Proof of realizability]
+Choose any $x>0$, any $c,g>0$, and any desired vertex $v>0$. Define
+\begin{equation}
+ s=1+x,\qquad h=\frac{g}{s^2}+\frac{c}{4sxv},\qquad
+ k>\max\left\{0,\frac{c-g}{sx}-h\right\},\qquad
+ a=(k+h)x-\frac{c-g}{s}.
+ \label{eq:P05-construction}
+\end{equation}
+Then $h,k,a$ are strictly positive: the displayed strict lower bound on
+$k$ is exactly what is required for $a>0$, together with $k>0$.
+There is no upper bound on $k$, so this choice is always possible.
+Equation~\eqref{eq:P05-equilibrium} vanishes identically at $x^*=x$;
+substitution into the original vector field gives, in every component,
+\[
+ ax-kx^2+\frac{cx}{s}-\frac{gx}{s}-hx^2
+ =x\left[a-(k+h)x+\frac{c-g}{s}\right]=0.
+\]
+Also $H-G=c/(4sv)>0$ and $u_*=v$. Hence every retained open
+Voronoi cell and every positive midpoint can be prescribed exactly.
+The construction does not treat $C,G,H$ as independent of an equilibrium.
+
+A particularly simple exact family, used below, is
+\begin{equation}
+ x^*=1,\qquad c=g=4,\qquad h=1+\chi/2,\qquad
+ k>0,\qquad a=k+1+\chi/2,\qquad \chi>-2.
+ \label{eq:P05-simple-family}
+\end{equation}
+Here $C=2$, $G=1$, $H=1+\chi/2$, so the dimensionless parameter
+is exactly the displayed $\chi$. Every positive $\chi$ is realized.
+At $k=1$, choosing $\chi=-1,0,1$ realizes respectively $T>0$,
+$T=0$, and $T<0$ with $u_*=1$, all selecting $0$.
+Thus the uniform region has examples in both sign regimes.
+The geometry and openness assertions are proved next.
+\end{proof}
+
+\subsection{Realizable switch hypersurfaces}
+
+Use the equilibrium coordinates $(x,k,c,g,h)$ on the open set
+\begin{equation}
+ \mathcal U_{\rm eq}=
+ \left\{(x,k,c,g,h)\in(0,\infty)^5:
+     (k+h)x-\frac{c-g}{1+x}>0\right\}.
+ \label{eq:P05-equilibrium-chart}
+\end{equation}
+The map
+\[
+ \Phi(x,k,c,g,h)=\left((k+h)x-\frac{c-g}{1+x},\ k,c,g,h\right)
+\]
+projects this parameterization of the positive equilibrium graph onto
+physical parameters. With $s=1+x$ its Jacobian determinant is
+\begin{equation}
+ \det D\Phi=k+h+\frac{c-g}{s^2}.
+ \label{eq:P05-chart-determinant}
+\end{equation}
+At every point with $H-G>0$, this is
+$k+(h-g/s^2)+c/s^2>0$. Equivalently, for the scalar equilibrium
+function $B(x)=a-(k+h)x+(c-g)/(1+x)$,
+$B_x=-\det D\Phi<0$. The inverse function theorem makes $\Phi$ a
+local diffeomorphism there, and the implicit function theorem gives a
+specified smooth positive branch $x=x^*(a,k,c,g,h)$. This regularity
+uses only the scalar relation, not full-system invertibility or a Hopf result.
+
+Strict inequalities in \eqref{eq:P05-regions} define open subsets of
+$\mathcal U_{\rm eq}$. Every strict cell has a $\chi>0$ point from
+\eqref{eq:P05-construction}, including the uniform cell, so local
+projection supplies a nonempty open set of physical parameters for each.
+In fact every concave-regime point of a strict cell has this local property.
+For a $T>0$ uniform example, the family at $k=1,\chi=-1$ has
+$\det D\Phi=k+h=3/2>0$; strict $T>0$ persists in a neighborhood.
+No global openness assertion at an arbitrary scalar fold in the uniform
+region is required or inferred.
+
+For $\beta_j>0$ define in equilibrium coordinates
+\begin{equation}
+ \Psi_j(x,k,c,g,h)=h-\frac{g}{(1+x)^2}
+                  -\frac{c}{4(1+x)x\beta_j}.
+ \label{eq:P05-level-set}
+\end{equation}
+Its partial derivative with respect to $h$, holding $x,k,c,g$ fixed,
+is exactly $1$. Hence its zero set is a smooth codimension-one regular
+level set within $\mathcal U_{\rm eq}$. It is nonempty by the construction,
+and every one of its points has $H-G>0$, so the local diffeomorphism
+$\Phi$ transfers this conclusion to physical parameter space on the
+chosen branch. Moreover, at fixed $x,c,g,k$,
+\[
+ \frac{\partial\chi}{\partial h}=\frac{4(1+x)x}{c}>0,
+ \qquad
+ \frac{\partial}{\partial h}(r_j-r_{j+1})
+       =-4x(u_j-u_{j+1})\beta_j<0.
+\]
+Here $a$ varies according to \eqref{eq:P05-equilibrium}; this is a
+legitimate direction in physical parameter space. Distinct midpoint
+thresholds and the strict gap to all other representatives at the tie
+show that the two sides locally select $j$ and $j+1$, respectively.
+This proves genuine local changes of dominance, and finishes
+Theorem~\ref{thm:P05-realization}. No global manifold structure after
+forgetting branch labels is claimed.
+
+\subsection{Exact examples and small-dimension checks}
+
+In \eqref{eq:P05-simple-family} take $k=1$. The tuple
+$(a,k,c,g,h)=(2,1,4,4,1)$ selects $0$ in every dimension.
+For $n=8$, $(3,1,4,4,2)$ has $\chi=2$, $u_*=1/2$, and selects
+representative $1$, since
+$\sqrt2/4<1/2<(2+\sqrt2)/4$.
+For $n=6$, $(8/3,1,4,4,5/3)$ has $\chi=4/3=1/\beta_0$ and
+selects exactly labels $\{0,1,5\}$.
+For $n=8$, $(2+\sqrt2,1,4,4,1+\sqrt2)$ has
+$\chi=2\sqrt2=1/\beta_1$ and selects $\{1,2,6,7\}$.
+Every example has $x^*=1$, all five coefficients positive, and original
+DM residual $a-k-h+(c-g)/2=0$.
+
+For exact highest-mode examples across all four residue classes, use
+$k=1$ in the same family with $\chi=2/\beta_{J-1}$. Then
+$u_*=\beta_{J-1}/2\in(0,\beta_{J-1})$, while $\beta_J\le0$,
+so $J$ is strict. In particular the following are exact specifications:
+\begin{center}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+$n$ & $J$ & $\chi$ & $u_J$\\\midrule
+$8$ & $2$ & $4\sqrt2$ & $0$\\
+$9$ & $2$ & $4/\cos(\pi/9)$ & $\sin(\pi/18)$\\
+$10$ & $2$ & $2/[\cos(\pi/10)\cos(3\pi/10)]$ & $\sin(\pi/10)$\\
+$11$ & $3$ & $2/[\cos(\pi/11)\cos(5\pi/11)]$ & $-\sin(\pi/22)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The corresponding tuples are exactly
+$(2+\chi/2,1,4,4,1+\chi/2)$. No numerical search is used.
+
+The next table records the complete representative grid and positive
+midpoints for $5\le n\le12$. Within each row only, write
+$\gamma_r=\cos(r\pi/n)$. All listed midpoint values are exact.
+Their reciprocal values are the switch thresholds in
+\eqref{eq:P05-regions}; the reachable set is $\{0,\ldots,J\}$.
+The terminal midpoint $\beta_J$ is negative except at $n=6,10$,
+where it is zero and unreachable. The five-node row is solely a check;
+the golden-ratio specialization is reserved for P07.
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}c l c l@{}}
+\toprule
+$n$ & $(u_0,\ldots,u_N)$ & $J$ & $(\beta_0,\ldots,\beta_{J-1})$\\
+\midrule
+$5$ & $(1,\gamma_2,-\gamma_1)$ & $1$ & $(\gamma_1^2)$\\
+$6$ & $(1,1/2,-1/2,-1)$ & $1$ & $(3/4)$\\
+$7$ & $(1,\gamma_2,-\gamma_3,-\gamma_1)$ & $2$ & $(\gamma_1^2,\gamma_1\gamma_3)$\\
+$8$ & $(1,\sqrt2/2,0,-\sqrt2/2,-1)$ & $2$ & $((2+\sqrt2)/4,\sqrt2/4)$\\
+$9$ & $(1,\gamma_2,\gamma_4,-1/2,-\gamma_1)$ & $2$ & $(\gamma_1^2,\gamma_1/2)$\\
+$10$ & $(1,\gamma_2,\gamma_4,-\gamma_4,-\gamma_2,-1)$ & $2$ & $(\gamma_1^2,\gamma_1\gamma_3)$\\
+$11$ & $(1,\gamma_2,\gamma_4,-\gamma_5,-\gamma_3,-\gamma_1)$ & $3$ & $(\gamma_1^2,\gamma_1\gamma_3,\gamma_1\gamma_5)$\\
+$12$ & $(1,\sqrt3/2,1/2,0,-1/2,-\sqrt3/2,-1)$ & $3$ & $((2+\sqrt3)/4,(\sqrt3+1)/4,1/4)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Dominant modes versus first instability}
+
+The preceding results concern $\argmax_m r_m$ at a fixed equilibrium.
+The scalar $d$ cancels from that comparison but affects whether the
+maximum is negative, zero, or positive. A first loss of stability would
+require a specified oriented physical path, a positive equilibrium branch,
+a prior interval with $\max_m r_m<0$, and a crossing to a positive
+maximum. Neither a selection switch nor a real-part tie establishes that.
+
+Indeed every reachable switch can occur on a path that stays strictly
+stable. Fix its threshold $\alpha_j$, and choose a compact interval
+$[b_-,b_+]\subset(0,\infty)$ with $\alpha_j$ in its interior and no
+other threshold in it. In \eqref{eq:P05-simple-family} let $\chi$
+increase across this interval, hold $k>b_+/2$ fixed, and keep $x^*=1$.
+The equilibrium is regular, all parameters remain positive, and P04's
+verified equilibrium diagonal gives $d=-k-3$. Thus directly from
+\eqref{eq:P05-input},
+\begin{equation}
+ r_m=-k-3+2\cos\theta_m-\frac\chi2\cos(2\theta_m)
+       \le-k-1+\frac{b_+}{2}<-1.
+ \label{eq:P05-stable-switch}
+\end{equation}
+The dominant representative changes from $j$ to $j+1$, with the exact
+tie at $\alpha_j$, while every mode remains strictly stable. This also
+shows that every strict cell has a stable canonical realization, since
+$k$ can be enlarged without changing $\chi$ or $x^*=1$ in this family.
+No first-instability subresult is asserted; that separate crossing question
+is deferred to P11/P12 under their branch/path gates.
+
+\paragraph{Real-part ties are not eigenvalue coincidences.}
+At every switch P05 proves $r_j=r_{j+1}$ only. P04 supplies the signed
+imaginary parts
+\[
+ \omega_m=-C\sin\theta_m+(G+H)\sin(2\theta_m).
+\]
+For particular labels, equality of the complex eigenvalues would additionally
+require equality of these signed imaginary parts. For conjugate labels the
+sign changes. None of the selection, realization, or geometry proofs needs
+an imaginary-part condition. Numerical eigenvalue simplicity, nonzero
+critical frequency, simultaneous critical pairs and Hopf exclusions remain
+P11's tasks. Counting two or four selected labels does not certify a simple
+pair or a multiple-eigenvalue collision.
+
+\subsection{Checks and possible failure points}
+
+\paragraph{Internal analytic checks.}
+Expansion of \eqref{eq:P05-square}, its derivative, and the explicit
+endpoint differences check the quadratic and continuous regimes.
+The squared-distance difference checks the orientation of every midpoint
+inequality; strict concavity excludes nonadjacent maximal ties.
+The midpoint product in \eqref{eq:P05-midpoints} and the four straddling
+cosine calculations independently check $J$ and the negative-cosine case.
+Equations~\eqref{eq:P05-canonical-control}--\eqref{eq:P05-construction}
+check the canonical substitutions, positivity and original vector-field
+residual. The determinant and $\partial_h\Psi_j=1$ check the branch
+regularity and codimension statements. Singleton bookkeeping uses actual
+Fourier labels; the eigenvalue discussion does not infer simplicity.
+
+\paragraph{Reproducible corroboration.}
+The separately delivered P05 validation support contains a deterministic
+checker, exact rational symbolic identities, high-precision all-label
+comparisons for every $5\le n\le40$, canonical construction residuals,
+and build/provenance records. It samples several points in every strict
+cell, both sides of every switch and the switches themselves, as well as
+$T=0$, $u_*=1$, near-zero vertices and every residue class modulo four.
+Tie inputs are defined by exact trigonometric expressions; numerical
+comparisons at those inputs are still finite-precision corroboration.
+The analytic proofs above do not depend on computed values. Run totals,
+tolerances and environment are recorded in the support output and manifest.
+Compilation and these internal checks do not verify or independently audit P05.
+
+\paragraph{Priority checks for the independent P05 auditor.}
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+\item Authenticate the current P01--P04 closure versions, preserve all their
+bodies, and keep this P05 version DRAFT until independently audited.
+\item Check the signs in the quadratic, square completion and adjacent gap;
+retain mode zero, $T=0$, $u_*=1$, and the actual discrete first threshold.
+\item Check the descending-grid Voronoi inequalities, both endpoint cells,
+all maximal ties, and the exclusion of nonadjacent and triple maxima.
+\item Derive $J=\lfloor(n+1)/4\rfloor$ independently. Inspect the negative
+cosine for $n\equiv3\pmod4$, zero cosine for $4\mid n$, and the unattainable
+zero-midpoint tie for $n\equiv2\pmod4$, including its persistent finite gap.
+\item Verify every constructed coefficient is positive and substitute into
+the original DM equation, rather than treating spectral coefficients as free.
+\item Distinguish openness in equilibrium coordinates from openness after
+projection. Check $\det D\Phi>0$ throughout the concave regime and
+$\partial_h\Psi_j=1$ on each switch; assert only the stated local geometry.
+\item Count singleton and paired labels correctly; real-part ties do not
+establish eigenvalue equality, nonzero frequency, or a simple Hopf pair.
+\item Check the stable switch path and ensure no hidden dependence on
+P07, P08 or P11--P13, no first-instability assertion, and no novelty claim
+for the bare quadratic maximization.
+\end{enumerate}

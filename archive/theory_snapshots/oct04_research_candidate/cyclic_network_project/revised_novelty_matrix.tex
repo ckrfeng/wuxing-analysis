@@ -1,0 +1,191 @@
+% STATUS: PHASE 1B ASSESSMENT; PROJECT THEOREMS REMAIN UNPROVED
+\section{Revised novelty matrix: eight adversarial decisions}
+\label{sec:revised-matrix}
+This matrix replaces the original matrix only for current planning; the
+original file remains preserved. Exact source assumptions, locations and
+access limitations are recorded in Section~\ref{sec:adversarial-audit}.
+RED means known, routine or unsafe as novelty; ORANGE means substantial
+overlap requiring strengthening; YELLOW means a potentially new but modest
+specialization; GREEN would mean an apparently substantive new result;
+GRAY means undetermined. No GREEN finding is warranted. ``Not located''
+is never a positive novelty argument.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.44\textwidth}@{}}
+\toprule
+ID & Target and owners & Verdict & Strongest adverse evidence / present use\\
+\midrule\endhead
+T1 & Demand-modulated model; 00 & GRAY & S13--S18 and older Wu-Xing sources. Coupling priority unresolved; topology and saturation are not new principles.\\
+T2 & Arbitrary-$(n,q)$ spectrum; P03--P04 & RED & S07 general circulant theory, S09 ring formulation. Supporting calculation after the Jacobian is derived.\\
+T3 & $q=2$ quadratic selection; P05 & ORANGE & S03 Proposition~5 and its two-harmonic dispersion. Need realizable parameter regions and dynamical consequences.\\
+T4 & Large-$n$ selected mode; P06 & RED & S03 Proposition~6; fixed-symbol grid maximization is routine. Retain only with useful finite-size/threshold information.\\
+T5 & Matched bilinear comparison; P08 & YELLOW & S05 contains MB at five nodes exactly. Potential novelty is the qualified DM--MB comparison, not MB itself.\\
+T6 & Explicit Lyapunov reduction; P13 & ORANGE & S02 Appendix~D (including cubic terms), S08 Lemma~1. Known method; model-specific sign information may matter.\\
+T7 & Heterogeneous Fourier Green function; P15--P16 & RED & S07 inverse formula and S19 decay theorem. An inverse sum is not a localization theorem.\\
+T8 & Robustness bounds; P17--P18 & RED & S10--S11, S20--S21. Generic gap and derivative formulas are known; sharp structured nonlinear bounds remain a separate proposal.\\
+\bottomrule
+\end{longtable}
+
+\subsection{T1: demand-modulated model --- GRAY}
+\begin{description}[style=nextline]
+\item[Exact published statement?] Undetermined. No inspected source has
+been established as equation-identical to DM; the highest-risk enzymatic
+papers lack accessible complete equations. This is a gap, not a novelty finding.
+\item[Immediate corollary?] A modeling definition is not a theorem corollary.
+It may nevertheless be a reparameterization, restriction or rearrangement of
+an existing kinetic family; that comparison is unfinished.
+\item[Routine supporting specialization?] The cyclic/five-element topology,
+activation/restriction motifs and saturation alone are known ingredients.
+\item[Known method, new closed form?] Possibly a new combination of known
+kinetic factors; neither provenance nor mathematical value is settled.
+\item[Substantive model-specific novelty?] Not established. ``Demand-modulated''
+is the frozen descriptive name, not evidence of a new physical law.
+\item[Likely referee response?] Ask why these fractions are appropriate and
+what consequences they have beyond existing biochemical laws.
+\item[Required sharpening.] Complete the S13--S16 equation comparison and
+show a specific dynamical contrast under a transparent MB calibration.
+Do not rename the term as standard Holling type II or use biomedical
+interpretation as mathematical evidence.
+\end{description}
+
+\subsection{T2: \texorpdfstring{arbitrary-$(n,q)$}{arbitrary-(n,q)} Fourier spectrum --- RED}
+\begin{description}[style=nextline]
+\item[Exact published statement?] The general diagonalization theorem is
+published (S07). The displayed DM coefficients have not been verified here.
+\item[Immediate corollary?] Yes, conditional on establishing that the actual
+homogeneous Jacobian is the claimed circulant polynomial in the shift.
+\item[Routine supporting specialization?] Yes: spectrum, normality and
+the modal Hurwitz test belong in the supporting analysis.
+\item[Known method, new closed form?] The substitution may produce a
+model-specific expression, not a new spectral method.
+\item[Substantive model-specific novelty?] No on the present formulation.
+\item[Likely referee response?] Fourier diagonalization of a circulant is
+standard; arbitrary offsets do not remove that objection.
+\item[Required sharpening.] Use this lemma to support P05/P08/P11. A
+genuinely new classification for other $q$ would be separate work and is
+not needed in the recommended core.
+\end{description}
+
+\subsection{T3: exact quadratic mode selection --- ORANGE}
+\begin{description}[style=nextline]
+\item[Exact published statement?] Not verified for the DM coefficient
+family. S03 already contains a close two-harmonic selection problem.
+\item[Immediate corollary?] The basic quadratic maximization is an elementary
+consequence of a verified quadratic symbol; the admissible DM parameter
+classification and first-instability interpretation are additional tasks.
+\item[Routine supporting specialization?] A nearest-cosine rule alone is
+routine and should not be presented as a major discovery.
+\item[Known method, new closed form?] Yes, potentially. The coefficient
+map and its admissible regions may be a new specialization.
+\item[Substantive model-specific novelty?] A candidate only if mode regions,
+their realizability and a consequential DM--MB contrast are established.
+\item[Likely referee response?] Why is optimizing this quadratic materially
+different from the Lorenz--96 example?
+\item[Required sharpening.] P05 proposal S05 in the decisions file: classify
+all admissible maximizing mode pairs, ties and exceptional real modes,
+then connect the classification to an actual first-instability path.
+Do not infer Hopf from dominance alone.
+\end{description}
+
+\subsection{T4: large-network selected-wave-number limit --- RED}
+\begin{description}[style=nextline]
+\item[Exact published statement?] S03 Proposition~6 establishes an analogous
+explicit limit for Lorenz--96; a DM-specific limit has not been certified.
+\item[Immediate corollary?] For a fixed continuous symbol with a unique
+maximizer, convergence of grid maximizers is generic. Multiple maximizers
+and size-dependent parameters require different statements.
+\item[Routine supporting specialization?] Yes for the basic ratio limit.
+\item[Known method, new closed form?] At most a new coefficient substitution.
+\item[Substantive model-specific novelty?] Not the limit alone. Finite-size
+instability consequences may be useful as part of the core classification.
+\item[Likely referee response?] Dense sampling does not itself justify a
+principal asymptotic theorem.
+\item[Required sharpening.] P06 proposal S06: quantitative uniform error
+for both selected angle and first threshold under explicit nondegeneracy,
+with boundaries of applicability identified. Even those estimates need
+interpretive value; adding an error order alone does not earn GREEN.
+\end{description}
+
+\subsection{T5: exact matched-bilinear comparison --- YELLOW}
+\begin{description}[style=nextline]
+\item[Exact published statement?] MB at $n=5,q=2$ is exactly contained in
+S05. The intended comparison with DM was not found in the inspected corpus;
+full priority remains dependent on T1 and the enzymatic sequence.
+\item[Immediate corollary?] MB formulas follow familiar cyclic polynomial
+analysis. A nonempty region with a specified qualitative contrast is not
+supplied merely by the comparator's definition.
+\item[Routine supporting specialization?] Separate equilibrium and spectrum
+tables would be modest supporting work.
+\item[Known method, new closed form?] Yes, potentially a new comparative
+specialization. YELLOW is conditional and does not certify originality.
+\item[Substantive model-specific novelty?] Possible after a contrast theorem,
+not presently demonstrated. Equal parameter count and graph do not ensure
+equal equilibrium, response scale or Jacobian signs.
+\item[Likely referee response?] Is the contrast robust or an arbitrary
+consequence of comparing differently calibrated regimes?
+\item[Required sharpening.] P08 proposal S08: freeze the comparison rule
+and classify a nonempty open regime with a genuine mode, bifurcation-type,
+or criticality distinction; delimit existence of both branches.
+\end{description}
+
+\subsection{T6: first Lyapunov coefficient --- ORANGE}
+\begin{description}[style=nextline]
+\item[Exact published statement?] S02 and S08 publish Fourier reductions;
+S02 already includes cubic contributions. No DM coefficient is verified here.
+\item[Immediate corollary?] The contraction/selection-rule method is standard
+once Taylor tensors, inverses and a simple Hopf setting are justified.
+\item[Routine supporting specialization?] A long substituted formula is
+usually supporting calculation, even if algebraically laborious.
+\item[Known method, new closed form?] This is the most defensible description
+of a future DM formula; its closed-form priority is not established.
+\item[Substantive model-specific novelty?] A uniform or sharply delimited
+criticality classification may be substantive. No sign theorem is supplied.
+\item[Likely referee response?] What does the formula decide that the general
+Hopf machinery or a single numerical evaluation does not?
+\item[Required sharpening.] P13 proposal S13: rigorous sign/nonvanishing
+on a meaningful positive parameter region, all selected modes covered by
+the claimed range, and explicit exclusions. Do not promise a Bautin point
+without its further nondegeneracy conditions.
+\end{description}
+
+\subsection{T7: heterogeneous Fourier Green function --- RED}
+\begin{description}[style=nextline]
+\item[Exact published statement?] The general inverse-circulant identity is
+known (S07). A DM forcing numerator may be model-specific.
+\item[Immediate corollary?] The linear response follows differentiation
+of a nonsingular equilibrium equation and diagonal inversion.
+\item[Routine supporting specialization?] Yes; localized forcing does not
+automatically imply quantitatively localized response.
+\item[Known method, new closed form?] Yes for the coefficient specialization;
+that alone has little novelty. S19 supplies a stronger decay baseline.
+\item[Substantive model-specific novelty?] Only a sharpened directional,
+uniform or critical-scaling result with controlled nonlinear error is a
+candidate. It must improve on, not merely restate, generic decay theory.
+\item[Likely referee response?] Why is this more than an inverse DFT?
+\item[Required sharpening.] P16 proposal S16. Specify graph distance,
+parameter family and constants independent of size where claimed.
+Distinguish static sensitivity near zero eigenvalues from resonant
+harmonic response near a nonzero-frequency Hopf point.
+\end{description}
+
+\subsection{T8: robustness bounds and threshold shifts --- RED}
+\begin{description}[style=nextline]
+\item[Exact published statement?] Generic matrix-gap, resolvent and simple
+eigenvalue derivative results are published (S10--S11/S21); the specific
+nonlinear parameter certificate is not established here.
+\item[Immediate corollary?] The unstructured normal-matrix estimate and a
+first-order shift at a simple transverse crossing are routine applications.
+\item[Routine supporting specialization?] Yes for a loose sufficient bound
+or a left/right eigenvector derivative without further consequences.
+\item[Known method, new closed form?] Possibly a useful parameter-level
+formula, provided equilibrium displacement and remainder are controlled.
+\item[Substantive model-specific novelty?] A sharp certificate for an actual
+coefficient uncertainty class is a candidate; no such result is yet verified.
+\item[Likely referee response?] Is this just a spectral margin divided by
+a rough Lipschitz constant? Is the purported pattern effect nonzero under
+the imposed zero-mean constraints?
+\item[Required sharpening.] P18 proposal S18: explicit structured parameter
+radius with positivity/local existence and equilibrium motion included;
+quantify conservatism or sharp scaling. Compare any disorder-stabilization
+or second-order mode-mixing claim against S24. Do not identify a general
+full-block stability radius with a repeated/diagonal coefficient radius.
+\end{description}

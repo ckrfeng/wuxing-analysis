@@ -1,0 +1,2198 @@
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/plot_bifurcation.py
+SHA256: 6dbb45bc0ed279357bc9cedd838a0fd52c14e5cc8c187e6984ba3feaa674a3c8
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/wuxing.f90
+SHA256: d4a0feb85fc7ed801cf09d7f81a12e3a54dd2c9b61d9b03afe5698881010393a
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: ! Parameters (PAR array, must match c.wuxing ordering):
+10: !   6:  th0  (uniform baseline set point theta_i^0)
+31:   DOUBLE PRECISION :: hill_prod1, hill_up1
+32:   DOUBLE PRECISION :: hill_prod2, hill_up2
+33:   DOUBLE PRECISION :: hill_prod3, hill_up3
+34:   DOUBLE PRECISION :: hill_prod4, hill_up4
+35:   DOUBLE PRECISION :: hill_prod5, hill_up5
+51:   eps = PAR(11)
+56:   th1 = th0 + alp*x5 - bet*x4
+57:   th2 = th0 + alp*x1 - bet*x5
+58:   th3 = th0 + alp*x2 - bet*x1
+59:   th4 = th0 + alp*x3 - bet*x2
+60:   th5 = th0 + alp*x4 - bet*x3
+63:   th1 = MAX(th1, 1.0D-6)
+64:   th2 = MAX(th2, 1.0D-6)
+65:   th3 = MAX(th3, 1.0D-6)
+66:   th4 = MAX(th4, 1.0D-6)
+67:   th5 = MAX(th5, 1.0D-6)
+77:   hill_prod1 = a*x1*thn1 / (thn1 + xn1)
+78:   hill_prod2 = a*x2*thn2 / (thn2 + xn2)
+79:   hill_prod3 = a*x3*thn3 / (thn3 + xn3)
+80:   hill_prod4 = a*x4*thn4 / (thn4 + xn4)
+81:   hill_prod5 = a*x5*thn5 / (thn5 + xn5)
+84:   hill_up1 = uu*thn1 / (thn1 + xn1)
+85:   hill_up2 = uu*thn2 / (thn2 + xn2)
+86:   hill_up3 = uu*thn3 / (thn3 + xn3)
+87:   hill_up4 = uu*thn4 / (thn4 + xn4)
+88:   hill_up5 = uu*thn5 / (thn5 + xn5)
+94:   F(1) = hill_prod1 + hill_up1 &
+100:   F(2) = hill_prod2 + hill_up2 &
+106:   F(3) = hill_prod3 + hill_up3 &
+112:   F(4) = hill_prod4 + hill_up4 &
+118:   F(5) = hill_prod5 + hill_up5 &
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/find_eq.py
+SHA256: c3da0f401177531c45166c1950178f5dbb470b2ee6e5ea19d63a998bb0620d7e
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+5: def rhs(x, a=2.0, u=0.5, c=1.0, g=0.5, h=0.3,
+6:         th0=1.0, alp=0.1, bet=0.1, nh=2.0, w=0.0, eps=0.5):
+20:     def hill_p(xi, thi):
+21:         return a*xi * thi**nh / (thi**nh + xi**nh)
+23:     def hill_u(xi, thi):
+24:         return u * thi**nh / (thi**nh + xi**nh)
+36:         fi = (hill_p(xv[i], th[i])
+37:             + hill_u(xv[i], th[i])
+39:             - g*xv[i]/(1+xtar[i])
+41:             - w*xtar[i]/(1 + xv[i]/eps))
+43:     return f
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_ADAPT/c.wuxing
+SHA256: 4cb681301ca6951d65e8b04ad5dc1c4839d1ccad773a28bf0d52d7035119fd7b
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+1: NDIM  = 5
+2: IPS   = 1
+6: ICP   = [9]
+8: NTST  = 1
+9: NCOL  = 4
+12: DS    =  0.05
+16: NMX   = 500
+17: NPR   = 10
+22: EPSL  = 1.0E-7
+23: EPSU  = 1.0E-7
+24: EPSS  = 1.0E-5
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/find_eq2.py
+SHA256: 18c734157cad2a276fc32ad499989975616cee66883b7feb7c3056bbf058233c
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: def rhs(x, a=2.0, k=0.5, c=1.0, g=0.5, h=0.3):
+6:     f1 = a*x1 - k*x1**2 + c*x5/(1+x1) - g*x1/(1+x3) - h*x1*x4
+7:     f2 = a*x2 - k*x2**2 + c*x1/(1+x2) - g*x2/(1+x4) - h*x2*x5
+8:     f3 = a*x3 - k*x3**2 + c*x2/(1+x3) - g*x3/(1+x5) - h*x3*x1
+9:     f4 = a*x4 - k*x4**2 + c*x3/(1+x4) - g*x4/(1+x1) - h*x4*x2
+10:     f5 = a*x5 - k*x5**2 + c*x4/(1+x5) - g*x5/(1+x2) - h*x5*x3
+11:     return [f1,f2,f3,f4,f5]
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/plot2.py
+SHA256: 4b91b44d0d25cefdf8161e861ac843c8b68b6d3d6d2da1c480d5272ee33be52f
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+22:     return branches
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/c.wuxing2
+SHA256: 3d975c83fcb63596c0983c4e4acd1c6bb9128310669c030d46bc45a15003c547
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+1: NDIM  = 5
+2: IPS   = 1
+6: ICP   = [1]
+8: DS    =  0.05
+12: NMX   = 500
+13: NPR   = 10
+18: EPSL  = 1.0E-7
+19: EPSU  = 1.0E-7
+20: EPSS  = 1.0E-5
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/AUTO/WUXING_SIMPLE/wuxing2.f90
+SHA256: 3e8d0bf374961c66b1ec09251bccddd534ebf6cc872a175497bcd24263fc4baf
+PROPOSED STATUS: experiment_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+29:   F(1) = a*x1 - k*x1**2 + c*x5/(1.0D0+x1) - g*x1/(1.0D0+x3) - h*x1*x4
+30:   F(2) = a*x2 - k*x2**2 + c*x1/(1.0D0+x2) - g*x2/(1.0D0+x4) - h*x2*x5
+31:   F(3) = a*x3 - k*x3**2 + c*x2/(1.0D0+x3) - g*x3/(1.0D0+x5) - h*x3*x1
+32:   F(4) = a*x4 - k*x4**2 + c*x3/(1.0D0+x4) - g*x4/(1.0D0+x1) - h*x4*x2
+33:   F(5) = a*x5 - k*x5**2 + c*x4/(1.0D0+x5) - g*x5/(1.0D0+x2) - h*x5*x3
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/WuXing_OrderedSampling.ipynb
+SHA256: d3d84e3997c2ed4ce268da330dc47745e2c3768a51d6728f2302e9f94b6b1854
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+7:     return a/M if M>0 else np.nan
+9: def jac_lin(xv,a,b,c,d,g,h):
+16:     return J
+19:     A=k+h; B=(k+h)-a; C=-(a+c-g); D=B*B-4*A*C
+20:     if D<0: return np.nan
+22:     return r if r>0 else np.nan
+24: def jac_sat(xv,a,k,c,g,h):
+31:     return J
+38:         if not np.isfinite(xe) or xe<=0: return np.nan
+39:         return max(np.linalg.eigvals(jac_lin(np.full(5,xe),*p)).real)
+42:     if not np.isfinite(xe) or xe<=0: return np.nan
+43:     return max(np.linalg.eigvals(jac_sat(np.full(5,xe),*p)).real)
+46: def draw(r,scheme,lo=0.1,hi=2.0,max_tries=10000):
+57:         return dict(SELF=SELF,SAT=SAT,SHENG=SHENG,RESTR=RESTR,TGT=TGT,CHILD=CHILD)
+60: def run_scheme(scheme,N=4000,seed=3,lo=0.1,hi=2.0):
+61:     r=np.random.default_rng(seed)
+69:     return out
+75:     R=run_scheme(sc,4000,seed=3); resA[sc]=R
+82: x=np.arange(len(schemes)); w=0.38
+100: TIERS={"SELF":(1.0,2.0),"SHENG":(0.5,1.5),"SAT":(0.3,1.0),
+103: def run_tiered(N=6000,seed=0,T=TIERS):
+104:     r=np.random.default_rng(seed)
+112:     return out
+114: RT=run_tiered(6000,seed=0)
+127:     T={}
+128:     for k,(lo,hi) in TIERS.items():
+131:     R=run_tiered(3000,seed=5,T=T)
+137: x=np.arange(len(rows)); w=0.38
+167: x=np.arange(len(allrows)); w=0.38
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/WuXing_Commented2.ipynb
+SHA256: c4310a860fc407f4d966398414a53976bf1476927d71f24cb8af11aca08bc8bc
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+5: from scipy.integrate import solve_ivp     # solves differential equations numerically
+13: # Baseline parameter values, one tuple per model.
+14: P_LIN = (1, 1, 1, 1, 1, 1)          # Lin's "Case 1": a=b=c=d=g=h=1
+15: P_SAT = (2, 0.5, 1, 0.5, 0.3)       # ours: a=2, k=0.5, c=1, g=0.5, h=0.3
+25:     return (i - 1) % 5
+29:     return (i + 1) % 5
+33:     return (i - 2) % 5
+37:     return (i + 2) % 5
+53: def rhs_lin(t, x, a, b, c, d, g, h):
+54:     # `t` (time) is unused, but solve_ivp requires it as the first argument.
+64:         growth      =  a * me                 # self-production, proportional to size
+71:         rates[i] = growth + crowding + nourishment + suppressed + feeding + restraining
+73:     return rates
+82: def rhs_sat(t, x, a, k, c, g, h):
+91:         growth   =  a * me                    # same self-production as before
+106:         rates[i] = growth + crowding + nourishment + over_acting + suppressed
+108:     return rates
+110: # Quick check that both functions run and return five numbers.
+112: print("Lin  rates:", np.round(rhs_lin(0, test_state, *P_LIN), 3))
+113: print("Ours rates:", np.round(rhs_sat(0, test_state, *P_SAT), 3))
+117:     # Setting every organ equal reduces Lin's system to  0 = a*x - M*x^2,
+124:         return np.nan
+126:     return a / M                              # the balanced level
+130:     # For our model the same substitution gives a quadratic  A*x^2 + B*x + C = 0.
+135:     discriminant = B * B - 4 * A * C          # the bit under the square root
+137:         return np.nan                         # no real solution at all
+140:     return root if root > 0 else np.nan       # only a positive level is meaningful
+144: x_lin = balanced_state_lin(*P_LIN)
+145: x_sat = balanced_state_sat(*P_SAT)
+151: def jacobian_lin(state, a, b, c, d, g, h):
+160:         J[i, i] = (a                          # from  a*x
+173:     return J
+176: def jacobian_sat(state, a, k, c, g, h):
+200:     return J
+208:         if np.isnan(level): return np.nan
+212:         if np.isnan(level): return np.nan
+216:     return max(eigenvalues.real)               # ".real" drops the imaginary part
+219: def finite_difference_jacobian(rhs, x, params, eps=1e-7):
+221:     n = len(x)
+223:     baseline = rhs(0, x, *params)              # rates before any nudge
+228:         J[:, j] = (rhs(0, nudged, *params) - baseline) / eps   # rise over run
+230:     return J
+233: rng = np.random.default_rng(0)
+242:     p_lin = tuple(rng.uniform(0.1, 2.0, 6))
+243:     hand_lin = jacobian_lin(state, *p_lin)
+244:     num_lin  = finite_difference_jacobian(rhs_lin, state, p_lin)
+248:     p_sat = tuple(rng.uniform(0.1, 2.0, 5))
+249:     hand_sat = jacobian_sat(state, *p_sat)
+250:     num_sat  = finite_difference_jacobian(rhs_sat, state, p_sat)
+260: # Eigenvalues for each model at its own baseline.
+261: eig_lin = np.linalg.eigvals(jacobian_lin(x_lin, *P_LIN))
+262: eig_sat = np.linalg.eigvals(jacobian_sat(x_sat, *P_SAT))
+315:     solution = solve_ivp(rhs,                     # the model
+319:                          t_eval=np.linspace(0, duration, 2000),   # when to record
+320:                          rtol=1e-9, atol=1e-11)   # accuracy settings
+324:     return solution, deviation
+331:         ("Lin (bilinear)",     rhs_lin, P_LIN, x_lin),
+332:         ("Saturating (ours)",  rhs_sat, P_SAT, x_sat)]):
+352:         ("Lin, small",     rhs_lin, P_LIN, x_lin, "small"),
+353:         ("Lin, severe",    rhs_lin, P_LIN, x_lin, "severe"),
+354:         ("Ours, small",    rhs_sat, P_SAT, x_sat, "small"),
+355:         ("Ours, severe",   rhs_sat, P_SAT, x_sat, "severe")]:
+367:     for rhs, params, level in [(rhs_lin, P_LIN, x_lin), (rhs_sat, P_SAT, x_sat)]:
+382: sheng_values   = np.linspace(0.3, 1.6, GRID)   # nourishment strength, left to right
+383: restraint_values = np.linspace(0.1, 1.0, GRID) # restraint strength, bottom to top
+386: map_lin = np.full((GRID, GRID), np.nan)
+387: map_sat = np.full((GRID, GRID), np.nan)
+392:         map_lin[row, col] = max_growth_rate("lin", (1.5, 0.65, sheng, restraint, 0.3, 0.3))
+394:         map_sat[row, col] = max_growth_rate("sat", (1.5, 0.65, sheng, 0.3, restraint))
+398: scale = np.nanpercentile(np.abs(np.concatenate([map_lin.ravel(), map_sat.ravel()])), 90)
+401: for ax, grid_values, title in [(axes[0], map_lin, "Lin (bilinear)"),
+402:                                (axes[1], map_sat, "Saturating (ours)")]:
+429:         return {"SELF":  rng.uniform(1.0, 2.0),   # self-production: the biggest
+448:         return {"SELF": SELF, "SAT": SAT, "SHENG": SHENG,
+456:         return (q["SELF"], q["SAT"], q["SHENG"], q["RESTR"], q["CHILD"], q["TGT"])
+458:     return (q["SELF"], q["SAT"], q["SHENG"], q["TGT"], q["RESTR"])
+461: def run_random_test(scheme, n_draws=1500, seed=3):
+463:     rng = np.random.default_rng(seed)             # seeded, so results repeat exactly
+478:     return tally
+503: positions = np.arange(len(schemes))       # x positions: 0, 1, 2
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/comments.ipynb
+SHA256: 37409cdd909a2a317ec0fada47f98de0d94c13c24867a474a0276b4e24fbd327
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+5: from scipy.integrate import solve_ivp     # solves differential equations numerically
+13: # Baseline parameter values, one tuple per model.
+14: P_LIN = (1, 1, 1, 1, 1, 1)          # Lin's "Case 1": a=b=c=d=g=h=1
+15: P_SAT = (2, 0.5, 1, 0.5, 0.3)       # ours: a=2, k=0.5, c=1, g=0.5, h=0.3
+25:     return (i - 1) % 5
+29:     return (i + 1) % 5
+33:     return (i - 2) % 5
+37:     return (i + 2) % 5
+53: def rhs_lin(t, x, a, b, c, d, g, h):
+54:     # `t` (time) is unused, but solve_ivp requires it as the first argument.
+64:         growth      =  a * me                 # self-production, proportional to size
+71:         rates[i] = growth + crowding + nourishment + suppressed + feeding + restraining
+73:     return rates
+82: def rhs_sat(t, x, a, k, c, g, h):
+91:         growth   =  a * me                    # same self-production as before
+106:         rates[i] = growth + crowding + nourishment + over_acting + suppressed
+108:     return rates
+110: # Quick check that both functions run and return five numbers.
+112: print("Lin  rates:", np.round(rhs_lin(0, test_state, *P_LIN), 3))
+113: print("Ours rates:", np.round(rhs_sat(0, test_state, *P_SAT), 3))
+117:     # Setting every organ equal reduces Lin's system to  0 = a*x - M*x^2,
+124:         return np.nan
+126:     return a / M                              # the balanced level
+130:     # For our model the same substitution gives a quadratic  A*x^2 + B*x + C = 0.
+135:     discriminant = B * B - 4 * A * C          # the bit under the square root
+137:         return np.nan                         # no real solution at all
+140:     return root if root > 0 else np.nan       # only a positive level is meaningful
+144: x_lin = balanced_state_lin(*P_LIN)
+145: x_sat = balanced_state_sat(*P_SAT)
+151: def jacobian_lin(level, a, b, c, d, g, h):
+159:         J[i, i] = (a                          # from  a*x
+172:     return J
+175: def jacobian_sat(level, a, k, c, g, h):
+199:     return J
+207:         if np.isnan(level): return np.nan
+211:         if np.isnan(level): return np.nan
+215:     return max(eigenvalues.real)               # ".real" drops the imaginary part
+218: def finite_difference_jacobian(rhs, x, params, eps=1e-7):
+220:     n = len(x)
+222:     baseline = rhs(0, x, *params)              # rates before any nudge
+227:         J[:, j] = (rhs(0, nudged, *params) - baseline) / eps   # rise over run
+229:     return J
+232: rng = np.random.default_rng(0)
+257: # Eigenvalues for each model at its own baseline.
+258: eig_lin = np.linalg.eigvals(jacobian_lin(x_lin, *P_LIN))
+259: eig_sat = np.linalg.eigvals(jacobian_sat(x_sat, *P_SAT))
+312:     solution = solve_ivp(rhs,                     # the model
+316:                          t_eval=np.linspace(0, duration, 2000),   # when to record
+317:                          rtol=1e-9, atol=1e-11)   # accuracy settings
+321:     return solution, deviation
+328:         ("Lin (bilinear)",     rhs_lin, P_LIN, x_lin),
+329:         ("Saturating (ours)",  rhs_sat, P_SAT, x_sat)]):
+349:         ("Lin, small",     rhs_lin, P_LIN, x_lin, "small"),
+350:         ("Lin, severe",    rhs_lin, P_LIN, x_lin, "severe"),
+351:         ("Ours, small",    rhs_sat, P_SAT, x_sat, "small"),
+352:         ("Ours, severe",   rhs_sat, P_SAT, x_sat, "severe")]:
+364:     for rhs, params, level in [(rhs_lin, P_LIN, x_lin), (rhs_sat, P_SAT, x_sat)]:
+379: sheng_values   = np.linspace(0.3, 1.6, GRID)   # nourishment strength, left to right
+380: restraint_values = np.linspace(0.1, 1.0, GRID) # restraint strength, bottom to top
+383: map_lin = np.full((GRID, GRID), np.nan)
+384: map_sat = np.full((GRID, GRID), np.nan)
+389:         map_lin[row, col] = max_growth_rate("lin", (1.5, 0.65, sheng, restraint, 0.3, 0.3))
+391:         map_sat[row, col] = max_growth_rate("sat", (1.5, 0.65, sheng, 0.3, restraint))
+395: scale = np.nanpercentile(np.abs(np.concatenate([map_lin.ravel(), map_sat.ravel()])), 90)
+398: for ax, grid_values, title in [(axes[0], map_lin, "Lin (bilinear)"),
+399:                                (axes[1], map_sat, "Saturating (ours)")]:
+426:         return {"SELF":  rng.uniform(1.0, 2.0),   # self-production: the biggest
+445:         return {"SELF": SELF, "SAT": SAT, "SHENG": SHENG,
+453:         return (q["SELF"], q["SAT"], q["SHENG"], q["RESTR"], q["CHILD"], q["TGT"])
+455:     return (q["SELF"], q["SAT"], q["SHENG"], q["TGT"], q["RESTR"])
+458: def run_random_test(scheme, n_draws=1500, seed=3):
+460:     rng = np.random.default_rng(seed)             # seeded, so results repeat exactly
+475:     return tally
+500: positions = np.arange(len(schemes))       # x positions: 0, 1, 2
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/code_for_stability.ipynb
+SHA256: 8541ac355b02f64dc8c15a941c8d9283edb5b0d4299aa75037b45a91e285fb28
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: from scipy.integrate import solve_ivp
+7: P_LIN=(1,1,1,1,1,1)          # Lin's own Case 1
+8: P_SAT=(2,0.5,1,0.5,0.3)      # our paper's parameter table
+12: def rhs_lin(t,x,a,b,c,d,g,h):
+14:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+19:     return a/M if M>0 else np.nan
+21: def jac_lin(xv,a,b,c,d,g,h):
+28:     return J
+31: def rhs_sat(t,x,a,k,c,g,h):
+33:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+37:     A=k+h; B=(k+h)-a; C=-(a+c-g); D=B*B-4*A*C
+38:     if D<0: return np.nan
+40:     return r if r>0 else np.nan
+42: def jac_sat(xv,a,k,c,g,h):
+49:     return J
+54:         if not np.isfinite(xe) or xe<=0: return np.nan
+55:         return max(np.linalg.eigvals(jac_lin(np.full(5,xe),*p)).real)
+57:     if not np.isfinite(xe) or xe<=0: return np.nan
+58:     return max(np.linalg.eigvals(jac_sat(np.full(5,xe),*p)).real)
+60: xl=eq_lin(*P_LIN); xs=eq_sat(*P_SAT)
+65: el=np.linalg.eigvals(jac_lin(np.full(5,xl),*P_LIN))
+66: Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+93:     s=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+94:                 t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+95:     return s,np.linalg.norm(s.y-xstar,axis=0)
+98: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+99:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+110: for nm,rhs,p,xst,mode in [("Lin small",rhs_lin,P_LIN,xl,"small"),
+111:                           ("Lin severe",rhs_lin,P_LIN,xl,"severe"),
+112:                           ("Ours small",rhs_sat,P_SAT,xs,"small"),
+113:                           ("Ours severe",rhs_sat,P_SAT,xs,"severe")]:
+123:     s=solve_ivp(rhs,(0,T),x0,args=p,method="RK45",
+124:                 t_eval=np.linspace(0,T,2000),rtol=1e-9,atol=1e-11)
+125:     return s, np.linalg.norm(s.y-xstar,axis=0)     # deviation from balance
+129: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+130:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+154: NG=90
+155: c_vals=np.linspace(0.3,1.6,NG)    # SHENG
+156: r_vals=np.linspace(0.1,1.0,NG)    # RESTR (Lin d, ours h)
+184: def _pk(v): return np.where((v[1:-1]>v[:-2])&(v[1:-1]>v[2:]))[0]+1
+189: def regime(rhs,p,x0=(1,2,3,4,5),T=200,dt=0.1,cap=100.0):
+193:         s=solve_ivp(rhs,(0,T),list(x0),args=p,method="LSODA",
+194:                     t_eval=np.arange(0,T,dt),rtol=1e-6,atol=1e-8,events=ev)
+195:     except Exception: return "blowup"
+196:     if s.status==1 or not s.success: return "blowup"
+199:         return "blowup"
+200:     if (tail.max(1)-tail.min(1)).max()<1e-3: return "fixed"
+202:     if len(pk)<4: return "periodic"
+205:         return "periodic"
+206:     return "chaotic"
+208: NR=6    # raise (Colab: 8-10 is fine) for a finer regime map (slower)
+209: cr=np.linspace(0.3,1.6,NR); rr=np.linspace(0.1,1.0,NR)
+230: TIERS={"SELF":(1.0,2.0),"SHENG":(0.5,1.5),"SAT":(0.3,1.0),
+234:     if model=="lin": return (d["SELF"],d["SAT"],d["SHENG"],d["RESTR"],d["CHILD"],d["TGT"])
+235:     return (d["SELF"],d["SAT"],d["SHENG"],d["TGT"],d["RESTR"])
+237: def draw(r,scheme,lo=0.1,hi=2.0):
+239:         return {k:r.uniform(*v) for k,v in TIERS.items()}
+245:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+247: def mc(scheme,N=4000,seed=3):
+248:     r=np.random.default_rng(seed)
+256:     return out
+261:     if n==0: return (0.0,0.0)
+265:     return (ctr-half, ctr+half)
+285: x=np.arange(len(schemes)); w=0.38
+318: r=np.random.default_rng(1)
+348:     s=solve_ivp(rhs,(0,150),x0,args=p,method="RK45",
+349:                 t_eval=np.linspace(0,150,4000),rtol=1e-9,atol=1e-11)
+360: show(rhs_lin,P_LIN,xl,"LIN at its baseline — perturbation grows (unstable)")
+361: show(rhs_sat,P_SAT,xs,"OURS at baseline — returns to balance (stable)")
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/WuXing_Master.ipynb
+SHA256: 734181c11115af39a3e8c709daf5c119a31e8391cb399e6a562bb02ae8fc1860
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: from scipy.integrate import solve_ivp
+7: P_LIN=(1,1,1,1,1,1)          # Lin's own Case 1
+8: P_SAT=(2,0.5,1,0.5,0.3)      # our paper's parameter table
+12: def rhs_lin(t,x,a,b,c,d,g,h):
+14:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+19:     return a/M if M>0 else np.nan
+21: def jac_lin(xv,a,b,c,d,g,h):
+28:     return J
+31: def rhs_sat(t,x,a,k,c,g,h):
+33:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+37:     A=k+h; B=(k+h)-a; C=-(a+c-g); D=B*B-4*A*C
+38:     if D<0: return np.nan
+40:     return r if r>0 else np.nan
+42: def jac_sat(xv,a,k,c,g,h):
+49:     return J
+54:         if not np.isfinite(xe) or xe<=0: return np.nan
+55:         return max(np.linalg.eigvals(jac_lin(np.full(5,xe),*p)).real)
+57:     if not np.isfinite(xe) or xe<=0: return np.nan
+58:     return max(np.linalg.eigvals(jac_sat(np.full(5,xe),*p)).real)
+60: xl=eq_lin(*P_LIN); xs=eq_sat(*P_SAT)
+65: el=np.linalg.eigvals(jac_lin(np.full(5,xl),*P_LIN))
+66: Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+93:     s=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+94:                 t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+95:     return s,np.linalg.norm(s.y-xstar,axis=0)
+98: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+99:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+110: for nm,rhs,p,xst,mode in [("Lin small",rhs_lin,P_LIN,xl,"small"),
+111:                           ("Lin severe",rhs_lin,P_LIN,xl,"severe"),
+112:                           ("Ours small",rhs_sat,P_SAT,xs,"small"),
+113:                           ("Ours severe",rhs_sat,P_SAT,xs,"severe")]:
+119: NG=90
+120: c_vals=np.linspace(0.3,1.6,NG)    # SHENG
+121: r_vals=np.linspace(0.1,1.0,NG)    # RESTR (Lin d, ours h)
+149: def _pk(v): return np.where((v[1:-1]>v[:-2])&(v[1:-1]>v[2:]))[0]+1
+154: def regime(rhs,p,x0=(1,2,3,4,5),T=200,dt=0.1,cap=100.0):
+158:         s=solve_ivp(rhs,(0,T),list(x0),args=p,method="LSODA",
+159:                     t_eval=np.arange(0,T,dt),rtol=1e-6,atol=1e-8,events=ev)
+160:     except Exception: return "blowup"
+161:     if s.status==1 or not s.success: return "blowup"
+164:         return "blowup"
+165:     if (tail.max(1)-tail.min(1)).max()<1e-3: return "fixed"
+167:     if len(pk)<4: return "periodic"
+170:         return "periodic"
+171:     return "chaotic"
+173: NR=7    # raise for a finer regime map (slower)
+174: cr=np.linspace(0.3,1.6,NR); rr=np.linspace(0.1,1.0,NR)
+195: TIERS={"SELF":(1.0,2.0),"SHENG":(0.5,1.5),"SAT":(0.3,1.0),
+199:     if model=="lin": return (d["SELF"],d["SAT"],d["SHENG"],d["RESTR"],d["CHILD"],d["TGT"])
+200:     return (d["SELF"],d["SAT"],d["SHENG"],d["TGT"],d["RESTR"])
+202: def draw(r,scheme,lo=0.1,hi=2.0):
+204:         return {k:r.uniform(*v) for k,v in TIERS.items()}
+210:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+212: def mc(scheme,N=4000,seed=3):
+213:     r=np.random.default_rng(seed)
+221:     return out
+233: x=np.arange(len(schemes)); w=0.38
+260: r=np.random.default_rng(1)
+290:     s=solve_ivp(rhs,(0,150),x0,args=p,method="RK45",
+291:                 t_eval=np.linspace(0,150,4000),rtol=1e-9,atol=1e-11)
+302: show(rhs_lin,P_LIN,xl,"LIN at its baseline — perturbation grows (unstable)")
+303: show(rhs_sat,P_SAT,xs,"OURS at baseline — returns to balance (stable)")
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/commented.ipynb
+SHA256: 4e00a236493f966dfff35f951e78d88fc6906a1458e78fdbe8a9ce83b658705f
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+2: from scipy.integrate import solve_ivp     # solves differential equations numerically
+9: # Baseline parameter values
+10: P_LIN = (1, 1, 1, 1, 1, 1)          # Lin's "Case 1": a=b=c=d=g=h=1
+11: P_SAT = (2, 0.5, 1, 0.5, 0.3)       # ours: a=2, k=0.5, c=1, g=0.5, h=0.3
+16:     return (i - 1) % 5
+20:     return (i + 1) % 5
+24:     return (i - 2) % 5
+28:     return (i + 2) % 5
+44: def rhs_lin(t, x, a, b, c, d, g, h):
+45:     # `t` (time) is unused, but solve_ivp needs it as the first parameter
+55:         growth      =  a * me                 # self-production, proportional to size
+62:         rates[i] = growth + crowding + nourishment + suppressed + feeding + restraining
+64:     return rates
+73: def rhs_sat(t, x, a, k, c, g, h):
+82:         growth   =  a * me                    # same self-production as before
+94:         rates[i] = growth + crowding + nourishment + over_acting + suppressed
+96:     return rates
+98: # Quick check that both functions run and return five numbers.
+100: print("Lin  rates:", np.round(rhs_lin(0, test_state, *P_LIN), 3))
+101: print("Ours rates:", np.round(rhs_sat(0, test_state, *P_SAT), 3))
+105:     # Setting every organ equal reduces Lin's system to  0 = a*x - M*x^2,
+112:         return np.nan
+114:     return a / M                              # the balanced level
+118:     # For our model the same substitution gives a quadratic  A*x^2 + B*x + C = 0.
+123:     discriminant = B * B - 4 * A * C          # the bit under the square root
+125:         return np.nan                         # no real solution at all
+128:     return root if root > 0 else np.nan       # only a positive level is meaningful
+132: x_lin = balanced_state_lin(*P_LIN)
+133: x_sat = balanced_state_sat(*P_SAT)
+139: def jacobian_lin(level, a, b, c, d, g, h):
+147:         J[i, i] = (a                          # from  a*x
+160:     return J
+163: def jacobian_sat(level, a, k, c, g, h):
+187:     return J
+195:         if np.isnan(level): return np.nan
+199:         if np.isnan(level): return np.nan
+203:     return max(eigenvalues.real)               # ".real" drops the imaginary part
+206: def finite_difference_jacobian(rhs, x, params, eps=1e-7):
+208:     n = len(x)
+210:     baseline = rhs(0, x, *params)              # rates before any nudge
+215:         J[:, j] = (rhs(0, nudged, *params) - baseline) / eps   # rise over run
+217:     return J
+220: rng = np.random.default_rng(0)
+229:     p_lin = tuple(rng.uniform(0.1, 2.0, 6))
+230:     hand_lin = jacobian_lin(state, *p_lin)
+231:     num_lin  = finite_difference_jacobian(rhs_lin, state, p_lin)
+235:     p_sat = tuple(rng.uniform(0.1, 2.0, 5))
+236:     hand_sat = jacobian_sat(state, *p_sat)
+237:     num_sat  = finite_difference_jacobian(rhs_sat, state, p_sat)
+245: # Eigenvalues for each model at its own baseline.
+246: eig_lin = np.linalg.eigvals(jacobian_lin(x_lin, *P_LIN))
+247: eig_sat = np.linalg.eigvals(jacobian_sat(x_sat, *P_SAT))
+300:     solution = solve_ivp(rhs,                     # the model
+304:                          t_eval=np.linspace(0, duration, 2000),   # when to record
+305:                          rtol=1e-9, atol=1e-11)   # accuracy settings
+309:     return solution, deviation
+316:         ("Lin (bilinear)",     rhs_lin, P_LIN, x_lin),
+317:         ("Saturating (ours)",  rhs_sat, P_SAT, x_sat)]):
+337:         ("Lin, small",     rhs_lin, P_LIN, x_lin, "small"),
+338:         ("Lin, severe",    rhs_lin, P_LIN, x_lin, "severe"),
+339:         ("Ours, small",    rhs_sat, P_SAT, x_sat, "small"),
+340:         ("Ours, severe",   rhs_sat, P_SAT, x_sat, "severe")]:
+352:     for rhs, params, level in [(rhs_lin, P_LIN, x_lin), (rhs_sat, P_SAT, x_sat)]:
+367: sheng_values   = np.linspace(0.3, 1.6, GRID)   # nourishment strength, left to right
+368: restraint_values = np.linspace(0.1, 1.0, GRID) # restraint strength, bottom to top
+371: map_lin = np.full((GRID, GRID), np.nan)
+372: map_sat = np.full((GRID, GRID), np.nan)
+377:         map_lin[row, col] = max_growth_rate("lin", (1.5, 0.65, sheng, restraint, 0.3, 0.3))
+379:         map_sat[row, col] = max_growth_rate("sat", (1.5, 0.65, sheng, 0.3, restraint))
+383: scale = np.nanpercentile(np.abs(np.concatenate([map_lin.ravel(), map_sat.ravel()])), 90)
+386: for ax, grid_values, title in [(axes[0], map_lin, "Lin (bilinear)"),
+387:                                (axes[1], map_sat, "Saturating (ours)")]:
+414:         return {"SELF":  rng.uniform(1.0, 2.0),   # self-production: the biggest
+433:         return {"SELF": SELF, "SAT": SAT, "SHENG": SHENG,
+441:         return (q["SELF"], q["SAT"], q["SHENG"], q["RESTR"], q["CHILD"], q["TGT"])
+443:     return (q["SELF"], q["SAT"], q["SHENG"], q["TGT"], q["RESTR"])
+446: def run_random_test(scheme, n_draws=1500, seed=3):
+448:     rng = np.random.default_rng(seed)             # seeded, so results repeat exactly
+463:     return tally
+488: positions = np.arange(len(schemes))       # x positions: 0, 1, 2
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/stabilitycode.ipynb
+SHA256: bbda4ae2288d35012d3d2fcd8873916720645dd049bbad37b2fb6840c854c5de
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: from scipy.integrate import solve_ivp
+7: P_LIN=(1,1,1,1,1,1)          # Lin's own Case 1
+8: P_SAT=(2,0.5,1,0.5,0.3)      # our paper's parameter table
+12: def rhs_lin(t,x,a,b,c,d,g,h):
+14:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+19:     return a/M if M>0 else np.nan
+21: def jac_lin(xv,a,b,c,d,g,h):
+28:     return J
+31: def rhs_sat(t,x,a,k,c,g,h):
+33:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+37:     A=k+h; B=(k+h)-a; C=-(a+c-g); D=B*B-4*A*C
+38:     if D<0: return np.nan
+40:     return r if r>0 else np.nan
+42: def jac_sat(xv,a,k,c,g,h):
+49:     return J
+54:         if not np.isfinite(xe) or xe<=0: return np.nan
+55:         return max(np.linalg.eigvals(jac_lin(np.full(5,xe),*p)).real)
+57:     if not np.isfinite(xe) or xe<=0: return np.nan
+58:     return max(np.linalg.eigvals(jac_sat(np.full(5,xe),*p)).real)
+60: xl=eq_lin(*P_LIN); xs=eq_sat(*P_SAT)
+65: el=np.linalg.eigvals(jac_lin(np.full(5,xl),*P_LIN))
+66: Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+93:     s=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+94:                 t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+95:     return s,np.linalg.norm(s.y-xstar,axis=0)
+98: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+99:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+110: for nm,rhs,p,xst,mode in [("Lin small",rhs_lin,P_LIN,xl,"small"),
+111:                           ("Lin severe",rhs_lin,P_LIN,xl,"severe"),
+112:                           ("Ours small",rhs_sat,P_SAT,xs,"small"),
+113:                           ("Ours severe",rhs_sat,P_SAT,xs,"severe")]:
+123:     s=solve_ivp(rhs,(0,T),x0,args=p,method="RK45",
+124:                 t_eval=np.linspace(0,T,2000),rtol=1e-9,atol=1e-11)
+125:     return s, np.linalg.norm(s.y-xstar,axis=0)     # deviation from balance
+129: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+130:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+154: NG=90
+155: c_vals=np.linspace(0.3,1.6,NG)    # SHENG
+156: r_vals=np.linspace(0.1,1.0,NG)    # RESTR (Lin d, ours h)
+184: def _pk(v): return np.where((v[1:-1]>v[:-2])&(v[1:-1]>v[2:]))[0]+1
+192: def regime_one(rhs,p,x0,T=200,dt=0.1,cap=100.0):
+196:         s=solve_ivp(rhs,(0,T),list(x0),args=p,method="LSODA",
+197:                     t_eval=np.arange(0,T,dt),rtol=1e-6,atol=1e-8,events=ev)
+198:     except Exception: return "blowup"
+199:     if s.status==1 or not s.success: return "blowup"
+202:         return "blowup"
+203:     if (tail.max(1)-tail.min(1)).max()<1e-3: return "fixed"
+205:     if len(pk)<4: return "periodic"
+208:         return "periodic"
+209:     return "chaotic"
+212: def regime_multi(rhs,p,ics=ICS):
+215:     return vals[np.argmax(counts)], counts.max()/len(vs), vs
+218: NR=6    # raise (Colab: 8-10 is fine) for a finer regime map (slower)
+219: cr=np.linspace(0.3,1.6,NR); rr=np.linspace(0.1,1.0,NR)
+246: TIERS={"SELF":(1.0,2.0),"SHENG":(0.5,1.5),"SAT":(0.3,1.0),
+250:     if model=="lin": return (d["SELF"],d["SAT"],d["SHENG"],d["RESTR"],d["CHILD"],d["TGT"])
+251:     return (d["SELF"],d["SAT"],d["SHENG"],d["TGT"],d["RESTR"])
+253: def draw(r,scheme,lo=0.1,hi=2.0):
+255:         return {k:r.uniform(*v) for k,v in TIERS.items()}
+261:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+263: def mc(scheme,N=4000,seed=3):
+264:     r=np.random.default_rng(seed)
+272:     return out
+277:     if n==0: return (0.0,0.0)
+281:     return (ctr-half, ctr+half)
+301: x=np.arange(len(schemes)); w=0.38
+334: r=np.random.default_rng(1)
+371: def frac_stable(model,mod=None,N=3000,seed=11,lo=0.1,hi=2.0):
+372:     r=np.random.default_rng(seed); st=va=0
+379:     return 100*st/max(va,1)
+410:     s=solve_ivp(rhs,(0,150),x0,args=p,method="RK45",
+411:                 t_eval=np.linspace(0,150,4000),rtol=1e-9,atol=1e-11)
+422: show(rhs_lin,P_LIN,xl,"LIN at its baseline — perturbation grows (unstable)")
+423: show(rhs_sat,P_SAT,xs,"OURS at baseline — returns to balance (stable)")
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/WuXing_Stability_Comparison.ipynb
+SHA256: 1340c1a2ab8496f443fe8741c9da9203682410e511a65d512afc01ef544d278a
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+2: from scipy.integrate import solve_ivp
+10: def rhs_lin(t,x,a,b,c,d,g,h):
+12:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+18:     return a/M if M>0 else np.nan
+20: def jac_lin(xv,a,b,c,d,g,h):
+27:     return J
+30: def rhs_sat(t,x,a,k,c,g,h):
+32:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+38:     disc=B*B-4*A*C
+39:     if disc<0: return np.nan
+41:     return r if r>0 else np.nan
+43: def jac_sat(xv,a,k,c,g,h):
+52:     return J
+55: P_LIN=(1,1,1,1,1,1)
+56: P_SAT=(2,0.5,1,0.5,0.3)
+58: xl=eq_lin(*P_LIN); Jl=jac_lin(np.full(5,xl),*P_LIN); el=np.linalg.eigvals(Jl)
+59: xs=eq_sat(*P_SAT); Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+100:     sol=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+101:                   t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+103:     return sol,dev
+107:         [("LIN (bilinear)",rhs_lin,P_LIN,xl),
+108:          ("SATURATING (ours)",rhs_sat,P_SAT,xs)]):
+122: for nm,rhs,params,xstar in [("LIN small",rhs_lin,P_LIN,xl),
+123:                             ("LIN severe",rhs_lin,P_LIN,xl),
+124:                             ("SAT small",rhs_sat,P_SAT,xs),
+125:                             ("SAT severe",rhs_sat,P_SAT,xs)]:
+132: N=90
+133: c_vals=np.linspace(0.05,2.5,N)
+134: h_vals=np.linspace(0.05,2.0,N)
+
+SOURCE: /Users/carterfeng/Documents/Research/WuXing/code/WuXing_Colab.ipynb
+SHA256: f98138c64c95238b1e1e1b44eaa7b6f7b29c1d879d95a642115acb10dcf08248
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+2: from scipy.integrate import solve_ivp
+14: def rhs_lin(t, x, a,b,c,d,g,h):
+16:     return (a*x - b*x**2
+22: def rhs_sat(t, x, a,k,c,g,h):
+25:     return (a*x - k*x**2
+31: def integrate(rhs, params, x0=X0, t_end=400, dt=0.05):
+32:     return solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+33:                      t_eval=np.arange(0,t_end,dt), rtol=1e-7, atol=1e-9)
+36:     return np.where((v[1:-1]>v[:-2]) & (v[1:-1]>v[2:]))[0] + 1
+39:     sol=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+40:                   t_eval=np.arange(0,t_end,dt), rtol=1e-6, atol=1e-8)
+41:     if not sol.success: return "fail", sol
+44:         return "blowup", sol
+46:     if span<1e-3: return "fixed", sol
+48:     if len(pk)<4: return "periodic", sol
+51:     if cv_iv<0.06 and cv_ht<0.06: return "periodic", sol
+52:     return "chaotic", sol
+58:             r=solve_ivp(rhs,(0,dt),st,args=params,method="RK45",rtol=1e-8,atol=1e-10)
+63:     return s/(n*dt)
+89:     return grid
+91: N=7
+92: c_vals=np.linspace(0.3,2.5,N); h_vals=np.linspace(0.0,1.6,N)
+118:                 return tuple(params),sol
+119:     return None,None
+143: for h in np.linspace(0.2,1.6,15):
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/build_guide.py
+SHA256: eca56832457563ddfc25b31508adc7e00be687a5844c559350bd65c4cb4d40c5
+PROPOSED STATUS: theory_support_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+26:  a,t,u,loc,e=refs[k];return f'<a href="#ref-{k}">{html.escape(a)}</a>'
+27: def code(t):return '<code>'+html.escape(t)+'</code>'
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/line_review_data.py
+SHA256: 7de1cf5e310cb0e0d19b7eaab75bd443b0597664d83d3ab0ee6bd2086af31040
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+18: (137,145,'Physical relation g_f=c+A*s_f^2 gives G_f-H_f=r_f*(k+c/s_f^2)>0 directly.'),
+24: (214,226,'Five original directional second derivatives sum to -2A*r_f/s_f. Averaging removes n and Taylor expansion alone supplies the factor one-half.'),
+43: (457,464,'A*t_*^2<=b^2/(16A)<g_f-g_c. Intersecting with the separate spectral neighborhood, rather than this bound alone, retains index one.'),
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/authenticate_inputs.py
+SHA256: f6386188a9b28b326a19b8274ef696e11f1086966c4a6196bc8ce3e0a0f7439e
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/independent_checks.py
+SHA256: 2d3a04e52e082b061d5d3aedd943185f13e9325aca33367a8b00425d767ed58e
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+19:  return a*r-k*r*r+c*r/(1+r)-g*r/(1+r)-h*r*r
+23:  return a-2*k*r-c*r/s**2-g/s-h*r, c/s, g*r/s**2, h*r
+33:  ck(b>0);ck(sf==(a+A)/(2*A));ck(gf==c+A*sf*sf)
+38:  ck(sum(derivatives)==-2*A*rf/sf);ck(sum(derivatives)/2==-A*rf/sf)
+43:    nu=nufrac*A*rf**2;g=gf-nu;mu=gc-g
+44:    ck(mu+b*r-A*r*r==nu-A*u*u)
+45:    ck(scalar(r,a,k,c,g,h)==r/(1+r)*(nu-A*u*u))
+48:   t=tfrac*rf;nu=A*t*t;g=gf-nu;Delta=2*A*t;rm=rf-t;rp=rf+t
+49:   ck(gc<g<gf);ck(Delta**2==b*b+4*A*(gc-g));ck(0<Delta<b)
+55:    ck(scalar(r,a,k,c,g,h)==-A*r/(1+r)*(r-rm)*(r-rp))
+59:  t=rf/4
+62:  ck(gf-A*t*t-h*(sf+t)**2==M-2*h*sf*t-(A+h)*t*t)
+63:  ck(gf-A*t*t-h*(sf+t)**2>0)
+90:  return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-q))-h*x*np.roll(x,q)
+91: def jac(x,a,k,c,g,h,q):
+92:  n=len(x);J=np.zeros((n,n))
+99:  return J
+102:  d,C,G,H=coeff(r,a,k,c,g,h);theta=2*np.pi*np.arange(n)/n
+103:  return d+C*np.exp(-1j*theta)+G*np.exp(1j*q*theta)-H*np.exp(-1j*q*theta)
+115:    if j not in owner or augment(owner[j],seen):owner[j]=i;return True
+116:   return False
+118:  return max(float(cost[i,j]) for j,i in owner.items())/scale
+126:  residual=float(np.max(abs(field(x,a,k,c,g,h,q)))/max(1.,abs(a*r)+abs(k*r*r)+abs(c*r/(1+r))+abs(g*r/(1+r))+abs(h*r*r)))
+134:  return pred
+145:   assert min(abs(lam[1:]))>delta*.99999
+147:   t=rf*1e-5
+149:    g=gf-A*t*t
+159:    t=rf*frac;g=gf-A*t*t
+165:    t=tstar*frac;g=gf-A*t*t;r=rf+t
+174: rng=np.random.default_rng(100310)
+177:  n,q=pairs[int(rng.integers(len(pairs)))];k,c,h=10**rng.uniform(-1.5,1.3,3);A=k+h;b=A*10**rng.uniform(-1.5,1.2);a=A+b
+178:  rf=b/(2*A);gf=a+c+b*b/(4*A);t=rf*rng.uniform(.03,.999);g=gf-A*t*t
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/write_line_review.py
+SHA256: 8a1253be63c3377bd44d8a262498b3de7c7cefee80eb44cedda3c08d176505e3
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/authenticate_inputs.py
+SHA256: 90b88cd8749711a956e39bffe51415c2f45b1d45bced5cae7727702b0f921f0e
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+5: def digest(data): return hashlib.sha256(data).hexdigest()
+42:     # Prior complete audited snapshot is the unchanged prerequisite baseline.
+53:     result={'selection':'Manifest lines 693-732 CURRENT P09 v1.0 DRAFT','archive':str(archive),'archive_sha256':digest(archive.read_bytes()),'member_count':143,'all_members_match':True,'baseline_only_changed_members':changed,'p09':inventory[p09],'external_proof_references':external,'inventory':inventory}
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/independent_checks.py
+SHA256: 2296331e8cfe981d4dc1477a8eb7a1653994e917a4aa4b36deafcf91369dbb79
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+26:     return result
+39:                 raw=a*r-k*r*r+c*r/(1+r)-(gc-mu)*r/(1+r)-h*r*r
+40:                 f=r*(mu+b*r-A*r*r)/(1+r)
+42:                 fr=a-2*A*r+(c-gc+mu)/(1+r)**2
+43:                 ck(f'scalar derivative {a,r,mu}',fr==(mu+b*r-A*r*r)/(1+r)**2+r*(b-2*A*r)/(1+r))
+44:                 if b and A*r!=b:
+45:                     u=A*r*r-b*r; alpha=(2*A*r-b)/((A*r-b)*(1+r))
+46:                     ck(f'normal coordinate {a,r,mu}',(2*A*r-b)*f==alpha*u*(mu-u))
+47:             mu=A*r*r-b*r
+48:             ck(f'equilibrium original residual {a,r}',a*r-k*r*r+c*r/(1+r)-(gc-mu)*r/(1+r)-h*r*r==0)
+49:             ck(f'uniform at root {a,r}',a-2*A*r+(c-gc+mu)/(1+r)**2==r*(b-2*A*r)/(1+r))
+50:             if b and b-A*r:
+51:                 ck(f'uniform alternate {a,r}',r*(b-2*A*r)/(1+r)==-mu*(b-2*A*r)/((1+r)*(b-A*r)))
+53:                 ck(f'degenerate root and eigenvalue {r}',mu==A*r*r and a-2*A*r+(c-gc+mu)/(1+r)**2==-2*A*r*r/(1+r))
+54:                 if r: ck(f'decay derivative {r}',-2*r**(-3)*(-A*r**3/(1+r))==2*A/(1+r))
+57:             ck(f'branch derivative equations {b}',-b*d1==1 and 2*A*d1*d1-b*d2==0)
+67:                 F=[a*x[i]-k*x[i]**2+c*x[(i-1)%n]/(1+x[i])-gc*x[i]/(1+x[(i+q)%n])-h*x[i]*x[(i-q)%n] for i in range(n)]
+79:     return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-q))-h*x*np.roll(x,q)
+81: def jacobian(x,a,k,c,g,h,q):
+82:     n=len(x); J=np.zeros((n,n))
+89:     return J
+92:     th=2*np.pi*np.arange(n)/n; s=1+r
+94:     return d+c/s*np.exp(-1j*th)+g*r/s**2*np.exp(1j*q*th)-h*r*np.exp(-1j*q*th)
+100:     return max(errors)/(1+max(abs(theo)))
+104:     return -2*mu/(b+math.copysign(math.sqrt(b*b+4*A*mu),b))
+107:     rng=np.random.default_rng(90261003)
+121:                 eps=min(gc/1000,abs(b)*rad/4) if b else A*rad*rad/4
+139:                         lam=mu if r==0 else r*(b-2*A*r)/(1+r)
+145:                             alpha=(2*A*r-b)/((A*r-b)*(1+r)); assert alpha>0
+161:                     t=E.T@field(x,a,k,c,g,h,q)
+180:                 R=rr+A*r**3/(1+r)
+184:                 bound=-A*r**4/(1+rho)-delta*np.dot(y,y)/4
+191:     summary=dict(python=platform.python_version(),numpy=np.__version__,seed=90261003,dimensions=dimensions,network_pairs=sum(n-1 for n in dimensions),noncoprime_pairs=sum(math.gcd(n,q)>1 for n in dimensions for q in range(1,n)),parameter_tuples=tuples,equilibrium_cases=len(rows),slope_cases=len(slopes),transverse_searches=len(trans),lyapunov_cases=len(lyap),max_equilibrium_residual=max(r['residual'] for r in rows),max_scaled_spectrum_error=max(r['spectrum_error'] for r in rows),max_scaled_jacobian_error=max(r['jacobian_error'] for r in rows),max_relative_slope_error=max(r['relative_error'] for r in slopes),max_transverse_search_norm=max(r['final_norm'] for r in trans),limitations='Ordinary floating point, finite samples, no interval certification. Tiny-b eigenvalue signs use scalar formula; direct numerical eigensolvers cannot certify near-zero signs. Analytical arguments establish the universal claims.')
+194:     return summary
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/finalize_package.py
+SHA256: 5cd40a43f859cd2b4b00222c832d3e0e4e8af8d804148eb2820e1e991643698c
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+11: def h(p): return sha256(p.read_bytes()).hexdigest()
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/check_p09.py
+SHA256: b42af82b97c187b3a61238b7cc2aba9d35e44d210a38ec88421b10d5be2fcf93
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+16:         return Jet({e:v for e,v in d.items() if v})
+18:     def __neg__(self): return Jet({e:-v for e,v in self.d.items()})
+19:     def __sub__(self,o): return self+-asjet(o)
+20:     def __rsub__(self,o): return asjet(o)+-self
+26:         return Jet({e:v for e,v in d.items() if v})
+31:         return (1+z+z*z+z*z*z)*(1/a)
+32:     def __truediv__(self,o): return self*asjet(o).inv()
+33:     def __rtruediv__(self,o): return asjet(o)*self.inv()
+34:     def at(self,i,j=0): return self.d.get((i,j),Q(0))
+35: def asjet(x): return x if isinstance(x,Jet) else Jet(x)
+38:     n=len(x)
+39:     return [a*x[i]-k*x[i]*x[i]+c*x[(i-1)%n]/(1+x[i])
+42: def jacobian(x,a,k,c,g,h,q):
+43:     n=len(x); J=np.zeros((n,n))
+49:     return J
+52:     t=2*np.pi*np.arange(n)/n
+55:     return d+C*np.exp(-1j*t)+G*np.exp(1j*q*t)-H*np.exp(-1j*q*t)
+65:             if j not in owner or visit(owner[j],seen): owner[j]=i; return True
+66:         return False
+68:     return max(float(abs(got[i]-expected[j])) for j,i in owner.items())
+74: t=Jet({(1,0):Q(1)});m=Jet({(0,1):Q(1)})
+99:         check(f'branch_series/{a}/{c}',-b*s1-1==0 and A*s1*s1-b*s2==0)
+102:             mu=A*r*r-b*r
+103:             lam=r*(b-2*A*r)/(1+r)
+104:             check(f'exact_branch_uniform_sign/{a}/{c}/{r}',lam==-mu*(b-2*A*r)/((1+r)*(b-A*r)) and (lam>0)==(mu<0))
+107:                 u=A*r*r-b*r;alpha=(2*A*r-b)/((A*r-b)*(1+r))
+108:                 f=r*(mu0+b*r-A*r*r)/(1+r)
+109:                 check(f'orbital_identity/{a}/{c}/{r}/{mu0}',(2*A*r-b)*f==alpha*u*(mu0-u) and alpha>0)
+112:             mu=A*r*r
+113:             check(f'degenerate_root/{a}/{c}/{r}',mu-A*r*r==0)
+114:             check(f'degenerate_eigenvalue/{a}/{c}/{r}',-2*A*r*r/(1+r)<0)
+115:             check(f'critical_scalar_Lyapunov/{a}/{c}/{r}',-A*r**4/(1+r)<0)
+118:     return -2*mu/(b+math.copysign(math.sqrt(b*b+4*A*mu),b))
+130:         critical=c*(np.exp(-2j*np.pi*np.arange(n)/n)-1)
+147:                 v=np.exp(2j*np.pi*np.outer(np.arange(n),np.arange(n))/n)/np.sqrt(n)
+150:                 uni=mu if label=='origin' else r*(b-2*A*r)/(1+r)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/independent_check.py
+SHA256: 3e173b1ae1905147369739f8640fe1febc623a6508afe2b7a5f28b508608b21f
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+27:         return D(x.numerator)/D(x.denominator)
+28:     return D(x)
+40:     return total
+43:     return cosine(PI/2-x)
+50:     return -k*x-c*(1+2*x)/(s*s), c/s, g*x/(s*s), h*x
+54:     terms = [a*x,-k*x*x,c*x/(1+x),-g*x/(1+x),-h*x*x] if model == 'DM' else [a*x,-k*x*x,c*x*x,-g*x*x,-h*x*x]
+55:     return sum(terms)/max(D(1),sum(abs(t) for t in terms))
+71:     ds=max(dm); bs=max(mb)
+87:     return rec
+133:         eps=(1-rho)/24
+145: for h in [F(1,2),F(1),F(2)]:
+152:     fdm=a*x-k*x*x+c*x/(1+x)-g*x/(1+x)-h*x*x
+153:     fmb=a*y-k*y*y+c*y*y-g*y*y-h*y*y
+190:     return a*v-k*v*v+c*vprev/(1+v)-g*v/(1+vpq)-h*v*vmq if model=='DM' else a*v-k*v*v+c*v*vprev-g*v*vpq-h*v*vmq
+196:         theta=2*np.pi*np.arange(n)/n
+197:         Q=np.exp(1j*np.outer(np.arange(n),theta))/np.sqrt(n)
+217:             v=np.linspace(.1,2.,n)
+226: rng=np.random.default_rng(20261003)
+230:     a,k,c,g,h=P.T; M=k+g+h-c; mu=a+c-g; A=k+h; b=a-A; discr=b*b+4*A*mu
+231:     cs=np.cos(2*np.pi*np.arange(n//2+1)/n); w=1-2*cs*cs
+258:     if isinstance(o,D):return str(o)
+259:     if isinstance(o,np.generic):return o.item()
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/check_p08.py
+SHA256: 2385d2074ead3ca764fb98fd7dff5fb419c68526ed0e57e9c80e364980052939
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+20:     return np.array([a*z[i]-k*z[i]**2 + (c*z[i]*z[(i-1)%n] if model=='MB' else c*z[(i-1)%n]/(1+z[i])) - (g*z[i]*z[(i+q)%n] if model=='MB' else g*z[i]/(1+z[(i+q)%n])) -h*z[i]*z[(i-q)%n] for i in range(n)])
+33:     return A
+36:     a,k,c,g,h=p; th=2*np.pi*np.arange(n)/n
+39:         return d+s*(c*np.exp(-1j*th)-g*np.exp(1j*q*th)-h*np.exp(-1j*q*th))
+41:     return d+c/(1+s)*np.exp(-1j*th)+g*s/(1+s)**2*np.exp(1j*q*th)-h*s*np.exp(-1j*q*th)
+45:     need(err<TOL,name+f' error {err}'); errors.append((name,err)); return err
+49:     return [int(j) for j in range(len(r)) if max(r)-r[j] < TOL*scale]
+52:     J=(n+1)//4; u=np.cos(2*np.pi*np.arange(n//2+1)/n); al=[2/(u[j]+u[j+1]) for j in range(J)]
+54:         if abs(chi-t)<TOL*max(1,abs(t)): return [j,j+1]
+55:         if chi<t: return [j]
+56:     return [J]
+66:         if model=='MB': resscale=max(1,a*s+(k+c+g+h)*s*s)
+67:         else: resscale=max(1,a*s+(k+h)*s*s+(c+g)*s/(1+s))
+69:         th=2*np.pi*np.arange(n)/n; Q=np.exp(1j*np.outer(np.arange(n),th))/np.sqrt(n)
+91:     return out
+100:                 dm=a*z[i]-k*z[i]**2+c*z[(i-1)%n]/(1+z[i])-g*z[i]/(1+z[(i+q)%n])-h*z[i]*z[(i-q)%n]
+101:                 mb=a*v[i]-k*v[i]**2+c*v[i]*v[(i-1)%n]-g*v[i]*v[(i+q)%n]-h*v[i]*v[(i-q)%n]
+105: fwd=(F(1,4),F(1,8),F(1),F(1),F(1,8))
+106: rev=(F(20301,1100),F(17,20),F(1,2),F(1,100),F(1))
+107: both=(F(16351,1100),F(1,2),F(3,2),F(1,100),F(1))
+108: revsel=(F(113,4),F(9),F(8),F(1),F(1))
+109: uniform=(F(9,2),F(7),F(8),F(1),F(1))
+111: for h in [F(1,2),F(1),F(2)]: exact_case('curvature_'+str(h),(1+h,F(1),F(4),F(4),h),1,1)
+112: eps=F(1,48); g=(1+eps)**3+2*eps; a=(1+eps)*(1+2*eps)+eps/(1+eps); p=(a,F(1),eps,g,eps)
+125: def add(a,b): return (a[0]+b[0],a[1]+b[1])
+126: def mul(a,b): return (a[0]*b[0]+33*a[1]*b[1],a[0]*b[1]+a[1]*b[0])
+127: def scale(a,r): return (a[0]*r,a[1]*r)
+128: def div(a,b): return scale(mul(a,(b[0],-b[1])),1/(b[0]**2-33*b[1]**2))
+129: x=(F(-1,4),F(1,4)); s=add((F(1),F(0)),x)
+132: need(F(1)-2+F(2,2)==0,'M0 DM original residual')
+143:         rho=max(-np.cos(4*np.pi*np.arange(n)/n)); e=(1-rho)/24; g=(1+e)**3+2*e; a=(1+e)*(1+2*e)+e/(1+e)
+152:     J=(n+1)//4; u=np.cos(2*np.pi*np.arange(n//2+1)/n); al=[2/(u[j]+u[j+1]) for j in range(J)]
+161:     J=(n+1)//4; u=np.cos(2*np.pi*np.arange(n//2+1)/n); al=[2/(u[j]+u[j+1]) for j in range(J)]
+167:         close(A@np.ones(n),-a*np.ones(n),'uniform in selection case')
+174:         p=np.array([1.7,.8,2.3,1.2,.6]); z=np.linspace(.2,1.3,n)
+181:             Q=np.exp(2j*np.pi*np.outer(np.arange(n),np.arange(n))/n)/np.sqrt(n)
+189:    for z in [np.ones(n),np.arange(n)%3,np.array([0 if j%2 else 2 for j in range(n)])]:
+191:     need(dp<=a*Y-(k-c)*Y*Y+1e-12,'maximum inequality'); max_checks+=1
+193: for a,M,s0,E in [(F(2),F(3),F(1),F(2)),(F(1),F(0),F(2),F(3)),(F(1),F(-1),F(1),F(3,2))]:
+194:  den=1+M*s0/a*(E-1); s=s0*E/den
+195:  derivative=a*E*(s0*den-s0*E*M*s0/a)/(den*den)
+196:  need(derivative==a*s-M*s*s,'scalar solution derivative exact')
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/authenticate_inputs.py
+SHA256: 201a74543b2a6cdd8854f1e8cab813e04e4b0987848eb48717f0607b68f6f61b
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/independent_checks.py
+SHA256: 9b672403df727cece3233b6ef780f5b10cbe2f63f5aa3314c04ffac26467342f
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+13:  def __add__(self,o):o=F(o);return F(self.a+o.a,self.b+o.b)
+15:  def __neg__(self):return F(-self.a,-self.b)
+16:  def __sub__(self,o):return self+-F(o)
+17:  def __rsub__(self,o):return F(o)+-self
+18:  def __mul__(self,o):o=F(o);return F(self.a*o.a+self.b*o.b,self.a*o.b+self.b*o.a+self.b*o.b)
+20:  def inv(self):d=self.a*self.a+self.a*self.b-self.b*self.b;return F((self.a+self.b)/d,-self.b/d)
+21:  def __truediv__(self,o):return self*F(o).inv()
+22:  def __rtruediv__(self,o):return F(o)*self.inv()
+23:  def __eq__(self,o):o=F(o);return (self.a,self.b)==(o.a,o.b)
+25:   r=F(1)
+27:   return r
+28:  def approx(self):return float(self.a)+float(self.b)*(1+math.sqrt(5))/2
+29:  def __repr__(self):return f'({self.a})+({self.b})phi'
+35:  def __add__(self,o):o=K(o);return K(self.a+o.a,self.b+o.b)
+37:  def __neg__(self):return K(-self.a,-self.b)
+38:  def __sub__(self,o):return self+-K(o)
+39:  def __rsub__(self,o):return K(o)+-self
+40:  def __mul__(self,o):o=K(o);return K(self.a*o.a+self.b*o.b*t2,self.a*o.b+self.b*o.a)
+42:  def inv(self):d=self.a*self.a-self.b*self.b*t2;return K(self.a/d,-self.b/d)
+43:  def __truediv__(self,o):return self*K(o).inv()
+44:  def __eq__(self,o):o=K(o);return self.a==o.a and self.b==o.b
+45:  def conj(self):return K(self.a,-self.b)
+49:   return r
+50:  def approx(self):return complex(self.a.approx(),self.b.approx()*math.sqrt(sig2.approx()))
+65:  return J
+67: def mv(A,v):return [sum((a*b for a,b in zip(row,v)),K()) for row in A]
+68: def mm(A,B):return [[sum((A[i][k]*B[k][j] for k in range(len(B))),K()) for j in range(len(B))] for i in range(len(A))]
+73: x=F(1);a=(3*phi+22)/2;k=(3*phi-4)/2;c=F(2);g=F(16);h=F(6)
+74: eq(a*x-k*x*x+c*x/(1+x)-g*x/(1+x)-h*x*x,0,'original component residual')
+103: eq(b,7,'branch b');eq(AA-b,mu,'root 1');eq(AA*lower*lower-b*lower-mu,0,'lower residual')
+104: eq(lower,3*(2-phi)/(3*phi+8),'lower exact form');eq(b*b+4*AA*mu,AA*AA*(1-lower)*(1-lower),'positive discriminant identity')
+107: x0=F(Q(1,10));C=F(1);D=F(1);u=(phi-1)/2;G=(phi-1)/2
+126:  return a,k,c,g,h
+130:  s=1+x;res=a*x-k*x*x+c*x/s-g*x/s-h*x*x
+136:  theta=2*np.pi*np.arange(n)/n
+139:  scale=1+np.linalg.norm(J,2);q=np.exp(1j*theta[j]*np.arange(n))/np.sqrt(n)
+157:  return ev
+160:  N=n//2;uj=np.cos(2*np.pi*np.arange(N+1)/n);beta=(uj[:-1]+uj[1:])/2
+184: rng=np.random.default_rng(11042026)
+190:  z=C/(4*(H-G));N=n//2;us=np.cos(2*np.pi*np.arange(N+1)/n);beta=(us[:-1]+us[1:])/2;L=max(0.,beta[j]);U=beta[j-1]
+194: p5=tuple(float(q.approx()) for q in [(3*phi+22)/2,(3*phi-4)/2,F(2),F(16),F(6)])
+200: report={'status':'PASS','python':platform.python_version(),'numpy':np.__version__,'seed':11042026,'exact_assertions':count,'counts':counts,'max_scaled_residuals':maxima,'five_node_spectrum':[[float(v.real),float(v.imag)] for v in ev5], 'zero_frequency_physical_tuple':p0,'notes':checks+['Finite tests do not prove universal statements; exact sign inequalities and all-n proofs are in the A11 source.','No g-path derivative, nonlinear tensor, transversality, or Lyapunov calculation was performed.']}
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/check_p03.py
+SHA256: 73784fd269f445a80639175b8901610e89a517469d69ddc5d397200dc5412bbb
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+34:         return cls(nv, {(0,) * nv: value})
+40:         return cls(nv, {tuple(e): 1})
+43:         return other if isinstance(other, Poly) else Poly.const(self.nv, other)
+50:         return Poly(self.nv, out)
+55:         return Poly(self.nv, {e: -v for e, v in self.t.items()})
+58:         return self + -self.coerce(other)
+61:         return self.coerce(other) + -self
+69:         return Poly(self.nv, out)
+78:         return out
+87:         return Poly(self.nv, out)
+97:         return out
+100:         return self.t == self.coerce(other).t
+127:     return row
+134:     return p
+163:                 D = A * B
+165:                 N = (a * xi - k * xi**2 - h * xi * xmq) * D + c * xm * B - g * xi * A
+172:                         proposed += (a - 2 * k * xi - h * xmq) * D2 - c * xm * B**2 - g * A**2 * B
+174:                         proposed += c * A * B**2
+176:                         proposed += g * xi * A**2
+261:     equilibrium_numerator = a*S-(k+h)*r*S-(g-c)
+267:     scalar_numerator = (a*r-(k+h)*r**2)*S+(c-g)*r
+268:     scalar_derivative_numerator = scalar_numerator.diff(5)*S-scalar_numerator
+288:         assert a*r-(k+h)*r*r+(c-g)*r/s == 0
+299:                 direct = a*di-2*k*r*di+c*(dm*s-r*di)/s**2-g*(di*s-r*dpq)/s**2-h*(di*r+r*dmq)
+314:     return {"status": "PASS", "arithmetic": "exact integer sparse polynomials and Fraction Gaussian elimination", "counts": dict(counts), "per_n": n_records, "cancellation_examples": cancellation_examples, "identities": {"general": "Direct canonical common-denominator quotient differentiation equals additive Kronecker Jacobian at every entry.", "origin": "J(0)=(a-g)I+cP", "characteristic_polynomial": "det(lambda I-J(0))=(lambda-a+g)^n-c^n", "origin_eigenvalues": "lambda_m=a-g+c exp(-2 pi i m/n); root-of-unity shift orientation checked exactly", "zero_derivative_at_mu_0": "chi'(0)=n c^(n-1)>0", "boundary_geometric_multiplicity": "rank(P-I)=n-1, so kernel dimension=1", "homogeneous": "J=dI+CP+GP^(-q)-HP^q; generic symbolic r, denominator multiplier (1+r)^4", "spectral_abscissa_certificate": "For c>0, Re(lambda_m)<=a-g+c; equality iff the unit root exp(-2 pi i m/n)=1, hence m=0. This elementary inequality is proof-level mathematics, not a floating test.", "nonuniform_zero_off_boundary": "Even n: at a-g=c, the alternating mode m=n/2 has zero eigenvalue; this is away from mu=0.", "equilibrium_diagonal_simplification": "[d-(-kr-c(1+2r)/(1+r)^2)](1+r)^2=[a(1+r)-(k+h)r(1+r)-(g-c)](1+r)", "row_sum_identity": "d+C+G-H = derivative_r[ar-(k+h)r^2+(c-g)r/(1+r)]", "generic_cancellation_q1": "C-H=0 if c=hr(1+r)", "generic_cancellation_even_half": "G-H=0 if g=h(1+r)^2"}}
+319:     return a*x-k*x*x+c*np.roll(x, 1)/(1+x)-g*x/(1+np.roll(x, -q))-h*x*np.roll(x, q)
+324:     n = len(x)
+332:     return mat
+336:     seed = 20260927
+337:     rng = np.random.default_rng(seed)
+362:             for label, x, par in states:
+365:                 steps = step_multiplier*np.maximum(1.0, np.abs(x))
+405:         theta = 2*np.pi*np.arange(n)/n
+411:                 v = np.exp(1j*theta[m]*np.arange(n))/np.sqrt(n)
+429:     return {"status": "PASS", "secondary_only": True, "rng": "numpy.random.default_rng (PCG64)", "seed": seed, "finite_difference_scheme": "centered; step_j=1e-5*max(1,abs(x_j))", "scaled_error_definition": "abs(J_analytic-J_FD)/(1+max(abs(J_analytic),abs(J_FD))) entrywise", "scaled_tolerance": tolerance, "state_count": len(records), "finite_difference_entry_count": fd_entries, "homogeneous_entry_count": sync_entries, "origin_eigenrelation_count": origin_count, "origin_spectral_cases": len(origin_records), "worst_fd_absolute_error": worst_absolute[0], "worst_fd_absolute_location": worst_absolute[1], "worst_fd_scaled_error": worst_scaled[0], "worst_fd_scaled_location": worst_scaled[1], "worst_homogeneous_matrix_residual": sync_worst, "worst_origin_eigenrelation_residual": eig_worst, "state_records": records, "origin_records": origin_records}
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_origin_check.py
+SHA256: 649bfbaf4f3c45a1cb503c5700e6379aef2fa36663525257c75106301019ef1d
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+46:     return terms, surviving_count
+76:     return rank
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_jacobian_check.py
+SHA256: a0b3e861df41ad8c5cb2d95da90e41bf8ca0fc1533e86e6b2413914d6caab35f
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+20:         return other if isinstance(other, Dual) else Dual(other, [0]*len(self.gradient))
+24:         return Dual(self.value+other.value,
+29:         return Dual(-self.value, [-a for a in self.gradient])
+32:         return self + -self.promote(other)
+35:         return self.promote(other) + -self
+39:         return Dual(self.value*other.value,
+40:                     [a*other.value+self.value*b
+47:         return Dual(self.value/other.value,
+48:                     [(a*other.value-self.value*b)/(other.value*other.value)
+52:         return self.promote(other) / self
+57:     n = len(state)
+58:     return [a*state[i] - k*state[i]*state[i]
+65:     n = len(state)
+69:     return [list(v.gradient) for v in values], [v.value for v in values]
+74:     n = len(state)
+83:     return matrix
+89:     return a-2*k*r-c*r/s**2-g/s-h*r, c/s, g*r/s**2, h*r
+94:     return [[d*int(i==j)+C*int(j==(i-1)%n)
+110:     return [[sum((v for power,v in terms if j==(i-power)%n), Q(0))
+116:     return a*r-k*r*r+c*r/(1+r)-g*r/(1+r)-h*r*r
+176:     return oracle, values
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/independent_check.py
+SHA256: 25e0fa79b507a90bcf3b4213e49854ebfa87b0ebf88d94dac1fa2e683dc30c2d
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: Exact arithmetic: Q(sqrt(5)) and r + i*sigma*w, sigma^2=(5-sqrt(5))/8.
+16: @dataclass(frozen=True)
+24:         y=q(y); return Q(self.a+y.a,self.b+y.b)
+26:     def __neg__(self): return Q(-self.a,-self.b)
+27:     def __sub__(self,y): return self+-q(y)
+28:     def __rsub__(self,y): return q(y)+-self
+30:         y=q(y);return Q(self.a*y.a+5*self.b*y.b,self.a*y.b+self.b*y.a)
+33:         y=q(y); norm=y.a*y.a-5*y.b*y.b
+35:         return self*Q(y.a/norm,-y.b/norm)
+36:     def __rtruediv__(self,y): return q(y)/self
+38:         if n<0:return (1/self)**(-n)
+41:         return v
+44:         if b==0:return (a>0)-(a<0)
+45:         if a==0:return (b>0)-(b<0)
+46:         if a>0 and b>0:return 1
+47:         if a<0 and b<0:return -1
+48:         delta=a*a-5*b*b
+49:         return ((delta>0)-(delta<0))*(1 if a>0 else -1)
+50:     def __float__(self):return float(self.a)+float(self.b)*math.sqrt(5)
+51:     def data(self):return [str(self.a),str(self.b)]
+52: def q(v):return v if isinstance(v,Q) else Q(v)
+55: @dataclass(frozen=True)
+62:         y=e(y);return E(self.r+y.r,self.w+y.w)
+64:     def __neg__(self):return E(-self.r,-self.w)
+65:     def __sub__(self,y):return self+-e(y)
+66:     def __rsub__(self,y):return e(y)+-self
+68:         y=e(y);return E(self.r*y.r-SIG2*self.w*y.w,self.r*y.w+self.w*y.r)
+73:         return v
+74:     def conj(self):return E(self.r,-self.w)
+75:     def data(self):return {'real':self.r.data(),'imag_over_sigma':self.w.data()}
+76: def e(v):return v if isinstance(v,E) else E(v)
+86:     T=G-H;S=G+H
+90:     return [a,b,c,c.conj(),b.conj()]
+140:         eq(f'case {idx} original DM',a*x-k*x*x+c*x/(1+x)-g*x/(1+x)-h*x*x,Q())
+175:         eq('general tie DM '+str(x.data()),a*x-k*x*x+c*x/s-g*x/s-h*x*x,Q())
+182:     return exact_cases,ts
+196:     rng=np.random.default_rng(70032026)
+208:         return a*v-k*v*v+c*np.roll(v,1)/(1+v)-g*v/(1+np.roll(v,-2))-h*v*np.roll(v,2)
+218:         eps=1e-25
+220:         T=G-H;S=G+H
+226:         theta=2*np.pi*np.arange(5)/5;V=np.exp(1j*np.outer(np.arange(5),theta))/math.sqrt(5)
+229:         residual=float(np.max(np.abs(F(v,a,k,c,g,h))))/max(1.,abs(a*x)+abs(k*x*x)+abs(c*x/s)+abs(g*x/s)+abs(h*x*x))
+244:     return records,maxima,tolerance
+255:              'random_seed':70032026,'tolerance':tol,'max_scaled_errors':maxima,
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/check_p07.py
+SHA256: b710507c2f89f2d6af27b68ced5784c68f840a05613e0a45687be4521500c554
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+12: @dataclass(frozen=True)
+19:     def cast(x): return x if isinstance(x,K) else K(x)
+21:         x=K.cast(x);return K(self.a+x.a,self.b+x.b)
+23:     def __neg__(self): return K(-self.a,-self.b)
+24:     def __sub__(self,x):return self+-K.cast(x)
+25:     def __rsub__(self,x):return K.cast(x)+-self
+27:         x=K.cast(x);return K(self.a*x.a+5*self.b*x.b,self.a*x.b+self.b*x.a)
+30:         den=self.a*self.a-5*self.b*self.b
+32:         return K(self.a/den,-self.b/den)
+33:     def __truediv__(self,x):return self*K.cast(x).inv()
+34:     def __rtruediv__(self,x):return K.cast(x)*self.inv()
+36:         if n<0:return self.inv()**(-n)
+39:         return out
+42:         if not b:return (a>0)-(a<0)
+43:         if not a:return (b>0)-(b<0)
+44:         if a*b>0:return (a>0)-(a<0)
+45:         d=a*a-5*b*b
+46:         return ((a>0)-(a<0))*((d>0)-(d<0))
+47:     def __float__(self):return float(self.a)+float(self.b)*math.sqrt(5)
+48:     def data(self):return [str(self.a),str(self.b)]
+53: @dataclass(frozen=True)
+58:     def cast(x):return x if isinstance(x,E) else E((K.cast(x),K(),K(),K()))
+60:         x=E.cast(x);return E(tuple(a+b for a,b in zip(self.v,x.v)))
+62:     def __neg__(self):return E(tuple(-a for a in self.v))
+63:     def __sub__(self,x):return self+-E.cast(x)
+64:     def __rsub__(self,x):return E.cast(x)+-self
+72:                 o[j^k]=o[j^k]+a*b*factor
+73:         return E(tuple(o))
+79:         return out
+80:     def conj(self):return E((self.v[0],self.v[1],-self.v[2],-self.v[3]))
+81:     def data(self):return [a.data() for a in self.v]
+105: z=E.cast(u1)+I*sigma*phi
+110:     eq(f'phase row {m}',z**m,E.cast(cosines[m])+I*sigma*sinfactors[m])
+111:     eq(f'double phase row {m}',z**((2*m)%5),E.cast(cosines[(2*m)%5])+I*sigma*sinfactors[(2*m)%5])
+115:  [1,E.cast(1/(2*phi))-I*sigma*phi,E.cast(-phi/2)+I*sigma,E.cast(phi/2)+I*sigma],
+116:  [1,E.cast(-phi/2)-I*sigma,E.cast(1/(2*phi))-I*sigma*phi,E.cast(-1/(2*phi))-I*sigma*phi],
+125: gaps=[(1,2,[0,root5/2,-root5/2]),(0,1,[0,root5/(2*phi),root5*phi/2]),(0,2,[0,root5*phi/2,root5/(2*phi)])]
+128: def realclasses(t):return [K(1)+t,u1+t*u2,u2+t*u1]
+138: for x in [F(1,4),F(1),F(3)]:
+164: q=np.exp(2j*np.pi*np.outer(np.arange(5),np.arange(5))/5)/math.sqrt(5)
+167:     return a*y-k*y*y+c*np.roll(y,1)/(1+y)-g*y/(1+np.roll(y,-2))-h*y*np.roll(y,2)
+168: def jacobian(y,p):
+175:     return J
+188:     for xrat in [F(1,4),F(1),F(3)]:
+189:         for Crat in [F(1),F(7,3)]:
+195:             ds=-k*x-C-C*x/s;T=G-H;S=G+H
+207:             theta=2*np.pi*np.arange(5)/5
+210:             tt=float(t);expected_reps=[0] if tt>-1/ph**2+1e-12 else [1] if tt<-1/ph**2-1e-12 else [0,1]
+211:             rr=ev[:3].real;maxr=max(rr);actual_reps=[j for j in range(3) if abs(rr[j]-maxr)<tol*scale]
+212:             assert actual_reps==expected_reps,(name,actual_reps,expected_reps)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04.py
+SHA256: aec35a1456843a56d2bfb229159ebbefaff575bc84d3cf239931bc4611242b43
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+25:     return p
+32:     return trim(c)
+35: def pneg(a): return [-v for v in a]
+44:     return trim(c)
+57:     return trim(q), a
+63:         p = [F(-1)] + [F(0)] * (n-1) + [F(1)]
+69:     return PHI[n]
+77:         self.one = E(self, (F(1),))
+79:         z = E(self, (F(0), F(1)))
+86:             return v
+87:         return E(self, (F(v),))
+89:     def root(self, k): return self.roots[k % self.n]
+97:     def __bool__(self): return bool(self.p)
+100:         return self.p == b.p
+101:     def __hash__(self): return hash(self.p)
+104:         return E(self.field, padd(self.p, b.p))
+106:     def __neg__(self): return E(self.field, pneg(self.p))
+107:     def __sub__(self, b): return self + (-self.field(b))
+108:     def __rsub__(self, b): return self.field(b) + (-self)
+111:         return E(self.field, pmul(self.p, b.p))
+116:         s0, s1 = [], [F(1)]
+122:         return E(self.field, [v/a[0] for v in s0])
+123:     def __truediv__(self, b): return self * self.field(b).inv()
+125:         return sum((v*self.field.root(-k) for k, v in enumerate(self.p)), self.field.zero)
+126:     def serial(self): return [str(v) for v in self.p] or ['0']
+129: def eye(n): return [[F(i == j) for j in range(n)] for i in range(n)]
+130: def transpose(a): return [list(row) for row in zip(*a)]
+133:     return [[sum((x*y for x, y in zip(row, col)), F(0)) for col in bt] for row in a]
+138:     n = len(a)
+140:     out = [F(1)]
+147:     return out
+165:     return rank
+186:     return out
+192:     return (a-2*k*x-c*x/s**2-g/s-h*x, c/s, g*x/s**2, h*x)
+201:     return j
+280:     scalar = a*x-A*x*x+(c-g)*x/s
+281:     derivative = a-2*A*x+(c-g)/s**2
+289:         check(lams[0] == x*(a-A-2*A*x)/s, 'equilibrium_zero_mode_second')
+290:     groups = defaultdict(list)
+330:         check((d,C,G,H) == (F(5,2),F(2),F(-2),F(-1,2)), 'negative_all_one_exact_coefficients')
+334:         check((d,C,G,H) == (F(-7,4),F(1,2),F(1,2),F(1)), 'audit_named_positive_exact_coefficients')
+342:     return dict(n=n,q=q,case=name,parameters={key:str(v) for key,v in p.items()},
+346:                 eigenvalue_groups=[dict(labels=labels, cyclotomic_coefficients=lam.serial(),
+363:             return M(d)
+365:         def __neg__(self): return M({mon:-co for mon,co in self.t.items()})
+366:         def __sub__(self, other): return self + (-other)
+367:         def __rsub__(self, other): return -self + other
+373:             return M(d)
+378:             return out
+383:     B = (a-A*x)*s+c-g              # s B(x), zero at nonzero equilibrium
+385:         'row_sum_equals_scalar_derivative':D+C+G-H-((a-2*A*x)*s**2+c-g),
+387:         'equilibrium_zero_mode_first_mod_B':D+C+G-H+x*(A*s**2+c-g)-s*B,
+388:         'equilibrium_zero_mode_second_mod_B':D+C+G-H-x*s*(a-A-2*A*x)-B,
+391:     return {name:'zero polynomial' for name in residuals}
+413:                               method='Python standard-library SHA-256; no compiler or algebraic computations'),indent=2))
+434:     report = dict(status='PASS', method='stdlib Fraction; custom cyclotomic field; direct modular-index matrix assembly; Faddeev-LeVerrier characteristic polynomial; selected exact nullspace elimination',
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/independent_check.py
+SHA256: c17992c467ae9bb2d55ab62d42e114d2e0a771396428da8c0ab8856d176cac6a
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+28:             return new
+44:             return new
+49:     return abs(a-b) <= TOL*max(D(1),abs(a),abs(b))
+53:     return [j for j,v in enumerate(values) if near(v,top)]
+56:     return sorted({m for j in reps for m in (j,(-j)%n)})
+66:     N=n//2
+97:     terms=[a*x,-k*x*x,c*x/s,-g*x/s,-h*x*x]
+141:         eps=radius*D('1e-12')
+171:     return a*x-k*x*x+c*x/(1+x)-g*x/(1+x)-h*x*x
+172: assert rational_residual(F(6),F(1),F(1),F(9),F(1),F(1))==0
+173: assert F(1)+F(1)+(F(1)-F(9))/4==0
+174: for x in (F(1,4),F(3)):
+175:     assert rational_residual(F(17,2),F(1),F(1),F(11),F(1),x)==0
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/verify_mb.py
+SHA256: 98be5c5fe63e625c58e38f9b76c936ae229d481797a3101695bc4070104ece0e
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+9: from scipy.integrate import solve_ivp
+15: SEED, RUNS = 20261004, 64
+16: rng = np.random.default_rng(SEED)
+21:     return -k*np.eye(n)+c*P-g*np.linalg.matrix_power(P,n-q)-h*np.linalg.matrix_power(P,q)
+23: def mb(y,p,q):
+25:     return y*(a-k*y+c*np.roll(y,1)-g*np.roll(y,-q)-h*np.roll(y,q))
+27: def dm(x,p,q):
+29:     return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-q))-h*x*np.roll(x,q)
+33:     th=2*np.pi*np.arange(n)/n
+39:     return float(k+b.real.max()),float(-b.real.max()),a/M,lam,b
+41: t=np.sin(np.pi/14)
+55: cases[-1]=(*cases[-1][:-1],(b+np.sqrt(b*b+4*A*mu))/(2*A))
+56: report={'seed':SEED,'random_runs_per_case':RUNS,'initial_ratios':'independent log-uniform [1e-3,1e3]',
+64:     np.testing.assert_allclose(np.linalg.eigvalsh(sym),np.sort(b.real),atol=1e-12)
+65:     np.testing.assert_allclose(mb(np.full(n,ys),p,q),0,atol=1e-10)
+66:     np.testing.assert_allclose(dm(np.full(n,x),p,q),0,atol=1e-10)
+69:     np.testing.assert_allclose(np.sort(np.linalg.eigvals(jac).real),np.sort(lam.real),atol=1e-11)
+70:     T=40/(ys*delta)
+79:         sol=solve_ivp(lambda _,u: B@(ys*np.expm1(u)),(0,T),u0,
+80:                       method='Radau',jac=lambda _,u:B*(ys*np.exp(u))[None,:],
+81:                       rtol=2e-9,atol=2e-11,t_eval=times)
+94:         max_bound_error=max(max_bound_error,float(np.max((dv+delta*norm2)/(1+norm2))))
+111:         v=np.cos(2*np.pi*m*np.arange(n)/n); v/=np.linalg.norm(v)
+113:         # Fourier eigenspace. Norm grows as exp(alpha*t) to first order.
+114:         dt=np.linspace(0,np.log(100)/alpha,400)
+116:         sol=solve_ivp(lambda _,xx:dm(xx,p,q),(0,dt[-1]),x+dx0,
+117:                       method='Radau',rtol=2e-11,atol=1e-13*x,t_eval=dt)
+124:         axes[1].semilogy(alpha*dt,growth,label=name)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/prior-art-audit/build_report.py
+SHA256: 9cdacc734a4aedd7de387fe4c44cd2766fb2fad50467a722fdb7b4f77c9140d1
+PROPOSED STATUS: theory_candidate_snapshot
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+339:     model,topology,law,n,q,method=PM[paper]
+391: def esc(s): return html.escape(str(s),quote=True)
+394:     return f'<a class="cite" href="{esc(b["url"])}" title="{esc(b["title"])}">[{k}: {esc(b["authors"].split(";")[0])}, {b["year"]}]</a>'
+396:     return re.sub(r'\{(B\d{2})\}',lambda m:cite(m[1]),s)
+475: @media(max-width:1000px){.layout{display:block;padding:20px 14px}nav{position:static;max-height:220px;margin-bottom:20px;columns:2}section{padding:28px 24px}body{font-size:16px}}
+476: @media print{body{background:white;font-size:10pt;line-height:1.5}header{padding:0 0 24px;color:#172a37;background:white}header p,header .eyebrow{color:#425864}h1{font-size:30pt}nav,button,.matrix-tools{display:none}.layout{display:block;padding:0}section{border:0;padding:0;margin:0 0 28px;break-before:page}h2{font-size:19pt}h3{font-size:13pt;break-after:avoid}a{color:inherit;text-decoration:none}.cite{font-size:8pt}table{font-size:8pt}.wide-table{max-height:none;overflow:visible}#matrix{min-width:0;font-size:5pt}#matrix td,#matrix th{min-width:0!important;position:static!important;padding:3px;overflow-wrap:anywhere}.summary-table table{min-width:0}.math{font-size:11pt}tr{break-inside:avoid}p{orphans:3;widows:3}}
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/build_diagram_scripts.py
+SHA256: 6d524d76a943a4ed79b39ef6714c72f255109297882bb030a4c69d753b6c935f
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+8:  ('figure_1_eigenvalues.py','Baseline Jacobian eigenvalues',shared,source[source.index("R['baseline']={}"):source.index("R['stable_lin_counterexample']")], 'baseline'),
+10:  ('figure_3_stability_maps.py','Two-parameter stability maps',shared,source[source.index("R['maps']={}"):source.index('# Reproduce exact seed')], 'maps'),
+11:  ('figure_4_sampling.py','Stability frequencies under three sampling schemes',shared,source[source.index("TIERS="):source.index('# Child ablation')], 'monte_carlo')]
+31: from scipy.integrate import solve_ivp
+37: PL = (1, 1, 1, 1, 1, 1)
+38: PS = (2, 0.5, 1, 0.5, 0.3)
+57:  1:'Each marker is a Jacobian eigenvalue at the stated model baseline.\nNegative real parts imply local exponential stability; positive parts imply instability.',
+60:  4:'Draw 1,200 accepted parameter sets per scenario with seed 3.\nReset the generator for each scenario, preserving the original draw order.\nUniform: all six conceptual coefficients uniform on [0.1,2].\nOrdered: same distribution conditional on SELF > SHENG > RESTR > TGT.\nTiered: independent draws in the explicit TIERS intervals below.\nEach draw is paired across models; CHILD has no counterpart in the modified model.\nPreserve TIERS insertion order to reproduce the same seeded results.\nLeft bars condition on positive-balance existence; right bars use all draws.\nThe original sampling calculation uses alpha < 0; near-zero cases should be\nexamined separately if you change these parameters or sampling ranges.'}
+90: 1. figure_1_eigenvalues.py: baseline eigenvalue plane.
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/audit.py
+SHA256: d985c62d8e704ea1b03064009160c131e373e0fba8cabecd08be03565a561b7c
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+7: from scipy.integrate import solve_ivp
+19: PL=(1,1,1,1,1,1); PS=(2,.5,1,.5,.3)
+21: def lin(t,x,a,b,c,d,g,h):
+22:     return x*(a-b*x+c*np.roll(x,1)-d*np.roll(x,2)-g*np.roll(x,-1)-h*np.roll(x,-2))
+23: def sat(t,x,a,k,c,g,h):
+24:     return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-2))-h*x*np.roll(x,2)
+27:     return a/M if M>0 else np.nan
+28: def roots_s(p):
+29:     a,k,c,g,h=p; A=k+h; D=(A-a)**2+4*A*(a+c-g)
+30:     if D<0:return []
+31:     return sorted(set([v for v in ((a-A-np.sqrt(D))/(2*A),(a-A+np.sqrt(D))/(2*A)) if v>0]))
+33:     r=roots_s(p);return max(r) if r else np.nan
+40:     return J
+48:     return J
+52:     if not np.isfinite(x):return np.full(5,np.nan)
+53:     return np.linalg.eigvals((jl if m=='lin' else js)(np.full(5,x),p))
+54: def alpha(m,p):return np.max(eigs(m,p).real)
+56:     a,b,c,d,g,h=p; x=eq_l(p);th=2*np.pi*np.arange(5)/5
+57:     return x*(-b+(c-g)*np.cos(th)-(d+h)*np.cos(2*th))
+59:     a,k,c,g,h=p;x=eq_s(p);s=1+x;th=2*np.pi*np.arange(5)/5
+61:     return D+c/s*np.cos(th)+x*(g/s**2-h)*np.cos(2*th)
+62: def integrate(m,p,x0,T=120,method='DOP853',n=3001):
+63:     r=solve_ivp(lin if m=='lin' else sat,(0,T),x0,args=p,method=method,
+64:                 rtol=1e-10,atol=1e-12,t_eval=np.linspace(0,T,n))
+66:     return r
+72: rng=np.random.default_rng(71);jacerr={};eigerr={};res={}
+85: R['baseline']={}
+90:     R['baseline'][m]={'xstar':xe,'alpha':float(max(es.real)),'eigenvalues':[[float(z.real),float(z.imag)] for z in sorted(es,key=lambda z:-z.real)]}
+92: ax.set(xlabel=r'Re $\lambda$',ylabel=r'Im $\lambda$',xlim=(-2.6,.8),ylim=(-1.3,1.3),title='Local stability at the stated baseline parameters')
+93: ax.legend(loc='lower right',fontsize=8);ax.grid(alpha=.18);save('01_baseline_eigenvalues',fig)
+102:         check=integrate(m,p,x,method='RK45')
+116: R['maps']={};maps=[]
+117: for name,N,cs,rs in [('early',90,np.linspace(.05,2.5,90),np.linspace(.05,2,90)),('master',90,np.linspace(.3,1.6,90),np.linspace(.1,1,90))]:
+129:     if name=='master':maps=arr;mapcs=cs;maprs=rs
+143: # Reproduce exact seed and paired draw order, report both denominators.
+144: TIERS={'SELF':(1,2),'SHENG':(.5,1.5),'SAT':(.3,1),'RESTR':(.2,.8),'TGT':(.1,.5),'CHILD':(.1,.5)}
+145: def draw(r,scheme):
+146:     if scheme=='tiered':return {k:r.uniform(*v) for k,v in TIERS.items()}
+150:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+152:     return (d['SELF'],d['SAT'],d['SHENG'],d['RESTR'],d['CHILD'],d['TGT']) if m=='lin' else (d['SELF'],d['SAT'],d['SHENG'],d['TGT'],d['RESTR'])
+155:     return [ctr-h,ctr+h]
+158:     r=np.random.default_rng(3);v={m:[] for m in ['lin','sat']}
+169:     x=np.arange(3)
+177: # Child ablation same seeds as record, plus counts.
+180:     r=np.random.default_rng(11);st=va=0
+192:     hs=np.linspace(.05,20,1000);brackets=[(lo,hi) for lo,hi in zip(hs[:-1],hs[1:]) if f(lo)*f(hi)<0]
+199: for g in np.linspace(2.10001,2.54999,1000):
+204: def full(t,x,av,k=.5,c=1,g=.5,h=.3,gd=.35,b=.1,eps=.5):
+205:     return av*x-k*x*x+c*np.roll(x,1)/(1+x)-gd*np.roll(x,-1)*x/(1+x)-g*x/(1+np.roll(x,-2))-h*x*np.roll(x,2)-b*np.roll(x,-2)/(1+eps*x)
+208:     s=solve_ivp(fun,(0,500),np.full(5,2.5),rtol=1e-10,atol=1e-12,method='LSODA')
+209:     return s,fun
+210: base,_=fs(np.full(5,2.));base=base.y[:,-1];R['pathology']={'baseline':base.tolist(),'cases':[]}
+216: for b in np.linspace(.03,.28,9):
+217:     for gd in np.linspace(.2,.45,9):
+223:         n=sum([v<-.5 for v in rel])+int(abs(rel[2])>abs(rel[3]));counts[int(n)]=counts.get(int(n),0)+1
+228: s=integrate('lin',PL,np.arange(1.,6),T=300,n=30001);mask=s.t>150;pk=find_peaks(s.y[1,mask])[0]
+230: s=integrate('lin',(0,0,0,1,0,1),np.arange(1.,6),T=60);R['restriction_end']=s.y[:,-1].tolist()
+231: R['symmetric_subspace']={'baseline_all_equal_limit':1/3,'transverse_alpha':alpha('lin',PL),
+236: def lin_fast(x,p):
+238:     return np.array([x[i]*(a-b*x[i]+c*x[(i-1)%5]-d*x[(i-2)%5]-g*x[(i+1)%5]-h*x[(i+2)%5]) for i in range(5)])
+240:     x=solve_ivp(lambda t,x:lin_fast(x,p),(0,100),np.arange(1.,6),method='DOP853',rtol=1e-10,atol=1e-12).y[:,-1]
+242:     def rhs(t,Y):
+243:         x=Y[:5];return np.r_[lin_fast(x,p),(jl(x,p)@Y[5:].reshape(5,5)).ravel()]
+245:         sol=solve_ivp(rhs,(0,.5),np.r_[x,Q.ravel()],method='DOP853',rtol=1e-10,atol=1e-12)
+249:     return data
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/refresh_two_plots.py
+SHA256: 6df9f17b0578ab19e21f8937908360111390479ff1fb8461f74858041874ad49
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+7: from scipy.integrate import solve_ivp
+19: PL=(1,1,1,1,1,1); PS=(2,.5,1,.5,.3)
+21: def lin(t,x,a,b,c,d,g,h):
+22:     return x*(a-b*x+c*np.roll(x,1)-d*np.roll(x,2)-g*np.roll(x,-1)-h*np.roll(x,-2))
+23: def sat(t,x,a,k,c,g,h):
+24:     return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-2))-h*x*np.roll(x,2)
+27:     return a/M if M>0 else np.nan
+28: def roots_s(p):
+29:     a,k,c,g,h=p; A=k+h; D=(A-a)**2+4*A*(a+c-g)
+30:     if D<0:return []
+31:     return sorted(set([v for v in ((a-A-np.sqrt(D))/(2*A),(a-A+np.sqrt(D))/(2*A)) if v>0]))
+33:     r=roots_s(p);return max(r) if r else np.nan
+40:     return J
+48:     return J
+52:     if not np.isfinite(x):return np.full(5,np.nan)
+53:     return np.linalg.eigvals((jl if m=='lin' else js)(np.full(5,x),p))
+54: def alpha(m,p):return np.max(eigs(m,p).real)
+56:     a,b,c,d,g,h=p; x=eq_l(p);th=2*np.pi*np.arange(5)/5
+57:     return x*(-b+(c-g)*np.cos(th)-(d+h)*np.cos(2*th))
+59:     a,k,c,g,h=p;x=eq_s(p);s=1+x;th=2*np.pi*np.arange(5)/5
+61:     return D+c/s*np.cos(th)+x*(g/s**2-h)*np.cos(2*th)
+62: def integrate(m,p,x0,T=120,method='DOP853',n=3001):
+63:     r=solve_ivp(lin if m=='lin' else sat,(0,T),x0,args=p,method=method,
+64:                 rtol=1e-10,atol=1e-12,t_eval=np.linspace(0,T,n))
+66:     return r
+77:     R['baseline'][m]={'xstar':xe,'alpha':float(max(es.real)),'eigenvalues':[[float(z.real),float(z.imag)] for z in sorted(es,key=lambda z:-z.real)]}
+79: ax.set(xlabel=r'Re $\lambda$',ylabel=r'Im $\lambda$',xlim=(-2.6,.8),ylim=(-1.3,1.3),title='Local stability at the stated baseline parameters')
+80: ax.legend(loc='lower right',fontsize=8);ax.grid(alpha=.18);save('01_baseline_eigenvalues',fig)
+85:     x=np.arange(3)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/zero_setups.py
+SHA256: 438996ea186d759c2eeb43e7714b94248c0d7d30df15f064c2cdd04596cb5f3f
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: from scipy.integrate import solve_ivp
+11: par a=2,k=0.5,c=1,g=0.5,h=0.3
+12: par gd=0.35,b=0.1,eps=0.5
+17:  lines.append(f"{me}'=a*{me}-k*{me}^2+c*{mo}/(1+{me})-gd*{ch}*{me}/(1+{me})-g*{me}/(1+{ta})-h*{me}*{co}-b*{ta}/(1+eps*{me})")
+19: init x1=0.01,x2=1,x3=2,x4=1,x5=0.01
+20: @ meth=rungekutta,dt=0.0001,total=0.3
+21: @ xp=t,yp=x1,xlo=0,xhi=0.3,ylo=-0.015,yhi=0.015
+22: @ maxstor=10000,bound=1000
+29: par a=2,k=0.5,c=0.1,g=2.5,h=0.3
+34:  lines2.append(f"{me}'=a*{me}-k*{me}^2+c*{mo}/(1+{me})-g*{me}/(1+{ta})-h*{me}*{co}")
+36: init x1=0.25,x2=0.25,x3=0.25,x4=0.25,x5=0.25
+37: @ meth=rungekutta,dt=0.01,total=60
+38: @ xp=t,yp=x1,xlo=0,xhi=60,ylo=0,yhi=0.27
+39: @ maxstor=10000,bound=1000
+43: def full(t,x):
+44:  return 2*x-.5*x*x+np.roll(x,1)/(1+x)-.35*np.roll(x,-1)*x/(1+x)-.5*x/(1+np.roll(x,-2))-.3*x*np.roll(x,2)-.1*np.roll(x,-2)/(1+.5*x)
+45: def simple(t,x):
+46:  return 2*x-.5*x*x+.1*np.roll(x,1)/(1+x)-2.5*x/(1+np.roll(x,-2))-.3*x*np.roll(x,2)
+47: rng=np.random.default_rng(0)
+48: for rows,params,fun in [(lines,dict(a=2,k=.5,c=1,g=.5,h=.3,gd=.35,b=.1,eps=.5),full),(lines2,dict(a=2,k=.5,c=.1,g=2.5,h=.3),simple)]:
+52:   assert np.allclose(vals,fun(0,x),rtol=1e-13,atol=1e-13)
+53: def ev(t,x):return x[0]
+55: s=solve_ivp(full,(0,.3),[.01,1,2,1,.01],rtol=1e-11,atol=1e-13,method='DOP853',t_eval=np.linspace(0,.3,3001),events=ev,max_step=.001)
+56: u=solve_ivp(simple,(0,60),np.full(5,.25),rtol=1e-11,atol=1e-13,method='DOP853',t_eval=np.linspace(0,60,1201))
+60:  t=j*dt;k1=full(t,x);k2=full(t+dt/2,x+dt*k1/2);k3=full(t+dt/2,x+dt*k2/2);k4=full(t+dt,x+dt*k3)
+68: ax[0].annotate(f'Crosses zero at t = {tc:.5f}',xy=(tc,0),xytext=(.11,.007),arrowprops=dict(arrowstyle='->',color='0.3'),fontsize=9)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/build_review.py
+SHA256: 2482c894bbb0059e97945c188a13c1f7704a1186f2c6e16a974406852782b4ab
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+25:     t=Table(a,colWidths=widths,hAlign='LEFT',repeatRows=1)
+30: def pct(x):return f'{100*x:.1f}%'
+35: p('The core equilibrium, Jacobian, baseline eigenvalue and perturbation calculations are sound. They provide enough material for a focused results write-up now. Several conclusions in the Claude record go beyond what the computations establish; the regime classification and some bifurcation claims need substantive correction.')
+37: h('Independently verified baseline results')
+39: p('Distances are Euclidean distances to the relevant balanced vector. The two baselines use different parameters and activity scales. They demonstrate behavior at specified settings; they do not establish a calibrated comparison of physiological recovery speeds.')
+41: p('At the all-ones parameter setting, Lin\'s positive balanced equilibrium is unstable. The simple modified model has a locally stable positive balanced equilibrium at its chosen baseline and recovers from the tested disturbances. Under the specified parameter sweeps and sampling distributions, the modified model more frequently admits a locally stable positive balanced equilibrium.')
+48: table([['Figure family','Verdict','Action before manuscript use'],['Eigenvalue plane (master Fig. 1)','Verified','Use. State both full parameter tuples and label this local stability of the balanced equilibrium.'],['Small/severe perturbations (Fig. 2)','Verified','Use. Call the large disturbance a tested finite perturbation. It is not a global-stability proof. Show the early recovery interval for the modified model.'],['Five organs in turn (Fig. 3)','Verified idea; redundant','Cyclic symmetry makes these equivalent tests up to relabeling. Keep as a numerical consistency check or supplement.'],['Stability heatmaps (Fig. 4)','Verified values; relabel','Use the master mapping: received restraint is d in Lin, h in the modified model. Explicitly distinguish missing positive equilibria and the percentage denominator.'],['Regime map and regime shares (Figs. 5, 7)','Not reliable as dynamical classifications','Do not publish chaos percentages or multistability claims from this classifier. Rebuild with unresolved, numerical failure and threshold-exceeded categories.'],['Monte Carlo stability bars (Fig. 6)','Verified numbers; conditional interpretation','Report the sampling distribution, seed, sample size and valid counts. Give stability among valid draws and among all draws. Priors are modeling assumptions.'],['CHILD-term ablation (Fig. 8)','Verified within its experiment','Optional sensitivity result. It does not isolate the functional-form change or establish a uniquely fair comparison.'],['Example trajectories (Figs. 9, 10)','Consistent; largely duplicate Fig. 2','Use only if a time-series/phase-portrait pair communicates something additional. Avoid magnifying numerical noise around the stable point.'],['P4 mode map / Hopf claim','Formula valid; figure and claim need repair','At c=1 the crossing is beyond the plotted h range. The c=2 reported endpoint is not a crossing. A nondegenerate Hopf assertion needs more than a nonzero imaginary part.'],['P5 bistability example','Verified for its chosen parameters','Optional supplement. The threshold is for synchronous starts; the basin boundary in five dimensions is not a scalar threshold.']],[134,116,260])
+51: page('Verified baseline figures')
+52: fig('01_baseline_eigenvalues',405)
+53: p('<b>Figure 1.</b> Jacobian eigenvalues at the positive balanced equilibrium for the two stated baselines. Lin has a complex pair with positive real part. All five eigenvalues of the simple modified model have negative real parts. The magnitudes are in each model\'s stated time units.','SmallX')
+61: p('<b>Figure 4.</b> Identical master-notebook draws and seed (1,200 draws per scheme, seed 3). Left: the fraction stable among draws with a positive balanced equilibrium. Right: the fraction of all draws that admit such a stable equilibrium. These describe the specified distributions, not a probability that a model is correct or physiologically healthy.','SmallX')
+67: p('This reproduces the baseline eigenvalues. The concrete counterexample (a,b,c,d,g,h)=(1,2,1,1,1,1) has x*=0.25 and largest real part -0.095492. Thus the statement that Lin cannot represent stable balance is false. Use it as a one-sentence qualification, without turning the section into a new theorem paper.')
+70: p('For Lin on the synchronous subspace, s\'=a*s-M*s^2. With a&gt;0 and positive s(0), M&lt;0 gives finite-time blow-up; M=0 gives exponential growth, not finite-time blow-up; M&gt;0 gives convergence to a/M on this subspace. Do not extend the last conclusion to every nonsynchronous trajectory without a separate argument.')
+73: p('Assume nonnegative coefficients and k&gt;0. At x_i=0 its derivative is c*x_(i-1), which is nonnegative. At a component attaining the maximum X, the derivative is at most a*X-k*X^2+c*X/(1+X), and hence at most a*X-k*X^2+c. Therefore the box [0,B]^5 is positively invariant and attracts from above, where:')
+84: p('The all-equal start (0.5,...,0.5) is also special: exact trajectories remain synchronous. At Lin\'s baseline the uniform eigenvalue is -1 while the transverse leading real part is +0.206011. Such a trajectory can converge to an equilibrium that repels generic perturbations. Disagreement with nonsynchronous starts does not establish coexisting attractors. Near-synchronous randomized starts and convergence checks are needed for a basin study.')
+97: h('3.2 Baseline instability and response to disturbances')
+99: p('Report departure from balance and the subsequent oscillatory behavior observed in the trajectory. Distinguish the unstable equilibrium from an attracting periodic orbit. If the Lin reproduction is included, give the separate start (1,2,3,4,5) and period near 17.626. Avoid saying that the severe perturbation causes permanent organ extinction; the tested baseline trajectories oscillate.')
+102: p('End with the limited boundedness observation: finite-time blow-up can occur for sufficiently strong positive feedback, as shown analytically on the synchronous subspace when M&lt;0. This is a conditional limitation of the model, not a statement about the all-ones baseline. The distinction prepares the reader for the modified model.')
+107: p('Use the original-model part of the baseline figures in 3.2 and the original-model map in 3.3. If paired comparison figures are retained, introduce the Lin panels here and return to the modified panels in Section 4. Do not insert duplicate figures merely to make the sections look symmetric.')
+111: p('Use the simple five-parameter modified model as the main equation, because it is the model used for the stability graphs. Explain recipient-dependent nourishment, the target-dependent loss and bilinear received restraint. Acknowledge the omitted CHILD term and changed target-effect sign. State the chosen baseline (a,k,c,g,h)=(2,0.5,1,0.5,0.3), and say the values are illustrative rather than fitted.')
+115: p('At the chosen baseline, give x*=(3+sqrt(59))/4 and alpha=-1.153724. Refer to the modified-model eigenvalues. The full circulant derivation can be placed in an appendix or deferred to the theoretical paper. Include the short nonnegativity/boundedness argument if it supports the motivation; clearly distinguish it from asymptotic stability.')
+129: p('Both historical stability windows were recomputed on their original 90 x 90 grids. The master Monte Carlo experiments used the original seed and draw order. The CHILD ablation used 3,000 draws and seed 11. The conservative and periodic Lin spectra were independently recomputed by variational integration with QR renormalization every 0.5 time units and a 100-unit transient.')
+136: p('State the ODE solver and tolerances actually used for each submitted figure, the integration interval and initial states, the equilibrium branch, the parameter grid, the sampling distributions and seed, and the stability decision rule. The regenerated disturbance figures use SciPy DOP853 with relative tolerance 1e-10 and absolute tolerance 1e-12. Their sampled time grid has 3,001 points over [0,120].')
+139: p('Original reference checked: Haipeng Lin and Jing Han, <i>Analysis of Dynamic Five-Element Model</i>, Proceedings of the 39th Chinese Control Conference (2020), pp. 777-781. DOI: <link href="https://doi.org/10.23919/CCC50068.2020.9188438" color="#24628d">10.23919/CCC50068.2020.9188438</link>. The local Lin2020.pdf was used to check Eq. (2), baseline eigenvalues, parameter cases and reported figures. This review does not independently validate the historical or clinical claims in the surrounding TCM narrative.','SmallX')
+147: p('Running this file prints x*=2.670286436967 and max Re(lambda)=-1.153723520690. To simulate, pass rhs to scipy.integrate.solve_ivp with args=BASELINE and a nonnegative five-component initial state. A matching canonical_model.ode is included for XPPAUT.','SmallX')
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/check_original_sources.py
+SHA256: daf1df26b487653bda7632c3bf239ea5cf20ef44e736dc55332a5db13afdec5e
+PROPOSED STATUS: previous_workspace_support
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+14: rng = np.random.default_rng(20261004)
+17: def dm(t, x, a, k, c, g, h):
+18:     return np.array([a*x[i]-k*x[i]**2+c*x[(i-1)%5]/(1+x[i])
+23: def lin(t, x, a, b, c, d, g, h):
+24:     return np.array([a*x[i]-b*x[i]**2+c*x[i]*x[(i-1)%5]
+30:     return np.array([
+33:         -gd*x[(i+1)%5]*x[i]/(1+x[i])-b*x[(i+2)%5]/(1+eps*x[i])
+38:     return np.column_stack([ref(0, x.astype(complex)+1e-25j*np.eye(5)[j], *p).imag/1e-25
+47:     return ns
+58:     if cell['cell_type'] == 'code' and any(s in code for s in ['def rhs_', 'def jacobian_', 'def balanced_state_']):
+127:         x=rng.uniform(.01,5,5);p=rng.uniform(.1,2.5,5); b,eps=rng.uniform(.1,1,2)
+128:         ns=dict(zip(['a','k','c','g','h'],p));ns.update(b=b,eps=eps)
+146: print(json.dumps(dict(function_groups=len(results),tests=totals,maximum_errors=worst,
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/clean_package/canonical_model.py
+SHA256: bd03709a9263819bef139b48a8b3fe5291ef0d9eb4b0def1b9841c0b0980a81b
+PROPOSED STATUS: recorded_reproduction_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+10: BASELINE = (2.0, 0.5, 1.0, 0.5, 0.3)
+13: def rhs(t, x, a, k, c, g, h):
+14:     """Compatible with solve_ivp(..., args=BASELINE)."""
+16:     return (a*x - k*x*x + c*np.roll(x, 1)/(1+x)
+23:     D = (A-a)**2 + 4*A*(a+c-g)
+25:         return []
+27:     return sorted(set(float(s) for s in roots if s > 0))
+30: def jacobian(x, a, k, c, g, h):
+41:     return J
+45:     s = positive_balances(*BASELINE)[-1]
+46:     alpha = np.linalg.eigvals(jacobian(np.full(5, s), *BASELINE)).real.max()
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/clean_package/audit.py
+SHA256: 115dc45a0a4d20e60c5bae49564593a70245e72e07c66df7ab060e942005f01f
+PROPOSED STATUS: recorded_reproduction_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+7: from scipy.integrate import solve_ivp
+19: PL=(1,1,1,1,1,1); PS=(2,.5,1,.5,.3)
+21: def lin(t,x,a,b,c,d,g,h):
+22:     return x*(a-b*x+c*np.roll(x,1)-d*np.roll(x,2)-g*np.roll(x,-1)-h*np.roll(x,-2))
+23: def sat(t,x,a,k,c,g,h):
+24:     return a*x-k*x*x+c*np.roll(x,1)/(1+x)-g*x/(1+np.roll(x,-2))-h*x*np.roll(x,2)
+27:     return a/M if M>0 else np.nan
+28: def roots_s(p):
+29:     a,k,c,g,h=p; A=k+h; D=(A-a)**2+4*A*(a+c-g)
+30:     if D<0:return []
+31:     return sorted(set([v for v in ((a-A-np.sqrt(D))/(2*A),(a-A+np.sqrt(D))/(2*A)) if v>0]))
+33:     r=roots_s(p);return max(r) if r else np.nan
+40:     return J
+48:     return J
+52:     if not np.isfinite(x):return np.full(5,np.nan)
+53:     return np.linalg.eigvals((jl if m=='lin' else js)(np.full(5,x),p))
+54: def alpha(m,p):return np.max(eigs(m,p).real)
+56:     a,b,c,d,g,h=p; x=eq_l(p);th=2*np.pi*np.arange(5)/5
+57:     return x*(-b+(c-g)*np.cos(th)-(d+h)*np.cos(2*th))
+59:     a,k,c,g,h=p;x=eq_s(p);s=1+x;th=2*np.pi*np.arange(5)/5
+61:     return D+c/s*np.cos(th)+x*(g/s**2-h)*np.cos(2*th)
+62: def integrate(m,p,x0,T=120,method='DOP853',n=3001):
+63:     r=solve_ivp(lin if m=='lin' else sat,(0,T),x0,args=p,method=method,
+64:                 rtol=1e-10,atol=1e-12,t_eval=np.linspace(0,T,n))
+66:     return r
+72: rng=np.random.default_rng(71);jacerr={};eigerr={};res={}
+85: R['baseline']={}
+90:     R['baseline'][m]={'xstar':xe,'alpha':float(max(es.real)),'eigenvalues':[[float(z.real),float(z.imag)] for z in sorted(es,key=lambda z:-z.real)]}
+92: ax.set(xlabel=r'Re $\lambda$',ylabel=r'Im $\lambda$',xlim=(-2.6,.8),ylim=(-1.3,1.3),title='Local stability at the stated baseline parameters')
+93: ax.legend(loc='lower right',fontsize=8);ax.grid(alpha=.18);save('01_baseline_eigenvalues',fig)
+102:         check=integrate(m,p,x,method='RK45')
+116: R['maps']={};maps=[]
+117: for name,N,cs,rs in [('early',90,np.linspace(.05,2.5,90),np.linspace(.05,2,90)),('master',90,np.linspace(.3,1.6,90),np.linspace(.1,1,90))]:
+129:     if name=='master':maps=arr;mapcs=cs;maprs=rs
+143: # Reproduce exact seed and paired draw order, report both denominators.
+144: TIERS={'SELF':(1,2),'SHENG':(.5,1.5),'SAT':(.3,1),'RESTR':(.2,.8),'TGT':(.1,.5),'CHILD':(.1,.5)}
+145: def draw(r,scheme):
+146:     if scheme=='tiered':return {k:r.uniform(*v) for k,v in TIERS.items()}
+150:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+152:     return (d['SELF'],d['SAT'],d['SHENG'],d['RESTR'],d['CHILD'],d['TGT']) if m=='lin' else (d['SELF'],d['SAT'],d['SHENG'],d['TGT'],d['RESTR'])
+155:     return [ctr-h,ctr+h]
+158:     r=np.random.default_rng(3);v={m:[] for m in ['lin','sat']}
+169:     x=np.arange(3)
+177: # Child ablation same seeds as record, plus counts.
+180:     r=np.random.default_rng(11);st=va=0
+192:     hs=np.linspace(.05,20,1000);brackets=[(lo,hi) for lo,hi in zip(hs[:-1],hs[1:]) if f(lo)*f(hi)<0]
+199: for g in np.linspace(2.10001,2.54999,1000):
+204: s=integrate('lin',PL,np.arange(1.,6),T=300,n=30001);mask=s.t>150;pk=find_peaks(s.y[1,mask])[0]
+206: s=integrate('lin',(0,0,0,1,0,1),np.arange(1.,6),T=60);R['restriction_end']=s.y[:,-1].tolist()
+207: R['symmetric_subspace']={'baseline_all_equal_limit':1/3,'transverse_alpha':alpha('lin',PL),
+212: def lin_fast(x,p):
+214:     return np.array([x[i]*(a-b*x[i]+c*x[(i-1)%5]-d*x[(i-2)%5]-g*x[(i+1)%5]-h*x[(i+2)%5]) for i in range(5)])
+216:     x=solve_ivp(lambda t,x:lin_fast(x,p),(0,100),np.arange(1.,6),method='DOP853',rtol=1e-10,atol=1e-12).y[:,-1]
+218:     def rhs(t,Y):
+219:         x=Y[:5];return np.r_[lin_fast(x,p),(jl(x,p)@Y[5:].reshape(5,5)).ravel()]
+221:         sol=solve_ivp(rhs,(0,.5),np.r_[x,Q.ravel()],method='DOP853',rtol=1e-10,atol=1e-12)
+225:     return data
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/clean_package/canonical_model.ode
+SHA256: f62886c45db997e03882ff894a2ba9ebdb13198afd40e663cdf3713dc8aa33fc
+PROPOSED STATUS: recorded_reproduction_bundle
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: par a=2, k=0.5, c=1, g=0.5, h=0.3
+4: x1'=a*x1-k*x1^2+c*x5/(1+x1)-g*x1/(1+x3)-h*x1*x4
+5: x2'=a*x2-k*x2^2+c*x1/(1+x2)-g*x2/(1+x4)-h*x2*x5
+6: x3'=a*x3-k*x3^2+c*x2/(1+x3)-g*x3/(1+x5)-h*x3*x1
+7: x4'=a*x4-k*x4^2+c*x3/(1+x4)-g*x4/(1+x1)-h*x4*x2
+8: x5'=a*x5-k*x5^2+c*x4/(1+x5)-g*x5/(1+x2)-h*x5*x3
+10: init x1=2.803800758816, x2=2.670286436967, x3=2.670286436967
+11: init x4=2.670286436967, x5=2.670286436967
+12: @ meth=rungekutta, dt=0.01, total=30
+13: @ xlo=0, xhi=30, ylo=2.5, yhi=2.9, xp=t, yp=x1
+14: @ maxstor=100000, bound=1000000
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/latex_revision/use_image_files.py
+SHA256: c34ccee5d79db2bef861b04814fe75a46fa1c4839239a5d86ef3e5282d5f6aae
+PROPOSED STATUS: archived_revision_pipeline
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+35: seed 3. Left: the fraction with a locally stable positive balanced
+55: for i,name in enumerate(['01_baseline_eigenvalues','02_perturbation_recovery','03_corrected_stability_maps','04_sampling_denominators'],1):
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/latex_revision/assemble.py
+SHA256: 5a9af8afc8c9511849061608779d5de0a9b5b87464186d8323de263296d9d3c9
+PROPOSED STATUS: archived_revision_pipeline
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/latex_revision/build_figures.py
+SHA256: 1981fd64cb4816af8a960c234ae513a445ab9f68339ceba977b6572effe42f4d
+PROPOSED STATUS: archived_revision_pipeline
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: from scipy.integrate import solve_ivp
+6: ns={'np':np,'solve_ivp':solve_ivp}
+13:  return rf'\node[{opts}] at ({x:.4f},{y:.4f}) {{{text}}};'
+16:  def X(t):return x+w*(t-xlim[0])/(xlim[1]-xlim[0])
+17:  def Y(t):return y+h*(t-ylim[0])/(ylim[1]-ylim[0])
+26:  return out,X,Y
+30: a,X,Y=plot_axes(1,1.2,10.8,4.7,(-2.6,.8),(-1.3,1.3),[-2.5,-2,-1.5,-1,-.5,0,.5],[-1,-.5,0,.5,1],r'$\operatorname{Re}\lambda$',r'$\operatorname{Im}\lambda$','Baseline equilibrium spectra')
+34:  for real,imag in R['baseline'][model]['eigenvalues']:
+47:   T=120 if m=='lin' else 12; mask=sol.t<=T;ts=sol.t[mask];values=sol.y[:,mask]/s
+64: cs=np.linspace(.3,1.6,90);rs=np.linspace(.1,1,90)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/work/before_model_cleanup/build_review.py
+SHA256: 9acbdf9b451dda064fa158f83d247f21cb58542cdcc251040afd4c7de2a7fa29
+PROPOSED STATUS: superseded
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+25:     t=Table(a,colWidths=widths,hAlign='LEFT',repeatRows=1)
+30: def pct(x):return f'{100*x:.1f}%'
+35: p('The core equilibrium, Jacobian, baseline eigenvalue and perturbation calculations are sound. They provide enough material for a focused results write-up now. Several conclusions in the Claude record go beyond what the computations establish; the regime classification and some bifurcation claims need substantive correction.')
+37: h('Independently verified baseline results')
+39: p('Distances are Euclidean distances to the relevant balanced vector. The two baselines use different parameters and activity scales. They demonstrate behavior at specified settings; they do not establish a calibrated comparison of physiological recovery speeds.')
+41: p('At the all-ones parameter setting, Lin\'s positive balanced equilibrium is unstable. The simple modified model has a locally stable positive balanced equilibrium at its chosen baseline and recovers from the tested disturbances. Under the specified parameter sweeps and sampling distributions, the modified model more frequently admits a locally stable positive balanced equilibrium.')
+48: table([['Figure family','Verdict','Action before manuscript use'],['Eigenvalue plane (master Fig. 1)','Verified','Use. State both full parameter tuples and label this local stability of the balanced equilibrium.'],['Small/severe perturbations (Fig. 2)','Verified','Use. Call the large disturbance a tested finite perturbation. It is not a global-stability proof. Show the early recovery interval for the modified model.'],['Five organs in turn (Fig. 3)','Verified idea; redundant','Cyclic symmetry makes these equivalent tests up to relabeling. Keep as a numerical consistency check or supplement.'],['Stability heatmaps (Fig. 4)','Verified values; relabel','Use the master mapping: received restraint is d in Lin, h in the modified model. Explicitly distinguish missing positive equilibria and the percentage denominator.'],['Regime map and regime shares (Figs. 5, 7)','Not reliable as dynamical classifications','Do not publish chaos percentages or multistability claims from this classifier. Rebuild with unresolved, numerical failure and threshold-exceeded categories.'],['Monte Carlo stability bars (Fig. 6)','Verified numbers; conditional interpretation','Report the sampling distribution, seed, sample size and valid counts. Give stability among valid draws and among all draws. Priors are modeling assumptions.'],['CHILD-term ablation (Fig. 8)','Verified within its experiment','Optional sensitivity result. It does not isolate the functional-form change or establish a uniquely fair comparison.'],['Example trajectories (Figs. 9, 10)','Consistent; largely duplicate Fig. 2','Use only if a time-series/phase-portrait pair communicates something additional. Avoid magnifying numerical noise around the stable point.'],['P1-P3 pathology responses (Part 13)','Numbers reproduced; different model','Separate from the simple-model stability results. The extended model does not preserve nonnegativity in general.'],['P4 mode map / Hopf claim','Formula valid; figure and claim need repair','At c=1 the crossing is beyond the plotted h range. The c=2 reported endpoint is not a crossing. A nondegenerate Hopf assertion needs more than a nonzero imaginary part.'],['P5 bistability example','Verified for its chosen parameters','Optional supplement. The threshold is for synchronous starts; the basin boundary in five dimensions is not a scalar threshold.']],[134,116,260])
+51: page('Verified baseline figures')
+52: fig('01_baseline_eigenvalues',405)
+53: p('<b>Figure 1.</b> Jacobian eigenvalues at the positive balanced equilibrium for the two stated baselines. Lin has a complex pair with positive real part. All five eigenvalues of the simple modified model have negative real parts. The magnitudes are in each model\'s stated time units.','SmallX')
+61: p('<b>Figure 4.</b> Identical master-notebook draws and seed (1,200 draws per scheme, seed 3). Left: the fraction stable among draws with a positive balanced equilibrium. Right: the fraction of all draws that admit such a stable equilibrium. These describe the specified distributions, not a probability that a model is correct or physiologically healthy.','SmallX')
+67: p('This reproduces the baseline eigenvalues. The concrete counterexample (a,b,c,d,g,h)=(1,2,1,1,1,1) has x*=0.25 and largest real part -0.095492. Thus the statement that Lin cannot represent stable balance is false. Use it as a one-sentence qualification, without turning the section into a new theorem paper.')
+70: p('For Lin on the synchronous subspace, s\'=a*s-M*s^2. With a&gt;0 and positive s(0), M&lt;0 gives finite-time blow-up; M=0 gives exponential growth, not finite-time blow-up; M&gt;0 gives convergence to a/M on this subspace. Do not extend the last conclusion to every nonsynchronous trajectory without a separate argument.')
+73: p('Assume nonnegative coefficients and k&gt;0. At x_i=0 its derivative is c*x_(i-1), which is nonnegative. At a component attaining the maximum X, the derivative is at most a*X-k*X^2+c*X/(1+X), and hence at most a*X-k*X^2+c. Therefore the box [0,B]^5 is positively invariant and attracts from above, where:')
+84: p('The all-equal start (0.5,...,0.5) is also special: exact trajectories remain synchronous. At Lin\'s baseline the uniform eigenvalue is -1 while the transverse leading real part is +0.206011. Such a trajectory can converge to an equilibrium that repels generic perturbations. Disagreement with nonsynchronous starts does not establish coexisting attractors. Near-synchronous randomized starts and convergence checks are needed for a basin study.')
+90: p(f'The extended model reproduces the reported watched-component changes: {vals[0]:+.2f}%, {vals[1]:+.2f}%, {vals[2]:+.2f}% and {vals[3]:+.2f}%. Its baseline is {R["pathology"]["baseline"][0]:.4f}; {R["pathology"]["grid_counts"].get("5",0)}/81 tested grid points satisfy all five selected criteria. These are illustrative model responses. They do not validate classical physiological claims.')
+91: p('At x_i=0 the extended model gives x_i\'=c*x_mother-b*x_target. Taking mother=0 and target=1 makes this negative whenever b&gt;0. Thus the full nonnegative state space is not invariant. The chosen numerical examples remain nonnegative, but that does not fix the structural problem. Also, these runs start from all components 2.5, not the actual baseline 2.3243; their transients are not a clean parameter switch from equilibrium.')
+101: h('3.2 Baseline instability and response to disturbances')
+103: p('Report departure from balance and the subsequent oscillatory behavior observed in the trajectory. Distinguish the unstable equilibrium from an attracting periodic orbit. If the Lin reproduction is included, give the separate start (1,2,3,4,5) and period near 17.626. Avoid saying that the severe perturbation causes permanent organ extinction; the tested baseline trajectories oscillate.')
+106: p('End with the limited boundedness observation: finite-time blow-up can occur for sufficiently strong positive feedback, as shown analytically on the synchronous subspace when M&lt;0. This is a conditional limitation of the model, not a statement about the all-ones baseline. The distinction prepares the reader for the modified model.')
+111: p('Use the original-model part of the baseline figures in 3.2 and the original-model map in 3.3. If paired comparison figures are retained, introduce the Lin panels here and return to the modified panels in Section 4. Do not insert duplicate figures merely to make the sections look symmetric.')
+115: p('Use the simple five-parameter modified model as the main equation, because it is the model used for the stability graphs. Explain recipient-dependent nourishment, the target-dependent loss and bilinear received restraint. Acknowledge the omitted CHILD term and changed target-effect sign. State the chosen baseline (a,k,c,g,h)=(2,0.5,1,0.5,0.3), and say the values are illustrative rather than fitted.')
+119: p('At the chosen baseline, give x*=(3+sqrt(59))/4 and alpha=-1.153724. Refer to the modified-model eigenvalues. The full circulant derivation can be placed in an appendix or deferred to the theoretical paper. Include the short nonnegativity/boundedness argument if it supports the motivation; clearly distinguish it from asymptotic stability.')
+133: p('Both historical stability windows were recomputed on their original 90 x 90 grids. The master Monte Carlo experiments used the original seed and draw order. The CHILD ablation used 3,000 draws and seed 11. The extended-model examples and the 9 x 9 pathology grid were checked for solver completion, nonnegative trajectories and small final residuals. The conservative and periodic Lin spectra were independently recomputed by variational integration with QR renormalization every 0.5 time units and a 100-unit transient.')
+140: p('State the ODE solver and tolerances actually used for each submitted figure, the integration interval and initial states, the equilibrium branch, the parameter grid, the sampling distributions and seed, and the stability decision rule. The regenerated disturbance figures use SciPy DOP853 with relative tolerance 1e-10 and absolute tolerance 1e-12. Their sampled time grid has 3,001 points over [0,120].')
+143: p('Original reference checked: Haipeng Lin and Jing Han, <i>Analysis of Dynamic Five-Element Model</i>, Proceedings of the 39th Chinese Control Conference (2020), pp. 777-781. DOI: <link href="https://doi.org/10.23919/CCC50068.2020.9188438" color="#24628d">10.23919/CCC50068.2020.9188438</link>. The local Lin2020.pdf was used to check Eq. (2), baseline eigenvalues, parameter cases and reported figures. This review does not independently validate the historical or clinical claims in the surrounding TCM narrative.','SmallX')
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/extended_negative_example.ode
+SHA256: 2dd4cd8d7c0ae4a79d934d6d10b916a7cc9ba842b4d1d1f5a80d7056ebc6f08c
+PROPOSED STATUS: archived_extension_diagnostic
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: par a=2,k=0.5,c=1,g=0.5,h=0.3
+5: par gd=0.35,b=0.1,eps=0.5
+6: x1'=a*x1-k*x1^2+c*x5/(1+x1)-gd*x2*x1/(1+x1)-g*x1/(1+x3)-h*x1*x4-b*x3/(1+eps*x1)
+7: x2'=a*x2-k*x2^2+c*x1/(1+x2)-gd*x3*x2/(1+x2)-g*x2/(1+x4)-h*x2*x5-b*x4/(1+eps*x2)
+8: x3'=a*x3-k*x3^2+c*x2/(1+x3)-gd*x4*x3/(1+x3)-g*x3/(1+x5)-h*x3*x1-b*x5/(1+eps*x3)
+9: x4'=a*x4-k*x4^2+c*x3/(1+x4)-gd*x5*x4/(1+x4)-g*x4/(1+x1)-h*x4*x2-b*x1/(1+eps*x4)
+10: x5'=a*x5-k*x5^2+c*x4/(1+x5)-gd*x1*x5/(1+x5)-g*x5/(1+x2)-h*x5*x3-b*x2/(1+eps*x5)
+11: init x1=0.01,x2=1,x3=2,x4=1,x5=0.01
+12: @ meth=rungekutta,dt=0.0001,total=0.3
+13: @ xp=t,yp=x1,xlo=0,xhi=0.3,ylo=-0.015,yhi=0.015
+14: @ maxstor=10000,bound=1000
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/simple_approach_zero_example.ode
+SHA256: faf0a26294e062e9162544f028545fc6dd6e494ec62666ae22ca3885f1f8922a
+PROPOSED STATUS: canonical_example
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+4: par a=2,k=0.5,c=0.1,g=2.5,h=0.3
+5: x1'=a*x1-k*x1^2+c*x5/(1+x1)-g*x1/(1+x3)-h*x1*x4
+6: x2'=a*x2-k*x2^2+c*x1/(1+x2)-g*x2/(1+x4)-h*x2*x5
+7: x3'=a*x3-k*x3^2+c*x2/(1+x3)-g*x3/(1+x5)-h*x3*x1
+8: x4'=a*x4-k*x4^2+c*x3/(1+x4)-g*x4/(1+x1)-h*x4*x2
+9: x5'=a*x5-k*x5^2+c*x4/(1+x5)-g*x5/(1+x2)-h*x5*x3
+10: init x1=0.25,x2=0.25,x3=0.25,x4=0.25,x5=0.25
+11: @ meth=rungekutta,dt=0.01,total=60
+12: @ xp=t,yp=x1,xlo=0,xhi=60,ylo=0,yhi=0.27
+13: @ maxstor=10000,bound=1000
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/diagram_code/figure_4_sampling.py
+SHA256: 9a6e7d357e8ad975c734a9505bec2dce3dfe7be0fc6796187d2cc643d74bab3d
+PROPOSED STATUS: proposed_current_reproduction
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+3: Draw 1,200 accepted parameter sets per scenario with seed 3.
+7: Tiered: independent draws in the explicit TIERS intervals below.
+9: Preserve TIERS insertion order to reproduce the same seeded results.
+24: from scipy.integrate import solve_ivp
+30: PL = (1, 1, 1, 1, 1, 1)
+31: PS = (2, 0.5, 1, 0.5, 0.3)
+48: def lin(t, x, a, b, c, d, g, h):
+50:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+52: def sat(t, x, a, k, c, g, h):
+54:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+60:     return a / M if M > 0 else np.nan
+62: def roots_s(p):
+66:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+68:         return []
+69:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+74:     return max(r) if r else np.nan
+84:     return J
+97:     return J
+104:         return np.full(5, np.nan)
+105:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+109:     return np.max(eigs(m, p).real)
+112: TIERS = {'SELF': (1, 2), 'SHENG': (0.5, 1.5), 'SAT': (0.3, 1), 'RESTR': (0.2, 0.8), 'TGT': (0.1, 0.5), 'CHILD': (0.1, 0.5)}
+114: def draw(r, scheme):
+116:         return {k: r.uniform(*v) for (k, v) in TIERS.items()}
+121:         return dict(SELF=S, SAT=A, SHENG=SH, RESTR=RE, TGT=TG, CHILD=CH)
+124:     return (d['SELF'], d['SAT'], d['SHENG'], d['RESTR'], d['CHILD'], d['TGT']) if m == 'lin' else (d['SELF'], d['SAT'], d['SHENG'], d['TGT'], d['RESTR'])
+132:     return [ctr - h, ctr + h]
+135:     r = np.random.default_rng(3)
+152:     x = np.arange(3)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/diagram_code/four_diagrams.ipynb
+SHA256: 724a22cd0c8bb5e5a90b85ccd80710354ee81dad4110e8577e128c8b2c86d072
+PROPOSED STATUS: proposed_current_reproduction
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+1: """Figure 1: Baseline Jacobian eigenvalues.
+3: Each marker is a Jacobian eigenvalue at the stated model baseline.
+16: from scipy.integrate import solve_ivp
+22: PL = (1, 1, 1, 1, 1, 1)
+23: PS = (2, 0.5, 1, 0.5, 0.3)
+40: def lin(t, x, a, b, c, d, g, h):
+42:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+44: def sat(t, x, a, k, c, g, h):
+46:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+52:     return a / M if M > 0 else np.nan
+54: def roots_s(p):
+58:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+60:         return []
+61:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+66:     return max(r) if r else np.nan
+76:     return J
+89:     return J
+96:         return np.full(5, np.nan)
+97:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+101:     return np.max(eigs(m, p).real)
+104: R['baseline'] = {}
+112:     R['baseline'][m] = {'xstar': xe, 'alpha': float(max(es.real)), 'eigenvalues': [[float(z.real), float(z.imag)] for z in sorted(es, key=lambda z: -z.real)]}
+114: ax.set(xlabel='Re $\\lambda$', ylabel='Im $\\lambda$', xlim=(-2.6, 0.8), ylim=(-1.3, 1.3), title='Local stability at the stated baseline parameters')
+117: save('01_baseline_eigenvalues', fig)
+141: from scipy.integrate import solve_ivp
+147: PL = (1, 1, 1, 1, 1, 1)
+148: PS = (2, 0.5, 1, 0.5, 0.3)
+165: def lin(t, x, a, b, c, d, g, h):
+167:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+169: def sat(t, x, a, k, c, g, h):
+171:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+177:     return a / M if M > 0 else np.nan
+179: def roots_s(p):
+183:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+185:         return []
+186:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+191:     return max(r) if r else np.nan
+193: def integrate(m, p, x0, T=120, method='DOP853', n=3001):
+195:     r = solve_ivp(lin if m == 'lin' else sat, (0, T), x0, args=p, method=method, rtol=1e-10, atol=1e-12, t_eval=np.linspace(0, T, n))
+198:     return r
+209:         check = integrate(m, p, x, method='RK45')
+248: from scipy.integrate import solve_ivp
+254: PL = (1, 1, 1, 1, 1, 1)
+255: PS = (2, 0.5, 1, 0.5, 0.3)
+272: def lin(t, x, a, b, c, d, g, h):
+274:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+276: def sat(t, x, a, k, c, g, h):
+278:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+284:     return a / M if M > 0 else np.nan
+286: def roots_s(p):
+290:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+292:         return []
+293:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+298:     return max(r) if r else np.nan
+308:     return J
+321:     return J
+328:         return np.full(5, np.nan)
+329:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+333:     return np.max(eigs(m, p).real)
+337: maps = []
+338: for (name, N, cs, rs) in [('early', 90, np.linspace(0.05, 2.5, 90), np.linspace(0.05, 2, 90)), ('master', 90, np.linspace(0.3, 1.6, 90), np.linspace(0.1, 1, 90))]:
+353:         maps = arr
+380: Draw 1,200 accepted parameter sets per scenario with seed 3.
+384: Tiered: independent draws in the explicit TIERS intervals below.
+386: Preserve TIERS insertion order to reproduce the same seeded results.
+401: from scipy.integrate import solve_ivp
+407: PL = (1, 1, 1, 1, 1, 1)
+408: PS = (2, 0.5, 1, 0.5, 0.3)
+425: def lin(t, x, a, b, c, d, g, h):
+427:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+429: def sat(t, x, a, k, c, g, h):
+431:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+437:     return a / M if M > 0 else np.nan
+439: def roots_s(p):
+443:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+445:         return []
+446:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+451:     return max(r) if r else np.nan
+461:     return J
+474:     return J
+481:         return np.full(5, np.nan)
+482:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+486:     return np.max(eigs(m, p).real)
+489: TIERS = {'SELF': (1, 2), 'SHENG': (0.5, 1.5), 'SAT': (0.3, 1), 'RESTR': (0.2, 0.8), 'TGT': (0.1, 0.5), 'CHILD': (0.1, 0.5)}
+491: def draw(r, scheme):
+493:         return {k: r.uniform(*v) for (k, v) in TIERS.items()}
+498:         return dict(SELF=S, SAT=A, SHENG=SH, RESTR=RE, TGT=TG, CHILD=CH)
+501:     return (d['SELF'], d['SAT'], d['SHENG'], d['RESTR'], d['CHILD'], d['TGT']) if m == 'lin' else (d['SELF'], d['SAT'], d['SHENG'], d['TGT'], d['RESTR'])
+509:     return [ctr - h, ctr + h]
+512:     r = np.random.default_rng(3)
+529:     x = np.arange(3)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/diagram_code/figure_3_stability_maps.py
+SHA256: 406e7c086577fe1280e0ceaf4b1022eb394380a7cacd0abe62cd93c28b48553e
+PROPOSED STATUS: proposed_current_reproduction
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+22: from scipy.integrate import solve_ivp
+28: PL = (1, 1, 1, 1, 1, 1)
+29: PS = (2, 0.5, 1, 0.5, 0.3)
+46: def lin(t, x, a, b, c, d, g, h):
+48:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+50: def sat(t, x, a, k, c, g, h):
+52:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+58:     return a / M if M > 0 else np.nan
+60: def roots_s(p):
+64:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+66:         return []
+67:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+72:     return max(r) if r else np.nan
+82:     return J
+95:     return J
+102:         return np.full(5, np.nan)
+103:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+107:     return np.max(eigs(m, p).real)
+111: maps = []
+112: for (name, N, cs, rs) in [('early', 90, np.linspace(0.05, 2.5, 90), np.linspace(0.05, 2, 90)), ('master', 90, np.linspace(0.3, 1.6, 90), np.linspace(0.1, 1, 90))]:
+127:         maps = arr
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/diagram_code/figure_1_eigenvalues.py
+SHA256: 0ce26bc1fefa53152465f5802aae5b1b020e70ac2f99f4e89c0785032281b3c1
+PROPOSED STATUS: proposed_current_reproduction
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+1: """Figure 1: Baseline Jacobian eigenvalues.
+3: Each marker is a Jacobian eigenvalue at the stated model baseline.
+16: from scipy.integrate import solve_ivp
+22: PL = (1, 1, 1, 1, 1, 1)
+23: PS = (2, 0.5, 1, 0.5, 0.3)
+40: def lin(t, x, a, b, c, d, g, h):
+42:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+44: def sat(t, x, a, k, c, g, h):
+46:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+52:     return a / M if M > 0 else np.nan
+54: def roots_s(p):
+58:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+60:         return []
+61:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+66:     return max(r) if r else np.nan
+76:     return J
+89:     return J
+96:         return np.full(5, np.nan)
+97:     return np.linalg.eigvals((jl if m == 'lin' else js)(np.full(5, x), p))
+101:     return np.max(eigs(m, p).real)
+104: R['baseline'] = {}
+112:     R['baseline'][m] = {'xstar': xe, 'alpha': float(max(es.real)), 'eigenvalues': [[float(z.real), float(z.imag)] for z in sorted(es, key=lambda z: -z.real)]}
+114: ax.set(xlabel='Re $\\lambda$', ylabel='Im $\\lambda$', xlim=(-2.6, 0.8), ylim=(-1.3, 1.3), title='Local stability at the stated baseline parameters')
+117: save('01_baseline_eigenvalues', fig)
+
+SOURCE: /Users/carterfeng/Documents/Code/Codex/2026-10-03/th/outputs/diagram_code/figure_2_disturbances.py
+SHA256: 97864b2831a829f51bece1bce3b53704168e12551cdc49a6d481b898fa20373f
+PROPOSED STATUS: proposed_current_reproduction
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+17: from scipy.integrate import solve_ivp
+23: PL = (1, 1, 1, 1, 1, 1)
+24: PS = (2, 0.5, 1, 0.5, 0.3)
+41: def lin(t, x, a, b, c, d, g, h):
+43:     return x * (a - b * x + c * np.roll(x, 1) - d * np.roll(x, 2) - g * np.roll(x, -1) - h * np.roll(x, -2))
+45: def sat(t, x, a, k, c, g, h):
+47:     return a * x - k * x * x + c * np.roll(x, 1) / (1 + x) - g * x / (1 + np.roll(x, -2)) - h * x * np.roll(x, 2)
+53:     return a / M if M > 0 else np.nan
+55: def roots_s(p):
+59:     D = (A - a) ** 2 + 4 * A * (a + c - g)
+61:         return []
+62:     return sorted(set([v for v in ((a - A - np.sqrt(D)) / (2 * A), (a - A + np.sqrt(D)) / (2 * A)) if v > 0]))
+67:     return max(r) if r else np.nan
+69: def integrate(m, p, x0, T=120, method='DOP853', n=3001):
+71:     r = solve_ivp(lin if m == 'lin' else sat, (0, T), x0, args=p, method=method, rtol=1e-10, atol=1e-12, t_eval=np.linspace(0, T, n))
+74:     return r
+85:         check = integrate(m, p, x, method='RK45')
+
+SOURCE: /Users/carterfeng/Downloads/WuXing_Commented.ipynb
+SHA256: dc02f4f4a77711f13085b5dc957b22538f65e08b04e0dc051d95abe71cbf12b4
+PROPOSED STATUS: historical_notebook
+Notebook line numbers refer to concatenated code cells; source bytes remain separately preserved.
+5: from scipy.integrate import solve_ivp     # solves differential equations numerically
+13: # Baseline parameter values, one tuple per model.
+14: P_LIN = (1, 1, 1, 1, 1, 1)          # Lin's "Case 1": a=b=c=d=g=h=1
+15: P_SAT = (2, 0.5, 1, 0.5, 0.3)       # ours: a=2, k=0.5, c=1, g=0.5, h=0.3
+25:     return (i - 1) % 5
+29:     return (i + 1) % 5
+33:     return (i - 2) % 5
+37:     return (i + 2) % 5
+53: def rhs_lin(t, x, a, b, c, d, g, h):
+54:     # `t` (time) is unused, but solve_ivp requires it as the first argument.
+64:         growth      =  a * me                 # self-production, proportional to size
+71:         rates[i] = growth + crowding + nourishment + suppressed + feeding + restraining
+73:     return rates
+82: def rhs_sat(t, x, a, k, c, g, h):
+91:         growth   =  a * me                    # same self-production as before
+106:         rates[i] = growth + crowding + nourishment + over_acting + suppressed
+108:     return rates
+110: # Quick check that both functions run and return five numbers.
+112: print("Lin  rates:", np.round(rhs_lin(0, test_state, *P_LIN), 3))
+113: print("Ours rates:", np.round(rhs_sat(0, test_state, *P_SAT), 3))
+117:     # Setting every organ equal reduces Lin's system to  0 = a*x - M*x^2,
+124:         return np.nan
+126:     return a / M                              # the balanced level
+130:     # For our model the same substitution gives a quadratic  A*x^2 + B*x + C = 0.
+135:     discriminant = B * B - 4 * A * C          # the bit under the square root
+137:         return np.nan                         # no real solution at all
+140:     return root if root > 0 else np.nan       # only a positive level is meaningful
+144: x_lin = balanced_state_lin(*P_LIN)
+145: x_sat = balanced_state_sat(*P_SAT)
+151: def jacobian_lin(state, a, b, c, d, g, h):
+160:         J[i, i] = (a                          # from  a*x
+173:     return J
+176: def jacobian_sat(state, a, k, c, g, h):
+200:     return J
+208:         if np.isnan(level): return np.nan
+212:         if np.isnan(level): return np.nan
+216:     return max(eigenvalues.real)               # ".real" drops the imaginary part
+219: def finite_difference_jacobian(rhs, x, params, eps=1e-7):
+221:     n = len(x)
+223:     baseline = rhs(0, x, *params)              # rates before any nudge
+228:         J[:, j] = (rhs(0, nudged, *params) - baseline) / eps   # rise over run
+230:     return J
+233: rng = np.random.default_rng(0)
+242:     p_lin = tuple(rng.uniform(0.1, 2.0, 6))
+243:     hand_lin = jacobian_lin(state, *p_lin)
+244:     num_lin  = finite_difference_jacobian(rhs_lin, state, p_lin)
+248:     p_sat = tuple(rng.uniform(0.1, 2.0, 5))
+249:     hand_sat = jacobian_sat(state, *p_sat)
+250:     num_sat  = finite_difference_jacobian(rhs_sat, state, p_sat)
+260: # Eigenvalues for each model at its own baseline.
+261: eig_lin = np.linalg.eigvals(jacobian_lin(x_lin, *P_LIN))
+262: eig_sat = np.linalg.eigvals(jacobian_sat(x_sat, *P_SAT))
+315:     solution = solve_ivp(rhs,                     # the model
+319:                          t_eval=np.linspace(0, duration, 2000),   # when to record
+320:                          rtol=1e-9, atol=1e-11)   # accuracy settings
+324:     return solution, deviation
+331:         ("Lin (bilinear)",     rhs_lin, P_LIN, x_lin),
+332:         ("Saturating (ours)",  rhs_sat, P_SAT, x_sat)]):
+352:         ("Lin, small",     rhs_lin, P_LIN, x_lin, "small"),
+353:         ("Lin, severe",    rhs_lin, P_LIN, x_lin, "severe"),
+354:         ("Ours, small",    rhs_sat, P_SAT, x_sat, "small"),
+355:         ("Ours, severe",   rhs_sat, P_SAT, x_sat, "severe")]:
+367:     for rhs, params, level in [(rhs_lin, P_LIN, x_lin), (rhs_sat, P_SAT, x_sat)]:
+382: sheng_values   = np.linspace(0.3, 1.6, GRID)   # nourishment strength, left to right
+383: restraint_values = np.linspace(0.1, 1.0, GRID) # restraint strength, bottom to top
+386: map_lin = np.full((GRID, GRID), np.nan)
+387: map_sat = np.full((GRID, GRID), np.nan)
+392:         map_lin[row, col] = max_growth_rate("lin", (1.5, 0.65, sheng, restraint, 0.3, 0.3))
+394:         map_sat[row, col] = max_growth_rate("sat", (1.5, 0.65, sheng, 0.3, restraint))
+398: scale = np.nanpercentile(np.abs(np.concatenate([map_lin.ravel(), map_sat.ravel()])), 90)
+401: for ax, grid_values, title in [(axes[0], map_lin, "Lin (bilinear)"),
+402:                                (axes[1], map_sat, "Saturating (ours)")]:
+429:         return {"SELF":  rng.uniform(1.0, 2.0),   # self-production: the biggest
+448:         return {"SELF": SELF, "SAT": SAT, "SHENG": SHENG,
+456:         return (q["SELF"], q["SAT"], q["SHENG"], q["RESTR"], q["CHILD"], q["TGT"])
+458:     return (q["SELF"], q["SAT"], q["SHENG"], q["TGT"], q["RESTR"])
+461: def run_random_test(scheme, n_draws=1500, seed=3):
+463:     rng = np.random.default_rng(seed)             # seeded, so results repeat exactly
+478:     return tally
+503: positions = np.arange(len(schemes))       # x positions: 0, 1, 2
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 4; fence line 1363
+block line 5: def rhs_lin(t, x, a,b,c,d,g,h):
+block line 7:     return (a*x - b*x**2
+block line 13: def rhs_sat(t, x, a,k,c,g,h):
+block line 16:     return (a*x - k*x**2
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 33; fence line 3015
+block line 2: def rhs_lin(t,x,a,b,c,d,g,h):
+block line 4:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+block line 7: def eq_lin(a,b,c,d,g,h):
+block line 9:     return a/M if M>0 else np.nan
+block line 11: def jac_lin(xv,a,b,c,d,g,h):
+block line 18:     return J
+block line 21: def rhs_sat(t,x,a,k,c,g,h):
+block line 23:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+block line 26: def eq_sat(a,k,c,g,h):
+block line 28:     if D<0: return np.nan
+block line 30:     return r if r>0 else np.nan
+block line 32: def jac_sat(xv,a,k,c,g,h):
+block line 39:     return J
+block line 41: def maxre(model,p):
+block line 44:         if not np.isfinite(xe) or xe<=0: return np.nan
+block line 45:         return max(np.linalg.eigvals(jac_lin(np.full(5,xe),*p)).real)
+block line 47:     if not np.isfinite(xe) or xe<=0: return np.nan
+block line 48:     return max(np.linalg.eigvals(jac_sat(np.full(5,xe),*p)).real)
+block line 50: xl=eq_lin(*P_LIN); xs=eq_sat(*P_SAT)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 34; fence line 3083
+block line 1: el=np.linalg.eigvals(jac_lin(np.full(5,xl),*P_LIN))
+block line 2: Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 35; fence line 3133
+block line 1: def perturb(rhs,params,xstar,mode,t_end=120):
+block line 5:     s=solve_ivp(rhs,(0,t_end),x0,args=params,method="RK45",
+block line 6:                 t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+block line 7:     return s,np.linalg.norm(s.y-xstar,axis=0)
+block line 10: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+block line 11:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+block line 13:         s,dev=perturb(rhs,p,xst,mode); ax=axes[row,col]
+block line 22: for nm,rhs,p,xst,mode in [("Lin small",rhs_lin,P_LIN,xl,"small"),
+block line 23:                           ("Lin severe",rhs_lin,P_LIN,xl,"severe"),
+block line 24:                           ("Ours small",rhs_sat,P_SAT,xs,"small"),
+block line 25:                           ("Ours severe",rhs_sat,P_SAT,xs,"severe")]:
+block line 26:     _,dev=perturb(rhs,p,xst,mode)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 36; fence line 3193
+block line 1: def perturb_organ(rhs,p,xstar,organ,mode,T=120):
+block line 5:     s=solve_ivp(rhs,(0,T),x0,args=p,method="RK45",
+block line 6:                 t_eval=np.linspace(0,T,2000),rtol=1e-9,atol=1e-11)
+block line 7:     return s, np.linalg.norm(s.y-xstar,axis=0)     # deviation from balance
+block line 11: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+block line 12:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+block line 17:             sol,dev=perturb_organ(rhs,p,xst,i,mode)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 37; fence line 3256
+block line 1: NG=90
+block line 2: c_vals=np.linspace(0.3,1.6,NG)    # SHENG
+block line 3: r_vals=np.linspace(0.1,1.0,NG)    # RESTR (Lin d, ours h)
+block line 10:         # Ours: (a,k,c,g,h) with SHENG=c, RESTR=h; TGT=g at mid-tier
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 38; fence line 3311
+block line 1: def _pk(v): return np.where((v[1:-1]>v[:-2])&(v[1:-1]>v[2:]))[0]+1
+block line 4: ICS=[[1,2,3,4,5],[0.5,0.5,0.5,0.5,0.5],[3,1,4,1,5]]
+block line 9: def regime_one(rhs,p,x0,T=200,dt=0.1,cap=100.0):
+block line 13:         s=solve_ivp(rhs,(0,T),list(x0),args=p,method="LSODA",
+block line 14:                     t_eval=np.arange(0,T,dt),rtol=1e-6,atol=1e-8,events=ev)
+block line 15:     except Exception: return "blowup"
+block line 16:     if s.status==1 or not s.success: return "blowup"
+block line 19:         return "blowup"
+block line 20:     if (tail.max(1)-tail.min(1)).max()<1e-3: return "fixed"
+block line 22:     if len(pk)<4: return "periodic"
+block line 25:         return "periodic"
+block line 26:     return "chaotic"
+block line 29: def regime_multi(rhs,p,ics=ICS):
+block line 30:     vs=[regime_one(rhs,p,ic) for ic in ics]
+block line 32:     return vals[np.argmax(counts)], counts.max()/len(vs), vs
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 39; fence line 3348
+block line 1: NR=6    # raise (Colab: 8-10 is fine) for a finer regime map (slower)
+block line 2: cr=np.linspace(0.3,1.6,NR); rr=np.linspace(0.1,1.0,NR)
+block line 10:         v,a,_=regime_multi(rhs_lin,(1.5,0.65,cv,rv,0.3,0.3)); Gl[iy,ix]=CODE[v]; Al[iy,ix]=a
+block line 11:         v,a,_=regime_multi(rhs_sat,(1.5,0.65,cv,0.3,rv));     Gs[iy,ix]=CODE[v]; As[iy,ix]=a
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 40; fence line 3413
+block line 1: TIERS={"SELF":(1.0,2.0),"SHENG":(0.5,1.5),"SAT":(0.3,1.0),
+block line 4: def to_params(model,d):
+block line 5:     if model=="lin": return (d["SELF"],d["SAT"],d["SHENG"],d["RESTR"],d["CHILD"],d["TGT"])
+block line 6:     return (d["SELF"],d["SAT"],d["SHENG"],d["TGT"],d["RESTR"])
+block line 8: def draw(r,scheme,lo=0.1,hi=2.0):
+block line 10:         return {k:r.uniform(*v) for k,v in TIERS.items()}
+block line 16:         return dict(SELF=S,SAT=A,SHENG=SH,RESTR=RE,TGT=TG,CHILD=CH)
+block line 18: def mc(scheme,N=4000,seed=3):
+block line 19:     r=np.random.default_rng(seed)
+block line 27:     return out
+block line 31: def wilson(k,n,z=1.96):
+block line 32:     if n==0: return (0.0,0.0)
+block line 36:     return (ctr-half, ctr+half)
+block line 38: N_DRAWS=1200   # Colab has no time limit: raise to 4000+ for tighter CIs
+block line 43:     R[key]=mc(key,N_DRAWS)   # Colab has no time limit: raise to 4000+ for tighter CIs   # raise N for tighter error bars
+block line 53:     print(f"  {lab:>18s}   Lin {R[key]['lin']['valid']:5d}   Ours {R[key]['sat']['valid']:5d}   (of {N_DRAWS} draws)")
+block line 56: x=np.arange(len(schemes)); w=0.38
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 41; fence line 3534
+block line 1: M=40    # raise (Colab: 150+ is fine); each draw costs len(ICS) integrations
+block line 2: r=np.random.default_rng(1)
+block line 8:     _,a,vs=regime_multi(rhs_lin,to_params("lin",d))
+block line 11:     _,a,vs=regime_multi(rhs_sat,to_params("sat",d))
+block line 15: NTOT=M*len(ICS)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 42; fence line 3606
+block line 1: def frac_stable(model,mod=None,N=3000,seed=11,lo=0.1,hi=2.0):
+block line 2:     r=np.random.default_rng(seed); st=va=0
+block line 9:     return 100*st/max(va,1)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 43; fence line 3665
+block line 1: def show(rhs,p,xstar,title):
+block line 4:     s=solve_ivp(rhs,(0,150),x0,args=p,method="RK45",
+block line 5:                 t_eval=np.linspace(0,150,4000),rtol=1e-9,atol=1e-11)
+block line 16: show(rhs_lin,P_LIN,xl,"LIN at its baseline — perturbation grows (unstable)")
+block line 17: show(rhs_sat,P_SAT,xs,"OURS at baseline — returns to balance (stable)")
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 58; fence line 4725
+block line 8: OUT="/home/claude/figs"; os.makedirs(OUT,exist_ok=True)
+block line 9: NAMES=["Wood","Fire","Earth","Metal","Water"]
+block line 14: def rhs_lin(t,x,a,b,c,d,g,h):
+block line 16:     return (a*x-b*x**2 + c*x*np.roll(x,1) - d*x*np.roll(x,2)
+block line 19: def rhs_sat(t,x,a,k,c,g,h):
+block line 21:     return (a*x-k*x**2 + c*np.roll(x,1)/(1+x)
+block line 24: def eq_lin(a,b,c,d,g,h):
+block line 26:     return a/M if M>0 else np.nan
+block line 28: def eq_sat(a,k,c,g,h):
+block line 30:     if disc<0: return np.nan
+block line 32:     return r if r>0 else np.nan
+block line 34: def jac_lin(xv,a,b,c,d,g,h):
+block line 40:     return J
+block line 42: def jac_sat(xv,a,k,c,g,h):
+block line 49:     return J
+block line 51: P_LIN=(1,1,1,1,1,1); P_SAT=(2,0.5,1,0.5,0.3)
+block line 53: def integ(rhs,p,x0,t_end,dt=0.01):
+block line 54:     return solve_ivp(rhs,(0,t_end),x0,args=p,method="RK45",
+block line 55:                      t_eval=np.arange(0,t_end,dt),rtol=1e-9,atol=1e-11)
+block line 79: plt.tight_layout(); plt.savefig(f"{OUT}/A_network.png",dpi=150); plt.close()
+block line 82: s=integ(rhs_lin,(0,0,0,1,0,1),X0,6,0.001)
+block line 87: plt.tight_layout(); plt.savefig(f"{OUT}/B_lin_fig2.png",dpi=150); plt.close()
+block line 91: s=integ(rhs_lin,P_LIN,X0,300,0.01)
+block line 97: plt.tight_layout(); plt.savefig(f"{OUT}/C_lin_fig3.png",dpi=150); plt.close()
+block line 103: s=integ(rhs_lin,(0,0,1,0,1,0),X0,120,0.005)
+block line 109: plt.tight_layout(); plt.savefig(f"{OUT}/D_lin_fig5.png",dpi=150); plt.close()
+block line 112: xl=eq_lin(*P_LIN); el=np.linalg.eigvals(jac_lin(np.full(5,xl),*P_LIN))
+block line 113: xs=eq_sat(*P_SAT); Js=jac_sat(np.full(5,xs),*P_SAT); es=np.linalg.eigvals(Js)
+block line 123: plt.tight_layout(); plt.savefig(f"{OUT}/E_eigenvalues.png",dpi=150); plt.close()
+block line 129: def perturb(rhs,p,xstar,mode,t_end=120):
+block line 133:     sol=solve_ivp(rhs,(0,t_end),x0,args=p,method="RK45",
+block line 134:                   t_eval=np.linspace(0,t_end,3000),rtol=1e-9,atol=1e-11)
+block line 135:     return sol,np.linalg.norm(sol.y-xstar,axis=0)
+block line 139: for col,(nm,rhs,p,xst) in enumerate([("Lin (bilinear)",rhs_lin,P_LIN,xl),
+block line 140:                                      ("Saturating (ours)",rhs_sat,P_SAT,xs)]):
+block line 142:         sol,dev=perturb(rhs,p,xst,mode); ax=axes[row,col]
+block line 149: plt.tight_layout(); plt.savefig(f"{OUT}/F_perturbation.png",dpi=150); plt.close()
+block line 153: N=90
+block line 154: cv=np.linspace(0.05,2.5,N); hv=np.linspace(0.05,2.0,N)
+block line 173: plt.tight_layout(); plt.savefig(f"{OUT}/G_stability_maps.png",dpi=150); plt.close()
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 59; fence line 5004
+block line 9: NAMES=["Wood","Fire","Earth","Metal","Water"]
+block line 10: def mother_of(i):     return (i-1)%5   # Sheng: the organ that generates i
+block line 11: def child_of(i):      return (i+1)%5   # Sheng: the organ that i generates
+block line 12: def controller_of(i): return (i-2)%5   # Ke: the organ that restrains i
+block line 13: def target_of(i):     return (i+2)%5   # Ke: the organ that i restrains
+block line 14: OUT="pfigs"; os.makedirs(OUT,exist_ok=True)
+block line 17: def rhs_full(t,x,a_vec,k,c,g,h,gd,b,eps):
+block line 24:     return r
+block line 26: K,C,G,H,A0,EPS=0.5,1.0,0.5,0.3,2.0,0.5
+block line 27: GD,B=0.35,0.10
+block line 30: def run(av,T=400):
+block line 31:     s=solve_ivp(rhs_full,(0,T),np.full(5,2.5),args=P(av),method="LSODA",
+block line 32:                 t_eval=np.linspace(0,T,3000),rtol=1e-10,atol=1e-12)
+block line 33:     return s
+block line 69: plt.tight_layout(); plt.savefig(f"{OUT}/P1_pathologies.png",dpi=150); plt.close()
+block line 86: plt.tight_layout(); plt.savefig(f"{OUT}/P2_network_response.png",dpi=150); plt.close()
+block line 89: def evaluate(gd,b):
+block line 91:     def st(av):
+block line 92:         s=solve_ivp(rhs_full,(0,500),np.full(5,2.5),args=Q(av),method="LSODA",
+block line 93:                     rtol=1e-9,atol=1e-11); return s.y[:,-1]
+block line 95:     if np.any(bs<0.05) or np.any(~np.isfinite(bs)): return None
+block line 96:     def rel(i,f):
+block line 97:         av=np.full(5,A0); av[i]=A0*f; return (st(av)-bs)/bs*100
+block line 98:     return (rel(0,0.4)[1], rel(1,1.6)[0], rel(0,1.6)[2], rel(2,1.6)[0])
+block line 100: NG=9
+block line 101: gds=np.linspace(0.20,0.45,NG); bs_=np.linspace(0.03,0.28,NG)
+block line 120: plt.tight_layout(); plt.savefig(f"{OUT}/P3_consistency_region.png",dpi=150); plt.close()
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 60; fence line 5185
+block line 12: def eq_sat(a,k,c,g,h):
+block line 14:     if D<0: return np.nan
+block line 15:     r=(-B+np.sqrt(D))/(2*A); return r if r>0 else np.nan
+block line 16: def jac_sat(xv,a,k,c,g,h):
+block line 23:     return J
+block line 26: def closed_form(a,k,c,g,h):
+block line 29:     if not np.isfinite(x): return None
+block line 34:     return np.array([d + T   + M,               # j = 0   (uniform mode)
+block line 38: rng=np.random.default_rng(0); worst=0.0; n=0
+block line 40:     a,k,c,g,h = rng.uniform(0.1,2.5,5)
+block line 54:     a,k,c,g,h = rng.uniform(0.1,2.5,5)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 61; fence line 5264
+block line 4: def eq_sat(a,k,c,g,h):
+block line 6:     if D<0: return np.nan
+block line 7:     r=(-B+np.sqrt(D))/(2*A); return r if r>0 else np.nan
+block line 11: def modes(a,k,c,g,h):
+block line 13:     if not np.isfinite(x): return None
+block line 16:     T=x*(g/s**2-h); M=c/s
+block line 17:     return np.array([d+T+M, d+Q*T+P*M, d+P*T+Q*M])
+block line 19: N=200
+block line 20: cv=np.linspace(0.05,2.5,N); hv=np.linspace(0.05,2.0,N)
+block line 41: hs=np.linspace(0.05,2.0,400)
+block line 51: plt.tight_layout(); plt.savefig("/home/claude/pfigs/P4_critical_mode.png",dpi=150)
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 63; fence line 5428
+block line 2: def roots(a,k,c,g,h):
+block line 4:     if D<0: return []
+block line 5:     return sorted([(-B-np.sqrt(D))/(2*A),(-B+np.sqrt(D))/(2*A)])
+block line 6: def jac(x,a,k,c,g,h):
+block line 13:     return J
+block line 20: rng=np.random.default_rng(0); ok=0; tot=0
+block line 22:     a,k,c,g,h=rng.uniform(0.1,3.0,5)
+block line 32: def gfold(a,k,c,h): return a+c+(a-(k+h))**2/(4*(k+h))
+block line 33: def xfold(a,k,h):   return (a-(k+h))/(2*(k+h))
+
+EMBEDDED SOURCE: /Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md
+CODE BLOCK INDEX: 64; fence line 5516
+block line 7: def roots(a,k,c,g,h):
+block line 9:     if D<0: return []
+block line 10:     return sorted([(-B-np.sqrt(D))/(2*A),(-B+np.sqrt(D))/(2*A)])
+block line 11: def jac(x,a,k,c,g,h):
+block line 18:     return J
+block line 19: def stable(x,p): return max(np.linalg.eigvals(jac(x,*p)).real)<0
+block line 20: def rhs(t,x,a,k,c,g,h):
+block line 25:     return r
+block line 29: gs=np.linspace(1.2,2.8,700)
+block line 65:     s=solve_ivp(rhs,(0,60),np.full(5,x0),args=p,method="LSODA",
+block line 66:                 t_eval=np.linspace(0,60,1500),rtol=1e-10,atol=1e-12)
+block line 77: plt.tight_layout(); plt.savefig("/home/claude/pfigs/P5_bistability.png",dpi=150)

@@ -1,0 +1,142 @@
+\begin{thebibliography}{10}
+
+\bibitem{DemkoMossSmith1984}
+Stephen Demko, William~F. Moss, and Philip~W. Smith.
+\newblock Decay rates for inverses of band matrices.
+\newblock {\em Mathematics of Computation}, 43(168):491--499, 1984.
+\newblock Partial access: publisher-indexed abstract and page 493 inspected;
+  full paper remains an audit gap.
+\newblock URL:
+  \url{https://www.ams.org/mcom/1984-43-168/S0025-5718-1984-0758197-9/S0025-5718-1984-0758197-9.pdf},
+  \href {https://doi.org/10.1090/S0025-5718-1984-0758197-9}
+  {\path{doi:10.1090/S0025-5718-1984-0758197-9}}.
+
+\bibitem{EmbreeTrefethen2001}
+Mark Embree and Lloyd~N. Trefethen.
+\newblock Generalizing eigenvalue theorems to pseudospectra theorems.
+\newblock {\em SIAM Journal on Scientific Computing}, 23(2):583--590, 2001.
+\newblock URL:
+  \url{https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2001_94.pdf},
+  \href {https://doi.org/10.1137/S1064827500373012}
+  {\path{doi:10.1137/S1064827500373012}}.
+
+\bibitem{Gray2006}
+Robert~M. Gray.
+\newblock Toeplitz and circulant matrices: A review.
+\newblock {\em Foundations and Trends in Communications and Information
+  Theory}, 2(3):155--239, 2006.
+\newblock Audit locators use author PDF printed pages; PDF position is printed
+  page plus 8.
+\newblock URL: \url{https://ee.stanford.edu/~gray/toeplitz.pdf}, \href
+  {https://doi.org/10.1561/0100000006} {\path{doi:10.1561/0100000006}}.
+
+\bibitem{GreenbaumLiOverton2020}
+Anne Greenbaum, Ren-Cang Li, and Michael~L. Overton.
+\newblock First-order perturbation theory for eigenvalues and eigenvectors.
+\newblock {\em SIAM Review}, 62(2):463--482, 2020.
+\newblock Audit locators use the 30-page author PDF, not journal pagination.
+\newblock URL: \url{https://arxiv.org/abs/1903.00785}, \href
+  {https://doi.org/10.1137/19M124784X} {\path{doi:10.1137/19M124784X}}.
+
+\bibitem{JaramilloMradStepien2023}
+Gabriela Jaramillo, Lidia Mrad, and Tracy~L. Stepien.
+\newblock Dynamics of a linearly perturbed {May--Leonard} competition model.
+\newblock {\em Chaos: An Interdisciplinary Journal of Nonlinear Science}, 33,
+  2023.
+\newblock Audited author version: arXiv:2210.04342v2, 12 May 2023, 14 pages.
+  Journal article number not verified in this audit.
+\newblock URL: \url{https://arxiv.org/abs/2210.04342v2}, \href
+  {https://doi.org/10.1063/5.0138150} {\path{doi:10.1063/5.0138150}}.
+
+\bibitem{KerinEngler2020}
+John Kerin and Hans Engler.
+\newblock On the {Lorenz '96} model and some generalizations, 2020.
+\newblock Version 2 submitted 21 October 2020; PDF title page dated 23 October
+  2020; 31 pages.
+\newblock URL: \url{https://arxiv.org/abs/2005.07767v2}, \href
+  {https://arxiv.org/abs/2005.07767} {\path{arXiv:2005.07767}}.
+
+\bibitem{LinHan2020}
+Haipeng Lin and Jing Han.
+\newblock Analysis of dynamic five-element model.
+\newblock In {\em 2020 39th Chinese Control Conference (CCC)}, pages 777--781.
+  IEEE, 2020.
+\newblock \href {https://doi.org/10.23919/CCC50068.2020.9188438}
+  {\path{doi:10.23919/CCC50068.2020.9188438}}.
+
+\bibitem{LinHan2024}
+Haipeng Lin and Jing Han.
+\newblock What is special of ``five'' in biological regulatory networks?
+\newblock {\em Nonlinear Dynamics}, 112:7477--7498, 2024.
+\newblock Publisher abstract and reference list inspected; full model equations
+  and supplement not accessible in this audit.
+\newblock URL:
+  \url{https://link.springer.com/article/10.1007/s11071-024-09374-5}, \href
+  {https://doi.org/10.1007/s11071-024-09374-5}
+  {\path{doi:10.1007/s11071-024-09374-5}}.
+
+\bibitem{LinShiHan2021}
+Haipeng Lin, Wenxin Shi, and Jing Han.
+\newblock Analysis of enzymatic regulatory five-element model.
+\newblock In {\em 2021 40th Chinese Control Conference (CCC)}. IEEE, 2021.
+\newblock Unreviewed full-text lead. Proceedings contents identify starting
+  page 6410; ending page not verified.
+\newblock \href {https://doi.org/10.23919/CCC52363.2021.9550151}
+  {\path{doi:10.23919/CCC52363.2021.9550151}}.
+
+\bibitem{NianLi2025}
+Fuzhong Nian and Da~Li.
+\newblock Bifurcation and chaos analysis for the traditional {Chinese} medicine
+  five-element system.
+\newblock {\em Advances in Continuous and Discrete Models}, 2025(61), 2025.
+\newblock Article 61; supplied publisher PDF has 15 pages.
+\newblock URL:
+  \url{https://link.springer.com/article/10.1186/s13662-025-03909-9}, \href
+  {https://doi.org/10.1186/s13662-025-03909-9}
+  {\path{doi:10.1186/s13662-025-03909-9}}.
+
+\bibitem{PaisCaicedoLeonard2012}
+Darren Pais, Carlos~H. Caicedo-N{\'u}{\~n}ez, and Naomi~E. Leonard.
+\newblock {Hopf} bifurcations and limit cycles in evolutionary network
+  dynamics.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 11(4):1754--1784,
+  2012.
+\newblock Audit locators use the supplied 30-page author manuscript, not
+  journal pagination.
+\newblock URL:
+  \url{https://naomi.princeton.edu/wp-content/uploads/sites/744/2021/03/PaisSIADS12.pdf},
+  \href {https://doi.org/10.1137/120878537} {\path{doi:10.1137/120878537}}.
+
+\bibitem{Stewart2024}
+Ian Stewart.
+\newblock {Hopf} bifurcation and phase patterns in symmetric ring networks,
+  2024.
+\newblock Audit uses version 1 HTML, with section and equation locators.
+\newblock URL: \url{https://arxiv.org/html/2403.15814v1}, \href
+  {https://arxiv.org/abs/2403.15814} {\path{arXiv:2403.15814}}.
+
+\bibitem{vanKekemSterk2018}
+Dirk~L. van Kekem and Alef~E. Sterk.
+\newblock Travelling waves and their bifurcations in the {Lorenz-96} model.
+\newblock {\em Physica D: Nonlinear Phenomena}, 367:38--60, 2018.
+\newblock Audit locators use the supplied 55-page accepted manuscript dated 21
+  December 2017.
+\newblock URL: \url{https://arxiv.org/abs/1704.05442v3}, \href
+  {https://doi.org/10.1016/j.physd.2017.11.008}
+  {\path{doi:10.1016/j.physd.2017.11.008}}.
+
+\bibitem{WeiEtAl2021}
+Zhouchao Wei, Amin Yousefpour, Hadi Jahanshahi, U{\u g}ur~Erkin Kocamaz, and
+  Irene Moroz.
+\newblock {Hopf} bifurcation and synchronization of a five-dimensional
+  self-exciting homopolar disc dynamo using a new fuzzy
+  disturbance-observer-based terminal sliding mode control.
+\newblock {\em Journal of the Franklin Institute}, 358(1):814--833, 2021.
+\newblock Audit uses the supplied 18-page author manuscript; its filename says
+  2020. Journal issue year is 2021.
+\newblock URL:
+  \url{https://www.sciencedirect.com/science/article/pii/S0016003220307766},
+  \href {https://doi.org/10.1016/j.jfranklin.2020.11.011}
+  {\path{doi:10.1016/j.jfranklin.2020.11.011}}.
+
+\end{thebibliography}

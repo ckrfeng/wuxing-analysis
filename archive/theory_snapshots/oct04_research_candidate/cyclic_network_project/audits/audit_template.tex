@@ -1,0 +1,32 @@
+% STATUS: BLANK AUDIT TEMPLATE; no theorem audited at initialization.
+\section{Adversarial mathematical audit template}
+\begin{description}[style=nextline]
+\item[Audit ID, reviewer, date and independence:] Record whether the reviewer
+is independent of the derivation and which version or hash is reviewed.
+\item[Statement being audited:] Exact theorem text, claim registry IDs,
+proof-file path and statement label. Do not audit a paraphrase.
+\item[Exact assumptions:] Every quantified domain, parameter restriction,
+regularity hypothesis, branch, norm, symmetry, exclusion and nondegeneracy.
+\item[Dependency verification:] List each input theorem, exact version,
+VERIFIED/AUDITED status and applicability; identify circular reasoning.
+\item[Line-by-line proof checks:] For each step record justification, algebra,
+signs, quantifiers, logical implication, and missing hypotheses. Require
+independent reconstruction of critical calculations.
+\item[Edge cases:] Zero and repeated roots; parameter boundaries; even/odd n;
+q=1, q=n-1 and q=n/2 when applicable; gcd cases; coincident shifts;
+self-conjugate modes; ties and resonances; singular denominators; state boundary.
+\item[Counterexample search:] Challenge the strongest quantifier; try excluded
+and limiting cases; distinguish a successful proof from failure to find a
+counterexample. Record whether the search was analytic or computational.
+\item[Symbolic checks:] Independent derivatives, identities, normalization,
+adjoints and remainders; source of any computer-algebra expression.
+\item[Numerical checks:] Independent implementation, residuals, conditioning,
+precision and convergence; whether ordinary or rigorously validated numerics;
+which analytic assertion the check can and cannot support.
+\item[Literature overlap:] Exact source and location, hypotheses, model
+dictionary, novelty limitations and any result imported by citation.
+\item[Verdict:] Select exactly one: \textbf{verified / revision needed / false /
+unresolved}. Explain the decisive evidence and remaining obligations.
+\item[Disposition and sign-off:] Corrections, owner, downstream invalidations,
+recheck version and date; do not mark AUDITED until the verdict is verified.
+\end{description}

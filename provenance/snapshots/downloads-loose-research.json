@@ -1,0 +1,192 @@
+{
+  "id": "downloads-loose-research",
+  "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+  "origins": [
+    "/Users/carterfeng/Downloads"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "AnalysisofDynamicFive-ElementModel-2.pdf",
+      "retained_destination": "references/Lin_Han_2020_Analysis_of_Dynamic_Five_Element_Model.pdf",
+      "sha256": "4676585f458316b4e2072e120a9b1bfbdbf7c25bfc084a2a807e72af4d7ff993",
+      "source": "/Users/carterfeng/Downloads/AnalysisofDynamicFive-ElementModel-2.pdf",
+      "status": "primary_reference"
+    },
+    {
+      "original_relative_path": "AnalysisofDynamicFive-ElementModel-3.pdf",
+      "retained_destination": "references/Lin_Han_2020_Analysis_of_Dynamic_Five_Element_Model.pdf",
+      "sha256": "4676585f458316b4e2072e120a9b1bfbdbf7c25bfc084a2a807e72af4d7ff993",
+      "source": "/Users/carterfeng/Downloads/AnalysisofDynamicFive-ElementModel-3.pdf",
+      "status": "primary_reference"
+    },
+    {
+      "original_relative_path": "AnalysisofDynamicFive-ElementModel.pdf",
+      "retained_destination": "references/Lin_Han_2020_Analysis_of_Dynamic_Five_Element_Model.pdf",
+      "sha256": "4676585f458316b4e2072e120a9b1bfbdbf7c25bfc084a2a807e72af4d7ff993",
+      "source": "/Users/carterfeng/Downloads/AnalysisofDynamicFive-ElementModel.pdf",
+      "status": "primary_reference"
+    },
+    {
+      "original_relative_path": "ChineseFiveOrgansInteration.jpg",
+      "retained_destination": "archive/loose_research_exports/ChineseFiveOrgansInteration.jpg",
+      "sha256": "e842c589b0d8510ab5aed6c3dc4c989ea59e2a6fae062db7b30a7aebe0bc89d7",
+      "source": "/Users/carterfeng/Downloads/ChineseFiveOrgansInteration.jpg",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "Lin2020.pdf",
+      "retained_destination": "references/Lin_Han_2020_Analysis_of_Dynamic_Five_Element_Model.pdf",
+      "sha256": "4676585f458316b4e2072e120a9b1bfbdbf7c25bfc084a2a807e72af4d7ff993",
+      "source": "/Users/carterfeng/Downloads/Lin2020.pdf",
+      "status": "primary_reference"
+    },
+    {
+      "original_relative_path": "Mathematical_modeling_of_Chinese_medicine_by_compl.pdf",
+      "retained_destination": "archive/loose_research_exports/Mathematical_modeling_of_Chinese_medicine_by_compl.pdf",
+      "sha256": "4ef5daf94c1c4e2f98cd91a2f2b04e3ab6e314bcb7d8d670073c49c168e5b9e9",
+      "source": "/Users/carterfeng/Downloads/Mathematical_modeling_of_Chinese_medicine_by_compl.pdf",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "Wei_et_al_2020_Hopf_bifurcation_and_synchronization.pdf",
+      "retained_destination": "archive/loose_research_exports/Wei_et_al_2020_Hopf_bifurcation_and_synchronization.pdf",
+      "sha256": "94062ae7d278c1eafe96bf117fa5610c55986837bc16ff01cbff62f09cdb5813",
+      "source": "/Users/carterfeng/Downloads/Wei_et_al_2020_Hopf_bifurcation_and_synchronization.pdf",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXing.tex",
+      "retained_destination": "archive/loose_research_exports/WuXing.tex",
+      "sha256": "c327c56d5d861d12207935f0d12df0461e3c8ad8d110f515892634ae3a2ab11f",
+      "source": "/Users/carterfeng/Downloads/WuXing.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXing_Commented.ipynb",
+      "retained_destination": "archive/historical_notebooks/downloads/WuXing_Commented.ipynb",
+      "sha256": "dc02f4f4a77711f13085b5dc957b22538f65e08b04e0dc051d95abe71cbf12b4",
+      "source": "/Users/carterfeng/Downloads/WuXing_Commented.ipynb",
+      "status": "historical_notebook"
+    },
+    {
+      "original_relative_path": "WuXing_Complete_Chat_Record.md",
+      "retained_destination": "archive/records/WuXing_Complete_Chat_Record.md",
+      "sha256": "42a277f919d811af2b85f7c913583d8f429f5150e63948e2459cf36ada5b9dad",
+      "source": "/Users/carterfeng/Downloads/WuXing_Complete_Chat_Record.md",
+      "status": "historical_record"
+    },
+    {
+      "original_relative_path": "bifurcation.png",
+      "retained_destination": "archive/loose_research_exports/bifurcation.png",
+      "sha256": "7e63eceb56513b08f94bfd000f23a2d985eabe06010b136a2bfa5f85f927d44a",
+      "source": "/Users/carterfeng/Downloads/bifurcation.png",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "chineseOrgans-2.tex",
+      "retained_destination": "archive/loose_research_exports/chineseOrgans-2.tex",
+      "sha256": "f2c0cfe568011ec6385ba4fde5b730856cb1c0591f6085a3d2bb5530c96ae406",
+      "source": "/Users/carterfeng/Downloads/chineseOrgans-2.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "chineseOrgans.tex",
+      "retained_destination": "archive/loose_research_exports/chineseOrgans.tex",
+      "sha256": "ff953562b919c83c8e1ec6bab12fcae02ecfeb55fd7693a55a30c6773ed0b368",
+      "source": "/Users/carterfeng/Downloads/chineseOrgans.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "directed_cyclic_networks_master.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/archive/directed_cyclic_networks_master.tex",
+      "sha256": "0a7850078ed62434b8c37c727637049c583972cd11159ac91345e6a8691e436d",
+      "source": "/Users/carterfeng/Downloads/directed_cyclic_networks_master.tex",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "fig2_RisR.png",
+      "retained_destination": "archive/lin_literature_reproductions/fig2_RisR.png",
+      "sha256": "b2a147efa8929dbbbc5bc5fa2c85cf12cd346c6d363702879b3ccc515d24c656",
+      "source": "/Users/carterfeng/Downloads/fig2_RisR.png",
+      "status": "historical_lin_figure"
+    },
+    {
+      "original_relative_path": "fig3_periodic.png",
+      "retained_destination": "archive/lin_literature_reproductions/fig3_periodic.png",
+      "sha256": "bf414d29d0c5be2112199c1b3dfc9ef4d7a593c3988ac3f9552a3e04c0c9cffc",
+      "source": "/Users/carterfeng/Downloads/fig3_periodic.png",
+      "status": "historical_lin_figure"
+    },
+    {
+      "original_relative_path": "fig4_chaos_timeseries.png",
+      "retained_destination": "archive/lin_literature_reproductions/fig4_chaos_timeseries.png",
+      "sha256": "acc2ef3a50bc63d1b71006beb58f7cc5c1d6c81d770db037d03974c8472510f0",
+      "source": "/Users/carterfeng/Downloads/fig4_chaos_timeseries.png",
+      "status": "historical_lin_figure"
+    },
+    {
+      "original_relative_path": "fig5_chaos_phase.png",
+      "retained_destination": "archive/lin_literature_reproductions/fig5_chaos_phase.png",
+      "sha256": "ca57fd2a3bf37c980f8067be6a59db9f15476bee26e4b6dcbb83ffe4d281316d",
+      "source": "/Users/carterfeng/Downloads/fig5_chaos_phase.png",
+      "status": "historical_lin_figure"
+    },
+    {
+      "original_relative_path": "main2-2.tex",
+      "retained_destination": "archive/loose_research_exports/main2-2.tex",
+      "sha256": "6e8e8f5ab4a0ed642ca10dfa54782742149abdd783285711058f89ba0f6d247f",
+      "source": "/Users/carterfeng/Downloads/main2-2.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "main2.tex",
+      "retained_destination": "archive/loose_research_exports/main2.tex",
+      "sha256": "6b7c7aca10ce6d138f6e2066d267e443d394fc87af81f6b1c047647c1ef5cf1b",
+      "source": "/Users/carterfeng/Downloads/main2.tex",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "proofs_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium.pdf",
+      "sha256": "1a2d9430ed15e11055cdbe18781bd7cae77412aed4b97fcb7643efdf79d3b61d",
+      "source": "/Users/carterfeng/Downloads/proofs_compendium.pdf",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium_11.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium_11.pdf",
+      "sha256": "312665095cf29198feb1cc27b53b37913a8cc867abb71af724917d6f137305ab",
+      "source": "/Users/carterfeng/Downloads/proofs_compendium_11.pdf",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium_after_p08_update.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium_after_p08_update.pdf",
+      "sha256": "cef011751af12df72b61326739358e6cf518ee6070f17d09475f80c900e8c685",
+      "source": "/Users/carterfeng/Downloads/proofs_compendium_after_p08_update.pdf",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "proofs_compendium_p04_draft.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium_p04_draft.pdf",
+      "sha256": "03f8a67acab7018fd1e5389889967155d82f5d029ae7796d8d1fc4a7c64c8163",
+      "source": "/Users/carterfeng/Downloads/proofs_compendium_p04_draft.pdf",
+      "status": "theory_version_snapshot"
+    },
+    {
+      "original_relative_path": "regions.png",
+      "retained_destination": "archive/loose_research_exports/regions.png",
+      "sha256": "d7624363826e465897ce304ebf74b3eb9ceb38710f06e8775e63e0ac27de1667",
+      "source": "/Users/carterfeng/Downloads/regions.png",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "understanding-traditional-chinese-medicine-from-a-systems-2e4ov5fihy.pdf",
+      "retained_destination": "archive/loose_research_exports/understanding-traditional-chinese-medicine-from-a-systems-2e4ov5fihy.pdf",
+      "sha256": "6568e3cef0e919f13626f41a547869c10fc18997bd9ab07157a6297a5f2a2699",
+      "source": "/Users/carterfeng/Downloads/understanding-traditional-chinese-medicine-from-a-systems-2e4ov5fihy.pdf",
+      "status": "historical_unclassified_asset"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+CITATION VERIFICATION — 4 October 2026
+
+All ten works cited in the shortened edition exist. Checks used primary
+publisher records, author-hosted manuscripts, or the specified arXiv version.
+Existence checks are distinguished below from access to the actual theorem.
+No inaccessible theorem was assigned an invented theorem number.
+
+1. Gray2006
+Robert M. Gray, Toeplitz and Circulant Matrices: A Review.
+Foundations and Trends in Communications and Information Theory 2(3),
+155–239 (2006). DOI: 10.1561/0100000006.
+https://ee.stanford.edu/~gray/toeplitz.pdf
+Checked: full author PDF, §§3.1–3.2 and Theorem 3.1, printed pp. 32–35.
+Use: unitary circulant diagonalization, normality, inversion. P03/P04
+explicitly reconcile the opposite Fourier exponent by relabelling modes.
+The publisher DOI redirected to the matching title/volume/page record but
+the destination was not retrievable. Author full text supplies the theorem.
+
+2. vanKekemSterk2018
+Dirk L. van Kekem and Alef E. Sterk, Travelling waves and their bifurcations
+in the Lorenz-96 model. Physica D 367, 38–60 (2018).
+DOI: 10.1016/j.physd.2017.11.008.
+https://arxiv.org/abs/1704.05442
+https://arxiv.org/pdf/1704.05442v3
+Checked: primary arXiv record and 55-page accepted manuscript; Proposition 5
+and its §4.4 proof concern mode selection; Proposition 6 concerns the limit.
+Use: methodological credit, not transfer of Lorenz-96 thresholds to DM.
+The DM grid classification and positive-parameter constructions remain.
+Publisher DOI full text was not retrievable.
+
+3. Goh1977
+B. S. Goh, Global Stability in Many-Species Systems.
+The American Naturalist 111(977), 135–143 (1977).
+https://doi.org/10.1086/283144
+Checked: publisher title, author, issue, pages, DOI and abstract; full article
+is access-restricted. Use: credit for generalized Lotka–Volterra stability
+method. P08 retains a direct verification of the Lyapunov cancellation,
+negative symmetric part, compact interior sublevels and global convergence.
+No article-specific theorem number or unchecked blanket theorem is invoked.
+
+4. GuckenheimerHolmes1983 — textbook, not a research article
+John Guckenheimer and Philip Holmes, Nonlinear Oscillations, Dynamical
+Systems, and Bifurcations of Vector Fields. Applied Mathematical Sciences
+42, Springer, New York (1983).
+https://link.springer.com/book/10.1007/978-1-4612-1140-2
+Checked: publisher bibliographic record and chapter contents. Chapter 1 is
+Introduction: Differential Equations and Dynamical Systems (pp. 1–65);
+Chapter 3 is Local Bifurcations (pp. 117–165). Full theorem pages were not
+retrieved. Use: named standard implicit-function, linearization, invariant
+manifold and local bifurcation results, without invented theorem numbers.
+The application hypotheses, spectral gaps and coefficients are displayed.
+P09 retains the exact scalar normal form and center dynamics. P10 retains
+the actual local basin-side argument, not just a manifold-dimension claim.
+
+5. KuznetsovFold2006 — author-written reference article
+Yuri A. Kuznetsov, Saddle-node bifurcation.
+Scholarpedia 1(10), 1859 (2006).
+https://www.scholarpedia.org/article/Saddle-node_bifurcation
+https://doi.org/10.4249/scholarpedia.1859
+Checked: primary Scholarpedia search-indexed bibliographic record. Direct
+page retrieval failed. This is a named standard criterion citation, paired
+with the textbook; P10 independently retains its simple kernel, spectral
+gap, both nonzero contractions, full local equilibrium reduction and exact
+center normal form. No uninspected theorem number is cited.
+
+6. KuznetsovHopf2006 — author-written reference article
+Yuri A. Kuznetsov, Andronov–Hopf bifurcation.
+Scholarpedia 1(10), 1858 (2006).
+https://www.scholarpedia.org/article/Andronov-Hopf_bifurcation
+https://doi.org/10.4249/scholarpedia.1858
+Checked: primary Scholarpedia search excerpts confirm bibliographic data,
+adjoint convention and first-Lyapunov-coefficient formula. Direct full-page
+retrieval failed. Use: standard Hopf conditions and formula in P11–P13.
+The formula is stated under explicit Taylor, pairing and frequency
+conventions. No DM coefficient value or sign is borrowed from this source.
+
+7. Stewart2024 — specified preprint version
+Ian Stewart, Hopf Bifurcation and Phase Patterns in Symmetric Ring Networks.
+arXiv:2403.15814v1 (2024).
+https://arxiv.org/html/2403.15814v1
+Checked: full primary HTML, especially Theorem 3.7 (equivariant Hopf).
+Use: conditional symmetry framework in P14. DM's shift convention is stated
+explicitly. P14 does not import generic arbitrary-coupling realizability as
+a positive-parameter DM theorem, nor claim that its Hopf conditions are done.
+
+8. GreenbaumLiOverton2020
+Anne Greenbaum, Ren-Cang Li and Michael L. Overton, First-Order Perturbation
+Theory for Eigenvalues and Eigenvectors. SIAM Review 62(2), 463–482 (2020).
+DOI: 10.1137/19M124784X.
+https://arxiv.org/pdf/1903.00785
+Checked: full primary author PDF, Assumption 1, Theorem 1 and equation (1),
+and the analytic implicit-function theorem stated in §3.2. The publisher
+DOI page was not retrievable. Use: analytic-family IFT and simple-eigenvalue
+derivative. P18 explicitly includes motion of the equilibrium and the
+nonzero denominator required for a threshold shift.
+
+9. BenziRazouk2007
+Michele Benzi and Nader Razouk, Decay Bounds and O(n) Algorithms for
+Approximating Functions of Sparse Matrices.
+Electronic Transactions on Numerical Analysis 28, 16–39 (2007).
+https://www.cs.emory.edu/~benzi/Web_papers/benzi_razouk.pdf
+Checked: full final journal PDF, title-page metadata, Theorem 3.4 and
+equation (3.7), printed p. 24. Use: conditional graph-distance decay only.
+The needed zero-avoiding analytic region, spectral continuum and constants
+are not inferred from invertibility; P16 explicitly leaves them to verify.
+
+10. EmbreeTrefethen2001
+Mark Embree and Lloyd N. Trefethen, Generalizing Eigenvalue Theorems to
+Pseudospectra Theorems. SIAM Journal on Scientific Computing 23(2),
+583–590 (2001). DOI: 10.1137/S1064827500373012.
+https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2001_94.pdf
+Checked: full author-hosted journal PDF, §1, Theorem 4-epsilon (p. 585),
+and the normal-matrix discussion (p. 586).
+Use: unstructured norm perturbation inclusion at a normal Hurwitz base.
+P18's physical-parameter bound is explicitly still to be derived. No sharp
+real/structured radius is claimed; perturbed matrices need not be normal.
+
+Scope: references from the old, much broader literature bibliography that
+are not used in this proof edition were not copied into the new bibliography.
+The cited research papers' model-specific conclusions are never substituted
+for DM-specific hypotheses or parameter-realizability constructions.

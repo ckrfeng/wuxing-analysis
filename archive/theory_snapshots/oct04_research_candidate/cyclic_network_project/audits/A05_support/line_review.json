@@ -1,0 +1,278 @@
+[
+  {
+    "start": 1,
+    "end": 14,
+    "status": "PASS",
+    "finding_tex": "Current version and DRAFT status; dependency and strengthened scope\nmetadata agree with the final manifest."
+  },
+  {
+    "start": 15,
+    "end": 29,
+    "status": "PASS",
+    "finding_tex": "Positive synchronous hypotheses and verified P04 input, including\nthe sign $G-H$, are correct."
+  },
+  {
+    "start": 30,
+    "end": 31,
+    "status": "MINOR ISSUE",
+    "finding_tex": "E01: candidate set versus selected set is ambiguous.\nRequire the explicit replacement in section 1. Coprimality sentence passes."
+  },
+  {
+    "start": 32,
+    "end": 34,
+    "status": "PASS",
+    "finding_tex": "Only verified earlier modules are imported."
+  },
+  {
+    "start": 35,
+    "end": 48,
+    "status": "PASS",
+    "finding_tex": "Global ratio $\\chi=-4T/C$ is well defined since $C>0$;\nnovelty and indexing scope are accurate."
+  },
+  {
+    "start": 49,
+    "end": 62,
+    "status": "PASS",
+    "finding_tex": "Quadratic reduction and constant cancellation; no independent\nphysical freedom of $d$ is inferred."
+  },
+  {
+    "start": 63,
+    "end": 83,
+    "status": "PASS",
+    "finding_tex": "Strictly descending grid, both endpoints and disjoint label\nclasses match the independent derivation."
+  },
+  {
+    "start": 84,
+    "end": 94,
+    "status": "PASS",
+    "finding_tex": "Explicit endpoint gap and positivity for every $u<1$ prove\nuniqueness, including odd $n$ and $T=0$."
+  },
+  {
+    "start": 95,
+    "end": 107,
+    "status": "PASS",
+    "finding_tex": "Concave derivative, positive vertex, $v=1$ uniqueness and\ndistinction from the first discrete switch."
+  },
+  {
+    "start": 108,
+    "end": 120,
+    "status": "PASS",
+    "finding_tex": "Square completion and cosine-space distance are exact."
+  },
+  {
+    "start": 121,
+    "end": 129,
+    "status": "PASS",
+    "finding_tex": "Midpoint product; valid range $0\\le j<N$; difference formula\nfor consecutive midpoints applies where $j<N-1$."
+  },
+  {
+    "start": 130,
+    "end": 145,
+    "status": "PASS",
+    "finding_tex": "Theorem A's closed endpoint/interior cells and unique open\ncells, ties and positive-midpoint restriction are correct."
+  },
+  {
+    "start": 146,
+    "end": 163,
+    "status": "PASS",
+    "finding_tex": "Distance-difference sign and neighbor sufficiency against\nall other representatives are correct."
+  },
+  {
+    "start": 164,
+    "end": 171,
+    "status": "PASS",
+    "finding_tex": "Nonadjacent/triple maximal tie exclusion; independent explicit\ndistance proof supplied in this audit."
+  },
+  {
+    "start": 172,
+    "end": 184,
+    "status": "PASS",
+    "finding_tex": "Adjacent gap $C(u_j-u_{j+1})(1-\\chi\\beta_j)$; nonmaximal\nconvex equalities are correctly distinguished."
+  },
+  {
+    "start": 185,
+    "end": 193,
+    "status": "PASS",
+    "finding_tex": "Three/four selected-label counts; no distinct-eigenvalue or\nNyquist-selection inference."
+  },
+  {
+    "start": 194,
+    "end": 210,
+    "status": "PASS",
+    "finding_tex": "Theorem B's exact list, strict attainability and finite\npositive switches are all justified."
+  },
+  {
+    "start": 211,
+    "end": 231,
+    "status": "PASS",
+    "finding_tex": "Cell-intersection criterion, integer floor formula,\n$J<N$, and no isolated additional reachable representative."
+  },
+  {
+    "start": 232,
+    "end": 245,
+    "status": "PASS",
+    "finding_tex": "All four rows of the parity table, including formal zero\nties, are correct."
+  },
+  {
+    "start": 246,
+    "end": 262,
+    "status": "PASS",
+    "finding_tex": "Odd straddling cosines, sine ordering, zero-cosine pair and\nzero-midpoint exception."
+  },
+  {
+    "start": 263,
+    "end": 280,
+    "status": "PASS",
+    "finding_tex": "Fixed-$n$ terminal limit and persistent $2C\\sin(\\pi/n)$\ngap; no finite infinite-$\\chi$ switch or large-$n$ claim."
+  },
+  {
+    "start": 281,
+    "end": 300,
+    "status": "PASS",
+    "finding_tex": "Reciprocal directions, ranges of $\\alpha_j$, combined\nglobal $\\chi$ rule and strict uniform status at $\\chi=1$."
+  },
+  {
+    "start": 301,
+    "end": 318,
+    "status": "PASS",
+    "finding_tex": "Canonical inequalities, positive denominators and exact\nswitch equation."
+  },
+  {
+    "start": 319,
+    "end": 328,
+    "status": "PASS",
+    "finding_tex": "Original equilibrium constraint and exclusion of\nnonpositive-midpoint dominant switches."
+  },
+  {
+    "start": 329,
+    "end": 341,
+    "status": "PASS",
+    "finding_tex": "Theorem C quantifiers are existential for open cells and\nlocal on specified branches for hypersurfaces; all switch points are regular."
+  },
+  {
+    "start": 342,
+    "end": 362,
+    "status": "PASS",
+    "finding_tex": "Universal construction, exact strict $k$ bound and original\nfive-term residual; spectral coefficients are not treated as free."
+  },
+  {
+    "start": 363,
+    "end": 376,
+    "status": "PASS",
+    "finding_tex": "Simple family has $\\chi>-2$ and covers all positive\n$\\chi$; $-1,0,1$ examples are valid."
+  },
+  {
+    "start": 377,
+    "end": 395,
+    "status": "PASS",
+    "finding_tex": "Open five-dimensional equilibrium chart and correctly signed\nprojection determinant."
+  },
+  {
+    "start": 396,
+    "end": 403,
+    "status": "PASS",
+    "finding_tex": "Strict positivity of the determinant throughout $H>G$;\nIFT hypotheses and scalar versus full-system regularity are distinguished."
+  },
+  {
+    "start": 404,
+    "end": 413,
+    "status": "PASS",
+    "finding_tex": "Open strict cells project locally to open physical sets;\nconcave uniform example included; arbitrary uniform folds are not claimed regular."
+  },
+  {
+    "start": 414,
+    "end": 425,
+    "status": "PASS",
+    "finding_tex": "Scaled switch function has derivative 1, nonempty regular\nlevel set and valid local transfer to physical parameters."
+  },
+  {
+    "start": 426,
+    "end": 439,
+    "status": "PASS",
+    "finding_tex": "Both crossing derivatives correct; $a$ varies to hold $x$\nfixed; other representatives remain strictly below; no global branch quotient claim."
+  },
+  {
+    "start": 440,
+    "end": 453,
+    "status": "PASS",
+    "finding_tex": "Four printed tuples have positive coefficients, $x=1$, exact\nresiduals and stated label maxima."
+  },
+  {
+    "start": 454,
+    "end": 471,
+    "status": "PASS",
+    "finding_tex": "All four terminal examples use $v=\\beta_{J-1}/2$;\nthe unstable $n=11,k=1$ example makes no stability claim."
+  },
+  {
+    "start": 472,
+    "end": 479,
+    "status": "PASS",
+    "finding_tex": "Exact row-local notation, terminal midpoint signs and P07\nscope restriction."
+  },
+  {
+    "start": 480,
+    "end": 498,
+    "status": "PASS",
+    "finding_tex": "Every grid and midpoint entry for $n=5,\\ldots,12$ agrees\nwith independent reconstruction."
+  },
+  {
+    "start": 499,
+    "end": 507,
+    "status": "PASS",
+    "finding_tex": "Dominance and oriented first loss of stability are separated;\nno first-instability result is inferred."
+  },
+  {
+    "start": 508,
+    "end": 520,
+    "status": "PASS",
+    "finding_tex": "Stable path remains canonical, $d=-k-3$ and uniform\nall-label bound $r_m<-1$ hold throughout the interval."
+  },
+  {
+    "start": 521,
+    "end": 527,
+    "status": "PASS",
+    "finding_tex": "Adjacent change of dominance and stable realization of every\ncell; later first-crossing tasks are explicitly deferred."
+  },
+  {
+    "start": 528,
+    "end": 541,
+    "status": "PASS",
+    "finding_tex": "Imaginary-part sign correct; real-part ties do not establish\ncomplex equality, simple pairs or Hopf conditions."
+  },
+  {
+    "start": 542,
+    "end": 556,
+    "status": "PASS",
+    "finding_tex": "Internal analytic checks describe true identities; the\naudit independently proves them rather than trusting their description."
+  },
+  {
+    "start": 557,
+    "end": 563,
+    "status": "UNRESOLVED",
+    "finding_tex": "U01: contents and coverage of the separately named\noriginal validation companion cannot be authenticated from this delivery."
+  },
+  {
+    "start": 564,
+    "end": 565,
+    "status": "PASS",
+    "finding_tex": "Finite-precision corroboration is explicitly distinguished\nfrom exact trigonometric input definitions and proof."
+  },
+  {
+    "start": 566,
+    "end": 567,
+    "status": "UNRESOLVED",
+    "finding_tex": "U01: historical support run totals, environment and\nerror records are absent; the new checker is not that run."
+  },
+  {
+    "start": 568,
+    "end": 569,
+    "status": "PASS",
+    "finding_tex": "Compilation and internal checking do not confer verification."
+  },
+  {
+    "start": 570,
+    "end": 591,
+    "status": "PASS",
+    "finding_tex": "Auditor checklist is consistent with the verified findings and\nscope; it is source material, not a new instruction to alter any proof."
+  }
+]

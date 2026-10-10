@@ -1,0 +1,32 @@
+{
+  "E01": {
+    "source_lines": [
+      534,
+      535
+    ],
+    "claim": "Universal witness selects MB representative 1 for n=5,6,7,8.",
+    "observed": {
+      "5": [
+        1
+      ],
+      "6": [
+        1
+      ],
+      "7": [
+        1
+      ],
+      "8": [
+        2
+      ]
+    },
+    "exact_n8_MB_real_parts": [
+      "-1/4",
+      "-1/8+sqrt(2)/2",
+      "1",
+      "-1/8-sqrt(2)/2",
+      "-9/4"
+    ],
+    "correct_n8_representative": 2,
+    "status": "FALSE example label; MINOR ISSUE; universal theorem unaffected"
+  }
+}

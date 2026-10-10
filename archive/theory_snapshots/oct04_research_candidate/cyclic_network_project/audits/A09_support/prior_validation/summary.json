@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "role": "corroboration only; not independent A09 audit",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "exact_checks": 1260,
+  "network_pairs": 50,
+  "noncoprime_network_pairs": 20,
+  "parameter_tuples": 6,
+  "matrix_cases": 2700,
+  "slope_checks": 12,
+  "max_original_residual": 3.67294661753146e-19,
+  "max_scaled_spectrum_error": 4.693992612547024e-15,
+  "max_scaled_complex_step_error": 2.918393976531804e-16,
+  "max_scaled_fourier_error": 1.752342071068899e-15,
+  "max_slope_error": 2.8043931621368756e-09,
+  "script_sha256": "b42af82b97c187b3a61238b7cc2aba9d35e44d210a38ec88421b10d5be2fcf93"
+}

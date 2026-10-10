@@ -1,0 +1,27 @@
+% STATUS: conditional framework; outstanding model-specific work is explicit.
+\section{P12: Hopf transversality (unfinished application)}
+\label{sec:P12}
+The source has no derivative calculation. The formulas below specify
+the standard reduction; the crossing on P11's path remains to be verified.
+\subsection{Equilibrium derivative}\label{slot:P12-1}
+For $B(x,g)=a-(k+h)x+(c-g)/(1+x)=0$ with $a,k,c,h$ fixed,
+implicit differentiation gives
+\[
+ B_x=-(k+h)-\frac{c-g}{(1+x)^2},\qquad
+ x_g=\frac{1}{(1+x)B_x}\quad(B_x\ne0).
+\]
+The implicit-function theorem applies locally at P11's simple upper root;
+it fails in this parameterization at a scalar fold
+\cite[Ch.~1]{GuckenheimerHolmes1983}.
+\subsection{Total crossing derivative}\label{slot:P12-2}
+Differentiate P04's coefficients along the moving equilibrium:
+\[
+ \frac{d\lambda_m}{dg}
+ =d_g+C_g e^{-\ii\theta_m}+G_g e^{2\ii\theta_m}-H_g e^{-2\ii\theta_m}.
+\]
+Here every subscript denotes a total derivative, including $x_g$.
+\subsection{Outstanding nondegeneracy}\label{slot:P12-3}
+Evaluate and certify $\Ree(d\lambda_j/dg)\ne0$ at P11's exact tuple,
+with the orientation of increasing $g$ explicit. This is the crossing
+hypothesis in \cite{KuznetsovHopf2006}; the spectral conditions alone
+do not prove it.

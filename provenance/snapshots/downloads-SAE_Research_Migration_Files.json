@@ -1,0 +1,24 @@
+{
+  "id": "downloads-SAE_Research_Migration_Files",
+  "status": "Historical source snapshot; recorded scientific claims are not independently validated by import",
+  "origins": [
+    "/Users/carterfeng/Downloads/SAE Research Migration Files"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "WuXingChatFiles/priority_closure_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/cyclic_network_project_2/priority_closure_compendium.pdf",
+      "sha256": "c242dee8c57c2bdc02395d38b0a38e4a65a9a78af6dcc47f41e3f7f2ecd32f44",
+      "source": "/Users/carterfeng/Downloads/SAE Research Migration Files/WuXingChatFiles/priority_closure_compendium.pdf",
+      "status": "historical_unclassified_asset"
+    },
+    {
+      "original_relative_path": "WuXingChatFiles/proofs_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/loose_theory_exports/proofs_compendium__d696801db40f.pdf",
+      "sha256": "d696801db40fddc12aae7c2b8de43361ee0991c6de5d186f6d1eada54e8faf61",
+      "source": "/Users/carterfeng/Downloads/SAE Research Migration Files/WuXingChatFiles/proofs_compendium.pdf",
+      "status": "theory_version_snapshot"
+    }
+  ]
+}

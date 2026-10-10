@@ -1,0 +1,22 @@
+{
+  "canonical_equilibrium": 2.6702864369671517,
+  "baseline_alpha": -1.1537235206894838,
+  "random_draws": 250,
+  "jacobian_max_abs_error": 7.105427357601002e-15,
+  "boundary_identity_max_abs_error": 0.0,
+  "xpp_equation_max_abs_error": 1.4210854715202004e-14,
+  "perturbation_runs": [
+    {
+      "wood_factor": 1.05,
+      "minimum": 2.6497851799437,
+      "final_distance": 3.29718226041828e-12
+    },
+    {
+      "wood_factor": 0.3,
+      "minimum": 0.8010859310901455,
+      "final_distance": 1.226735362951157e-11
+    }
+  ],
+  "approach_zero_final": 4.247214948083764e-11,
+  "retained_comparison_functions_unchanged": true
+}

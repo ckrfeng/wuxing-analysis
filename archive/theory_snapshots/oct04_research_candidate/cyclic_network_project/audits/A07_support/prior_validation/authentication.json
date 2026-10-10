@@ -1,0 +1,8 @@
+{
+  "support_sha256": "cabf306b6a95db0951f320ba472ee401f050ec014a7ee12b6a558f9f41b2abc5",
+  "checker_sha256": "b710507c2f89f2d6af27b68ced5784c68f840a05613e0a45687be4521500c554",
+  "archive_sha256_record_matches": true,
+  "role": "developer corroboration reproduced only after independent analytic derivation and checker authoring",
+  "all_118_current_member_hashes_match": true,
+  "original_and_reproduced_result_files_byte_identical": true
+}

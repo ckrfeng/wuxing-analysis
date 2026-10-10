@@ -1,0 +1,324 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+
+\pagestyle{plain}
+\textheight235truemm\textwidth165truemm
+\voffset-2.2cm\hoffset-1.2cm
+\vfuzz=10000truept\hfuzz=10000truept
+
+\newcommand{\RED}[1]{{\color{red}{#1}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{Chinese_med.bib}
+
+\title{Dynamics of Five Organ Diagram in Chinese Medicine}
+\author{Carter Feng and Yunjiao Wang}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+%===========================================================
+\section{Relations in Wu-Xing and Mathematical Modeling}
+%===========================================================
+
+\subsection{The Five Organs and Index Assignment}
+
+We index the five organs as follows, following the standard Wu-Xing (Five Element)
+cycle:
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Index & Element & Organ \\
+\midrule
+$x_1$ & Wood\; (木) & Liver\; (肝) \\
+$x_2$ & Fire\; (火)  & Heart\; (心) \\
+$x_3$ & Earth\; (土) & Spleen\; (脾) \\
+$x_4$ & Metal\; (金) & Lung\; (肺) \\
+$x_5$ & Water\; (水) & Kidney\; (肾) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Let $x_i = x_i(t) \geq 0$ denote the functional activity level (qi) of organ $i$
+at time $t$.
+
+%-----------------------------------------------------------
+\subsection{Fundamental Relationships}
+%-----------------------------------------------------------
+
+TCM identifies three primary inter-organ relationships, each of which contributes
+a term to the dynamical model.
+
+\medskip
+\noindent\textbf{Sheng (生, Generating) cycle.}
+Each organ nourishes the next in the cycle
+\[
+x_1 \to x_2 \to x_3 \to x_4 \to x_5 \to x_1.
+\]
+We denote the \emph{Sheng mother} of organ $i$ by $\sigma(i)$:
+\[
+\sigma(1)=5,\quad \sigma(2)=1,\quad \sigma(3)=2,\quad \sigma(4)=3,\quad \sigma(5)=4.
+\]
+
+\medskip
+\noindent\textbf{Ke (克, Controlling) cycle.}
+Each organ restrains another following the pentagram pattern
+\[
+x_1 \to x_3 \to x_5 \to x_2 \to x_4 \to x_1.
+\]
+We denote the \emph{Ke target} of organ $i$ (the organ that $i$ controls) by
+$\kappa(i)$, and the \emph{Ke controller} of organ $i$ (the organ that controls $i$)
+by $\rho(i)$:
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Organ $i$ & Ke target $\kappa(i)$ & Ke controller $\rho(i)$ \\
+\midrule
+$x_1$ Wood  & $x_3$ Earth  & $x_4$ Metal  \\
+$x_2$ Fire  & $x_4$ Metal  & $x_5$ Water  \\
+$x_3$ Earth & $x_5$ Water  & $x_1$ Wood   \\
+$x_4$ Metal & $x_1$ Wood   & $x_2$ Fire   \\
+$x_5$ Water & $x_2$ Fire   & $x_3$ Earth  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent\textbf{Wu (侮, Rebellious Counter-Acting).}
+Under pathological conditions, when organ $i$ becomes severely deficient, the organ
+it normally controls, $x_{\kappa(i)}$, may rebel against it. That is, $x_{\kappa(i)}$
+exerts a reverse draining effect on $x_i$ when $x_i$ falls below a threshold
+$\epsilon_i > 0$.
+
+%-----------------------------------------------------------
+\subsection{Adaptive Set Point}
+%-----------------------------------------------------------
+
+Rather than a fixed homeostatic target, we posit that each organ maintains an
+\emph{adaptive set point} $\theta_i > 0$ that is influenced by its Sheng mother
+and its Ke controller:
+\begin{equation}\label{eq:setpoint}
+    \theta_i \;=\; \theta_i^0 \;+\; \alpha_i\, x_{\sigma(i)} \;-\; \beta_i\, x_{\rho(i)},
+\end{equation}
+where $\theta_i^0 > 0$ is the baseline constitutional set point of organ $i$,
+$\alpha_i \geq 0$ encodes how much the mother's nourishment raises the set point,
+and $\beta_i \geq 0$ encodes how much the controller's restraint lowers it.
+We assume parameters are chosen such that $\theta_i > 0$ for all physiologically
+relevant states.
+
+%-----------------------------------------------------------
+\subsection{Model Derivation: Individual Terms}
+%-----------------------------------------------------------
+
+We now describe each term in the model.
+
+\medskip
+\noindent\textbf{Adaptive self-production (Hill-type).}
+In TCM, a healthy organ maintains continuous baseline production of qi. When the
+organ is in excess ($x_i > \theta_i$), production is downregulated; when the organ
+is deficient ($x_i < \theta_i$), production is upregulated. We model this with
+two Hill functions.
+
+The first term models \emph{activity-driven production} with downregulation in excess:
+\[
+    \frac{a_i\, x_i\, \theta_i^{n_i}}{\theta_i^{n_i} + x_i^{n_i}},
+\]
+where $a_i > 0$ is the maximum production rate and $n_i \geq 1$ is the Hill
+coefficient controlling the sigmoidal sharpness. When $x_i \ll \theta_i$ this
+approaches $a_i x_i$ (full production); when $x_i \gg \theta_i$ it approaches $0$
+(production shuts off). At the set point $x_i = \theta_i$ the rate equals
+$\tfrac{1}{2}a_i x_i$, which is nonzero, so the organ continues to function at
+its healthy level.
+
+The second term models \emph{constitutive upregulation} in deficiency:
+\[
+    \frac{u_i\, \theta_i^{m_i}}{\theta_i^{m_i} + x_i^{m_i}},
+\]
+where $u_i > 0$ is the maximum compensatory boost and $m_i \geq 1$ is a Hill
+coefficient. This term is large when $x_i$ is small and small when $x_i$ is large,
+capturing the TCM principle of zheng qi (正气) compensation: a depleted organ
+mobilizes additional resources to recover. The two exponents $n_i$ and $m_i$
+allow the excess-downregulation and deficiency-upregulation responses to be
+asymmetric.
+
+\medskip
+\noindent\textbf{Sheng nourishment.}
+The Sheng mother $x_{\sigma(i)}$ nourishes organ $i$, with saturation as $x_i$
+grows (a strong organ requires less maternal support):
+\[
+    \frac{c_i\, x_{\sigma(i)}}{1 + x_i},
+\]
+where $c_i > 0$ is the nourishment strength.
+
+\medskip
+\noindent\textbf{Ke over-acting (Cheng, 乘).}
+Organ $i$ over-acts on its Ke target $x_{\kappa(i)}$, draining it. As the target
+recovers, it increasingly resists this drain:
+\[
+    -\frac{g_i\, x_i}{1 + x_{\kappa(i)}},
+\]
+where $g_i > 0$ is the over-acting strength. The denominator $1 + x_{\kappa(i)}$
+means the drain diminishes as the target strengthens.
+
+\medskip
+\noindent\textbf{Ke direct restraint.}
+Organ $i$ is restrained by its Ke controller $x_{\rho(i)}$. Both organs must be
+active for restraint to occur, motivating a mass-action term:
+\[
+    -h_i\, x_i\, x_{\rho(i)},
+\]
+where $h_i > 0$ is the restraint strength. Note that the Ke over-acting term and
+the Ke restraint term are distinct: the former describes what organ $i$ does to
+its target, while the latter describes what the controller does to organ $i$.
+
+\medskip
+\noindent\textbf{Wu rebellious counter-acting.}
+When organ $i$ is severely deficient (below threshold $\epsilon_i$), its Ke target
+$x_{\kappa(i)}$ rebels against it. The rebellion strength grows as $x_i$ weakens:
+\[
+    -\frac{w_i\, x_{\kappa(i)}}{1 + x_i/\epsilon_i},
+\]
+where $w_i \geq 0$ is the rebellion strength and $\epsilon_i > 0$ is the weakness
+threshold. When $x_i \gg \epsilon_i$ (organ $i$ is healthy) this term vanishes;
+when $x_i \ll \epsilon_i$ it approaches $-w_i x_{\kappa(i)}$, actively draining
+organ $i$ in proportion to the rebel's activity. Setting $w_i = 0$ for all $i$
+recovers a homeostasis-only model without pathological dynamics.
+
+%-----------------------------------------------------------
+\subsection{Full Model}
+%-----------------------------------------------------------
+
+Combining all terms, the full five-dimensional dynamical system is:
+
+\begin{equation}\label{eq:fullmodel}
+\boxed{
+\dot{x}_i \;=\;
+\underbrace{\frac{a_i\, x_i\, \theta_i^{n_i}}{\theta_i^{n_i} + x_i^{n_i}}}_{\text{Hill production}}
+\;+\;
+\underbrace{\frac{u_i\, \theta_i^{m_i}}{\theta_i^{m_i} + x_i^{m_i}}}_{\text{deficiency upregulation}}
+\;+\;
+\underbrace{\frac{c_i\, x_{\sigma(i)}}{1 + x_i}}_{\text{Sheng}}
+\;-\;
+\underbrace{\frac{g_i\, x_i}{1 + x_{\kappa(i)}}}_{\text{Ke over-acting}}
+\;-\;
+\underbrace{h_i\, x_i\, x_{\rho(i)}}_{\text{Ke restraint}}
+\;-\;
+\underbrace{\frac{w_i\, x_{\kappa(i)}}{1 + x_i/\epsilon_i}}_{\text{Wu rebellion}}
+}
+\end{equation}
+
+\noindent
+for $i = 1, 2, 3, 4, 5$, where the adaptive set point $\theta_i$ is given by
+\eqref{eq:setpoint}. Written out explicitly for each organ:
+
+\begin{equation}\label{eq:explicit}
+\begin{aligned}
+\dot{x}_1 &= \frac{a_1 x_1 \theta_1^{n_1}}{\theta_1^{n_1} + x_1^{n_1}}
+           + \frac{u_1 \theta_1^{m_1}}{\theta_1^{m_1} + x_1^{m_1}}
+           + \frac{c_1 x_5}{1 + x_1}
+           - \frac{g_1 x_1}{1 + x_3}
+           - h_1 x_1 x_4
+           - \frac{w_1 x_3}{1 + x_1/\epsilon_1}\\[8pt]
+\dot{x}_2 &= \frac{a_2 x_2 \theta_2^{n_2}}{\theta_2^{n_2} + x_2^{n_2}}
+           + \frac{u_2 \theta_2^{m_2}}{\theta_2^{m_2} + x_2^{m_2}}
+           + \frac{c_2 x_1}{1 + x_2}
+           - \frac{g_2 x_2}{1 + x_4}
+           - h_2 x_2 x_5
+           - \frac{w_2 x_4}{1 + x_2/\epsilon_2}\\[8pt]
+\dot{x}_3 &= \frac{a_3 x_3 \theta_3^{n_3}}{\theta_3^{n_3} + x_3^{n_3}}
+           + \frac{u_3 \theta_3^{m_3}}{\theta_3^{m_3} + x_3^{m_3}}
+           + \frac{c_3 x_2}{1 + x_3}
+           - \frac{g_3 x_3}{1 + x_5}
+           - h_3 x_3 x_1
+           - \frac{w_3 x_5}{1 + x_3/\epsilon_3}\\[8pt]
+\dot{x}_4 &= \frac{a_4 x_4 \theta_4^{n_4}}{\theta_4^{n_4} + x_4^{n_4}}
+           + \frac{u_4 \theta_4^{m_4}}{\theta_4^{m_4} + x_4^{m_4}}
+           + \frac{c_4 x_3}{1 + x_4}
+           - \frac{g_4 x_4}{1 + x_1}
+           - h_4 x_4 x_2
+           - \frac{w_4 x_1}{1 + x_4/\epsilon_4}\\[8pt]
+\dot{x}_5 &= \frac{a_5 x_5 \theta_5^{n_5}}{\theta_5^{n_5} + x_5^{n_5}}
+           + \frac{u_5 \theta_5^{m_5}}{\theta_5^{m_5} + x_5^{m_5}}
+           + \frac{c_5 x_4}{1 + x_5}
+           - \frac{g_5 x_5}{1 + x_2}
+           - h_5 x_5 x_3
+           - \frac{w_5 x_2}{1 + x_5/\epsilon_5}
+\end{aligned}
+\end{equation}
+
+\noindent
+with $\theta_i = \theta_i^0 + \alpha_i x_{\sigma(i)} - \beta_i x_{\rho(i)}$
+substituted inline.
+
+%-----------------------------------------------------------
+\subsection{Parameter Summary}
+%-----------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Parameter & Biological meaning & Count \\
+\midrule
+$\theta_i^0$ & Baseline constitutional set point of organ $i$ & 5 \\
+$\alpha_i$   & Sensitivity of $\theta_i$ to Sheng mother nourishment & 5 \\
+$\beta_i$    & Sensitivity of $\theta_i$ to Ke controller restraint & 5 \\
+$a_i$        & Maximum self-production rate & 5 \\
+$n_i$        & Hill exponent for production downregulation in excess & 5 \\
+$u_i$        & Maximum compensatory upregulation in deficiency & 5 \\
+$m_i$        & Hill exponent for upregulation in deficiency & 5 \\
+$c_i$        & Sheng nourishment strength & 5 \\
+$g_i$        & Ke over-acting (Cheng) strength & 5 \\
+$h_i$        & Ke direct restraint strength & 5 \\
+$w_i$        & Wu rebellion strength ($w_i = 0$: homeostasis only) & 5 \\
+$\epsilon_i$ & Weakness threshold for Wu rebellion activation & 5 \\
+\midrule
+ & Total & 60 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+For a simplified symmetric analysis one may set $n_i = m_i = n$ globally,
+reducing the parameter count to 56. Further reduction to a symmetric system
+($a_i = a$, $c_i = c$, etc.) yields a tractable starting point for equilibrium
+and bifurcation analysis, with $n$ as a natural bifurcation parameter governing
+the sharpness of homeostatic response.
+
+\begin{remark}
+Every term in \eqref{eq:fullmodel} is $C^\infty$ on the positive orthant
+$\{x \in \mathbb{R}^5 : x_i > 0\}$, provided $\theta_i > 0$. This ensures that
+standard tools for equilibrium existence (Brouwer/Schauder fixed point), local
+stability (Jacobian linearization), and bifurcation theory apply directly without
+the complications that would arise from the piecewise formulation of the adaptive
+production term.
+\end{remark}
+
+\begin{remark}[Reduction to homeostasis model]
+Setting $w_i = 0$ for all $i$ removes all Wu rebellion terms and yields a
+homeostasis-focused model. The analysis of equilibria and their stability under
+this reduction provides a baseline against which the pathological dynamics
+introduced by Wu terms can be compared.
+\end{remark}
+
+\end{document}

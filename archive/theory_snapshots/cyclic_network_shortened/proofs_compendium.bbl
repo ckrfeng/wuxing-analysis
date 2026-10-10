@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+
+\bibitem{Gray2006}
+Robert~M. Gray.
+\newblock Toeplitz and circulant matrices: A review.
+\newblock {\em Foundations and Trends in Communications and Information
+  Theory}, 2(3):155--239, 2006.
+\newblock \url{https://ee.stanford.edu/~gray/toeplitz.pdf}.
+
+\bibitem{GuckenheimerHolmes1983}
+John Guckenheimer and Philip Holmes.
+\newblock {\em Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
+  Vector Fields}, volume~42 of {\em Applied Mathematical Sciences}.
+\newblock Springer, New York, 1983.
+\newblock \url{https://doi.org/10.1007/978-1-4612-1140-2}.
+
+\bibitem{vanKekemSterk2018}
+Dirk~L. van Kekem and Alef~E. Sterk.
+\newblock Travelling waves and their bifurcations in the {Lorenz-96} model.
+\newblock {\em Physica D: Nonlinear Phenomena}, 367:38--60, 2018.
+\newblock \url{https://arxiv.org/abs/1704.05442v3}.
+
+\bibitem{Goh1977}
+B.~S. Goh.
+\newblock Global stability in many-species systems.
+\newblock {\em The American Naturalist}, 111(977):135--143, 1977.
+\newblock \url{https://doi.org/10.1086/283144}.
+
+\bibitem{KuznetsovFold2006}
+Yuri~A. Kuznetsov.
+\newblock Saddle-node bifurcation.
+\newblock {\em Scholarpedia}, 1(10):1859, 2006.
+\newblock \url{https://doi.org/10.4249/scholarpedia.1859}.
+
+\bibitem{KuznetsovHopf2006}
+Yuri~A. Kuznetsov.
+\newblock Andronov--hopf bifurcation.
+\newblock {\em Scholarpedia}, 1(10):1858, 2006.
+\newblock \url{https://doi.org/10.4249/scholarpedia.1858}.
+
+\bibitem{Stewart2024}
+Ian Stewart.
+\newblock {Hopf} bifurcation and phase patterns in symmetric ring networks,
+  2024.
+\newblock \url{https://arxiv.org/html/2403.15814v1}.
+
+\bibitem{GreenbaumLiOverton2020}
+Anne Greenbaum, Ren-Cang Li, and Michael~L. Overton.
+\newblock First-order perturbation theory for eigenvalues and eigenvectors.
+\newblock {\em SIAM Review}, 62(2):463--482, 2020.
+\newblock \url{https://arxiv.org/abs/1903.00785}.
+
+\bibitem{BenziRazouk2007}
+Michele Benzi and Nader Razouk.
+\newblock Decay bounds and {$O(n)$} algorithms for approximating functions of
+  sparse matrices.
+\newblock {\em Electronic Transactions on Numerical Analysis}, 28:16--39, 2007.
+\newblock \url{https://www.cs.emory.edu/~benzi/Web_papers/benzi_razouk.pdf}.
+
+\bibitem{EmbreeTrefethen2001}
+Mark Embree and Lloyd~N. Trefethen.
+\newblock Generalizing eigenvalue theorems to pseudospectra theorems.
+\newblock {\em SIAM Journal on Scientific Computing}, 23(2):583--590, 2001.
+\newblock
+  \url{https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2001_94.pdf}.
+
+\end{thebibliography}

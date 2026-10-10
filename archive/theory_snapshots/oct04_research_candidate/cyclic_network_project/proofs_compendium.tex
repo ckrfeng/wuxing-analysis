@@ -1,0 +1,213 @@
+% !TeX program = pdflatex
+% Research compendium: P01--P05, P07, P08 and P09 VERIFIED / AUDITED.
+% P10 v1.1 is VERIFIED / AUDITED, metadata-only A10 closure.
+% P11 v1.1 is VERIFIED / AUDITED, metadata-only A11 closure.
+% P12 is cleared but not begun; P06 and P12--P18 remain TODO.
+% Canonical and historical planning fragments are preserved.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\input{shared_macros.tex}
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+\title{Directed Cyclic Networks\\Research Contract and Proof Compendium}
+\author{}
+\date{P11 audit closure: 4 October 2026}
+\begin{document}
+\maketitle
+\begingroup\small
+\noindent\textbf{Current mathematical status: P01--P04 are VERIFIED / AUDITED;
+P05 v1.1 is VERIFIED / AUDITED AFTER MINOR REVISION; P08 v1.1 is VERIFIED / AUDITED AFTER MINOR REVISION;
+P07 v1.1 is VERIFIED / AUDITED; P09 v1.1 is VERIFIED / AUDITED; P10 v1.1 is VERIFIED / AUDITED; P11 v1.1 is VERIFIED / AUDITED; P06 and P12--P18 are TODO.} The independent audit
+\path{audits/A01_wellposedness_and_absorbing_box.tex} records CORE VERIFIED
+and EXTENDED MINOR REVISION. Its sole required correction, E01, is applied:
+the archived radius is described as the larger real root and as nonnegative.
+The extended verdict is now VERIFIED AFTER MINOR REVISION. No formula,
+assumption, inequality, conclusion, or proof is changed. All remaining P01
+body text, including its historical DRAFT-status sentence, is preserved;
+the current P01 header and project manifest govern status.
+
+\smallskip\noindent P02 v1.1 is VERIFIED / AUDITED after A02's sole required
+correction E01: the boundary-continuity paragraph explicitly names the
+ordered pair $(s_-,s_+)$. A02's original verdicts are CORE MINOR REVISION
+and EXTENDED VERIFIED; closure is CORE VERIFIED AFTER MINOR REVISION,
+EXTENDED VERIFIED. The registered audit source is
+\path{audits/A02_synchronous_subspace_and_equilibria.tex}. Its original
+source has now been located in the companion audit package and restored
+unchanged, with its matching PDF reading copy under the same basename.
+No theorem, proof, displayed formula, table, count, or assumption changed.
+Historical DRAFT wording in the P02 body is preserved; its header and the
+manifest govern current status. Compilation is not mathematical verification.
+
+\smallskip\noindent P03 v1.1 is VERIFIED / AUDITED after A03, which verifies
+the exact P03 v1.0 with no required mathematical or wording correction.
+The audit source is \path{audits/A03_origin_and_linearization.tex}.
+Closure changes only
+comment metadata; every byte of the mathematical body is preserved.
+Historical DRAFT/audit-pending wording in that body is retained; the current
+header and manifest govern status. The manifest records the original audited
+hash and the current verified hash. A03 and its supplied support records are
+included unchanged. Compilation is not mathematical verification.
+
+\smallskip\noindent P04 v1.1 is VERIFIED / AUDITED after A04, whose
+mathematical verdict on exact P04 v1.0 is VERIFIED with no required
+mathematical or wording correction. The audit source is
+\path{audits/A04_arbitrary_nq_fourier_spectrum.tex}. Closure changes
+comment metadata only; the entire P04 body is byte-identical. Its historical
+DRAFT/audit-pending prose is preserved; the current header and manifest
+govern status and record both version hashes. A04 and its support records
+are included unchanged. The original P04 validation companion was
+unavailable to the independent auditor, so its historical numerical-check
+statistics were not independently reproduced (A04 U01). This reproducibility
+note is nonblocking; A04's mathematical verdict remains VERIFIED.
+P04 remains supporting known machinery.
+
+\smallskip\noindent P05 v1.1 is VERIFIED / AUDITED AFTER MINOR REVISION.
+The immutable audit \path{audits/A05_q2_mode_selection.tex} records the
+original verdicts CORE MINOR REVISION, REALIZABILITY VERIFIED and OVERALL
+MINOR REVISION for exact P05 v1.0. Its sole required correction E01 is
+applied verbatim: mode zero belongs to the candidate Fourier labels over
+which the maximum is taken, not necessarily to the selected set. All other
+P05 body bytes, including historical DRAFT/audit-pending prose, are preserved;
+its current header and manifest govern status and record the original and
+corrected hashes. No formula, theorem or proof is revised. A05 and its
+supplied support records are unchanged. A05 U01 records that the original
+validation companion was unavailable to the auditor; this nonblocking
+historical provenance note remains, and no checker is rerun for closure.
+At that closure P08 was cleared to begin. A05 supplies P05's independent
+audit; compilation is not mathematical verification.
+
+\smallskip\noindent\textbf{P08 v1.1 is VERIFIED / AUDITED AFTER MINOR REVISION.}
+The immutable audit \path{audits/A08_matched_bilinear_analysis.tex}
+verifies the MB foundation, MB spectrum, and parity/obstruction results
+for exact P08 v1.0. Its same-tuple comparison and overall verdicts are
+MINOR REVISION. The sole required issue E01 is closed verbatim:
+the universal witness selects MB representative $1$ for $n=5,6,7$
+and representative $2$ for $n=8$, corresponding to labels $\{2,6\}$.
+All theorem statements, proofs, witness tuples, equilibrium amplitudes,
+dispersion formulas and all-$n$ conclusions are unchanged. Other P08
+body bytes, including historical DRAFT/audit-pending prose, are retained;
+the current header and manifest govern status and record both hashes.
+A08 and all its supplied support files are preserved unchanged.
+
+\smallskip\noindent A08 located, authenticated and exactly reproduced
+the original P08 validation summaries and results. No validation checker
+is rerun for this closure. Earlier A04/A05 provenance notes are unchanged.
+At the P08 closure, P07 was cleared to begin. A08 supplies P08's independent
+audit; its historical closure records remain unchanged.
+
+\smallskip\noindent\textbf{P07 v1.1 is VERIFIED / AUDITED.}
+A07 verifies exact P07 v1.0 in all five layers: Fourier and trigonometry,
+ordering and selection, frequency and coincidence, stability and critical
+modes, and scope and dependencies. Its overall verdict is VERIFIED, with no required
+mathematical or wording correction. Closure changes header metadata only;
+every mathematical-body byte, including historical DRAFT/audit-pending
+wording, is preserved. The current header and manifest govern status and
+record both full-file hashes and the unchanged mathematical-body hash.
+The immutable source is \path{audits/A07_five_node_specialization.tex};
+it and all supplied support files are retained unchanged.
+
+\smallskip\noindent A07 authenticated and reproduced the original P07
+validation: 161 exact checks, 108 numerical cases, and byte-identical
+summary and result files. No historical validation suite is rerun for
+this closure. Validation and compilation are corroboration, not proof;
+A07 supplies the independent mathematical verification. The direct edge
+remains P05 to P07, with P03/P04 and P01/P02 inherited; no P08 theorem
+dependency is introduced. Frozen scope and novelty documents are unchanged.
+At the P07 closure, P09 was cleared to begin.
+
+\smallskip\noindent\textbf{P09 v1.1 is VERIFIED / AUDITED.}
+The audit \path{audits/A09_transcritical_bifurcation.tex}
+verifies exact P09 v1.0 in all six layers: critical spectrum and reduction,
+generic transcritical bifurcation, stability and physical branches, generic
+critical dynamics, degenerate critical stability, and codimension and scope.
+Its overall verdict is VERIFIED, with no mathematical or wording correction.
+Closure changes header metadata only; every byte of the audited mathematical
+body is retained, including historical DRAFT/audit-pending prose. The current
+header and manifest govern status and record both full-file hashes and the
+unchanged mathematical-body hash. A09 and all its support are unchanged.
+
+\smallskip\noindent A09 authenticated and reproduced the original P09
+validation: 1,260 exact checks, 2,700 matrix cases and 12 slope checks,
+with byte-identical result and summary files. These saved records are
+preserved; no historical checker is rerun for closure. A09 independently
+reconstructed the mathematics. Validation and compilation remain
+corroboration, not proof. The theorem inputs remain P02--P04 with P01
+inherited; no P05, P07 or P08 theorem dependency is introduced.
+Prior proofs, audits and frozen documents are unchanged.
+At that closure P10 was cleared to begin.
+
+\smallskip\noindent\textbf{P10 v1.1 is VERIFIED / AUDITED.}
+A10 verifies exact P10 v1.0 in all six layers and overall, without corrections.
+Metadata-only closure preserves the entire mathematical body; its current
+header and manifest govern status. A10 and its support are immutable.
+Basin conclusions remain local except on the synchronous ray. A10
+inventoried the developer validation but did not rerun it; its own
+computations corroborate its analytical verification. P10 inputs remain
+P02--P04/P09, with P01 inherited.
+
+\smallskip\noindent\textbf{P11 v1.1 is VERIFIED / AUDITED.}
+A11 verifies exact v1.0 in all six layers and overall, without corrections.
+Metadata-only closure preserves the audited body, including historical DRAFT
+text; its header and manifest govern status. Developer validation was
+inventoried, not rerun. Planning acceptance is recorded separately.
+H10--H12 remain unproved. \textbf{P12 is cleared but not begun.}
+P06 and P12--P18 remain TODO.
+Earlier contract and planning fragments retain historical status wording.
+The literature phase is frozen. The immutable blueprint is archived
+separately and is not included in this document.
+\endgroup
+\clearpage
+\tableofcontents
+\clearpage
+\input{00_canonical_model.tex}
+\input{01_notation_and_assumptions.tex}
+\input{02_theorem_dependency_map.tex}
+\input{03_literature_audit_template.tex}
+\clearpage
+\input{proofs/P01_wellposedness_and_absorbing_box.tex}
+\clearpage
+\input{proofs/P02_synchronous_subspace_and_equilibria.tex}
+\clearpage
+\input{proofs/P03_origin_and_linearization.tex}
+\clearpage
+\input{proofs/P04_arbitrary_nq_fourier_spectrum.tex}
+\clearpage
+\input{proofs/P05_q2_mode_selection.tex}
+\clearpage
+\input{proofs/P06_large_n_limit.tex}
+\clearpage
+\input{proofs/P07_five_node_specialization.tex}
+\clearpage
+\input{proofs/P08_matched_bilinear_analysis.tex}
+\clearpage
+\input{proofs/P09_transcritical_bifurcation.tex}
+\clearpage
+\input{proofs/P10_saddle_node_and_bistability.tex}
+\clearpage
+\input{proofs/P11_hopf_spectral_conditions.tex}
+\clearpage
+\input{proofs/P12_hopf_transversality.tex}
+\clearpage
+\input{proofs/P13_first_lyapunov_coefficient.tex}
+\clearpage
+\input{proofs/P14_rotating_waves.tex}
+\clearpage
+\input{proofs/P15_heterogeneous_equilibrium_persistence.tex}
+\clearpage
+\input{proofs/P16_static_sensitivity_and_green_function.tex}
+\clearpage
+\input{proofs/P17_transient_and_harmonic_response.tex}
+\clearpage
+\input{proofs/P18_stability_radius_and_hopf_shift.tex}
+\clearpage
+\appendix
+\input{numerics/N01_validation_protocol.tex}
+\input{numerics/N02_continuation_plan.tex}
+\input{numerics/N03_figure_plan.tex}
+\input{audits/audit_template.tex}
+\end{document}

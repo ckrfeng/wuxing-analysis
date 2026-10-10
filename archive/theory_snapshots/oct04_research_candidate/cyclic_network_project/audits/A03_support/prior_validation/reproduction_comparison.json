@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checker_hash_matches": true,
+  "source_hashes_match": true,
+  "exact_results_identical": true,
+  "floating_results_identical": true,
+  "original_software": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "python_executable": "/Users/carterfeng/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "sympy": "not required; original validation environment had no SymPy installed"
+  },
+  "rerun_software": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "python_executable": "/Users/carterfeng/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "sympy": "not required; original validation environment had no SymPy installed"
+  },
+  "report_sha256": "3555faa59588225adb8d021ef2a27bb4ed03ba70d629daf1c1dfd288de7f526a",
+  "summary_sha256": "911df562254b8e050bb86ded6848af56c46ece43fe403a6aca3031708d905b68"
+}

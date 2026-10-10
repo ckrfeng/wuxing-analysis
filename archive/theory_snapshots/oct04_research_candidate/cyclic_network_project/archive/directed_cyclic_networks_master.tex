@@ -1,0 +1,2653 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% ============================================================================
+% Master working manuscript assembled from:
+%   (i) the author-originated drafts main2-2.tex and chineseOrgans-2.tex,
+%  (ii) the generated draft material supplied in the two pasted-text files,
+% (iii) the paper-writing guide and example papers supplied by the author, and
+%  (iv) the research structure, mathematical cautions, and work plan developed
+%       in the accompanying discussion.
+%
+% IMPORTANT STATUS NOTE:
+% This is a research-compilation document, not a submission-ready manuscript.
+% Statements whose proofs or computations have not been independently checked
+% are explicitly followed by % TODO: comments.  Generated draft material is
+% retained only as research material and must be independently verified.
+% ============================================================================
+
+\documentclass[11pt, reqno]{amsart}
+
+%==============================================================================
+% Packages
+%==============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+% Additional packages needed by the compiled source material.
+\usepackage[scheme=plain]{ctex}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+
+% Hyperref setup for clean, clickable blue links (mimicking the Anthropic paper)
+\hypersetup{
+colorlinks=true,
+linkcolor=NavyBlue,
+citecolor=NavyBlue,
+urlcolor=NavyBlue
+}
+
+\allowdisplaybreaks
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+%==============================================================================
+% Theorem Environments
+%==============================================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+%==============================================================================
+% Custom Macros
+%==============================================================================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\DM}{\mathrm{DM}}
+\newcommand{\MB}{\mathrm{MB}}
+\newcommand{\LB}{\mathrm{LB}}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\Imm}{\operatorname{Im}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dd}{\,\mathrm{d}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Visible status marker for the working draft.  Formal submission versions
+% should remove every use of this macro.
+\newcommand{\statusnote}[1]{%
+  \par\smallskip\noindent
+  \textcolor{BrickRed}{\textbf{Working-draft status.} #1}%
+  \par\smallskip
+}
+
+%==============================================================================
+% Document Metadata
+%==============================================================================
+\title[Directed Cyclic Networks]{Synchrony, Wave Selection, and Robustness in Directed Cyclic Networks with Demand-Modulated Coupling\\[0.4em]
+\textnormal{\large Master Working Manuscript and Research Blueprint}}
+
+\author{Carter Feng}
+
+%==============================================================================
+% Document Body
+%==============================================================================
+\begin{document}
+
+\begin{abstract}
+Directed cyclic networks provide a tractable setting in which to study the
+existence, stability, bifurcation, and robustness of synchronous states.  This
+master document consolidates the author's original five-node models motivated
+by the Wu-Xing diagram, the subsequent proposal to generalize the model to an
+arbitrary number of nodes, the planned comparison with bilinear interaction
+laws, and the proposed analyses of mode selection, Hopf bifurcation,
+heterogeneity, and perturbation propagation.  Formulas and arguments already
+recorded in the source drafts are typeset here, while all incomplete proofs,
+derivations, computations, and literature checks are marked explicitly by
+\texttt{TODO} comments in the source.  The intended final paper asks how
+network size, interaction range, and nonlinear coupling law jointly determine
+synchrony, wave selection, rotating waves, and sensitivity in directed cyclic
+networks, with the five-node Wu-Xing-inspired network serving as the principal
+application.
+\end{abstract}
+
+\maketitle
+
+\keywords{cyclic networks, synchrony, circulant matrices, Fourier modes,
+mode selection, Hopf bifurcation, rotating waves, heterogeneity, sensitivity,
+Wu-Xing}
+
+\subjclass[2020]{34C23, 34C15, 34D20, 37C80, 37G15, 92B25}
+
+\tableofcontents
+\newpage
+
+%==============================================================================
+\section*{Document Status and Provenance}
+%==============================================================================
+
+This document is intentionally broader than a submission-ready paper.  It is a
+single formal repository for the mathematical model, the proposed theorem
+package, the incomplete calculations, the numerical plan, the writing plan,
+and the tangential ideas developed during the project.  The two files
+\texttt{main2-2.tex} and \texttt{chineseOrgans-2.tex} are treated as the
+author-originated research drafts.  The two pasted-text files contain generated
+draft material and are retained only as a source of candidate organization,
+formulae, and research questions.  No generated theorem or numerical claim is
+to be treated as established until it has been independently rederived and
+reproduced.
+
+Throughout the manuscript, a \emph{synchronous state} is a mathematical state
+in which all normalized node variables are equal.  Any interpretation of this
+state as physiological balance is a modeling assumption rather than a clinical
+claim.  The arbitrary-$n$ theory is a general network-dynamics problem; it is
+not itself asserted to be a model of Traditional Chinese Medicine.
+
+%==============================================================================
+\section{Introduction}
+\label{sec:introduction}
+%==============================================================================
+
+\subsection{Broad mathematical context}
+
+Networks of interacting dynamical components may support equilibria in which
+all components evolve identically, spatially patterned equilibria, traveling or
+rotating waves, quasiperiodic motion, and chaos.  In a homogeneous cyclic
+network, the cyclic symmetry organizes perturbations into discrete Fourier
+modes.  The topology determines which spatial modes are available, while the
+nonlinear interaction law determines their growth rates, the location of
+stability boundaries, and the nonlinear states that emerge when synchrony is
+lost.
+
+The present project studies a family of directed cyclic ordinary differential
+equations.  The original motivation is a five-node network with two directed
+cycles: a nearest-neighbor generating cycle and a step-two controlling cycle.
+The principal mathematical questions are whether trajectories remain in a
+physically admissible region, when positive synchronous equilibria exist, which
+Fourier mode loses stability first, what bifurcation occurs at the stability
+boundary, and how the conclusions change when the nodes are not exactly
+identical.
+
+\subsection{The motivating five-node network}
+
+The five-element or Wu-Xing diagram places five functional systems on a cycle
+of generation, called Sheng (生), together with a pentagram of control, called
+Ke (克).  In the original drafts, the five state variables were associated with
+Wood/Liver, Fire/Heart, Earth/Spleen, Metal/Lung, and Water/Kidney.  The
+resulting graph is mathematically a directed five-cycle together with a second
+directed cycle of step length two.
+
+The terminology from Traditional Chinese Medicine supplies a motivating
+interpretation for several local interactions: nourishment from a mother to a
+child, ordinary restraint from a controller to a target, over-acting, and
+rebellious counter-action.  The mathematical paper, however, treats these as
+idealized interaction rules between normalized functional components.  It does
+not claim that the state variables are direct measurements of anatomical
+organs, nor does it establish medical efficacy.
+
+\subsection{Existing modeling approaches}
+
+The source drafts distinguish discrete and continuous models.  Discrete models
+represent each component by finitely many states, such as ON/OFF or
+excess/normal/deficiency.  Continuous models assign each component a
+real-valued activity and use ordinary differential equations.  Much of the
+continuous literature described in the drafts uses bilinear, Lotka--Volterra,
+or mass-action interaction terms of the form $x_i x_j$.
+
+The project began from the observation that a bilinear positive input
+$c x_i x_{i-1}$ vanishes when the receiving component $x_i$ is depleted.  The
+author's alternative term
+\[
+    \frac{c x_{i-1}}{1+x_i}
+\]
+was intended to encode stronger demand when the receiving component is small.
+For precision, the present document calls this a \emph{demand-modulated} or
+\emph{receiver-modulated} input.  It is not a standard source-saturating
+Holling type-II response, because it remains linear in the source variable
+$x_{i-1}$.
+
+Related work will ultimately be integrated into this Introduction and the
+Discussion rather than placed in a separate ``Related Work'' section.  The
+literature review must cover cyclic feedback systems, circulant matrices,
+equivariant bifurcation, rotating waves, nearly identical networks,
+heterogeneity, network Green functions, and the existing Wu-Xing models.
+
+% TODO: Complete and verify the literature review.  For every cited Wu-Xing
+% model, record the exact equations, indexing convention, parameter source,
+% analytical results, numerical results, and limitations.
+
+\subsection{Central research questions}
+
+The intended paper is organized around the following questions.
+
+\begin{enumerate}[label=\textup{Q\arabic*.},leftmargin=3em]
+    \item For which parameter values does the demand-modulated cyclic network
+    preserve nonnegativity and boundedness?
+
+    \item When does a positive synchronous equilibrium exist, and how many
+    synchronous equilibria can occur?
+
+    \item For arbitrary network size $n$ and interaction step $q$, what is the
+    exact Fourier spectrum of the linearization at synchrony?
+
+    \item In the important step-two case $q=2$, which discrete wave number is
+    selected as the least stable or first unstable mode?
+
+    \item How do these conclusions compare with a topology-matched bilinear
+    model and with the six-term bilinear model used in prior work?
+
+    \item Which codimension-one bifurcations occur at the origin, at the fold
+    of synchronous equilibria, and at a symmetry-breaking stability boundary?
+
+    \item When a complex Fourier pair crosses the imaginary axis, is the Hopf
+    bifurcation supercritical or subcritical, and does it produce stable
+    rotating waves?
+
+    \item How do small node-to-node parameter differences shift the
+    equilibrium, stability boundary, Hopf threshold, and spatial response to a
+    localized perturbation?
+\end{enumerate}
+
+\subsection{Proposed main message}
+
+The proposed single message of the final paper is:
+
+\begin{quote}
+\emph{The cyclic architecture determines the available spatial modes, while
+the nonlinear interaction law determines their stability; the same Fourier
+structure organizes wave selection, Hopf-generated rotating waves, and the
+response to heterogeneity and localized disturbances.}
+\end{quote}
+
+\subsection{Planned contribution package}
+
+The strongest unified version of the paper combines five directions that were
+originally considered separately:
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item exact comparison of demand-modulated and bilinear interaction laws;
+    \item complete steady-state and Hopf bifurcation analysis;
+    \item persistence and robustness under small heterogeneity;
+    \item an arbitrary-$n$ Fourier and mode-selection theorem; and
+    \item equilibrium sensitivity and localized perturbation propagation.
+\end{enumerate}
+
+These contributions are intended to form one paper rather than five unrelated
+extensions.  The arbitrary-$n$ theory provides the organizing framework, and
+the five-node network supplies the detailed application.
+
+\subsection{Organization of the master document}
+
+Section~\ref{sec:preliminaries} introduces the normalized state variables, the
+cyclic indexing, and the five-node interpretation.  Section~\ref{sec:model}
+records the demand-modulated model, the matched bilinear model, the published
+six-term comparator, and the heterogeneous extension.  The proposed theorem
+package is organized in Sections~\ref{sec:global}--\ref{sec:heterogeneity}.
+Section~\ref{sec:numerics} specifies the numerical and reproducibility plan.
+Section~\ref{sec:planned-results} gives the intended results and figure order.
+The appendices preserve the original motif models, the pathology extensions,
+the notes on prior Lyapunov calculations, the claim audit, the complete work
+plan, and the writing and publication strategy.
+
+%==============================================================================
+\section{Mathematical and Interpretive Preliminaries}
+\label{sec:preliminaries}
+%==============================================================================
+
+\subsection{State variables and normalization}
+
+For a network with $n$ nodes, let
+\[
+    x_i=x_i(t)\ge 0, \qquad i\in\Z_n,
+\]
+denote the dimensionless normalized activity of node $i$.  The normalization is
+intended to place the components on a common reference scale.  Equality of the
+normalized variables therefore means equal activity relative to the chosen
+reference levels; it does not mean that distinct physiological systems possess
+the same physical quantity.
+
+The appearance of $1+x_i$ in the demand-modulated denominators presupposes that
+$x_i$ has been nondimensionalized by a characteristic activity or demand
+threshold.  A dimensional derivation should introduce an activity scale $X_0$
+and a time scale $T_0$, set $x_i=X_i/X_0$, and derive the dimensionless
+parameters.
+
+% TODO: Write the complete dimensional model and nondimensionalization.  State
+% the physical dimensions of every dimensional coefficient before scaling.
+
+Let
+\[
+    \one=(1,\ldots,1)^{\mathsf T}\in\R^n.
+\]
+A state $x=x^*\one$ is called \emph{synchronous}.  In the five-node application,
+a positive synchronous equilibrium is interpreted cautiously as a normalized
+balanced state.
+
+\subsection{Cyclic shifts and Fourier modes}
+
+Let $P:\R^n\to\R^n$ denote the predecessor shift
+\[
+    (Px)_i=x_{i-1},
+\]
+with all indices interpreted modulo $n$.  The discrete Fourier modes are
+\[
+    v^{(m)}_j=e^{i\theta_m j},
+    \qquad
+    \theta_m=\frac{2\pi m}{n},
+    \qquad
+    m=0,\ldots,n-1.
+\]
+They satisfy
+\[
+    Pv^{(m)}=e^{-i\theta_m}v^{(m)}.
+\]
+The mode $m=0$ is the synchronous mode.  The nonzero modes are
+symmetry-breaking modes.  Complex-conjugate modes occur in pairs
+$m$ and $n-m$.
+
+\subsection{The five-node index assignment}
+
+For the motivating network, the indexing from the source drafts is
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Index & Element & Functional-system label from the source drafts \\
+\midrule
+$x_1$ & Wood (木)  & Liver (肝) \\
+$x_2$ & Fire (火)  & Heart (心) \\
+$x_3$ & Earth (土) & Spleen (脾) \\
+$x_4$ & Metal (金) & Lung (肺) \\
+$x_5$ & Water (水) & Kidney (肾) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The generating cycle is
+\[
+    x_1\longrightarrow x_2\longrightarrow x_3\longrightarrow x_4
+    \longrightarrow x_5\longrightarrow x_1,
+\]
+and the controlling cycle is
+\[
+    x_1\dashv x_3\dashv x_5\dashv x_2\dashv x_4\dashv x_1.
+\]
+Writing $\sigma(i)$ for the generating predecessor or mother,
+$\kappa(i)$ for the control target, and $\rho(i)$ for the controller,
+\begin{equation}
+\label{eq:five-maps}
+    \sigma(i)=i-1,
+    \qquad
+    \sigma^{-1}(i)=i+1,
+    \qquad
+    \kappa(i)=i+2,
+    \qquad
+    \rho(i)=i-2.
+\end{equation}
+
+\subsection{General step-$q$ cyclic architecture}
+
+For arbitrary $n$, the five-node maps are generalized by
+\[
+    \sigma(i)=i-1,
+    \qquad
+    \kappa_q(i)=i+q,
+    \qquad
+    \rho_q(i)=i-q.
+\]
+The case $q=2$ recovers the original control step.  If $\gcd(n,q)=1$, the
+step-$q$ edges form one directed cycle.  If $\gcd(n,q)>1$, they decompose into
+several cycles.  The Fourier calculations remain meaningful in either case,
+but the graph interpretation must record the decomposition.
+
+\subsection{Classical relations retained as modeling motivation}
+
+The original drafts list the following generating and controlling relations.
+They are included here as modeling motivation; their precise classical sources,
+translations, and scope require verification.
+
+\paragraph{Generating relations.}
+\begin{enumerate}[label=\arabic*.,leftmargin=2.5em]
+    \item The mother nourishes the child, and the child draws upon the mother.
+    \item Deficiency in the mother leads to deficiency in the child
+    (母病及子).
+    \item Excess in the mother leads to excess in the child.
+    \item Excess activity in the child leads to overdraw from the mother
+    (子盗母气).
+    \item Sustained weakness in the child eventually weakens the mother.
+\end{enumerate}
+
+\paragraph{Controlling relations.}
+\begin{enumerate}[label=\arabic*.,leftmargin=2.5em,start=6]
+    \item Ordinary restraint: the controller suppresses its target.
+    \item Over-acting (相乘, described in the drafts as 贼邪): an excessive
+    controller or deficient target produces marked weakening of the target.
+    \item Rebellious counter-acting (相侮, described as 微邪): an excessive
+    target or deficient controller weakens the controller in the reverse
+    direction.
+\end{enumerate}
+
+The original motif draft also records the treatment principles
+\[
+    \text{实则泻其子},
+    \qquad
+    \text{虚则补其母},
+    \qquad
+    \text{母能令子虚},
+    \qquad
+    \text{子能令母实}.
+\]
+
+% TODO: For every Chinese phrase, identify the exact primary or scholarly
+% source, edition, page or chapter, Chinese wording, and a conservative English
+% translation.  Distinguish classical statements from later interpretations.
+
+\subsection{Core modeling assumptions}
+
+The principal model begins from the following assumptions.
+
+\begin{enumerate}[label=(A\arabic*),leftmargin=3em]
+    \item Each state variable is a nonnegative normalized activity.
+    \item In the homogeneous system, all nodes obey the same intrinsic law.
+    \item The wiring is invariant under cyclic relabeling.
+    \item The predecessor input increases with predecessor activity.
+    \item The predecessor input is enhanced when the receiving node is
+    depleted.
+    \item Direct restraint requires both the restrained node and its controller
+    to be active.
+    \item Delays, stochastic forcing, intervention, and heterogeneity are
+    omitted in the base model and introduced only in later extensions.
+\end{enumerate}
+
+%==============================================================================
+\section{Model and Analytical Framework}
+\label{sec:model}
+%==============================================================================
+
+\subsection{The original five-node demand-modulated model}
+
+The coherent five-node model selected from the original drafts is
+\begin{equation}
+\label{eq:five-demand}
+\dot{x}_i
+=
+\underbrace{a x_i-kx_i^2}_{\text{logistic self-regulation}}
++
+\underbrace{\frac{c x_{\sigma(i)}}{1+x_i}}_{\text{demand-modulated predecessor input}}
+-
+\underbrace{\frac{g x_i}{1+x_{\kappa(i)}}}_{\text{target-dependent cost}}
+-
+\underbrace{h x_i x_{\rho(i)}}_{\text{controller-mediated restraint}},
+\qquad i\in\Z_5,
+\end{equation}
+where $a,k,c,g,h>0$.
+
+The baseline values appearing in the source drafts are
+\begin{equation}
+\label{eq:baseline-parameters}
+    a=2,
+    \qquad
+    k=0.5,
+    \qquad
+    c=1,
+    \qquad
+    g=0.5,
+    \qquad
+    h=0.3.
+\end{equation}
+
+\begin{center}
+\begin{tabular}{c p{9.2cm} c}
+\toprule
+Parameter & Working interpretation & Baseline \\
+\midrule
+$a$ & intrinsic self-production rate & $2.0$ \\
+$k$ & self-limitation coefficient; uncoupled carrying capacity $a/k$ & $0.5$ \\
+$c$ & strength of predecessor input & $1.0$ \\
+$g$ & strength of the target-dependent cost & $0.5$ \\
+$h$ & strength of direct controller-mediated restraint & $0.3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[Terminology]
+Earlier generated drafts called both rational interaction terms ``saturating''
+and identified them with Holling type-II responses.  The positive input in
+\eqref{eq:five-demand} is not source-saturating, because it is linear in
+$x_{\sigma(i)}$.  The present document therefore uses the more precise term
+\emph{demand-modulated}.
+\end{remark}
+
+\subsection{The arbitrary-$n$, step-$q$ demand-modulated model}
+
+The proposed generalization is
+\begin{equation}
+\label{eq:DMnq}
+\boxed{
+\dot x_i
+=
+ a x_i-kx_i^2
+ +\frac{c x_{i-1}}{1+x_i}
+ -\frac{g x_i}{1+x_{i+q}}
+ -h x_i x_{i-q},
+ \qquad i\in\Z_n.
+}
+\tag{$\DM_{n,q}$}
+\end{equation}
+The original five-node model is $\DM_{5,2}$.
+
+The intended main theorem package treats general $n$ and $q$ where feasible,
+then derives sharper mode-selection results for $q=2$.  The detailed numerical
+application focuses on $n=5$ and $q=2$.
+
+\subsection{A topology-matched bilinear comparator}
+
+To isolate the effect of functional form without changing the graph or the
+number of coefficients, the proposed matched bilinear analogue is
+\begin{equation}
+\label{eq:MBnq}
+\boxed{
+\dot y_i
+=
+ a y_i-k y_i^2
+ +c y_i y_{i-1}
+ -g y_i y_{i+q}
+ -h y_i y_{i-q},
+ \qquad i\in\Z_n.
+}
+\tag{$\MB_{n,q}$}
+\end{equation}
+This comparator is preferred for the main theoretical comparison because it
+uses the same topology and the same number of parameters as
+\eqref{eq:DMnq}.
+
+\subsection{The six-term bilinear model from the prior literature}
+
+The symmetric five-node model reproduced in the generated draft has the form
+\begin{equation}
+\label{eq:LB-five}
+\dot y_i
+=
+ a y_i-b y_i^2
+ +c y_i y_{i-1}
+ -d y_i y_{i-2}
+ -g_{\mathrm c} y_i y_{i+1}
+ -h y_i y_{i+2},
+ \qquad i\in\Z_5.
+\end{equation}
+Its proposed arbitrary-$n$, step-$q$ extension is
+\begin{equation}
+\label{eq:LBnq}
+\dot y_i
+=
+ a y_i-b y_i^2
+ +c y_i y_{i-1}
+ -d y_i y_{i-q}
+ -g_{\mathrm c} y_i y_{i+1}
+ -h y_i y_{i+q},
+ \qquad i\in\Z_n.
+\tag{$\LB_{n,q}$}
+\end{equation}
+The six coefficients were described in the source drafts as gain,
+saturation/self-limitation, is-generated, is-restricted, cost of generating the
+child, and cost of restricting the target.
+
+% TODO: Verify the exact equation, notation, and bibliographic metadata against
+% the original Lin--Han publication rather than relying on the generated draft.
+
+\subsection{Heterogeneous demand-modulated network}
+
+The nodewise heterogeneous extension is
+\begin{equation}
+\label{eq:heterogeneous}
+\dot x_i
+=
+ a_i x_i-k_i x_i^2
+ +\frac{c_i x_{i-1}}{1+x_i}
+ -\frac{g_i x_i}{1+x_{i+q}}
+ -h_i x_i x_{i-q}.
+\end{equation}
+For perturbative analysis, write
+\begin{equation}
+\label{eq:hetero-expansion}
+\begin{aligned}
+    a_i&=a+\eps\alpha_i,
+    &k_i&=k+\eps\kappa_i,
+    &c_i&=c+\eps\chi_i,\\
+    g_i&=g+\eps\gamma_i,
+    &h_i&=h+\eps\eta_i.
+\end{aligned}
+\end{equation}
+The paper must state clearly whether a coefficient is assigned to the receiving
+node, the sending node, or the edge.  Equation~\eqref{eq:heterogeneous} adopts a
+receiving-equation convention.
+
+\subsection{Optional source-saturating variant}
+
+A genuinely source-saturating and demand-modulated positive input would have
+the form
+\begin{equation}
+\label{eq:true-saturation-candidate}
+    c\,
+    \frac{x_{i-1}}{K_{\mathrm s}+x_{i-1}}
+    \frac{K_{\mathrm d}}{K_{\mathrm d}+x_i}.
+\end{equation}
+This expression is retained only as an optional future variant.  It is not part
+of the frozen base model because adopting it would require redoing every
+equilibrium, Jacobian, bifurcation, and sensitivity calculation.
+
+% TODO: Decide permanently whether the submitted paper studies
+% \eqref{eq:DMnq} or the true source-saturating variant.  Do not mix the two.
+
+%==============================================================================
+\section{Results I: Positivity, Boundedness, and Synchronous Equilibria}
+\label{sec:global}
+%==============================================================================
+
+\subsection{Local existence and uniqueness}
+
+\begin{proposition}[Planned local well-posedness statement]
+For every initial condition in a neighborhood of the nonnegative orthant,
+system~\eqref{eq:DMnq} has a unique local solution.  The vector field is smooth
+on the region where $1+x_i>0$ and $1+x_{i+q}>0$ for every $i$.
+\end{proposition}
+
+% TODO: Supply the standard local-existence proof and state the maximal interval
+% of existence precisely.
+
+\subsection{Forward invariance and an absorbing box}
+
+\begin{proposition}[Invariant nonnegative region and global bound]
+\label{prop:absorbing-box}
+For $a,k,c,g,h>0$, the nonnegative orthant is forward invariant under
+\eqref{eq:DMnq}.  Moreover, the box
+\[
+    [0,X_{\max}]^n,
+    \qquad
+    X_{\max}=\frac{a+\sqrt{a^2+4kc}}{2k},
+\]
+is forward invariant and globally attracting.  Consequently, every
+nonnegative solution exists for all $t\ge0$.
+\end{proposition}
+
+\paragraph{Existing proof outline from the drafts.}
+At a boundary point with $x_i=0$, all terms in $\dot x_i$ vanish except the
+nonnegative predecessor input, so
+\[
+    \dot x_i=cx_{i-1}\ge0.
+\]
+For
+\[
+    X(t)=\max_i x_i(t),
+\]
+a maximizing coordinate satisfies the comparison estimate
+\[
+    D^+X(t)\le aX-kX^2+c,
+\]
+where $D^+$ denotes the upper Dini derivative.  The right-hand side is negative
+whenever $X>X_{\max}$.
+
+% TODO: Write the complete proof using the upper Dini derivative, including the
+% case of a nonunique maximizing index and the comparison argument establishing
+% global existence and attraction of the box.
+
+\subsection{The synchronous subspace}
+
+The synchronous subspace
+\[
+    \mathcal S=\{x\in\R^n:x_1=\cdots=x_n\}
+\]
+is flow invariant for the homogeneous system.  Setting $x_i=x$ in
+\eqref{eq:DMnq} gives
+\begin{equation}
+\label{eq:synchronous-scalar}
+\dot x
+=
+ a x-(k+h)x^2+\frac{(c-g)x}{1+x}
+=
+\frac{x}{1+x}
+\left[
+(a+c-g)+(a-k-h)x-(k+h)x^2
+\right].
+\end{equation}
+
+Define
+\begin{equation}
+\label{eq:A-mu}
+    A=k+h,
+    \qquad
+    \mu=a+c-g.
+\end{equation}
+A positive synchronous equilibrium $x^*>0$ satisfies
+\begin{equation}
+\label{eq:synchronous-quadratic}
+    A(x^*)^2+(A-a)x^*-\mu=0.
+\end{equation}
+The formal roots are
+\begin{equation}
+\label{eq:synchronous-roots}
+    x_{\pm}
+    =
+    \frac{a-A\pm\sqrt{(a-A)^2+4A\mu}}{2A}.
+\end{equation}
+
+\subsection{Complete root classification}
+
+The following classification records the complete case distinction identified
+in the research plan.
+
+\begin{proposition}[Candidate complete synchronous-equilibrium classification]
+\label{prop:sync-classification}
+Let $A=k+h>0$ and $\mu=a+c-g$.
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item If $\mu>0$, equation~\eqref{eq:synchronous-quadratic} has exactly one
+    positive root.
+
+    \item If $\mu=0$, the roots are
+    \[
+        x=0,
+        \qquad
+        x=\frac{a-A}{A},
+    \]
+    and the second root is positive exactly when $a>A$.
+
+    \item If $\mu<0$, there are two distinct positive roots exactly when
+    \[
+        a>A
+    \]
+    and
+    \[
+        a+c<g<
+        a+c+\frac{(a-A)^2}{4A}.
+    \]
+
+    \item The two positive roots coalesce at
+    \begin{equation}
+    \label{eq:fold-location}
+        g=g_{\mathrm f}
+        :=a+c+\frac{(a-A)^2}{4A},
+        \qquad
+        x_{\mathrm f}=\frac{a-A}{2A}.
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+
+% TODO: Supply a concise proof using the signs of the sum and product of the
+% roots and the discriminant.  Check all boundary cases explicitly.
+
+\subsection{The origin}
+
+At $x=0$, the Jacobian of~\eqref{eq:DMnq} is
+\begin{equation}
+\label{eq:origin-jacobian}
+    J(0)=(a-g)I+cP.
+\end{equation}
+Hence the Fourier eigenvalues are
+\begin{equation}
+\label{eq:origin-spectrum}
+    \lambda_m(0)
+    =(a-g)+c e^{-i\theta_m},
+    \qquad m=0,\ldots,n-1.
+\end{equation}
+The spectral abscissa is $a+c-g=\mu$, so the origin is asymptotically stable
+when $\mu<0$ and unstable when $\mu>0$.
+
+% TODO: State and prove the corresponding proposition, including the
+% nonhyperbolic case $\mu=0$.
+
+\subsection{The matched bilinear synchronous state}
+
+For~\eqref{eq:MBnq}, the synchronous scalar equation is
+\[
+    \dot y
+    =a y-(k+g+h-c)y^2.
+\]
+Define
+\begin{equation}
+\label{eq:bilinear-M}
+    M=k+g+h-c.
+\end{equation}
+When $M>0$, the positive synchronous equilibrium is
+\begin{equation}
+\label{eq:bilinear-sync}
+    y^*=\frac{a}{M}.
+\end{equation}
+When $M<0$, the synchronous scalar equation contains a positive quadratic term
+and admits finite-time blow-up for positive initial data.
+
+% TODO: Prove a sufficient global boundedness condition for the full matched
+% bilinear system, for example a condition of the form $k>c$, and distinguish it
+% from the exact behavior on the synchronous subspace.
+
+%==============================================================================
+\section{Results II: Fourier Spectrum and Wave-Number Selection}
+\label{sec:spectrum}
+%==============================================================================
+
+\subsection{Circulant linearization at synchrony}
+
+Let $x^*>0$ be a synchronous equilibrium of~\eqref{eq:DMnq} and set
+\begin{equation}
+\label{eq:linear-coefficients}
+    s=1+x^*,
+    \qquad
+    C_0=\frac{c}{s},
+    \qquad
+    G_0=\frac{g x^*}{s^2},
+    \qquad
+    H_0=h x^*.
+\end{equation}
+The diagonal entry is
+\begin{equation}
+\label{eq:d-diagonal}
+    d
+    =
+    a-2kx^*
+    -\frac{c x^*}{s^2}
+    -\frac{g}{s}
+    -h x^*.
+\end{equation}
+With the shift convention of Section~\ref{sec:preliminaries}, the Jacobian is
+\begin{equation}
+\label{eq:circulant-J}
+    J
+    =
+    dI+C_0P+G_0P^{-q}-H_0P^q.
+\end{equation}
+
+\begin{theorem}[Candidate arbitrary-$n$, step-$q$ spectrum]
+\label{thm:general-spectrum}
+For $m=0,\ldots,n-1$, the Fourier eigenvalues of~\eqref{eq:circulant-J} are
+\begin{equation}
+\label{eq:general-eigenvalue}
+\boxed{
+    \lambda_m
+    =
+    d
+    +C_0e^{-i\theta_m}
+    +G_0e^{iq\theta_m}
+    -H_0e^{-iq\theta_m}.
+}
+\end{equation}
+Consequently,
+\begin{align}
+\label{eq:general-real}
+    \Ree\lambda_m
+    &=
+    d+C_0\cos\theta_m+(G_0-H_0)\cos(q\theta_m),\\
+\label{eq:general-imag}
+    \Imm\lambda_m
+    &=
+    -C_0\sin\theta_m+(G_0+H_0)\sin(q\theta_m).
+\end{align}
+The synchronous equilibrium is locally asymptotically stable if and only if
+\[
+    \max_{0\le m<n}\Ree\lambda_m<0.
+\]
+\end{theorem}
+
+% TODO: Supply the proof by diagonalizing the shift matrix with the unitary
+% discrete Fourier transform.  Verify the sign convention against direct
+% numerical diagonalization for random $n,q$ and parameter values.
+
+\subsection{Normality of the homogeneous linearization}
+
+Every circulant matrix is unitarily diagonalizable.  Therefore the homogeneous
+Jacobian~\eqref{eq:circulant-J} is normal.  If all Fourier modes are stable,
+then
+\begin{equation}
+\label{eq:normal-decay}
+    \|e^{Jt}\|_2
+    =
+    e^{t\max_m\Ree\lambda_m}.
+\end{equation}
+Thus the homogeneous linearization has no nonmodal Euclidean-norm transient
+growth.  Individual coordinates may still exhibit delayed or oscillatory
+responses.
+
+% TODO: Include a short proof and contrast this result with the nonnormal
+% Jacobian that can arise after nodewise heterogeneity breaks circulancy.
+
+\subsection{Quadratic dispersion relation for $q=2$}
+
+For $q=2$, define
+\begin{equation}
+\label{eq:T-coefficient}
+    T_0=G_0-H_0,
+    \qquad
+    u_m=\cos\theta_m.
+\end{equation}
+Using $\cos(2\theta)=2\cos^2\theta-1$, equation~\eqref{eq:general-real}
+becomes
+\begin{equation}
+\label{eq:quadratic-dispersion}
+    r_m:=\Ree\lambda_m
+    =d-T_0+C_0u_m+2T_0u_m^2.
+\end{equation}
+
+\begin{theorem}[Candidate exact mode-selection theorem for $q=2$]
+\label{thm:mode-selection}
+Consider the discrete set
+\[
+    \mathcal U_n
+    =
+    \left\{\cos\frac{2\pi m}{n}:m=0,\ldots,n-1\right\}.
+\]
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item If $T_0\ge0$, the quadratic in
+    \eqref{eq:quadratic-dispersion} is convex, and because $C_0>0$ its maximum
+    over $\mathcal U_n$ occurs at $u=1$, corresponding to the synchronous mode
+    $m=0$.
+
+    \item If $T_0<0$, the quadratic is concave.  Its continuous maximizer is
+    \begin{equation}
+    \label{eq:u-star}
+        u_*
+        =-\frac{C_0}{4T_0}
+        =\frac{C_0}{4(H_0-G_0)}.
+    \end{equation}
+    If $u_*\ge1$, the synchronous mode remains dominant.  If $0<u_*<1$, the
+    dominant Fourier mode is any mode whose cosine value in $\mathcal U_n$ is
+    closest to $u_*$.
+\end{enumerate}
+\end{theorem}
+
+% TODO: Prove the theorem carefully for the discrete cosine set, handle ties,
+% and characterize the parameter hypersurfaces on which two mode pairs have the
+% same real part.
+
+\subsection{Large-$n$ selected wave number}
+
+Away from mode ties, the planned large-$n$ conclusion is
+\begin{equation}
+\label{eq:large-n-mode}
+    \frac{m_*}{n}
+    \longrightarrow
+    \frac{1}{2\pi}\arccos u_*
+    \qquad\text{as }n\to\infty.
+\end{equation}
+The anticipated eigenvalue error from replacing the continuous maximizer by the
+nearest discrete wave number is of order $n^{-2}$ away from degeneracies.
+
+% TODO: State and prove a precise corollary, including the assumptions needed
+% to choose a unique representative from the conjugate pair.
+
+\subsection{Five-node golden-ratio specialization}
+
+For $n=5$ and $q=2$, let
+\[
+    \varphi=\frac{1+\sqrt5}{2}.
+\]
+The three distinct eigenvalue real parts are
+\begin{align}
+\label{eq:five-real-0}
+    \Ree\lambda_0
+    &=d+T_0+C_0,\\
+\label{eq:five-real-1}
+    \Ree\lambda_{1,4}
+    &=d-\frac{\varphi}{2}T_0+\frac{1}{2\varphi}C_0,\\
+\label{eq:five-real-2}
+    \Ree\lambda_{2,3}
+    &=d+\frac{1}{2\varphi}T_0-\frac{\varphi}{2}C_0.
+\end{align}
+The candidate threshold at which the pair $m=1,4$ overtakes the synchronous
+mode is
+\begin{equation}
+\label{eq:five-threshold}
+    H_0-G_0>\frac{C_0}{\varphi^2}.
+\end{equation}
+
+% TODO: Verify and prove the comparison among all three mode classes, not only
+% the comparison between $m=0$ and $m=1,4$.
+
+\subsection{Matched bilinear spectrum}
+
+For the matched bilinear model~\eqref{eq:MBnq}, the positive synchronous state
+$y^*=a/M$ has Fourier eigenvalues with real parts
+\begin{equation}
+\label{eq:matched-bilinear-real}
+    \Ree\lambda_m^{\MB}
+    =
+    y^*
+    \left[
+        -k+c\cos\theta_m-(g+h)\cos(q\theta_m)
+    \right].
+\end{equation}
+In particular,
+\begin{equation}
+\label{eq:matched-bilinear-uniform}
+    \lambda_0^{\MB}=-a<0.
+\end{equation}
+Therefore, whenever the positive matched-bilinear synchronous equilibrium is
+unstable, the instability is symmetry-breaking rather than synchronous.
+
+For $q=2$,
+\begin{equation}
+\label{eq:matched-bilinear-quadratic}
+    \frac{\Ree\lambda_m^{\MB}}{y^*}
+    =
+    -k+(g+h)+c u_m-2(g+h)u_m^2,
+\end{equation}
+whose continuous maximizer is
+\begin{equation}
+\label{eq:bilinear-u-star}
+    u_{\MB,*}=\frac{c}{4(g+h)}.
+\end{equation}
+
+% TODO: Derive the full complex eigenvalue formula, prove the mode-selection
+% rule, and identify all mode-tie boundaries.
+
+\subsection{Six-term bilinear spectrum}
+
+For the six-term model~\eqref{eq:LBnq}, the proposed real-part formula is
+\begin{equation}
+\label{eq:six-term-real}
+    \Ree\lambda_m^{\LB}
+    =
+    y^*
+    \left[
+        -b+(c-g_{\mathrm c})\cos\theta_m-(d+h)\cos(q\theta_m)
+    \right].
+\end{equation}
+
+% TODO: Verify the equilibrium and spectrum directly from the published model.
+% Do not use this formula in the final paper until the original indexing has
+% been checked.
+
+%==============================================================================
+\section{Results III: Comparison of Interaction Laws}
+\label{sec:comparison}
+%==============================================================================
+
+\subsection{Structural comparison}
+
+The principal controlled comparison is between~\eqref{eq:DMnq} and
+\eqref{eq:MBnq}.  They have the same nodes, edge offsets, signs, and number of
+parameters.  They differ only in the functional forms of the predecessor input
+and target-dependent loss.
+
+\begin{center}
+\begin{tabular}{p{4.5cm}p{4.5cm}p{4.5cm}}
+\toprule
+Property & Demand-modulated model & Matched bilinear model \\
+\midrule
+Nonnegative orthant invariant & expected for all positive parameters & expected for all positive parameters \\
+Global boundedness for every positive parameter choice & candidate theorem: yes & no; blow-up occurs on synchrony when $M<0$ \\
+Synchronous-equilibrium equation & quadratic in $x^*$ & $y^*=a/M$ when $M>0$ \\
+Fourier spectrum & explicit & explicit \\
+Critical wave number for $q=2$ & candidate exact rule through $u_*$ & candidate exact rule through $u_{\MB,*}$ \\
+Uniform mode at positive synchrony & branch dependent & always $-a$ \\
+Symmetry-breaking Hopf possible & to be established & possible in selected parameter regimes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Functional-form interpretation}
+
+For fixed predecessor activity, the bilinear input $c x_i x_{i-1}$ tends to zero
+as the receiver $x_i$ tends to zero.  The demand-modulated input
+$c x_{i-1}/(1+x_i)$ instead approaches $c x_{i-1}$.  This difference motivates
+a figure comparing the two laws over the same normalized range.
+
+% TODO: Decide on a fair normalization for the graphical comparison and state
+% which quantities are held fixed.
+
+\subsection{What should not be claimed}
+
+The phrase ``bilinear synchrony is generically unstable'' appeared in generated
+draft material but is not valid as a general statement.  The bilinear spectrum
+has open stable and unstable regions.  The correct paper should provide exact
+stability inequalities and should state instability only for specified
+parameter sets or parameter regions.
+
+Randomized stability fractions depend on the chosen prior over coefficients.
+They may be included as a supplementary robustness experiment, but they should
+not replace the exact theorem-based comparison and should not be presented as a
+prior-independent property of either model.
+
+%==============================================================================
+\section{Results IV: Steady-State Bifurcations}
+\label{sec:steady-bifurcations}
+%==============================================================================
+
+\subsection{Transcritical bifurcation at the origin}
+
+At $\mu=0$, equation~\eqref{eq:synchronous-scalar} becomes
+\[
+    \dot x
+    =
+    \frac{x}{1+x}
+    \left[(a-A)x-Ax^2\right].
+\]
+At the same parameter value, the nonsynchronous eigenvalues at the origin have
+real parts
+\[
+    c(\cos\theta_m-1)<0,
+    \qquad m\ne0.
+\]
+Thus only the synchronous mode is critical.
+
+\begin{theorem}[Planned transcritical-bifurcation statement]
+If $\mu=0$ and $a\ne A$, the origin and a synchronous equilibrium branch
+undergo a generic transcritical bifurcation in the synchronous direction.
+\end{theorem}
+
+% TODO: Perform the center-manifold or scalar normal-form calculation and state
+% the parameter orientation precisely.  Analyze the degenerate case $a=A$ as a
+% codimension-two point.
+
+\subsection{Saddle-node bifurcation of positive synchronous equilibria}
+
+The fold candidate is given by~\eqref{eq:fold-location}.
+
+\begin{theorem}[Planned saddle-node statement]
+Assume $a>A$ and let $g=g_{\mathrm f}$.  If the synchronous zero eigenvalue is
+simple and every nonsynchronous Fourier mode has nonzero real part, then the two
+positive synchronous branches meet in a generic saddle-node bifurcation at
+$x=x_{\mathrm f}$.
+\end{theorem}
+
+% TODO: Verify the full $n$-dimensional nondegeneracy conditions.  Do not infer
+% full stability of the upper branch from the scalar synchronous equation alone.
+
+\subsection{The actual bistable region}
+
+The existence of two positive roots is not by itself sufficient for bistability
+in the full system.  The actual bistable set is the subset of the two-root
+region in which
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item the origin is asymptotically stable;
+    \item the upper positive synchronous equilibrium is asymptotically stable
+    in every Fourier mode; and
+    \item the lower branch has at least one unstable direction and separates
+    the relevant basins.
+\end{enumerate}
+
+% TODO: Compute this subset analytically where possible and by continuation
+% otherwise.  Determine whether the basin boundary is globally given by the
+% lower branch or only locally organized by its stable manifold.
+
+\subsection{Codimension-two steady-state degeneracy}
+
+The point
+\[
+    \mu=0,
+    \qquad
+    a=A
+\]
+annuls both the linear and quadratic coefficients in the synchronous reduced
+equation.  It is a candidate codimension-two degeneracy.
+
+% TODO: Derive the local two-parameter unfolding and decide whether it belongs
+% in the main paper or the supplement.
+
+%==============================================================================
+\section{Results V: Symmetry-Breaking Hopf Bifurcation and Rotating Waves}
+\label{sec:hopf}
+%==============================================================================
+
+\subsection{Candidate Hopf boundary}
+
+A symmetry-breaking Hopf candidate occurs when a nonzero mode $m_*$ satisfies
+\begin{equation}
+\label{eq:hopf-spectral}
+    \lambda_{m_*}=i\omega_*,
+    \qquad
+    \lambda_{n-m_*}=-i\omega_*,
+    \qquad
+    \omega_*\ne0,
+\end{equation}
+while all remaining modes have negative real part.
+
+The generated five-node draft identified a numerical crossing near
+\[
+    a=1.5,
+    \qquad
+    k=0.65,
+    \qquad
+    c=1,
+    \qquad
+    g=0.5,
+    \qquad
+    h\approx2.3718,
+\]
+with a critical pair reported as approximately
+\[
+    \pm0.310613i.
+\]
+This parameter point is retained only as a candidate starting point for an
+independent continuation calculation.
+
+% TODO: Reproduce this point from a clean implementation.  Confirm the
+% equilibrium, all eigenvalues, the critical mode, and the crossing parameter.
+
+\subsection{Hopf hypotheses}
+
+For a rigorous local Hopf theorem, the final manuscript must verify:
+\begin{enumerate}[label=(H\arabic*),leftmargin=3em]
+    \item a unique simple conjugate pair lies on the imaginary axis;
+    \item $\omega_*\ne0$;
+    \item every other eigenvalue has nonzero real part;
+    \item the crossing is transverse;
+    \item the first Lyapunov coefficient is nonzero;
+    \item no relevant low-order resonance invalidates the standard reduction.
+\end{enumerate}
+
+If $\nu$ is the chosen bifurcation parameter, transversality requires
+\begin{equation}
+\label{eq:transversality}
+    \frac{\dd}{\dd\nu}\Ree\lambda_{m_*}(\nu_c)
+    =
+    \frac{\partial r_{m_*}}{\partial\nu}
+    +
+    \frac{\partial r_{m_*}}{\partial x^*}
+    \frac{\dd x^*}{\dd\nu}
+    \ne0.
+\end{equation}
+
+% TODO: Derive $\dd x^*/\dd\nu$ from the synchronous-equilibrium equation and
+% obtain an explicit transversality formula for the selected parameter path.
+
+\subsection{First Lyapunov coefficient}
+
+After translating the equilibrium to the origin, write
+\begin{equation}
+\label{eq:Taylor-vector-field}
+    F(z)
+    =
+    Jz
+    +\frac12\mathcal B(z,z)
+    +\frac16\mathcal C(z,z,z)
+    +O(\|z\|^4).
+\end{equation}
+Let $v$ and $p$ satisfy
+\[
+    Jv=i\omega_*v,
+    \qquad
+    J^*p=-i\omega_*p,
+    \qquad
+    \langle p,v\rangle=1.
+\]
+The standard candidate formula recorded in the research plan is
+\begin{align}
+\label{eq:first-Lyapunov}
+    l_1
+    =
+    \frac{1}{2\omega_*}
+    \Ree\Big\langle p,
+    &\mathcal C(v,v,\bar v)
+    -2\mathcal B\bigl(v,J^{-1}\mathcal B(v,\bar v)\bigr)
+    \\
+    &+\mathcal B\bigl(\bar v,(2i\omega_*I-J)^{-1}
+    \mathcal B(v,v)\bigr)
+    \Big\rangle.
+\end{align}
+
+The cyclic Fourier structure is expected to reduce the calculation because
+\[
+    \mathcal B(v_m,\bar v_m)\text{ lies in mode }0,
+    \qquad
+    \mathcal B(v_m,v_m)\text{ lies in mode }2m,
+\]
+and
+\[
+    \mathcal C(v_m,v_m,\bar v_m)\text{ returns to mode }m.
+\]
+Thus only the modes $0$, $m_*$, and $2m_*$ should enter the scalar reduction.
+
+% TODO: Compute the complete bilinear and trilinear tensors, reduce them in the
+% Fourier basis, derive a reproducible expression for $l_1$, and determine its
+% sign on a meaningful parameter interval.
+
+\subsection{Supercritical and subcritical cases}
+
+Under the standard orientation convention, $l_1<0$ corresponds to a
+supercritical Hopf bifurcation with a small stable periodic branch, while
+$l_1>0$ corresponds to a subcritical Hopf bifurcation with an unstable small
+periodic branch.  A zero of $l_1$ is a candidate generalized Hopf or Bautin
+point.
+
+% TODO: State the sign convention used by the selected continuation software
+% and reconcile it with the analytic formula.
+
+\subsection{Rotating waves}
+
+The leading-order form of a periodic branch associated with mode $m_*$ is
+expected to be
+\begin{equation}
+\label{eq:rotating-wave}
+    x_j(t)
+    \approx
+    x^*
+    +R\cos\left(
+        \omega_*t+\frac{2\pi m_*j}{n}+\phi
+    \right).
+\end{equation}
+Adjacent nodes therefore differ by the time shift
+\begin{equation}
+\label{eq:phase-shift}
+    \Delta t
+    =
+    \frac{m_*}{n}T,
+    \qquad
+    T=\frac{2\pi}{\omega_*}.
+\end{equation}
+If $\gcd(m_*,n)=1$, all $n$ nodes occupy distinct phases.  If
+$\gcd(m_*,n)>1$, the wave has phase clusters.
+
+% TODO: Apply the equivariant Hopf theorem with the exact cyclic group action,
+% identify the isotropy subgroup, and verify the phase relation numerically on
+% the continued periodic branch.
+
+\subsection{Two-parameter continuation}
+
+The planned continuation diagram should include the transcritical curve, the
+fold curve, the Hopf curve, and mode-switch boundaries.  Candidate special
+points include fold--Hopf intersections, Hopf--Hopf points, zero--Hopf points,
+generalized Hopf points, and points at which two distinct Fourier modes tie.
+
+% TODO: Continue the curves with AUTO-07p, MatCont, or COCO.  Analyze only the
+% codimension-two points needed for the main story; place the remainder in the
+% supplement or future work.
+
+%==============================================================================
+\section{Results VI: Heterogeneity, Sensitivity, and Perturbation Propagation}
+\label{sec:heterogeneity}
+%==============================================================================
+
+\subsection{Persistence of a nearby equilibrium}
+
+Let $x^{(0)}=x^*\one$ be a hyperbolic synchronous equilibrium of the homogeneous
+system.  Under the perturbation~\eqref{eq:hetero-expansion}, the proposed
+expansion is
+\begin{equation}
+\label{eq:heterogeneous-equilibrium-expansion}
+    x(\eps)
+    =
+    x^*\one+\eps\xi+O(\eps^2).
+\end{equation}
+
+\begin{theorem}[Planned persistence theorem]
+If $J=D_xF(x^*\one,0)$ is invertible, then for sufficiently small $|\eps|$
+there exists a unique equilibrium near $x^*\one$, depending smoothly on
+$\eps$.  If the homogeneous equilibrium is asymptotically stable, its stability
+persists for sufficiently small heterogeneity.
+\end{theorem}
+
+% TODO: Supply the implicit-function-theorem proof and a precise stability
+% persistence statement.
+
+\subsection{First-order heterogeneous forcing}
+
+At the homogeneous synchronous state, the first-order parameter forcing in the
+receiving-equation convention is
+\begin{equation}
+\label{eq:heterogeneity-forcing}
+    b_i
+    =
+    x^*\alpha_i
+    -(x^*)^2\kappa_i
+    +\frac{x^*}{1+x^*}\chi_i
+    -\frac{x^*}{1+x^*}\gamma_i
+    -(x^*)^2\eta_i.
+\end{equation}
+The first-order equilibrium correction satisfies
+\begin{equation}
+\label{eq:Jxi}
+    J\xi=-b.
+\end{equation}
+Taking the discrete Fourier transform gives the candidate modal formula
+\begin{equation}
+\label{eq:xi-Fourier}
+\boxed{
+    \widehat\xi_m
+    =
+    -\frac{\widehat b_m}{\lambda_m}.
+}
+\end{equation}
+
+% TODO: Derive the forcing carefully from the chosen heterogeneous convention
+% and verify the $O(\eps^2)$ remainder numerically.
+
+\subsection{Static sensitivity bound}
+
+Since the homogeneous Jacobian is normal,
+\begin{equation}
+\label{eq:Jinverse-norm}
+    \|J^{-1}\|_2
+    =
+    \frac{1}{\min_m|\lambda_m|}.
+\end{equation}
+The proposed first-order estimate is
+\begin{equation}
+\label{eq:static-sensitivity-bound}
+    \|\xi\|_2
+    \le
+    \frac{\|b\|_2}{\min_m|\lambda_m|}.
+\end{equation}
+This estimate becomes large near a zero-eigenvalue bifurcation.  Near a Hopf
+boundary, static sensitivity need not diverge because the critical eigenvalues
+remain near $\pm i\omega_*$ rather than near zero.
+
+% TODO: State the assumptions under which the norm equality and perturbation
+% estimate hold, and distinguish static from frequency-dependent sensitivity.
+
+\subsection{Localized equilibrium Green function}
+
+If only the self-production coefficient at node $j_0$ is changed, then
+\[
+    b_j=x^*\delta_{j,j_0}.
+\]
+The proposed first-order equilibrium displacement is
+\begin{equation}
+\label{eq:green-function}
+\boxed{
+    \xi_j
+    =
+    -\frac{x^*}{n}
+    \sum_{m=0}^{n-1}
+    \frac{e^{i\theta_m(j-j_0)}}{\lambda_m}.
+}
+\end{equation}
+Because the network is directed, the response need not satisfy
+$\xi_{j_0+r}=\xi_{j_0-r}$.
+
+% TODO: Derive the formula with the exact DFT normalization and define
+% quantitative measures of directional response and spatial decay.
+
+\subsection{Transient propagation from a localized perturbation}
+
+For the homogeneous linearization and the initial condition
+$y(0)=e_{j_0}$, the candidate response kernel is
+\begin{equation}
+\label{eq:transient-kernel}
+\boxed{
+    y_j(t)
+    =
+    \frac1n
+    \sum_{m=0}^{n-1}
+    e^{\lambda_m t}
+    e^{i\theta_m(j-j_0)}.
+}
+\end{equation}
+Near instability, the least stable Fourier mode should dominate the late-time
+spatial pattern.
+
+% TODO: Prove the formula, identify the propagation direction from phase
+% velocities or peak times, and compare the linear prediction with the
+% nonlinear system for several perturbation amplitudes.
+
+\subsection{Harmonic response}
+
+For a harmonic forcing of frequency $\Omega$, the modal transfer function is
+recorded as
+\begin{equation}
+\label{eq:harmonic-response}
+    \widehat y_m(\Omega)
+    =
+    \frac{\widehat f_m(\Omega)}{i\Omega-\lambda_m}.
+\end{equation}
+Near a Hopf boundary, forcing near
+$\Omega=\Imm\lambda_{m_*}$ can produce a large dynamic response even when the
+static inverse $J^{-1}$ remains moderate.
+
+% TODO: Develop a precise frequency-response proposition and decide whether it
+% belongs in the main paper or the supplement.
+
+\subsection{A sufficient stability radius}
+
+Let
+\begin{equation}
+\label{eq:stability-margin}
+    \alpha
+    =
+    -\max_m\Ree\lambda_m>0.
+\end{equation}
+For a perturbed Jacobian $J_\eps=J+E_\eps$, a sufficient condition for all
+eigenvalues to remain in the open left half-plane is expected to have the form
+\begin{equation}
+\label{eq:stability-radius}
+    \|E_\eps\|_2<\alpha.
+\end{equation}
+A useful theorem requires an explicit bound
+\[
+    \|E_\eps\|_2
+    \le
+    K|\eps|\|\eta\|+O(\eps^2)
+\]
+that includes both the direct parameter perturbation and the shift of the
+equilibrium.
+
+% TODO: Derive a computable constant $K$ and state the resulting sufficient
+% heterogeneity tolerance.
+
+\subsection{Sensitivity of the Hopf threshold}
+
+For a simple Hopf crossing, the proposed first-order shift of the critical
+parameter is
+\begin{equation}
+\label{eq:hopf-threshold-shift}
+    \delta\nu_c
+    =
+    -
+    \frac{
+        \Ree\langle p,E_\eta v\rangle
+    }{
+        \frac{\dd}{\dd\nu}\Ree\lambda_{m_*}
+    }.
+\end{equation}
+This formula is intended to identify which spatial patterns of heterogeneity
+advance or delay the instability.
+
+% TODO: Derive the eigenvalue perturbation formula with the adopted complex
+% inner-product convention and validate it against continuation of several
+% heterogeneous examples.
+
+\subsection{Optional persistence of the periodic orbit}
+
+If the Hopf-generated periodic orbit is hyperbolic modulo its phase direction,
+it should persist under sufficiently small heterogeneity, although exact
+rotating-wave symmetry will be lost.
+
+% TODO: State a precise periodic-orbit persistence result or cite the relevant
+% theorem.  Confirm the prediction numerically using Floquet multipliers.
+
+%==============================================================================
+\section{Numerical Methods and Reproducibility}
+\label{sec:numerics}
+%==============================================================================
+
+\subsection{Computational objectives}
+
+The numerical work should verify and illustrate the analytical results rather
+than replace them.  The required tasks are:
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item verify the analytic Jacobians by finite differences;
+    \item compare direct eigendecomposition with the Fourier formula;
+    \item continue synchronous equilibrium branches and periodic orbits;
+    \item compute transversality and the first Lyapunov coefficient;
+    \item compute Floquet multipliers of periodic branches;
+    \item validate first-order heterogeneous asymptotics;
+    \item visualize localized static and transient response; and
+    \item regenerate every figure and table from scripts.
+\end{enumerate}
+
+\subsection{Provisional numerical methods}
+
+The generated draft records adaptive Runge--Kutta integration and LSODA in
+stiff regions, with provisional tolerances
+\[
+    \mathrm{rtol}=10^{-9},
+    \qquad
+    \mathrm{atol}=10^{-11}.
+\]
+These values are retained as starting points rather than final choices.
+Continuation may be performed with AUTO-07p, MatCont, or COCO.  The final paper
+must state the software versions, parameter files, event definitions, and all
+continuation settings.
+
+% TODO: Select the production software stack and record exact versions,
+% tolerances, continuation step sizes, branch labels, and stopping criteria.
+
+\subsection{Validation tests}
+
+The implementation should contain automated tests for:
+\begin{enumerate}[label=(V\arabic*),leftmargin=3em]
+    \item cyclic equivariance of the homogeneous vector field;
+    \item analytic versus finite-difference Jacobians;
+    \item equilibrium residuals;
+    \item direct eigenvalues versus DFT eigenvalues;
+    \item conjugacy $\lambda_{n-m}=\overline{\lambda_m}$;
+    \item forward pointing of the vector field on coordinate faces;
+    \item the absorbing-box differential inequality;
+    \item agreement of analytic and numerical first Lyapunov coefficients;
+    \item agreement of continuation points with direct simulation;
+    \item quadratic accuracy of the heterogeneous equilibrium expansion; and
+    \item the predicted phase shift on a rotating-wave branch.
+\end{enumerate}
+
+\subsection{Parameter studies}
+
+The proposed network sizes are
+\[
+    n=5,\ 7,\ 9,\ 15,\ 31,
+\]
+with $q=2$ as the principal family.  The numerical atlas should include:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.5em]
+    \item a stable synchronous regime;
+    \item the transcritical crossing;
+    \item the two-positive-equilibrium region;
+    \item the saddle-node;
+    \item a synchronous-mode instability, if present;
+    \item a symmetry-breaking Hopf point;
+    \item a rotating-wave periodic branch;
+    \item a mode-switching boundary;
+    \item a stable heterogeneous equilibrium; and
+    \item a heterogeneity-induced shift or loss of stability.
+\end{enumerate}
+
+\subsection{Repository structure}
+
+A proposed reproducible repository layout is
+\begin{verbatim}
+paper/
+    manuscript/
+    bibliography/
+src/
+    models/
+    jacobians/
+    fourier/
+    bifurcation/
+    lyapunov/
+    sensitivity/
+    validation/
+figures/
+data/
+tests/
+supplement/
+README.md
+environment.yml
+\end{verbatim}
+
+\subsection{Reproducibility statement placeholder}
+
+% TODO: Replace this comment with a final reproducibility statement specifying
+% the public repository, license, environment file, scripts generating each
+% figure and table, random seeds, and instructions for rerunning continuation.
+
+%==============================================================================
+\section{Planned Results Presentation and Figure Order}
+\label{sec:planned-results}
+%==============================================================================
+
+This section records the intended order in which the completed results should
+appear.  It is not yet a results narrative.
+
+\subsection{Result 1: Global admissibility}
+
+% TODO: Present the local well-posedness, forward invariance, global bound, and
+% complete synchronous-equilibrium classification.  Include the equilibrium
+% bifurcation diagram and clearly separate existence from stability.
+
+\subsection{Result 2: Arbitrary-$n$ Fourier spectrum}
+
+% TODO: Present the circulant Jacobian, the general dispersion relation, and the
+% exact $q=2$ mode-selection theorem.  Explain uniform versus symmetry-breaking
+% modes before displaying the detailed inequalities.
+
+\subsection{Result 3: Controlled comparison of interaction laws}
+
+% TODO: Compare the demand-modulated model with the topology-matched bilinear
+% model.  Include a functional-form figure and theorem-based stability maps.
+% Relegate prior-dependent Monte Carlo comparisons to the supplement.
+
+\subsection{Result 4: Steady and Hopf bifurcations}
+
+% TODO: Present the transcritical and fold results, then the rigorously verified
+% Hopf point, the first Lyapunov coefficient, periodic branch, and Floquet
+% multipliers.
+
+\subsection{Result 5: Heterogeneity and propagation}
+
+% TODO: Present the implicit-function theorem, the Fourier sensitivity formula,
+% the localized Green function, the transient response kernel, and the shift of
+% the Hopf threshold.
+
+\subsection{Result 6: Five-node synthesis}
+
+% TODO: Specialize the arbitrary-$n$ theory to $n=5$, recover the golden-ratio
+% expressions, and show how the general mode-selection and robustness theory
+% organizes the original five-node model.
+
+\subsection{Main figure plan}
+
+\begin{longtable}{p{1.1cm}p{4.5cm}p{8.5cm}}
+\toprule
+Figure & Working title & Intended mathematical message \\
+\midrule
+\endfirsthead
+\toprule
+Figure & Working title & Intended mathematical message \\
+\midrule
+\endhead
+1 & Network family & Show the directed predecessor cycle, the step-$q$ control edges, and the specialization $n=5,q=2$. \\
+2 & Interaction-law comparison & Contrast the bilinear input and the demand-modulated input as the receiving state varies. \\
+3 & Synchronous-equilibrium geometry & Display the origin, positive branches, transcritical point, fold, and the region with two positive roots. \\
+4 & Dispersion and mode selection & Plot $\Ree\lambda_m$ against $m/n$ for several $n$ and compare with the continuous preferred wave number. \\
+5 & Coupling-law stability comparison & Show stability and selected modes for the demand-modulated and matched bilinear systems on matched parameter planes. \\
+6 & Two-parameter bifurcation organization & Show transcritical, fold, Hopf, and mode-switch curves. \\
+7 & Hopf and rotating wave & Combine periodic-branch amplitude, period, Floquet multipliers, node time series, and phase-lag verification. \\
+8 & Heterogeneity and localized sensitivity & Show the static Green function, transient heat map, first-order prediction, and $O(\eps^2)$ error. \\
+9 & Five-node synthesis & Summarize how the general theory specializes to the Wu-Xing-inspired network. \\
+\bottomrule
+\end{longtable}
+
+%==============================================================================
+\section{Discussion}
+\label{sec:discussion}
+%==============================================================================
+
+\subsection{Architecture versus interaction law}
+
+The proposed conceptual conclusion is that topology and nonlinear interaction
+law play distinct roles.  The cyclic topology fixes the Fourier modes and the
+spatio-temporal symmetries available after bifurcation.  The coefficients and
+functional forms determine the dispersion relation, the critical wave number,
+the stability margins, and the nonlinear branch selected at instability.
+
+\subsection{Interpretation of synchronous and symmetry-breaking modes}
+
+The synchronous mode changes all normalized components together.  A nonzero
+Fourier mode differentiates the components and generates a spatial pattern.
+Within the motivating interpretation, this distinction suggests a mathematical
+separation between uniform change and differentiated imbalance.  It does not,
+by itself, establish a clinical interpretation for any particular mode.
+
+\subsection{Why the arbitrary-$n$ extension matters}
+
+The five-node golden-ratio expressions are consequences of the fifth roots of
+unity.  The arbitrary-$n$ formulation shows which conclusions are genuinely
+special to five nodes and which follow from cyclic symmetry more generally.
+The $q=2$ quadratic dispersion relation also provides a direct bridge from
+finite networks to a large-$n$ preferred wave number.
+
+\subsection{Why heterogeneity belongs in the same paper}
+
+The homogeneous Fourier spectrum controls not only stability but also the
+leading response to parameter mismatch.  The same denominators $\lambda_m$
+that identify weakly stable modes appear in the equilibrium sensitivity, Green
+function, transient kernel, and Hopf-threshold shift.  Heterogeneity is
+therefore not an unrelated extension; it is the natural robustness theory of
+the homogeneous spectral result.
+
+\subsection{Modeling limitations}
+
+The final Discussion must state at least the following limitations.
+
+\begin{enumerate}[label=(\arabic*),leftmargin=2.5em]
+    \item The state variables are normalized abstract activities rather than
+    direct physiological measurements.
+
+    \item Exact $\Z_n$ symmetry and identical parameters are idealizations.
+
+    \item A stable synchronous equilibrium is only one possible mathematical
+    representation of balance; a bounded periodic state may also be compatible
+    with normal operation in some applications.
+
+    \item Linear stability determines only local behavior and does not give the
+    basin of attraction.
+
+    \item The model parameters have not been estimated from validated
+    biological data.
+
+    \item The model omits delays, noise, external forcing, and adaptive
+    regulation in its base form.
+
+    \item No medical or treatment conclusion follows from the mathematical
+    analysis alone.
+\end{enumerate}
+
+\subsection{Relation to the example papers}
+
+The supplied modeling examples suggest several presentation principles.  A
+model should be explained in words before equations; the architecture should
+be visible before the parameter analysis; the numerical procedure should be
+reproducible; figures should communicate mechanisms rather than merely display
+trajectories; and the Discussion should state both what the model explains and
+what it omits.  These principles will guide the final rewrite.
+
+\subsection{Future directions outside the main paper}
+
+The following topics are intentionally reserved for later work:
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item a rigorous slow--fast justification of local network motifs;
+    \item a positivity-preserving model of all named Wu-Xing pathologies;
+    \item adaptive homeostatic set points;
+    \item treatment or intervention as an optimal-control problem;
+    \item stochastic forcing and noise-induced switching;
+    \item delay-induced instabilities;
+    \item parameter estimation from validated measurements; and
+    \item a separate critical reanalysis of previously reported Lyapunov
+    spectra.
+\end{enumerate}
+
+%==============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%==============================================================================
+
+% TODO: Write the final conclusion only after all theorem proofs, continuation
+% diagrams, and heterogeneity calculations are complete.  It should state the
+% question, the exact mathematical results, the principal consequence, and one
+% highest-priority next direction without introducing new material.
+
+%==============================================================================
+\section*{Acknowledgments}
+%==============================================================================
+
+This work was conducted in the program SURE-DS 2026 (Summer Undergraduate
+Research in Data Science 2026), organized by the Center of Scientific Machine
+Learning in Material Science and supported by AFOSR grant FA9550-23-1-0725 and
+the College of Science, Engineering, and Technology of Texas Southern
+University.
+
+% TODO: Add acknowledgments for the research mentor, readers, computational
+% resources, and any additional grant support.
+
+%==============================================================================
+\appendix
+%==============================================================================
+
+\section{Original Motif Models from the Author Draft}
+\label{app:motifs}
+
+This appendix preserves the one-node, two-node, and three-node models from
+\texttt{main2-2.tex}.  They are archival research material and are not part of
+the frozen main model.
+
+\subsection{One-node logistic motif}
+
+The single-node motif was modeled by
+\begin{equation}
+\label{eq:one-node-logistic}
+    \frac{\dd x}{\dd t}
+    =
+    \alpha x\left(1-\frac{x}{M}\right),
+    \qquad
+    \alpha,M>0.
+\end{equation}
+
+% TODO: Add the phase line and decide whether this elementary motif should
+% appear in the final paper or only in pedagogical notes.
+
+\subsection{Two-node bilinear mother--child motif}
+
+The first two-node model in the author draft is
+\begin{equation}
+\label{eq:two-node-bilinear}
+\begin{aligned}
+    \dot x_1
+    &=
+    \alpha_1x_1\left(1-\frac{x_1}{M_1}\right)
+    -\beta_1x_1x_2,\\
+    \dot x_2
+    &=
+    \alpha_2x_2\left(1-\frac{x_2}{M_2}\right)
+    +g_2x_1x_2.
+\end{aligned}
+\end{equation}
+The draft records the candidate positive equilibrium
+\begin{equation}
+\label{eq:two-node-equilibrium}
+\begin{aligned}
+    x_1^*
+    &=
+    \frac{
+        \alpha_1\alpha_2M_1
+        -M_1M_2\beta_1\alpha_2
+    }{
+        \alpha_1\alpha_2
+        +\beta_1g_2M_1M_2
+    },\\
+    x_2^*
+    &=
+    \frac{
+        \alpha_1\alpha_2M_2
+        +M_1M_2g_2\alpha_1
+    }{
+        \alpha_1\alpha_2
+        +\beta_1g_2M_1M_2
+    }.
+\end{aligned}
+\end{equation}
+The draft proposes the condition $\alpha_1>M_2\beta_1$ for positivity of
+$x_1^*$ and local stability of the positive equilibrium.
+
+% TODO: Re-derive the equilibrium and stability result from scratch.  The
+% original draft used $a_i$ and $\alpha_i$ inconsistently and contained an
+% incomplete determinant calculation.
+
+\subsection{Two-node demand-modulated motif}
+
+A second two-node model was recorded as
+\begin{equation}
+\label{eq:two-node-demand}
+\begin{aligned}
+    \dot x_1
+    &=
+    \alpha_1x_1\left(1-\frac{x_1}{M_1}\right)
+    -\frac{\beta_1x_1}{1+x_2},\\
+    \dot x_2
+    &=
+    \alpha_2x_2\left(1-\frac{x_2}{M_2}\right)
+    +\frac{g_2x_1}{1+x_2}.
+\end{aligned}
+\end{equation}
+
+% TODO: Analyze the nullclines, positive equilibria, invariant region, and local
+% and global stability of this motif if it is retained in a future motif paper.
+
+\subsection{Piecewise threshold motif}
+
+The source draft also proposed
+\begin{equation}
+\label{eq:two-node-threshold}
+\begin{aligned}
+    \dot x_m
+    &=
+    \alpha_mx_m(1-x_m)
+    -\beta x_m\max(1-x,0),\\
+    \dot x
+    &=
+    \alpha x(1-x)
+    +g x_m\max(1-x,0).
+\end{aligned}
+\end{equation}
+
+% TODO: Treat this as a piecewise-smooth system.  Determine the invariant
+% regions, equilibria in each sector, switching manifold, and continuity or
+% differentiability issues.
+
+\subsection{Three-node motif}
+
+The three-node diagram consists of a central node $x$, its generating
+predecessor $x_m$, and a third node $x_c$ connected through the control motif.
+The source draft records the candidate system
+\begin{equation}
+\label{eq:three-node-source}
+\begin{aligned}
+    \dot x_m
+    &=
+    \alpha_mx_m(1-x_m)
+    -\beta x_m\max(1-x,0)
+    -k\max(x_c-rx_m,0),\\
+    \dot x
+    &=
+    \alpha x(1-x)
+    +g x_m\max(1-x,0)
+    -\beta x\max(1-x_c,0),\\
+    \dot x_c
+    &=
+    \alpha_cx_c(1-x_c)
+    +\mathcal G(x,x_c)
+    -k\max(rx_m-x_c,0).
+\end{aligned}
+\end{equation}
+The symbol $\mathcal G(x,x_c)$ is used here because the third positive term was
+not unambiguously parsed in the source draft.
+
+% TODO: Recover the intended third positive term from the author, define the
+% piecewise-smooth sectors, and analyze the resulting three-node system.
+
+\subsection{Local motifs and separation of time scales}
+
+The original motif draft makes the conceptual observation that treatment rules
+involving two or three nodes implicitly assume that the local subsystem is
+approximately isolated over the relevant time interval.  A rigorous future
+formulation would separate local variables $y$ from the remainder $z$ through
+\begin{equation}
+\label{eq:slow-fast-motif}
+    \dot y=f(y,z),
+    \qquad
+    \dot z=\eps g(y,z),
+    \qquad
+    0<\eps\ll1.
+\end{equation}
+
+% TODO: Formulate and prove a singular-perturbation theorem under which the
+% local motif tracks a stable branch $y=y^*(z)$ of the frozen subsystem.
+
+\section{Extended Wu-Xing Pathology Models}
+\label{app:pathologies}
+
+\subsection{Mother consumption and child overdraw}
+
+The source material distinguishes two different mechanisms:
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item a deficient child receives stronger nourishment through the factor
+    $(1+x_i)^{-1}$; and
+    \item an excessive child consumes more from its mother through a separate
+    pathological term.
+\end{enumerate}
+A candidate mother-loss term recorded in the generated draft is
+\begin{equation}
+\label{eq:overdraw-term}
+    -\frac{g_d x_{i+1}x_i}{1+x_i}.
+\end{equation}
+
+\subsection{Rebellious counter-action}
+
+A candidate counter-acting term from the source drafts is
+\begin{equation}
+\label{eq:wu-term-original}
+    -\frac{b x_{i+q}}{1+\eps_0x_i}.
+\end{equation}
+The resulting extended five-node equation was recorded as
+\begin{equation}
+\label{eq:extended-pathology}
+\dot x_i
+=
+ a_i x_i-kx_i^2
+ +\frac{c x_{i-1}}{1+x_i}
+ -\frac{g_d x_{i+1}x_i}{1+x_i}
+ -\frac{g x_i}{1+x_{i+q}}
+ -h x_i x_{i-q}
+ -\frac{b x_{i+q}}{1+\eps_0x_i}.
+\end{equation}
+
+\begin{remark}[Positivity obstruction]
+At $x_i=0$, the last term in~\eqref{eq:extended-pathology} does not vanish.
+Indeed,
+\[
+    \dot x_i
+    =
+    c x_{i-1}-b x_{i+q}
+\]
+up to the terms that contain $x_i$.  This quantity can be negative.  Therefore
+the nonnegative orthant is not automatically forward invariant for the
+extended model as written.
+\end{remark}
+
+A positivity-preserving candidate mentioned in the research discussion is
+\begin{equation}
+\label{eq:wu-positive-candidate}
+    -\frac{b x_i x_{i+q}}{K+\eps_0x_i},
+\end{equation}
+or a bounded product of receiver and target saturation factors.
+
+% TODO: Select and justify a positivity-preserving counter-action mechanism.
+% Recompute every equilibrium and Jacobian for the selected extension.  Do not
+% claim that Proposition~\ref{prop:absorbing-box} transfers unchanged.
+
+\subsection{Adaptive set points}
+
+The source drafts proposed a contextual set point
+\begin{equation}
+\label{eq:adaptive-setpoint}
+    \theta_i
+    =
+    \theta_i^0
+    +\alpha_i x_{i-1}
+    -\beta_i x_{i-q},
+\end{equation}
+leading to a self-regulation term
+\begin{equation}
+\label{eq:adaptive-logistic}
+    k_i x_i(\theta_i-x_i).
+\end{equation}
+
+% TODO: Analyze positivity of the set point, invariant regions, synchronous and
+% heterogeneous equilibria, and whether the cyclic Fourier structure survives
+% in the homogeneous case.
+
+\section{Notes on the Prior Six-Term Bilinear Model}
+\label{app:lin-han}
+
+\subsection{Reproduction targets from the generated draft}
+
+The generated draft reports the following values for the six-term bilinear
+model with all six coefficients equal to one:
+\begin{equation}
+\label{eq:reported-bilinear-eigs}
+    -1,
+    \qquad
+    -0.5393\pm0.3919i,
+    \qquad
+    0.2060\pm0.6340i.
+\end{equation}
+The positive real part of the last pair makes that particular synchronous
+equilibrium unstable.  The generated draft also reports a periodic orbit of
+period approximately $17.626$.
+
+% TODO: Reproduce every number from a clean implementation and the original
+% published equation before including these values in a submitted paper.
+
+\subsection{A structural zero Lyapunov exponent}
+
+For a smooth autonomous system $\dot x=F(x)$, differentiation along a trajectory
+gives
+\[
+    \frac{\dd}{\dd t}F(x(t))
+    =
+    DF(x(t))F(x(t)).
+\]
+Thus the flow direction is a solution of the variational equation.  A bounded
+non-equilibrium trajectory is therefore expected to have a zero Lyapunov
+exponent in the flow direction, subject to the standard regularity assumptions
+used in the definition of the spectrum.
+
+The generated draft records two published spectra with no zero exponent:
+\begin{equation}
+\label{eq:reported-spectra}
+\begin{aligned}
+    &\{0.3885,-0.1719,-0.3473,-0.6833,-0.9731\},\\
+    &\{0.6700,0.6606,-0.0761,-0.0794,-1.1751\}.
+\end{aligned}
+\end{equation}
+
+% TODO: Verify the original paper's numerical method, integration interval,
+% transient removal, and exact interpretation of the reported numbers.
+
+\subsection{Candidate periodic-orbit correction}
+
+The generated draft reports a recomputed spectrum
+\begin{equation}
+\label{eq:recomputed-cycle-spectrum}
+    \{0.0011,-0.1232,-0.2721,-0.2728,-0.9998\},
+\end{equation}
+which is consistent with one zero exponent and four negative exponents.
+
+% TODO: Independently reproduce the orbit, period, tangent integration, QR
+% reorthonormalization, convergence in averaging time, and the exponent values.
+
+\subsection{Candidate boundary-equilibrium correction}
+
+For a restriction-only parameter setting, the generated draft records the
+Jacobian spectrum
+\begin{equation}
+\label{eq:boundary-equilibrium-spectrum}
+    \{0,0,-1.3038,-2.3426,-3.6464\}
+\end{equation}
+at the state approximately
+\[
+    (0,0,0,2.3426,1.3038).
+\]
+
+% TODO: Verify the exact equilibrium, the dimension of the zero eigenspace,
+% and the correct nonlinear stability classification.  Two zero eigenvalues do
+% not by themselves establish neutral stability of the nonlinear equilibrium.
+
+\subsection{Conservative subsystem and first integrals}
+
+For the parameter restriction recorded in the drafts, the system reduces to
+\begin{equation}
+\label{eq:volterra-five}
+    \dot x_i=x_i(x_{i-1}-x_{i+1}),
+    \qquad i\in\Z_5.
+\end{equation}
+Two conserved quantities already derived in the draft are
+\begin{equation}
+\label{eq:first-integrals}
+    I_1=\sum_i x_i,
+    \qquad
+    I_2=\prod_i x_i.
+\end{equation}
+Indeed,
+\[
+    \frac{\dd}{\dd t}\sum_i x_i=0,
+    \qquad
+    \frac{\dd}{\dd t}\log\prod_i x_i
+    =
+    \sum_i(x_{i-1}-x_{i+1})=0.
+\]
+
+A further candidate integral mentioned in the research discussion is
+\begin{equation}
+\label{eq:third-integral-candidate}
+    I_3=\sum_i x_i x_{i+2}.
+\end{equation}
+
+% TODO: Verify $I_3$, determine functional independence of the integrals,
+% connect the system to the periodic Volterra or Kac--van Moerbeke lattice, and
+% do not claim quasiperiodicity on a torus without a complete integrability or
+% invariant-torus argument.
+
+\section{Claim Audit and Mathematical Cautions}
+\label{app:claim-audit}
+
+This appendix records the corrections and cautions that must govern every
+future rewrite.
+
+\begin{longtable}{p{5.1cm}p{8.7cm}}
+\toprule
+Claim appearing in earlier material & Required correction or qualification \\
+\midrule
+\endfirsthead
+\toprule
+Claim appearing in earlier material & Required correction or qualification \\
+\midrule
+\endhead
+``The bilinear synchronous equilibrium is generically unstable.'' & False as a general statement.  Derive and state the exact Fourier stability inequalities.  Instability may be asserted only for specified parameters or regions. \\
+``If $a+c\le g$, no positive synchronous state exists.'' & Incomplete.  When $a>k+h$, a two-positive-root interval can occur even with $a+c<g$. \\
+``The whole two-root interval is bistable.'' & Not established.  The upper branch must be stable in every Fourier mode, and the basin geometry must be checked. \\
+``A complex pair crossing the imaginary axis proves Hopf.'' & Incomplete.  Simplicity, nonzero frequency, transversality, and $l_1\ne0$ are required. \\
+``The extended pathology model remains positive.'' & False for the counter-action term $-b x_{i+q}/(1+\eps x_i)$, which may point out of the nonnegative orthant at $x_i=0$. \\
+``The positive input is Holling type II.'' & Inaccurate.  It is receiver-modulated but remains linear in the source. \\
+``Two first integrals and small finite-time Lyapunov exponents prove quasiperiodicity.'' & Not sufficient.  Further integrability and invariant-torus analysis is required. \\
+``Equal activity means equal organ function.'' & Equality is only meaningful after explicit normalization by separate reference levels. \\
+``A negative spectral abscissa proves global recovery.'' & It proves local asymptotic stability only.  Basin size and global attractivity require additional arguments. \\
+``Random parameter percentages measure model quality objectively.'' & The percentages are conditional on a chosen prior, validity filter, and classification procedure. \\
+``The golden ratio is a physiological feature.'' & No.  It arises geometrically from the fifth roots of unity. \\
+``The general $n$ model is a direct TCM model.'' & No.  It is a mathematical generalization motivated by the five-node topology. \\
+\bottomrule
+\end{longtable}
+
+\section{Complete Research Work Plan}
+\label{app:work-plan}
+
+The phases below are ordered by mathematical dependency.  A later phase should
+not be treated as complete until the stated gate from the earlier phase has
+been passed.
+
+\subsection{Phase 0: Freeze the paper contract}
+
+\begin{enumerate}[label=0.\arabic*,leftmargin=3em]
+    \item Adopt the mathematical title and central question.
+    \item Freeze~\eqref{eq:DMnq} as the base model.
+    \item Freeze~\eqref{eq:MBnq} as the matched comparator.
+    \item Treat~\eqref{eq:LBnq} as a secondary literature application.
+    \item Define normalized activities and the meaning of the unit denominator.
+    \item Write a one-page assumption list.
+    \item Create a claim ledger recording the support and status of every claim.
+\end{enumerate}
+
+\paragraph{Gate.}
+Do not change the nonlinear model after beginning the Hopf and heterogeneity
+calculations unless a genuine mathematical error forces a reset.
+
+\subsection{Phase 1: Complete the literature and novelty audit}
+
+Read and tabulate work in five clusters:
+\begin{enumerate}[label=1.\arabic*,leftmargin=3em]
+    \item cyclic feedback systems, rings, circulant spectra, and dispersion;
+    \item coupled-cell synchrony and bifurcation;
+    \item equivariant Hopf theory and rotating waves;
+    \item robustness, nearly identical oscillators, heterogeneity, Green
+    functions, and pseudospectra; and
+    \item all existing Wu-Xing discrete and continuous models.
+\end{enumerate}
+For each paper, record the network, coupling law, generality in $n$, spectrum,
+mode selection, Hopf coefficient, heterogeneity analysis, data source, and main
+limitation.
+
+\paragraph{Gate.}
+Do not claim novelty or priority until the exact model and all proposed theorem
+statements have been compared with the literature.
+
+\subsection{Phase 2: Nondimensionalization and model specification}
+
+\begin{enumerate}[label=2.\arabic*,leftmargin=3em]
+    \item Write the dimensional model.
+    \item Introduce activity and time scales.
+    \item Derive the dimensionless equations.
+    \item Define all graph maps and the role of $\gcd(n,q)$.
+    \item State the homogeneous, heterogeneous, matched-bilinear, and six-term
+    models.
+    \item Produce a term-by-term interpretation table.
+\end{enumerate}
+
+\paragraph{Gate.}
+Every term must have a sign, an edge direction, a parameter definition, and an
+explicit statement of whether it is an assumption or a derivation.
+
+\subsection{Phase 3: Build the reproducibility infrastructure}
+
+Implement independently the vector field, analytic Jacobian, Fourier spectrum,
+synchronous equilibria, finite-difference Jacobian, derivative tensors, ODE
+solver, continuation interface, first Lyapunov coefficient, and heterogeneity
+expansion.  Build the unit tests listed in Section~\ref{sec:numerics}.
+
+\paragraph{Gate.}
+No parameter map or continuation diagram should be trusted before the analytic
+and numerical low-level tests agree.
+
+\subsection{Phase 4: Prove the global foundation}
+
+\begin{enumerate}[label=4.\arabic*,leftmargin=3em]
+    \item Prove local existence and uniqueness.
+    \item Prove forward invariance.
+    \item Prove global boundedness with the Dini derivative.
+    \item Prove invariance of the synchronous subspace.
+    \item Complete the full root classification.
+    \item Identify the origin, transcritical, fold, and degenerate parameter
+    sets.
+\end{enumerate}
+
+\paragraph{Gate.}
+The equilibrium classification must be complete and internally consistent
+before any branch-stability statement is written.
+
+\subsection{Phase 5: Prove the arbitrary-$n$ spectral theory}
+
+\begin{enumerate}[label=5.\arabic*,leftmargin=3em]
+    \item Express the Jacobian as a polynomial in the shift matrix.
+    \item Derive the arbitrary-$n,q$ Fourier spectrum.
+    \item Prove normality.
+    \item Derive the $q=2$ quadratic dispersion relation.
+    \item Prove exact discrete mode selection and characterize ties.
+    \item Derive the large-$n$ selected wave number.
+    \item Specialize to $n=5$ and verify the golden-ratio formulae.
+\end{enumerate}
+
+\paragraph{Gate.}
+The theorem must predict the critical mode obtained by direct eigendecomposition
+at every tested parameter point.
+
+\subsection{Phase 6: Complete the controlled bilinear comparison}
+
+\begin{enumerate}[label=6.\arabic*,leftmargin=3em]
+    \item Prove positivity and equilibrium existence for the matched model.
+    \item Prove a sufficient boundedness condition and document blow-up
+    examples.
+    \item Derive the arbitrary-$n,q$ spectrum and $q=2$ mode selection.
+    \item Add the six-term literature model as a verified corollary.
+    \item Use theorem-based comparisons in the main text.
+    \item Move prior-dependent Monte Carlo comparisons to the supplement.
+\end{enumerate}
+
+\subsection{Phase 7: Prove the steady-state bifurcations}
+
+\begin{enumerate}[label=7.\arabic*,leftmargin=3em]
+    \item Prove the generic transcritical bifurcation.
+    \item Analyze the $a=A$, $\mu=0$ degeneracy.
+    \item Prove the full saddle-node nondegeneracy conditions.
+    \item Determine the stability of each branch in all Fourier modes.
+    \item Compute the actual bistable set rather than equating bistability with
+    the two-root interval.
+\end{enumerate}
+
+\subsection{Phase 8: Complete the rigorous Hopf analysis}
+
+\begin{enumerate}[label=8.\arabic*,leftmargin=3em]
+    \item Choose a clean one-parameter path.
+    \item Locate the critical point at high precision.
+    \item Verify spectral simplicity and absence of relevant resonances.
+    \item Prove transversality.
+    \item Compute $\mathcal B$ and $\mathcal C$ symbolically and validate them.
+    \item Reduce $l_1$ using Fourier selection rules.
+    \item Determine the sign of $l_1$ on at least one meaningful interval.
+    \item Continue the periodic branch and compute Floquet multipliers.
+    \item Verify the rotating-wave phase relation.
+    \item Continue the Hopf and fold curves in two parameters.
+\end{enumerate}
+
+\paragraph{Gate.}
+Do not use the phrase ``nondegenerate Hopf bifurcation'' in the abstract until
+transversality and $l_1\ne0$ have both been established.
+
+\subsection{Phase 9: Develop the heterogeneity and sensitivity theory}
+
+\begin{enumerate}[label=9.\arabic*,leftmargin=3em]
+    \item Freeze the coefficient-assignment convention.
+    \item Prove equilibrium persistence.
+    \item Derive the first-order forcing and Fourier response.
+    \item Derive the localized Green function.
+    \item Derive the transient and harmonic kernels.
+    \item Establish norm bounds and a computable stability radius.
+    \item Derive the Hopf-threshold shift.
+    \item Validate the $O(\eps^2)$ remainder.
+    \item Test localized, low-mode, high-mode, random, and critical-mode
+    heterogeneity.
+\end{enumerate}
+
+\subsection{Phase 10: Construct the numerical atlas}
+
+Use theory to select representative parameter sets for every principal regime.
+For every figure, record the parameters, solver, tolerances, initial condition,
+integration horizon, continuation settings, and validation checks.  Repeat key
+computations with tighter tolerances and an independent method.
+
+\subsection{Phase 11: Write in dependency order}
+
+\begin{enumerate}[label=11.\arabic*,leftmargin=3em]
+    \item Finalize figures and captions.
+    \item Write the theorem and results sections.
+    \item Write the model and numerical-method sections.
+    \item Write the Discussion and limitations.
+    \item Write the Introduction.
+    \item Write the Conclusion.
+    \item Write the Abstract.
+    \item Choose the final title.
+    \item Remove repetition and every unsupported claim.
+\end{enumerate}
+
+\section{Manuscript Construction and Writing Guide}
+\label{app:writing-guide}
+
+\subsection{Recommended writing order}
+
+The guiding framework supplied with the project recommends the order
+\[
+    \text{Results}
+    \longrightarrow
+    \text{Model}
+    \longrightarrow
+    \text{Discussion}
+    \longrightarrow
+    \text{Introduction}
+    \longrightarrow
+    \text{Abstract}
+    \longrightarrow
+    \text{Title}.
+\]
+This order forces the paper to be built around completed evidence rather than
+around promises made too early.
+
+\subsection{Single-message discipline}
+
+The bottom-line conclusion should be repeated in the abstract, Introduction,
+opening of the Results, and Discussion.  Supporting details should generally be
+stated once.  The paper should read as a guided journey through one idea rather
+than as a list of loosely connected calculations.
+
+\subsection{Figures first}
+
+The main figures and captions should be designed before the Results prose.  A
+reader should be able to infer the central argument from the figures and their
+captions.  Each caption should state the parameters, plotted quantity,
+mathematical conclusion, and connection to a theorem.
+
+\subsection{Model presentation}
+
+The model should be explained in words before its equations.  State assumptions
+clearly, display only the equations needed for the main story, and place
+lengthy derivative tensors and routine expansions in an appendix or supplement.
+
+\subsection{Results and interpretation}
+
+The Results should distinguish theorem, computation, and observation.  Use
+phrases such as ``we prove,'' ``numerical continuation shows,'' and ``simulation
+suggests'' only when the corresponding evidence is present.  Interpretation
+belongs mainly in the Discussion.
+
+\subsection{Language and signposting}
+
+Use simple language.  Each paragraph should carry one main message.  Technical
+sections should begin with a sentence explaining what they establish and why a
+reader might wish to continue.  Passive voice should not be used merely to
+avoid ``we.''
+
+\subsection{Claims and citations}
+
+Every historical, medical, biological, and priority claim requires a citation
+placed adjacent to it.  Classical Chinese statements require precise source
+information.  Mathematical claims require a proof, a standard citation, or a
+clear label as a conjecture or computational observation.
+
+\subsection{Abstract template}
+
+The final abstract should contain:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.5em]
+    \item one or two sentences of background;
+    \item one sentence stating the research question;
+    \item two to four sentences stating what was proved or computed; and
+    \item one sentence stating the broad mathematical significance.
+\end{enumerate}
+It should contain only results that are complete at submission time.
+
+\section{Publication Strategy and Scope}
+\label{app:publication}
+
+\subsection{Primary target}
+
+The current reach target is the \emph{SIAM Journal on Applied Dynamical Systems}
+(SIADS).  A competitive submission should offer more than the observation that
+a Jacobian is circulant.  The proposed strongest combination is:
+\begin{quote}
+exact discrete mode selection, an explicit and rigorously classified Hopf
+bifurcation, and a Fourier Green-function theory for heterogeneous response.
+\end{quote}
+
+\subsection{Main-paper content}
+
+The main manuscript should include:
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+    \item the general $n,q$ model and normalization;
+    \item global positivity and boundedness;
+    \item complete synchronous-equilibrium classification;
+    \item arbitrary-$n,q$ Fourier spectrum;
+    \item exact $q=2$ mode selection and the large-$n$ limit;
+    \item the topology-matched bilinear comparison;
+    \item transcritical, saddle-node, and one rigorous Hopf theorem;
+    \item rotating-wave interpretation and periodic-orbit continuation;
+    \item small-heterogeneity persistence and explicit sensitivity;
+    \item a robustness bound and localized response; and
+    \item the detailed $n=5,q=2$ application.
+\end{enumerate}
+
+\subsection{Supplementary content}
+
+The supplement may contain full tensor formulae, expanded $l_1$ expressions,
+extra continuation plots, additional $n,q$ maps, the complete six-term model,
+Monte Carlo studies, random-heterogeneity covariance experiments, animations,
+and all reproducibility details.
+
+\subsection{Topics reserved for separate papers}
+
+The motif slow--fast theory, the full pathology extension, adaptive set points,
+optimal control, and a critical reanalysis of prior Lyapunov spectra should not
+be forced into the same submission.
+
+\subsection{Provisional page allocation}
+
+\begin{center}
+\begin{tabular}{p{8.5cm}r}
+\toprule
+Component & Pages \\
+\midrule
+Abstract and Introduction & $3$--$4$ \\
+General network and coupling models & $3$ \\
+Global dynamics and equilibria & $3$--$4$ \\
+Fourier spectrum and mode selection & $5$--$6$ \\
+Bilinear comparison & $2$--$3$ \\
+Steady and Hopf bifurcations & $7$--$8$ \\
+Heterogeneity, sensitivity, and propagation & $5$--$6$ \\
+Numerical continuation and five-node application & $4$--$5$ \\
+Discussion and Conclusion & $2$ \\
+References & $2$--$3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Bibliographic Verification Checklist}
+\label{app:bibliography-checklist}
+
+Before submission, the bibliography should be checked for:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.5em]
+    \item exact author names, titles, journal names, volumes, pages, and years;
+    \item direct consultation of every paper whose equation is reproduced;
+    \item precise primary or scholarly sources for the Chinese terminology;
+    \item appropriate references for circulant matrices and the DFT;
+    \item standard references for transcritical, saddle-node, and Hopf
+    bifurcation;
+    \item equivariant Hopf and rotating-wave theory;
+    \item nearly identical networks, heterogeneity, and eigenvalue sensitivity;
+    \item numerical continuation and first-Lyapunov-coefficient conventions;
+    \item reproducible scientific computing and validated numerics if used; and
+    \item removal of any citation that does not support the adjacent claim.
+\end{enumerate}
+
+%==============================================================================
+% Bibliography
+%==============================================================================
+
+\begin{thebibliography}{99}
+
+\bibitem{Davis1979}
+P.~J. Davis,
+\emph{Circulant Matrices},
+Wiley, New York, 1979.
+
+\bibitem{GolubitskyStewartSchaeffer1988}
+M. Golubitsky, I. Stewart, and D.~G. Schaeffer,
+\emph{Singularities and Groups in Bifurcation Theory, Vol. II},
+Applied Mathematical Sciences, Vol.~69, Springer, 1988.
+
+\bibitem{GolubitskyStewart2002}
+M. Golubitsky and I. Stewart,
+\emph{The Symmetry Perspective: From Equilibrium to Chaos in Phase Space and
+Physical Space},
+Birkh\"auser, 2002.
+
+\bibitem{Huguet2014}
+G. Huguet, J. Rinzel, and J.-M. Hup\'e,
+Noise and adaptation in multistable perception: Noise drives when to switch,
+adaptation determines percept choice,
+\emph{Journal of Vision} \textbf{14} (2014), no.~3, Article~19.
+
+\bibitem{WangKilpatrickJosic2020}
+Y. Wang, Z.~P. Kilpatrick, and K. Josi\'c,
+A hierarchical model of perceptual multistability involving interocular
+grouping,
+working manuscript, 2020.
+
+\bibitem{Milo2002}
+R. Milo, S. Shen-Orr, S. Itzkovitz, N. Kashtan, D. Chklovskii, and U. Alon,
+Network motifs: Simple building blocks of complex networks,
+\emph{Science} \textbf{298} (2002), 824--827.
+
+\bibitem{Alon2007}
+U. Alon,
+Network motifs: Theory and experimental approaches,
+\emph{Nature Reviews Genetics} \textbf{8} (2007), 450--461.
+
+\bibitem{Kaptchuk2000}
+T.~J. Kaptchuk,
+\emph{The Web That Has No Weaver: Understanding Chinese Medicine},
+revised edition, McGraw--Hill, 2000.
+
+\bibitem{Porkert1990}
+M. Porkert,
+\emph{The Theoretical Foundations of Chinese Medicine},
+MIT Press, 1990.
+
+\bibitem{Lin2020}
+% TODO: Replace this placeholder with the full verified bibliographic entry.
+Lin and Han,
+\emph{[Title and publication details to be verified]},
+2020.
+
+\bibitem{Nian2025}
+% TODO: Replace this placeholder with the full verified bibliographic entry.
+Nian and Li,
+\emph{[Title and publication details to be verified]},
+2025.
+
+\bibitem{NeiJing}
+% TODO: Supply a precise edition, translator, chapter, and page references.
+\emph{Huangdi Neijing} (黄帝内经),
+classical source; edition and translation to be specified.
+
+\bibitem{NanJing}
+% TODO: Supply a precise edition, translator, chapter, and page references.
+\emph{Nanjing} (难经),
+classical source; edition and translation to be specified.
+
+\end{thebibliography}
+
+\end{document}

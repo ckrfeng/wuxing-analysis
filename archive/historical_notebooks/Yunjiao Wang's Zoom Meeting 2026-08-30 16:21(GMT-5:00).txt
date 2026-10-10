@@ -1,0 +1,236 @@
+15:21:35 --> 15:21:42
+Yunjiao Wang: So we need to check each step. And if the like, the motifs.
+
+15:21:42 --> 15:21:48
+Yunjiao Wang: step I feel is really needed because so that we can guarantee that it works.
+
+15:21:49 --> 15:22:02
+Yunjiao Wang: for each, like, follow each principle. So I think that that should be the first step we should do. So I think one node is easily done. It's simple.
+
+15:21:50 --> 15:21:51
+Carter Feng: Okay.
+
+15:22:02 --> 15:22:04
+Yunjiao Wang: And two nodes.
+
+15:22:04 --> 15:22:15
+Yunjiao Wang: That we have to satisfy this, like, what we learned, what we learned about the traditional medicine. So if that works, then you go to the three nodes.
+
+15:22:15 --> 15:22:20
+Yunjiao Wang: and still works, and we connect everything together, then we'll be done.
+
+15:22:19 --> 15:22:21
+Carter Feng: Okay.
+
+15:22:20 --> 15:22:22
+Yunjiao Wang: Yeah.
+
+15:22:21 --> 15:22:23
+Carter Feng: So…
+
+15:22:23 --> 15:22:29
+Carter Feng: Do you think I should just figure out, like, the stability part for the next week?
+
+15:22:29 --> 15:22:35
+Yunjiao Wang: Oh, use the one you discussed in the beginning. Compare all of them.
+
+15:22:29 --> 15:22:31
+Carter Feng: And then…
+
+15:22:34 --> 15:22:36
+Carter Feng: Yeah.
+
+15:22:35 --> 15:22:42
+Yunjiao Wang: Yeah, yeah, I think you already get halfway, so you just need to run the randomness.
+
+15:22:42 --> 15:22:43
+Carter Feng: Yeah.
+
+15:22:42 --> 15:22:48
+Yunjiao Wang: So the answer will be fine. Yeah. And it's, I feel it's quite interesting. Yeah.
+
+15:22:45 --> 15:22:46
+Carter Feng: Okay.
+
+15:22:48 --> 15:22:55
+Carter Feng: Okay, so I'll just, like, for this week, I'll just try to make sure everything that's been in this is accurate, and then…
+
+15:22:55 --> 15:23:02
+Carter Feng: We'll just… I'll just implement, like, a random… randomized parameter way, and then…
+
+15:23:00 --> 15:23:02
+Yunjiao Wang: Mmm.
+
+15:23:03 --> 15:23:06
+Carter Feng: Would you just want it to, like, continually…
+
+15:23:06 --> 15:23:08
+Carter Feng: have the graphs…
+
+15:23:08 --> 15:23:11
+Carter Feng: And then write the parameters and then.
+
+15:23:11 --> 15:23:16
+Carter Feng: Show the stability differently, compare it? Is that what is recommended?
+
+15:23:16 --> 15:23:31
+Yunjiao Wang: So I think what's the end result should be like, you have the percentage right on the… you show one, then you already have one, that's good enough. You cannot put all the, like, graph. You can maybe… for sanity checking, you print a few…
+
+15:23:21 --> 15:23:23
+Carter Feng: Yeah.
+
+15:23:31 --> 15:23:35
+Yunjiao Wang: But overall, you will have the, um…
+
+15:23:35 --> 15:23:43
+Yunjiao Wang: the percentage, so we say how much percentage this one is much bigger than that one, bigger than that, and that will be enough.
+
+15:23:36 --> 15:23:38
+Carter Feng: Thank you.
+
+15:23:40 --> 15:23:41
+Carter Feng: Okay.
+
+15:23:44 --> 15:23:46
+Carter Feng: Alright, okay.
+
+15:23:46 --> 15:23:53
+Carter Feng: And then, like, uh… I know that they're… when they're checking for the Lyapunov exponents and looking at the eigenvalues.
+
+15:23:54 --> 15:24:01
+Carter Feng: sometimes there's, like, large differences between the calculated in Python and what they calculated.
+
+15:24:01 --> 15:24:03
+Carter Feng: Do you think I should just, like…
+
+15:24:04 --> 15:24:10
+Carter Feng: In most cases, just assume that the code has a problem, and just redo, and…
+
+15:24:10 --> 15:24:15
+Carter Feng: do it until that they've gotten… until I've gotten the same value as them, or…
+
+15:24:15 --> 15:24:22
+Yunjiao Wang: So, oh, the code calculates the Jacobian for you, or you did the Jacobian by yourself?
+
+15:24:21 --> 15:24:25
+Carter Feng: Oh, the code can also calculate the…
+
+15:24:24 --> 15:24:30
+Yunjiao Wang: I feel that part you might do by yourself. I mean, we can…
+
+15:24:27 --> 15:24:29
+Carter Feng: Okay.
+
+15:24:30 --> 15:24:33
+Yunjiao Wang: Jacobian, we can type in Jacobian.
+
+15:24:33 --> 15:24:39
+Yunjiao Wang: The matrix. Oh, that will be a function.
+
+15:24:33 --> 15:24:35
+Carter Feng: Okay.
+
+15:24:38 --> 15:24:43
+Carter Feng: Because the Jacobian calc — or the Jacobian calculation should be like —.
+
+15:24:43 --> 15:24:59
+Yunjiao Wang: It's easy by hand, but I'm not sure how, how do in the, in the matrix, then you have a dependent function, so that will be all your input will be how huge in, or XY, X2, X3, that's fine. So you have, um.
+
+15:24:45 --> 15:24:46
+Carter Feng: Yeah.
+
+15:25:00 --> 15:25:03
+Yunjiao Wang: Uh, yeah, so you have 25.
+
+15:25:04 --> 15:25:06
+Yunjiao Wang: Basic identifier component.
+
+15:25:07 --> 15:25:09
+Yunjiao Wang: And then you have to…
+
+15:25:10 --> 15:25:12
+Yunjiao Wang: It was at the pub.
+
+15:25:12 --> 15:25:17
+Yunjiao Wang: Well, I never did this as a magic function, so that's kind of a lot of work.
+
+15:25:17 --> 15:25:19
+Yunjiao Wang: Oh.
+
+15:25:19 --> 15:25:25
+Yunjiao Wang: And ask, so they have the eigenvalue calculator, eigenvalue automatic.
+
+15:25:25 --> 15:25:31
+Yunjiao Wang: But, uh, yeah, I can help you check the code, because I try to make sure.
+
+15:25:32 --> 15:25:38
+Yunjiao Wang: But Claude AI seems to did a very good job, but we still need to check.
+
+15:25:32 --> 15:25:34
+Carter Feng: Okay.
+
+15:25:36 --> 15:25:41
+Carter Feng: Yeah, we need to check, yeah. I will send you the code in, like.
+
+15:25:41 --> 15:25:45
+Carter Feng: Gmail, because I think it's kind of difficult to manage on Colab.
+
+15:25:45 --> 15:25:48
+Yunjiao Wang: Oh, oh, I see, okay.
+
+15:25:47 --> 15:25:49
+Carter Feng: Yeah, okay.
+
+15:25:49 --> 15:25:50
+Yunjiao Wang: Okay.
+
+15:25:49 --> 15:25:54
+Carter Feng: So I'll just, I'll figure out randomization. I'll try to go over the code and then, um.
+
+15:25:55 --> 15:26:00
+Carter Feng: Yeah, maybe we'll change to like a manual matrix Jacobian calculation.
+
+15:25:58 --> 15:26:03
+Yunjiao Wang: Hmm, at least for few of them, so that.
+
+15:26:03 --> 15:26:06
+Carter Feng: We can make sure that they're… yeah.
+
+15:26:04 --> 15:26:05
+Yunjiao Wang: Okay.
+
+15:26:05 --> 15:26:13
+Yunjiao Wang: Yeah, yeah, because I feel like a routine should be the same. So if I, if we check like one or two, as long as.
+
+15:26:14 --> 15:26:19
+Yunjiao Wang: Not a special case. On a special case, then it should be okay.
+
+15:26:19 --> 15:26:20
+Carter Feng: Okay.
+
+15:26:20 --> 15:26:30
+Yunjiao Wang: Yeah. Okay. All right. Yeah, I think this one thing probably need to be careful about if the eigenvalues are very small.
+
+15:26:20 --> 15:26:21
+Carter Feng: Sounds good.
+
+15:26:30 --> 15:26:34
+Yunjiao Wang: then probably 0, so I guess that part…
+
+15:26:34 --> 15:26:39
+Yunjiao Wang: they should put on tolerance, I don't know if they have that.
+
+15:26:39 --> 15:26:45
+Carter Feng: Oh, they just said it, like, I think it's just a matter of if it's close enough to zero, then they just count that as zero.
+
+15:26:39 --> 15:26:40
+Yunjiao Wang: Like…
+
+15:26:44 --> 15:26:51
+Yunjiao Wang: Yeah, that would be good enough. I think, I'm afraid it's not count as zero.
+
+15:26:51 --> 15:26:53
+Carter Feng: Hmm, okay.
+
+15:26:54 --> 15:26:56
+Carter Feng: Sounds good.

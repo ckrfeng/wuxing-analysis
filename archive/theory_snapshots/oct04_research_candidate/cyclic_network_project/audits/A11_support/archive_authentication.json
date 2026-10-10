@@ -1,0 +1,40 @@
+[
+  {
+    "path": "cyclic_network_project_P11_draft.zip",
+    "sha256": "8513c67effa28b825b52052e2c9333282f663b1031610ea150e58aeb16b58ad5",
+    "bytes": 8104205,
+    "members": 200,
+    "crc": "PASS",
+    "working_file_differences": []
+  },
+  {
+    "path": "output/p11/cyclic_network_project_P11_draft.zip",
+    "sha256": "8513c67effa28b825b52052e2c9333282f663b1031610ea150e58aeb16b58ad5",
+    "bytes": 8104205,
+    "members": 200,
+    "crc": "PASS",
+    "working_file_differences": []
+  },
+  {
+    "path": "output/p10/cyclic_network_project_P10_audited.zip",
+    "sha256": "e0ecae17063fced8ed0a6ebb6fcf44456d5c22065f51059274a0231659dcaaf5",
+    "bytes": 7919897,
+    "members": 199,
+    "crc": "PASS",
+    "working_file_differences": [
+      "cyclic_network_project/claim_registry.md",
+      "cyclic_network_project/project_manifest.md",
+      "cyclic_network_project/proofs/P11_hopf_spectral_conditions.tex",
+      "cyclic_network_project/proofs_compendium.pdf",
+      "cyclic_network_project/proofs_compendium.tex"
+    ]
+  },
+  {
+    "path": "output/p11/P11_validation_support.zip",
+    "sha256": "3fc91d1788cbbbec0ecdd0f8df972481a7133e6a87ce0f44bdcacf187d8ad18d",
+    "bytes": 3341232,
+    "members": 36,
+    "crc": "PASS",
+    "working_file_differences": null
+  }
+]

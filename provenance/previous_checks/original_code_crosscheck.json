@@ -1,0 +1,452 @@
+{
+  "scope": "Original reviewed function definitions; no full notebook or XPP execution.",
+  "function_results": [
+    {
+      "source": "chat block 4; fence at line 1363",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 4; fence at line 1363",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 11; fence at line 1681",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 5.281532376780497e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 87
+      }
+    },
+    {
+      "source": "chat block 11; fence at line 1681",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 7.105427357601002e-15,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 4.720476032204232e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 99
+      }
+    },
+    {
+      "source": "chat block 16; fence at line 1980",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 3.552713678800501e-15,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 16; fence at line 1980",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 3.552713678800501e-15,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 18; fence at line 2111",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 5.551115123125783e-17,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 3.4654098131472424e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 90
+      }
+    },
+    {
+      "source": "chat block 18; fence at line 2111",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 3.722448039650085e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 100
+      }
+    },
+    {
+      "source": "chat block 26; fence at line 2614",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 6.94933192226073e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 88
+      }
+    },
+    {
+      "source": "chat block 26; fence at line 2614",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 3.608224830031759e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 99
+      }
+    },
+    {
+      "source": "chat block 33; fence at line 3015",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 4.440892098500626e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 84
+      }
+    },
+    {
+      "source": "chat block 33; fence at line 3015",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 4.851327589061738e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 98
+      }
+    },
+    {
+      "source": "chat block 44; fence at line 3749",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 3.552713678800501e-15,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 3.4691969269928685e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 81
+      }
+    },
+    {
+      "source": "chat block 44; fence at line 3749",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 5.384481663831287e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 100
+      }
+    },
+    {
+      "source": "chat block 47; fence at line 3991",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 1.4210854715202004e-14,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 47; fence at line 3991",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 2.842170943040401e-14,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 49; fence at line 4146",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 49; fence at line 4146",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 58; fence at line 4725",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 6.031762062469513e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 89
+      }
+    },
+    {
+      "source": "chat block 58; fence at line 4725",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 4.440892098500626e-16
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 100
+      }
+    },
+    {
+      "source": "chat block 60; fence at line 5185",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 1.0658141036401503e-14,
+        "equilibrium_residual": 6.31726629210595e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 87
+      }
+    },
+    {
+      "source": "chat block 61; fence at line 5264",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 0.0,
+        "equilibrium_residual": 6.758595304441755e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 0,
+        "equilibrium_residual": 90
+      }
+    },
+    {
+      "source": "chat block 63; fence at line 5428",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 3.552713678800501e-15,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "chat block 64; fence at line 5516",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 1.4210854715202004e-14,
+        "jacobian": 3.552713678800501e-15,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 5",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 1.4210854715202004e-14,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 5",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 1.4210854715202004e-14,
+        "jacobian": 0.0,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 100,
+        "jacobian": 0,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 7",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 0.0,
+        "equilibrium_residual": 4.440892098500626e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 0,
+        "equilibrium_residual": 87
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 7",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 0.0,
+        "equilibrium_residual": 4.440892098500626e-16
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 0,
+        "equilibrium_residual": 100
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 9",
+      "model": "sat",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    },
+    {
+      "source": "WuXing_Commented.ipynb cell 9",
+      "model": "lin",
+      "maximum_errors": {
+        "rhs": 0.0,
+        "jacobian": 7.105427357601002e-15,
+        "equilibrium_residual": 0.0
+      },
+      "counts": {
+        "rhs": 0,
+        "jacobian": 100,
+        "equilibrium_residual": 0
+      }
+    }
+  ],
+  "mode_results": [
+    {
+      "source_line": 5185,
+      "function": "closed_form",
+      "count": 853,
+      "max_error": 8.881784197001252e-15
+    },
+    {
+      "source_line": 5264,
+      "function": "modes",
+      "count": 869,
+      "max_error": 7.993605777301127e-15
+    }
+  ],
+  "extended_rhs_max_error": 1.4210854715202004e-14,
+  "xpp_equation_results": [
+    {
+      "file": "wuxing_full.ode",
+      "count": 100,
+      "max_error": 0.0
+    },
+    {
+      "file": "wuxing_no_wu.ode",
+      "count": 100,
+      "max_error": 0.0
+    }
+  ]
+}

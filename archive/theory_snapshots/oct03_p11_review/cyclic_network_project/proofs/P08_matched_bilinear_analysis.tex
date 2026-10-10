@@ -1,0 +1,871 @@
+% STATUS: VERIFIED / AUDITED
+% FINAL DISPOSITION: VERIFIED / AUDITED AFTER MINOR REVISION
+% AUDIT FILE: audits/A08_matched_bilinear_analysis.tex
+% ORIGINAL AUDIT VERDICT:
+%   MB FOUNDATION VERIFIED
+%   MB SPECTRAL VERIFIED
+%   SAME-TUPLE COMPARISON MINOR REVISION
+%   PARITY/OBSTRUCTION VERIFIED
+%   OVERALL MINOR REVISION
+% AUDIT CLOSURE: A08 E01 applied verbatim; no other body change.
+% ORIGINAL AUDITED VERSION: P08 v1.0; 2026-10-03; 39287 bytes; 846 lines
+% ORIGINAL AUDITED FULL-FILE SHA-256: d21a77de84df4c40c2995d30ab740130795adca6c72f52fef9453ad5ddfb18ac
+% ORIGINAL AUDITED BODY SHA-256: 3c4393e8a8285f946a67634addbd71d617985f7f153f4963fdcbde90ca123a0d
+% CURRENT VERSION: P08 v1.1; 2026-10-03
+% CURRENT BODY SHA-256: 67909444bd10dde10f2784db560e7ffb4165f34b63c0a72a356a35d38ba4cc85
+% CURRENT HASH: full-file SHA-256 recorded in project_manifest.md and
+%   audit_closure_report.txt, avoiding a self-referential file hash.
+% BODY HASH SCOPE: bytes from first line-anchored section command through EOF.
+% CLOSURE DATE: 2026-10-03
+% SOLE ISSUE E01: original lines 534-535; n=8 MB representative 2, labels 2,6.
+% PRESERVATION: all theorem statements, proofs, formulas, witnesses unchanged.
+% STATUS NOTE: historical DRAFT/audit-pending prose in the body is retained;
+%   this header and current manifest govern lifecycle status.
+% VALIDATION PROVENANCE: A08 located and exactly reproduced the original
+%   P08 validation companion; no validation checker rerun during closure.
+% DOWNSTREAM: P07 cleared to begin, but not begun; later modules untouched.
+% DEPENDS ON: P01-P05 VERIFIED / AUDITED
+% MODELS: canonical DM and primary matched MB
+% PRIMARY COMPARISON: same positive coefficient tuple, own positive synchronous
+%                     equilibrium in each model
+% NOVELTY ROLE: MAIN THEOREM TARGET if substantive qualitative contrast proved
+% NUMERICAL DEPENDENCIES: none
+% NEXT DEPENDENCIES: P07, P09/P10, P11
+% BASELINE: cyclic_network_project_P05_audited.zip; 98 authenticated members.
+% EXCLUSIONS: no later module, first-crossing, Hopf, l1 or six-term theorem.
+% CLAIMS: C053-C063 as scoped in registry; P08-D1-P08-D9. C064/C065 deferred.
+
+\section{P08: Matched bilinear analysis and exact comparison}
+\label{sec:P08}
+\noindent\textbf{Status: DRAFT; independent A08 audit required.}
+All coefficients are strictly positive, $n\ge5$, $1\le q<n$, and indices
+are modulo $n$. The comparator is exactly the five-parameter model
+\eqref{eq:canonical-mb}. The same tuple $(a,k,c,g,h)$, $n,q$ and time
+variable are used in DM and MB; each equilibrium amplitude is derived
+for its own equation. Only current audited P01--P05 are imported.
+Their historical DRAFT body sentences are superseded by their current
+headers and audit-closure records.
+
+The substantive results are open same-tuple stability contrasts in both
+directions at $n=7$, a universal forward contrast, and realization of
+every ordered pair of reachable dominant representatives with both
+models stable. None is a first-instability, Hopf, criticality, or
+literature-priority theorem. Here ``strictly stable'' means Hurwitz;
+``unstable'' means a strictly positive spectral abscissa. Zero abscissa
+is treated separately. Selection maximizes over all labels, including
+zero, retaining every maximal tie.
+
+\subsection{MB local flow, synchrony, and synchronous growth}
+\label{slot:P08-1}
+Put $S=g+h>0$ and $M=k+S-c$; the subspace remains denoted by $\Sync$.
+\begin{theorem}[MB foundation]
+\label{thm:P08-foundation}
+For arbitrary canonical $(n,q)$ the following hold.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item MB has a unique maximal classical solution through every point of
+$\R^n$. Every coordinate face is invariant. Nonnegative initial data
+stay nonnegative, and initially positive coordinates remain strictly
+positive on the maximal interval. No uniform asymptotic lower bound
+is meant by this finite-time positivity statement.
+\item $\Sync$ is invariant, with exact restriction
+\begin{equation}
+ \dot s=as-Ms^2.\label{eq:P08-scalar}
+\end{equation}
+The real synchronous equilibria are $0,a/M$ if $M\ne0$, and only $0$
+if $M=0$. A positive synchronous equilibrium exists if and only if
+$M>0$, and is uniquely $y^*=a/M$. For $M<0$ the nonzero root is negative.
+\item For $s_0>0,M>0$, synchronous dynamics are global,
+$0<s(t)\le\max(s_0,a/M)$ and $s(t)\to a/M$. For $M=0$ they are
+$s(t)=s_0e^{at}$, global and unbounded. For $M<0$ they blow up at
+\begin{equation}
+ t_b=\frac1a\log\left(1+\frac{a}{|M|s_0}\right).
+ \label{eq:P08-blowup}
+\end{equation}
+These classify nonnegative synchronous dynamics, not all MB trajectories.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The polynomial field is smooth and locally Lipschitz on $\R^n$, so
+local existence, uniqueness, continuous dependence and maximal
+continuation apply. On the coordinate face $y_i=0$, direct substitution
+in the original five terms gives $F_i^{\MB}(y)=0$, even when other
+coordinates are negative. Along any solution the integrating-factor
+identity is
+\begin{equation}
+ y_i(t)=y_i(0)\exp\int_0^t
+ [a-ky_i(r)+cy_{i-1}(r)-gy_{i+q}(r)-hy_{i-q}(r)]\,dr.
+ \label{eq:P08-coordinate}
+\end{equation}
+The integrand is continuous on each compact subinterval of the maximal
+interval. The identity holds also for zero initial coordinates and
+proves sign preservation and face invariance without assuming global
+existence.
+
+At $y=s\one$, each component of the original field is
+$as-ks^2+cs^2-gs^2-hs^2=as-Ms^2$. The scalar solution lifts to a
+vector solution, uniqueness identifies the two, and continuation makes
+their maximal intervals coincide. Zeros of $s(a-Ms)$ give the complete
+synchronous equilibrium list, retaining zero before division. For
+$s_0>0$, solve $(1/s)'=-a/s+M$ to obtain
+\begin{equation}
+ s(t)=\frac{s_0e^{at}}{1+(Ms_0/a)(e^{at}-1)}.\label{eq:P08-logistic}
+\end{equation}
+For $M>0$ the denominator stays positive and the bound and limit follow;
+for $M=0$ it is one; for $M<0$ its first zero is exactly
+\eqref{eq:P08-blowup}, approached from above with positive numerator.
+The zero initial state stays zero in every case.
+\end{proof}
+
+\subsection{Sufficient full-system bounds and their scope}
+\label{slot:P08-3}
+\begin{proposition}[Maximum comparison]
+\label{prop:P08-bounds}
+For nonnegative MB solutions and $Y=\max_i y_i$,
+\begin{equation}
+ D^+Y\le aY-(k-c)Y^2.\label{eq:P08-maximum}
+\end{equation}
+Thus $k\ge c$ suffices for global nonnegative existence. If $k>c$,
+put $R=a/(k-c)$. Then $Y(t)\le\max\{Y(0),R\}$, $[0,R]^n$ is
+invariant and uniformly attracts bounded subsets, and every
+$[0,R+\varepsilon]^n$, $\varepsilon>0$, absorbs bounded subsets in
+finite time. MB is therefore dissipative in this sufficient regime.
+The comparison alone asserts neither finite-time absorption into the
+exact cube $[0,R]^n$ nor boundedness when $k=c$.
+\end{proposition}
+\begin{proof}
+Apply the generic finite-maximum identity of Lemma~\ref{lem:P01-max}.
+At any maximizing coordinate $y_i=Y$, all neighbors lie in $[0,Y]$,
+so $cy_i y_{i-1}\le cY^2$ and both inhibitory terms are nonpositive.
+This includes tied maxima and coincident offsets. For $k\ge c$, the
+inequality gives $Y(t)\le Y(0)e^{at}$, excluding finite-time escape;
+polynomial continuation yields global existence. For $k>c$, logistic
+comparison bounds $Y$ and proves invariance. A logistic solution
+starting from the supremum of any bounded set of initial maxima
+converges to $R$ and enters $[0,R+\varepsilon]$ in finite time,
+proving the uniform attraction and absorption assertions.
+\end{proof}
+Consequently $M>0$ is necessary for boundedness of every nonnegative
+MB trajectory, and $M\ge0$ is necessary for global existence of every
+such trajectory, by the synchronous counterexamples. No converse is
+inferred. In particular existence of positive synchrony is not used to
+assert full-system boundedness. The sufficient condition $k>c$ is not
+necessary, as an explicit example below will prove.
+
+\subsection{Homogeneous MB Jacobian and arbitrary-offset spectrum}
+\label{slot:P08-4}
+At $y=s\one$, differentiate the original field before using equilibrium.
+None of $i-1,i+q,i-q$ equals $i$ in the canonical range, so the diagonal is
+\[
+ d_{\MB}(s)=a-2ks+cs-gs-hs=a-(k+M)s.
+\]
+The three off-diagonal contributions are $cs,-gs,-hs$. Therefore
+\begin{equation}
+ DF^{\MB}(s\one)=[a-(k+M)s]I+s(cP-gP^{-q}-hP^q).
+ \label{eq:P08-state-J}
+\end{equation}
+In full, with row $i$ and column $j$, the general derivative entry is
+\[
+ [a-2ky_i+cy_{i-1}-gy_{i+q}-hy_{i-q}]\delta^{(n)}_{ji}
+ +cy_i\delta^{(n)}_{j,i-1}-gy_i\delta^{(n)}_{j,i+q}
+ -hy_i\delta^{(n)}_{j,i-q}.
+\]
+Coincident columns add; none is overwritten. At $y^*=a/M>0$ use
+$a=My^*$ only now, giving $d_{\MB}=-ky^*$.
+
+\begin{theorem}[Full MB spectrum, normality, and uniform direction]
+\label{thm:P08-spectrum}
+For $M>0$, positive MB synchrony has
+\begin{align}
+ J_{\MB}&=y^*[-kI+cP-gP^{-q}-hP^q],\label{eq:P08-J}\\
+ \lambda_m^{\MB}&=y^*[-k+ce^{-\ii\theta_m}-ge^{\ii q\theta_m}
+                           -he^{-\ii q\theta_m}],\label{eq:P08-spectrum}\\
+ \Ree\lambda_m^{\MB}&=y^*[-k+c\cos\theta_m-S\cos(q\theta_m)],
+ \label{eq:P08-real}\\
+ \Imm\lambda_m^{\MB}&=y^*[-c\sin\theta_m+(h-g)\sin(q\theta_m)].
+ \label{eq:P08-imag}
+\end{align}
+The $n$ Fourier labels give the full spectrum with algebraic multiplicity;
+$J_{\MB}$ is normal and unitarily diagonalized by the project's DFT.
+In particular
+\begin{equation}
+ \boxed{\lambda_0^{\MB}=-a<0.}\label{eq:P08-uniform}
+\end{equation}
+Any linear instability at positive MB synchrony involves a nonuniform
+mode. This does not classify a bifurcation as Hopf or steady.
+\end{theorem}
+\begin{proof}
+The preceding differentiation proves the matrix identity. In the verified
+convention $P^\ell v^{(m)}=e^{-\ii\ell\theta_m}v^{(m)}$. Applying
+these powers yields the stated spectrum, including the negative
+coefficient on the positive-phase $g$ term. Euler's formula gives the
+real and imaginary parts; the imaginary contributions are
+$-c\sin\theta_m,-g\sin(q\theta_m),+h\sin(q\theta_m)$.
+The DFT is unitary by the generic geometric-sum proof in P04, whence
+$J_{\MB}=\Fourier\diag(\lambda_m^{\MB})\Fourier^*$, proving the
+full multiplicity statement and normality. Independently, $J_{\MB}$
+and its adjoint are sums of mutually commuting powers of the unitary
+shift, so they commute.
+
+For the first check of the uniform value, Fourier substitution at $m=0$
+gives $y^*(-k+c-g-h)=-My^*=-a$. For a second independent check,
+the derivative of the scalar restriction is $a-2Ms$, equal to $-a$
+at $s=a/M$. Its tangent vector is $\one$, so it is precisely the
+uniform eigenvalue. Its strict negativity proves the instability claim.
+\end{proof}
+
+The complete offset-collision checks, using P03/P04 only for their
+index geometry, are
+\[
+\begin{array}{c|l}
+q=1&J_{\MB}/y^*=-kI+(c-h)P-gP^{-1}\\
+q=n-1&J_{\MB}/y^*=-kI+(c-g)P-hP^{-1}\\
+q=n/2\ (n\text{ even})&J_{\MB}/y^*=-kI+cP-SP^{n/2}.
+\end{array}
+\]
+Their imaginary parts are respectively
+$y^*(-c+h-g)\sin\theta_m$, $y^*(-c+g-h)\sin\theta_m$, and
+$-y^*c\sin\theta_m$. The last real restraint term is $-y^*S(-1)^m$.
+Each also follows from the master spectrum, with cancellation retained.
+For even $n$, the singleton is
+$\lambda_{n/2}^{\MB}=y^*[-k-c-S(-1)^q]$; the uniform value is
+unchanged in every collision case. Label conjugacy and semisimplicity
+follow from the real circulant matrix and its unitary diagonalization;
+a pair may have zero imaginary part or share an eigenvalue with other
+labels. No numerical-eigenvalue simplicity is inferred from label counts.
+
+\begin{corollary}[Exact stability and another sufficient global bound]
+\label{cor:P08-stability}
+Define
+\begin{equation}
+ K_{n,q}(c,S)=\max_{0\le m<n}[c\cos\theta_m-S\cos(q\theta_m)].
+ \label{eq:P08-K}
+\end{equation}
+At positive MB synchrony, strict stability is equivalent to $k>K_{n,q}$,
+and instability to $k<K_{n,q}$. At equality the normal linear system
+is Lyapunov stable but not asymptotically stable; nonlinear stability is
+undecided here. Hyperbolicity requires every real part to be nonzero,
+not merely a nonzero maximum.
+
+Moreover $k>K_{n,q}$ itself implies $M>0$, global boundedness and
+dissipativity for nonnegative MB data. This is another sufficient bound,
+not a necessary condition or an identification with $k>c$.
+\end{corollary}
+\begin{proof}
+The abscissa is $y^*(K_{n,q}-k)$ and unitary diagonalization gives
+$\|e^{tJ_{\MB}}\|_2=e^{t\sa(J_{\MB})}$, proving the linear claims.
+For the bound put $\delta=k-K_{n,q}>0$, $V=\sum_i y_i$. Summing the
+original equations yields
+\begin{equation}
+ V'=aV+y^{\mathsf T}[-kI+cP-gP^{-q}-hP^q]y
+ \le aV-\delta\|y\|_2^2\le aV-\frac\delta nV^2.
+ \label{eq:P08-sum}
+\end{equation}
+The symmetric part of the displayed matrix has eigenvalues
+$-k+c\cos\theta_m-S\cos(q\theta_m)\le-\delta$, and its skew part
+contributes zero to the real quadratic form. Logistic comparison bounds
+$V$ before any maximal endpoint and proves global continuation.
+The simplex $V\le na/\delta$ attracts bounded subsets, and every
+strictly larger one absorbs them. Finally $K_{n,q}\ge c-S$ by its
+zero label, so $M>0$.
+\end{proof}
+For example, for $q=2$ the tuple $(9/2,7,8,1,1)$ has $K_{n,2}=6$
+for every $n\ge5$: $2+8u-4u^2$ uniquely maximizes at $u=1$ on the
+grid. MB is dissipative although $k=7<c=8$. Its own root is $y^*=9/2$,
+whereas DM's unique positive root is $x^*=1$. Direct original residuals
+are $9/2-8+7/2=0$ for DM after division by $x^*$, and
+$9/2-(9/2)=0$ for MB after division by $y^*$. This refutes necessity
+of $k>c$. Conversely, $k>c$ need not imply spectral stability when
+$S$ is large, so the sufficient bounds have different scopes.
+
+\subsection{Exact step-two MB selected-mode rule}
+\label{slot:P08-2}
+Set $q=2$ and $u_m=\cos\theta_m$. Since $\cos(2\theta)=2u^2-1$,
+\begin{align}
+ p(u_m):=\Ree\lambda_m^{\MB}/y^*&=-k+S+cu_m-2Su_m^2,
+ \label{eq:P08-quadratic}\\
+ p(u)&=-k+S+\frac{c^2}{8S}-2S(u-v_{\MB})^2,\nonumber\\
+ v_{\MB}&=\frac{c}{4S}=\frac1{\chi_{\MB}},\qquad
+ \chi_{\MB}=\frac{4S}{c}>0.\label{eq:P08-vertex}
+\end{align}
+This is always strictly concave, $p''=-4S<0$. The unconstrained vertex
+is $v_{\MB}$; on $[-1,1]$ the continuous maximizer is
+$\min(1,v_{\MB})$. Its departure from $1$ need not switch a discrete mode.
+
+Use P05's notation
+\[
+ N=\lfloor n/2\rfloor,\quad u_j=\cos(2\pi j/n),\quad
+ \beta_j=(u_j+u_{j+1})/2,\quad J=\lfloor(n+1)/4\rfloor,
+ \quad\alpha_j=1/\beta_j\ (0\le j<J).
+\]
+P05 proves $\beta_j=\cos(\pi/n)\cos((2j+1)\pi/n)$ and exactly
+$\beta_0,\ldots,\beta_{J-1}>0$. Its nearest-grid-cell argument,
+midpoint ordering, parity and label bookkeeping are generic finite-grid
+facts. Its DM realization theorem is not an MB realization proof.
+
+\begin{theorem}[MB cells, all ties, reachability, and cell stability]
+\label{thm:P08-selection}
+On $M>0$, the complete MB representative selection is
+\begin{equation}
+\begin{array}{c|c}
+0<\chi_{\MB}<\alpha_0&\{0\}\\
+\alpha_{j-1}<\chi_{\MB}<\alpha_j\ (1\le j<J)&\{j\}\\
+\chi_{\MB}>\alpha_{J-1}&\{J\}\\
+\chi_{\MB}=\alpha_j\ (0\le j<J)&\{j,j+1\}.
+\end{array}\label{eq:P08-cells}
+\end{equation}
+The middle row is empty for $J=1$. Equivalently, closed vertex cells are
+$[\beta_0,\infty)$, $[\beta_j,\beta_{j-1}]$ ($1\le j<N$), and
+$(-\infty,\beta_{N-1}]$, intersected with $v_{\MB}>0$.
+Every listed strict cell and tie is realizable with $M>0$; the exact
+reachable representatives are $0,\ldots,J$.
+
+A nonzero selected representative gives $\{j,n-j\}$, while zero is a
+singleton. A tie involving zero gives three labels, other reachable
+ties four. No nonadjacent or triple representative maximum occurs.
+The even Nyquist singleton is excluded. These are label counts, not
+numerical-eigenvalue multiplicities or frequency assertions.
+On the cell for $j$ strict stability is exactly
+\begin{equation}
+ \boxed{k>S+cu_j-2Su_j^2.}\label{eq:P08-cell-stability}
+\end{equation}
+Either selected representative gives the same bound at a tie.
+Reverse strict inequality gives instability and equality gives zero
+abscissa. In the uniform cell, including a maximal tie with zero,
+$M>0$ already makes the maximum $-a<0$.
+\end{theorem}
+\begin{proof}
+Square completion reduces selection to minimizing $|u_j-v_{\MB}|$.
+Apply the generic parts of Theorems~\ref{thm:P05-selection} and
+\ref{thm:P05-reachable}. An independent sign check is
+\[
+ p(u_j)-p(u_{j+1})=c(u_j-u_{j+1})(1-\chi_{\MB}\beta_j),
+\]
+confirming the switch orientation. For MB-specific realizability,
+prescribe any $v>0$, take $g=h=1/2$, $c=4v$,
+$k>\max(0,c-1)$ and any $a>0$. Then $M>0$ and $v_{\MB}=v$.
+Each required strict cell and positive midpoint can be attained; strict
+cells are open by continuity. The grid theorem gives the labels,
+exclusions and ties. Taking the maximum of the derived quadratic proves
+the exact cell-stability test.
+\end{proof}
+The precise parity effects follow from the same generic grid calculation:
+\[
+\begin{array}{c|c|c|c}
+n&J&u_J&\text{nearest representatives at formal vertex }0\\\hline
+4\ell&\ell&0&\ell\\
+4\ell+1&\ell&\sin(\pi/(2n))&\ell\\
+4\ell+2&\ell&\sin(\pi/n)&\ell,\ell+1\\
+4\ell+3&\ell+1&-\sin(\pi/(2n))&\ell+1.
+\end{array}
+\]
+Every finite positive tuple has $v_{\MB}>0$; the formal tie for
+$n=4\ell+2$ is unattainable. Its two real parts differ by
+$2y^*c\sin(\pi/n)>0$. Only the gap divided by $y^*$ is independent
+of $S$; the unnormalized gap need not stay away from zero in parameter
+limits. At fixed $n$, sufficiently large finite $\chi_{\MB}$ uniquely
+selects $J$ in every parity class. No large-$n$ theorem is asserted.
+
+\subsection{Common domain, named branches, and structural comparison}
+\label{slot:P08-5}
+For DM set $A=k+h$, $\mu=a+c-g$, $b=a-A$, and $D=b^2+4A\mu$.
+By audited Theorem~\ref{thm:P02-positive}, the full common existence set is
+\begin{equation}
+\begin{split}
+ \mathcal C=\{(a,k,c,g,h)>0:\ &M>0,\quad
+ [\mu>0\ \text{or}\ (\mu=0,b>0)\\
+ &\text{or}\ (\mu<0,b>0,D\ge0)]\}.
+\end{split}\label{eq:P08-common}
+\end{equation}
+It is not entirely an open set. The branch-labelled comparison pairs
+a tuple with one of its allowed positive DM roots
+$x_\pm=(b\pm\sqrt D)/(2A)$ and the sole MB root $a/M$.
+Most constructions use the open domain
+\begin{equation}
+ \mathcal C_+=\{(a,k,c,g,h)>0:M>0,\ \mu>0\},\qquad x^*=x_+.
+ \label{eq:P08-common-simple}
+\end{equation}
+DM then has exactly one positive synchronous equilibrium; its scalar
+uniform derivative is $-x^*\sqrt D/(1+x^*)<0$ by P04. A separate
+construction below explicitly follows $x_-$ on a two-positive-root domain.
+
+At a specified positive DM equilibrium put $s=1+x^*$. Quote P03--P05:
+\begin{equation}
+\begin{gathered}
+ d=-kx^*-c(1+2x^*)/s^2,\quad C=c/s,\quad G=gx^*/s^2,\quad H=hx^*,\\
+ r_m^{\DM}=d+Cu_m+(G-H)(2u_m^2-1),\\
+ \chi_{\DM}=\frac{4(H-G)}C
+ =\frac{4x^*[h(1+x^*)^2-g]}{c(1+x^*)},\qquad
+ \chi_{\MB}=\frac{4(g+h)}c.
+\end{gathered}\label{eq:P08-DM-input}
+\end{equation}
+DM's parameter can be negative, zero or positive; its positive-vertex
+interpretation applies only if $h>g/s^2$. P05's full selection rule uses
+$\chi_{\DM}<\alpha_0$ for every uniform case. At fixed $k,c,g,h$,
+MB selection is independent of $a$, whereas DM selection can vary with
+$a$ through the equilibrium branch.
+
+\begin{proposition}[Structural functional-form distinctions]
+\label{prop:P08-structural}
+MB real dispersion for $q=2$ is always strictly concave in $u$.
+DM dispersion is strictly convex, linear, or strictly concave according
+as $h<g/(1+x^*)^2$, $h=g/(1+x^*)^2$, or $h>g/(1+x^*)^2$.
+When $h\le g/(1+x^*)^2$, DM uniquely selects zero. All three
+curvature regimes occur in $\mathcal C_+$.
+
+MB has invariant coordinate faces. DM has
+$F_i^{\DM}|_{x_i=0}=cx_{i-1}$ and propagates positivity from any nonzero
+nonnegative initial state by P01. MB's uniform eigenvalue at positive synchrony is
+always $-a$. DM's is $-x^*\sqrt D/s$ on $x_+$,
+$+x^*\sqrt D/s$ on a distinct positive $x_-$, and zero at a positive
+double root.
+
+DM is globally nonnegative and dissipative for the entire canonical
+positive class by P01. MB has the sufficient dissipative regimes above,
+but global unbounded synchronous growth at $M=0$ and finite-time
+synchronous blow-up at $M<0$. Thus the DM functional form is
+structurally dissipative over the entire canonical class, whereas MB is
+not. The growth/blow-up examples are outside $\mathcal C$.
+\end{proposition}
+\begin{proof}
+The second derivatives are $-4y^*S<0$ and $4(G-H)$, respectively;
+use P05 for uniform selection. To realize the three curvature signs,
+set $x^*=1$, $c=g=4$, $k=1$, $a=1+h$, with $h=1/2,1,2$.
+Then $\mu=a>0$, $M=1+h>0$, $y^*=1$, $G-H=1-h$, and both
+original scalar residuals vanish. The face and global statements quote
+P01 and the MB proofs above. The uniform DM values result from inserting
+P02's roots in \eqref{eq:P04-equilibrium-zero-mode}. No full-system
+boundedness is inferred from MB equilibrium existence.
+\end{proof}
+\begin{remark}[Meaning and limits of matching]
+Matching fixes $n,q$, the five positive coefficients, directed offsets
+and coefficient roles, and the original time variable. It does not
+calibrate equilibrium amplitude, local derivatives, empirical behavior,
+or nonlinear response. The successor derivative is positive for DM and
+negative for MB at positive synchrony, despite the negative term in both
+fields. No biological or quantitative-superiority claim follows.
+For a fixed source $z>0$, as receiver $r\downarrow0$, the predecessor
+inputs satisfy $cz/(1+r)\to cz$ for DM and $crz\to0$ for MB.
+This last assertion is only a limit under the explicitly fixed-source
+convention.
+\end{remark}
+
+\subsection{Every ordered dominant-mode pair with both models stable}
+\begin{theorem}[Independent realization of the two selection parameters]
+\label{thm:P08-pair-realization}
+For each fixed $n\ge5,q=2$, every ordered pair
+$(j_{\DM},j_{\MB})\in\{0,\ldots,J\}^2$ occurs with unique selected
+representatives and both equilibria strictly stable on a nonempty open
+subset of $\mathcal C_+$. In particular reverse uniform/nonuniform
+selection is possible; distinct nonuniform/nonuniform pairs are possible
+when $J\ge2$, beginning at $n=7$. This is not a full stability partition.
+\end{theorem}
+\begin{proof}
+Choose positive parameters in the desired strict cells; explicit choices
+for representative $j$ are
+\[
+ z_0=\alpha_0/2,\quad
+ z_j=(\alpha_{j-1}+\alpha_j)/2\ (1\le j<J),\quad
+ z_J=2\alpha_{J-1}.
+\]
+When $J=1$ use only the first and last expressions. Put
+$\eta=z_{j_{\DM}}$, $\zeta=z_{j_{\MB}}$, and define
+\begin{equation}
+\begin{gathered}
+ c=4,\quad S=\zeta,\quad x=1+\eta/\zeta,\quad s=1+x,\\
+ h=\frac{\zeta+s\eta/x}{s^2+1},\quad g=\zeta-h,\\
+ k>\max\{c+S,\ (c-g)/(xs)-h\},\qquad
+ a=(k+h)x-(c-g)/s.
+\end{gathered}\label{eq:P08-pair-construction}
+\end{equation}
+Here $xs>\eta/\zeta$, so $0<h<S$ and $g,h>0$. The bound on $k$
+gives $a>0$ and $M>0$. Further,
+$\mu=x[k+h+(c-g)/s]>0$, since $k>S>g$. Substitution into the
+\emph{original} vector fields gives
+\begin{equation}
+ F_i^{\DM}(x\one)=x[a-(k+h)x+(c-g)/s]=0,\qquad
+ F_i^{\MB}(y^*\one)=y^*(a-My^*)=0.
+ \label{eq:P08-residual-general}
+\end{equation}
+Algebra gives $\chi_{\MB}=\zeta$ and
+$x(hs^2-g)/s=\eta$, hence $\chi_{\DM}=\eta$.
+For all MB labels $\Ree\lambda_m^{\MB}/y^*\le-k+c+S<0$.
+For DM the audited formula gives
+\begin{equation}
+ \frac{r_m^{\DM}}x
+ \le-k-\frac{c}{s^2}+\frac{g}{s^2}+h<-k+S<0.
+ \label{eq:P08-DM-bound}
+\end{equation}
+Indeed the two $c$ contributions after division by $x$ are at most
+$-c/s^2$, and $|g/s^2-h|\le g/s^2+h$. This proves all claimed
+strict inequalities. Openness in all physical parameters, not just this
+displayed family, is proved below.
+\end{proof}
+A rational reverse-selection witness at $n=8$ is
+\begin{equation}
+ (a,k,c,g,h)=(113/4,9,8,1,1),\quad x^*=3,\quad y^*=113/12.
+ \label{eq:P08-reverse-selection-example}
+\end{equation}
+Here $M=3$, $\mu>0$, $\chi_{\MB}=1$ selects $0$, while
+$\chi_{\DM}=45/8>2\sqrt2=\alpha_1$ selects $2$.
+The abscissae are $-443/16$ for DM and $-113/4$ for MB.
+Original residuals after division by the respective amplitudes are
+$113/4-10\cdot3+7/4=0$ and $113/4-3(113/12)=0$.
+
+\subsection{DM stable and MB unstable for every size}
+\begin{theorem}[Universal same-tuple opposite stability]
+\label{thm:P08-forward}
+For each fixed $n\ge5,q=2$, a nonempty open subset of $\mathcal C_+$
+has DM strictly stable with unique dominant representative $0$, while
+MB is unstable with a unique nonzero dominant representative. A single
+rational tuple works for every dimension:
+\begin{equation}
+ \boxed{(a,k,c,g,h)=(1/4,1/8,1,1,1/8).}
+ \label{eq:P08-forward-witness}
+\end{equation}
+At this tuple the independently computed amplitudes happen to be
+$x^*=y^*=1$; amplitude equality is not a comparison assumption.
+\end{theorem}
+\begin{proof}
+All coefficients are positive, $M=1/4$, $\mu=1/4$. At amplitude one
+the original DM residual is $1/4-1/8+1/2-1/2-1/8=0$ and the MB
+residual is $1/4-1/8+1-1-1/8=0$. P02 ensures the unique positive DM
+root. Its coefficients are $d=-7/8,C=1/2,G=1/4,H=1/8$.
+Thus $G-H=1/8>0$, zero is strictly dominant and
+$r_0^{\DM}=-1/4$; every DM real part is negative.
+For MB,
+\[
+ S=9/8,\qquad p(u)=1+u-\frac94u^2,\qquad
+ v_{\MB}=2/9,\qquad\chi_{\MB}=9/2.
+\]
+The parity formulas give $-1/4<u_J\le1/2$.
+In the only negative case $n\equiv3\pmod4$, $n\ge7$ and
+$|u_J|=\sin(\pi/(2n))<\pi/14<1/4$. The other cases give the
+upper bound, attained at $n=6$. Hence the actual finite label $J$ satisfies
+\[
+ p(u_J)\ge1-\frac14-\frac94\left(\frac12\right)^2
+ =\frac3{16}>0.
+\]
+MB is unstable, and its negative uniform eigenvalue excludes zero from
+the selected set. There is no representative tie: a tie would force
+$\beta_j=2/9$, but
+$4\beta_j=2\cos(2\pi j/n)+2\cos(2\pi(j+1)/n)$ is an algebraic
+integer, being a sum of roots of unity and their inverses. The rational
+number $8/9$ is not an integer, whereas every rational algebraic integer
+is an integer (apply the rational-root argument to a monic integer
+polynomial). This excludes a tie. Strict gaps and branch regularity
+give openness by the argument below.
+\end{proof}
+For $n=5,6,7$ this witness selects MB representative $1$; for $n=8$
+it selects representative $2$. Other sizes follow the exact finite-grid
+rule and need not retain either label.
+The instability proof uses a finite Fourier label rather than only a
+positive continuous maximum.
+
+\subsection{Reverse stability: parity obstruction and constructive regions}
+For a positive DM equilibrium write $x=x^*$, $s=1+x$,
+$u=\cos\theta_m$, $w=-\cos(2\theta_m)$. The audited DM formula and
+the derived MB formula give
+\begin{equation}
+ \frac{r_m^{\DM}}x=-k+(h-g/s^2)w
+       -\frac{c(1+2x-su)}{xs^2},\qquad
+ \frac{r_m^{\MB}}{y^*}=-k+Sw+cu.
+ \label{eq:P08-modal-comparison}
+\end{equation}
+Notice $1+2x-su\ge x>0$ for $u\le1$.
+\begin{theorem}[Reverse stability on the unique positive branch]
+\label{thm:P08-reverse}
+On $\mathcal C_+$ with $q=2$, a tuple with DM unstable and MB strictly
+stable exists if and only if $n\equiv3\pmod4$. For every such fixed
+size there is a nonempty open region realizing this contrast, with both
+models uniquely selecting $J$. For all other sizes, MB strict stability
+implies DM strict stability on $\mathcal C_+$.
+\end{theorem}
+\begin{proof}[Proof of the obstruction]
+On $\mathcal C_+$ the uniform DM eigenvalue is strictly negative.
+If $G-H\ge0$, P05 makes it largest, so DM is strictly stable.
+Otherwise $h-g/s^2>0$. A nonnegative DM real part in
+\eqref{eq:P08-modal-comparison} forces $w>0$. If its cosine $u\ge0$,
+\begin{equation}
+ \frac{r_m^{\MB}}{y^*}-\frac{r_m^{\DM}}x
+ =g(1+s^{-2})w+cu+\frac{c(1+2x-su)}{xs^2}>0.
+ \label{eq:P08-modal-gap}
+\end{equation}
+That MB mode is therefore positive. Unless $n\equiv3\pmod4$, all
+reachable DM representatives have nonnegative cosines by P05. Any
+nonnegative DM maximum would contradict MB strict stability. This also
+excludes a zero DM abscissa and proves the strict implication.
+\end{proof}
+\begin{proof}[Proof of the remaining-size realization]
+Let $n\equiv3\pmod4$, $\tau=\sin(\pi/(2n))$, so $0<\tau<1/4$,
+$u_J=-\tau$, and $W=1-2\tau^2>7/8$.
+Also $u_{J-1}=\sin(3\pi/(2n))=3\tau-4\tau^3$, giving
+$\beta_{J-1}=\tau W$. Set
+\begin{equation}
+\begin{gathered}
+ h=1,\quad c=\tau,\quad g=\tau^2/4,\quad
+ k=1-5\tau^2/2,\quad x=2/\tau,\quad s=1+x,\\
+ a=(k+1)x-(\tau-\tau^2/4)/s.
+\end{gathered}\label{eq:P08-reverse-family}
+\end{equation}
+Every coefficient is positive: $k>27/32$, $x>8$, the subtracted
+term in $a$ is less than $1/4$, and $(k+1)x>8$.
+Further $M=2-\tau-9\tau^2/4>0$, and $\mu>0$ since $c>g$.
+The original residuals vanish by \eqref{eq:P08-residual-general}.
+
+For MB, $v_{\MB}=\tau/(4+\tau^2)<\tau/4<\beta_{J-1}$ and
+$\beta_J<0$, so it selects $J$ strictly. Its maximum divided by $y^*$ is
+\[
+ -k+(1+\tau^2/4)W-\tau^2=-\tau^2(1/4+\tau^2/2)<0.
+\]
+For DM the $J$-mode divided by $x$ is
+\[
+ \frac{r_J^{\DM}}x=\frac{\tau^2}{2}-\frac{gW}{s^2}
+              -\frac{\tau(1+2x+s\tau)}{xs^2}.
+\]
+Since $1+2x+s\tau\le(2+\tau)s$, $s>x$, and $x=2/\tau$,
+the two subtracted terms are less than
+\[
+ \frac{g+\tau(2+\tau)}{x^2}<\frac{37}{256}\tau^2.
+\]
+Here $g<1/64$ and $\tau(2+\tau)<9/16$. Thus
+$r_J^{\DM}/x>91\tau^2/256>0$.
+DM is concave, and its vertex obeys
+\[
+ v_{\DM}=\frac{\tau}{4x(s-g/s)}<\frac{\tau}{256}
+      <\tau W=\beta_{J-1},
+\]
+since $x>8$ and $s-g/s>8$. So DM also strictly selects $J$.
+These are strict canonical common-domain inequalities; openness is
+established below.
+\end{proof}
+
+\paragraph{Rational reverse-stability witness.}
+At $n=7$ a compact exact witness is
+\begin{equation}
+ (a,k,c,g,h)=(20301/1100,17/20,1/2,1/100,1),\quad
+ x^*=10,\quad M=34/25,\quad y^*=20301/1496.
+ \label{eq:P08-reverse-rational}
+\end{equation}
+Original residuals divided by their amplitudes are
+$20301/1100-(37/20)10+(49/100)/11=0$ for DM and
+$20301/1100-(34/25)(20301/1496)=0$ for MB.
+All coefficients and $\mu$ are positive.
+The ordered seven-node cosines $u_1,u_2,u_3$ are the three roots of
+$8u^3+4u^2-4u-1$: use
+$1+2(\cos\theta+\cos2\theta+\cos3\theta)=0$ at nonzero seventh roots
+and the Chebyshev identities. Rational isolating intervals are
+\begin{equation}
+ 31/50<u_1<63/100,\quad -23/100<u_2<-11/50,\quad
+ -91/100<u_3<-9/10.\label{eq:P08-seven-intervals}
+\end{equation}
+The endpoint signs of the cubic are respectively $(-,+),(+,-),(-,+)$.
+Three disjoint sign changes exhaust its degree; cosine ordering assigns
+the labels. Thus no decimal trigonometric value is a proof premise.
+MB representatives $1,2,3$ have normalized real parts
+$-17/20+u_1/2-101u_2/100$,
+$-17/20+u_2/2-101u_3/100$, and
+$-17/20+u_3/2-101u_1/100$.
+The interval upper bounds are respectively $-3027/10000$,
+$-409/10000$, $-19262/10000$, all negative; mode zero is $-34/25$.
+DM instead satisfies
+\[
+ \frac{r_2^{\DM}}{10}
+ >-\frac{17}{20}-\frac{21}{2420}-\frac{23}{22000}
+      +\frac{12099}{12100}\frac9{10}
+ =\frac{9729}{242000}>\frac1{25}>0.
+\]
+Both select $2$ strictly: $v_{\MB}=25/202<39/200<\beta_1$,
+$v_{\DM}=55/48396<39/200<\beta_1$, and $\beta_2<0$.
+
+\paragraph{The full domain requires explicit branch labels.}
+The preceding obstruction cannot be extended to all of $\mathcal C$
+without qualification. A lower-branch construction gives the exact
+existence answer on that larger branch-labelled domain.
+\begin{proposition}[Reverse contrast when both DM branches are allowed]
+\label{prop:P08-lower}
+If $4\mid n$ and MB is strictly stable, every positive DM synchronous
+equilibrium is strictly stable. If $4\nmid n$, a nonempty open common
+region has MB strictly stable and the specified lower positive DM
+branch unstable with unique dominant representative zero.
+\end{proposition}
+\begin{proof}
+When $4\mid n$, MB's label $n/4$ has normalized real part $-k+S$.
+Its strict stability forces $k>S$. Bound \eqref{eq:P08-DM-bound},
+which did not require $\mu>0$, makes every DM real part negative.
+
+Otherwise put $\rho_n=\max_m[-\cos(2\theta_m)]$. One has
+$0<\rho_n<1$: equality to one requires $4m=n$ modulo $2n$, impossible
+when $4\nmid n$, and a label nearest $n/4$ has negative double-angle
+cosine. Define
+\begin{equation}
+\begin{gathered}
+ \varepsilon=(1-\rho_n)/24,\quad k=1,\quad c=h=\varepsilon,\quad
+ g=(1+\varepsilon)^3+2\varepsilon,\\
+ a=(1+\varepsilon)(1+2\varepsilon)
+                         +\frac{\varepsilon}{1+\varepsilon}.
+\end{gathered}\label{eq:P08-lower-family}
+\end{equation}
+All coefficients are positive and $M=1+g>0$. With $A=1+\varepsilon$,
+the two DM roots are exactly
+\[
+ x_-=\varepsilon,\qquad
+ x_+=\varepsilon+\frac{\varepsilon}{(1+\varepsilon)^2}.
+\]
+Direct substitution of $x_-$ in $a-Ax+(c-g)/(1+x)$ gives zero.
+The second is checked by the quadratic factorization
+$A(x-x_-)(x-x_+)$ of P02's equilibrium polynomial, or by substitution.
+In particular $\mu=-A\varepsilon^2-\varepsilon^2/(1+\varepsilon)<0$,
+$b>0$, $D>0$, and both roots are positive. On the named lower branch,
+\[
+ \lambda_0^{\DM}=\frac{\varepsilon^2}{(1+\varepsilon)^2}>0,
+ \qquad G-H=\varepsilon\left(1+
+                       \frac{2\varepsilon}{(1+\varepsilon)^2}\right)>0.
+\]
+Thus zero is uniquely dominant and unstable. For MB,
+$S=(1+\varepsilon)^3+3\varepsilon<1+10\varepsilon$, since
+$0<\varepsilon<1$, and every normalized real part obeys
+\[
+ -1+\varepsilon\cos\theta_m-S\cos(2\theta_m)
+ \le-1+\varepsilon+S\rho_n
+ <-\frac{13}{24}(1-\rho_n)<0.
+\]
+The MB original residual vanishes at $y^*=a/M$. Distinct simple
+positive DM roots and all strict inequalities persist locally on the
+specified lower branch. At $n=6$, $\rho_6=1/2$, so
+$\varepsilon=1/48$ gives an entirely rational witness.
+\end{proof}
+
+\subsection{Mode/stability combinations and physical-parameter openness}
+All five requested types of combination have realizations, without a
+claim that each occurs in every dimension. Both stable with identical
+or different modes follows from Theorem~\ref{thm:P08-pair-realization};
+DM stable / MB unstable is universal by Theorem~\ref{thm:P08-forward};
+the reverse has the branch and size restrictions just proved.
+For both unstable with different dominant modes take $n=8$ and
+\begin{equation}
+ (a,k,c,g,h)=(16351/1100,1/2,3/2,1/100,1),\quad
+ x^*=10,\quad M=1/100,\quad y^*=16351/11.
+ \label{eq:P08-both-unstable}
+\end{equation}
+The original residuals divided by their amplitudes are
+$16351/1100-15+(149/100)/11=0$ and
+$16351/1100-(1/100)(16351/11)=0$. Coefficients and $\mu$ are positive.
+MB's vertex $75/202$ lies strictly between $\sqrt2/4$ and
+$(2+\sqrt2)/4$, so MB selects $1$ with normalized maximum
+$-1/2+3\sqrt2/4>0$. DM's vertex $55/16132<\sqrt2/4$ selects $2$,
+whose normalized maximum is
+\[
+ -\frac12-\frac{63}{2420}+\frac{12099}{12100}
+ =\frac{2867}{6050}>0.
+\]
+The small value of $M$ is strictly positive. MB's large amplitude is
+its own computed equilibrium, not an amplitude imported from DM.
+
+\begin{proposition}[Openness in all five physical coefficients]
+\label{prop:P08-open}
+Every strict contrast and strict mode pair constructed here persists
+on a nonempty open set in $(a,k,c,g,h)\in(0,\infty)^5$ for its stated
+fixed size, offset, and DM branch. No openness assertion rests merely
+on an interval inside a displayed lower-dimensional family.
+\end{proposition}
+\begin{proof}
+On $\mathcal C_+$, $D>0$ and the unique positive root $x_+$ is smooth
+in all five coefficients. Equivalently, the scalar equilibrium function
+$B(x)=a-(k+h)x+(c-g)/(1+x)$ has
+$B_x=-\sqrt D/(1+x_+)<0$, so the implicit function theorem applies.
+MB's branch $a/M$ is smooth for $M>0$. Coefficient positivity,
+$M>0$, and $\mu>0$ are strict open conditions. At fixed $n$ there
+are finitely many spectral inequalities; each is strict and continuous.
+A unique selected representative has a strictly positive gap to every
+other representative, while its conjugate labels remain tied.
+A sufficiently small intersection of these neighborhoods preserves all
+branch, sign, stability and selection assertions.
+
+For the lower-branch family use instead $\mu<0,b>0,D>0$.
+Both positive roots are simple and the specified $x_-$ is smooth, with
+$B_x=+\sqrt D/(1+x_-)>0$. The same continuity argument preserves
+that branch and its strict conclusions. No full-system IFT, later
+module, uniform neighborhood radius in $n$, or global branch
+identification is used.
+\end{proof}
+
+\subsection{Interpretation, deferred gates, and internal checks}
+\label{slot:P08-6}
+The strongest completed DRAFT results are a universal forward stability
+contrast, both stability directions at $n=7$ on the unique-positive-root
+domain, every ordered pair of reachable modes with both models stable,
+and exact parity/branch limitations on reverse stability. Identical
+abstract reachable labels do not imply identical behavior at the same
+physical tuple. The unrestricted reverse-stability hope fails on
+$\mathcal C_+$ unless $n\equiv3\pmod4$; even allowing both DM
+branches cannot produce it when $4\mid n$.
+The rejected phrase ``MB is generically unstable'' is not reinstated:
+MB has explicit open stable regions and an exact stability criterion.
+
+For structural growth examples, $(a,k,c,g,h)=(1,1,3,1,1)$ gives
+$M=0$, and $(1,1,4,1,1)$ gives $M=-1$. At $s_0=1$ the latter blows
+up at $\log2$. DM has its P01 bounded flow for both. Its own positive
+root is $1$ or $(\sqrt{33}-1)/4$, respectively, each satisfying the
+original residual $x[a-(k+h)x+(c-g)/(1+x)]=0$.
+MB has no positive synchronous root in either case; its origin has zero
+residual, and the stated scalar trajectories have the exact original
+MB derivative. These are not common-equilibrium stability comparisons.
+
+\label{slot:P08-extra-1}
+The six-term model is explicitly deferred. Existing source-provenance
+records are retained, but no archived six-term equation is imported.
+Full MB Hopf, first Lyapunov coefficient, crossing transversality, and
+criticality comparisons are deferred as well. The spectra and open
+regions are inputs for later P11--P13, not proofs of their hypotheses.
+A selected nonuniform pair, positive real part, or candidate imaginary
+crossing is insufficient for Hopf. P07, P09, P10 and all later proof
+bodies are untouched. The frozen package already calls for this
+comparison, so no scope amendment or novelty-priority promotion is needed.
+
+\paragraph{Internal analytic and computational checks.}
+The proofs independently check the original scalar reduction, coordinate
+faces, reciprocal scalar solution, maximum inequality, pre-equilibrium
+diagonal, Fourier phases, both uniform-eigenvalue derivations, quadratic
+completion, midpoint orientation, and parameter constructions.
+Each displayed exact equilibrium has an original-field residual check;
+the general constructions have symbolic residual identities.
+The separate validation-support package supplies an independent
+term-by-term field/Jacobian implementation, direct matrix eigenvalues,
+Fourier comparisons for $n=5,6,7,8$ and collision offsets, exact rational
+residual and isolating-interval checks, and deterministic finite-grid
+checks. Tolerances and per-case data are recorded. Floating-point
+corroboration is not interval certification, proof of openness, or an
+independent audit; the module remains DRAFT.
+
+\subsection{Priority checks for the independent P08 auditor}
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+\item Authenticate the P05 audited snapshot, P01--P05 body hashes,
+A01--A05, and A05 E01 closure. Separate historical computational
+provenance notes from the current audited proof inputs.
+\item Check the full common domain, unique $x_+$ on $\mathcal C_+$,
+and the explicitly fixed lower branch in the two-root construction.
+Do not identify amplitudes by coefficient names.
+\item Check positivity only on the maximal interval; separate sufficient
+full-system bounds, scalar growth and blow-up, and necessary conditions.
+Do not infer global boundedness merely from $M>0$.
+\item Recompute the MB pre-equilibrium diagonal, all collision sums,
+complex phases and imaginary signs, normality and both proofs of
+$\lambda_0^{\MB}=-a$.
+\item Check closed/strict selection cells, all maximal ties, parity,
+finite-parameter endpoints, MB realizability, and each cell's exact
+stability inequality. Generic P05 grid facts and DM realization are distinct.
+\item Reconstruct the all-pair family, positivity, original residuals,
+$\mu>0$, and both strict all-mode stability bounds.
+\item Check the universal rational witness, finite-label bound
+$p(u_J)\ge3/16$, and algebraic-integer exclusion of a tie at $2/9$.
+\item Check the modal-gap obstruction and its branch restriction,
+the all-$n\equiv3$ reverse family and $37/256$ estimate, and the
+rational seventh-root isolating intervals and stability inequalities.
+Independently check the $n=8$ both-unstable example.
+\item Check the lower-root family and full-domain $4\mid n$ obstruction;
+verify both distinct roots and that the compared branch was fixed in advance.
+\item Verify physical five-dimensional openness using simple scalar
+roots and finitely many strict spectral and representative gaps.
+\item Confirm no use of P06, P07, P09--P18, no later bifurcation assertion,
+no six-term substitution, and no claim that compilation verifies mathematics.
+\end{enumerate}

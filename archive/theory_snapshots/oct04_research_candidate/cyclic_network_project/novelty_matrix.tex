@@ -1,0 +1,200 @@
+% STATUS: PHASE 1 NOVELTY ASSESSMENT; PROVISIONAL, NOT A PROOF
+% Includable fragment. Source IDs resolve in 03_literature_audit.tex.
+\section{Novelty matrix}
+\label{sec:novelty-matrix}
+
+\subsection{Eight targets and source coverage}
+\begin{enumerate}[label=\textbf{T\arabic*.}]
+\item The exact canonical demand-modulated model and its coupling law.
+\item The arbitrary-$(n,q)$ Fourier spectrum of its homogeneous linearization.
+\item The exact $q=2$ quadratic mode-selection theorem.
+\item The large-$n$ selected-wave-number limit.
+\item The exact topology- and parameter-count-matched DM--MB comparison.
+\item The explicit first Lyapunov coefficient reduction.
+\item The heterogeneous Fourier Green-function response.
+\item The proposed robustness bounds and Hopf-threshold sensitivity.
+\end{enumerate}
+
+\paragraph{Coverage codes (distinct from novelty categories).}
+\textbf{G}: an inspected general result supplies the underlying method,
+conditional on verifying the project's hypotheses;
+\textbf{A}: an inspected analogous calculation in another model;
+\textbf{C}: a component is present (the MB comparator), not the complete
+comparison;
+\textbf{N}: the exact target was not located in the inspected material;
+\textbf{U}: uninspected content prevents an absence determination.
+G, A and C do not mean that the source proves the project's target.
+No row is an exhaustive search of that author's other work.
+
+\begin{center}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}p{0.40\linewidth}*{8}{c}@{}}
+\toprule
+Source & T1 & T2 & T3 & T4 & T5 & T6 & T7 & T8\\
+\midrule
+S01 Jaramillo et al. & N&A&N&N&N&A&N&N\\
+S02 Pais et al. & N&A&N&N&N&A&N&N\\
+S03 van Kekem--Sterk & N&A&A&A&N&A&N&N\\
+S04 Wei et al. & N&N&N&N&N&A&N&A\\
+S05 Lin--Han 2020 & N&A&N&N&C&N&N&N\\
+S06 Nian--Li & N&N&N&N&N&N&N&N\\
+S07 Gray & N&G&N&N&N&N&G&G\\
+S08 Kerin--Engler & N&G&A&N&N&G&A&A\\
+S09 Stewart & N&G&A&N&N&N&N&N\\
+S10 Embree--Trefethen & N&N&N&N&N&N&N&G\\
+S11 Greenbaum et al. & N&N&N&N&N&N&G&G\\
+S12 Demko et al. (partial)&U&U&U&U&U&U&G&U\\
+S13 Lin--Shi--Han (lead)&U&U&U&U&U&U&U&U\\
+S14 Lin--Han 2024 (preview)&U&U&U&U&U&U&U&U\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+S04's T8 analogue is active disturbance-observer control, not a passive
+spectral stability radius. S05's T2 analogue is a numerical five-node
+linearization example, not an arbitrary-$n$ theorem. S08's T6 general
+formula assumes a quadratic nonlinearity; that assumption does not
+cover the entire rational DM field. S11 supplies implicit-function and
+eigenvalue-sensitivity ingredients, not a Fourier kernel. S12 supplies
+inverse-decay theory in the inspected excerpt; its full cyclic application
+remains U. These qualifications are part of the matrix.
+
+\subsection{Claim-level novelty decisions}
+The K/D/S/T/U categories are defined in
+Section~\ref{sec:phase1-audit}. A mixed entry separates a known mechanism
+from an unestablished model-specific contribution. Every D judgment is
+conditional; no hypotheses are proved in Phase 1.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.60\linewidth}@{}}
+\toprule
+Target / owner & Classification & Evidence and precise boundary\\
+\midrule
+\endfirsthead
+\toprule
+Target / owner & Classification & Evidence and precise boundary\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+T1\newline 00; P01--P03 & S, with U priority gap &
+The exact DM equation was not located in the six supplied models.
+S05, p.~778, Eqs.~(1)--(2), is bilinear; S06, p.~6, Eq.~(1), is
+linear/quartic. S13's full model and S14's full enzymatic equations are
+unavailable. The tentative contribution is the particular coupling-law
+combination and its analysis. Neither five-element topology nor rational
+regulation in general may be called new. No source inspected justifies
+calling the creation term a standard Holling type-II response.\\[5pt]
+T2\newline P03--P04 & K general theory; D DM application &
+S07, Theorem 3.1, printed pp.~34--35, already covers every circulant
+size and coefficient pattern. S02, p.~11, Eqs.~(4.2)--(4.3), and S03,
+p.~9, Eqs.~(3)--(6), apply it to networks. DM derivative coefficients,
+Fourier-sign translation and coincident offsets remain unverified.
+An exact DM formula can be a useful lemma, but Fourier diagonalization
+or normality is not the novelty.\\[5pt]
+T3\newline P05 & S; D quadratic mechanism &
+S03, p.~9, Eq.~(4), and Proposition 5, pp.~11--12, select modes of
+a two-harmonic cosine symbol and account for a simultaneous first
+crossing. Section 4.4 gives its proof. The prospective DM addition is
+a complete classification over its admissible coefficient region,
+including endpoints, ties and uniform/alternating modes. The reviewed
+paper does not state that exact classification. A general quadratic
+maximization method should not be claimed as new.\\[5pt]
+T4\newline P06 & D for a fixed limiting symbol; U for stronger scope &
+S03, Proposition 6, p.~13, already gives an explicit large-$n$
+selected-wave-number limit from its continuous symbol maximum.
+A DM limit under fixed coefficients and a unique limiting maximizer
+is an analogous specialization. A varying-parameter family, ties,
+uniform rates or a first-Hopf limit requires a precise statement
+and additional literature review. A limiting spectral distribution
+alone would not establish convergence of maximizers.\\[5pt]
+T5\newline P08 & K MB$_{5,2}$ component; S exact comparison &
+S05, p.~778, Eq.~(2), contains MB$_{5,2}$ with the explicit coefficient
+map in Section~\ref{src:lin}. Its synchronous reduction is already
+in Case 4, p.~779, Eqs.~(5)--(7). No exact DM--MB comparison was
+located. Same topology and parameter count do not fix a meaningful
+calibration. General-$n$ comparison regions may be a contribution
+after P08 and the missing coupling antecedents are resolved.\\[5pt]
+T6\newline P11--P13 & K Fourier reduction; S DM formula; U sign theorem &
+S02, Lemma 4.6 and Appendix D; S03, Theorem 4 and Eq.~(36);
+S08, Lemma 1, Eq.~(29), already reduce Hopf coefficients using
+Fourier mode interactions. S01, Eqs.~(15)--(25), is a three-node
+instance. The rational DM tensor contractions and a rigorously
+nonzero sign on a stated parameter region have not been supplied
+by these sources or calculated here. Generic reduction is not a
+new theorem; a proved model-specific sign region could be.\\[5pt]
+T7\newline P15--P17 & D finite base-state kernel; U localization novelty &
+S07, Theorem 3.1, supplies a circulant inverse; S11, Section 3.2,
+supplies an implicit-function framework. Thus Fourier inversion of
+the first-order homogeneous-base sensitivity is known machinery.
+It is not an exact diagonalization after arbitrary heterogeneity.
+S12, p.~493, Proposition 2.3 and Theorem 2.4, prevents treating
+inverse localization itself as unprecedented. Cyclic distance,
+directional structure, uniform constants and allowable $q$ remain
+to be specified and compared.\\[5pt]
+T8\newline P18 & D matrix bound and simple threshold derivative; U explicit parameter theorem &
+S10, Theorem $4_\varepsilon$, p.~585, and normal-matrix discussion,
+p.~586; S11, Theorem 1, p.~4: standard perturbation bounds and
+simple-eigenvalue derivatives. A sufficient DM parameter radius
+must include equilibrium movement, positive coefficients and
+denominator control. A threshold shift also needs a nonzero
+crossing derivative. The final norm, uncertainty class and
+constants are not yet fixed; theorem-level novelty is unresolved.\\
+\end{longtable}
+
+\subsection{Five-node specialization within the main program}
+The motivating $n=5,q=2$ case should appear as a worked specialization of
+the arbitrary-$(n,q)$ results. S05 provides the exact bilinear antecedent;
+S06 provides a different five-element polynomial application; S13--S14
+are immediate coupling-law and topology-priority checks. S04's five
+dimensions do not make it a five-element network antecedent. S09,
+Section 4.2 and Section 5.4, already discusses five-node phase patterns.
+
+The fifth-root/golden-ratio evaluations in P07 are D special-function
+algebra after P04--P05. Any sharp parameter inequalities obtained from
+them would be S unless an additional conclusion warrants a different
+classification. A fifth-root expression or the occurrence of rotating
+waves on five nodes is not, by itself, a defensible novelty claim.
+
+\subsection{Manuscript wording gates}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.43\linewidth}>{\raggedright\arraybackslash}p{0.51\linewidth}@{}}
+\toprule
+Claim that must not yet be written & Gate and acceptable audit conclusion\\
+\midrule
+\endfirsthead
+\toprule
+Claim that must not yet be written & Gate and acceptable audit conclusion\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+``First Fourier spectrum for cyclic networks'' &
+Known general theory, S07; cite it. P04 must verify the specific model.\\[4pt]
+``First exact quadratic mode-selection or large-$n$ wave-number result'' &
+S03 is a direct precedent. Specify the additional DM parameter/tie
+classification and complete P05--P06.\\[4pt]
+``New five-element bilinear model'' &
+MB$_{5,2}$ is contained in S05. Describe it as the matched comparator,
+and resolve S13--S14 before claiming a new coupling law.\\[4pt]
+``First closed Fourier formula for a Hopf coefficient'' &
+S02, S03 and S08 already contain such reductions. P13 must deliver
+the DM expression and any claimed sign certificate.\\[4pt]
+``Fourier Green function proves localization under heterogeneity'' &
+P15--P16 must state the expansion and error bound; S12 and related
+graph-distance literature must be checked for localization.\\[4pt]
+``Robustness follows from the homogeneous spectral gap'' &
+P18 must bound the actual changed Jacobian at the moved equilibrium
+in the stated norm. A matrix bound is not yet a parameter radius.\\[4pt]
+``Synchronous bistability implies bistability of the whole network'' &
+P10 requires full-system stability, with basin scope explicit.
+None of the source analogues establishes this claim for DM.\\[4pt]
+``A generic rotating-wave theorem proves our Hopf branch is stable'' &
+P11--P14 must verify all spectral/nondegeneracy hypotheses and
+stability. Generic symmetry results do not supply those facts.\\
+\end{longtable}
+
+\paragraph{Release decision.}
+Phase 1 provides a citable, version-specific literature assessment and
+an explicit queue of unresolved evidence. It does not authorize a
+``first,'' ``novel theorem'' or quantitative superiority assertion.
+No separate archival study is needed to settle these main-program gaps.

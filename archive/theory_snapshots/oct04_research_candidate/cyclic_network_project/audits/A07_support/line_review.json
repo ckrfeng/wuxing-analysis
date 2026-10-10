@@ -1,0 +1,271 @@
+{
+  "audited_sha256": "fc10d257e8126b79a56cc7dd4c55b14b0266e250cbe40dbecb6c6a18658d09de",
+  "lines": 555,
+  "ranges": [
+    {
+      "start": 1,
+      "end": 16,
+      "verdict": "PASS",
+      "review_tex": "Metadata correctly identifies DRAFT, inherited/direct prerequisites, exact version and spectral-only scope. P08 is expressly excluded as theorem input."
+    },
+    {
+      "start": 17,
+      "end": 24,
+      "verdict": "PASS",
+      "review_tex": "Section/status and dependency prose agree with current manifest. P05 $\\to$ P07 is preserved."
+    },
+    {
+      "start": 25,
+      "end": 41,
+      "verdict": "PASS",
+      "review_tex": "Original DM orientation, strict coefficient signs, local $s,S,D_5$ definitions and signed-frequency terminology are correct."
+    },
+    {
+      "start": 42,
+      "end": 48,
+      "verdict": "PASS",
+      "review_tex": "Original equilibrium bracket and $d=-kx-C-Cx/s$ follow by direct substitution; equilibrium use is explicitly limited."
+    },
+    {
+      "start": 49,
+      "end": 73,
+      "verdict": "PASS",
+      "review_tex": "All four golden-ratio identities, both cosines, their difference and both positive sine radicals are exact."
+    },
+    {
+      "start": 74,
+      "end": 87,
+      "verdict": "PASS",
+      "review_tex": "Fifth-root geometric sum and cosine quadratic select the correct root; positive sine signs fix the radicals."
+    },
+    {
+      "start": 88,
+      "end": 103,
+      "verdict": "PASS",
+      "review_tex": "Every phase row has correct quadrant signs, especially $\\sin2\\theta_2=-\\phi\\sigma$ and $\\sin2\\theta_3=\\phi\\sigma$."
+    },
+    {
+      "start": 104,
+      "end": 109,
+      "verdict": "PASS",
+      "review_tex": "Three representative classes and their five labels are counted correctly; no odd-dimensional Nyquist singleton."
+    },
+    {
+      "start": 110,
+      "end": 132,
+      "verdict": "PASS",
+      "review_tex": "All five labelled eigenvalues and the three real-part classes follow from the reconstructed phases; conjugate multiplicities retained."
+    },
+    {
+      "start": 133,
+      "end": 149,
+      "verdict": "PASS",
+      "review_tex": "P04 import is exact. The $-H$ shift has negative real and positive imaginary sine contribution."
+    },
+    {
+      "start": 150,
+      "end": 156,
+      "verdict": "PASS",
+      "review_tex": "P05 quadratic checks both nonuniform classes, using both double-cosine identities."
+    },
+    {
+      "start": 157,
+      "end": 170,
+      "verdict": "PASS",
+      "review_tex": "All three gap factors and powers of $\\phi$ are correct; $C>0$ legitimizes $t=T/C$."
+    },
+    {
+      "start": 171,
+      "end": 189,
+      "verdict": "PASS",
+      "review_tex": "Seven cells exhaust the real line; both subdominant ties and the unique dominant tie are correctly distinguished; $d$ cancels."
+    },
+    {
+      "start": 190,
+      "end": 209,
+      "verdict": "PASS",
+      "review_tex": "Gap coefficients, positive prefactors, seven sign patterns and absence of a triple class tie all check; no independent physical $d$ is inferred."
+    },
+    {
+      "start": 210,
+      "end": 230,
+      "verdict": "PASS",
+      "review_tex": "Sign reversal $D_5/C=-t$ is handled correctly; selected representatives and full label sets include equality."
+    },
+    {
+      "start": 231,
+      "end": 238,
+      "verdict": "PASS",
+      "review_tex": "Direct split $t<1$ versus $t\\ge1$ excludes pair 2 even from tied dominance."
+    },
+    {
+      "start": 239,
+      "end": 250,
+      "verdict": "PASS",
+      "review_tex": "$\\beta_0=\\phi^2/4$, $\\beta_1=-1/4$, $\\alpha_0=6-2\\sqrt5$; positive vertex meets only the first midpoint."
+    },
+    {
+      "start": 251,
+      "end": 266,
+      "verdict": "PASS",
+      "review_tex": "Matches current P05's all-sign $\\chi$ definition. $H\\le G$ is correctly uniform; reciprocal argument is confined to $H>G$."
+    },
+    {
+      "start": 267,
+      "end": 281,
+      "verdict": "PASS",
+      "review_tex": "Canonical switch has every denominator correct and retains the simultaneous equilibrium equation; branch-state interpretation and P05 regularity apply."
+    },
+    {
+      "start": 282,
+      "end": 290,
+      "verdict": "PASS",
+      "review_tex": "Subdominant gaps are $5C/2$ and $5\\phi C/2$. Neither real-part tie is declared a numerical coincidence."
+    },
+    {
+      "start": 291,
+      "end": 308,
+      "verdict": "PASS",
+      "review_tex": "Both signed frequencies, strict $\\omega_2<0$, exact pair-1 real locus and semisimplicity statement are valid."
+    },
+    {
+      "start": 309,
+      "end": 317,
+      "verdict": "PASS",
+      "review_tex": "Proof uses positive factors, conjugacy and P04's repeated-value multiplicity theorem; no bifurcation inference."
+    },
+    {
+      "start": 318,
+      "end": 336,
+      "verdict": "PASS",
+      "review_tex": "Intersection ratios, nonempty local codimension-two statement, strictly negative triple value, multiplicity three and Hurwitz conclusion hold."
+    },
+    {
+      "start": 337,
+      "end": 345,
+      "verdict": "PASS",
+      "review_tex": "Sum/difference solution is positive; effective $(G,H)$ gradient determinant is exactly $-2$."
+    },
+    {
+      "start": 346,
+      "end": 353,
+      "verdict": "PASS",
+      "review_tex": "Original DM witness residual is zero; $C=1,G=\\phi^{-1},H=1$; all physical parameters positive."
+    },
+    {
+      "start": 354,
+      "end": 362,
+      "verdict": "PASS",
+      "review_tex": "P05's chart determinant is positive on $H-G>0$; physical constraint minor is $-2x^2/s^2$. Local physical transfer is justified."
+    },
+    {
+      "start": 363,
+      "end": 370,
+      "verdict": "PASS",
+      "review_tex": "Triple-value derivation uses equilibrium correctly; exactly three independent Fourier vectors, with pair 2 distinct and strictly below."
+    },
+    {
+      "start": 371,
+      "end": 386,
+      "verdict": "PASS",
+      "review_tex": "All three numerical-coincidence cases are exhaustive; simplicity and algebraic/geometric multiplicities use numerical values, not merely label count."
+    },
+    {
+      "start": 387,
+      "end": 393,
+      "verdict": "PASS",
+      "review_tex": "Within-pair and uniform-versus-pair possibilities account for six unordered label pairs and force exactly the stated intersection when applicable."
+    },
+    {
+      "start": 394,
+      "end": 408,
+      "verdict": "PASS",
+      "review_tex": "Remaining four cross-pair equalities require $T=C$, hence $S>C$; both frequency inequalities have correct signs and are strict."
+    },
+    {
+      "start": 409,
+      "end": 414,
+      "verdict": "PASS",
+      "review_tex": "$|T|<S$ gives $-\\phi<t<\\phi$; $t=1$ is realizable there, $t=-\\phi^2$ is not; real parts and values remain distinct concepts."
+    },
+    {
+      "start": 415,
+      "end": 435,
+      "verdict": "PASS",
+      "review_tex": "Piecewise Hurwitz criterion has correct strict inequalities and equality row. Entire dominant tie has strictly negative common maximum."
+    },
+    {
+      "start": 436,
+      "end": 441,
+      "verdict": "PASS",
+      "review_tex": "Stable-tie proof uses $T=-C\\phi^{-2}$ and equilibrium $d$ only, independently of $S=\\phi C$."
+    },
+    {
+      "start": 442,
+      "end": 448,
+      "verdict": "PASS",
+      "review_tex": "Zero maximum implies linear Lyapunov stability, not asymptotic stability, by P04 normality. No nonlinear or bifurcation claim; dominant tie excluded from zero abscissa."
+    },
+    {
+      "start": 449,
+      "end": 469,
+      "verdict": "PASS",
+      "review_tex": "Fixed-state eligibility table, strict zero-abscissa restrictions and exclusion of pair 2 as controlling class are correct; no first-path claim."
+    },
+    {
+      "start": 470,
+      "end": 476,
+      "verdict": "PASS",
+      "review_tex": "At every point some other real part strictly exceeds $r_2$; when $r_2=0$ this other real part is positive."
+    },
+    {
+      "start": 477,
+      "end": 485,
+      "verdict": "PASS",
+      "review_tex": "Every positive effective triple is realized with $x=1$ and positive physical parameters; $d=-5C/2$ exactly."
+    },
+    {
+      "start": 486,
+      "end": 493,
+      "verdict": "PASS",
+      "review_tex": "Original residual vanishes; the max-function construction has $G-H=t$ for every real $t$ and makes all seven rows nonempty."
+    },
+    {
+      "start": 494,
+      "end": 508,
+      "verdict": "PASS",
+      "review_tex": "All seven downstream spectral inputs and strict gaps are valid. Hopf existence, first crossing, derivatives and nonlinear conclusions are explicitly deferred."
+    },
+    {
+      "start": 509,
+      "end": 518,
+      "verdict": "PASS",
+      "review_tex": "Fifth-root origin is correctly delimited; no physiological law, optimum, medical claim, empirical TCM validation or standalone novelty assertion."
+    },
+    {
+      "start": 519,
+      "end": 527,
+      "verdict": "PASS",
+      "review_tex": "Named companion located and authenticated; its coverage checked and results reproduced separately. Source explicitly denies proof/status from computation."
+    },
+    {
+      "start": 528,
+      "end": 540,
+      "verdict": "PASS",
+      "review_tex": "Auditor checklist accurately identifies phase, gap, equality, sign-convention and equilibrium checks without asserting new results."
+    },
+    {
+      "start": 541,
+      "end": 550,
+      "verdict": "PASS",
+      "review_tex": "Checklist correctly separates codimension, multiplicity, coincidence, whole-tie stability and fixed-state eligibility from bifurcation claims."
+    },
+    {
+      "start": 551,
+      "end": 555,
+      "verdict": "PASS",
+      "review_tex": "Current prerequisite authentication, direct edge, DRAFT lifecycle and independence requirements are consistent with the actual audit boundary."
+    }
+  ],
+  "coverage": "complete contiguous partition including blank/comment lines"
+}

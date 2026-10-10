@@ -1,0 +1,1655 @@
+{
+  "id": "codex-te-2026-10-04",
+  "status": "Theory research snapshot: recorded P01\u2013P05/P07\u2013P11 audits; P06/P12\u2013P18 unfinished",
+  "origins": [
+    "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te"
+  ],
+  "exclusions": "Only retained substantive files; dependencies/caches/build/render files and raw ZIP containers omitted.",
+  "files": [
+    {
+      "original_relative_path": "outputs/proof-citation-map.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_guide/outputs/proof-citation-map.csv",
+      "sha256": "52278177993beb15267bd45e36811e8cf047c021116146a96ad41117efc7b2dc",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/outputs/proof-citation-map.csv",
+      "status": "theory_support_snapshot"
+    },
+    {
+      "original_relative_path": "outputs/proof-shortening-guide.html",
+      "retained_destination": "archive/theory_snapshots/oct04_guide/outputs/proof-shortening-guide.html",
+      "sha256": "1b9040e0cebcab6c466682db58283ef2df9b4a8c118cc084098cc2f3ee96b76e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/outputs/proof-shortening-guide.html",
+      "status": "theory_support_snapshot"
+    },
+    {
+      "original_relative_path": "work/audit-text.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_guide/work/audit-text.txt",
+      "sha256": "9a606462cedafaf4b93e9da5e03492368746bdf68c6d05de4e3174acb4267b4c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/audit-text.txt",
+      "status": "theory_support_snapshot"
+    },
+    {
+      "original_relative_path": "work/build_guide.py",
+      "retained_destination": "archive/theory_snapshots/oct04_guide/work/build_guide.py",
+      "sha256": "eca56832457563ddfc25b31508adc7e00be687a5844c559350bd65c4cb4d40c5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/build_guide.py",
+      "status": "theory_support_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/PACKAGE_SHA256.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/PACKAGE_SHA256.json",
+      "sha256": "0ae7421f7c121c577d3382dadc7ebda044b85a7674a709e983f3ab3e95a0b1a4",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/PACKAGE_SHA256.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/START_HERE.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/START_HERE.txt",
+      "sha256": "39602b64d7c5bcbf609e1af63b4e0eb17059ad57b7780a515e8e642ff8546c28",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/START_HERE.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/00_canonical_model.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/00_canonical_model.tex",
+      "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/00_canonical_model.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/01_notation_and_assumptions.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/01_notation_and_assumptions.tex",
+      "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/01_notation_and_assumptions.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/02_theorem_dependency_map.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/02_theorem_dependency_map.tex",
+      "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/02_theorem_dependency_map.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/03_literature_audit.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/03_literature_audit.tex",
+      "sha256": "df5b8993938255f706c38071e4e65cb665bc3452fa3a35e23cbb551df216a15b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/03_literature_audit.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/03_literature_audit_template.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/03_literature_audit_template.tex",
+      "sha256": "1b6804ac6991a5cc178516ec50946073316b873bfee0a3094b4cba75252a61ad",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/03_literature_audit_template.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/04_adversarial_novelty_audit.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/04_adversarial_novelty_audit.tex",
+      "sha256": "de6e48ccfa9065e5647ff995fd16f2a32129ee022cf53b8dfd3448de6e8bdf07",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/04_adversarial_novelty_audit.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/05_priority_closure.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/05_priority_closure.tex",
+      "sha256": "482d235be2456b7a565a062d8eb8557d9c53faaf7b7bfe08204afc3963ef9a8f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/05_priority_closure.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/PROPOSED_P11_scope_clarification.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/PROPOSED_P11_scope_clarification.md",
+      "sha256": "027c130a0ed4e472335746689f63a194d286fd01648558b04feb18d1f3132b0a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/PROPOSED_P11_scope_clarification.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/README.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/README.md",
+      "sha256": "32fc681c1ba16b93d247cc6da217ecaaa4843b5d9b058db11a79334821cd9f98",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/README.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/additional_sources_needed.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/additional_sources_needed.md",
+      "sha256": "ccf5db07a1a06252c4c49a7bef9c60f1590da7d11cce994424d766c83a4714f2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/additional_sources_needed.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/adversarial_audit_compendium.bbl",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/adversarial_audit_compendium.bbl",
+      "sha256": "5be269b1af594d26203f1409395bc4dee14c54caae7b43fa2486b2e36ddd2b23",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/adversarial_audit_compendium.bbl",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/adversarial_audit_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/adversarial_audit_compendium.pdf",
+      "sha256": "5556f0112c1226d41f5fbdae68a4c406887d11364d9693b85d2c819db148e0a9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/adversarial_audit_compendium.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/adversarial_audit_compendium.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/adversarial_audit_compendium.tex",
+      "sha256": "42c0c874356710a5c583793a9f76b5a0b321790483dff95f9a3a8a740301dd44",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/adversarial_audit_compendium.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/archive/directed_cyclic_networks_master.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/archive/directed_cyclic_networks_master.tex",
+      "sha256": "0a7850078ed62434b8c37c727637049c583972cd11159ac91345e6a8691e436d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/archive/directed_cyclic_networks_master.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A01_wellposedness_and_absorbing_box.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A01_wellposedness_and_absorbing_box.tex",
+      "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A01_wellposedness_and_absorbing_box.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.pdf",
+      "sha256": "089f40bfd3d8c0b62fb6eda7eac391c093bb023b150a88771a5cd00b5e23eff6",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.tex",
+      "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A02_synchronous_subspace_and_equilibria.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_origin_and_linearization.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_origin_and_linearization.pdf",
+      "sha256": "c817b753f257d27471c416925fb97ddaef6ae539ee980d80705aaa8fa9b7f0b2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_origin_and_linearization.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_origin_and_linearization.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_origin_and_linearization.tex",
+      "sha256": "e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_origin_and_linearization.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/README.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/README.md",
+      "sha256": "838b71659696314aee47e8128689b3c387f2bc58695cbf4ff67850c0fcbc0390",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/README.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/checks/exact_jacobian_check.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/checks/exact_jacobian_check.py",
+      "sha256": "a0b3e861df41ad8c5cb2d95da90e41bf8ca0fc1533e86e6b2413914d6caab35f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_jacobian_check.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/checks/exact_jacobian_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/checks/exact_jacobian_results.json",
+      "sha256": "793f2ff29ac256e079b5b832e3a7b1e8d6a7004a0da3031eed538f127f81555a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_jacobian_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/checks/exact_origin_check.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/checks/exact_origin_check.py",
+      "sha256": "649bfbaf4f3c45a1cb503c5700e6379aef2fa36663525257c75106301019ef1d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_origin_check.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/checks/exact_origin_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/checks/exact_origin_results.json",
+      "sha256": "fcbd331c1f7fbdb679cc215236861547ee72f6466b8134e512ee4b002e2d60d5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/checks/exact_origin_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/delivery_checks.json",
+      "sha256": "a2e03afc286e300c4227d358f3bb4781a11da4582d71f0312dcdd6b3c5ce3af1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/input_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/input_hashes.json",
+      "sha256": "97a87f30adde625901768eaf958f3d64bb5f681ff9f9069095ae756072b89138",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/input_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/check_p03.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/check_p03.py",
+      "sha256": "73784fd269f445a80639175b8901610e89a517469d69ddc5d397200dc5412bbb",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/check_p03.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/original_report.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/original_report.json",
+      "sha256": "28359ee200e6dff321b3fd19f8f29bd19a344342212f02256cc80cc65d6502d2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/original_report.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/original_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/original_summary.json",
+      "sha256": "aaa043f0d648a2be2ba3d6eb497acbbed63c50eb83fd61a127bc301e702cb987",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/original_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/report.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/report.json",
+      "sha256": "3555faa59588225adb8d021ef2a27bb4ed03ba70d629daf1c1dfd288de7f526a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/report.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/reproduction_comparison.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/reproduction_comparison.json",
+      "sha256": "ab3b5ffff399f3b7382d0384b560957605b95fd2cd04461515879c6b4eb03cad",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/reproduction_comparison.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A03_support/prior_validation/summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A03_support/prior_validation/summary.json",
+      "sha256": "911df562254b8e050bb86ded6848af56c46ece43fe403a6aca3031708d905b68",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A03_support/prior_validation/summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.pdf",
+      "sha256": "90819c883fc561c2a1c4435186b2b501488e1b13699e2c1073a95bff6e982359",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.tex",
+      "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_arbitrary_nq_fourier_spectrum.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/README.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/README.md",
+      "sha256": "1810c8470406231f76bcb9578050cb09854084c90efa33dc702fa5aeb1604a94",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/README.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/archive_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/archive_member_hashes.json",
+      "sha256": "939aa2391bb7e8c8eacaae5862a035b538c123f3bc25a1827e69404b289aae0b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/archive_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/checks/README.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/checks/README.md",
+      "sha256": "ce9691df2c0e391478584a0f203393abf18cd757198088ce0b6bfa1b34b68f36",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/checks/README.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/checks/independent_exact_p04.py",
+      "sha256": "aec35a1456843a56d2bfb229159ebbefaff575bc84d3cf239931bc4611242b43",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_authentication.json",
+      "sha256": "4f79c118f0db22d962a457d00b083301e9ab0dc2ac471440df8f360672755c70",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_results.json",
+      "sha256": "0702195bc9831e9cbd777cd9e768a21b635c1474f6886a8dc61563e0fa0494e7",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/checks/independent_exact_p04_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/delivery_checks.json",
+      "sha256": "e4a23c8a2b5b32e659e736dfd01ed35a83ebd71855d6e2fddb8c4c626a95f18f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/input_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/input_hashes.json",
+      "sha256": "9795e7b8d6fa55efb48eef3edc8354690112f9c7b48da1fa7aec425d90aade9d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/input_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A04_support/line_review.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A04_support/line_review.json",
+      "sha256": "7c899551fdb5d5bf26288adae0d233c14d73c569efc269e07bae5b463e9ccec2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A04_support/line_review.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_q2_mode_selection.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_q2_mode_selection.tex",
+      "sha256": "0f7e9836b91009a201185a4acbbb99715f3c65df715e405962b7d6852ff27031",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_q2_mode_selection.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/README.txt",
+      "sha256": "beb8250c5401b80344eb1e4ba53eb8510abe34b77748439cc951e2b03d5065bd",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/archive_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/archive_member_hashes.json",
+      "sha256": "23dfc2fff2b1a1beed88209e1dc8941a4a76cf01065b6306fc2a70d25c7c2244",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/archive_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/authentication.json",
+      "sha256": "a839229b1c275e908a537fee2c04dce8849b39e631ff8a142bd0659a1c9587b0",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/delivery_checks.json",
+      "sha256": "90223b739100371c523bfac495cc0422a452cff3073f2664a97b70288951df95",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/independent_check.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/independent_check.py",
+      "sha256": "c17992c467ae9bb2d55ab62d42e114d2e0a771396428da8c0ab8856d176cac6a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/independent_check.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/independent_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/independent_results.json",
+      "sha256": "bc9848155e713b880440eba622b73abd059daf4decfcbebb779809a5577dbb66",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/independent_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/independent_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/independent_summary.json",
+      "sha256": "26e1ff89d8830e8a2c8581b1a86d19fcea50aa465052b0bd77121ffe3ef9297b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/independent_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/input_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/input_hashes.json",
+      "sha256": "4812380a57cfcdbb25d8f1d50ec32d03b9780bb06f2b554012f233c567dbcc2b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/input_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/line_review.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/line_review.json",
+      "sha256": "1e4d995d54960c25d69d441a4ffdfd4d89b3aa057597f2bcb5fc36336cfa9f0a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/line_review.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A05_support/package_manifest.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A05_support/package_manifest.json",
+      "sha256": "cdb2cdc9b32d03898eb32f02b5cdef928f2f428ffbf03bd04e8de32dc71272cf",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A05_support/package_manifest.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_five_node_specialization.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_five_node_specialization.pdf",
+      "sha256": "34d4168b1e391158055e1361c520282d84b6a37603637740b1ebfb0de220ab3d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_five_node_specialization.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_five_node_specialization.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_five_node_specialization.tex",
+      "sha256": "b3923d6520cc249c508b80dd06a2b515f054e1510e255224a864e986cd38ce4b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_five_node_specialization.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/README.txt",
+      "sha256": "bf2ad90f6c49998150bf9741752a7faf5f91b403cefc5cbe5e1be3ef79878bfb",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/archive_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/archive_member_hashes.json",
+      "sha256": "2edacfc5458289e0dec7ffa4ada007fa97df597ec5338079d88ff532289e4c01",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/archive_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/authentication.json",
+      "sha256": "abb4318b6dd96e766ae0dc4611a7d24a3a47a4fbe38770e0c12edc6f02adf6f3",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/build_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/build_checks.json",
+      "sha256": "571f13cc841184121dcb1132477da225d27869335793faeed57104f7034596ea",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/build_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/delivery_checks.json",
+      "sha256": "bc86dd7440f321222f202b93292c0c97e868d85a84f8367dbb9f75301dfcf52b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/independent_check.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/independent_check.py",
+      "sha256": "25e0fa79b507a90bcf3b4213e49854ebfa87b0ebf88d94dac1fa2e683dc30c2d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/independent_check.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/independent_exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/independent_exact_results.json",
+      "sha256": "4d1f932c74c9eea6e707b1cdad9ef20a461a026d3b390b109474eb5196e40b2c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/independent_exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/independent_numerical_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/independent_numerical_results.json",
+      "sha256": "09b2256767706bb98aeb7c030434a4e7ea1b387bf574d7f36b10468037dc8ad0",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/independent_numerical_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/independent_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/independent_summary.json",
+      "sha256": "7b623050bc153fb50e721504968dd94989eea5a7c70789e477ba390d70d4fb4d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/independent_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/input_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/input_hashes.json",
+      "sha256": "cb0675b9284a908028a739bd57441c460073d75a0006933a88949ae3197c17c4",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/input_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/line_review.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/line_review.json",
+      "sha256": "a1ea5213742a1b1b5e0c71b8575cc1262ba1d0c87a2fad070ed4c58637a5e104",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/line_review.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/package_manifest.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/package_manifest.json",
+      "sha256": "52cfd7bce26f4bb993b9daf2def1d1d8ac4461238be0f5a2a7647766ea49e241",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/package_manifest.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/authentication.json",
+      "sha256": "8f56fc3cefdcfd9bd3ce1e8133aef81f19bf6ffebb45478df3b3de62a354c16b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/check_p07.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/check_p07.py",
+      "sha256": "b710507c2f89f2d6af27b68ced5784c68f840a05613e0a45687be4521500c554",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/check_p07.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/original_exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_exact_results.json",
+      "sha256": "03b86e2e1c5105a38e3237b3dfca10c030a31cc03dab63c167b5380b58c7f819",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/original_exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/original_numerical_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_numerical_results.json",
+      "sha256": "6cd8a2aae099594e2fa20c71492bd72eae46520626974960952f331549602f30",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/original_numerical_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/original_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_summary.json",
+      "sha256": "fd4a86eb603ae66e1532d7f2bfe99ae51afed896aa9db0c5cb27c98d1a0417ea",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/original_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_exact_results.json",
+      "sha256": "03b86e2e1c5105a38e3237b3dfca10c030a31cc03dab63c167b5380b58c7f819",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/numerical_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_numerical_results.json",
+      "sha256": "6cd8a2aae099594e2fa20c71492bd72eae46520626974960952f331549602f30",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/numerical_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/original_summary.json",
+      "sha256": "fd4a86eb603ae66e1532d7f2bfe99ae51afed896aa9db0c5cb27c98d1a0417ea",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduced/summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduction_comparison.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/prior_validation/reproduction_comparison.json",
+      "sha256": "669417da161367a2e1f6c17a2108d9f1f58ac942ae318e64f0cc8f562a21b5fb",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/prior_validation/reproduction_comparison.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A07_support/request_coverage.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A07_support/request_coverage.json",
+      "sha256": "34662ee572320bbfd81a1b187e48f638c7dc2ad3789a937bed5c7f6ba0413916",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A07_support/request_coverage.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_matched_bilinear_analysis.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_matched_bilinear_analysis.pdf",
+      "sha256": "9be30d2f422c37a6d91557100a8d657727df603849cc877873c9f02a5437dff3",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_matched_bilinear_analysis.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_matched_bilinear_analysis.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_matched_bilinear_analysis.tex",
+      "sha256": "87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_matched_bilinear_analysis.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/README.txt",
+      "sha256": "c9ee582ffba35491eaa5ce672c9c094edb783d9f89f452e8e0b2108527d90910",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/archive_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/archive_member_hashes.json",
+      "sha256": "6d74bc375b24262342e442e772604f6eefa31b7cae7424a1966a8e51db09fcfa",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/archive_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/delivery_checks.json",
+      "sha256": "aea9e022f46fb7c6e947cb05c8eba4e565695ded7e57b9fb898c1d3b5b33e517",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/expected_counts.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/expected_counts.json",
+      "sha256": "58225cd6c45ef70794317de65cdb5516c63e96ba19aed2238b655e0854d48488",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/expected_counts.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/independent_check.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/independent_check.py",
+      "sha256": "3e173b1ae1905147369739f8640fe1febc623a6508afe2b7a5f28b508608b21f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/independent_check.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/independent_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/independent_results.json",
+      "sha256": "89d4f5b5407bb2f6a739d7d258a50221c5182de5ed00a9510b49834d8a77fe84",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/independent_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/independent_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/independent_summary.json",
+      "sha256": "06ad4763d747abced5f6a4e1f66e4c22da6785776ae6c69318d4b48f80e9c0d7",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/independent_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/input_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/input_hashes.json",
+      "sha256": "01b9114b5cb321df295006015de6924de7ed7fb38c84950fae2a6c81bed3fb24",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/input_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/line_review.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/line_review.json",
+      "sha256": "fdd6bc6e365de27b12c3e87c2d32c30039e00cf3e7ab928f33dcadc0ec45c72f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/line_review.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/package_manifest.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/package_manifest.json",
+      "sha256": "19df6211a7cc915ef234d22e17fc38a89e38f36e0a7a3f1158dd65d6318a905b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/package_manifest.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/authentication.json",
+      "sha256": "cc1053e44b53cbe66de3af0a7d8eb59f95a25cbff9cef1b937acb1741659772f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/check_p08.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/check_p08.py",
+      "sha256": "2385d2074ead3ca764fb98fd7dff5fb419c68526ed0e57e9c80e364980052939",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/check_p08.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/independently_expected_counts.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/independently_expected_counts.json",
+      "sha256": "80c2cb0c5e5d7d73297a8c7a4d54d1bb0c2453efe2517c5ba448132a95a8e59c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/independently_expected_counts.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/original_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/original_summary.json",
+      "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/original_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduced_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/reproduced_results.json",
+      "sha256": "7c79a28f0c20e9e9a715b6f783fc6ef86890ea21cfbe406f9dfe6d11d871bd61",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduced_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduced_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/original_summary.json",
+      "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduced_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduction_comparison.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/prior_validation/reproduction_comparison.json",
+      "sha256": "83d47b6e5e89e267a8d2b2fe37fadb7e169a5f3b51fe2aa25f6eb22e11aa2195",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/prior_validation/reproduction_comparison.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A08_support/source_claim_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A08_support/source_claim_checks.json",
+      "sha256": "e090064641a0155f5ae63eb30f990bf4ef5695cf8ddb6c9752984ca229f31327",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A08_support/source_claim_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/README.txt",
+      "sha256": "c01bba560fc6387abf07c033c1ea2eecf30d20eef79c0f271f05aaa5923930c6",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/archive_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/archive_member_hashes.json",
+      "sha256": "fc14e31f3789cf212e7286781a66da95cdc57251c8100546cf654c89750451f1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/archive_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/artifact_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/artifact_hashes.json",
+      "sha256": "d156fa16a480e67f07e797e34d71e0f23e4a7f504091864ea1c785117d5c0db5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/artifact_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/authenticate_inputs.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/authenticate_inputs.py",
+      "sha256": "90b88cd8749711a956e39bffe51415c2f45b1d45bced5cae7727702b0f921f0e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/authenticate_inputs.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/build/build_console.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/build/build_console.txt",
+      "sha256": "cab28099ecda6ea92a31923aae133947a03d20c4aa3b4997e8711293cffc48bd",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/build/build_console.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/build/verification.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/build/verification.json",
+      "sha256": "eff83ebeb5cb6d0ae85e571a2ebe1fed902fdb1b930dc3a0b856bf8ab71bedf7",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/build/verification.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/equilibrium_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/equilibrium_results.json",
+      "sha256": "d4843ec7babd9467359f1fad5d5665af3e29a187f2589c2db082f4f95319d6d7",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/equilibrium_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/exact_results.json",
+      "sha256": "8602498b4e578cc2690dabcbe9d5a9782485e9138229a95a1dac12f064374cca",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/lyapunov_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/lyapunov_results.json",
+      "sha256": "db306099dd1840d3c81b26966c85f0a76a3e92b5c54693b5d34a5ac35bdfede2",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/lyapunov_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/slope_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/slope_results.json",
+      "sha256": "9bd1dd9486a59b5925b5331e86c712aa229e950ee068de64c67c26dfe5cadacc",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/slope_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/summary.json",
+      "sha256": "c03a58bc15219415025ed72d46a2df64e45671d262d0e3605147fb4c2e68360e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/checks/transverse_search_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/checks/transverse_search_results.json",
+      "sha256": "639e9bb508dd9db797461ceea15e3814013b32eb9c5428a95acf2982b7aa49e6",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/checks/transverse_search_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/delivery_checks.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/delivery_checks.json",
+      "sha256": "1c217c31accc522901e1a638d7a635ec1120999604dfbca5b2ea8da2f6bd914a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/delivery_checks.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/finalize_package.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/finalize_package.py",
+      "sha256": "5cd40a43f859cd2b4b00222c832d3e0e4e8af8d804148eb2820e1e991643698c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/finalize_package.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/independent_checks.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/independent_checks.py",
+      "sha256": "2296331e8cfe981d4dc1477a8eb7a1653994e917a4aa4b36deafcf91369dbb79",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/independent_checks.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/input_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/input_inventory.json",
+      "sha256": "a5c2ec7577aac6bda76db503b98ea607bbd38eaaf4a85ab0b4d494cf16b551c9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/input_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/line_review.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/line_review.json",
+      "sha256": "dd9ad0fa9fc739a417b588f2cb9405c1a9f421d24a13e7a65d4cb0e19a210b45",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/line_review.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/README.txt",
+      "sha256": "9a35fce5fffda23d3a479394298c25ce58596929a39e3ea98c1a6c238e2f9e1e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/check_p09.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/check_p09.py",
+      "sha256": "b42af82b97c187b3a61238b7cc2aba9d35e44d210a38ec88421b10d5be2fcf93",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/check_p09.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/exact_results.json",
+      "sha256": "7643b4efd5f63c08f90b20eb935895bdc01c1e9a9f65eb38c1ad46a5170fe149",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/numerical_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/numerical_results.json",
+      "sha256": "8af88da6603b2c9fbc6f018d131af24ec8a92ac080c47af9551bf213bd1f208f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/numerical_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/original_exact_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/exact_results.json",
+      "sha256": "7643b4efd5f63c08f90b20eb935895bdc01c1e9a9f65eb38c1ad46a5170fe149",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/original_exact_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/original_numerical_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/numerical_results.json",
+      "sha256": "8af88da6603b2c9fbc6f018d131af24ec8a92ac080c47af9551bf213bd1f208f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/original_numerical_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/original_slope_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/slope_results.json",
+      "sha256": "b72aec4141ff17a1c5ecd4ac79d7f5cf0a788c3bb7575ca19e07246d3b1542a8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/original_slope_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/original_summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/summary.json",
+      "sha256": "3da96b3fea6b63b1fefa224e428840b6c3a94a8994625309665dc373e2415b6c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/original_summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/reproduction_comparison.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/reproduction_comparison.json",
+      "sha256": "8624c49606ac634be0b1ce5a78210aa7ea4f4789054154cd379214f42ef78610",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/reproduction_comparison.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/slope_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/slope_results.json",
+      "sha256": "b72aec4141ff17a1c5ecd4ac79d7f5cf0a788c3bb7575ca19e07246d3b1542a8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/slope_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/prior_validation/summary.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/prior_validation/summary.json",
+      "sha256": "3da96b3fea6b63b1fefa224e428840b6c3a94a8994625309665dc373e2415b6c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/prior_validation/summary.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/validation_provenance.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/validation_provenance.json",
+      "sha256": "dc1ff8fc5e644db99bcfd34628d7eea13ab6505280bf966a3bc444198aba5177",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/validation_provenance.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_support/write_line_review.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_support/write_line_review.py",
+      "sha256": "8a1253be63c3377bd44d8a262498b3de7c7cefee80eb44cedda3c08d176505e3",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_support/write_line_review.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_transcritical_bifurcation.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_transcritical_bifurcation.pdf",
+      "sha256": "581ff5f1e07989c6331575613acc6b1e21c8f08f715a87a20623ab8e9c5fd0c4",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_transcritical_bifurcation.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A09_transcritical_bifurcation.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A09_transcritical_bifurcation.tex",
+      "sha256": "1234e02d7cf620511bfd7b9306dbb72ac68929ef01e8c3ba70bd3615bcd2b943",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A09_transcritical_bifurcation.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_saddle_node_and_bistability.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_saddle_node_and_bistability.pdf",
+      "sha256": "44f1a8e98cec56f2c6da671c0acd94a48180ec7dcf9ea8fe9ef17a524161e472",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_saddle_node_and_bistability.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_saddle_node_and_bistability.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_saddle_node_and_bistability.tex",
+      "sha256": "ff2ebb0f84ae79fc9aad012a3945ef236e8ccdac9f47d64fd708e4dc66963b19",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_saddle_node_and_bistability.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/README.txt",
+      "sha256": "cb7d484382b8853f9500aa354bf6ab631999628ff2ccc14e2fa38ebabb180fd9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/audit_build_console.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/audit_build_console.txt",
+      "sha256": "252a82d9806a51c3d63f90254cdafab0bec2880b5aa11f2815f2d37f1dfa9ad9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/audit_build_console.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/audit_identity.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/audit_identity.json",
+      "sha256": "7d32e22eabc8cbd4751c570de2791d4c9d220236d9debfd27c06afd256c236f5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/audit_identity.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/authenticate_inputs.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/authenticate_inputs.py",
+      "sha256": "f6386188a9b28b326a19b8274ef696e11f1086966c4a6196bc8ce3e0a0f7439e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/authenticate_inputs.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/developer_validation_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/developer_validation_inventory.json",
+      "sha256": "95d93148429b3d9941680c64fd2440ae363e22876c69b676c9e0445e999bd46f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/developer_validation_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/draft_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/draft_member_hashes.json",
+      "sha256": "658939d86e5ba85e40d65ac8c6623c5b29724dbed83224c1ee40e0cb40672277",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/draft_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/independent_checks.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/independent_checks.py",
+      "sha256": "2d3a04e52e082b061d5d3aedd943185f13e9325aca33367a8b00425d767ed58e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/independent_checks.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/independent_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/independent_results.json",
+      "sha256": "8b03d5b38dc7f6ffc2d360e207c8e0ace696374bd4de41d49cea38724fcca1b5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/independent_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/input_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/input_inventory.json",
+      "sha256": "66e9285169fc427b5cf0994271f160910485b6e3982462fb6fce1e87f8d713de",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/input_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/line_by_line_review.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/line_by_line_review.csv",
+      "sha256": "a9b8cfc1e00104cce4a1544697e0a8c1a9f09aff24684c357c5054706fc15b7d",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/line_by_line_review.csv",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/line_review_data.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/line_review_data.py",
+      "sha256": "7de1cf5e310cb0e0d19b7eaab75bd443b0597664d83d3ab0ee6bd2086af31040",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/line_review_data.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/matrix_cases.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/matrix_cases.csv",
+      "sha256": "96314cdaf7d018cc1c012f6668adc0b088f238a6996e7bdaddf437bec4b53262",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/matrix_cases.csv",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/package_member_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/package_member_hashes.json",
+      "sha256": "da72afd08d1459c203eecaeaef9fdf9f708adbaa67a1b261ee7b600bf1368bad",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/package_member_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/prerequisite_body_authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/prerequisite_body_authentication.json",
+      "sha256": "1e7da6f22d9a983d740a35688518ddd57f96b38056f062c098bf70986fe31d17",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/prerequisite_body_authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/presentation_QA.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/presentation_QA.txt",
+      "sha256": "6c7fb0bfa5d7007eb969b284ef75ec992650d43bf0c495e341dbbb8fea6ac81b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/presentation_QA.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/preservation_report.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/preservation_report.json",
+      "sha256": "13bc735caee065d94788e8fd26bf7e6e3fa37ae933473fa1e265ab1fb28b546c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/preservation_report.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/protected_before.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/protected_before.json",
+      "sha256": "b32d8d8184da9dc68f5b4f7fbecf1ed46bb7e714a77b60b9a1494465312c5190",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/protected_before.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/render_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/render_hashes.json",
+      "sha256": "9be913736c7438a2968a9b4f7d2bf5aa360c927561f2aebbbb7874689ad85f14",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/render_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/static_search.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/static_search.csv",
+      "sha256": "a0ba0b6884cfce6b8a463b16ba87dbffe4114702befb9add623273e6833f8db8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/static_search.csv",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A10_support/validation_provenance.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A10_support/validation_provenance.txt",
+      "sha256": "4fb175e11ca0b708b09ba881b367fb92e040d8c3e3c2b859a31be5605d64189f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A10_support/validation_provenance.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_hopf_spectral_conditions.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_hopf_spectral_conditions.pdf",
+      "sha256": "d592d294ed8305b8c4c3852fdc69e59099daab4abe1176fcd00a60736823f1c3",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_hopf_spectral_conditions.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_hopf_spectral_conditions.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_hopf_spectral_conditions.tex",
+      "sha256": "699aacc22138a3c2d0c18a74c930ed8315068b765419eef901a3c97e9c8b2abb",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_hopf_spectral_conditions.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/README.txt",
+      "sha256": "7e93873b4180844d413446505ca65ea317c2493158410428c63e03c05c7e39c8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/SHA256SUMS.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/SHA256SUMS.txt",
+      "sha256": "412344aeab1e761822e96f7801df4d2fcc287b17d02bd9c357fb344eeadb9391",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/SHA256SUMS.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/archive_authentication.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/archive_authentication.json",
+      "sha256": "a79b17d634587608922a457b44dafc91b98fc449b09a3f1f9f19b7764f8202fe",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/archive_authentication.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/audited_version.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/audited_version.txt",
+      "sha256": "7df1535b9302f6db5120c2718f2b932e49b73ce659f82051d736503dc8166992",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/audited_version.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/authenticate_inputs.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/authenticate_inputs.py",
+      "sha256": "201a74543b2a6cdd8854f1e8cab813e04e4b0987848eb48717f0607b68f6f61b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/authenticate_inputs.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/build_and_visual_review.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/build_and_visual_review.txt",
+      "sha256": "a093515d6d812c8cb3cda1471bdce90deffd9af06621349559457a9b99661d68",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/build_and_visual_review.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/build_console.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/build_console.txt",
+      "sha256": "30a8ad73ef065540ed520793b54800f0aa71655a1e5cd6bf2e55bcc01665e3cd",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/build_console.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/developer_validation_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/developer_validation_inventory.json",
+      "sha256": "fcd29ee8893105942bfa96a06695b59f8eb0946d795f363bfa0acc7868601240",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/developer_validation_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/independent_checks.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/independent_checks.py",
+      "sha256": "9b672403df727cece3233b6ef780f5b10cbe2f63f5aa3314c04ffac26467342f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/independent_checks.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/independent_results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/independent_results.json",
+      "sha256": "30e581dedadd42aae19e1b426c2fed463d7e9b8e4b27fefccbaa4a7b2986f89c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/independent_results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/input_inventory.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/input_inventory.csv",
+      "sha256": "efa2a0d7cbf8c622912d10a14964a52a6a282a47e6f0c2272a4fea53916a63f9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/input_inventory.csv",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/input_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/input_inventory.json",
+      "sha256": "16cbf73b10b61f3d8ab35938263fd773d887ad1591131cbdc4923aca4daa73d5",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/input_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/line_by_line_review.csv",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/line_by_line_review.csv",
+      "sha256": "aa93a239fae7e4f2cd19a74bbaa3657a5e489c6e7441d4e5ee6e2f24bc6ac782",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/line_by_line_review.csv",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/original_project_inventory.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/original_project_inventory.json",
+      "sha256": "8c0107f80a101df9dca2f2d9e2e1800a35e1b3b2f90e13fc7bc99255683bd2d9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/original_project_inventory.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/preservation_check.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/preservation_check.json",
+      "sha256": "e34c388a8847fa5f96ba270c1a53d6318a9de21a3e18af47bae0f169653fb613",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/preservation_check.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/proposed_clarification_review.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/proposed_clarification_review.txt",
+      "sha256": "541fe7defa8707cf74239d7c0d6ec4b2e388a2948d89de5aad422dde88b2a5d4",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/proposed_clarification_review.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/realizability_cells.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/realizability_cells.json",
+      "sha256": "01bb340c42370e50e9d5054105c70942fccfb4525c6850e1437167e02eeb9911",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/realizability_cells.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/A11_support/validation_provenance.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/A11_support/validation_provenance.txt",
+      "sha256": "766e9da39bd83e487f3369c7d98d050b410d30cd58e189e75209a373915c8508",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/A11_support/validation_provenance.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/audit_template.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/audit_template.tex",
+      "sha256": "b0ddf12b7f944d01ffa8bce6d281b8dda5591b97b1a8ee316e2524e4ba5c6b4b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/audit_template.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/initialization_checks.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/initialization_checks.md",
+      "sha256": "3a7ce3d9126d32725aadd33c873f72e41a0779ecd64576022ce699b8f5e1c2bc",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/initialization_checks.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1_checks.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1_checks.md",
+      "sha256": "9dc478fb622ee67cdf8854d3b86f913b99de2567f97949167fd27557ddace445",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1_checks.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1_source_manifest.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1_source_manifest.md",
+      "sha256": "5e7bf9018322bc913e5e46f42f6d10391a743b9a7ec60f8c6fd2ddb239668011",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1_source_manifest.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1b_checks.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1b_checks.md",
+      "sha256": "86445d0f61b01ccbe85c0740882e5b61b4964e2003c7f9329c84117a297af929",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1b_checks.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1b_search_log.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1b_search_log.md",
+      "sha256": "fe70470f1f51ad458014b6c5c45546ea2cac1de75645fe5720a124d76555268e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1b_search_log.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1c_access_log.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1c_access_log.md",
+      "sha256": "292d59ff23673c54466f6cca44f85329b601ef3c6f6e1e352509bf30fd9c0236",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1c_access_log.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/audits/phase1c_checks.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/audits/phase1c_checks.md",
+      "sha256": "cf73d73c015e70364702e21ad564a348597d0eab084e5bbcd78a740baa7520e9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/audits/phase1c_checks.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/claim_registry.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/claim_registry.md",
+      "sha256": "4c78117373a120ec3edf6da80ffa1c9695d03e749f3907e5b74fce7b745450c0",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/claim_registry.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/final_novelty_verdict.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/final_novelty_verdict.md",
+      "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/final_novelty_verdict.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/frozen_theorem_package.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/frozen_theorem_package.md",
+      "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/frozen_theorem_package.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/literature_audit_compendium.bbl",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/literature_audit_compendium.bbl",
+      "sha256": "0a13b6f3abf4165028ca8e9d4d8b8ef8f33ddaf7d7ef9788c99c6dc28a89e73b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/literature_audit_compendium.bbl",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/literature_audit_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/literature_audit_compendium.pdf",
+      "sha256": "414fe1c872047a6465fe74390e78b921741d95a97b27830966c057b947a160cc",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/literature_audit_compendium.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/literature_audit_compendium.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/literature_audit_compendium.tex",
+      "sha256": "6edbeb22111434e6acc5799ef0f396957138adee407a99aa9dfb04b3cc73a597",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/literature_audit_compendium.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/novelty_decisions.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/novelty_decisions.md",
+      "sha256": "8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/novelty_decisions.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/novelty_matrix.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/novelty_matrix.tex",
+      "sha256": "8ee96f8a02329282289e90a529902b111f2fb88a067f68144cbbc99dbc68e257",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/novelty_matrix.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/numerics/N01_validation_protocol.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/numerics/N01_validation_protocol.tex",
+      "sha256": "a9325a19bcf8d6fc469084b04ad491ada6368fd2889c1607d7ff39c7a90e31c8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/numerics/N01_validation_protocol.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/numerics/N02_continuation_plan.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/numerics/N02_continuation_plan.tex",
+      "sha256": "7d7faeeb7d314f347db78eef10c83db1c1f4e8d9dee2e7dae2b8ddd84171eebe",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/numerics/N02_continuation_plan.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/numerics/N03_figure_plan.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/numerics/N03_figure_plan.tex",
+      "sha256": "0b7dedad4ad2b03ac1ab24baed9fbb1b4aa20dcda8811af8fc9b6a7733a489ab",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/numerics/N03_figure_plan.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/open_decisions.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/open_decisions.md",
+      "sha256": "017fad333a51dfdc39df070d070046a852a8be20afed67010fd7407584ebd251",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/open_decisions.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/overlap_risk_report.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/overlap_risk_report.md",
+      "sha256": "4e064223430e93253cfe7303cdde6e0b2238266df24af15c7255ad9700cf2645",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/overlap_risk_report.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/priority_closure_compendium.bbl",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/priority_closure_compendium.bbl",
+      "sha256": "bed6ff2db1802c42d13823566b259984dcc66b135e54d440fb037789e778f1ab",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/priority_closure_compendium.bbl",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/priority_closure_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/priority_closure_compendium.pdf",
+      "sha256": "8d2be8c1af9e56ada7039cd984b833c98135a70197c02f72cead239d31d67b46",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/priority_closure_compendium.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/priority_closure_compendium.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/priority_closure_compendium.tex",
+      "sha256": "a89f4579ed0097c62cc934a7b9cd54a61006d7f69a805ae7c47c7e2f83de05d7",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/priority_closure_compendium.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/project_manifest.md",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/project_manifest.md",
+      "sha256": "20afda6d8b74f17d2ef1a9d9091ab640b25fdd31b6587838f8ef294b509a05fb",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/project_manifest.md",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P01_wellposedness_and_absorbing_box.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P01_wellposedness_and_absorbing_box.tex",
+      "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P01_wellposedness_and_absorbing_box.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P03_origin_and_linearization.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P03_origin_and_linearization.tex",
+      "sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P03_origin_and_linearization.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P05_q2_mode_selection.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P05_q2_mode_selection.tex",
+      "sha256": "054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P05_q2_mode_selection.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P06_large_n_limit.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P06_large_n_limit.tex",
+      "sha256": "4a8b78fde665a7ecd0756dc1c069b2d771c855c795394724f13bd9ef47d3c2c8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P06_large_n_limit.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P07_five_node_specialization.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P07_five_node_specialization.tex",
+      "sha256": "1258641da2b1b729523da6262cf75345f5ef1eabf7a9f693a8b13dd34deec393",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P07_five_node_specialization.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P08_matched_bilinear_analysis.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P08_matched_bilinear_analysis.tex",
+      "sha256": "873fe7eabe86f01f70b497067307dabd491a682f122f6e87205b797c365ea88e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P08_matched_bilinear_analysis.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P09_transcritical_bifurcation.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P09_transcritical_bifurcation.tex",
+      "sha256": "5d357a5be97dfbad62a0107ca2e010ff97e0c11a719ee850df69411275f11ff8",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P09_transcritical_bifurcation.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P10_saddle_node_and_bistability.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P10_saddle_node_and_bistability.tex",
+      "sha256": "37542cc5409d7db33ca183869933fbdbad673628f69f6988f2778a84bc84094f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P10_saddle_node_and_bistability.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P11_hopf_spectral_conditions.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P11_hopf_spectral_conditions.tex",
+      "sha256": "097b42dfdf497cd34bb980e337f8d7f31e4a3538522871f26a16f08e9d6528a9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P11_hopf_spectral_conditions.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P12_hopf_transversality.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P12_hopf_transversality.tex",
+      "sha256": "cdda4e10f227b5377357bf2bc90418e1782466b50d44f2a272d9846dbc37fe71",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P12_hopf_transversality.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P13_first_lyapunov_coefficient.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P13_first_lyapunov_coefficient.tex",
+      "sha256": "7afce8dd8da7c7987422f4e66a968a27d18d139da6902dba7fdde3a6942e4f9b",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P13_first_lyapunov_coefficient.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P14_rotating_waves.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P14_rotating_waves.tex",
+      "sha256": "654eb8c9e1940e4275a05e4293f58914046e250bd1964f57389c5152540c27ac",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P14_rotating_waves.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "sha256": "4aeac754428335b4400ec92f6b6e2426ea148c0666250301c3018c4960f0afde",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P15_heterogeneous_equilibrium_persistence.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P16_static_sensitivity_and_green_function.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P16_static_sensitivity_and_green_function.tex",
+      "sha256": "83d7921957c41c369a41646cbb647922218f0a5e7e41d46a2f02e9f1ab5d52aa",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P16_static_sensitivity_and_green_function.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P17_transient_and_harmonic_response.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P17_transient_and_harmonic_response.tex",
+      "sha256": "effd42c3ec9d86b1679a04339c244710d99eca6303900f64768f1cd4a1e477e6",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P17_transient_and_harmonic_response.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs/P18_stability_radius_and_hopf_shift.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs/P18_stability_radius_and_hopf_shift.tex",
+      "sha256": "9a3c945becf5e05a00be015363e7da53660d0ed76a1115d41ea69bf8441a4d7e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs/P18_stability_radius_and_hopf_shift.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs_compendium.pdf",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs_compendium.pdf",
+      "sha256": "42d0e770c72334b3b1e73f27a4dc62273760ca4c21b1344c0d591f363ec8c131",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs_compendium.pdf",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/proofs_compendium.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/proofs_compendium.tex",
+      "sha256": "a94a48e59fc83123b1e09d3bd846ba9b33b5a6d08d4f7cf134a7ac453dca258f",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/proofs_compendium.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/references.bib",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/references.bib",
+      "sha256": "2004d266d475e78d58b4932631165f8ef0ef9af5efcbddde69447bd62e1c271a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/references.bib",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/revised_novelty_matrix.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/revised_novelty_matrix.tex",
+      "sha256": "5b18afcc60111f910c7f36ad2db7605e74ad4e1bd64fbc955b7c8332048e8f1c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/revised_novelty_matrix.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/cyclic_network_project/shared_macros.tex",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/cyclic_network_project/shared_macros.tex",
+      "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/cyclic_network_project/shared_macros.tex",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/README.txt",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/README.txt",
+      "sha256": "d16dad3f6a36b9b27e34fe56fc381b7630bde691e6005897dee78f4988902315",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/README.txt",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/results.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/results.json",
+      "sha256": "5dc9c9e41e07cd2aa3de54cfea80d0709bc04b9028bf1bb3648133d9bffbbd6c",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/results.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/source_hashes.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/source_hashes.json",
+      "sha256": "9decf44e8eef8a26e80177cf8823a8e54f2f32f606379614d1265c5b8dcedb64",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/source_hashes.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/trajectories.npz",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/trajectories.npz",
+      "sha256": "362b7263a5e342809c57e85c1d2172073bb62ab90afcd346a510649bab833f1a",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/trajectories.npz",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/trajectories.png",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/trajectories.png",
+      "sha256": "9b9b51af574888dc88d362ed3adb0b365bd2de2417d1ad8c8769113aac2f3ec9",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/trajectories.png",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/mb-global-verification/verify_mb.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/mb-global-verification/verify_mb.py",
+      "sha256": "98be5c5fe63e625c58e38f9b76c936ae229d481797a3101695bc4070104ece0e",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/mb-global-verification/verify_mb.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/prior-art-audit/audit-data.json",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/prior-art-audit/audit-data.json",
+      "sha256": "8308238f9c81cbdb945893b7303de913fc7c3ec55a63636a53410d418094c304",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/prior-art-audit/audit-data.json",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/prior-art-audit/build_report.py",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/prior-art-audit/build_report.py",
+      "sha256": "9cdacc734a4aedd7de387fe4c44cd2766fb2fad50467a722fdb7b4f77c9140d1",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/prior-art-audit/build_report.py",
+      "status": "theory_candidate_snapshot"
+    },
+    {
+      "original_relative_path": "work/source/outputs/prior-art-audit/prior-art-audit.html",
+      "retained_destination": "archive/theory_snapshots/oct04_research_candidate/outputs/prior-art-audit/prior-art-audit.html",
+      "sha256": "9ba7454a8cb75d592db75341a1d95ab4318b6d268f29cd0b9d99fe451868f634",
+      "source": "/Users/carterfeng/Documents/Code/Codex/2026-10-04/te/work/source/outputs/prior-art-audit/prior-art-audit.html",
+      "status": "theory_candidate_snapshot"
+    }
+  ]
+}

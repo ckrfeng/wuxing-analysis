@@ -1,0 +1,564 @@
+% STATUS: VERIFIED / AUDITED
+% DEPENDS ON: P02-P04 VERIFIED / AUDITED
+% INHERITED FOUNDATION: P01
+% MODEL: canonical DM
+% BIFURCATION PARAMETER: g, equivalently mu=a+c-g
+% GENERIC CONDITION: a != k+h
+% DEGENERATE LOCUS: a=k+h, g=a+c
+% ROLE: supporting local steady-state bifurcation theorem
+% NUMERICAL DEPENDENCIES: none
+% NEXT DEPENDENCY: P10
+% LATER USERS: P11-P14 where relevant
+% VERSION: P09 v1.1; 2026-10-03; metadata-only A09 audit closure
+% CLAIMS: C036, C067, C068; C069 algebraic/spectral part only
+% SCOPE: local origin bifurcation in U and physical branch interpretation;
+% no P05/P07/P08 theorem dependency; no P10 result or unfolding.
+% AUDIT FILE: audits/A09_transcritical_bifurcation.tex
+% AUDIT VERDICT: VERIFIED; required corrections: NONE
+% LAYER VERDICTS: critical spectrum/reduction VERIFIED;
+% generic transcritical VERIFIED; stability/physical-branch VERIFIED;
+% generic critical-dynamics VERIFIED; degenerate critical-stability VERIFIED;
+% codimension/scope VERIFIED. OVERALL: VERIFIED.
+% AUDITED VERSION: P09 v1.0; 2026-10-03; 24155 bytes; 539 lines
+% AUDITED FULL-FILE HASH:
+% b2366edf1ff71199b7f1d02a58cf828148d9a697dfafc9e07e70a523e4f26680
+% AUDITED MATHEMATICAL-BODY HASH:
+% a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393
+% CLOSURE DATE: 2026-10-03
+% CURRENT VERSION: P09 v1.1; metadata only; no mathematical revision
+% CURRENT FULL-FILE HASH: recorded externally in project_manifest.md
+% and the closure evidence to avoid a self-referential full-file hash.
+% CURRENT MATHEMATICAL-BODY HASH:
+% a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393
+% BODY SCOPE: first line-anchored section command through EOF, all bytes.
+% PRESERVATION: every mathematical-body byte is unchanged from audited v1.0.
+% STATUS NOTE: historical DRAFT/audit-pending prose in the body is retained;
+% this header and the CURRENT manifest closure govern lifecycle status.
+% VALIDATION PROVENANCE: A09 authenticated and reproduced the original
+% checker outputs byte-for-byte: 1260 exact, 2700 matrix, 12 slope checks.
+% No historical checker is rerun for this administrative closure.
+% P10 GATE: cleared to begin; not begun in this task.
+
+\section{P09: Transcritical bifurcation at the origin}
+\label{sec:P09}
+
+\noindent\textbf{Status: DRAFT; independent audit pending.}
+Fix canonical $a,k,c,h>0$, $n\ge5$, and $1\le q<n$, and vary $g$.
+Throughout this module put
+\begin{equation}
+ A=k+h>0,\qquad b=a-A,\qquad g_c=a+c>0,\qquad \mu=g_c-g.
+ \label{eq:P09-parameters}
+\end{equation}
+Here $b$ is a local abbreviation, not an archived comparator coefficient.
+Write $F(x,\mu)$ for the original canonical DM field with $g=g_c-\mu$:
+\begin{equation}
+ F_i(x,\mu)=a x_i-kx_i^2+\frac{c x_{i-1}}{1+x_i}
+ -\frac{(g_c-\mu)x_i}{1+x_{i+q}}-h x_i x_{i-q}.
+ \label{eq:P09-field}
+\end{equation}
+For $|\mu|<g_c/2$ all coefficients remain positive. The field is jointly
+$C^\infty$ on $\Domain\times(-g_c/2,g_c/2)$,
+$\Domain=(-1,\infty)^n$, by its nonvanishing denominators and P01's
+local foundation (Proposition~\ref{prop:P01-local}). No global invariance
+of $\Domain$ is needed. Neighborhoods may depend on all fixed parameters
+and on $n$; no uniform-in-$n$ assertion is made.
+
+The direct proof inputs are P02, P03 and P04. P02's
+Proposition~\ref{prop:P02-invariance} and \eqref{eq:P02-scalar} supply
+\begin{equation}
+ F(r\one,\mu)=f(r,\mu)\one,\qquad
+ f(r,\mu)=\frac{r}{1+r}(\mu+br-Ar^2),\qquad r>-1.
+ \label{eq:P09-scalar}
+\end{equation}
+This is the imported exact invariant restriction, not a new global
+classification.
+
+\subsection{Critical spectrum and full local equilibrium reduction}
+\label{slot:P09-1}
+
+\begin{lemma}[Simple synchronous kernel and transverse gap]
+\label{lem:P09-gap}
+At $(x,\mu)=(0,0)$,
+\begin{equation}
+ J_c=D_xF(0,0)=c(P-I),\qquad
+ \lambda_m^c=c(e^{-\ii\theta_m}-1),\quad \theta_m=\frac{2\pi m}{n}.
+ \label{eq:P09-critical-spectrum}
+\end{equation}
+Zero is algebraically simple, with real eigenspace
+$\operatorname{span}\{\one\}$. Every transverse eigenvalue satisfies
+\begin{equation}
+ \Ree\lambda_m^c\le-\delta_n\quad(1\le m<n),\qquad
+ \delta_n=c\left(1-\cos\frac{2\pi}{n}\right)>0.
+ \label{eq:P09-gap}
+\end{equation}
+No condition on $q$ or $\gcd(n,q)$ is imposed beyond the canonical range.
+\end{lemma}
+\begin{proof}
+At zero the only linear terms are $(a-g)x_i+cx_{i-1}$; every remaining
+Jacobian contribution contains a state coordinate. Thus, independently
+checking P03's \eqref{eq:P03-origin-jacobian},
+$D_xF(0,\mu)=\mu I+c(P-I)$. The canonical Fourier basis satisfies
+$Pv^{(m)}=e^{-\ii\theta_m}v^{(m)}$, which gives the spectrum.
+The $n$ roots of unity are distinct, so only $m=0$ gives zero, with
+algebraic multiplicity one. Equivalently, $(\lambda+c)^n-c^n$ has
+nonzero derivative $nc^{n-1}$ at zero. The equation $Pz=z$ forces
+$z_i=z_{i-1}$ at every index, giving the kernel.
+For $m\ne0$, let $j=\min(m,n-m)$. Then
+$2\pi j/n\in[2\pi/n,\pi]$, and monotonicity of cosine gives
+$\cos\theta_m\le\cos(2\pi/n)<1$. This proves the gap, including
+all singleton and conjugate-pair labels.
+\end{proof}
+
+\begin{theorem}[Every sufficiently small equilibrium is synchronous]
+\label{thm:P09-reduction}
+For every fixed canonical tuple, including $b=0$, there are state and
+parameter neighborhoods of zero in which the entire full-system
+equilibrium equation is equivalent to
+\begin{equation}
+ x=r\one+y,\qquad y=0,\qquad r(\mu+br-Ar^2)=0.
+ \label{eq:P09-complete-equilibrium}
+\end{equation}
+In particular, no nearby nonsynchronous equilibrium branch is omitted.
+\end{theorem}
+\begin{proof}
+Use the unnormalized amplitude, to agree exactly with
+\eqref{eq:P09-scalar}. Set
+\[
+ w^{\mathsf T}=\frac1n\one^{\mathsf T},\quad
+ E=\{y:w^{\mathsf T}y=0\},\quad \Pi_\perp=I-\one w^{\mathsf T},
+ \quad r=w^{\mathsf T}x,\quad y=\Pi_\perp x.
+\]
+This is a real linear isomorphism $x\leftrightarrow(r,y)$, and $E$ is
+the real nonuniform Fourier subspace. The smooth map
+\[
+ T(r,y,\mu)=\Pi_\perp F(r\one+y,\mu)\in E
+\]
+has $D_yT(0,0,0)=J_c|_E$, since $J_c$ preserves $E$.
+The complexification of this restriction has exactly the nonzero-mode
+eigenvalues of Lemma~\ref{lem:P09-gap}. None vanishes, so it is an
+invertible real linear map $E\to E$.
+
+The finite-dimensional implicit-function theorem gives a product
+neighborhood and a unique smooth function $y=\psi(r,\mu)$ such that,
+within that product, $T=0$ if and only if $y=\psi(r,\mu)$.
+Synchrony gives $T(r,0,\mu)=0$ for every nearby $r,\mu$.
+After shrinking the product, zero belongs to the IFT's $y$ neighborhood
+for all these parameters. Uniqueness therefore proves
+\begin{equation}
+ \boxed{\psi(r,\mu)\equiv0.}\label{eq:P09-psi-zero}
+\end{equation}
+Every full equilibrium solves $T=0$, hence has $y=0$.
+Conversely, on $y=0$ the full field vanishes precisely when $f=0$;
+$1+r>0$ makes that equivalent to \eqref{eq:P09-complete-equilibrium}.
+A smaller state neighborhood times a parameter interval lies in the
+IFT product. No part of this argument requires $b\ne0$.
+\end{proof}
+
+\subsection{Local derivatives and full-vector nondegeneracy}
+
+\begin{proposition}[Transcritical coefficients and parameter orientation]
+\label{prop:P09-coefficients}
+The local scalar derivatives are
+\begin{equation}
+ f(0,\mu)=0,\quad f_r(0,0)=0,\quad
+ f_{r\mu}(0,0)=1,\quad f_{rr}(0,0)=2b.
+ \label{eq:P09-scalar-coefficients}
+\end{equation}
+Choose $v=\one$, $w^{\mathsf T}=n^{-1}\one^{\mathsf T}$, so
+$J_cv=0$, $w^{\mathsf T}J_c=0$, and $w^{\mathsf T}v=1$.
+The full vector field satisfies
+\begin{equation}
+ F(0,\mu)=0,\quad w^{\mathsf T}F_{x\mu}(0,0)v=1,\quad
+ w^{\mathsf T}F_{xx}(0,0)[v,v]=2b.
+ \label{eq:P09-full-coefficients}
+\end{equation}
+The quadratic Taylor coefficient includes the factor $1/2$ and is $b$.
+With $g$ as parameter the mixed coefficient is instead
+$w^{\mathsf T}F_{xg}(0,g_c)v=-1$. Ordinary transcritical
+nondegeneracy holds exactly when $b\ne0$.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:P09-scalar} gives $f_r(0,\mu)=\mu$ and
+$f_\mu(r,\mu)=r/(1+r)$, whose $r$ derivative at zero is one.
+At $\mu=0$, $f(r,0)=br^2-(A+b)r^3+O(r^4)$, so $f_{rr}=2b$.
+
+Independently, every term of the original field vanishes at $x=0$.
+Its parameter derivative is $(F_\mu)_i=x_i/(1+x_{i+q})$,
+whose state derivative at zero is the identity. Using $g$ instead
+gives $-x_i/(1+x_{i+q})$, hence minus the identity.
+The second directional derivatives of the five original terms along $v$
+are respectively $0,-2k,-2c,2g_c,-2h$. Their sum is
+$2(g_c-c-k-h)=2b$ in each component. Averaging by $w$ proves the
+full-vector identities without a missing factor of $n$. Also
+$F_\mu(0,0)=0$, as required by persistence of the origin branch.
+\end{proof}
+
+\subsection{Generic full-system transcritical theorem}
+\label{slot:P09-2}
+
+\begin{theorem}[Nondegenerate transcritical bifurcation at $g_c=a+c$]
+\label{thm:P09-transcritical}
+Suppose $b=a-k-h\ne0$. For sufficiently small $|\mu|$, all full-system
+equilibria sufficiently near the origin are exactly
+\begin{equation}
+ x=0\quad\hbox{and}\quad x=r_*(\mu)\one,\qquad
+ r_*(0)=0,\quad r_*(\mu)\ne0\ (\mu\ne0),
+ \label{eq:P09-branches}
+\end{equation}
+where $r_*$ is smooth and
+\begin{equation}
+ r_*'(0)=-\frac1b,\qquad
+ r_*(\mu)=-\frac\mu b+\frac{A\mu^2}{b^3}+O(\mu^3),\qquad
+ \frac{dr_*}{dg}(g_c)=\frac1b.
+ \label{eq:P09-slopes}
+\end{equation}
+The two curves have distinct tangent directions in the synchronous
+state--parameter plane. The critical eigenspace is one-dimensional and
+synchronous; all transverse modes are strictly stable. In $\Domain$,
+the full nonlinear stability exchange is
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Side & Origin & Nearby nonzero branch\\
+\midrule
+$\mu<0$ ($g>g_c$) & Locally exponentially stable & Unstable\\
+$\mu>0$ ($g<g_c$) & Unstable & Locally exponentially stable\\
+\bottomrule
+\end{tabular}
+\end{center}
+Together with the full-vector nondegeneracy coefficients, these facts
+give a nondegenerate full-system local transcritical bifurcation.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:P09-reduction} first makes the equilibrium problem
+complete in the full state space. Apart from the persistent origin,
+solve $Q(r,\mu)=Ar^2-br-\mu=0$. Since $Q_r(0,0)=-b\ne0$,
+the implicit-function theorem gives a unique smooth root $r_*(\mu)$
+in a product neighborhood. The identity $Q(0,\mu)=-\mu$ shows that
+this root is nonzero exactly for $\mu\ne0$. This proves the full local
+list. For fixed $b\ne0$, the other root $b/A$ at $\mu=0$ is excluded
+by shrinking the state neighborhood.
+
+Differentiating $Q(r_*(\mu),\mu)=0$ gives
+$(2Ar_*-b)r_*'=1$, hence $r_*'(0)=-1/b$.
+Differentiating again gives
+$2A(r_*')^2+(2Ar_*-b)r_*''=0$, hence $r_*''(0)=2A/b^3$.
+Smoothness proves the expansion. In $(r,\mu)$ coordinates the tangents
+are $(0,1)$ and $(-1/b,1)$, which are independent. This is transverse
+crossing in that plane, not a claim that two curves span the full
+$(n+1)$-dimensional ambient space. Since $d\mu/dg=-1$, the physical
+$g$ slope has the opposite sign. Increasing $g$ decreases $\mu$.
+
+The exact center dynamics also identifies the transcritical bifurcation.
+At $\mu=0$ the synchronous line is smooth, invariant, and tangent to
+the entire center eigenspace, so is a local one-dimensional center
+manifold. For the extended system
+$(\dot x,\dot\mu)=(F(x,\mu),0)$, its product with the parameter
+interval is an exact two-dimensional center manifold:
+$F_\mu(0,0)=0$, the extended linearization is
+$\operatorname{diag}(J_c,0)$, and all remaining eigenvalues are strictly
+stable. On this product use
+\[
+ u=Ar^2-br,\qquad \frac{du}{dr}(0)=-b\ne0.
+\]
+This is a local smooth coordinate. Direct substitution yields
+\begin{equation}
+ \dot u=\alpha(r)u(\mu-u),\qquad
+ \alpha(r)=\frac{2Ar-b}{(Ar-b)(1+r)},\qquad\alpha(0)=1.
+ \label{eq:P09-exact-normal-form}
+\end{equation}
+Near zero the denominators do not vanish and $\alpha>0$. Thus
+$d\tau/dt=\alpha(r)$ gives exactly $du/d\tau=u(\mu-u)$, the
+nondegenerate transcritical center dynamics. This is orbital equivalence
+of the exact center restriction, not exact decoupling of the full field.
+
+Full stability still requires all Fourier modes. Differentiating first,
+\[
+ f_r(r,\mu)=\frac{\mu+br-Ar^2}{(1+r)^2}
+                  +\frac r{1+r}(b-2Ar).
+\]
+At the nonzero equilibrium the first numerator vanishes. By P04's
+\eqref{eq:P04-synchronous-derivative}, its uniform eigenvalue is
+\begin{equation}
+ \lambda_0^{\rm nz}=\frac{r_*}{1+r_*}(b-2Ar_*)
+ =-\mu\frac{b-2Ar_*}{(1+r_*)(b-Ar_*)}.
+ \label{eq:P09-uniform-nonzero}
+\end{equation}
+The last equality uses $\mu=-r_*(b-Ar_*)$. Choose $|r_*|<1/2$ and
+$2A|r_*|<|b|/2$. Both $b-Ar_*$ and $b-2Ar_*$ have the sign of
+$b$, so the final fraction is positive. Therefore, exactly,
+\begin{equation}
+ \operatorname{sgn}\lambda_0^{\rm nz}=-\operatorname{sgn}\mu,
+ \qquad\lambda_0^{\rm nz}=-\mu+O(\mu^2).
+ \label{eq:P09-uniform-sign}
+\end{equation}
+The sign argument, rather than the expansion, gives stability.
+
+For the transverse modes use the general P04 coefficients, valid also
+at zero or negative $r>-1$:
+\begin{align}
+ d(r,\mu)&=a-2kr-\frac{cr}{(1+r)^2}-\frac{g_c-\mu}{1+r}-hr,
+ \notag\\
+ C(r)&=\frac c{1+r},\quad G(r,\mu)=\frac{(g_c-\mu)r}{(1+r)^2},
+ \quad H(r)=hr,\notag\\
+ \lambda_m(r,\mu)&=d+Ce^{-\ii\theta_m}+Ge^{\ii q\theta_m}
+                                      -He^{-\ii q\theta_m}.
+ \label{eq:P09-continuous-spectrum}
+\end{align}
+Every expression is continuous at $(r,\mu)=(0,0)$, where it equals
+$\lambda_m^c$. Finitely many labels allow one common neighborhood
+with $|\lambda_m(r,\mu)-\lambda_m^c|<\delta_n/2$ for every $m\ne0$.
+Thus for some $\eta>0$,
+\begin{equation}
+ |r|+|\mu|<\eta\quad\Longrightarrow\quad
+ \Ree\lambda_m(r,\mu)<-\delta_n/2\quad(m\ne0).
+ \label{eq:P09-persistent-gap}
+\end{equation}
+No mode-selection theorem is used.
+
+At the origin $\lambda_0=\mu$, and every other real part is
+$\mu-c(1-\cos\theta_m)<-\delta_n/2$ if $|\mu|<\delta_n/2$.
+On the nonzero branch use \eqref{eq:P09-uniform-sign} and
+\eqref{eq:P09-persistent-gap}. A Hurwitz Jacobian gives local exponential
+stability of the smooth nonlinear equilibrium; a positive eigenvalue
+gives nonlinear instability, as in P04's nonlinear implications.
+Every unstable equilibrium here has exactly one unstable real direction.
+This proves the table and the full-system theorem, without using P05,
+P07 or P08.
+\end{proof}
+
+\begin{corollary}[Physical positive-branch orientation]
+\label{cor:P09-physical}
+For sufficiently small nonzero $\mu$, $r_*(\mu)>0$ exactly when
+$\operatorname{sgn}\mu=-\operatorname{sgn}b$.
+If $a<k+h$, this branch is positive and locally exponentially stable
+for $\mu>0$, equivalently $g<g_c$, while the origin is unstable.
+If $a>k+h$, it is positive and unstable for $\mu<0$, equivalently
+$g>g_c$, while the origin is locally exponentially stable.
+Origin instability for $\mu>0$ is also visible relative to $\Orth$;
+for $\mu<0$ exponential stability restricts to that state space.
+\end{corollary}
+\begin{proof}
+Use the exact relation $\mu=-r_*(b-Ar_*)$ and the sign of $b-Ar_*$,
+then the full stability table. The unstable origin eigenvector
+$v=\one$ is strictly positive. Explicitly, at any fixed small $\mu>0$,
+$f(r,\mu)/r\to\mu$ as $r\downarrow0$. Choose $\varepsilon>0$ such
+that $f(r,\mu)\ge(\mu/2)r$ on $0<r\le\varepsilon$.
+Arbitrarily small positive synchronous states reach $r=\varepsilon$
+in finite time. Their full-system lifts remain nonnegative, proving
+relative instability. For $\mu<0$, full local exponential stability
+and P01's nonnegative invariance give the restriction. An unstable
+positive branch point is interior to $\Orth$; small positive synchronous
+perturbations also show its relative instability. P09's local branch
+is not any additional positive root away from zero allowed by P02
+when $b>0$.
+\end{proof}
+
+\begin{proposition}[Generic critical origin in the open domain]
+\label{prop:P09-generic-critical}
+For $\mu=0$, $b\ne0$, the origin is nonlinearly unstable in $\Domain$.
+For $b>0$ this is visible from nonnegative synchronous states.
+No full relative-orthant stability conclusion is asserted at
+$\mu=0$, $b<0$.
+\end{proposition}
+\begin{proof}
+The exact invariant-line dynamics is
+\begin{equation}
+ \dot r=\frac{r^2(b-Ar)}{1+r}.\label{eq:P09-generic-critical}
+\end{equation}
+Choose $0<\varepsilon<1/2$ with $A\varepsilon<|b|/2$.
+For $0<|r|\le\varepsilon$ the sign is that of $b$, and the magnitude
+is at least $|b|r^2/3$. For $b>0$ take $r(0)>0$; for $b<0$ take
+$r(0)<0$. On that side $s=|r|$ satisfies
+$\dot s\ge(|b|/3)s^2$ until $s=\varepsilon$, which must occur in
+finite time. Arbitrarily small data therefore exit a fixed neighborhood.
+The exact synchronous lift stays in $\Domain$ up to that exit.
+When $b<0$ these initial states are negative, so this proof does not
+establish relative-orthant instability.
+\end{proof}
+
+\subsection{The cubic-degenerate case and its precise scope}
+\label{slot:P09-3}
+
+\begin{proposition}[Degenerate geometry and full nonlinear stability]
+\label{prop:P09-degenerate}
+Let $b=0$, that is $a=A=k+h$. Ordinary transcritical quadratic
+nondegeneracy fails. All sufficiently small full-system equilibria are
+synchronous, with the following exact local geometry and stability.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item For $\mu<0$, only the origin exists locally; it is locally exponentially stable.
+\item At $\mu=0$, only the origin exists locally. It is a triple zero
+of the scalar field and is locally asymptotically stable in the full
+open domain $\Domain$, but not locally exponentially stable.
+\item For $\mu>0$, there are precisely the origin and
+\begin{equation}
+ x=r_\pm\one,\qquad r_\pm=\pm\sqrt{\mu/A}.
+ \label{eq:P09-square-root}
+\end{equation}
+For sufficiently small $\mu>0$, both nonzero equilibria belong to
+$\Domain$ and are locally exponentially stable there. The origin is
+unstable, also relative to $\Orth$. Only $r_+\one$ is physically
+nonnegative.
+\end{enumerate}
+The two nonzero local roots occur for $g<g_c$; for $g>g_c$ only the
+stable origin remains locally. This is a cubic-degenerate origin with
+square-root nonzero branches. No pitchfork classification or
+two-parameter unfolding is asserted.
+\end{proposition}
+\begin{proof}
+Theorem~\ref{thm:P09-reduction} does not require $b\ne0$. Now
+$f(r,\mu)=r(\mu-Ar^2)/(1+r)$, and the nonzero equation $Ar^2=\mu$
+gives the complete list. For $0<\mu<A$, the negative root exceeds
+$-1$; shrink the interval further to put both roots within the
+reduction and spectral-gap neighborhoods. At $\mu=0$,
+\begin{equation}
+ f(r,0)=-\frac{Ar^3}{1+r},\qquad f_{rrr}(0,0)=-6A\ne0.
+ \label{eq:P09-cubic}
+\end{equation}
+The scalar zero is therefore triple. At either nonzero root,
+\begin{equation}
+ \lambda_0=f_r(r_\pm,\mu)=-\frac{2Ar_\pm^2}{1+r_\pm}<0.
+ \label{eq:P09-degenerate-eigenvalue}
+\end{equation}
+The proof of \eqref{eq:P09-persistent-gap} never used $b\ne0$;
+it supplies strict stability of all other Fourier modes. Thus both
+full equilibria are locally exponentially stable. At the origin
+$\lambda_0=\mu$ gives the off-critical stability; the positive
+synchronous escape argument above proves relative instability for
+$\mu>0$.
+
+At the fixed value $\mu=0$, the smooth invariant synchronous line
+passes through zero and is tangent to the whole one-dimensional center
+subspace. All complementary eigenvalues have real part at most
+$-\delta_n$, and there is no unstable subspace. On this exact center
+manifold, $r^2/2$ has derivative $-Ar^4/(1+r)<0$ for small $r\ne0$,
+so its origin is locally asymptotically stable. These verify the
+hypotheses of the finite-dimensional center-manifold stability
+reduction principle: a smooth local system with center and strictly
+stable spectra inherits local asymptotic stability from its center
+restriction. No parameter direction is included in this fixed-parameter
+stability statement.
+
+A direct full-system Lyapunov proof independently checks this application.
+Use $x=r\one+y$, $y\in E$, at the fixed degenerate tuple.
+By P04, $J(r)=D_xF(r\one,0)$ is circulant even at nonstationary
+synchronous states and preserves $E$, so $w^{\mathsf T}J(r)y=0$.
+Taylor expansion with uniformly bounded second derivatives on a compact
+neighborhood gives, for some $K\ge0$,
+\begin{equation}
+ \dot r=-\frac{Ar^3}{1+r}+R(r,y),\qquad |R(r,y)|\le K\norm y_2^2.
+ \label{eq:P09-average-remainder}
+\end{equation}
+Synchrony makes the transverse field vanish at $y=0$, hence
+\[
+ \dot y=J_cy+B(r,y)y,\qquad
+ B(r,y)=\left.\Pi_\perp\int_0^1
+ [D_xF(r\one+t y,0)-J_c]dt\right|_E.
+\]
+Continuity gives $\norm{B(r,y)}_2\le\delta_n/2$ in a smaller
+neighborhood. Fourier diagonalization gives
+$y^{\mathsf T}J_cy\le-\delta_n\norm y_2^2$ for real $y\in E$;
+therefore $y^{\mathsf T}\dot y\le-(\delta_n/2)\norm y_2^2$.
+Choose $0<\rho<1/2$ inside these neighborhoods so that
+$K\rho\le\delta_n/4$. The positive definite function
+$V(r,y)=(r^2+\norm y_2^2)/2$ then satisfies
+\begin{equation}
+ \dot V\le-\frac{A}{1+\rho}r^4-\frac{\delta_n}{4}\norm y_2^2<0
+ \quad\hbox{for }(r,y)\ne(0,0),\quad |r|,\norm y_2<\rho.
+ \label{eq:P09-lyapunov}
+\end{equation}
+Small closed sublevel sets lie compactly in this neighborhood and in
+$\Domain$, since $|x_i|\le|r|+\norm y_2<1$. They are positively
+invariant. Local continuation and the strict Lyapunov theorem give
+full local asymptotic stability; equivalently, zero is the only invariant
+set in $\dot V=0$. This also checks the conclusion for arbitrary $q$.
+
+Convergence is not exponential. Each sufficiently small nonzero
+synchronous solution keeps its sign, tends to zero, and obeys
+\[
+ \frac{d}{dt}(r^{-2})=\frac{2A}{1+r(t)}\longrightarrow2A.
+\]
+It follows that $|r(t)|\sim(2At)^{-1/2}$ as $t\to\infty$.
+These exact full-system solutions exclude a local exponential stability
+estimate. No common asymptotic rate for every nonsynchronous trajectory
+is asserted.
+\end{proof}
+
+\begin{proposition}[Codimension and the meeting of the algebraic loci]
+\label{prop:P09-codimension}
+For fixed admissible $(n,q)$, the degenerate origin locus is a smooth
+codimension-two submanifold of $(0,\infty)^5$, given by
+\begin{equation}
+ a-k-h=0,\qquad g-a-c=0.\label{eq:P09-degenerate-locus}
+\end{equation}
+The branch-intersection and P02 repeated-root loci meet there.
+This is an algebraic/spectral codimension statement only.
+\end{proposition}
+\begin{proof}
+In coordinates $(a,k,c,g,h)$ the gradients are
+\[
+ (1,-1,0,0,-1),\qquad(-1,0,-1,1,0).
+\]
+They are independent: the $g$ coordinate forces the coefficient of
+the second vector to be zero, and the $k$ coordinate then forces the
+first to be zero. The regular level-set theorem proves codimension two.
+The locus is nonempty: any $k,c,h>0$ give $a=k+h$, $g=a+c>0$.
+The center eigenvalue remains simple, not a double-zero spectral
+ degeneracy.
+
+P02's Proposition~\ref{prop:P02-loci} gives
+\[
+ g_f=a+c+\frac{(a-A)^2}{4A},\qquad r_f=\frac{a-A}{2A}.
+\]
+Hence $g_f=g_c$ exactly at $a=A$, where $r_f=0$.
+The repeated root is positive only for $a>A$; the meeting point is
+the origin, not a positive nonzero equilibrium. Only this algebraic
+overlap is recorded. It is not a saddle-node proof; that remains P10.
+\end{proof}
+
+\subsection{Scope, corroboration and independent audit priorities}
+
+B02 is resolved for P09 only: $g$ varies with $a,k,c,h,n,q$ fixed.
+NB07 is used only for the cubic case, its one-parameter geometry and
+codimension; two-parameter unfolding remains excluded. P09 retains its
+frozen supporting role. No frozen-document amendment is needed.
+
+The exact checks are in the proofs: critical Jacobian, simple kernel
+and gap; transverse invertibility and uniqueness; both branch slopes;
+full mixed and quadratic coefficients; uniform eigenvalue and exact
+signs; all-mode stability; physical side; generic critical escape;
+degenerate roots, spectra and full critical Lyapunov estimate;
+independent constraints and P02 locus overlap. A separate reproducible
+checker evaluates the original field and independently formed Jacobians
+for several dimensions and offsets, including collisions and noncoprime
+cases. Exact arithmetic and floating-point checks are corroboration,
+not proof dependencies or independent audit. Counts and diagnostics
+are recorded in the manifest and separate validation companion.
+
+\paragraph{Priority checks for the independent P09 auditor.}
+\begin{enumerate}[leftmargin=*]
+\item Check the real transverse IFT and product neighborhoods, and the
+uniqueness step $\psi\equiv0$ for both generic and degenerate cases.
+\item Check $r_*'(0)=-1/b$, $dr_*/dg=1/b$, $d\mu/dg=-1$,
+and the local exclusion of the other quadratic root for fixed $b\ne0$.
+\item Recompute $w^{\mathsf T}F_{x\mu}v=1$,
+$w^{\mathsf T}F_{xx}[v,v]=2b$, the Taylor factor $1/2$, and the
+opposite $g$ mixed coefficient from the original field.
+\item Check the exact center coordinate and positive time factor in
+\eqref{eq:P09-exact-normal-form}; scalar branch crossing alone does
+not prove full-system equilibrium completeness.
+\item Check the exact uniform sign and finite-mode transverse continuity,
+including negative synchronous states, collisions and every Fourier label.
+\item Check the physical branch side for both signs of $b$ and separate
+open-domain instability from relative-orthant claims at criticality.
+\item At $b=0$, check both square-root roots and their full spectra,
+the center-manifold hypotheses, the independent Lyapunov estimate
+\eqref{eq:P09-lyapunov}, and the nonexponential synchronous decay.
+\item Check the rank-two parameter constraints and the zero repeated-root
+meeting point. No pitchfork, cusp or other named codimension-two
+bifurcation is claimed without further proof.
+\item Preserve the boundary to P10: no positive-fold saddle-node, true
+bistability, basin description or unfolding is claimed. No Hopf,
+transversality, Lyapunov coefficient, rotating wave, large-$n$ result
+or DM--MB comparison is part of P09.
+\end{enumerate}

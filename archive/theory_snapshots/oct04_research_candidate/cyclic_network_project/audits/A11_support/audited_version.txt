@@ -1,0 +1,6 @@
+P11 v1.0; 2026-10-03; DRAFT / NOT AUDITED lifecycle preserved
+proofs/P11_hopf_spectral_conditions.tex
+25914 bytes; 600 source lines
+SHA-256: 4be8e9b1e64c022b635f3cca9f7f49ffbc5358a2250dda1715cb60e82d9b073b
+Manifest CURRENT entry; all 200 draft archive members match working files.
+A11 audit date: 2026-10-04 America/Chicago

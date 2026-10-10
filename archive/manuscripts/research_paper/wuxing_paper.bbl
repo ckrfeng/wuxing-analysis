@@ -1,0 +1,1263 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{NeiJing}{book}{}{}
+      \list{publisher}{1}{%
+        {[edition to be supplied]}%
+      }
+      \field{labelalpha}{00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{note}{Classical Chinese medical text, compiled c. 200 BCE. REPLACE with the edition or translation used}
+      \field{title}{Huangdi Neijing: The Yellow Emperor's Inner Classic}
+      \field{year}{200}
+    \endentry
+    \entry{Holling1959}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b9c24232241f1d914c44897497ec62e8}{%
+           family={Holling},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{fullhash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{fullhashraw}{b9c24232241f1d914c44897497ec62e8}
+      \strng{bibnamehash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{authorbibnamehash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{authornamehash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{authorfullhash}{b9c24232241f1d914c44897497ec62e8}
+      \strng{authorfullhashraw}{b9c24232241f1d914c44897497ec62e8}
+      \field{labelalpha}{Hol59}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Canadian Entomologist}
+      \field{number}{7}
+      \field{title}{Some characteristics of simple types of predation and parasitism}
+      \field{volume}{91}
+      \field{year}{1959}
+      \field{pages}{385\bibrangedash 398}
+      \range{pages}{14}
+    \endentry
+    \entry{Davis1979}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3822d41b82a697fdb23f8b8d3f76a357}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Philip\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{fullhash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{fullhashraw}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{bibnamehash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{authorbibnamehash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{authornamehash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{authorfullhash}{3822d41b82a697fdb23f8b8d3f76a357}
+      \strng{authorfullhashraw}{3822d41b82a697fdb23f8b8d3f76a357}
+      \field{labelalpha}{Dav79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Circulant Matrices}
+      \field{year}{1979}
+    \endentry
+    \entry{Benettin1980a}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=1cbb5d6a8fb1bffcf2d067150c5cc60a}{%
+           family={Benettin},
+           familyi={B\bibinitperiod},
+           given={Giancarlo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9a391da9548173ec8bf07892d5a9144b}{%
+           family={Galgani},
+           familyi={G\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=10dc1d404f21c2948f919f9e48960fde}{%
+           family={Giorgilli},
+           familyi={G\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f41c3aec7e830ed14952d4b3a5046ac0}{%
+           family={Strelcyn},
+           familyi={S\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{56b6bebec55b31898d66020c466095db}
+      \strng{fullhash}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{fullhashraw}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{bibnamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authorbibnamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authornamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authorfullhash}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{authorfullhashraw}{f46a381a04fe0d48d530de37afb3a06f}
+      \field{extraname}{1}
+      \field{labelalpha}{Ben+80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Meccanica}
+      \field{number}{1}
+      \field{title}{Lyapunov characteristic exponents for smooth dynamical systems and for Hamiltonian systems; a method for computing all of them. Part 1: Theory}
+      \field{volume}{15}
+      \field{year}{1980}
+      \field{pages}{9\bibrangedash 20}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF02128236
+      \endverb
+    \endentry
+    \entry{Benettin1980b}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=1cbb5d6a8fb1bffcf2d067150c5cc60a}{%
+           family={Benettin},
+           familyi={B\bibinitperiod},
+           given={Giancarlo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9a391da9548173ec8bf07892d5a9144b}{%
+           family={Galgani},
+           familyi={G\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=10dc1d404f21c2948f919f9e48960fde}{%
+           family={Giorgilli},
+           familyi={G\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f41c3aec7e830ed14952d4b3a5046ac0}{%
+           family={Strelcyn},
+           familyi={S\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{56b6bebec55b31898d66020c466095db}
+      \strng{fullhash}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{fullhashraw}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{bibnamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authorbibnamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authornamehash}{56b6bebec55b31898d66020c466095db}
+      \strng{authorfullhash}{f46a381a04fe0d48d530de37afb3a06f}
+      \strng{authorfullhashraw}{f46a381a04fe0d48d530de37afb3a06f}
+      \field{extraname}{2}
+      \field{labelalpha}{Ben+80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Meccanica}
+      \field{number}{1}
+      \field{title}{Lyapunov characteristic exponents for smooth dynamical systems and for Hamiltonian systems; a method for computing all of them. Part 2: Numerical application}
+      \field{volume}{15}
+      \field{year}{1980}
+      \field{pages}{21\bibrangedash 30}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/BF02128237
+      \endverb
+    \endentry
+    \entry{Wolf1985}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=58570fcaf9ee8eb1eca93864135a6653}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=88fbcafb5144a98c79e612efc6f1e2c8}{%
+           family={Swift},
+           familyi={S\bibinitperiod},
+           given={Jack\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=8e546c0c5e0282565042a9fced5da9be}{%
+           family={Swinney},
+           familyi={S\bibinitperiod},
+           given={Harry\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=66e73f411a8c5ccb6f671a1803798c05}{%
+           family={Vastano},
+           familyi={V\bibinitperiod},
+           given={John\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1aa5fa2fffafa0bec1501b36aab16a3}
+      \strng{fullhash}{b23cca3b06409226cad7a62f3df6c6c7}
+      \strng{fullhashraw}{b23cca3b06409226cad7a62f3df6c6c7}
+      \strng{bibnamehash}{d1aa5fa2fffafa0bec1501b36aab16a3}
+      \strng{authorbibnamehash}{d1aa5fa2fffafa0bec1501b36aab16a3}
+      \strng{authornamehash}{d1aa5fa2fffafa0bec1501b36aab16a3}
+      \strng{authorfullhash}{b23cca3b06409226cad7a62f3df6c6c7}
+      \strng{authorfullhashraw}{b23cca3b06409226cad7a62f3df6c6c7}
+      \field{labelalpha}{Wol+85}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{number}{3}
+      \field{title}{Determining Lyapunov exponents from a time series}
+      \field{volume}{16}
+      \field{year}{1985}
+      \field{pages}{285\bibrangedash 317}
+      \range{pages}{33}
+    \endentry
+    \entry{Li1987}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6026ccfc90df3a5fa9c8628348d98cc0}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{fullhash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{fullhashraw}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{bibnamehash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{authorbibnamehash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{authornamehash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{authorfullhash}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \strng{authorfullhashraw}{6026ccfc90df3a5fa9c8628348d98cc0}
+      \field{labelalpha}{Li87}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physica Scripta}
+      \field{number}{6}
+      \field{title}{Functional structure model of human body and Yinyang-Wuxing equations}
+      \field{volume}{36}
+      \field{year}{1987}
+      \field{pages}{966\bibrangedash 969}
+      \range{pages}{4}
+    \endentry
+    \entry{GolubitskyStewartSchaeffer1988}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=3126448e2c6d96a97f230599a870abe5}{%
+           family={Golubitsky},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=938deea52ee0682e0dec169cec31863a}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d965e3e37786aecdd3d6da98978dadbe}{%
+           family={Schaeffer},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{fullhash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{fullhashraw}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{bibnamehash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{authorbibnamehash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{authornamehash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{authorfullhash}{2df6c18de1b5afd92704f62f866f7f14}
+      \strng{authorfullhashraw}{2df6c18de1b5afd92704f62f866f7f14}
+      \field{labelalpha}{GSS88}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Singularities and Groups in Bifurcation Theory, Volume II}
+      \field{year}{1988}
+    \endentry
+    \entry{Porkert1990}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=bb8f53042229533089149cb8de602176}{%
+           family={Porkert},
+           familyi={P\bibinitperiod},
+           given={Manfred},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Holt Paperbacks}%
+      }
+      \strng{namehash}{bb8f53042229533089149cb8de602176}
+      \strng{fullhash}{bb8f53042229533089149cb8de602176}
+      \strng{fullhashraw}{bb8f53042229533089149cb8de602176}
+      \strng{bibnamehash}{bb8f53042229533089149cb8de602176}
+      \strng{authorbibnamehash}{bb8f53042229533089149cb8de602176}
+      \strng{authornamehash}{bb8f53042229533089149cb8de602176}
+      \strng{authorfullhash}{bb8f53042229533089149cb8de602176}
+      \strng{authorfullhashraw}{bb8f53042229533089149cb8de602176}
+      \field{labelalpha}{Por90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chinese Medicine as a Scientific System}
+      \field{year}{1990}
+    \endentry
+    \entry{Bellavite1998}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=fc63bc2e316776faeb35c4f0128f87a7}{%
+           family={Bellavite},
+           familyi={B\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e2ac84bf9a7a1f865063aaab33330678}{%
+           family={Semizzi},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=050f90975caaf5f42ef7875fef9fbb43}{%
+           family={Lussignoli},
+           familyi={L\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{fullhash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{fullhashraw}{c6220c6b833dca584aeb263558ada78c}
+      \strng{bibnamehash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{authorbibnamehash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{authornamehash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{authorfullhash}{c6220c6b833dca584aeb263558ada78c}
+      \strng{authorfullhashraw}{c6220c6b833dca584aeb263558ada78c}
+      \field{labelalpha}{BSL+98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Complementary Therapies in Medicine}
+      \field{number}{3}
+      \field{title}{A computer model of the `five elements' theory of traditional Chinese medicine}
+      \field{volume}{6}
+      \field{year}{1998}
+      \field{pages}{133\bibrangedash 140}
+      \range{pages}{8}
+    \endentry
+    \entry{Zhang1998}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=602a29bc69d6755cee5ce57fb171886f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=e810caf7adf7ede88311dd701b8cddcb}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{fullhash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{fullhashraw}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{bibnamehash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{authorbibnamehash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{authornamehash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{authorfullhash}{4ba808b0802ecb298510cf4cfdd16084}
+      \strng{authorfullhashraw}{4ba808b0802ecb298510cf4cfdd16084}
+      \field{labelalpha}{ZH98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systems Engineering---Theory \& Practice}
+      \field{number}{7}
+      \field{title}{Mathematical simulation on change law of Wuzang Yinjing and Yangqi of healthy adults}
+      \field{volume}{18}
+      \field{year}{1998}
+      \field{pages}{130\bibrangedash 135}
+      \range{pages}{6}
+    \endentry
+    \entry{Kaptchuk2000}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b95c5593da4a37eb27cd22888d47e853}{%
+           family={Kaptchuk},
+           familyi={K\bibinitperiod},
+           given={Ted\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw Hill}%
+      }
+      \strng{namehash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{fullhash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{fullhashraw}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{bibnamehash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{authorbibnamehash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{authornamehash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{authorfullhash}{b95c5593da4a37eb27cd22888d47e853}
+      \strng{authorfullhashraw}{b95c5593da4a37eb27cd22888d47e853}
+      \field{labelalpha}{Kap00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Web That Has No Weaver: Understanding Chinese Medicine}
+      \field{year}{2000}
+    \endentry
+    \entry{Chen2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=38241eaee18102cab15a125b0654c7da}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{38241eaee18102cab15a125b0654c7da}
+      \strng{fullhash}{38241eaee18102cab15a125b0654c7da}
+      \strng{fullhashraw}{38241eaee18102cab15a125b0654c7da}
+      \strng{bibnamehash}{38241eaee18102cab15a125b0654c7da}
+      \strng{authorbibnamehash}{38241eaee18102cab15a125b0654c7da}
+      \strng{authornamehash}{38241eaee18102cab15a125b0654c7da}
+      \strng{authorfullhash}{38241eaee18102cab15a125b0654c7da}
+      \strng{authorfullhashraw}{38241eaee18102cab15a125b0654c7da}
+      \field{extraname}{1}
+      \field{labelalpha}{Che02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Mathematical Medicine}
+      \field{number}{6}
+      \field{title}{Mathematical modeling of traditional Chinese medicine}
+      \field{year}{2002}
+      \field{pages}{11\bibrangedash 13}
+      \range{pages}{3}
+    \endentry
+    \entry{GolubitskyStewart2002}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3126448e2c6d96a97f230599a870abe5}{%
+           family={Golubitsky},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=938deea52ee0682e0dec169cec31863a}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser}%
+      }
+      \strng{namehash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{fullhash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{fullhashraw}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{bibnamehash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{authorbibnamehash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{authornamehash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{authorfullhash}{73f19e3421fa1fcb5a773f8223219b86}
+      \strng{authorfullhashraw}{73f19e3421fa1fcb5a773f8223219b86}
+      \field{labelalpha}{GS02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Symmetry Perspective: From Equilibrium to Chaos in Phase Space and Physical Space}
+      \field{year}{2002}
+    \endentry
+    \entry{Milo2002}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=9fed56718464421f939e0b0d84997792}{%
+           family={Milo},
+           familyi={M\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=749c992c460314c4929b30fcb5935ff2}{%
+           family={Shen-Orr},
+           familyi={S\bibinithyphendelim O\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0f91c360fcf221322ed5036ceb847301}{%
+           family={Itzkovitz},
+           familyi={I\bibinitperiod},
+           given={Shalev},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ae3110be4bd03381a5c31338660fea98}{%
+           family={Kashtan},
+           familyi={K\bibinitperiod},
+           given={Nadav},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b03dce145d48ea344c41b52cbeadecb3}{%
+           family={Chklovskii},
+           familyi={C\bibinitperiod},
+           given={Dmitri},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a0026e806b0c3123f7fb978a2c810b66}{%
+           family={Alon},
+           familyi={A\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1504fd77a6758359f433305c656b805}
+      \strng{fullhash}{dec1e04ef93d824faa39131be2fef8ae}
+      \strng{fullhashraw}{dec1e04ef93d824faa39131be2fef8ae}
+      \strng{bibnamehash}{a1504fd77a6758359f433305c656b805}
+      \strng{authorbibnamehash}{a1504fd77a6758359f433305c656b805}
+      \strng{authornamehash}{a1504fd77a6758359f433305c656b805}
+      \strng{authorfullhash}{dec1e04ef93d824faa39131be2fef8ae}
+      \strng{authorfullhashraw}{dec1e04ef93d824faa39131be2fef8ae}
+      \field{labelalpha}{Mil+02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5594}
+      \field{title}{Network motifs: simple building blocks of complex networks}
+      \field{volume}{298}
+      \field{year}{2002}
+      \field{pages}{824\bibrangedash 827}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.298.5594.824
+      \endverb
+    \endentry
+    \entry{Murray2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=790abbe74e44643827c46e77f00c8397}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{790abbe74e44643827c46e77f00c8397}
+      \strng{fullhash}{790abbe74e44643827c46e77f00c8397}
+      \strng{fullhashraw}{790abbe74e44643827c46e77f00c8397}
+      \strng{bibnamehash}{790abbe74e44643827c46e77f00c8397}
+      \strng{authorbibnamehash}{790abbe74e44643827c46e77f00c8397}
+      \strng{authornamehash}{790abbe74e44643827c46e77f00c8397}
+      \strng{authorfullhash}{790abbe74e44643827c46e77f00c8397}
+      \strng{authorfullhashraw}{790abbe74e44643827c46e77f00c8397}
+      \field{labelalpha}{Mur02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Mathematical Biology I: An Introduction}
+      \field{year}{2002}
+    \endentry
+    \entry{ShenOrr2002}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=71b1b4504c7faf35a2d50efdacaed68c}{%
+           family={Shen-Orr},
+           familyi={S\bibinithyphendelim O\bibinitperiod},
+           given={Shai\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9fed56718464421f939e0b0d84997792}{%
+           family={Milo},
+           familyi={M\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=24cd78f77e7bdf9a130ed76e1ccdcb9c}{%
+           family={Mangan},
+           familyi={M\bibinitperiod},
+           given={Shmoolik},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0026e806b0c3123f7fb978a2c810b66}{%
+           family={Alon},
+           familyi={A\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c40be5605c0b196d16337d83e1d93e}
+      \strng{fullhash}{39be23d22b3216af6afa3828191803c6}
+      \strng{fullhashraw}{39be23d22b3216af6afa3828191803c6}
+      \strng{bibnamehash}{b9c40be5605c0b196d16337d83e1d93e}
+      \strng{authorbibnamehash}{b9c40be5605c0b196d16337d83e1d93e}
+      \strng{authornamehash}{b9c40be5605c0b196d16337d83e1d93e}
+      \strng{authorfullhash}{39be23d22b3216af6afa3828191803c6}
+      \strng{authorfullhashraw}{39be23d22b3216af6afa3828191803c6}
+      \field{labelalpha}{She+02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Genetics}
+      \field{number}{1}
+      \field{title}{Network motifs in the transcriptional regulation network of {Escherichia coli}}
+      \field{volume}{31}
+      \field{year}{2002}
+      \field{pages}{64\bibrangedash 68}
+      \range{pages}{5}
+    \endentry
+    \entry{Feng2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=252299b2f9f90239e5a723444ae19b72}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b7ba184e1d08f792c2364c1091962ace}{%
+           family={Niu},
+           familyi={N\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cd6c1d35aed39fa11fcfba0d353120d6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{fullhash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{fullhashraw}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{bibnamehash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{authorbibnamehash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{authornamehash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{authorfullhash}{862685e074edddbc2a6ba0c7634336ba}
+      \strng{authorfullhashraw}{862685e074edddbc2a6ba0c7634336ba}
+      \field{labelalpha}{FNW03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{China Journal of Basic Medicine in Traditional Chinese Medicine}
+      \field{number}{7}
+      \field{title}{Principles of nonlinear dynamics of five elements theory}
+      \field{year}{2003}
+    \endentry
+    \entry{Mangan2003}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=24cd78f77e7bdf9a130ed76e1ccdcb9c}{%
+           family={Mangan},
+           familyi={M\bibinitperiod},
+           given={Shmoolik},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0026e806b0c3123f7fb978a2c810b66}{%
+           family={Alon},
+           familyi={A\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{fullhash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{fullhashraw}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{bibnamehash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{authorbibnamehash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{authornamehash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{authorfullhash}{1567ce24bc951c667a006b2fd7cf67fc}
+      \strng{authorfullhashraw}{1567ce24bc951c667a006b2fd7cf67fc}
+      \field{labelalpha}{MA03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{21}
+      \field{title}{Structure and function of the feed-forward loop network motif}
+      \field{volume}{100}
+      \field{year}{2003}
+      \field{pages}{11980\bibrangedash 11985}
+      \range{pages}{6}
+    \endentry
+    \entry{Yu2005}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=09733e886edc40846a5f6a6a9af72eb3}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Dalian University of Technology}%
+      }
+      \strng{namehash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{fullhash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{fullhashraw}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{bibnamehash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{authorbibnamehash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{authornamehash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{authorfullhash}{09733e886edc40846a5f6a6a9af72eb3}
+      \strng{authorfullhashraw}{09733e886edc40846a5f6a6a9af72eb3}
+      \field{labelalpha}{Yu05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The mathematical model research about traditional Chinese medicine science}
+      \field{type}{phdthesis}
+      \field{year}{2005}
+    \endentry
+    \entry{ZhangSVD2005}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=30ff3ef4a89e0c6777f480da5386b053}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ae6f64f7b429f6425fbe070323390f1b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=6d96d6fbd106e2ffd88ad23ce0119654}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{fullhash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{fullhashraw}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{bibnamehash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{authorbibnamehash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{authornamehash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{authorfullhash}{504d296dfe6a1d661aaeee552e242ece}
+      \strng{authorfullhashraw}{504d296dfe6a1d661aaeee552e242ece}
+      \field{labelalpha}{ZLZ05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of University of Science and Technology Beijing}
+      \field{number}{3}
+      \field{title}{A kind of Lyapunov exponent calculation method based on singular value decomposition}
+      \field{volume}{27}
+      \field{year}{2005}
+      \field{pages}{371\bibrangedash 374}
+      \range{pages}{4}
+    \endentry
+    \entry{AlonBook}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a0026e806b0c3123f7fb978a2c810b66}{%
+           family={Alon},
+           familyi={A\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall/CRC}%
+      }
+      \strng{namehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{fullhash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{fullhashraw}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{bibnamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorbibnamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authornamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorfullhash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorfullhashraw}{a0026e806b0c3123f7fb978a2c810b66}
+      \field{extraname}{1}
+      \field{labelalpha}{Alo06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to Systems Biology: Design Principles of Biological Circuits}
+      \field{year}{2006}
+    \endentry
+    \entry{Jiang2006}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=908934508904d19aa8b4feb3bcd6e64a}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Huazhong University of Science}%
+        {Technology}%
+      }
+      \strng{namehash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{fullhash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{fullhashraw}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{bibnamehash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{authorbibnamehash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{authornamehash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{authorfullhash}{908934508904d19aa8b4feb3bcd6e64a}
+      \strng{authorfullhashraw}{908934508904d19aa8b4feb3bcd6e64a}
+      \field{labelalpha}{Jia06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Study of dynamics of a five-dimensional nonlinear network}
+      \field{type}{phdthesis}
+      \field{year}{2006}
+    \endentry
+    \entry{Zhao2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2386e489f61f61ba612b4e137e1eefd7}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=b34c3c1161c484ebb0bd152b415359db}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{fullhash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{fullhashraw}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{bibnamehash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{authorbibnamehash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{authornamehash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{authorfullhash}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \strng{authorfullhashraw}{7d068a9ffa9f68c59031d2ad1328ba7e}
+      \field{labelalpha}{ZZ06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sichuan Journal of Traditional Chinese Medicine}
+      \field{number}{11}
+      \field{title}{The mathematical model of the theory of Yin Yang and five elements with the general solution of its derivation equation}
+      \field{volume}{24}
+      \field{year}{2006}
+      \field{pages}{7\bibrangedash 9}
+      \range{pages}{3}
+    \endentry
+    \entry{Alon2007}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a0026e806b0c3123f7fb978a2c810b66}{%
+           family={Alon},
+           familyi={A\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{fullhash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{fullhashraw}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{bibnamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorbibnamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authornamehash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorfullhash}{a0026e806b0c3123f7fb978a2c810b66}
+      \strng{authorfullhashraw}{a0026e806b0c3123f7fb978a2c810b66}
+      \field{extraname}{2}
+      \field{labelalpha}{Alo07}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Genetics}
+      \field{number}{6}
+      \field{title}{Network motifs: theory and experimental approaches}
+      \field{volume}{8}
+      \field{year}{2007}
+      \field{pages}{450\bibrangedash 461}
+      \range{pages}{12}
+    \endentry
+    \entry{Chen2008}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=6dbedad2342e7fdc31f6a6905f472c6d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{fullhash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{fullhashraw}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{bibnamehash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{authorbibnamehash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{authornamehash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{authorfullhash}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \strng{authorfullhashraw}{6dbedad2342e7fdc31f6a6905f472c6d}
+      \field{extraname}{2}
+      \field{labelalpha}{Che08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 10th China Youth Information and Management Scholars Conference}
+      \field{title}{A mathematical model of Yin-Yang Wu-Xing theory for traditional Chinese medicine}
+      \field{year}{2008}
+    \endentry
+    \entry{ChenZhang2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ed4e688b3a13c815213f1ff2acb5d92b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=13414502df57d59c82c59a065c752294}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{fullhash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{fullhashraw}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{bibnamehash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{authorbibnamehash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{authornamehash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{authorfullhash}{6787911d43b955d2e59fa90bcd403a64}
+      \strng{authorfullhashraw}{6787911d43b955d2e59fa90bcd403a64}
+      \field{labelalpha}{CZ08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Acupuncture and Tuina Science}
+      \field{number}{5}
+      \field{title}{One Yin-Yang Wu-Xing model of TCM}
+      \field{volume}{6}
+      \field{year}{2008}
+      \field{pages}{266\bibrangedash 268}
+      \range{pages}{3}
+    \endentry
+    \entry{Ding2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=3032dbcb09a455daab564234f2f68676}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2ca38ebc0e0cb8064a936205d2da287f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{fullhash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{fullhashraw}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{bibnamehash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{authorbibnamehash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{authornamehash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{authorfullhash}{b7a51dade95defa2b17dd08fd20c6925}
+      \strng{authorfullhashraw}{b7a51dade95defa2b17dd08fd20c6925}
+      \field{labelalpha}{DW08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Acupuncture and Tuina Science}
+      \field{number}{5}
+      \field{title}{Mathematical analysis of Yin-Yang Wu-Xing model in TCM}
+      \field{volume}{6}
+      \field{year}{2008}
+      \field{pages}{269\bibrangedash 270}
+      \range{pages}{2}
+    \endentry
+    \entry{Tang2008}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=608a0854190ff4df83567278ee0a4ce6}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Jin-Ling},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=1be9090146bb3ac7b8702d4a2472c127}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bao-Yan},
+           giveni={B\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=9eb5f52287fdd3e061393d18e8f77084}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Kan-Wen},
+           giveni={K\bibinithyphendelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{fullhash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{fullhashraw}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{bibnamehash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{authorbibnamehash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{authornamehash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{authorfullhash}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \strng{authorfullhashraw}{1cc99999a51a53250dd4bba47c6b0d5a}
+      \field{labelalpha}{TLM08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet}
+      \field{number}{9654}
+      \field{title}{Traditional Chinese medicine}
+      \field{volume}{372}
+      \field{year}{2008}
+      \field{pages}{1938\bibrangedash 1940}
+      \range{pages}{3}
+    \endentry
+    \entry{Wang2008}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2ca38ebc0e0cb8064a936205d2da287f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Fudan University}%
+      }
+      \strng{namehash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{fullhash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{fullhashraw}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{bibnamehash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{authorbibnamehash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{authornamehash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{authorfullhash}{2ca38ebc0e0cb8064a936205d2da287f}
+      \strng{authorfullhashraw}{2ca38ebc0e0cb8064a936205d2da287f}
+      \field{labelalpha}{Wan08}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Research on the dynamic model of the Wu-Xing theory}
+      \field{type}{phdthesis}
+      \field{year}{2008}
+    \endentry
+    \entry{Skokos2010}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=232934809d6ff8bbcaf1ae0d45fc5bf8}{%
+           family={Skokos},
+           familyi={S\bibinitperiod},
+           given={Charalampos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{fullhash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{fullhashraw}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{bibnamehash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{authorbibnamehash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{authornamehash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{authorfullhash}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \strng{authorfullhashraw}{232934809d6ff8bbcaf1ae0d45fc5bf8}
+      \field{labelalpha}{Sko10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Dynamics of Small Solar System Bodies and Exoplanets}
+      \field{title}{The Lyapunov characteristic exponents and their computation}
+      \field{year}{2010}
+      \field{pages}{63\bibrangedash 135}
+      \range{pages}{73}
+    \endentry
+    \entry{Misic2011}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=f6cc3560ab7d34461924ff350c20966f}{%
+           family={Mišić},
+           familyi={M\bibinitperiod},
+           given={Nenad},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{fullhash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{fullhashraw}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{bibnamehash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{authorbibnamehash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{authornamehash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{authorfullhash}{f6cc3560ab7d34461924ff350c20966f}
+      \strng{authorfullhashraw}{f6cc3560ab7d34461924ff350c20966f}
+      \field{labelalpha}{Miš11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the First Symposium of Quantum-Informational Medicine QIM 2011}
+      \field{title}{Chinese concept of five phases (wu xing -- yin yang) in the light of systems science}
+      \field{year}{2011}
+      \field{pages}{118\bibrangedash 127}
+      \range{pages}{10}
+    \endentry
+    \entry{Zhang2011}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1f26f664835ac6c347db22001b657f1a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{fullhash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{fullhashraw}{1f26f664835ac6c347db22001b657f1a}
+      \strng{bibnamehash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{authorbibnamehash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{authornamehash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{authorfullhash}{1f26f664835ac6c347db22001b657f1a}
+      \strng{authorfullhashraw}{1f26f664835ac6c347db22001b657f1a}
+      \field{labelalpha}{Zha11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chinese Medicine}
+      \field{title}{Mathematical reasoning of treatment principle based on ``Yin Yang Wu Xing'' theory in traditional Chinese medicine}
+      \field{year}{2011}
+    \endentry
+    \entry{Kim2014}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=b2236af712a294693dcea632d195b1fb}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=18c963d4937a1138ccd648defa3827fd}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a629d9555657c8cd9988a4e04d087443}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{fullhash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{fullhashraw}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{bibnamehash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{authorbibnamehash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{authornamehash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{authorfullhash}{f60c2da1f22da3af8f319679bcbbb353}
+      \strng{authorfullhashraw}{f60c2da1f22da3af8f319679bcbbb353}
+      \field{labelalpha}{KSK+14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chinese Journal of Integrative Medicine}
+      \field{number}{2}
+      \field{title}{A mathematical model for the deficiency-excess mechanism of yin-yang in five viscera}
+      \field{volume}{20}
+      \field{year}{2014}
+      \field{pages}{155\bibrangedash 160}
+      \range{pages}{6}
+    \endentry
+    \entry{Lin2020}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=5053d1c1d2c9b53db6243172ad12fcd4}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Haipeng},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e810caf7adf7ede88311dd701b8cddcb}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Shenyang, China}%
+      }
+      \strng{namehash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{fullhash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{fullhashraw}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{bibnamehash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{authorbibnamehash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{authornamehash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{authorfullhash}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \strng{authorfullhashraw}{59179bfc27123ee9a1fbc78d9ee4f83d}
+      \field{labelalpha}{LH20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 39th Chinese Control Conference (CCC)}
+      \field{title}{Analysis of Dynamic Five-Element Model}
+      \field{year}{2020}
+      \field{pages}{777\bibrangedash 781}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.23919/CCC50068.2020.9188438
+      \endverb
+    \endentry
+    \entry{Nian2025}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=feb8c7e4164ac36fd1931ea67a3f89ae}{%
+           family={Nian},
+           familyi={N\bibinitperiod},
+           given={Fuzhong},
+           giveni={F\bibinitperiod}}}%
+        {{hash=02c7a7e9c8b10c3d3ee2912d42a8be3e}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Da},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a76a703305f34448c8d40c80b9035735}
+      \strng{fullhash}{a76a703305f34448c8d40c80b9035735}
+      \strng{fullhashraw}{a76a703305f34448c8d40c80b9035735}
+      \strng{bibnamehash}{a76a703305f34448c8d40c80b9035735}
+      \strng{authorbibnamehash}{a76a703305f34448c8d40c80b9035735}
+      \strng{authornamehash}{a76a703305f34448c8d40c80b9035735}
+      \strng{authorfullhash}{a76a703305f34448c8d40c80b9035735}
+      \strng{authorfullhashraw}{a76a703305f34448c8d40c80b9035735}
+      \field{labelalpha}{NL25}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Continuous and Discrete Models}
+      \field{number}{61}
+      \field{title}{Bifurcation and chaos analysis for the traditional Chinese medicine five-element system}
+      \field{volume}{2025}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1186/s13662-025-03909-9
+      \endverb
+    \endentry
+    \entry{MengYinYang}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fde9a5aa0afd6bfc23833ec10f00c3c9}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{fullhash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{fullhashraw}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{bibnamehash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{authorbibnamehash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{authornamehash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{authorfullhash}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \strng{authorfullhashraw}{fde9a5aa0afd6bfc23833ec10f00c3c9}
+      \field{labelalpha}{Men}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Universitatis Traditionis Medicalis Sinensis Pharmacologiaeque Shanghai}
+      \field{number}{6}
+      \field{title}{Mathematics of Yin-Yang and five elements and its application in traditional Chinese medicine}
+      \field{pages}{4\bibrangedash 9}
+      \range{pages}{6}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

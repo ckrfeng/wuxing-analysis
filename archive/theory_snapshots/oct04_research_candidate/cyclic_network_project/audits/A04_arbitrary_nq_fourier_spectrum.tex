@@ -1,0 +1,832 @@
+% Standalone independent audit; compile directly with pdfLaTeX twice.
+% MAIN VERDICT: VERIFIED (mathematical statements).
+% Exact P04 v1.0 and every supplied project file are preserved unchanged.
+% Historical numerical-run statistics have a separately identified provenance limit.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{array,booktabs,longtable,enumitem,needspace}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Dom}{(-1,\infty)^n}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\sa}{\operatorname{sa}}
+\newcommand{\lin}[1]{\textbf{L#1}}
+\newcommand{\sha}[2]{\par{\small\ttfamily #1\allowbreak #2}\par}
+\newcommand{\pass}{\textbf{PASS}}
+\title{A04: Independent mathematical audit of P04\\Arbitrary-$(n,q)$ Fourier spectrum and normality}
+\author{Independent reconstruction and adversarial review}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+
+\section{Verdict, exact version, and audit boundary}
+\textbf{MAIN VERDICT: VERIFIED.}
+All substantive mathematical results in the exact P04 version identified
+below pass independent reconstruction under their stated hypotheses. No
+mathematical or meaning-changing typographical correction is required.
+The optional propagator-norm and nonlinear-local-stability statements also
+pass; no separate extended mathematical verdict is needed.
+
+The proof being audited is
+\path{proofs/P04_arbitrary_nq_fourier_spectrum.tex},
+\textbf{P04 v1.0, dated 2026-09-27, DRAFT}, exactly
+\textbf{25,792 bytes and 573 lines}. Its full-file SHA-256 is
+\sha{ab80f695b3e20c852c572b7b174ecaf99}{64eac1aba62e3e55b2b4d3e60754e0c}
+and its body SHA-256, from the first line-anchored section command through
+EOF, including the final newline, is
+\sha{3e3d58230c87af3b5f07069d61065362d}{c081d172ad3b236057fefda25fa5653}
+The supplied \path{cyclic_network_project_P04_draft.zip} has SHA-256
+\sha{11a2383d3f61e001c400f61744d6cacd}{94b0b02d670bd7240e0dbb948fc0610f}
+Every P04 line reference below refers to that exact 573-line source,
+including comments and blank lines.
+
+The supplied archive, its latest manifest record, the current proof headers,
+and the P01--P03 audit-closure records select the current versions.
+In particular, the final P04 delivery hash above is authoritative; the
+manifest's earlier pre-P04 input hash beginning \texttt{b68f6b7b} identifies
+the former placeholder, not this audit target. All fifteen requested current
+files were located and consulted before mathematical reconstruction.
+The additional shared macro file was checked for notation.
+
+\textbf{Evidence limitation U01 (historical computations only).}
+The separately named \path{P04_validation_support.zip} is absent from the
+supplied 75-member archive and was not supplied separately with this task.
+Consequently the exact historical run counts and floating-point error
+maxima in P04 \lin{530--545} have not been independently reproduced.
+Those provenance assertions are marked \textbf{UNRESOLVED} in the line
+review. They are not mathematical premises, and this audit does not
+certify them by copying the manifest. The mathematical verdict rests on
+the proofs below; new exact checks are separately identified. No theorem
+or downstream mathematical dependency is conditional on the missing run.
+
+\textbf{Preservation and closure.}
+No P04 edit, status promotion, registry edit, compendium edit, or later-module
+work is performed. Every original archive member is preserved byte-for-byte.
+This audit verifies the specified version while its original DRAFT header
+remains intact. \textbf{P05 is mathematically cleared after administrative
+A04 closure records this exact-version verdict.} P05 is not begun here.
+
+\section{Authenticated inputs and dependency boundary}
+All hashes below cover complete file bytes, not normalized text. Paths are
+relative to the supplied archive's \path{cyclic_network_project/} root.
+The support file \path{A04_support/input_hashes.json} also records byte and
+line counts. Historical status prose is read through the later closure
+records, not mistaken for the current status.
+
+\begin{longtable}{L{0.44\textwidth}L{0.50\textwidth}}
+\toprule Current input & Full-file SHA-256\\\midrule\endhead
+\small\path{project_manifest.md} & \small\texttt{58c5b57bd02f1e820af15db59296fce9}\newline\texttt{cd23887b33a1907f88f8e4727d406762}\\
+\small\path{claim_registry.md} & \small\texttt{d546f1128362d7894cc9948174779490}\newline\texttt{95e65527b92289707188314ca935031b}\\
+\small\path{frozen_theorem_package.md} & \small\texttt{724adf3d04a7f9661a2e53fbae359192}\newline\texttt{e8a5a5ee56737bdca2379209b556ea63}\\
+\small\path{final_novelty_verdict.md} & \small\texttt{5fa8ddd5ada9628b104dba68dd535356}\newline\texttt{442c5e62ec45b72f3c2c354dec6037ea}\\
+\small\path{02_theorem_dependency_map.tex} & \small\texttt{a1a4435f36fc1d1b6f0b2c5226a91328}\newline\texttt{3c76658d55b96493e6c50a8693831cac}\\
+\small\path{00_canonical_model.tex} & \small\texttt{c209981cb2924e8a782f24aa2904e8c8}\newline\texttt{5a105ff99319dd6aada12f48a351c2a4}\\
+\small\path{01_notation_and_assumptions.tex} & \small\texttt{97d993c6d3986524dbcc29659ee73d25}\newline\texttt{7be1b03a35c44401e8ef4534303eeb91}\\
+\small\path{proofs/P01_wellposedness_and_absorbing_box.tex} & \small\texttt{0d6950821aa83f3d09e8bfe84dab2b0b}\newline\texttt{5020aa6e7881cf6928e984bff1890f1e}\\
+\small\path{audits/A01_wellposedness_and_absorbing_box.tex} & \small\texttt{8d5c1b2ec782dbe49b07d2bbe529ee47}\newline\texttt{4d4c142695c53b523ccb41d63bb33098}\\
+\small\path{proofs/P02_synchronous_subspace_and_equilibria.tex} & \small\texttt{8e057c2cd009659eee45906844e25f4f}\newline\texttt{38c156e5eb2e4130e824aa5e8299c51a}\\
+\small\path{audits/A02_synchronous_subspace_and_equilibria.tex} & \small\texttt{ca3d723d9fcfac14f5129583441e611a}\newline\texttt{65e41848ec44f3b5e3a0072f795d84ac}\\
+\small\path{proofs/P03_origin_and_linearization.tex} & \small\texttt{6c3c9bfb2307bdc043eb7f6a874cb222}\newline\texttt{e2ac2ce0750b339181f0088dd0bd859e}\\
+\small\path{audits/A03_origin_and_linearization.tex} & \small\texttt{e1008f98ba9667b92b8d74f1bc7d21e0}\newline\texttt{21414b454ac976ae0db1500b4b7ef8d1}\\
+\small\path{proofs/P04_arbitrary_nq_fourier_spectrum.tex} & \small\texttt{ab80f695b3e20c852c572b7b174ecaf9}\newline\texttt{964eac1aba62e3e55b2b4d3e60754e0c}\\
+\small\path{proofs_compendium.tex} & \small\texttt{7acc9796e47c47a91d6e32b192dddc15}\newline\texttt{c8e0c164be3b8c59db201265ef8137b5}\\
+\small\path{shared_macros.tex} & \small\texttt{f4a18a440e1214b619bf18f4a81fee50}\newline\texttt{7239460ca796d8ca3916791069d6a7ad}\\
+\bottomrule
+\end{longtable}
+
+P01 v1.1's current hash agrees with its closure after the sole archived-radius
+wording correction. P02 v1.1's current hash agrees with closure of its
+ordered-root-limit wording correction. Its old comment that A02 source is
+absent is superseded by the later manifest: the authenticated A02 source is
+present. P03 v1.1's current hash agrees with its metadata-only A03 closure;
+its body hash remains
+\sha{07d76c8ce0b5232827e9f2c74245188b5}{5b0ce0d1732b3cb2e528d69e8d6b50a}
+The A01/A02 original audit verdicts are not retroactively rewritten; their
+required corrections have already been closed. No re-audit of P03's
+differentiation is needed or undertaken.
+
+The exact mathematical inputs are canonical indexing and positive parameters;
+P03 \lin{268--325} for the homogeneous Jacobian and conditional equilibrium
+simplification; P02's invariant synchronous restriction and nonzero equilibrium
+identity; and P01 \lin{80--95} for smoothness and local ODE continuation.
+Finite-dimensional geometric sums, linear algebra, differentiation,
+variation of constants, and Gronwall complete the proof. P04 explicitly
+invokes the standard $C^1$ linearized-instability theorem at \lin{444--451}.
+Its statement and hypotheses are correct; Section~\ref{sec:nonlinear}
+also proves the needed instance directly, so no unverified later module
+or external literature claim is needed. In a strictly literal dependency
+inventory that standard ODE theorem is an additional declared background
+input, not a consequence of smoothness alone.
+
+\section{Shift phases, including wraparound}
+Let $n\ge5$, $1\le q<n$, $j,m\in\{0,\ldots,n-1\}$,
+$\theta_m=2\pi m/n$, and
+$v_j^{(m)}=n^{-1/2}e^{i\theta_m j}$. For any integer $\ell$, write
+$j-\ell=r+kn$, where $0\le r<n$. Then
+\[
+ v^{(m)}_{(j-\ell)\bmod n}=n^{-1/2}e^{i\theta_m r}
+ =n^{-1/2}e^{i\theta_m(j-\ell)}e^{-2\pi i mk}
+ =e^{-i\ell\theta_m}v_j^{(m)}.
+\]
+Thus modular reduction produces no phase error, even for negative shifts.
+In particular, at the predecessor wraparound $j=0$,
+$v_{n-1}^{(m)}=e^{-i\theta_m}v_0^{(m)}$. At a successor-$q$
+wraparound $j+q\ge n$, subtraction of $n$ produces the same factor one.
+The three required phases are therefore
+\[
+ Pv^{(m)}=e^{-i\theta_m}v^{(m)},\qquad
+ P^{-q}v^{(m)}=e^{iq\theta_m}v^{(m)},\qquad
+ P^qv^{(m)}=e^{-iq\theta_m}v^{(m)}.
+\]
+This establishes the orientation gate independently of the proposed spectrum.
+All three P04 phases pass. No downstream claim requires correction for
+a phase reversal.
+
+\section{DFT normalization, complete spectrum, and ordering}
+Define $Q_{jm}=n^{-1/2}e^{2\pi imj/n}$. Direct calculation gives both products:
+\begin{align*}
+ (Q^*Q)_{\ell m}&=\frac1n\sum_{j=0}^{n-1}e^{2\pi i(m-\ell)j/n}
+                      =\delta_{\ell m},\\
+ (QQ^*)_{jk}&=\frac1n\sum_{m=0}^{n-1}e^{2\pi im(j-k)/n}
+                      =\delta_{jk}.
+\end{align*}
+For unequal indices the ratio is a nontrivial $n$th root of unity, and the
+finite geometric sum is zero; for equal indices there are $n$ unit terms.
+This directly proves both unitarity identities, without importing a DFT
+normalization from another convention. P04's shorter argument for $QQ^*=I$
+from the square left inverse is also valid.
+
+At every synchronous state $x=x^*\one$ with $x^*>-1$, put $s=1+x^*$.
+Import the verified P03 result
+\[
+ J=dI+CP+GP^{-q}-HP^q,\quad
+ d=a-2kx^*-\frac{cx^*}{s^2}-\frac{g}{s}-hx^*,\quad
+ C=\frac c s,\quad G=\frac{gx^*}{s^2},\quad H=hx^*.
+\]
+Applying the independently established phases to each summand, rather than
+comparing formulas, gives
+\begin{equation}\label{eq:a04-spectrum}
+ \lambda_m=d+Ce^{-i\theta_m}+Ge^{iq\theta_m}-He^{-iq\theta_m}.
+\end{equation}
+Since the columns of $Q$ are orthonormal, they constitute a basis of $\CC^n$.
+The column equations $Jv^{(m)}=\lambda_mv^{(m)}$ give $JQ=Q\Lambda$, with
+$\Lambda=\diag(\lambda_0,\ldots,\lambda_{n-1})$ in exactly the column order
+$0,1,\ldots,n-1$. Hence
+\[
+ Q^*JQ=\Lambda,\qquad J=Q\Lambda Q^*,\qquad
+ \det(zI-J)=\prod_{m=0}^{n-1}(z-\lambda_m).
+\]
+There is no conjugation of the displayed eigenvalues in $Q^*JQ$ and no
+reversal of mode order. The negative exponent belongs to the forward
+coordinate transform $Q^*$, while the basis matrix $Q$ has the positive
+exponent. Every label supplies an eigenvector and all $n$ coordinates are
+exhausted. Neither distinct offsets nor distinct eigenvalues is used.
+
+\section{Dispersion, conjugacy, and singleton labels}
+Euler's formulas in \eqref{eq:a04-spectrum} give
+\begin{align*}
+ r_m:=\Re\lambda_m&=d+C\cos\theta_m+(G-H)\cos(q\theta_m),\\
+ \omega_m:=\Im\lambda_m&=-C\sin\theta_m+(G+H)\sin(q\theta_m).
+\end{align*}
+Specifically, $-He^{-iq\theta}=-H\cos(q\theta)+iH\sin(q\theta)$.
+The critical $+H$ imaginary contribution is correct. The signed $\omega_m$
+need not be positive and is distinct from the reserved future Hopf frequency
+$\omega>0$.
+
+Let $\bar m=(-m)\bmod n$ in the stated label set. Then
+$\theta_{\bar m}\equiv-\theta_m\pmod{2\pi}$; all coefficients are real.
+It follows componentwise that
+\[
+ v^{(\bar m)}=\overline{v^{(m)}},\quad
+ \lambda_{\bar m}=\overline{\lambda_m},\quad
+ r_{\bar m}=r_m,\quad \omega_{\bar m}=-\omega_m.
+\]
+At $m=0$ this uses label zero, not a second label $n$. The overline in
+P04 \lin{130--131} covers the entire Fourier vector or eigenvalue; the bar
+in the subscript is the previously defined modular label operation.
+
+Self-conjugacy means $n\mid2m$. With $0\le m<n$, this gives just $m=0$
+for odd $n$, and $m=0,n/2$ for even $n$. Thus
+\[
+ \lambda_0=d+C+G-H,\qquad
+ \lambda_{n/2}=d-C+(G-H)(-1)^q\quad(n\text{ even}).
+\]
+Both are real. The second equals $d-C+G-H$ for even $q$ and
+$d-C-G+H$ for odd $q$. When $q=n/2$, its factor is $(-1)^{n/2}$,
+as obtained by substituting $m=n/2$ in the half-offset formula.
+There are $(n-1)/2$ nonsingleton pairs for odd $n$ and $n/2-1$ for even $n$.
+Conversely a nonsingleton pair is allowed to have $\omega_m=0$, yielding
+one repeated real numerical eigenvalue. Conjugate labels, equal numerical
+eigenvalues, and equal real parts are three different relations. In particular,
+an equality of real parts does not impose equality of imaginary parts.
+
+\section{Numerical multiplicity and semisimplicity}
+For a numerical eigenvalue $\eta$, let
+$M_\eta=\{m:\lambda_m=\eta\}$. Write $z=Qw$. Then
+\[
+ (J-\eta I)z=0\quad\Longleftrightarrow\quad
+ (\lambda_m-\eta)w_m=0\quad\text{for all }m.
+\]
+Exactly $|M_\eta|$ coordinates are free. Therefore
+\[
+ \ker(J-\eta I)=\operatorname{span}_{\CC}\{v^{(m)}:m\in M_\eta\},
+ \qquad \dim_{\CC}\ker(J-\eta I)=|M_\eta|.
+\]
+The characteristic product proves that the algebraic multiplicity is also
+$|M_\eta|$. The diagonal form has no nontrivial Jordan block, so every
+eigenvalue is semisimple. This proof is unchanged by a collision of
+nonconjugate labels, a real value from a conjugate pair, or cancellation of
+matrix coefficients. A singleton label is not an assertion of a simple
+numerical eigenvalue.
+
+The draft's example checks exactly: $q=1$, $x^*=1$, and
+$(a,k,c,g,h)=(2,1,4,4,1)$ give $f(1)=2-2+(4-4)/2=0$,
+$d=-4$, $C=2$, $G=H=1$. Thus $J=-4I+P+P^{-1}$ and
+$\lambda_m=-4+2\cos\theta_m$. Each nonsingleton conjugate pair contributes
+a real value with multiplicity two; cosine equality on this grid occurs
+only at the same or conjugate label. The origin is different: $G=H=0$,
+$C=c>0$, $d=a-g$, and the $n$ distinct roots of unity give simple values
+$a-g+ce^{-i\theta_m}$, consistent with P03.
+
+\section{Every offset collision}
+All equalities below are exact identities of matrices and of all labeled
+eigenvalues, not limits of distinct-offset formulas.
+\begin{enumerate}[label=(\roman*)]
+\item $q=1$: the $C$ and $-H$ contributions occupy the same shift:
+\[
+ J=dI+(C-H)P+GP^{-1},\qquad
+ \lambda_m=d+(C-H)e^{-i\theta_m}+Ge^{i\theta_m}.
+\]
+Taking parts gives $r_m=d+(C+G-H)\cos\theta_m$ and
+$\omega_m=(-C+G+H)\sin\theta_m$.
+\item $q=n-1$: $P^{-q}=P$ and $P^q=P^{-1}$, so
+\[
+ J=dI+(C+G)P-HP^{-1},\qquad
+ \lambda_m=d+(C+G)e^{-i\theta_m}-He^{i\theta_m}.
+\]
+Independently, $e^{iq\theta_m}=e^{-i\theta_m}$ and
+$e^{-iq\theta_m}=e^{i\theta_m}$ reduce the master spectrum to the same
+expression. Here $r_m=d+(C+G-H)\cos\theta_m$ and
+$\omega_m=-(C+G+H)\sin\theta_m$.
+\item Even $n$, $q=n/2$: $P^{-q}=P^q$ and
+$e^{\pm iq\theta_m}=(-1)^m$. Therefore
+\[
+ J=dI+CP+(G-H)P^{n/2},\qquad
+ \lambda_m=d+Ce^{-i\theta_m}+(G-H)(-1)^m.
+\]
+Its parts are $r_m=d+C\cos\theta_m+(G-H)(-1)^m$ and
+$\omega_m=-C\sin\theta_m$.
+\end{enumerate}
+P03's exhaustive collision classification is used only to identify which
+offsets meet. In all cases contributions add; none is overwritten.
+If $C-H=0$, $C+G=0$, or $G-H=0$ where applicable, the corresponding
+term simply vanishes. The basis, spectrum formula, and multiplicity
+argument remain valid. These cases do not create a missing eigenvector.
+
+\section{Normality, in two independent forms}
+From unitary diagonalization,
+\[
+ JJ^*=Q\Lambda\Lambda^*Q^*
+ =Q\diag(|\lambda_m|^2)Q^*
+ =Q\Lambda^*\Lambda Q^*=J^*J.
+\]
+Alternatively, $P$ permutes an orthonormal coordinate basis, so
+$P^*=P^{-1}$. The coefficients are real, and consequently
+\[
+ J^*=dI+CP^{-1}+GP^q-HP^{-q}.
+\]
+Every integer power of $P$ commutes with every other. Expanding $JJ^*$
+and $J^*J$ termwise therefore proves equality. Negative powers could
+equivalently be replaced by nonnegative powers modulo $n$.
+
+Neither proof uses spectral simplicity, positive $G,H$, nonzero combined
+coefficients, separate offsets, or coprimality. They cover negative
+synchronous states $-1<x^*<0$, where $G,H<0$. The object remains a
+homogeneous-state Jacobian. P04 \lin{266--267} explicitly withholds normality
+at general nonsynchronous or heterogeneous states; nothing here promotes it.
+
+\section{Synchronous tangent mode and equilibrium specialization}
+Differentiating the verified scalar field directly gives
+\[
+ f(r)=ar-(k+h)r^2+\frac{(c-g)r}{1+r},\qquad
+ f'(r)=a-2(k+h)r+\frac{c-g}{(1+r)^2}.
+\]
+The quotient derivative is $d[r/(1+r)]/dr=1/(1+r)^2$.
+Using $s-x^*=1$, the unsimplified coefficients yield
+\begin{align*}
+ d+C+G-H
+ &=a-2(k+h)x^*+
+   c\left(\frac1s-\frac{x^*}{s^2}\right)
+   +g\left(-\frac1s+\frac{x^*}{s^2}\right)\\
+ &=a-2(k+h)x^*+\frac{c-g}{s^2}=f'(x^*).
+\end{align*}
+This uses no equilibrium relation. Independently, differentiating
+$F(r\one)=f(r)\one$ gives $DF(r\one)\one=f'(r)\one$;
+$v^{(0)}=\one/\sqrt n$ spans the synchronous tangent space.
+Along a nonstationary synchronous trajectory the tangent coefficient is
+$f'(r(t))$; no autonomous equilibrium stability claim is made at that state.
+
+Only now let $x^*\ne0$ be an equilibrium and put $A=k+h$. P02 gives
+$a-Ax^*+(c-g)/s=0$. Substitution into $d$ gives
+\begin{align*}
+ d&=Ax^*-\frac{c-g}{s}-2kx^*-\frac{cx^*}{s^2}
+                          -\frac gs-hx^*\\
+  &=-kx^*-\frac cs-\frac{cx^*}{s^2}
+   =-kx^*-\frac{c(1+2x^*)}{s^2}.
+\end{align*}
+With $B(r)=a-Ar+(c-g)/(1+r)$, $f=rB$ and $B(x^*)=0$,
+\begin{align*}
+ \lambda_0&=x^*B'(x^*)=-x^*\left(A+\frac{c-g}{s^2}\right)\\
+ &=-\frac{x^*}{s}\bigl(As+Ax^*-a\bigr)
+   =\frac{x^*}{s}(a-A-2Ax^*).
+\end{align*}
+The second line uses $c-g=(Ax^*-a)s$. All formulas pass. They apply to a
+positive equilibrium as requested and algebraically to a negative nonzero
+equilibrium in $U$; only in the positive case are $G,H>0$.
+They are not licensed by an arbitrary synchronous state. The origin is
+retained separately with $\lambda_0=a+c-g$; one must not infer $B(0)=0$
+merely from $f(0)=0$.
+
+\section{Exact propagator norm and linear stability}
+For the equilibrium linear system, the already complete spectrum gives
+$\sa(J)=\max_m r_m$. The exponential series commutes with the finite
+unitary change of basis, so
+\[
+ e^{tJ}=Q\diag(e^{t\lambda_m})Q^*.
+\]
+For a complex diagonal matrix $D=\diag(d_m)$,
+$\|Dw\|_2^2\le(\max_m|d_m|)^2\|w\|_2^2$, with equality on a maximizing
+coordinate vector. Since $Q$ and $Q^*$ preserve the Euclidean norm,
+\begin{equation}\label{eq:a04-norm}
+ \|e^{tJ}\|_{2,\CC}=\max_m|e^{t\lambda_m}|
+ =\max_m e^{tr_m}=e^{t\sa(J)},\qquad t\ge0.
+\end{equation}
+The time restriction is correct: for negative $t$ the maximum would involve
+the smallest real part. Repeated values cause no change in this argument;
+a purely imaginary value contributes modulus one.
+
+For every real matrix $T$, write a complex vector as $z=u+iv$ with real
+$u,v$. If $K=\|T\|_{2,\RR}$, then
+\[
+ \|Tz\|_2^2=\|Tu\|_2^2+\|Tv\|_2^2
+ \le K^2(\|u\|_2^2+\|v\|_2^2)=K^2\|z\|_2^2.
+\]
+Thus the complex norm is at most $K$. It is at least $K$ because real
+vectors are among the complex vectors. Hence the norms coincide; apply
+this to the real matrix $e^{tJ}$. P04's argument is correct, including
+the otherwise implicit reverse inequality.
+
+If $\sa(J)=-\delta<0$, \eqref{eq:a04-norm} gives an exponential estimate
+with $M=1$ and decay exponent $\delta$. Conversely, if an exponential
+estimate with $M\ge1$, $\beta>0$ holds for every initial state, the induced
+norm satisfies $e^{t\sa(J)}\le Me^{-\beta t}$. Taking logarithms for $t>0$
+and then $t\to\infty$ gives $\sa(J)\le-\beta<0$. This proves both
+directions directly. The argument applies in both real and complex spaces.
+
+\subsection{Real blocks, zero abscissa, and absence of Jordan growth}
+For a nonsingleton pair, let $v=v^{(m)}$ and form
+$a_m=\sqrt2\Re v$, $b_m=\sqrt2\Im v$. They are real orthonormal vectors:
+$a_m=(v+\bar v)/\sqrt2$ and $b_m=(v-\bar v)/(i\sqrt2)$, and $v,\bar v$
+are distinct orthonormal Fourier columns. From $Jv=(r_m+i\omega_m)v$,
+\[
+ Ja_m=r_ma_m-\omega_mb_m,\qquad
+ Jb_m=\omega_ma_m+r_mb_m.
+\]
+Thus in the ordered real basis $(a_m,b_m)$ the matrix and exponential are
+\[
+ \begin{pmatrix}r_m&\omega_m\\-\omega_m&r_m\end{pmatrix},\qquad
+ e^{tr_m}\begin{pmatrix}\cos(t\omega_m)&\sin(t\omega_m)\\
+                  -\sin(t\omega_m)&\cos(t\omega_m)\end{pmatrix}.
+\]
+The sign in P04 is correct for its positive-exponent Fourier convention.
+Each singleton has a real unit eigenvector. These real bases together are
+an orthonormal basis of $\RR^n$.
+
+If $\sa(J)=0$, the full propagator norm is one, proving Lyapunov stability.
+A maximizing singleton with eigenvalue zero is a constant nondecaying
+solution. A maximizing nonsingleton pair with $\omega_m\ne0$ rotates
+without decay; with $\omega_m=0$ its two-dimensional block is zero and
+both coordinates are constant. Additional repeated real zero values add
+constant directions, never Jordan chains. Hence attraction fails in every
+case. If $\sa(J)>0$, an expanding real block gives solutions whose norms
+grow as $e^{tr_m}$ from arbitrarily small initial data, proving linear
+Lyapunov instability. These facts also prove that linear asymptotic
+stability here is equivalent to exponential asymptotic stability.
+
+\section{Hyperbolicity is stronger than invertibility}
+The complete diagonalization gives separately
+\[
+ \text{hyperbolic}\ \Longleftrightarrow\ r_m\ne0\ \text{for all }m,
+ \qquad J\text{ invertible}\ \Longleftrightarrow\ \lambda_m\ne0\ \text{for all }m.
+\]
+The first condition implies the second. The reverse is false within the
+canonical family itself. At the origin with $n=6$, $a=2$, $c=1$, $g=5/2$
+and arbitrary positive $k,h$ and canonical $q$,
+\[
+ \lambda_m=-\tfrac12+e^{-i\pi m/3},\qquad
+ \lambda_1=-i\tfrac{\sqrt3}{2},\quad
+ \lambda_5=i\tfrac{\sqrt3}{2}.
+\]
+No value is zero because a unit-modulus complex number cannot be $1/2$.
+The equilibrium is invertible and nonhyperbolic; its $m=0$ eigenvalue
+$1/2$ also shows that nonhyperbolicity can coexist with instability.
+P04 never identifies zero real part with a zero eigenvalue. Hyperbolicity
+alone likewise does not imply stability.
+
+\section{Nonlinear local stability and instability}\label{sec:nonlinear}
+All assertions in this section are at a synchronous equilibrium interior
+to $U$. P01 supplies a $C^\infty$ vector field there. With
+$y=x-x^*\one$, differentiability and $F(x^*\one)=0$ give
+\[
+ F(x^*\one+y)=Jy+R(y),\qquad R(y)=o(\|y\|_2).
+\]
+
+If $\sa(J)=-\delta<0$, choose $\rho>0$ so that the closed ball
+$\overline B_\rho(0)$ is contained in the translated domain and
+$\|R(y)\|_2\le(\delta/2)\|y\|_2$ there. The little-$o$ estimate and
+openness of $U$ permit both requirements. While a solution is in the ball,
+variation of constants and \eqref{eq:a04-norm} give
+\[
+ \|y(t)\|_2\le e^{-\delta t}\|y(0)\|_2+
+ \frac\delta2\int_0^t e^{-\delta(t-u)}\|y(u)\|_2\,du.
+\]
+Multiply by $e^{\delta t}$ and apply Gronwall to obtain
+$\|y(t)\|_2\le e^{-\delta t/2}\|y(0)\|_2$.
+If $\|y(0)\|_2<\rho$, a first exit at norm $\rho$ contradicts this
+bound. The orbit lies in the smaller compact ball of radius
+$\|y(0)\|_2$ inside $U$; P01 local continuation excludes a finite maximal
+forward time. This proves local exponential asymptotic stability and
+validates every step of P04's bootstrap argument.
+
+For $\sa(J)>0$, the invoked finite-dimensional $C^1$ instability theorem
+requires an open neighborhood, an equilibrium, differentiability, and at
+least one eigenvalue with positive real part. It allows other eigenvalues
+on the imaginary axis. All hypotheses are checked in P04.
+For completeness, the following direct argument proves the needed instance
+without citing that theorem.
+
+Use the real orthogonal block basis above. Let $E_+$ contain all blocks
+with positive real part and $E_{\le0}$ the remaining blocks; write
+$y=u+w$ in this orthogonal splitting. Let
+$\alpha=\min\{r_m:r_m>0\}>0$ and choose a closed ball compactly contained in the translated domain where
+$\|R(y)\|_2\le\varepsilon\|y\|_2$, with
+$\varepsilon\le\alpha/(4\sqrt2)$. Define
+$V=\|u\|_2^2-\|w\|_2^2$. Inside the cone $\|w\|_2\le\|u\|_2$,
+the block real parts and the orthogonal projections $R_+,R_{\le0}$ imply
+\begin{align*}
+ \dot V
+ &=2\langle u,J_+u\rangle-2\langle w,J_{\le0}w\rangle
+       +2\langle u,R_+\rangle-2\langle w,R_{\le0}\rangle\\
+ &\ge 2\alpha\|u\|_2^2
+       -2(\|u\|_2+\|w\|_2)\varepsilon\|y\|_2\\
+ &\ge (2\alpha-4\sqrt2\varepsilon)\|u\|_2^2
+ \ge\alpha\|u\|_2^2\ge\alpha V.
+\end{align*}
+On the nonzero cone boundary the inequality is strictly positive, so
+a trajectory starting with $w(0)=0$, $u(0)\ne0$ cannot leave the cone
+before leaving the ball. Uniqueness excludes arrival at the equilibrium
+in finite time. If the solution stayed in that ball forever, continuation
+would give all forward times and $V(t)\ge e^{\alpha t}V(0)$, contradicting
+boundedness. It must therefore leave a fixed neighborhood. Initial nonzero
+$u(0)$ can be arbitrarily small, proving Lyapunov instability. Empty
+$E_{\le0}$ simply means $w=0$. Zero-real-part blocks are permitted in
+$E_{\le0}$ throughout; hyperbolicity is unnecessary.
+
+If $\sa(J)=0$, the linear conclusion does not determine nonlinear stability
+in general. The smooth scalar fields $\dot y=-y^3$ and $\dot y=y^3$ have
+the same normal Jacobian zero. In the first,
+$y(t)=y(0)/\sqrt{1+2y(0)^2t}$ tends to zero and stays no farther from
+zero than its initial value; in the second positive small data leave a
+fixed small neighborhood. These are valid illustrations of the limit of
+linearization, not examples of DM parameter classification.
+
+\subsection{Origin and state-space boundary}
+The origin is interior to $U=(-1,\infty)^n$ but lies on the boundary of
+$\RR_{\ge0}^n$. An instability direction supplied by a theorem on $U$
+need not lie in a specified restricted state set. P04 \lin{461--467}
+keeps that distinction explicit. At a positive equilibrium a sufficiently
+small ball lies in the strict positive orthant, so the same local conclusions
+apply there. P04 does not silently transfer origin instability to the
+nonnegative state space. No claim of global attraction, basin size,
+nonlinear boundary classification, or necessity of a Hurwitz Jacobian
+for nonlinear asymptotic stability is made.
+
+\section{Step-\texorpdfstring{$q$}{q} cycles and coprimality}
+Write $\kappa=\gcd(n,q)$, $n=\kappa n'$, $q=\kappa q'$, with
+$\gcd(n',q')=1$. The orbit of $j$ under addition of $q$ returns first at
+the least positive $L$ such that $n\mid Lq$. This is equivalent to
+$n'\mid Lq'$, hence to $n'\mid L$, so $L=n'=n/\kappa$.
+Addition of $q$ preserves the residue modulo $\kappa$. Each residue class
+contains $n/\kappa$ nodes, equal to the orbit size just proved; the orbit
+therefore fills that class. There are exactly $\kappa$ disjoint cycles.
+Subtracting $q$ traverses the same cycles in reverse.
+
+This description concerns the step-$q$ permutation alone. The canonical
+field also has the step-one predecessor coupling with $C=c/s>0$.
+For $\kappa>1$, the two $q$ shifts remain inside residue classes whereas
+the step-one shift connects distinct classes; it cannot be cancelled by
+those within-class shifts. Thus the claimed step-$q$ partition does not
+give a full Jacobian block decomposition by residue class. The case
+$\kappa=1$ has only one class anyway. Fourier completeness, conjugacy,
+multiplicities, normality, and the all-mode stability criterion used no
+coprimality condition. Actual eigenvalues and their ordering can still
+depend on $n,q$; independence of a proof hypothesis is not independence
+of spectral values.
+
+\section{Exact special cases and independent corroboration}
+The following named examples were constructed independently. They are
+checks of P04 identities, not a selection theorem, a branch analysis, or
+evidence replacing the universal proofs.
+
+For a single positive-equilibrium control take
+$x^*=1$, $(a,k,c,g,h)=(5/2,1,1,2,1)$. The equilibrium residual is
+$5/2-2+(1-2)/2=0$, and
+\[
+ (d,C,G,H)=(-7/4,1/2,1/2,1),\qquad
+ \lambda_m=-7/4+\tfrac12z^{-1}+\tfrac12z^q-z^{-q},
+ \quad z=e^{2\pi im/n}.
+\]
+This yields the following exact root-of-unity expressions, without
+decimal trigonometric evaluation:
+\begin{center}
+\begin{tabular}{lll}
+\toprule $(n,q)$ & Exact labeled eigenvalue & Step-$q$ cycles\\
+\midrule
+$(5,2)$ & $-7/4+z^{-1}/2+z^2/2-z^{-2}$ & one of length 5\\
+$(6,2)$ & $-7/4+z^{-1}/2+z^2/2-z^{-2}$ & two of length 3\\
+$(6,3)$ & $-7/4+z^{-1}/2-(-1)^m/2$ & three of length 2\\
+$(7,1)$ & $-7/4-z^{-1}/2+z/2$ & one of length 7\\
+$(8,4)$ & $-7/4+z^{-1}/2-(-1)^m/2$ & four of length 2\\
+$(n,n-1)$ & $-7/4+z^{-1}-z$ & one of length $n$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each expression follows both from the directly assembled modular matrix
+and from the independently derived phases; the support checker verifies
+the equality exactly for every label in its stated finite cases.
+
+Additional stress cases are:
+\begin{enumerate}[label=(\arabic*)]
+\item \textbf{Negative nonequilibrium state.}
+At $x^*=-1/2$ and $(a,k,c,g,h)=(2,1,4,4,1)$,
+$(d,C,G,H)=(7/2,8,-8,-1/2)$. The state lies in $U$; no equilibrium-only
+simplification is used. Real coefficients still give both normality and
+the same DFT proof.
+\item \textbf{Repeated real value.} The draft's $q=1$ example gives
+$J=-4I+P+P^{-1}$ and multiplicity two on nonsingleton pairs, as proved above.
+\item \textbf{Nonconjugate coincident labels.}
+With $n=6,q=3,x^*=1$ and $(a,k,c,g,h)=(4,1,4,8,1)$,
+the equilibrium residual is zero and $(d,C,G,H)=(-4,2,2,1)$.
+The labels $1,2$ both give $-4-i\sqrt3$, while $4,5$ both give
+$-4+i\sqrt3$; the remaining values are $\lambda_0=-1$ and $\lambda_3=-7$.
+The two nonreal values each have algebraic and geometric multiplicity two.
+\item \textbf{First-offset cancellation.}
+At $q=1,x^*=1,(a,k,c,g,h)=(3,1,2,4,1)$, the equilibrium residual is zero,
+$C=H=1$, $G=1$, $d=-5/2$, and $J=-\tfrac52I+P^{-1}$.
+\item \textbf{Half-offset cancellation.}
+At even $n,q=n/2,x^*=1,(a,k,c,g,h)=(7/2,1,1,4,1)$,
+$G=H=1$, $C=1/2$, $d=-7/4$, and $J=-\tfrac74I+\tfrac12P$;
+the state is an equilibrium.
+\item \textbf{Last-offset cancellation at a negative state.}
+At $q=n-1$, $x^*=-1/2$, and all five parameters equal to one,
+$(d,C,G,H)=(5/2,2,-2,-1/2)$, hence
+$J=\tfrac52I+\tfrac12P^{-1}$. This is a state check, not an equilibrium claim.
+\item \textbf{Zero abscissa with a nonzero imaginary pair.}
+At $n=6,q=2,x^*=1,(a,k,c,g,h)=(17/4,1,1,1,13/4)$,
+$f(1)=0$ and $(d,C,G,H)=(-7/4,1/2,1/4,13/4)$.
+The real parts are $r_0=-17/4$, $r_1=r_5=0$,
+$r_2=r_4=-1/2$, $r_3=-21/4$, and
+$\lambda_1=i3\sqrt3/2$, $\lambda_5=-i3\sqrt3/2$.
+This is an invertible, linearly stable but nonattracting equilibrium
+linearization with norm identically one. No crossing or Hopf assertion follows.
+\item \textbf{Zero abscissa with a real zero.}
+At $x^*=1/4,(a,k,c,g,h)=(3,1,1,33/8,1)$, the equilibrium relation holds and
+$(d,C,G,H)=(-121/100,4/5,33/50,1/4)$.
+Here $\lambda_0=0$. Since $C>0$ and $G-H=41/100>0$,
+every $m\ne0$ has $r_m<d+C+G-H=0$ from $\cos\theta_m<1$ and
+$\cos(q\theta_m)\le1$. This checks a constant singleton critical direction;
+it does not classify a bifurcation.
+\end{enumerate}
+
+\subsection{Retained exact-check execution}
+The independently written standard-library checker in
+\path{A04_support/checks/independent_exact_p04.py} completed successfully.
+Its retained report records \textbf{39} admissible $(n,q)$ pairs,
+\textbf{285} rational matrices, \textbf{2,242} eigenvalue occurrences,
+\textbf{62,094} named exact assertions, \textbf{72} direct eigenspace-nullity
+checks, and \textbf{four} formal multivariate polynomial identities.
+Every named example above is included, with the general last-offset example
+represented at $(n,q)=(6,5)$; the main families also cover every last offset
+in dimensions five through ten. Positive and negative nonzero equilibria,
+nonstationary states of both signs, and the origin are represented.
+
+All arithmetic uses Python \texttt{Fraction}. A custom polynomial quotient
+$\mathbb Q[z]/(\Phi_n(z))$ represents $z=e^{2\pi i/n}$ exactly; no numerical
+eigensolver is used. Matrices are assembled by adding the four P03
+contributions at modular node-column indices. Exact matrix-vector products
+check every labeled eigenvector. Using $U=\sqrt n Q$ removes square roots
+from both DFT orthogonality checks; inverse Fourier sums reconstruct every
+matrix entry. Rational matrix multiplication checks normality. A direct
+Faddeev--LeVerrier characteristic polynomial is compared coefficientwise
+with the product of all Fourier factors. Selected exact Gaussian elimination
+checks nullities, including real repetitions and nonconjugate coincidences.
+Integer-shift checks include wraparounds from $-2n$ through $2n$.
+
+The separate formal polynomial identities clear powers of $1+x^*$ and
+check the all-state synchronous derivative and three equilibrium reductions
+modulo the nonzero-equilibrium equation. They are identities, not sampled
+substitutions. The finite matrix checks do not prove arbitrary-$n$ statements,
+and neither exact time-dependent norms nor nonlinear behavior is inferred
+from computation. Those assertions are proved analytically in this audit.
+The checker reads P04 only to authenticate its SHA-256, never imports an
+attached executable, and uses no old P04 internal computation as evidence.
+Full exact inputs, characteristic polynomials, eigenvalue groups, cycle
+partitions, and check counts are retained in its JSON report.
+
+\section{Adversarial counterexample search}
+The strongest quantifiers were challenged as follows. ``Proved'' means the
+analytic argument above settles all inputs under the hypotheses, not just
+that no sampled failure was observed.
+\begin{longtable}{L{0.25\textwidth}L{0.66\textwidth}}
+\toprule Claim challenged & Test and logical resolution\\\midrule\endhead
+Multiplicity equals label count & Real pairs, nonconjugate coincidences, and
+cancellations were tested. Free Fourier coordinates and the characteristic
+product prove the equality and semisimplicity for every case.\\
+Exact propagator norm & Repeated values and imaginary-axis blocks cannot
+alter the diagonal induced norm. Unitarity proves equality for all $t\ge0$.
+The claim would not follow from eigenvalues alone for a nonnormal matrix;
+P04 supplies the needed normality.\\
+Real/complex norm equality & The decomposition $z=u+iv$ gives the upper
+bound and inclusion of real vectors gives the reverse bound, for every real
+matrix. No eigenvector-realness assumption is needed.\\
+Stability at zero abscissa & Imaginary rotations, zero singletons, and
+repeated real zeros are bounded and nondecaying. Unitary diagonalization
+excludes every Jordan growth mechanism. A nilpotent Jordan block would be
+a counterexample outside the established normal class, not to P04.\\
+Hyperbolicity criterion & The exact origin example is invertible with
+nonzero purely imaginary eigenvalues. It refutes the stronger erroneous
+equivalence with invertibility and confirms P04's distinction.\\
+Collision reductions & All three matrix identities were checked before
+taking phases. Vanishing combined coefficients do not change the diagonalizing
+basis or remove labels.\\
+Coprimality independence & $(6,2),(6,3),(8,4)$ retain a full DFT basis.
+The geometric sum uses the entire grid, not the orbit length of the
+step-$q$ subgraph. The proofs cover every allowed gcd.\\
+Equilibrium restrictions & Negative nonequilibrium states were checked with
+unsimplified coefficients; nonzero equilibrium identities were used only
+with a vanishing scalar residual. The origin was checked separately.\\
+Nonlinear instability with center spectrum & The cone proof uses all
+positive blocks and allows zero real parts in the complementary subspace.
+It proves the required conclusion without hyperbolicity.\\
+\bottomrule
+\end{longtable}
+No mathematical counterexample was found. More strongly, the universally
+quantified claims listed above have been analytically proved under the
+actual hypotheses. Finite exact checks only corroborate those proofs.
+Historical numerical-run details remain a different, unresolved provenance
+question (U01), rather than a candidate mathematical counterexample.
+
+\section{Terminology, scope, and downstream dependencies}
+At a fixed parameter point the dominant/selected-label set is
+$\operatorname*{arg\,max}_m r_m$, including all ties. Its elements may all
+have negative growth rates. A first-instability statement additionally
+requires a named equilibrium branch, an oriented parameter path, a prior
+stable interval, and an actual sign change to positive spectral abscissa.
+Along a continuous branch/path with a finite limiting equilibrium, the
+finite family of continuous $r_m$ makes the maximum continuous; a boundary
+of the strictly stable region therefore has maximum zero. Touching zero
+alone does not establish an instability crossing. P04 includes these
+conditions and assumes neither uniqueness nor transversality.
+
+The exact source has no $q=2$ quadratic reduction in $\cos\theta$, no
+discrete selection classification, no tie boundaries, no first-instability
+regions, no large-$n$ selected wavenumber, and no five-node golden-ratio
+formulas. Merely listing $(5,2)$ among finite checks does not enter P07.
+It asserts no Hopf bifurcation, transversality, first Lyapunov coefficient,
+or periodic branch. Its nonlinear statements are local stability results.
+The optional norm identity supports, but does not perform, P17 response
+analysis. The frozen supporting/known role and novelty verdict remain intact.
+
+No proof refers to a theorem from P05 or later. All cross-references in
+the mathematical argument lead to notation, P01--P03, or earlier P04
+results. The standard ODE background was explicitly audited above.
+The dependency graph is acyclic and its historical all-TODO prose is not
+the current completion record.
+
+\begin{itemize}
+\item \textbf{P05:} after A04 closure, it may use the verified labeled
+spectrum and dispersion, including both singleton types and all ties.
+It must supply its own selection and branch/path crossing arguments.
+\item \textbf{P08:} P04 clears the DM spectral input only. The comparator's
+Jacobian and branch-specific comparison still need their own derivation;
+P05 remains another dependency under the project map. No DM spectrum is
+automatically a comparator spectrum.
+\item \textbf{P11:} the signed frequency, label conjugacy, and numerical
+multiplicity bookkeeping are available after closure. P11 must still
+establish a simple numerical critical pair, a nonzero chosen positive
+frequency, the remaining spectral inequalities, a regular positive branch,
+and the named parameter path. P12--P13 retain transversality and nonlinear
+nondegeneracy. A label pair alone does not prove simple eigenvalues or Hopf.
+\end{itemize}
+
+\section{Exhaustive source-range review}
+Every source line from 1 through 573 is assigned below; blank separators
+and environment delimiters are grouped with their substantive passage.
+\textbf{PASS} concerns the stated mathematical or scope content.
+\textbf{UNRESOLVED} in U01 concerns only historical numerical-run provenance.
+There is no required MINOR ISSUE, MAJOR ISSUE, or FALSE mathematical finding.
+
+{\small
+\begin{longtable}{L{0.10\textwidth}L{0.17\textwidth}L{0.64\textwidth}}
+\toprule P04 lines & Assessment & Finding\\\midrule\endhead
+1--13 & \textbf{PASS} & Metadata, verified prerequisites, known supporting role, and scope are accurate. The declared standard ODE input is explicit.\\
+14--24 & \textbf{PASS} & Canonical $n,q$, positive parameters, domain, shift convention, and absence of a coprimality hypothesis agree with current inputs.\\
+25--40 & \textbf{PASS} & P03 Jacobian and all four coefficients are copied correctly. State-versus-equilibrium scope and signs of $C,G,H$ are correct.\\
+41--66 & \textbf{PASS} & Complete spectrum theorem, normalized column order, both diagonalizations, and degeneracy quantifiers are correct. Local $Q$ alias is explicit (optional note T01).\\
+67--85 & \textbf{PASS} & Every integer-shift phase, modular wraparound, and the separate $G$ and $-H$ orientations are correct.\\
+86--104 & \textbf{PASS} & Geometric-sum normalization, square-matrix inverse argument, characteristic product, and completeness are valid.\\
+105--123 & \textbf{PASS} & Both dispersion formulas pass; the imaginary $+H$ sign and signed-frequency distinction are explicit.\\
+124--137 & \textbf{PASS} & Modular conjugate label and whole-vector/eigenvalue overlines are unambiguous and mathematically correct.\\
+138--145 & \textbf{PASS} & Singleton counts, parity, real singleton values, and the failure of the converse are correct.\\
+146--159 & \textbf{PASS} & Multiplicity statement correctly concerns numerical eigenvalues over $\CC$, with no simplicity assumption.\\
+160--167 & \textbf{PASS} & Characteristic product and free-coordinate argument prove equal algebraic/geometric multiplicities and semisimplicity.\\
+168--176 & \textbf{PASS} & Conjugate labels, numerical equality, real-part ties, and singleton simplicity are properly distinguished.\\
+177--181 & \textbf{PASS} & Exact positive equilibrium gives $d=-4,C=2,G=H=1$ and repeated real conjugate-label values.\\
+182--187 & \textbf{PASS} & Origin reduction matches verified P03; $c>0$ and distinct roots of unity imply simple values.\\
+188--194 & \textbf{PASS} & Collision discussion uses the exhaustive P03 list without requiring a replacement theorem.\\
+195--203 & \textbf{PASS} & $q=1$ combined matrix, spectrum, real part, and imaginary part all pass.\\
+204--213 & \textbf{PASS} & $q=n-1$ phases, combined matrix, spectrum, and both dispersion reductions all pass.\\
+214--223 & \textbf{PASS} & Half-offset phase $(-1)^m$, combined matrix, and zero offset imaginary contribution all pass.\\
+224--228 & \textbf{PASS} & Cancellation is handled by addition, never overwriting; the general theorem remains valid.\\
+229--241 & \textbf{PASS} & Zero and even singleton formulas, both $q$ parities, and the half-offset intersection agree.\\
+242--259 & \textbf{PASS} & Unitary proof establishes normality without distinctness.\\
+260--268 & \textbf{PASS} & Adjoint signs and powers are correct; commuting powers give a second proof. Negative states and nonsynchronous exclusions are explicit.\\
+269--288 & \textbf{PASS} & Direct scalar derivative equals the unsimplified row sum at every synchronous state.\\
+289--297 & \textbf{PASS} & Tangent-space differentiation and nonstationary scalar variational coefficient are correct.\\
+298--309 & \textbf{PASS} & Equilibrium and positivity premises precede the optional diagonal simplification.\\
+310--324 & \textbf{PASS} & Both zero-mode equilibrium expressions are equivalent; negative nonzero equilibria and origin are distinguished.\\
+325--337 & \textbf{PASS} & Equilibrium scope, complete-spectrum abscissa, and exponential-stability definition are sound.\\
+338--355 & \textbf{PASS} & All-label criterion, exact norm, and three linear stability cases are correctly stated.\\
+356--372 & \textbf{PASS} & Exponential series, diagonal norm attainment, $t\ge0$ maximum, and converse logarithmic limit are valid.\\
+373--384 & \textbf{PASS} & Real/complex norm equality and orthonormal real-pair block have the correct signs.\\
+385--392 & \textbf{PASS} & Critical blocks are bounded but nondecaying; positive blocks yield instability. No Jordan growth is possible.\\
+393--400 & \textbf{PASS} & Hyperbolicity and invertibility use distinct, correct all-label tests.\\
+401--410 & \textbf{PASS} & Canonical origin example has a nonzero imaginary pair and no zero eigenvalue, proving strict weakness of invertibility.\\
+411--414 & \textbf{PASS} & Hyperbolicity does not imply stability; nonhyperbolicity can coexist with instability.\\
+415--426 & \textbf{PASS} & Nonlinear implications distinguish negative, positive, and zero abscissa and state the open-domain scope.\\
+427--443 & \textbf{PASS} & Differentiable remainder, radius selection, Gronwall estimate, first-exit argument, and compact continuation all pass.\\
+444--452 & \textbf{PASS} & The standard instability theorem is correctly stated and applied, including center spectrum; A04 proves this instance independently.\\
+453--460 & \textbf{PASS} & Opposite cubic scalar examples establish the general limitation; they are not claimed as DM boundary examples.\\
+461--472 & \textbf{PASS} & Local/global and open-domain/orthant distinctions are preserved; rejected blanket nonlinear/global claims remain rejected.\\
+473--488 & \textbf{PASS} & Dominant-label ties, branch/path prerequisites, actual sign crossing, and no selection claim are properly separated.\\
+489--503 & \textbf{PASS} & Least-return proof gives gcd cycles and residue classes. The full step-one coupling prevents the asserted subgraph partition from becoming a claimed full-network decomposition.\\
+504--514 & \textbf{PASS} & Grid/parity/phase dependence is distinguished from coprimality independence of the proofs; the origin threshold is correctly identified as special.\\
+515--529 & \textbf{PASS} & Summary describes the analytic checks actually present and does not appeal to finite computation as proof.\\
+530--545 & \textbf{UNRESOLVED} & U01: historical checker execution, counts, and floating-point maxima cannot be reproduced from the supplied archive because its separate companion is absent. No theorem premise is affected.\\
+546--548 & \textbf{PASS} & Explicitly limits computations to corroboration and denies that they supply an audit verdict.\\
+549--573 & \textbf{PASS} & Priority checklist identifies valid audit gates and scope limits. It is reviewed as source content, not an instruction overriding the user request.\\
+\bottomrule
+\end{longtable}
+}
+
+\section{Issue register and closure requirements}
+\textbf{Required mathematical corrections: none.}
+No Fourier sign, normalization, conjugation, collision, multiplicity,
+normality, stability, or hypothesis correction is required.
+
+\textbf{U01 --- UNRESOLVED provenance, P04 \lin{530--545}.}
+The old checker and per-case report are not in the supplied archive.
+The exact old counts and floating-point maxima therefore remain
+unreproduced. To certify those historical execution facts, obtain the
+named original support package and reproduce or authenticate its records.
+No P04 theorem depends on this step, and it is not a blocker for P05's
+mathematical dependency gate. New exact checks must not be represented
+as reproduction of that old run.
+
+\textbf{T01 --- optional notation consistency, P04 \lin{47}.}
+The canonical Fourier macro renders as $\mathsf Q$, whereas P04 introduces
+the explicit local alias $Q:=\mathsf Q$. P02 has used $Q(s)$ for a scalar
+polynomial. The types and the explicit local definition remove any ambiguity
+in the actual P04 argument, and that polynomial is not used as a matrix
+here. Retaining $\mathsf Q$ throughout would improve cross-module consistency
+but is not required for correctness or closure. There is no misplaced
+conjugation bar. The signed $\omega_m$ is explicitly distinguished from
+future positive $\omega$.
+
+Administrative closure may register A04 and its exact audited P04 hash
+without a mathematical revision. This audit itself leaves all project
+status files and P04 bytes unchanged. P05 is cleared after that closure,
+while the remaining dependency gates for P08 and P11 still apply.
+Neither a later proof module nor another literature survey was begun.
+\end{document}

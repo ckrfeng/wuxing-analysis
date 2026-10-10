@@ -1,0 +1,70 @@
+{
+  "archive_sha256": "768c76b7b53e0af2807d3eab81cbe38134425c3ff477585559428b9614d1fb96",
+  "files": {
+    "project_manifest.md": {
+      "sha256": "716ea27bb0b896135aca7c5fbde841afed1d38bf3c478112bbaa5b980ddf2914",
+      "bytes": 53925,
+      "lines": 262
+    },
+    "claim_registry.md": {
+      "sha256": "c61081c918e8280fa6e5f60b8c836e44973a85fecf32d40115134e06d3f5367f",
+      "bytes": 81756,
+      "lines": 421
+    },
+    "frozen_theorem_package.md": {
+      "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63",
+      "bytes": 9729,
+      "lines": 69
+    },
+    "final_novelty_verdict.md": {
+      "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea",
+      "bytes": 6511,
+      "lines": 37
+    },
+    "02_theorem_dependency_map.tex": {
+      "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac",
+      "bytes": 9372,
+      "lines": 145
+    },
+    "00_canonical_model.tex": {
+      "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4",
+      "bytes": 3712,
+      "lines": 74
+    },
+    "01_notation_and_assumptions.tex": {
+      "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+      "bytes": 5152,
+      "lines": 103
+    },
+    "proofs/P01_wellposedness_and_absorbing_box.tex": {
+      "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+      "bytes": 22570,
+      "lines": 520
+    },
+    "audits/A01_wellposedness_and_absorbing_box.tex": {
+      "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098",
+      "bytes": 48622,
+      "lines": 974
+    },
+    "proofs/P02_synchronous_subspace_and_equilibria.tex": {
+      "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+      "bytes": 26905,
+      "lines": 610
+    },
+    "audits/A02_synchronous_subspace_and_equilibria.tex": {
+      "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac",
+      "bytes": 37895,
+      "lines": 847
+    },
+    "proofs/P03_origin_and_linearization.tex": {
+      "sha256": "0f87f315817429ddb949af5bc6d38db32a0cb6a8f7715dfe941840becd527776",
+      "bytes": 18921,
+      "lines": 433
+    },
+    "proofs_compendium.tex": {
+      "sha256": "c9cad0e029f4f43fcfbc4d6375c1a4f3b43a6342d51d906ec434a822406a10bb",
+      "bytes": 4212,
+      "lines": 97
+    }
+  }
+}

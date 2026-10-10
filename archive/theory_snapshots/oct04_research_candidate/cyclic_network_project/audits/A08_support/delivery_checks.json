@@ -1,0 +1,22 @@
+{
+  "input_zip_sha256_unchanged": "3cac0e6676575e1c652454a9e28418c04ac5a553d4550c6f8d27f2d873e71e44",
+  "all_98_audited_input_members_byte_identical": true,
+  "historical_companion_unchanged": true,
+  "audited_P08_full_sha256": "d21a77de84df4c40c2995d30ab740130795adca6c72f52fef9453ad5ddfb18ac",
+  "native_editor_compilation": "success",
+  "export_compiler": "pdfLaTeX / TeX Live 2026",
+  "pdf_pages": 19,
+  "final_compiler_warnings": 0,
+  "final_compiler_errors": 0,
+  "visual_review": "All 19 pages rendered at 90 dpi and inspected; no clipping, overlap or missing formulas.",
+  "ledger_ranges": 65,
+  "line_coverage": "1-846 inclusive, contiguous, no overlaps",
+  "required_corrections": [
+    "E01: n=8 universal witness MB representative 2, not 1"
+  ],
+  "unresolved_A08_issues": [],
+  "original_proofs_edited": false,
+  "P08_lifecycle_promoted": false,
+  "later_proof_begun": false,
+  "prior_checker_reproduction": "Complete summary and all per-case JSON equal original exactly."
+}

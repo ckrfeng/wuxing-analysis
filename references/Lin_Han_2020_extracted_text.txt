@@ -1,0 +1,524 @@
+PAGE 1
+Proceedings of the 39th Chinese Control Conference 
+July 27-29, 2020, Shenyang, China
+Analysis of Dynamic Five-Element Model
+Haipeng Lin, Jing Han*
+LSC, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, P. R. China 
+School of Mathematical Sciences, University of Chinese Academy of Sciences, Beijing 100190, P. R. China
+*E-mail: hanjing@amss.ac.cn
+Abstract: As the theoretical basis of traditional Chinese medicine (TCM ), five-element (Wu-Xing) model can 
+generate abundant dynamic phenomena when it is considered as a dynamic system. In this paper, we extent the 
+previous studied model and comprehensively consider all kinds of influence between elements, including “gain” ,  
+“saturation” , “generating” , “is-generated” , “restricting” and “is-restricted”.  Based on numerical and analytical cases 
+study, we find that the system will converge to a fixed point or periodic solution, or become chaotic eventually 
+under different settings. The stability is studied by using the first Lyapunov’s method and the Lyapunov exponents, 
+and it shows that all these cases are not stable. Additionally, by calculating the rate of change of the volume in 
+phase space, we can judge this model is dissipative for “ R&isR” model, but the model with “generation” involved 
+can be dissipative under specific settings.
+Key Words: five-element model, generation, restriction, periodic solution, fixed point, chaotic, dissipative
+1  Introduction
+Traditional Chinese medicine (TCM) is regarded as 
+the typical wisdom of ancient Chinese. It has a holis­
+tic and systematic view of human and the whole world. 
+The five-element (Wu-Xing) theory [1, 2], the theoreti­
+cal basis of TCM, considers these five elements (metal, 
+wood, water, fire and earth) are indispensable attributes 
+in the world’s construction. The relationships among 
+them (see Fig.l) are mainly expressed as generation 
+(also called “activation”) and restriction (also called 
+“inhibition”). Each of these relationships can be di­
+vided into two parts, and we take “fire” as an exam­
+ple: “fire" ^  “earth""  (“fire” generates “earth”, ab­
+breviated as “G ”), “w ood"" ^  “fire""  (“fire” is gen­
+erated by “wood”, abbreviated as “isG”), “fire"" --*  
+“m etal"" (“fire” restricts “metal” , abbreviated as “R ” ) 
+and “water"  --*  “fire"" (“fire” is restricted by “water” , 
+abbreviated as “isR” ). Nowadays there has been some 
+diagnosis and treatment based on five-element theory, 
+such as “judge the element is in either virtual or real 
+state of Yin and Yang” and “fill his mother but rush 
+down his son”.  If we can quantify the model from a 
+mathematical perspective, it will be greatly significant 
+to develop medicine research and system science.
+The dynamic five-element model has abundant dy­
+namic phenomena during the evolution, most of which 
+can not be found in the static five-element model. Some 
+mathematical approaches have been done to build and 
+analyze the dynamic five-element system, which can be 
+categoried as follows.
+The five-element system can be built as discrete or 
+continuous models. In discrete systems, states of el­
+ements can be quantified into excess , normal  and 
+deficiency  [3], or expressed as activity  and inactivity  
+with boolen logic [4, 5]. Papers [ 6- 8]  use algebraic rea­
+soning for relationships between elements. Based on the
+This work is supported by National Natural Science Foun­
+dation (NNSF) of China under Grant 61374168 and the Fron­
+tier Science Key Programs of the Chinese Academy of Sciences 
+No.QYZDJ-SSW-JSC003.
+Fig. 1: The relationship among five elements.
+rules, the system will be deduced into one fixed point 
+or one periodic solution [3-8]. While continuous sys­
+tems establish corresponding differential equations and 
+observe the process of the evolution of the system over 
+time. As the continuous system might generate count­
+less states in the time interval, it will eventually con­
+verge to one fixed point [9-13] or one periodic solution 
+[13-15], or become chaotic [13, 14].
+Apart from four relationships mentioned, there ex­
+ists another two terms: “gain” and “saturation” , which 
+mean the amount of the element can increase or de­
+crease with the affect of the element itself respectively. 
+Only “gain” and “isG” can increase the amount of the 
+element while the others play an opposite role. In the 
+disposal of interactions among five elements, “isG” and 
+“isR” are the basis in all approaches. Except these 
+two, papers [7-11, 13-16] take “gain” and “saturation” 
+into account while [ 6- 8, 11, 12, 17] consider relation­
+ships “G ” and “R ”.  There are only a few approaches 
+[7, 8, 11] considering all six terms simultaneously in the 
+dynamic five-element models. Particularly in continu­
+ous systems, the interactions between elements are set 
+as linear terms ( e.g.  X  = ax)  in [16, 17], but expressed 
+as cross terms (e.g. x  =  bxy) in [9-15].
+In the study of system dynamics, there are three main
+777
+Authorized licensed use limited to: CAS Academy of Mathematics & Systems Science. Downloaded on November 27,2020 at 07:30:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+PAGE 2
+aspects. One is to distinguish the hnal states of the 
+system via the power spectrum, phase diagram or Lya­
+punov exponents [13, 14], or judging whether the sys­
+tem state changes after adding disturbance [5, 9, 10]. 
+Another one is to analyze the stability of the system 
+at equilibrium points, including the judgement whether 
+real parts of eigenvalues of the linearized matrix are 
+negative or not [12, 13], the trajectory diagram of vari­
+ables [9, 10] and the use of the appropriate Lyapunov 
+function [11]. The other is to obtain the general solu­
+tion of a linear model [17], or by determining values of 
+all parameters via biochemical data [15].
+According to the above analysis, we build a contin­
+uous hve-element system including all six terms. We 
+analyze its dynamic characteristics by means of trajec­
+tory diagram, phase diagram and Lyapunov exponents. 
+In our cases study, we hnd the systems can converge 
+to hxed points or periodic solutions, or become chaotic, 
+but they are always unstable, and their dissipativeness 
+are related to the values of parameters, including the 
+initial values of hve elements as well.
+2 Result
+2.1 The hve-element system
+According to the theory of TCM, the value of the el­
+ement could be inhuenced by any relevant relationship. 
+For example, in the relationship “rebellion” (Wu), the 
+restricted element might be counteractive at the one in 
+the restricting size, which causes the reduction of both 
+two elements. Therefore, we add the relationships “G ” 
+and “R ” to the model proposed in the paper [9 ] and 
+construct a more complete one as follows:
+x i = aixi —  bix^ + cixix5  —  dixix4  —  gixix2  —  hixix3 + ei
+x 2 = a2 x2  —  b 2 xl + c2 x2 xi —  d2 x2 xs —  g2 x2 x2  —  h2 x2 x4  + e2
+x 3 = a3 x3  —  b 3 xi + c3 x3 x2 —  d3 x3 xi —  g3 x3 x4  —  h3 x3 x5  + e3
+x 4  = a4 x4  —  b 4 x2 + c4 x4 x3  —  d 4 x4 x2  —  g4 x4 x5  —  h4 x4 xi + e4
+x 5 = a6 x6  —  b 5 x2  + c6 x6 x4 —  d5 x5 x3 —  g6 x6 xi —  h6 x6 x2 + e6
+(1)
+where X i means the amount or state of ith element,
+a ,  i,  b i, q ,  d ,  gi,  hi are the coefficients of the relationship 
+“gain”, “saturation”, “isG”, “isR”, “G” and “R ” respec­
+tively and always nonnegetive, where ei is the noise or 
+intervention of ith element, i = 1 , 2, ■  ■ ■  , 5.
+For simplicity, we consider ei =  0 at the hrst step in 
+our research and analyze how the system evolves in the 
+stable environment. Additionally, we let ai =  a,bi =
+b , ci =  c,di =  d , gi =  g,hi  =  h for all i. Thus, equation 
+set ( 1) can be changed into:
+x i = axi —  bxi + cxix5  —  dxix4  —  gxix2  —  hxix3
+x 2  = ax2  —  b x2 + cx2 xi —  dx2 x5  —  gx2 x3  —  hx2 x4
+x 3  = ax3  —  bx2 + cx3 x2  —  dx3 xi —  gx3 x4  —  hx3 x5 (2)
+x4  = ax4  —  b x4 + cx4 x3  —  dx4 x2  —  gx4 x5  —  hx4 xi
+x 5  = ax5  —  b x5 + cx5 x4  —  dx5 x3  —  gx5 xi —  hx5 x2
+This nonlinear system has strong coupling and sym­
+metry. The plus and minus signs mean the positive and 
+negative feedback respectively.
+2.2 System dynamics analysis
+In TCM, the values of hve elements in any living body 
+must be positive, so the values of the initial point are all 
+positive, that is, (x 0,x!],x[;,x] 4,x[5), xi ( 0) =  x 0 > 0,i  =
+1, 2 ,■ ■ ■ , 5.
+The value of the variable cannot be less than zero. 
+Otherwise, when the variable decreases from a positive 
+value to a negative value, it will inevitably pass the 
+value zero. According to equation set (2), a t  =  0 holds, 
+which means the variable will remain unchanged. It 
+is impossible for the variable to continue to reduce to 
+negative value. So the value of the variables must be 
+non-negative during the evolution process.
+The hnal state of the system can be generally clas- 
+sihed into three types: hxed points, periodic solutions, 
+and chaos. We have tested 300 randomly generated con- 
+hgurations of diherent parameters and initial values (all 
+are positive), and we found that the system can con­
+verge to hxed points or periodic solutions, or become 
+chaotic respectively.
+In the following sections, we will give some exam­
+ples respectively for hxed points, periodic solutions and 
+chaotic cases with analysis of stability and dissipative­
+ness.
+2.2.1 Fixed points
+In this section we give four cases which will converge 
+to hxed points. The systems in the hrst two cases start 
+evolution from the equilibrium points, while the other 
+two evolve from non-equilibrium points.
+Case 1. We set parameters to a =  b =  c =  d =  
+g =  h >  0, and the solution to xi = 0,i  =  1, 2, ■ ■ ■  , 5, 
+requiring all values are positive, is ( 1 , 1 , 3, 3, 1 ).
+To judge the stability of the system at the equilibrium 
+point, we use the hrst Lyapunov method, that is, lin­
+earize the original system at the equilibrium point, and 
+then determine whether eigenvalues of the coefficient 
+matrix contains positive real parts. The linearized ma­
+trix at the equilibrium point ( 3, 3 3, 1 , 1 , 3 3) is as follows:
+Jaco
+(  -1 /3  
+1/3 
+-1 /3  
+-1 /3  
+V  -1 /3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3
+1/3 \ 
+1/3 
+1/3 
+1/3 
+1/3
+The eigenvalues obtained from the above matrix 
+are -1, 0.206-0.634i, 0.206+0.634i, -0.539-0.392i, - 
+0.539+0.392i, which contain positive real parts, that 
+means the system is unstable at the equilibrium point.
+Case 2. We consider the system with only generat­
+ing relationships “G ” and “isG”, denoted as “G&isG”,  
+which means c > 0,g > 0,a  =  b =  d =  h =  0. Then 
+the equilibrium point only exists when c =  g and it is 
+(xi,x 2,x 3,x 4,x 5) =  (S,S,S,S,S),S >  0. At this point 
+the real parts of all eigenvalues of the coefficient matrix 
+are zero. The system may be stable or unstable at this 
+equilibrium point.
+Case 3. We consider the system with only restrict­
+ing relationships “R ” and “isR”, denoted as “R&isR”,
+778
+Authorized licensed use limited to: CAS Academy of Mathematics & Systems Science. Downloaded on November 27,2020 at 07:30:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+PAGE 3
+which means d > 0 ,h >  0,a = b  = c = g  =  0. Then the 
+equation set ( 2) is reduced to:
+xi = — dxiX 4 —  hxixs = -xi(d x 4 +  hx 3)
+X2 = -dx- 2'x5 — hx 2x4 =  — x2(dx 5 +  hx 4) 
+x3 =  — dx3xi —  hx3x 5 = — x 3(dxi  +  hx 5) (3)
+x4 =  — dx4x2 —  hx4xi =  — x4(dx2 +  hxi)  
+x 5i = — dx5jx 3 —  hx5x2 = — x5j(dx 3 +  hx 2)
+Starting from any conhguration of (x 1,x 2,  •  • •  ,x5) 
+which are all positive values, the evolution of each vari­
+able is decreasing monotonically with time. Because the 
+values of variables are always non-negative, each vari­
+able will eventually converge to a hxed point (such a 
+case is shown in Fig. 2).
+Fig. 2: System evolution over time with parameter set­
+tings of (xi, x 0, • • •  , x0) =  (1, 2, 3, 4, 5),d = h =  1,a = 
+b  = c = g  = 0.
+Additionally, in this “R&isR” case there will be at 
+least three variables that converge to zero. Otherwise, 
+if convergent values of more than two variables are not 
+zero, the restriction among them will make the vari­
+ables continue to decrease until one of them converges 
+to zero. At this point, the system is left with at most 
+two variables that have no restricting connection, and 
+whose values do not converge to zero.
+To analyze the stability of the system, we intro­
+duce the Lyapunov exponent. The Lyapunov exponent 
+judges the stability based on the degree of orbital diver­
+gence [18], and according to the paper [19], chaotic sys­
+tems and systems with unstable periodic solutions have 
+positive Lyapunov exponents, while the Lyapunov expo­
+nents of stable systems are all negative. We use singular 
+value decomposition (SVD) method to solve the Lya­
+punov exponents [20]. We set time step to 0.001. The 
+Lyapunov exponents are 0.0015, 0.0006, -1.3159, -2.3517 
+and -3.7092, two of them greater than zero. Thus, the 
+system is convergent to a hxed point but unstable.
+According to the paper [21], the rate of the change of 
+the volume in phase space is dehned as:
+d
+dt dfì
+Q
+d .  dq i + Pi)dildqi dpi (4)
+where qi,pi mean the generalized coordinate and the 
+canonical momentum in the ith direction respectively,
+Q means the volumn of phase space, which can be cal­
+culated as Q = f  n dQ =  f  Q  dqiq2 •  •  •  qNPiP2 •  •  • Pn ■
+If i f n dQ > 0, the volume of phase space will 
+increase in the next instant, which means the trajec­
+tory may depart from the boundaries of the attractor; 
+if i f  n  dQ < 0, the volume of phase space will de­
+crease, that is, the system is dissipative. In addition, if 
+d t f n dQ =  0 holds all the time, it means the system is 
+conservative and its trajectories lie on some surface of 
+phase space. For case 3, the result is:
+d
+dxi-i,d fì
+=  -(d  + h)(xi +  X2 +  X3 +  X4 +  X5)dfì
+Q
+< 0
+which shows the system is dissipative with an attractor.
+Case 4. If the initial values of all variables are the 
+same x° =  x 0 =  x 3 =  x 0 =  x0, according to the strong 
+symmetry of the equation set ( 2), the change trend of 
+each variable is exactly the same. We only need to 
+consider the following equation:
+x = ax —  bx 2 +  cx 2 —  dx“2 —  gx2 —  hx2
+(5)
+=  x(a  +  (c —  b  —  d —  g —  h)x)
+If x(a + (c —  b  —  d —  g —  h)x) = 0, that is, x is not 
+the equilibrium point, and then equation (5) would be 
+changed into:
+dx
+x(a + (c —  b  —  d —  g —  h)x) d t
+1 c —  b  —  d —  g —  h
+(x  —  a + (c  —  b  —  d —  g —  h)x)dx = adt  ( 6) 
+ln \ x \  —  ln\a + (c —  b  —  d —  g —  h )x\  = at +  ki
+| a + (c —  b  —  d —  g —  h )\  = e - at-ki x
+Assuming the initial value is x(t 0) = xo,to =  0, we 
+get the solution of the system(5) as follows:
+axo
+M x 0 +  (a —  M x0)e a t ’ x-  = M (7)x =
+where M = b  + d + g + h —  c.
+When t —y we hnd that the system hnally con­
+verges to a hxed value = b+d+g+h-c  >  which is exactly 
+the system’s equilibrium point.
+2.2.2 Periodic solutions
+The case we consider in this section is:
+(a,b,c,d,g,h) =  ( 1, 1,  1,  1 , 1 , ^  (x 0l,x 2,x 3,x4,x 0) =
+(1, 2, 3, 4, 5), time step A t =  0.001. The simulation is 
+as Fig. 3.
+Based on the data generated by fourth Runge-Kutta 
+(RK4), we can judge whether the variable has a period 
+T in this integration interval according to the time in­
+terval between the maximum values of each variable. 
+We hnd T «  17.626.
+779
+Authorized licensed use limited to: CAS Academy of Mathematics & Systems Science. Downloaded on November 27,2020 at 07:30:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+PAGE 4
+-------Fire
+x ' 4 Earth
+& -------Metal
+™  -------Water
+> 2 ■  -------Wood
+0 50 100 150 200 250 300
+time
+0 50 100 150 200 250 300
+time
+1JLM
+Earth '
+-------Metal
+-------Water '
+-------Wood
+' i l
+0 20 40 60 80 100 120
+time
+time
+Fig. 3: System evolution over time with parameter set­
+tings of (x ^ x 0, ■ ■ ■  ,£5) =  (1, 2, 3, 4, 5),a  =  b =  c =  
+d =  g =  h = 1 :  the hrst picture describes the evolution 
+of hve elements, and the second picture describes the 
+evolution of the element ‘Fire’.
+Fig. 4: System evolution over time with parameter set­
+tings of (x1, x0,  ■ ■ ■  ,  x2) =  (1, 2, 3, 4, 5), c =  g =  1,a =  
+b =  d =  h =  0:  the hrst picture describes the evolution 
+of hve elements, and the second picture describes the 
+evolution of the element ‘Fire’.
+Its Lyapunov exponents are 0.3885, -0.1719, -0.3473, 
+-0.6833 and -0.9731. Thus, this system is convergent to 
+an unstable periodic solution.
+Additionally, the change of i  is following:
+—  d i  =  5 i  —  4 (xi +  X2 +  • • •  +  X5)d i
+dt n n
+Whether the volume of phase space decreases or in­
+creases depends on whether d  f  n d i  < 0 or not. How­
+ever, based on the fact that the sum of all Lyapunov 
+exponents is less than 0, the system is dissipative as a 
+whole in the above case.
+2.2.3 Chaos
+The case we consider in this section is: 
+(a,b,c,— ,g,h)  =  (°, °, 1 , °, 1 , 0), (x0,x0 ,x 0,x 4,x 0) =  
+(1, 2, 3,4, 5), time step A t =  0.001. The simulation of 
+trajectory diagram is Fig. 4.
+The period T cannot be found with RK4 and the tra­
+jectory in the phase diagram changes irregularly (Fig. 
+5), and the Lyapunov exponents of this system are 
+0.6700, 0.6606, -0.0761,-0.0794 and -1.1751, which in­
+dicate that the system is chaotic.
+When c =  g > 0,a  =  b =  d =  h =  0, the rate of 
+change of i :
+d
+dt d i
+n
+0
+which proves that the system is conservative with the 
+fact that the sum of all Lyapunov exponents is zero, 
+that is, no attractor exists in the system.
+If we consider the case of c > g > 0,a  =  b =  d =  h =  
+0, which means the relationship “isG” is stronger than 
+the relationship “G”,  the rate of change of i  will be:
+d
+d t d i
+Q
+((c -  g)(xi + X 2 + X3 + X 4  + x5 )di ( 8) 
+Q
+Fig. 5: Phase diagram of the relationship between ele­
+ment ‘Fire’ and other elements.
+We have proved that the value of elements are all non­
+negative during the evolution, and all initial values are 
+positive, so -d f  n d i  > 0 in the equation ( 8) holds. 
+The system will be absorbing energy and expanding its 
+volume of phase space.
+Similarly, the system is dissipative and forms an at­
+tractor if g > c > 0,a  =  b =  d =  h =  0, which means 
+the relationship “G” is stronger than the relationship 
+“isG”.
+2.3 Conclusion
+The classic hve-element model proposed by the an­
+cients is a static description of the relationships among 
+hve elements. However, its applications to the human 
+system and the natural laws of the world are dynamic. 
+The ancients were limited by the level of mathematics at 
+that time so that they could not describe the evolution­
+ary dynamics of the hve-element system, but today it is 
+very important for us to establish a dynamic one. In this 
+paper, we create a dynamic hve-element model that in-
+780
+Authorized licensed use limited to: CAS Academy of Mathematics & Systems Science. Downloaded on November 27,2020 at 07:30:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+PAGE 5
+eludes all six terms (“gain”, “saturation”, “generating”,  
+“is-generated”, “restricting” and “is-restricted”,) based 
+on previous work [9], and according to the numerical 
+simulation and mathematical analysis, we obtain the 
+following conclusions:
+• By case study, we hnd that the system may con­
+verge to a hxed point or a periodic solution, or 
+become chaotic under different settings of param­
+eters and initial values. In particular, we prove 
+that the systems converge to a fixed point in the 
+cases when there are only restricting relationships 
+(d > 0,h > 0,a = b  = c = g  =  0) or initial values 
+of five elements are equal (x° =  x %  = ■ ■ ■  = £ 5).
+• Concerning the dissipativeness of system energy, 
+we prove that: ( 1 ) when the five-element system 
+just has restricting relationships (i.e., d > 0,h >  
+0,a = b  = c = g  =  0), it is dissipative and its en­
+ergy is continuously decreasing; ( 2) when the five- 
+element system just has generating relationships 
+(i.e., c > 0,g > 0,a = b  = d = h  =  0), it is a 
+conservative system if c = g,  or a dissipative sys­
+tem if c < g , or its energy is increasing if c > g ;  
+(3) when the five-element system contains “gain” 
+and “saturation” (i.e., a > 0,b >  0), the system 
+may be dissipative, conservative or increasing en­
+ergy depending on not only the initial values of five 
+elements, but also values of all parameters.
+• As for the stability, the cases studied in this paper 
+are all unstable.
+These results preliminarily reveal the complexity of 
+the dynamic five-element model and its rich dynamic 
+phenomena. Further analysis is needed to obtain a more 
+systematic and complete theory. In addition, the con­
+struction of the model is still in theoretical speculation, 
+and we should integrate it with the clinical application 
+of TCM and keep imporoving it in the future.
+References
+[1] J. Tang,B. Liu,K. Ma, Traditional Chinese medicine, The 
+Lancet, 2008, 372(9654): 1938-1940.
+[2] N. Misic, Chinese concept of five phases (wu xing -yin 
+yang) in the light of systems science, Proceedings of the 
+First Symposium of Quantum-Informational Medicine 
+QIM 2011: Acupuncture-Based & Consciousness-Based 
+Holistic Approaches & Techniques, 2011: 118-127.
+[3] J. Chen, Mathematical Modeling of Traditional Chinese 
+Medicine, Journal of Mathematical Medicine, 2002 (06): 
+11-13.
+[4] Q. Feng, X. Niu, S. Wang, Principles of Nonlinear Dy­
+namics of Five Elements Theory, China Journal of Basic 
+Medicine in Traditional Chinese Medicine, 2003 (7).
+[5] P. Bellavite, M. Semizzi, S. Lussignoli, et al, A computer 
+model of the ‘five elements’ theory of traditional Chinese 
+medicine, Complementary Therapies in Medicine, 1998, 
+6(3):0-140.
+[6] K. Meng, Mathematics of Yin-Yang and Five Elements 
+and Its Application in Traditional Chinese Medicine, 
+Acta Universitatis Traditionis Medicalis Sinensis Phar- 
+macologiaeque Shanghai (6): 4-9.
+[7] Y. Zhang, Mathematical Reasoning of Treatment Princi­
+ple Based on “Yin Yang Wu Xing” Theory in Traditional 
+Chinese Medicine, Chinese Medicine, 2011.
+[8] J. Kim, M. Song, J. Kang, et al, A mathematical model 
+for the deficiency-excess mechanism of yin-yang in five 
+viscera, Chinese journal of integrative medicine, 2014, 
+20(2): 155-160.
+[9] T. Wang, Research on the Dynamic Model of the WuX- 
+ing Theory, Fudan University, 2008.
+[10] G. Ding, T. WanG, Mathematical Analysis of Yin-Yang 
+Wu-Xing Model in TCM, Journal of Acupuncture and 
+Tuina Science, 2008, 6(5): 269-270.
+[11] Q. Chen, A Mathematical Model of Yin-Yang Wu-xing 
+Theory for Traditional Chinese Medicine, Proceedings 
+of the 10th China Youth Information and Management 
+Scholars Conference, 2008.
+[12] Z. Yu, The Mathematical Model research about Tra­
+ditional Chinese Medicine Science, Dalian University of 
+Technology, 2005.
+[13] X. Jiang, Study of Dynamics of a five-dimensional Non­
+linear Network, Huazhong University of Science and 
+Technology, 2006.
+[14] F. Li, Functional structure model of human body 
+and Yinyang-Wuxing equations, Physica Scripta, 1987, 
+36(6):966— 969969.
+[15] Q. Zhang, J. Han, Mathematical Simulation on Change 
+Law of Wuzang Yinjing and Yangqi of Healthy Adults, 
+Systems Engineering-Theory & Practice, 1998, 18 (7): 
+130-135.
+[16] S. Chen, W. Zhang, One Yin-Yang Wu-Xing model of 
+TCM, Journal of Acupuncture and Tuina Science, 2008, 
+6(5): 266-268.
+[17] W. Zhao, Z. Zhao, The mathematical model of the the­
+ory of Yin Yang and five elements with the general solu­
+tion of its derivation equation, Sichuan Journal of Tra­
+ditional Chinese Medicine, 2006, 24 (11): 7-9.
+[18] A. Wolf, J. Swift, H. Swinney, et al, Determining Lya­
+punov exponents from a time series, Physica D: Nonlin­
+ear Phenomena, 1985, 16(3): 285-317.
+[19] C. Skokos, The Lyapunov characteristic exponents and 
+their computation, Dynamics of Small Solar System 
+Bodies and Exoplanets. Springer, Berlin, Heidelberg, 
+2010: 63-135.
+[20] X. Zhang, Z. Li, L. Zhang, A Kind of Lyapunov Expo­
+nent Calculation Method Based on Singular Value De­
+composition, Journal of University of Science and Tech­
+nology Beijing, 2005, 27 (3): 371-374.
+[21] C. Helrich, Analytical mechanics, Springer Interna­
+tional Publishing, 2017, chapter 7.
+781
+Authorized licensed use limited to: CAS Academy of Mathematics & Systems Science. Downloaded on November 27,2020 at 07:30:03 UTC from IEEE Xplore.  Restrictions apply. 

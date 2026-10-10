@@ -1,0 +1,23 @@
+% STATUS: conditional framework; outstanding model-specific work is explicit.
+\section{P17: Linear transient and harmonic response}
+\label{sec:P17}
+The source is an outline. The following standard linear corollaries require
+no further model assumptions; quantitative nonlinear response remains open.
+\subsection{Transient}\label{slot:P17-1}
+P04's single Fourier framework \cite[Theorem~3.1]{Gray2006} gives
+\[
+ e^{tJ}=Q\diag(e^{t\lambda_m})Q^*,\qquad
+ \|e^{tJ}\|_2=e^{t\sa(J)}\quad(t\ge0).
+\]
+\subsection{Leading modes}\label{slot:P17-2}
+Late-time dominance requires nonzero initial projection onto the leading
+eigenspace; retain every tie. Euclidean norm decay is not coordinatewise
+monotonicity or a propagation theorem.
+\subsection{Explicit harmonic extension}\label{slot:P17-3}
+For the added linear forcing $\dot z=Jz+be^{\ii\Omega t}$, substitution
+gives $z_p=e^{\ii\Omega t}(\ii\Omega I-J)^{-1}b$ whenever the inverse
+exists. If $J$ is Hurwitz, every solution approaches this harmonic response.
+Real forcing and response are obtained by taking real parts.
+\subsection{Unfinished nonlinear scope}\label{slot:P17-4}
+Forcing conventions, observables, projected resonance amplitudes and
+nonlinear approximation bounds remain to be specified and proved.

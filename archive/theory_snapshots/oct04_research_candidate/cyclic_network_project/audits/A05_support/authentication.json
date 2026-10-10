@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "e82f95c958744643ca54ddc06fdd0e3e30c47e8e577ed7b15909a4337c500f5e",
+  "archive_members": 87,
+  "crc_test": null,
+  "selected_source": "cyclic_network_project/proofs/P05_q2_mode_selection.tex",
+  "manifest_p05_record": "P05 v1.0 DRAFT, 2026-10-02; final P05 strengthened draft entry",
+  "p05_hash_availability": "Manifest names current path/version but no P05 full-file digest; separate P05_validation_support.zip not supplied. Digest independently fixed by this audit.",
+  "all_dependency_body_hashes_match": true
+}

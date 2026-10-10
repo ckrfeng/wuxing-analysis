@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "proof_version": "P10 v1.0",
+  "proof_sha256": "a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07",
+  "proof_body_sha256": "5cfd8afb91b7f23575e1b4bd9c7c28f3b433affefae9bb0d5f7700d030fcba81",
+  "draft_member_count": 176,
+  "working_copy_mismatches": [],
+  "changed_from_P09": [
+    "cyclic_network_project/claim_registry.md",
+    "cyclic_network_project/project_manifest.md",
+    "cyclic_network_project/proofs/P10_saddle_node_and_bistability.tex",
+    "cyclic_network_project/proofs_compendium.pdf",
+    "cyclic_network_project/proofs_compendium.tex"
+  ],
+  "archives": {
+    "cyclic_network_project_P10_draft.zip": "a3b8ba33e16095a8880637bdfe74a2fcb2e26bcc1ada8d941efe85cbccf5c42e",
+    "output/p10/cyclic_network_project_P10_draft.zip": "a3b8ba33e16095a8880637bdfe74a2fcb2e26bcc1ada8d941efe85cbccf5c42e",
+    "cyclic_network_project_P09_audited.zip": "db6344c5ed7c96f244f99eefa589ae8631c3aaf15278577e607e246026b22bf2",
+    "output/p10/P10_validation_support.zip": "3b545b222be77d2e8714784da34cea6494b4739b5241c3c60cd697ac69f4d760"
+  },
+  "inputs": [
+    {
+      "path": "project_manifest.md",
+      "sha256": "b77f9636d7d0ae031b0a4a7127bb804429be21050f44b735d5128730408a57ea",
+      "bytes": 153664,
+      "lines": 830,
+      "body_sha256": null
+    },
+    {
+      "path": "claim_registry.md",
+      "sha256": "28f5cd179bbd16889ed9404c8665ed03b6ed2da46d114ef4ad5d2f1d28b10ec5",
+      "bytes": 113578,
+      "lines": 571,
+      "body_sha256": null
+    },
+    {
+      "path": "frozen_theorem_package.md",
+      "sha256": "724adf3d04a7f9661a2e53fbae359192e8a5a5ee56737bdca2379209b556ea63",
+      "bytes": 9729,
+      "lines": 69,
+      "body_sha256": null
+    },
+    {
+      "path": "final_novelty_verdict.md",
+      "sha256": "5fa8ddd5ada9628b104dba68dd535356442c5e62ec45b72f3c2c354dec6037ea",
+      "bytes": 6511,
+      "lines": 37,
+      "body_sha256": null
+    },
+    {
+      "path": "novelty_decisions.md",
+      "sha256": "8fd079fb108b93c4504bc2b527de11c1f7e867a967c7cef0d90e1ff7a0a9175e",
+      "bytes": 19241,
+      "lines": 124,
+      "body_sha256": null
+    },
+    {
+      "path": "02_theorem_dependency_map.tex",
+      "sha256": "a1a4435f36fc1d1b6f0b2c5226a913283c76658d55b96493e6c50a8693831cac",
+      "bytes": 9372,
+      "lines": 145,
+      "body_sha256": "b0b9b4f85240747794cf7cd9c98fde6cc083bc87bda647c13c9723e4a5a9f036"
+    },
+    {
+      "path": "proofs_compendium.tex",
+      "sha256": "7f06955c706b40d7bee6ca88bd08d8aa99e60c4d5b276536fc33579a9f58a282",
+      "bytes": 11104,
+      "lines": 208,
+      "body_sha256": null
+    },
+    {
+      "path": "shared_macros.tex",
+      "sha256": "f4a18a440e1214b619bf18f4a81fee507239460ca796d8ca3916791069d6a7ad",
+      "bytes": 1281,
+      "lines": 35,
+      "body_sha256": null
+    },
+    {
+      "path": "00_canonical_model.tex",
+      "sha256": "c209981cb2924e8a782f24aa2904e8c85a105ff99319dd6aada12f48a351c2a4",
+      "bytes": 3712,
+      "lines": 74,
+      "body_sha256": "2c221993522487d66cf99d7b52107fd5f653e5b8c96815474d31c6e151408da4"
+    },
+    {
+      "path": "01_notation_and_assumptions.tex",
+      "sha256": "97d993c6d3986524dbcc29659ee73d257be1b03a35c44401e8ef4534303eeb91",
+      "bytes": 5152,
+      "lines": 103,
+      "body_sha256": "0cfa20782e3ad36d7ec75b1786de500bba6d96ecbe5ea745f06a0cade01fa7d7"
+    },
+    {
+      "path": "proofs/P01_wellposedness_and_absorbing_box.tex",
+      "sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+      "bytes": 22570,
+      "lines": 520,
+      "body_sha256": "a640b2bf9a160feed273dc667c6b44a6923a1d68d6dd81acd35640cc0e4d5808"
+    },
+    {
+      "path": "audits/A01_wellposedness_and_absorbing_box.tex",
+      "sha256": "8d5c1b2ec782dbe49b07d2bbe529ee474d4c142695c53b523ccb41d63bb33098",
+      "bytes": 48622,
+      "lines": 974,
+      "body_sha256": "c979686c971d52c1412063ac157c2202075f6e683a43573e58a1f729d1308bef"
+    },
+    {
+      "path": "proofs/P02_synchronous_subspace_and_equilibria.tex",
+      "sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+      "bytes": 26905,
+      "lines": 610,
+      "body_sha256": "8a061ba81c7ffd2d05b188b9fca4ec1b94bc132147f7f664c8523f0a5f32560c"
+    },
+    {
+      "path": "audits/A02_synchronous_subspace_and_equilibria.tex",
+      "sha256": "ca3d723d9fcfac14f5129583441e611a65e41848ec44f3b5e3a0072f795d84ac",
+      "bytes": 37895,
+      "lines": 847,
+      "body_sha256": "dec19dd20d92a64d685bdc946748d59eb88c0e3b64b6651d480036850a029cbd"
+    },
+    {
+      "path": "proofs/P03_origin_and_linearization.tex",
+      "sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e",
+      "bytes": 19857,
+      "lines": 447,
+      "body_sha256": "07d76c8ce0b5232827e9f2c74245188b55b0ce0d1732b3cb2e528d69e8d6b50a"
+    },
+    {
+      "path": "audits/A03_origin_and_linearization.tex",
+      "sha256": "e1008f98ba9667b92b8d74f1bc7d21e021414b454ac976ae0db1500b4b7ef8d1",
+      "bytes": 37700,
+      "lines": 692,
+      "body_sha256": "29020e4c96629e0603c88981fc9ce0d4006ef7edf719319f8a16793cf4803034"
+    },
+    {
+      "path": "proofs/P04_arbitrary_nq_fourier_spectrum.tex",
+      "sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58",
+      "bytes": 26980,
+      "lines": 590,
+      "body_sha256": "3e3d58230c87af3b5f07069d61065362dc081d172ad3b236057fefda25fa5653"
+    },
+    {
+      "path": "audits/A04_arbitrary_nq_fourier_spectrum.tex",
+      "sha256": "8a57079241269c92a3c3e8dc4dccf8592da2d1a636fca0c0990a4f318396d869",
+      "bytes": 47595,
+      "lines": 832,
+      "body_sha256": "d3b3cbf7dd5a3902f14b974e42049fd3fb12027f200aacd2ba4a87eb945d47bb"
+    },
+    {
+      "path": "proofs/P05_q2_mode_selection.tex",
+      "sha256": "054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd",
+      "bytes": 28334,
+      "lines": 613,
+      "body_sha256": "7e1fd7765ed81e9c5f24ebe07e450e3fd76caf6b16264aac3c3a21edacd8bb97"
+    },
+    {
+      "path": "audits/A05_q2_mode_selection.tex",
+      "sha256": "0f7e9836b91009a201185a4acbbb99715f3c65df715e405962b7d6852ff27031",
+      "bytes": 49526,
+      "lines": 996,
+      "body_sha256": "46a303672a65d480d9571c6e6093d8eed14452b5aa766ce56adcf43d26dc3d08"
+    },
+    {
+      "path": "proofs/P07_five_node_specialization.tex",
+      "sha256": "1258641da2b1b729523da6262cf75345f5ef1eabf7a9f693a8b13dd34deec393",
+      "bytes": 25691,
+      "lines": 580,
+      "body_sha256": "66a5b8f078cb0fc30f4d7c72c22a26b965fd8ded491f53450d604fe7a21ccdea"
+    },
+    {
+      "path": "audits/A07_five_node_specialization.tex",
+      "sha256": "b3923d6520cc249c508b80dd06a2b515f054e1510e255224a864e986cd38ce4b",
+      "bytes": 38488,
+      "lines": 724,
+      "body_sha256": "ece1ed2dc64a3a8468ba7e82c2bb2787feec4b51e93adb5b6c3b77ac0d364887"
+    },
+    {
+      "path": "proofs/P08_matched_bilinear_analysis.tex",
+      "sha256": "81d273f0bad1714d2470e9fc826f0819e9dde367a9c42633705a275b404e5454",
+      "bytes": 40836,
+      "lines": 871,
+      "body_sha256": "67909444bd10dde10f2784db560e7ffb4165f34b63c0a72a356a35d38ba4cc85"
+    },
+    {
+      "path": "audits/A08_matched_bilinear_analysis.tex",
+      "sha256": "87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935",
+      "bytes": 57343,
+      "lines": 1161,
+      "body_sha256": "f84f0ea64e38e4a1d52df393c04b2eb013d5593d626b2ac3dff8fa81cff3cd33"
+    },
+    {
+      "path": "proofs/P09_transcritical_bifurcation.tex",
+      "sha256": "5d357a5be97dfbad62a0107ca2e010ff97e0c11a719ee850df69411275f11ff8",
+      "bytes": 25693,
+      "lines": 564,
+      "body_sha256": "a0830944d46d26de35faf09c5f0e4d9f42d6f10620ca22373f6bcf7031705393"
+    },
+    {
+      "path": "audits/A09_transcritical_bifurcation.tex",
+      "sha256": "1234e02d7cf620511bfd7b9306dbb72ac68929ef01e8c3ba70bd3615bcd2b943",
+      "bytes": 51832,
+      "lines": 975,
+      "body_sha256": "6057e26b8844a747803e478ee2c224639b0bdfd872f93ca03f0ac40b6459df19"
+    },
+    {
+      "path": "proofs/P10_saddle_node_and_bistability.tex",
+      "sha256": "a28ea2b4ca96f381f06fa82849d4289fcc0e9c41e646ca66595621922f385a07",
+      "bytes": 32560,
+      "lines": 707,
+      "body_sha256": "5cfd8afb91b7f23575e1b4bd9c7c28f3b433affefae9bb0d5f7700d030fcba81"
+    },
+    {
+      "path": "open_decisions.md",
+      "sha256": "506c634c9958d13b4d6ef4080ebe214af5fd0c77d5dc8fe6f1b91d2750ffab59",
+      "bytes": 17320,
+      "lines": 101,
+      "body_sha256": null
+    }
+  ]
+}

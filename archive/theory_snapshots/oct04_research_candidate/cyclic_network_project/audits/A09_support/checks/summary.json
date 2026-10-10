@@ -1,0 +1,67 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 90261003,
+  "dimensions": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    16
+  ],
+  "network_pairs": 79,
+  "noncoprime_pairs": 33,
+  "parameter_tuples": [
+    [
+      3.4,
+      0.7,
+      0.6,
+      0.9
+    ],
+    [
+      0.6,
+      0.8,
+      1.3,
+      0.5
+    ],
+    [
+      1.3,
+      0.8,
+      0.4,
+      0.5
+    ],
+    [
+      1.5,
+      1.0,
+      0.02,
+      0.5
+    ],
+    [
+      1.0001,
+      0.6,
+      2.0,
+      0.4
+    ],
+    [
+      0.9999,
+      0.6,
+      2.0,
+      0.4
+    ]
+  ],
+  "equilibrium_cases": 2370,
+  "slope_cases": 316,
+  "transverse_searches": 474,
+  "lyapunov_cases": 1580,
+  "max_equilibrium_residual": 1.2138358501332835e-20,
+  "max_scaled_spectrum_error": 4.7964139076224e-15,
+  "max_scaled_jacobian_error": 6.938951458435173e-16,
+  "max_relative_slope_error": 1.2500005468608367e-07,
+  "max_transverse_search_norm": 1.6358423212268763e-19,
+  "limitations": "Ordinary floating point, finite samples, no interval certification. Tiny-b eigenvalue signs use scalar formula; direct numerical eigensolvers cannot certify near-zero signs. Analytical arguments establish the universal claims.",
+  "exact_fraction_checks": 310
+}

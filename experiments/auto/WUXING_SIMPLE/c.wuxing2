@@ -1,0 +1,20 @@
+NDIM  = 5
+IPS   = 1
+IRS   = 0
+ILP   = 1
+
+ICP   = [1]
+
+DS    =  0.05
+DSMIN =  0.001
+DSMAX =  0.2
+
+NMX   = 500
+NPR   = 10
+
+ISP   = 2
+ISW   = 1
+
+EPSL  = 1.0E-7
+EPSU  = 1.0E-7
+EPSS  = 1.0E-5

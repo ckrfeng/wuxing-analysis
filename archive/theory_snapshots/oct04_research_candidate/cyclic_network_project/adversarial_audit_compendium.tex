@@ -1,0 +1,28 @@
+% !TeX program = pdflatex
+% New Phase 1B root; the original Phase 1 root is preserved.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\input{shared_macros.tex}
+\setlength{\emergencystretch}{3em}
+\setcounter{tocdepth}{2}
+\title{Directed Cyclic Networks\\Phase 1B: Adversarial Novelty Audit}
+\author{}
+\date{24 September 2026}
+\begin{document}
+\maketitle
+\noindent Research audit with explicit access gaps. No proposed project theorem
+is proved or numerically tested. The canonical models and original audit are preserved.
+\tableofcontents
+\clearpage
+\input{04_adversarial_novelty_audit.tex}
+\clearpage
+\input{revised_novelty_matrix.tex}
+\clearpage
+\bibliographystyle{plainurl}
+\bibliography{references}
+\end{document}

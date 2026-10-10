@@ -1,0 +1,29 @@
+% !TeX program = pdflatex
+% Phase 1 review root. Contains no proofs of the project's proposed theorems.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,array,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\input{shared_macros.tex}
+\setlength{\emergencystretch}{3em}
+\setcounter{tocdepth}{1}
+\title{Directed Cyclic Networks\\Phase 1: Literature and Novelty Audit}
+\author{}
+\date{20 September 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Research audit, not a manuscript or a proof compendium.}
+The six supplied papers were inspected. Additional primary sources provide
+methodological context; access gaps are explicit. All project proof modules remain TODO.
+\tableofcontents
+\clearpage
+\input{03_literature_audit.tex}
+\clearpage
+\input{novelty_matrix.tex}
+\clearpage
+\bibliographystyle{plainurl}
+\bibliography{references}
+\end{document}

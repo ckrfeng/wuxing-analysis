@@ -1,0 +1,128 @@
+[
+  {
+    "file": "P07_five_node_specialization.tex",
+    "original_source_words": 2456,
+    "revised_source_words": 1753,
+    "original_sha256": "1258641da2b1b729523da6262cf75345f5ef1eabf7a9f693a8b13dd34deec393",
+    "revised_sha256": "02a4287ce595b2a82cceb6268aec235dbcfca359c51e606a3b619f6525091720"
+  },
+  {
+    "file": "P06_large_n_limit.tex",
+    "original_source_words": 16,
+    "revised_source_words": 67,
+    "original_sha256": "4a8b78fde665a7ecd0756dc1c069b2d771c855c795394724f13bd9ef47d3c2c8",
+    "revised_sha256": "84ec707ca0d4e41201716c505ef9d5d1ca3e8b86d2700f587d32cb52102c319b"
+  },
+  {
+    "file": "P12_hopf_transversality.tex",
+    "original_source_words": 27,
+    "revised_source_words": 120,
+    "original_sha256": "cdda4e10f227b5377357bf2bc90418e1782466b50d44f2a272d9846dbc37fe71",
+    "revised_sha256": "b315b3d7a7715172e8306f9efd491411f34ebe4e4d77d11968ee2ee8469c792d"
+  },
+  {
+    "file": "P09_transcritical_bifurcation.tex",
+    "original_source_words": 2665,
+    "revised_source_words": 1973,
+    "original_sha256": "5d357a5be97dfbad62a0107ca2e010ff97e0c11a719ee850df69411275f11ff8",
+    "revised_sha256": "2c1c918734d99aa0bfeeab7b292f631dacd8fafeb26e4dff6c485b58e6904434"
+  },
+  {
+    "file": "P04_arbitrary_nq_fourier_spectrum.tex",
+    "original_source_words": 2906,
+    "revised_source_words": 1957,
+    "original_sha256": "1331c8598acd0481046250d918cac028ca6d13d2604612448c3459e864321c58",
+    "revised_sha256": "f83a6f69db1491c082091818f5c82854cb78c2f3580335930edd0c8893112e2c"
+  },
+  {
+    "file": "P18_stability_radius_and_hopf_shift.tex",
+    "original_source_words": 42,
+    "revised_source_words": 155,
+    "original_sha256": "9a3c945becf5e05a00be015363e7da53660d0ed76a1115d41ea69bf8441a4d7e",
+    "revised_sha256": "869c2cfe3ee58d8c4544e3cd51cca71672d468d9771c50af3489ef3dd47ff563"
+  },
+  {
+    "file": "P13_first_lyapunov_coefficient.tex",
+    "original_source_words": 44,
+    "revised_source_words": 171,
+    "original_sha256": "7afce8dd8da7c7987422f4e66a968a27d18d139da6902dba7fdde3a6942e4f9b",
+    "revised_sha256": "bdb6e49dc4ba0e823bc297d6d4c129165cc568dfb7d4d3a3f204319ccddfb453"
+  },
+  {
+    "file": "P05_q2_mode_selection.tex",
+    "original_source_words": 3136,
+    "revised_source_words": 2525,
+    "original_sha256": "054a047a55ef37815485f6c225be2f6322ca8cf1c272614dd1dc4bb10ae8e1dd",
+    "revised_sha256": "7fb3a063d2be8fa4e602f8f75ea585ae3f631638509a713e5e2852715b6c4a40"
+  },
+  {
+    "file": "P16_static_sensitivity_and_green_function.tex",
+    "original_source_words": 39,
+    "revised_source_words": 114,
+    "original_sha256": "83d7921957c41c369a41646cbb647922218f0a5e7e41d46a2f02e9f1ab5d52aa",
+    "revised_sha256": "5169218fdf496d9d22e09932ac76c154873399d10bcb5d8c0e341b4f99b41760"
+  },
+  {
+    "file": "P11_hopf_spectral_conditions.tex",
+    "original_source_words": 2674,
+    "revised_source_words": 2334,
+    "original_sha256": "097b42dfdf497cd34bb980e337f8d7f31e4a3538522871f26a16f08e9d6528a9",
+    "revised_sha256": "70ceaf8fecfee2ede13d5c5a5298cf5291016e3edf0204b723eab26b41aa7765"
+  },
+  {
+    "file": "P10_saddle_node_and_bistability.tex",
+    "original_source_words": 3749,
+    "revised_source_words": 2917,
+    "original_sha256": "37542cc5409d7db33ca183869933fbdbad673628f69f6988f2778a84bc84094f",
+    "revised_sha256": "2a7972ac2812d5e9ce55d271c1e789d2c85f73c4c811e7fd8473cf5229c0c271"
+  },
+  {
+    "file": "P08_matched_bilinear_analysis.tex",
+    "original_source_words": 5647,
+    "revised_source_words": 4525,
+    "original_sha256": "873fe7eabe86f01f70b497067307dabd491a682f122f6e87205b797c365ea88e",
+    "revised_sha256": "488b60285d586179ccf3e36c522353b7a8b0e250e05ac0016f747f5ad84377d1"
+  },
+  {
+    "file": "P15_heterogeneous_equilibrium_persistence.tex",
+    "original_source_words": 30,
+    "revised_source_words": 129,
+    "original_sha256": "4aeac754428335b4400ec92f6b6e2426ea148c0666250301c3018c4960f0afde",
+    "revised_sha256": "6106e69341d9b066373c700cf867a3180c6a22fd6e2118f99e5a0a58ea7beffe"
+  },
+  {
+    "file": "P03_origin_and_linearization.tex",
+    "original_source_words": 2092,
+    "revised_source_words": 1430,
+    "original_sha256": "6c3c9bfb2307bdc043eb7f6a874cb222e2ac2ce0750b339181f0088dd0bd859e",
+    "revised_sha256": "618202cb52befac6d99b12728af42b2459fd89e2a1bffc6fcaae0bf5e7589b4b"
+  },
+  {
+    "file": "P14_rotating_waves.tex",
+    "original_source_words": 35,
+    "revised_source_words": 130,
+    "original_sha256": "654eb8c9e1940e4275a05e4293f58914046e250bd1964f57389c5152540c27ac",
+    "revised_sha256": "9f2d33c5be4a55a94d7bdcc51291766d0a5b142eccf9b77b69b3779debde6c7e"
+  },
+  {
+    "file": "P02_synchronous_subspace_and_equilibria.tex",
+    "original_source_words": 3299,
+    "revised_source_words": 3120,
+    "original_sha256": "8e057c2cd009659eee45906844e25f4f38c156e5eb2e4130e824aa5e8299c51a",
+    "revised_sha256": "2c641618b1e460b0c7fbd7536ca5148843e88b6efabfe6a87b08a2b4ed5d6aa1"
+  },
+  {
+    "file": "P17_transient_and_harmonic_response.tex",
+    "original_source_words": 37,
+    "revised_source_words": 123,
+    "original_sha256": "effd42c3ec9d86b1679a04339c244710d99eca6303900f64768f1cd4a1e477e6",
+    "revised_sha256": "229e35dc1f428bbb269051d6af197a3a80a9428fe50b3fea41a5bae340c9c36e"
+  },
+  {
+    "file": "P01_wellposedness_and_absorbing_box.tex",
+    "original_source_words": 2565,
+    "revised_source_words": 2208,
+    "original_sha256": "0d6950821aa83f3d09e8bfe84dab2b0b5020aa6e7881cf6928e984bff1890f1e",
+    "revised_sha256": "0a4b8fbd2d31d6d88d920f9678dc709cd6eb23649215ca1bc60c3a60c1cab427"
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "scope": "All audit-only package members except this self-referential manifest.",
+  "members": {
+    "cyclic_network_project/audits/A08_matched_bilinear_analysis.tex": {
+      "sha256": "87cd4a03061648eb4cf1c65d1afa47c7132c1f7eed10d546784ee166c8e5c935",
+      "bytes": 57343
+    },
+    "cyclic_network_project/audits/A08_matched_bilinear_analysis.pdf": {
+      "sha256": "9be30d2f422c37a6d91557100a8d657727df603849cc877873c9f02a5437dff3",
+      "bytes": 352852
+    },
+    "cyclic_network_project/audits/A08_support/README.txt": {
+      "sha256": "c9ee582ffba35491eaa5ce672c9c094edb783d9f89f452e8e0b2108527d90910",
+      "bytes": 3645
+    },
+    "cyclic_network_project/audits/A08_support/archive_member_hashes.json": {
+      "sha256": "6d74bc375b24262342e442e772604f6eefa31b7cae7424a1966a8e51db09fcfa",
+      "bytes": 16922
+    },
+    "cyclic_network_project/audits/A08_support/delivery_checks.json": {
+      "sha256": "aea9e022f46fb7c6e947cb05c8eba4e565695ded7e57b9fb898c1d3b5b33e517",
+      "bytes": 988
+    },
+    "cyclic_network_project/audits/A08_support/expected_counts.json": {
+      "sha256": "58225cd6c45ef70794317de65cdb5516c63e96ba19aed2238b655e0854d48488",
+      "bytes": 560
+    },
+    "cyclic_network_project/audits/A08_support/independent_check.py": {
+      "sha256": "3e173b1ae1905147369739f8640fe1febc623a6508afe2b7a5f28b508608b21f",
+      "bytes": 14528
+    },
+    "cyclic_network_project/audits/A08_support/independent_results.json": {
+      "sha256": "89d4f5b5407bb2f6a739d7d258a50221c5182de5ed00a9510b49834d8a77fe84",
+      "bytes": 4081823
+    },
+    "cyclic_network_project/audits/A08_support/independent_summary.json": {
+      "sha256": "06ad4763d747abced5f6a4e1f66e4c22da6785776ae6c69318d4b48f80e9c0d7",
+      "bytes": 966
+    },
+    "cyclic_network_project/audits/A08_support/input_hashes.json": {
+      "sha256": "01b9114b5cb321df295006015de6924de7ed7fb38c84950fae2a6c81bed3fb24",
+      "bytes": 4992
+    },
+    "cyclic_network_project/audits/A08_support/line_review.json": {
+      "sha256": "fdd6bc6e365de27b12c3e87c2d32c30039e00cf3e7ab928f33dcadc0ec45c72f",
+      "bytes": 11077
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/authentication.json": {
+      "sha256": "cc1053e44b53cbe66de3af0a7d8eb59f95a25cbff9cef1b937acb1741659772f",
+      "bytes": 469
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/check_p08.py": {
+      "sha256": "2385d2074ead3ca764fb98fd7dff5fb419c68526ed0e57e9c80e364980052939",
+      "bytes": 12828
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/independently_expected_counts.json": {
+      "sha256": "80c2cb0c5e5d7d73297a8c7a4d54d1bb0c2453efe2517c5ba448132a95a8e59c",
+      "bytes": 397
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/original_summary.json": {
+      "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638",
+      "bytes": 868
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/reproduced_results.json": {
+      "sha256": "7c79a28f0c20e9e9a715b6f783fc6ef86890ea21cfbe406f9dfe6d11d871bd61",
+      "bytes": 1784074
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/reproduced_summary.json": {
+      "sha256": "dafe81212cef335c1913f80cbe37721ca687a68bc901fd868f68240dc8ef1638",
+      "bytes": 868
+    },
+    "cyclic_network_project/audits/A08_support/prior_validation/reproduction_comparison.json": {
+      "sha256": "83d47b6e5e89e267a8d2b2fe37fadb7e169a5f3b51fe2aa25f6eb22e11aa2195",
+      "bytes": 217
+    },
+    "cyclic_network_project/audits/A08_support/source_claim_checks.json": {
+      "sha256": "e090064641a0155f5ae63eb30f990bf4ef5695cf8ddb6c9752984ca229f31327",
+      "bytes": 538
+    }
+  }
+}

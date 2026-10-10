@@ -1,0 +1,32 @@
+Cyclic Network Project -- Literature Review package
+Packaged 4 October 2026.
+
+Main documents in cyclic_network_project/:
+  proofs_compendium.pdf             Full proofs, including the new P08 extension.
+  literature_audit_compendium.pdf   Project literature audit.
+  adversarial_audit_compendium.pdf  Adversarial novelty audit.
+  priority_closure_compendium.pdf   Priority closure.
+All four PDFs were rebuilt successfully in a temporary copy for this package.
+Their .tex sources, shared_macros.tex, references.bib, proof fragments,
+project records, and audit/support files are included.
+
+The newer prior-art review is outputs/prior-art-audit/prior-art-audit.html.
+Its generator and audit data are included. MB reproducible numerical checks
+are in outputs/mb-global-verification/; see its README.txt.
+
+P08 contains the global interior stability theorem and strengthened comparison.
+These additions were checked in the verification task but have NOT received
+an independent A08 audit. Original manifests, historical hashes and audit
+statements describe the earlier baseline; they are retained as historical
+records, not certifications of the P08 extension. Package file hashes are
+in PACKAGE_SHA256.json. P12 remains TODO.
+
+Rebuild from the cyclic_network_project directory with a TeX distribution:
+  latexmk -pdf proofs_compendium.tex
+  latexmk -pdf literature_audit_compendium.tex
+  latexmk -pdf adversarial_audit_compendium.tex
+  latexmk -pdf priority_closure_compendium.tex
+Build logs are included in package-build-logs/.
+
+This package was prepared from the current project in a temporary directory.
+No original project/source/output files were changed during packaging.

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "audit_source": "audits/A07_five_node_specialization.tex",
+  "audited_p07_sha256": "fc10d257e8126b79a56cc7dd4c55b14b0266e250cbe40dbecb6c6a18658d09de",
+  "all_118_isolated_input_members_unchanged": true,
+  "all_118_current_project_delivery_members_unchanged": true,
+  "original_draft_zip_and_current_copy_unchanged": true,
+  "P07_status": "DRAFT, unchanged",
+  "project_proof_or_registry_edits": false,
+  "line_review_ranges": 44,
+  "line_coverage": 555,
+  "required_input_count": 23,
+  "native_and_exported_compilation": "PASS",
+  "mathematical_verdicts": {
+    "FOURIER / TRIGONOMETRY": "VERIFIED",
+    "ORDERING / SELECTION": "VERIFIED",
+    "FREQUENCY / COINCIDENCE": "VERIFIED",
+    "STABILITY / CRITICAL-MODE": "VERIFIED",
+    "SCOPE / DEPENDENCY": "VERIFIED",
+    "OVERALL": "VERIFIED"
+  },
+  "required_corrections": [],
+  "P09": "cleared after original development chat records A07 closure; not begun",
+  "P08_theorem_dependency": false,
+  "replacement_P07_source_in_delivery": false,
+  "full_project_archive_created": false
+}

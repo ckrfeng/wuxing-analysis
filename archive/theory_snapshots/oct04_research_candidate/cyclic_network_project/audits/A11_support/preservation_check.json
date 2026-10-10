@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "original_project_files_checked": 200,
+  "original_project_files_changed": [],
+  "original_archives_checked": 4,
+  "original_archives_changed": [],
+  "source_line_ranges": 64,
+  "source_lines_covered_exactly_once": 600,
+  "P11_lifecycle": "DRAFT unchanged",
+  "P12_P13": "unmodified; not begun",
+  "replacement_P11_source_in_audit_archive": false,
+  "full_audited_project_archive_created": false
+}
